@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "almond",
   "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#d572fd",
-    "light": "#d572fd",
-    "dark": "#d572fd"
+    "primary": "#C43F23",
+    "light": "#C43F23",
+    "dark": "#C43F23"
   },
   "favicon": "/favicon.svg",
   "navigation": {
