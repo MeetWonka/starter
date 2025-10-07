@@ -1,0 +1,144 @@
+---
+title: "Built-In Security"
+description: "Understand WonkaChat's security architecture, data privacy measures, and how we protect your organization."
+---
+
+WonkaChat is built with security at its core. From isolated data environments to strict permission boundaries, we ensure your data remains protected while you leverage the power of AI agents.
+
+---
+
+## Security Architecture
+
+WonkaChat employs a multi-layered security architecture designed for enterprise environments.
+
+<AccordionGroup>
+<Accordion title="SOC2-Certified Security">
+WonkaChat maintains SOC2 Type II certification, ensuring enterprise-grade security controls across all operations. Our security practices undergo regular third-party audits to verify compliance with industry standards.
+</Accordion>
+
+<Accordion title="Isolated Data Environment">
+Your data stays in a fully isolated, secure environment — either self-hosted or hosted by WonkaChat with data remaining clustered and separated from other organizations.
+</Accordion>
+
+<Accordion title="Secure Model Access">
+All AI models interact via Azure and AWS Bedrock APIs, ensuring your data is never stored or reused by model providers. Your information remains ephemeral during processing.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Safe Mode: Control AI Actions
+
+Safe Mode ensures you maintain complete control over what AI agents can do in your environment.
+
+
+<img src="/images/safe-mode.png" alt="Safe Mode interface showing action approval" />
+
+
+### How Safe Mode Works
+
+<Steps>
+<Step title="Action Request">
+When an AI agent wants to execute an action, it must request your approval before proceeding.
+</Step>
+
+<Step title="Review & Decision">
+You can review the specific action details and decide whether to allow or deny the request.
+</Step>
+
+<Step title="Execution or Block">
+Actions only execute after your explicit approval. You can deactivate Safe Mode for trusted agents if desired.
+</Step>
+</Steps>
+
+<Warning>
+**AI agents execute actions and use tools only when you allow it.** You decide if actions can be done with the clear option to pause or let AI act freely by deactivating Safe Mode.
+</Warning>
+
+---
+
+## MCP Usage Privileges
+
+WonkaChat respects and enforces existing permission boundaries in your connected tools.
+
+### No Extra Privileges
+
+<CardGroup cols={2}>
+<Card title="Strict Permission Boundaries" icon="shield-halved">
+When connected to work applications through MCP, users **never receive more permissions** or access rights than they already have within that application.
+</Card>
+
+<Card title="No Permission Escalation" icon="lock">
+AI agents cannot override, bypass, or escalate user permissions in connected tools. If you can't access something manually, the AI can't access it either.
+</Card>
+</CardGroup>
+
+<Check>
+Your existing security policies and access controls remain fully intact when using WonkaChat with MCP connections.
+</Check>
+
+### MCP Connection Security
+
+<Tabs>
+<Tab title="Permission Inheritance">
+AI agents inherit your current user permissions when accessing connected tools. They operate within the same constraints as manual access.
+</Tab>
+
+<Tab title="Access Boundaries">
+Tool connections respect your organization's existing access control lists, security groups, and permission schemes without modification.
+</Tab>
+
+<Tab title="Audit Trail">
+All MCP operations are logged and traceable, maintaining visibility into AI agent actions across connected tools.
+</Tab>
+</Tabs>
+
+---
+
+## Data Privacy
+
+WonkaChat maintains strict data privacy standards to protect your sensitive information.
+
+### Privacy Guarantees
+
+<AccordionGroup>
+<Accordion title="Data Isolation" icon="database">
+Your data stays in a fully isolated, secure environment. Whether self-hosted or WonkaChat-hosted, your data remains clustered and separated from other organizations.
+</Accordion>
+
+<Accordion title="No Model Training" icon="brain">
+Your data is never used to train AI models. All interactions with AI models via Azure and AWS Bedrock APIs are ephemeral and not stored.
+</Accordion>
+
+<Accordion title="Encrypted Communications" icon="lock">
+All data in transit is encrypted using industry-standard TLS protocols. Data at rest is encrypted using AES-256 encryption.
+</Accordion>
+
+<Accordion title="Data Residency" icon="globe">
+You control where your data is hosted, with options for regional data centers or self-hosted deployments to meet compliance requirements.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Privacy Considerations
+
+### What to Know About Your Data
+
+<Info>
+WonkaChat processes conversation context to provide AI assistance. While we maintain strict security measures, you should follow your organization's policies regarding sensitive information.
+</Info>
+
+<CardGroup cols={2}>
+<Card title="Conversation Context" icon="comments">
+AI agents have access to conversation history within their assigned scope to provide contextual assistance.
+</Card>
+
+<Card title="Tool Access" icon="wrench">
+Connected tools provide data to AI agents based on your existing permissions — the same data you could manually access.
+</Card>
+</CardGroup>
+
+<Tip>
+For highly sensitive operations, use Safe Mode to review all AI actions before execution, ensuring you maintain oversight of data access.
+</Tip>

@@ -7,42 +7,69 @@
     "light": "#7e72ff",
     "dark": "#362d9a"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
+  "banner": {
+    "content": "🚀 Version 2.0 is now live! See our [changelog](/changelog) for details.",
+    "dismissible": false
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "WonkaChat",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Welcome to Wonka Chat",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "welcome/introduction",
+              "welcome/why-wonka-chat",
+              "welcome/quick-start"
             ]
           },
           {
-            "group": "Customization",
+            "group": "AI Agents",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "ai-agents/introduction",
+              "ai-agents/finding-and-accessing-agents",
+              "ai-agents/using-existing-agents",
+              "ai-agents/creating-your-first-agent",
+              "ai-agents/business-teaching"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Tools Connection",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "tools-connection/introduction",
+              "tools-connection/setting-up-your-first-connection",
+              "tools-connection/troubleshooting-connections",
+              "tools-connection/examples-of-tool-usage"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Improved Usage",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "improved-usage/index",
+              "improved-usage/asking-great-questions",
+              "improved-usage/prompt-engineering",
+              "improved-usage/conversation-management"
+            ]
+          },
+          {
+            "group": "Security & Governance",
+            "pages": [
+              "security-governance/index",
+              "security-governance/security-overview",
+              "security-governance/access-control",
+              "security-governance/best-practices",
+              "security-governance/compliance-and-governance"
+            ]
+          },
+          {
+            "group": "Support & Resources",
+            "pages": [
+              "support-resources/troubleshooting",
+              "support-resources/reference-materials",
+              "support-resources/faq",
+              "support-resources/getting-help"
             ]
           }
         ]
@@ -57,6 +84,39 @@
               "learn/ai-agent",
               "learn/mcp",
               "learn/build-agents"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Use Cases",
+        "groups": [
+          {
+            "group": "Use cases",
+            "pages": [
+              "use/index"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Updates",
+        "groups": [
+          {
+            "group": "Changelog",
+            "pages": [
+              "updates/changelog"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Roadmap",
+        "groups": [
+          {
+            "group": "Roadmap",
+            "pages": [
+              "roadmap/index"
             ]
           }
         ]
@@ -120,6 +180,10 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
+  },
+  "logo": {
+    "light": "/logo/Wonka_Full_GradientPurpleHighRes.png",
+    "dark": "/logo/Wonka_Full_GradientPurpleHighRes.png"
   },
   "errors": {
   "404": {

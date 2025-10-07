@@ -1,0 +1,230 @@
+---
+title: "Access Control"
+description: "Configure user management, role-based permissions, and group administration to control access to WonkaChat features."
+---
+
+Control who can access what in your WonkaChat organization. Define user roles, manage permissions, and monitor MCP operations with fine-grained security policies.
+
+<Info>
+Access control is your first line of defense. Use these features to implement the principle of least privilege across your organization.
+</Info>
+
+---
+
+## User Management
+
+Add, remove, and manage individual users in your WonkaChat organization.
+
+### Adding Users
+
+<Steps>
+<Step title="Navigate to User Management">
+Access the user management section from your organization settings.
+</Step>
+
+<Step title="Invite New Users">
+Send email invitations to users you want to add to your organization. Users must accept the invitation to gain access.
+</Step>
+
+<Step title="Assign Initial Permissions">
+Define the user's initial role and permissions during the invitation process or immediately after they join.
+</Step>
+
+<Step title="Configure Tool Access">
+Grant or restrict access to specific MCP tools, AI agents, and organizational features based on the user's role.
+</Step>
+</Steps>
+
+### Managing Existing Users
+
+<Tabs>
+<Tab title="Modify Permissions">
+Update user permissions at any time to grant or revoke access to specific tools, agents, or features as their role evolves.
+</Tab>
+
+<Tab title="Suspend Access">
+Temporarily suspend user accounts without deleting them. Suspended users cannot access WonkaChat but retain their configuration for future reactivation.
+</Tab>
+
+<Tab title="Remove Users">
+Permanently remove users from your organization. Their data and configurations are removed according to your data retention policies.
+</Tab>
+</Tabs>
+
+<Warning>
+Removing a user is permanent and cannot be undone. Consider suspending access instead if the removal might be temporary.
+</Warning>
+
+---
+
+## Role-Based Permissions
+
+Define and assign roles to control what users can do within WonkaChat.
+
+### Built-In Roles
+
+WonkaChat provides default roles to get you started quickly.
+
+<CardGroup cols={2}>
+<Card title="Administrator" icon="user-shield">
+Full access to all features, including user management, security settings, and organization configuration.
+</Card>
+
+<Card title="Power User" icon="user-gear">
+Can create and manage AI agents, configure MCP connections, and access all available tools.
+</Card>
+
+<Card title="Standard User" icon="user">
+Can use existing AI agents and access tools based on assigned permissions.
+</Card>
+
+<Card title="Viewer" icon="eye">
+Read-only access to view conversations and agents without the ability to execute actions.
+</Card>
+</CardGroup>
+
+### Custom Roles
+
+Create custom roles tailored to your organization's specific needs.
+
+<AccordionGroup>
+<Accordion title="Define Permission Sets">
+Build custom roles by selecting specific permissions for tools, agents, and features. Mix and match capabilities to match your organizational structure.
+</Accordion>
+
+<Accordion title="Assign to Multiple Users">
+Apply custom roles to multiple users simultaneously, ensuring consistent permissions across teams or departments.
+</Accordion>
+
+<Accordion title="Update Role Definitions">
+Modify role definitions at any time. Changes automatically apply to all users assigned that role.
+</Accordion>
+</AccordionGroup>
+
+<Tip>
+Start with built-in roles and create custom roles only when you need specific permission combinations not covered by defaults.
+</Tip>
+
+---
+
+## Group Administration
+
+Organize users into groups for easier permission management at scale.
+
+### Creating and Managing Groups
+
+<Steps>
+<Step title="Create Groups">
+Define groups based on teams, departments, or projects to organize users logically.
+</Step>
+
+<Step title="Add Users to Groups">
+Assign users to one or more groups. Users inherit permissions from all their assigned groups.
+</Step>
+
+<Step title="Configure Group Permissions">
+Set permissions at the group level to control access to tools, agents, and features for all group members.
+</Step>
+
+<Step title="Monitor Group Activity">
+Track which groups are using which tools and agents to understand usage patterns and optimize access policies.
+</Step>
+</Steps>
+
+### Permission Hierarchy
+
+<Tabs>
+<Tab title="User Permissions">
+Individual user permissions take the highest priority and override group and role settings.
+</Tab>
+
+<Tab title="Group Permissions">
+Group permissions apply to all members and can be combined when users belong to multiple groups.
+</Tab>
+
+<Tab title="Role Permissions">
+Base permissions inherited from assigned roles form the foundation of user access.
+</Tab>
+</Tabs>
+
+<Info>
+Permissions are additive — users receive the combined permissions from their role, groups, and individual settings.
+</Info>
+
+---
+
+## Controlling Agent Access
+
+Define which users can access specific AI agents within your organization.
+
+### Agent-Level Permissions
+
+<CardGroup cols={2}>
+<Card title="Agent Creators" icon="wand-magic-sparkles">
+Control who can create new AI agents in your organization.
+</Card>
+
+<Card title="Agent Users" icon="users">
+Specify which users or groups can interact with each AI agent.
+</Card>
+
+<Card title="Agent Editors" icon="pen-to-square">
+Define who can modify agent configurations, prompts, and tool access.
+</Card>
+
+<Card title="Agent Visibility" icon="eye">
+Set whether agents are visible organization-wide or restricted to specific teams.
+</Card>
+</CardGroup>
+
+<Tip>
+Create specialized agents for different teams with appropriate tool access, then use group permissions to ensure each team only sees relevant agents.
+</Tip>
+
+---
+
+## Monitoring MCP Operations
+
+Track and control how AI agents interact with your connected tools through MCP.
+
+### MCP Access Policies
+
+<AccordionGroup>
+<Accordion title="Tool-Specific Permissions">
+Grant or restrict access to individual MCP tools on a per-user or per-group basis. Users only see and can use tools they're permitted to access.
+</Accordion>
+
+<Accordion title="Operation Monitoring">
+View real-time logs of MCP operations, including which users triggered which actions through AI agents.
+</Accordion>
+
+<Accordion title="Usage Limits">
+Set rate limits or usage quotas for MCP tool usage to prevent excessive API calls or resource consumption.
+</Accordion>
+</AccordionGroup>
+
+<Check>
+All MCP operations respect both WonkaChat access controls and the underlying tool's native permission system.
+</Check>
+
+---
+
+## Best Practices for Access Control
+
+<CardGroup cols={2}>
+<Card title="Principle of Least Privilege" icon="shield-check">
+Grant users only the minimum permissions needed to perform their job functions.
+</Card>
+
+<Card title="Regular Access Reviews" icon="rotate">
+Periodically review user permissions to ensure they remain appropriate as roles change.
+</Card>
+
+<Card title="Group-Based Management" icon="users-gear">
+Use groups for scalable permission management rather than individual user settings.
+</Card>
+
+<Card title="Audit Access Changes" icon="clipboard-list">
+Monitor who makes permission changes and review access control modifications regularly.
+</Card>
+</CardGroup>

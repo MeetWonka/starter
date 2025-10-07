@@ -1,0 +1,272 @@
+---
+title: "Best Practices"
+description: "Guidelines for safe AI usage, sensitive information handling, and risk management when using WonkaChat."
+---
+
+Use WonkaChat safely and effectively by following these best practices. Learn how to manage AI scope, handle sensitive information, and minimize risks in your organization.
+
+<Tip>
+These guidelines help you leverage AI capabilities while maintaining security, privacy, and control over your data and systems.
+</Tip>
+
+---
+
+## Acceptable Use Guidelines
+
+Follow these principles to ensure safe and responsible AI usage in your organization.
+
+### Scope AI Tasks Appropriately
+
+<Warning>
+**Avoid massive refactors or broad changes.** AI agents work best with clearly defined, limited-scope tasks. Large-scale changes increase error risk and reduce oversight.
+</Warning>
+
+<AccordionGroup>
+<Accordion title="Define Clear Boundaries">
+Give AI agents specific, well-defined tasks rather than open-ended instructions. For example, "refactor the authentication module" is better than "improve the entire codebase."
+</Accordion>
+
+<Accordion title="Break Down Complex Tasks">
+Split large projects into smaller, manageable subtasks. Review and approve each subtask completion before proceeding to the next.
+</Accordion>
+
+<Accordion title="Use Safe Mode for Critical Operations">
+Enable Safe Mode when working on production systems, sensitive data, or mission-critical components to review every action before execution.
+</Accordion>
+
+<Accordion title="Maintain Human Oversight">
+AI agents augment human work — they don't replace human judgment. Always review AI outputs, especially for important decisions or changes.
+</Accordion>
+</AccordionGroup>
+
+### Appropriate AI Use Cases
+
+<CardGroup cols={2}>
+<Card title="Recommended Uses" icon="circle-check">
+- Code reviews and suggestions
+- Documentation generation
+- Routine data analysis
+- Testing and debugging assistance
+- Standard configuration tasks
+</Card>
+
+<Card title="Use with Caution" icon="triangle-exclamation">
+- Production deployments
+- Database migrations
+- Security configurations
+- Financial transactions
+- Personnel decisions
+</Card>
+</CardGroup>
+
+---
+
+## Sensitive Information Handling
+
+Protect confidential and sensitive data when working with AI agents.
+
+### What to Avoid Sharing
+
+<Warning>
+Never share credentials, API keys, passwords, or authentication tokens in AI conversations, even temporarily. Use environment variables or secure vaults instead.
+</Warning>
+
+<Steps>
+<Step title="Identify Sensitive Data">
+Recognize what constitutes sensitive information in your organization:
+- Personal Identifiable Information (PII)
+- Financial data and payment information
+- Authentication credentials and API keys
+- Proprietary business information
+- Healthcare or legal records
+</Step>
+
+<Step title="Use Data Masking">
+Replace sensitive values with placeholders when discussing code or configurations with AI agents.
+
+```javascript
+// ❌ Don't share actual credentials
+const apiKey = "sk_live_abc123xyz789";
+
+// ✅ Use placeholders instead
+const apiKey = process.env.API_KEY;
+```
+</Step>
+
+<Step title="Review Before Sharing Context">
+Before granting an AI agent access to files or systems, verify they don't contain sensitive information that shouldn't be processed.
+</Step>
+</Steps>
+
+### Safe Data Practices
+
+<Tabs>
+<Tab title="Use Test Data">
+When demonstrating issues or requesting AI assistance, use anonymized test data or synthetic examples rather than production data.
+</Tab>
+
+<Tab title="Limit Context Scope">
+Provide AI agents with only the specific files, directories, or data they need to complete a task. Avoid granting broad access to entire systems.
+</Tab>
+
+<Tab title="Configure MCP Carefully">
+When connecting tools via MCP, audit what data the AI can access and ensure it aligns with your security policies.
+</Tab>
+</Tabs>
+
+<Info>
+Remember: AI agents inherit your permissions. If you can access sensitive data, the AI can too when connected to those systems.
+</Info>
+
+---
+
+## Risk Management
+
+Minimize risks when deploying AI agents in your organization.
+
+### Permission Management
+
+<CardGroup cols={2}>
+<Card title="Principle of Least Privilege" icon="shield-halved">
+Grant AI agents and users only the minimum permissions needed to complete their tasks. Avoid blanket "admin" access.
+</Card>
+
+<Card title="Regular Permission Audits" icon="clipboard-check">
+Review and update permissions regularly as roles and responsibilities change within your organization.
+</Card>
+
+<Card title="Time-Limited Access" icon="clock">
+Consider temporary permission grants for specific projects, revoking access when the work is complete.
+</Card>
+
+<Card title="Monitor Usage Patterns" icon="chart-line">
+Track how AI agents and users access tools to identify unusual patterns that might indicate security issues.
+</Card>
+</CardGroup>
+
+### Change Management
+
+<AccordionGroup>
+<Accordion title="Version Control Everything">
+Always use version control (e.g., Git) when AI agents make code changes. This provides rollback capability and change tracking.
+
+<Check>
+Commit frequently and use descriptive commit messages to understand what the AI changed and why.
+</Check>
+</Accordion>
+
+<Accordion title="Test Before Production">
+Never allow AI agents to make changes directly to production systems. Use development and staging environments first.
+</Accordion>
+
+<Accordion title="Implement Approval Workflows">
+Require human approval for critical changes, deployments, or operations that affect production systems or sensitive data.
+</Accordion>
+
+<Accordion title="Maintain Rollback Plans">
+Ensure you can quickly revert AI-generated changes if issues arise. Keep backups and document recovery procedures.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Training and Awareness
+
+Educate your team on safe AI usage to create a security-conscious culture.
+
+### User Education
+
+<Steps>
+<Step title="Onboarding Training">
+Provide comprehensive training when users first access WonkaChat, covering security features, best practices, and organizational policies.
+</Step>
+
+<Step title="Regular Updates">
+Share updates about new features, security enhancements, and evolving best practices as AI technology changes.
+</Step>
+
+<Step title="Incident Reporting">
+Establish clear procedures for users to report security concerns, unexpected AI behavior, or potential data exposure.
+</Step>
+
+<Step title="Continuous Learning">
+Encourage users to share learnings and experiences to build organizational knowledge about effective and safe AI usage.
+</Step>
+</Steps>
+
+<Tip>
+Create internal documentation specific to your organization's AI policies, including approved use cases and examples from your domain.
+</Tip>
+
+---
+
+## Operational Best Practices
+
+### Monitoring and Logging
+
+<CardGroup cols={2}>
+<Card title="Enable Audit Logs" icon="file-lines">
+Activate comprehensive logging to track AI agent actions, user activities, and system access for security and compliance.
+</Card>
+
+<Card title="Review Logs Regularly" icon="magnifying-glass">
+Periodically review audit logs to identify potential security issues, unusual patterns, or policy violations.
+</Card>
+
+<Card title="Set Up Alerts" icon="bell">
+Configure alerts for suspicious activities, failed access attempts, or unusual usage patterns.
+</Card>
+
+<Card title="Retain Logs Appropriately" icon="clock-rotate-left">
+Follow your data retention policies while ensuring logs are available for security investigations and compliance audits.
+</Card>
+</CardGroup>
+
+### Incident Response
+
+<AccordionGroup>
+<Accordion title="Define Incident Procedures">
+Establish clear procedures for responding to security incidents involving AI agents, including escalation paths and responsibilities.
+</Accordion>
+
+<Accordion title="Rapid Response Capability">
+Ensure administrators can quickly disable AI agents, revoke permissions, or suspend users if security issues arise.
+</Accordion>
+
+<Accordion title="Post-Incident Review">
+Conduct thorough reviews after security incidents to identify root causes and implement preventive measures.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Quick Reference: Daily Safety Checklist
+
+Use this checklist for common AI tasks to maintain security:
+
+<Tabs>
+<Tab title="Before Starting Work">
+- [ ] Verify Safe Mode is enabled for sensitive tasks
+- [ ] Confirm you have appropriate permissions
+- [ ] Ensure version control is active
+- [ ] Review the task scope and boundaries
+</Tab>
+
+<Tab title="During Work">
+- [ ] Provide only necessary context to AI
+- [ ] Use placeholders for sensitive data
+- [ ] Review AI actions before approval
+- [ ] Keep tasks focused and limited in scope
+</Tab>
+
+<Tab title="After Completion">
+- [ ] Review all changes made by AI
+- [ ] Test thoroughly in non-production environments
+- [ ] Document what was done and why
+- [ ] Commit changes with descriptive messages
+</Tab>
+</Tabs>
+
+<Check>
+Following these practices helps you leverage AI power while maintaining security, control, and compliance.
+</Check>
