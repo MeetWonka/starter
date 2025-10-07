@@ -1,25 +1,243 @@
 ---
 title: "What is Wonka Chat?"
-description: "Core concept explanation, key differentiators, and how it works."
+description: "Your enterprise AI assistant that connects to your business tools and runs securely in your environment."
 ---
 
-# Welcome to Wonka Chat
+Wonka Chat is an enterprise AI assistant that connects directly to your business tools, software, and data to help you accomplish complex tasks through simple conversation while maintaining your privacy and data integrity.
 
-This page will cover the core concepts of Wonka Chat, its key differentiators, and a high-level overview of how it works.
+<Tabs>
+<Tab title="Getting Started">
+
+## Core Concept
+
+Wonka Chat replaces the need to switch between multiple software applications. Instead of juggling different tools, you work through one simple chat interface that orchestrates everything behind the scenes.
+
+Think of it as your intelligent business assistant that:
+- Understands your company's processes and data
+- Connects to all your existing tools and systems
+- Executes multi-step workflows across different platforms
+- Keeps your data secure within your environment
+
+<Frame caption="Example: Automated employee onboarding across multiple systems">
+<img src="/images/wonkachat-intro.png" alt="Onboarding Agent orchestrating tasks across Notion, Outlook, Odoo, and other business tools" />
+</Frame>
+
+In this example, a request to "Run New Employee Onboarding" automatically:
+
+1. ✅ Gets information from **Notion** (onboarding checklist)
+2. ✅ Creates email account in **Microsoft 365**
+3. ✅ Sends access codes via **Outlook**
+4. ✅ Schedules onboarding meeting in **Outlook Calendar**
+5. ✅ Creates **Odoo** account and sends invitation
+6. ✅ Sends onboarding presentation via email
+
+<Check>
+This is the power of WonkaChat: complex multi-step workflows across different tools, managed through natural conversation.
+</Check>
+
+In this example, a simple request triggers actions across Notion, Outlook, Odoo, and other tools—all coordinated through one platform and one conversation.
+
+---
+
+## Key Capabilities
 
 <CardGroup cols={2}>
-  <Card
-    title="Why Choose Wonka Chat?"
-    icon="star"
-    href="/welcome/why-wonka-chat"
-  >
-    Discover the unique value propositions and advantages of Wonka Chat.
-  </Card>
-  <Card
-    title="Quick Start Guide"
-    icon="rocket"
-    href="/welcome/quick-start"
-  >
-    Get up and running with Wonka Chat in just 5 minutes.
-  </Card>
+<Card title="Business Teaching" icon="graduation-cap">
+Train Wonka Chat on your company's knowledge by uploading documents and providing context. It learns your processes, terminology, and workflows.
+</Card>
+
+<Card title="Tool Connections" icon="plug">
+Connect your existing business tools—from project management to CRM to communication platforms—so WonkaChat can work with your data.
+</Card>
+
+<Card title="AI Agents" icon="robot">
+Create specialized agents for specific tasks like onboarding, reporting, or customer support that run autonomously on your behalf.
+</Card>
+
+<Card title="Model Flexibility" icon="sliders">
+Choose between thinking and non-thinking models based on task complexity, and choose any AI model provider.
+</Card>
 </CardGroup>
+
+---
+
+## How It Works (Simple Overview)
+
+<Steps>
+<Step title="Connect Your Tools">
+Link Wonka Chat to your business systems—email, documents, databases, CRMs, and more. This happens once during setup.
+
+<Info>
+Common integrations include Google Workspace, Microsoft 365, Notion, Odoo, Salesforce, and many others.
+</Info>
+</Step>
+
+<Step title="Teach Your Business">
+Upload documentation, share company knowledge, and provide context about your processes. WonkaChat learns how your business operates.
+</Step>
+
+<Step title="Start Conversing">
+Ask questions, request actions, or create workflows using natural language. WonkaChat handles the complexity behind the scenes.
+</Step>
+
+<Step title="Automate with AI Agents">
+Build specialized agents for recurring tasks. They can run autonomously, handling multi-step processes across your connected tools.
+
+<Check>
+Your AI Agents have access to all your integrated tools, consistently performing tasks while you focus on other priorities.
+</Check>
+</Step>
+</Steps>
+
+---
+
+## What Can You Accomplish?
+
+Real examples of what teams are doing with WonkaChat:
+
+<AccordionGroup>
+<Accordion title="Employee Onboarding in Minutes" icon="user-plus">
+Automatically create accounts, schedule meetings, send welcome materials, and set up access across all your systems with a single request.
+
+**Example:** "Onboard John Smith starting Monday" → Creates email, schedules HR meeting, adds to Slack, creates CRM account, sends laptop request.
+</Accordion>
+
+<Accordion title="Intelligent Document Search" icon="magnifying-glass">
+Find information across all your connected systems—emails, documents, databases, wikis—without remembering where things are stored.
+
+**Example:** "Find the Q3 marketing budget proposal" → Searches Google Drive, SharePoint, Notion, and Confluence simultaneously.
+</Accordion>
+
+<Accordion title="Automated Reporting" icon="chart-line">
+Generate reports by pulling data from multiple sources, analyzing trends, and formatting results—no manual spreadsheet work.
+
+**Example:** "Create a sales performance report for last month" → Pulls CRM data, calculates metrics, generates formatted report.
+</Accordion>
+
+<Accordion title="Cross-Platform Workflows" icon="arrows-spin">
+Execute complex multi-step processes that span different tools, eliminating manual coordination and context switching.
+
+**Example:** "Create project in PM tool, notify team in Slack, send welcome email, schedule kickoff" → All happens automatically.
+</Accordion>
+
+<Accordion title="Meeting Intelligence" icon="calendar">
+Schedule meetings considering everyone's availability, send agendas from templates, capture notes, and distribute action items—all in one flow.
+
+**Example:** "Schedule quarterly review with leadership team next week" → Finds time slots, sends invites with agenda, creates notes doc.
+</Accordion>
+
+<Accordion title="Customer Support Automation" icon="headset">
+Answer support questions using your knowledge base, create tickets, escalate when needed, and update customers—reducing response time.
+
+**Example:** "Customer asking about refund policy" → Retrieves policy, drafts response, creates ticket if needed, logs interaction.
+</Accordion>
+</AccordionGroup>
+
+<Tip>
+These workflows run through simple conversation—no coding or complex configuration required.
+</Tip>
+
+---
+
+## Ready to Get Started?
+
+<CardGroup cols={2}>
+<Card title="Why Choose Wonka Chat?" icon="star" href="/welcome/why-wonka-chat">
+Discover the unique advantages and security benefits of using WonkaChat for your team.
+</Card>
+
+<Card title="Quick Start Guide" icon="rocket" href="/welcome/quick-start">
+Get up and running with your first conversation in just 5 minutes.
+</Card>
+</CardGroup>
+
+</Tab>
+
+<Tab title="Technical Details">
+
+## Architecture Overview
+
+Wonka Chat is built on enterprise-grade infrastructure designed for security, scalability, and flexibility.
+
+### Deployment Model
+
+<Info>
+WonkaChat runs on **Kubernetes**, providing containerized deployment with automatic scaling, high availability, and resource management.
+</Info>
+
+**Key architectural characteristics:**
+- Containerized microservices architecture
+- Horizontal scaling based on demand
+- Self-healing infrastructure with automatic failover
+- Isolated tenant environments for enterprise deployments
+
+### Tool Connection Technology
+
+Wonka Chat uses **MCP (Model Context Protocol)** connections to integrate with your business tools and systems.
+
+<Tip>
+MCP connections are covered in detail in the [Tools & Connection](/tools-connection/introduction) section of this documentation.
+</Tip>
+
+**Connection capabilities:**
+- Secure, authenticated access to external APIs
+- Real-time data synchronization
+- Bidirectional communication (read and write operations)
+- Support for webhooks and event-driven workflows
+
+---
+
+## AI Model Infrastructure
+
+### Model Selection Architecture
+
+WonkaChat is **model-agnostic**—we are not an AI provider, but rather a platform that integrates with your chosen AI models.
+
+**Supported model types:**
+- **Thinking models**: For complex reasoning tasks requiring multi-step analysis
+- **Non-thinking models**: For rapid responses to straightforward queries
+- **Custom models**: Integrate your own fine-tuned or proprietary models
+
+### Provider Flexibility
+
+<CardGroup cols={2}>
+<Card title="Bring Your Own Model" icon="box">
+Connect to any AI provider—OpenAI, Anthropic, Google, or self-hosted models.
+</Card>
+
+<Card title="Cost-Performance Optimization" icon="gauge-high">
+Choose models based on your specific trade-offs between response quality, speed, and cost.
+</Card>
+</CardGroup>
+
+---
+
+## Security Architecture
+
+- **Data isolation**: Each tenant's data is isolated in separate namespaces
+- **Encryption**: Data encrypted at rest and in transit (TLS 1.3)
+- **Access control**: Role-based access control (RBAC) with fine-grained permissions
+- **Audit logging**: Complete audit trail of all actions and data access
+
+For comprehensive security documentation, see [Security & Governance](/security-governance/security-overview).
+
+
+---
+
+## Scalability and Performance
+
+**Infrastructure capabilities:**
+- Multi-region deployment support
+- Load balancing across model providers
+- Response caching for frequently accessed data
+- Asynchronous processing for long-running tasks
+- Webhook support for real-time integrations
+
+**Performance characteristics:**
+- Sub-second response times for simple queries
+- Parallel tool execution for multi-step workflows
+- Configurable timeout and retry policies
+- Rate limiting and quota management
+
+</Tab>
+</Tabs>

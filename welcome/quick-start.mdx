@@ -1,20 +1,751 @@
 ---
 title: "Quick Start Guide"
-description: "Your 5-minute guide to getting started with Wonka Chat."
+description: "Get started with WonkaChat in 5 minutes—from first login to your first AI-powered workflow."
 ---
 
-# Quick Start Guide
+Get up and running with WonkaChat quickly and start experiencing AI-powered automation across your business tools.
 
-Follow these steps to get started with Wonka Chat.
+<Tabs>
+<Tab title="Getting Started">
+
+## Your 5-Minute Success Path
 
 <Steps>
-  <Step title="First Login">
-    Details about the first login and navigating the interface.
-  </Step>
-  <Step title="Your First Conversation">
-    Guidance on initiating your first conversation with Wonka Chat.
-  </Step>
-  <Step title="Basic Interaction">
-    Examples of basic interactions to get you started.
-  </Step>
+<Step title="First Login and Account Access">
+
+Access WonkaChat through one of two methods:
+
+<Tabs>
+<Tab title="Team SSO Login">
+If your organization has already set up WonkaChat, use your existing work credentials:
+
+**Sign in with:**
+- **Google Workspace** (your company Google account)
+- **Microsoft 365** (your company Microsoft account)
+- **Other SSO providers** your organization has configured
+
+<Info>
+SSO uses OpenID Connect for secure, seamless authentication with your existing credentials.
+</Info>
+
+<Check>
+No new password to remember—just use your existing work account credentials.
+</Check>
+</Tab>
+
+<Tab title="Invitation Setup">
+If you're the first user from your organization:
+
+1. Check your email for a WonkaChat invitation
+2. Click the invitation link
+3. Create your account credentials
+4. Complete your profile setup
+5. Begin configuring your organization's WonkaChat instance
+
+<Tip>
+After initial setup, you can enable SSO for your team so everyone can use their existing work credentials.
+</Tip>
+</Tab>
+</Tabs>
+
+**What you'll see after login:**
+- Clean chat interface in the center
+- Connected tools and agents in the sidebar
+- Model selection options in the settings
+- Your prompt library and saved conversations
+
+</Step>
+
+<Step title="Quick Navigation Tour">
+
+<Info>
+**Video Tutorial Coming Soon**
+
+We're preparing a comprehensive video walkthrough of the WonkaChat interface. This space will contain an interactive tutorial showing you how to navigate the platform, access key features, and customize your workspace.
+</Info>
+
+### Interface Overview (Text Guide)
+
+While the video tutorial is being finalized, here's a quick overview:
+
+**Main Chat Interface:**
+- Type your queries and requests in natural language
+- View AI responses and workflow progress in real-time
+- See which tools are being accessed during execution
+
+**Sidebar Navigation:**
+- **AI Agents**: Access pre-built and custom agents
+- **Prompt Library**: Your saved prompts and templates
+- **Connected Tools**: View and manage tool integrations
+- **Conversations**: Browse conversation history
+
+**Top Bar:**
+- **Model Selector**: Switch between thinking and non-thinking models
+- **Settings**: Configure preferences and connections
+- **Profile**: Manage your account and organization settings
+
+<Tip>
+Bookmark conversations you want to reference later using the bookmark icon.
+</Tip>
+
+</Step>
+
+<Step title="Your First Conversation">
+
+Start with a simple query to experience WonkaChat's capabilities:
+
+### Try This First
+
+Type something like:
+
+```
+What's on my calendar today?
+```
+
+WonkaChat will:
+- Connect to your calendar system
+- Retrieve your schedule
+- Present it in an organized format
+
+### Example: Multi-Tool Workflow
+
+Once comfortable, try something more powerful. Here's a real example:
+
+<Frame caption="Example: Automated employee onboarding across multiple systems">
+<img src="/images/wonkachat-intro.png" alt="Onboarding Agent orchestrating tasks across Notion, Outlook, Odoo, and other business tools" />
+</Frame>
+
+In this example, a request to "Run New Employee Onboarding" automatically:
+
+1. ✅ Gets information from **Notion** (onboarding checklist)
+2. ✅ Creates email account in **Microsoft 365**
+3. ✅ Sends access codes via **Outlook**
+4. ✅ Schedules onboarding meeting in **Outlook Calendar**
+5. ✅ Creates **Odoo** account and sends invitation
+6. ✅ Sends onboarding presentation via email
+
+**Connected tools shown:** Google Drive, Outlook, Odoo, Azure, SharePoint, and more—all orchestrated through one simple conversation.
+
+<Check>
+This is the power of WonkaChat: complex multi-step workflows across different tools, managed through natural conversation.
+</Check>
+
+</Step>
+
+<Step title="Understanding Model Selection">
+
+Choose the right model for your task:
+
+<CardGroup cols={2}>
+<Card title="Thinking Models" icon="brain">
+**Use for complex tasks:**
+- Strategic analysis
+- Multi-step problem solving
+- Data analysis and insights
+- Complex workflow planning
+
+**Example:** "Analyze our Q3 sales data and recommend improvements"
+</Card>
+
+<Card title="Non-Thinking Models" icon="bolt">
+**Use for quick tasks:**
+- Simple questions
+- Fast information retrieval
+- Basic formatting
+- Quick summaries
+
+**Example:** "What's my next meeting?"
+</Card>
+</CardGroup>
+
+<Tip>
+When in doubt, start with thinking models for important tasks. You can always switch to non-thinking models for speed once you understand the query complexity.
+</Tip>
+
+</Step>
+
+<Step title="Exploring Connected Tools">
+
+WonkaChat's true power comes from connecting your business tools.
+
+### Common Tool Integrations
+
+<AccordionGroup>
+<Accordion title="Communication & Email" icon="envelope">
+- Microsoft Outlook / Exchange
+- Google Gmail / Workspace
+- Slack, Microsoft Teams
+
+**What you can do:**
+- Send and read emails
+- Schedule meetings
+- Search message history
+- Create calendar events
+</Accordion>
+
+<Accordion title="Document Management" icon="folder">
+- Google Drive
+- SharePoint
+- Notion
+- Confluence
+- Dropbox
+
+**What you can do:**
+- Search documents
+- Upload and create files
+- Share and collaborate
+- Extract information from documents
+</Accordion>
+
+<Accordion title="Business Applications" icon="briefcase">
+- Odoo ERP
+- Salesforce CRM
+- HubSpot
+- Custom APIs
+
+**What you can do:**
+- Create and update records
+- Run reports
+- Manage customer data
+- Trigger business processes
+</Accordion>
+
+<Accordion title="Databases & Analytics" icon="database">
+- PostgreSQL, MySQL
+- Microsoft SQL Server
+- MongoDB
+- Custom data sources
+
+**What you can do:**
+- Query databases
+- Generate reports
+- Analyze data trends
+- Export results
+</Accordion>
+</AccordionGroup>
+
+<Info>
+Tool connections are covered in detail in the [Tools & Connection](/tools-connection/introduction) section. Advanced setup and troubleshooting guides are available there.
+</Info>
+
+</Step>
+
+<Step title="Next Steps: Go Deeper">
+
+Now that you're familiar with the basics, explore more advanced capabilities:
+
+<CardGroup cols={2}>
+<Card title="Create AI Agents" icon="robot" href="/ai-agents/creating-your-first-agent">
+Build specialized agents that automate recurring workflows and run autonomously.
+</Card>
+
+<Card title="Build Your Prompt Library" icon="book" href="/improved-usage/prompt-library">
+Save and reuse your most effective prompts with variables for efficiency.
+</Card>
+
+<Card title="Connect Your Tools" icon="plug" href="/tools-connection/setting-up-your-first-connection">
+Set up connections to your business systems for deeper integration.
+</Card>
+
+<Card title="Master Prompt Engineering" icon="wand-magic-sparkles" href="/improved-usage/prompt-engineering">
+Learn techniques to write more effective prompts and get better results.
+</Card>
+</CardGroup>
+
+</Step>
 </Steps>
+
+---
+
+## Quick Tips for Success
+
+<CardGroup cols={2}>
+<Card title="Be Specific" icon="crosshairs">
+The more context you provide, the better WonkaChat can help. Include relevant details, timeframes, and desired outcomes.
+</Card>
+
+<Card title="Start Simple" icon="seedling">
+Begin with straightforward queries and gradually work up to complex multi-step workflows as you learn the platform.
+</Card>
+
+<Card title="Use AI Agents" icon="robot">
+For recurring tasks, create agents that can run automatically rather than repeating the same prompts.
+</Card>
+
+<Card title="Save Great Prompts" icon="bookmark">
+When you craft a prompt that works well, save it to your library for future use.
+</Card>
+</CardGroup>
+
+---
+
+## Common First Questions
+
+<AccordionGroup>
+<Accordion title="How do I switch between AI models?" icon="toggle-on">
+Use the model selector in the top bar of the interface. Choose "Thinking" for complex tasks requiring deep analysis, or "Non-Thinking" for quick, straightforward queries.
+
+You can change models mid-conversation if needed.
+</Accordion>
+
+<Accordion title="Can WonkaChat access all my company data?" icon="lock">
+WonkaChat only accesses tools and data you explicitly connect. You control which systems are integrated and what permissions WonkaChat has within each system.
+
+All access follows your organization's security policies and user permissions.
+</Accordion>
+
+<Accordion title="What if I make a mistake or want to undo something?" icon="rotate-left">
+WonkaChat shows you what actions it plans to take before executing them (especially for write operations). You can review and confirm before changes are made.
+
+For audit and rollback capabilities, see your organization's governance settings.
+</Accordion>
+
+<Accordion title="How do I teach WonkaChat about my business?" icon="graduation-cap">
+You can upload documents, share company knowledge, and provide context through conversation. The platform learns your terminology and processes over time.
+
+For detailed guidance, see the [Business Teaching](/ai-agents/business-teaching) section.
+</Accordion>
+
+<Accordion title="Where can I get help if I'm stuck?" icon="life-ring">
+- Check the [FAQ](/support-resources/faq) for common questions
+- Visit [Troubleshooting](/support-resources/troubleshooting) for solutions
+- Contact your organization's WonkaChat administrator
+- Use the [Getting Help](/support-resources/getting-help) resources
+</Accordion>
+</AccordionGroup>
+
+---
+
+## You're Ready!
+
+<Check>
+You now have everything you need to start using WonkaChat effectively. Begin with simple queries, explore the connected tools, and gradually expand to more complex workflows.
+</Check>
+
+<Tip>
+The best way to learn is by doing. Start a conversation, ask questions, and experiment with different types of requests. WonkaChat is designed to be intuitive and helpful.
+</Tip>
+
+</Tab>
+
+<Tab title="Technical Details">
+
+## Authentication and Access Control
+
+### Single Sign-On (SSO) Configuration
+
+WonkaChat supports enterprise SSO through OpenID Connect (OIDC):
+
+**Supported Identity Providers:**
+- Google Workspace (Google OAuth 2.0)
+- Microsoft 365 / Azure AD (Microsoft Identity Platform)
+- Okta
+- Auth0
+- OneLogin
+- Custom OIDC-compliant providers
+
+**SSO Flow:**
+```
+User → Identity Provider → OIDC Token → WonkaChat → Session Creation
+```
+
+<Info>
+SSO configuration is managed by organization administrators. See [Access Control](/security-governance/access-control) for setup details.
+</Info>
+
+### Authentication Methods
+
+<Tabs>
+<Tab title="SSO (Recommended)">
+**OpenID Connect (OIDC) Integration:**
+
+- No password storage in WonkaChat
+- Centralized access management
+- Automatic provisioning/deprovisioning
+- MFA enforced at IdP level
+- Session management via IdP
+
+**Configuration Requirements:**
+- Client ID and Secret from IdP
+- Authorization and Token endpoints
+- User info endpoint
+- Redirect URI configuration
+</Tab>
+
+<Tab title="Direct Authentication">
+**Email/Password with MFA:**
+
+- Used for initial setup or non-SSO organizations
+- Bcrypt password hashing
+- Mandatory MFA after initial setup
+- TOTP (Time-based One-Time Password) support
+- Recovery codes provided
+
+**Security Features:**
+- Password complexity requirements
+- Account lockout after failed attempts
+- Session timeout configuration
+- Forced password rotation (optional)
+</Tab>
+</Tabs>
+
+---
+
+## Initial Deployment Architecture
+
+### What Happens at First Login
+
+**Backend Process Flow:**
+
+1. **Authentication**: User credentials validated via SSO or direct auth
+2. **Tenant Initialization**: User's organization namespace created/validated
+3. **Permission Sync**: Roles and permissions loaded from IdP or directory
+4. **Resource Allocation**: Kubernetes resources assigned to user session
+5. **Tool Discovery**: Available integrations loaded based on org configuration
+6. **Model Selection**: Default AI models initialized per org policy
+
+**Session Management:**
+- JWT tokens for API authentication
+- Refresh token rotation for security
+- Configurable session timeout (default: 12 hours)
+- Automatic re-authentication via SSO
+
+---
+
+## Platform Architecture Overview
+
+### Kubernetes Deployment Structure
+
+```
+┌─────────────────────────────────────────┐
+│         Load Balancer / Ingress          │
+└──────────────┬──────────────────────────┘
+               │
+    ┌──────────┴──────────┐
+    │                     │
+┌───▼────┐         ┌──────▼───────┐
+│  Web   │         │   API        │
+│  UI    │         │   Gateway    │
+└────────┘         └──────┬───────┘
+                          │
+         ┌────────────────┼────────────────┐
+         │                │                │
+    ┌────▼────┐    ┌──────▼──────┐  ┌─────▼──────┐
+    │  Auth   │    │   Agent      │  │   Tool     │
+    │ Service │    │   Execution  │  │ Connection │
+    └─────────┘    └──────┬───────┘  └─────┬──────┘
+                          │                │
+                    ┌─────▼────────────────▼─────┐
+                    │   Model Inference Layer     │
+                    │  (Multi-Provider Support)   │
+                    └────────────────────────────┘
+```
+
+**Component Details:**
+
+- **Web UI**: React-based interface, served via Nginx
+- **API Gateway**: GraphQL/REST endpoints, request routing
+- **Auth Service**: SSO integration, session management, RBAC
+- **Agent Execution**: Workflow orchestration, tool calling
+- **Tool Connection**: MCP protocol handlers, API integrations
+- **Model Inference**: AI provider abstraction, request handling
+
+---
+
+## Tool Connection Architecture
+
+### MCP (Model Context Protocol) Integration
+
+WonkaChat uses MCP for secure, standardized tool connections:
+
+**MCP Connection Flow:**
+```
+User Request → Agent Analysis → Tool Selection → 
+MCP Protocol → External API → Response Processing → 
+Context Integration → AI Response
+```
+
+**Key Components:**
+
+1. **MCP Server**: Handles tool registration and discovery
+2. **Connection Pool**: Manages persistent connections to external APIs
+3. **Auth Manager**: Secures credentials and tokens per integration
+4. **Response Cache**: Caches appropriate responses for performance
+5. **Rate Limiter**: Enforces API rate limits per provider
+
+<Tip>
+MCP architecture details and custom tool development are covered in [Tools & Connection](/tools-connection/introduction).
+</Tip>
+
+### Available Integration Types
+
+<CardGroup cols={2}>
+<Card title="REST APIs" icon="globe">
+Standard HTTP/HTTPS REST endpoints with JSON/XML payloads.
+</Card>
+
+<Card title="GraphQL" icon="diagram-project">
+GraphQL endpoints for flexible data querying.
+</Card>
+
+<Card title="Database Connections" icon="database">
+Direct SQL/NoSQL database connections with query execution.
+</Card>
+
+<Card title="Message Queues" icon="message">
+Integration with RabbitMQ, Kafka, SQS for event-driven workflows.
+</Card>
+</CardGroup>
+
+---
+
+## Model Selection and Routing
+
+### Technical Implementation
+
+**Model Types:**
+
+```javascript
+// Thinking Models (Complex Reasoning)
+models: {
+  thinking: [
+    'gpt-4-turbo',
+    'gpt-4',
+    'claude-3-opus',
+    'claude-3-sonnet',
+    'gemini-ultra'
+  ],
+  
+  // Non-Thinking Models (Fast Response)
+  nonThinking: [
+    'gpt-3.5-turbo',
+    'claude-3-haiku',
+    'gemini-pro'
+  ]
+}
+```
+
+**Automatic Model Routing Logic:**
+
+WonkaChat can analyze queries and route to appropriate models:
+
+```python
+def select_model(query, context):
+    complexity_score = analyze_complexity(query)
+    requires_reasoning = check_reasoning_needed(query)
+    context_size = calculate_context_tokens(context)
+    
+    if complexity_score > THRESHOLD or requires_reasoning:
+        return select_thinking_model(context_size)
+    else:
+        return select_fast_model(context_size)
+```
+
+**Factors Considered:**
+- Query complexity (keywords, structure)
+- Required reasoning depth
+- Context window size needed
+- Historical performance for similar queries
+- Organization's model preferences
+- Cost optimization settings
+
+---
+
+## Performance Characteristics
+
+### Response Time Expectations
+
+<Tabs>
+<Tab title="Simple Queries">
+**Non-Thinking Models:**
+- Latency: 0.5 - 2 seconds
+- Use cases: Quick lookups, simple formatting
+- Network overhead: Minimal
+- Token consumption: 100-500 tokens
+</Tab>
+
+<Tab title="Complex Analysis">
+**Thinking Models:**
+- Latency: 5 - 30 seconds
+- Use cases: Deep analysis, multi-step reasoning
+- Network overhead: Multiple API calls
+- Token consumption: 1,000-10,000 tokens
+</Tab>
+
+<Tab title="Multi-Tool Workflows">
+**Agent Execution:**
+- Latency: 10 seconds - 5 minutes
+- Use cases: Workflows across multiple systems
+- Parallelization: Concurrent tool calls when possible
+- Progress tracking: Real-time status updates
+</Tab>
+</Tabs>
+
+### Scalability Metrics
+
+**Kubernetes Auto-Scaling:**
+- Horizontal Pod Autoscaling (HPA) based on CPU/memory
+- Custom metrics: Queue depth, response latency
+- Scale-to-zero for dev/test environments
+- Min/max replica configuration per component
+
+**Concurrency Limits:**
+- Concurrent users per pod: 50-100
+- Concurrent model requests: Configurable per provider
+- Database connection pooling: 10-50 per service
+- Rate limiting: Configurable per user/org
+
+---
+
+## Security Implementation Details
+
+### Data Flow Security
+
+**Encryption:**
+- TLS 1.3 for all external connections
+- mTLS for internal service-to-service communication
+- AES-256 encryption for data at rest
+- Field-level encryption for sensitive data
+
+**Network Security:**
+- Network policies isolate tenant workloads
+- Egress filtering to approved endpoints only
+- VPC peering for on-premises integration
+- Optional VPN/direct connect support
+
+**Audit Logging:**
+- All API calls logged with user context
+- Tool access logged with timestamps
+- Model queries logged (with PII redaction option)
+- Retention: Configurable per compliance requirements
+
+<Info>
+Comprehensive security documentation available in [Security & Governance](/security-governance/security-overview).
+</Info>
+
+---
+
+## Monitoring and Observability
+
+### Available Metrics
+
+**Application Metrics:**
+- Request rate, latency, error rate
+- Model inference time and token usage
+- Tool connection health and response times
+- Agent execution success/failure rates
+
+**Infrastructure Metrics:**
+- Pod CPU, memory, disk usage
+- Network throughput and latency
+- Database query performance
+- Cache hit rates
+
+**Business Metrics:**
+- Active users and sessions
+- Conversations per user
+- Most used tools and agents
+- Cost per conversation (model usage)
+
+### Logging and Tracing
+
+- **Structured Logging**: JSON format with correlation IDs
+- **Distributed Tracing**: OpenTelemetry integration
+- **Log Aggregation**: Compatible with ELK, Splunk, Datadog
+- **Alerting**: Configurable alerts on errors, latency, failures
+
+---
+
+## API Access for Developers
+
+### REST API Overview
+
+For organizations needing programmatic access:
+
+```bash
+# Authentication
+curl -X POST https://api.wonkachat.com/v1/auth/token \
+  -H "Content-Type: application/json" \
+  -d '{"client_id": "xxx", "client_secret": "yyy"}'
+
+# Send Chat Request
+curl -X POST https://api.wonkachat.com/v1/chat/completions \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "messages": [{"role": "user", "content": "What meetings are today?"}],
+    "model": "thinking"
+  }'
+
+# Create Agent
+curl -X POST https://api.wonkachat.com/v1/agents \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Onboarding Agent",
+    "tools": ["notion", "outlook", "odoo"],
+    "prompt": "You are an onboarding specialist..."
+  }'
+```
+
+**Available Endpoints:**
+- `/v1/chat/completions` - Send chat messages
+- `/v1/agents` - Manage agents
+- `/v1/tools` - Configure tool connections
+- `/v1/conversations` - Access conversation history
+- `/v1/users` - User management (admin only)
+
+<Tip>
+Complete API documentation with examples is available in [API Reference](/api-reference/introduction).
+</Tip>
+
+---
+
+## Development and Testing
+
+### Local Development Setup
+
+For technical teams wanting to test integrations:
+
+```bash
+# Clone development SDK
+git clone https://github.com/wonka/wonkachat-sdk
+
+# Install dependencies
+npm install @wonkachat/sdk
+
+# Configure credentials
+export WONKACHAT_API_KEY="your-api-key"
+export WONKACHAT_ORG_ID="your-org-id"
+
+# Run example
+node examples/first-conversation.js
+```
+
+### SDK Support
+
+**Available SDKs:**
+- **Python**: `pip install wonkachat`
+- **JavaScript/TypeScript**: `npm install @wonkachat/sdk`
+- **Go**: `go get github.com/wonka/wonkachat-go`
+
+**Example Usage (TypeScript):**
+```typescript
+import { WonkaChatClient } from '@wonkachat/sdk';
+
+const client = new WonkaChatClient({
+  apiKey: process.env.WONKACHAT_API_KEY,
+  orgId: process.env.WONKACHAT_ORG_ID
+});
+
+const response = await client.chat.completions.create({
+  messages: [{ role: 'user', content: 'Summarize today\'s meetings' }],
+  model: 'thinking',
+  tools: ['outlook']
+});
+
+console.log(response.message.content);
+```
+
+</Tab>
+</Tabs>
