@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
-  "name": "Mint Starter Kit",
+  "theme": "mint",
+  "name": "WonkaChat Wiki",
   "colors": {
-    "primary": "#C43F23",
-    "light": "#C43F23",
-    "dark": "#C43F23"
+    "primary": "#5a4bff",
+    "light": "#7e72ff",
+    "dark": "#362d9a"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -48,21 +48,27 @@
         ]
       },
       {
+        "tab": "Learning",
+        "groups": [
+          {
+            "group": "Foundations of AI",
+            "pages": [
+              "learn/index",
+              "learn/ai-agent",
+              "learn/mcp",
+              "learn/build-agents"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "API reference",
+        "hidden": true,
         "groups": [
           {
             "group": "API documentation",
             "pages": [
               "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
             ]
           }
         ]
@@ -71,21 +77,17 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Our website",
+          "href": "https://www.meetwonka.com/fr",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Contact-us",
+          "href": "https://www.meetwonka.com/fr/contact",
+          "icon": "envelope"
         }
       ]
     }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
   },
   "navbar": {
     "links": [
@@ -118,5 +120,12 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
+  },
+  "errors": {
+  "404": {
+    "redirect": false,
+    "title": "Your page can't be found",
+    "description": "Please, go ask **WonkaChat** to help you find what you're looking for, I am sure he can help you !"
   }
+}
 }

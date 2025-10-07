@@ -1,0 +1,36 @@
+---
+title: "What is MCP (Model Context Protocol)?"
+description: "How agents discover and use tools safely through a standard protocol."
+---
+
+<Info>
+MCP is a protocol that standardizes how an agent discovers tools, requests capabilities, and exchanges structured data with external systems.
+</Info>
+
+### Key concepts
+- **Host**: runs the LLM/agent
+- **Server**: exposes a catalog of tools with schemas and permissions
+- **Client**: connects the agent to the server
+- **Tools**: typed functions the agent can call (e.g., search, file IO, API)
+
+### Why MCP
+- Unified discovery of available tools
+- Strong typing and metadata for safer calls
+- Isolation and permission prompts for sensitive actions
+
+### Example capability descriptor
+
+```json
+{
+  "tool": "search",
+  "description": "Query indexed docs",
+  "inputSchema": { "type": "object", "properties": { "q": { "type": "string" } }, "required": ["q"] },
+  "rateLimit": { "rpm": 60 }
+}
+```
+
+### Learn more
+- Intro to agents → `/learn/ai-agent`
+- Build one end‑to‑end → `/learn/build-agents`
+
+

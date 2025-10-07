@@ -1,0 +1,39 @@
+---
+title: "Create and use AI agents"
+description: "Practical, copy‑paste path to build, equip, and run an agent."
+icon: "tent-arrow-turn-left"
+---
+
+<Steps>
+<Step title="Define the goal and constraints">
+Write a one‑sentence outcome, guardrails, and what success looks like.
+
+```text
+Goal: Draft a weekly customer support summary from Zendesk tickets.
+Guardrails: read‑only, redact PII.
+Success: 5‑bullet summary + top 3 issues.
+```
+</Step>
+
+<Step title="Provide context and memory">
+Store domain facts, glossary, and examples. Persist short‑term state between steps.
+</Step>
+
+<Step title="Equip tools (MCP)">
+Expose the data sources and actions the agent can use (e.g., search, tickets:list, analytics:topIssues). See `/learn/mcp`.
+</Step>
+
+<Step title="Implement the reasoning loop">
+Plan → call tools → observe → revise plan until done. Keep outputs structured.
+</Step>
+
+<Step title="Deliver results">
+Return a clear artifact (report, JSON, message) and log decisions for auditability.
+</Step>
+</Steps>
+
+<Check>
+When your agent reliably achieves the goal with safe defaults and clear logs, you’re ready to automate.
+</Check>
+
+
