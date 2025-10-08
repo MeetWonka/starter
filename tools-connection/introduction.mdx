@@ -1,32 +1,321 @@
 ---
 title: "Understanding MCP"
-description: "Learn what the Multi-Connector Platform (MCP) is and the benefits of integration."
+description: "Connect WonkaChat to your business tools and data sources through the Model Context Protocol."
 ---
 
-# Understanding Tools Connection
+WonkaChat uses the **Model Context Protocol (MCP)** to connect AI models with your business tools, databases, and software—enabling AI to access real information and take actions on your behalf.
 
-This section introduces the concept of connecting Wonka Chat to external tools and data sources via the Multi-Connector Platform (MCP).
+<Info>
+MCP is an open protocol that allows AI systems to communicate with external data sources and software tools, in a uniform way. 
 
-<CardGroup cols={1}>
-  <Card
-    title="Setting Up Your First Connection"
-    icon="plug"
-    href="/tools-connection/setting-up-your-first-connection"
-  >
-    A guide to connecting your first tool.
-  </Card>
-  <Card
-    title="Troubleshooting Connections"
-    icon="triangle-exclamation"
-    href="/tools-connection/troubleshooting-connections"
-  >
-    Solutions for common connection issues.
-  </Card>
-  <Card
-    title="Examples of Tool Usage"
-    icon="book"
-    href="/tools-connection/examples-of-tool-usage"
-  >
-    See practical examples of tool integrations.
-  </Card>
+Think of it as a universal connector—like USB for AI systems—that allows different AI models and tools to work together seamlessly without custom integrations for each combination.
+</Info>
+
+<Tabs>
+<Tab title="Getting Started">
+
+## What MCP Enables
+
+MCP transforms WonkaChat from a standalone AI assistant into a connected system that orchestrates workflows across your business tools. Instead of just answering questions, WonkaChat can manage calendars, send emails, update CRMs, create documents, and coordinate actions across multiple platforms—all through natural conversation.
+
+### Real-World Capabilities
+
+<CardGroup cols={2}>
+<Card title="Access Your Data" icon="database">
+Read emails, calendar events, documents, and databases through natural conversation without switching between apps.
+</Card>
+
+<Card title="Take Actions" icon="bolt">
+Send emails, create tasks, update records, and trigger workflows—all by asking WonkaChat in plain language.
+</Card>
+
+<Card title="Multi-Tool Workflows" icon="layer-group">
+Combine multiple tools in a single request. For example: "Check my calendar, find open slots, and email them to John."
+</Card>
+
+<Card title="Always Up-to-Date" icon="arrows-rotate">
+Access live data from your systems rather than relying on static knowledge or manual updates.
+</Card>
 </CardGroup>
+
+### How MCP Works
+
+Instead of building custom connectors for each AI and data source pair, MCP allows all AI clients and data sources to be connected through a single integration.
+
+<Frame caption="Before and after MCP - from fragmented connections to unified protocol">
+<img className="block dark:hidden" src="/images/mcp-simple.png" alt="MCP simplifies connections between AI models and business tools" />
+<img className="hidden dark:block" src="/images/black-mcp-simple.png" alt="MCP simplifies connections between AI models and business tools" />
+</Frame>
+
+**In simple terms:** The AI Client (WonkaChat) sends structured requests through MCP. The MCP Server communicates with your underlying systems (Outlook, GitHub, Odoo, etc.) and sends back a structured response.
+
+<Steps>
+<Step title="You connect a tool">
+Click the MCP button for any tool (like Outlook, Gmail, or Slack) and provide your credentials once.
+</Step>
+<Step title="WonkaChat gets secure access">
+MCP establishes a secure connection between WonkaChat and your business tools. It works on your behalf using natural language, operating within your existing permissions.
+
+<Warning>
+**Important:** WonkaChat inherits your exact permissions. It can only access data and perform actions that you personally have permission to do. If you can't access a file, send an email from a specific account, or modify a record in your regular workflow, WonkaChat can't do it either through MCP.
+</Warning>
+
+</Step>
+
+<Step title="You chat naturally">
+Ask questions or make requests in plain language. WonkaChat automatically uses the right tools to help you.
+
+```
+"What emails did I receive from Sarah this week?"
+```
+
+WonkaChat connects to your email via MCP, retrieves the information you asked, and presents it clearly.
+</Step>
+</Steps>
+---
+
+## Risk Management & Security
+
+<Frame caption="MCP acts as a central security checkpoint for all AI interactions">
+<img className="block dark:hidden" src="/images/mcp-best.png" alt="MCP provides centralized security, compliance, and governance for AI systems" />
+<img className="hidden dark:block" src="/images/black-mcp-best.png" alt="MCP provides centralized security, compliance, and governance for AI systems" />
+</Frame>
+
+<Warning>
+One of the biggest concerns around AI is how it accesses and uses sensitive data.
+</Warning>
+
+**MCP addresses this by acting as a security checkpoint for all your AI systems**, tracking every data interaction and enforcing company policies. Think of it as having a detailed log of who accessed what, when, and why—which is essential for regulatory compliance.
+
+### How MCP Protects Your Data
+
+<AccordionGroup>
+<Accordion title="Central Security Layer" icon="shield-halved">
+MCP introduces a central layer through which all AI interactions are channeled. This provides **consistency in security policies**, enabling companies to enforce authentication, authorization, and data masking at the protocol level.
+
+All your AI tools connect through one secure gateway, rather than having separate security implementations for each connection.
+</Accordion>
+
+<Accordion title="Controlled AI Behavior" icon="gavel">
+MCP aligns AI behavior with internal business policies. Because all capabilities are exposed and managed through the MCP server, companies can define exactly **what an AI system is allowed to do**—and nothing more.
+
+AI systems **can't access sensitive data** or trigger actions they haven't been explicitly granted. Every permission is controlled and auditable.
+</Accordion>
+
+<Accordion title="Complete Audit Trail" icon="clipboard-list">
+Every interaction through MCP is logged:
+- **Who** accessed the data (user identity)
+- **What** data was accessed (resources, actions)
+- **When** it happened (timestamps)
+- **Why** it was needed (context, request details)
+
+This detailed logging is essential for regulatory compliance and security audits.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Available Connections
+
+WonkaChat supports MCP connections to **75+ business tools** across all major categories. Here are some of the most popular connections:
+
+<AccordionGroup>
+<Accordion title="Communication & Collaboration" icon="comments">
+Connect your email, messaging, and scheduling tools for seamless communication management.
+
+**Available Tools:**
+- Outlook, Gmail (email)
+- Slack, Discord, WhatsApp (messaging)
+- Google Calendar, Cal.com, Calendly (scheduling)
+</Accordion>
+
+<Accordion title="Development & Engineering" icon="code">
+Integrate with your development tools, repositories, and project management platforms.
+
+**Available Tools:**
+- GitHub, GitLab (version control)
+- Jira, Confluence, Linear (project management)
+- Vercel, Cloudflare (deployment)
+</Accordion>
+
+<Accordion title="Business Operations" icon="briefcase">
+Connect CRM, productivity tools, and document storage for streamlined operations.
+
+**Available Tools:**
+- Salesforce, HubSpot, Pipedrive (CRM)
+- Notion, ClickUp, Asana (productivity)
+- Google Drive, Dropbox, OneDrive (storage)
+</Accordion>
+
+<Accordion title="Data & Analytics" icon="chart-line">
+Access databases, analytics platforms, and financial tools for data-driven decisions.
+
+**Available Tools:**
+- Postgres, Supabase (databases)
+- Mixpanel, PostHog, Google Sheets (analytics)
+- QuickBooks, Stripe (finance)
+</Accordion>
+
+<Accordion title="Specialized Tools" icon="stars">
+Connect design, support, e-commerce, and research tools for specific workflows.
+
+**Available Tools:**
+- Figma (design)
+- Zendesk, Freshdesk (customer support)
+- Shopify (e-commerce)
+- Perplexity, Brave Search (research)
+</Accordion>
+</AccordionGroup>
+
+<Tip>
+New MCP connections are added regularly. If you need a specific integration that's not listed, contact our support team.
+</Tip>
+
+</Tab>
+
+<Tab title="Technical Details">
+
+## MCP Architecture Overview
+
+The Model Context Protocol is an open standard developed by [Anthropic](https://www.anthropic.com/news/model-context-protocol) that enables secure, two-way connections between AI applications and external data sources.
+
+<Info>
+WonkaChat implements MCP as a client, connecting to MCP servers that expose your tools and data to the AI models. Learn more at [modelcontextprotocol.io](https://modelcontextprotocol.io).
+</Info>
+
+### How It Works
+
+MCP uses a **client-server architecture** where WonkaChat acts as the MCP Client, connecting to MCP Servers that integrate with your business tools:
+
+<Frame caption="WonkaChat connects to multiple MCP servers for different types of systems">
+<img className="block dark:hidden" src="/images/wc-mcp.png" alt="WonkaChat MCP architecture diagram" />
+<img className="hidden dark:block" src="/images/black-wc-mcp.png" alt="WonkaChat MCP architecture diagram" />
+</Frame>
+
+
+**Architecture Flow:**
+- **WonkaChat (MCP Client)** sends structured requests and manages authentication
+- **MCP Server** acts as the integration layer, connecting to external systems
+- **External Systems** (Outlook, Odoo, Salesforce, etc.) provide data via their APIs
+- All responses flow back through the same secure channel
+
+**Key Technical Benefits:**
+- JSON-RPC based communication protocol
+- Capability negotiation during initialization
+- Clear security boundaries via client-host-server architecture
+- User consent mechanisms for AI interactions
+
+### Security Implementation
+
+WonkaChat implements MCP with enterprise-grade security features that build upon the protocol's foundation:
+
+<AccordionGroup>
+<Accordion title="MCP Protocol Security" icon="shield">
+**Built into the Protocol:**
+- **User Consent**: All AI actions require explicit user authorization ([MCP Best Practices](https://modelcontextprotocol.io/specification/draft/basic/security_best_practices))
+- **Capability Negotiation**: Clients and servers agree on available features during initialization
+- **Token Validation**: Servers only accept tokens explicitly issued for them (OAuth 2.1 framework)
+- **Session Management**: Secure session handling to prevent hijacking and impersonation
+- **Security Boundaries**: Client-host-server architecture with clear isolation
+
+**Recommended by MCP:**
+- Input validation and sanitization for all parameters
+- Rate limiting and abuse monitoring
+- Secure transport (TLS encryption) for all connections
+</Accordion>
+
+<Accordion title="WonkaChat's Implementation" icon="lock">
+**Authentication & Access Control:**
+- OAuth 2.0 for third-party services (Google, Microsoft, Salesforce)
+- API key authentication for developer tools
+- Token encryption at rest (AES-256) with automatic refresh
+- Per-user token storage with complete isolation
+- Users inherit only their existing tool permissions
+
+**Enterprise Security:**
+- Role-Based Access Control (RBAC) at organizational level
+- Centralized security policies across all MCP connections
+- Connection timeouts and resource protection
+- Multi-region deployment with secure failover
+</Accordion>
+
+<Accordion title="Audit & Compliance" icon="clipboard-list">
+**WonkaChat's Audit Trail:**
+<Info>
+Detailed audit and compliance features documentation coming soon.
+
+These are WonkaChat implementation features, not built into the MCP protocol itself.
+</Info>
+</Accordion>
+</AccordionGroup>
+
+### Technical Benefits for Organizations
+
+The MCP architecture provides measurable business advantages:
+
+**Development & Maintenance**
+- Single integration pattern replaces custom connectors per tool
+- Reduced development time and lower maintenance overhead
+- Centralized monitoring, debugging, and error handling
+
+**Security & Governance**
+- Central security checkpoint with consistent policy enforcement
+- Complete audit trails for compliance (GDPR, HIPAA, SOC 2)
+- Controlled AI behavior through configuration, not code
+
+**Scalability & Deployment**
+- Same connections work across all teams and AI models
+- Rapid rollout of new capabilities organization-wide
+- Horizontal scaling via Kubernetes infrastructure
+
+### Infrastructure & Performance
+
+**Deployment Architecture**
+- Kubernetes-based infrastructure for high availability
+- Multi-region support with automatic failover
+- Connection pooling and parallel request processing
+- Horizontal scaling based on usage patterns
+
+**Performance Optimization**
+- Persistent connections reduce authentication overhead
+- Automatic retry with exponential backoff
+- Connection timeouts prevent resource exhaustion
+- No caching of sensitive user data (always live data)
+
+**Monitoring & Observability**
+- Real-time tracking of connection health and performance
+- Security event logging (authentication, authorization, rate limits)
+- Enterprise dashboards for compliance and troubleshooting
+
+<Warning>
+WonkaChat operates within your existing security perimeter and never stores your business data—only encrypted authentication tokens.
+</Warning>
+
+### Enterprise Considerations
+
+**Custom Integrations**
+
+For organizations with proprietary systems, WonkaChat can integrate custom MCP servers:
+- Our team handles the technical implementation
+- Deploy in your infrastructure for complete data control
+- Maintain custom security policies and data residency requirements
+
+**MCP vs Traditional APIs**
+
+MCP provides a strategic advantage over point-to-point API integrations:
+- Traditional approach requires custom code for each AI-tool combination
+- MCP creates one integration that works across all AI models
+- Result: Lower maintenance costs and faster deployment of new capabilities
+
+**Enterprise Support**
+- Private deployment options
+- Custom compliance and audit reporting
+- Dedicated support with SLA guarantees
+
+<Tip>
+Contact our enterprise team to discuss custom integration requirements and deployment options.
+</Tip>
+
+
+</Tab>
+</Tabs>

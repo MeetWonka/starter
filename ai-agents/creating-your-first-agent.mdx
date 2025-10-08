@@ -1,23 +1,464 @@
 ---
 title: "Creating Your First Agent"
-description: "A step-by-step guide to creating your first AI Agent."
+description: "Build custom AI agents configured for your specific workflows with the right model, instructions, and tools."
 ---
 
-# Creating Your First Agent
+Create specialized AI agents tailored to your workflows. This guide covers agent creation from initial setup through deployment.
 
-This guide will walk you through the basic setup and configuration of a new AI Agent.
+<Tabs>
+<Tab title="Getting Started">
+
+<Info>
+Building an agent means defining its role, writing instructions, selecting a model, and optionally connecting tools.
+</Info>
+
+---
+
+## Before You Begin
+
+Define your agent's purpose:
+- **What task** will this agent handle?
+- **Who will use it** (personal or organization-wide)?
+- **How complex** is the workflow?
+- **Which tools** does it need?
+
+---
+
+## Agent Creation Steps
+
+<Steps>
+<Step title="Access Agent Creation">
+Navigate to the agent creation interface and click "Create New Agent."
+
+<Frame caption="Agent creation interface">
+<img src="/images/agent-creation-start.png" alt="Agent creation starting point" />
+</Frame>
+</Step>
+
+<Step title="Name Your Agent">
+Choose a clear, descriptive name that indicates purpose.
+
+**Good:** "Customer Support Assistant," "Q4 Sales Data Analyzer"  
+**Avoid:** "Helper," "Agent 1"
+
+<Tip>
+If planning organization-wide sharing, choose names that make sense to all users.
+</Tip>
+</Step>
+
+<Step title="Write Instructions">
+Instructions define your agent's role, expertise, tone, and behavior.
+
+### Instructions Template
+
+```
+You are a [role] for [company/context].
+
+Your primary responsibilities:
+- [Responsibility 1]
+- [Responsibility 2]
+- [Responsibility 3]
+
+Communication style:
+- [Tone and approach]
+- [Formatting preferences]
+
+Expertise areas:
+- [Domain knowledge 1]
+- [Domain knowledge 2]
+
+Operational rules:
+- [Important constraint 1]
+- [Escalation criteria]
+
+Business context:
+[Relevant company information, policies]
+```
 
 <AccordionGroup>
-  <Accordion title="What are AI models?">
-    An explanation of AI model capabilities and limitations will be provided here.
-  </Accordion>
-  <Accordion title="Naming and organizing agents">
-    Best practices for naming and organizing your agents.
-  </Accordion>
-  <Accordion title="Agent creation wizard">
-    A walkthrough of the agent creation wizard.
-  </Accordion>
-  <Accordion title="Sharing and collaboration">
-    Information on how to share agents and collaborate with your team.
-  </Accordion>
+<Accordion title="Role Definition">
+State what the agent is and does.
+
+**Example:** "You are a customer support specialist for our SaaS platform. Help users resolve technical issues, answer product questions, and guide them through common workflows."
+</Accordion>
+
+<Accordion title="Communication Style">
+Define tone and format.
+
+**Example:** "Communicate in a friendly, professional tone. Be concise but thorough. Use bullet points for clarity."
+</Accordion>
+
+<Accordion title="Operational Guidelines">
+Provide specific rules.
+
+**Example:** "Always verify user identity before accessing account details. Escalate refund requests over $500."
+</Accordion>
+
+<Accordion title="Business Context">
+Include company-specific information.
+
+**Example:** "Support hours: 9 AM-6 PM EST. We offer three tiers: Basic, Pro, Enterprise."
+</Accordion>
 </AccordionGroup>
+
+<Check>
+Clear, detailed instructions are the foundation of agent effectiveness.
+</Check>
+</Step>
+
+<Step title="Choose an AI Model">
+Select the model based on task complexity.
+
+<Tabs>
+<Tab title="Simple Tasks">
+**Non-thinking models** (GPT-4, Claude Sonnet, Gemini Pro)
+
+**Best for:** Quick information retrieval, straightforward responses, simple tool usage, high-frequency interactions
+
+**Benefits:** Lower cost, faster responses
+
+**Examples:** Email drafting, simple data lookup, FAQ responses
+</Tab>
+
+<Tab title="Complex Tasks">
+**Thinking models** (GPT-4 Turbo, Claude Opus, o1)
+
+**Best for:** Multi-step reasoning, nuanced decisions, complex tool orchestration, strategic analysis
+
+**Benefits:** Superior reasoning, better ambiguity handling
+
+**Examples:** Data analysis, strategic planning, complex issue resolution
+</Tab>
+</Tabs>
+
+<Info>
+WonkaChat is model-agnostic—choose from various providers (OpenAI, Anthropic, Google, etc.) based on your needs.
+</Info>
+
+<Tip>
+Start with a capable model, then test if a simpler model achieves acceptable results for cost optimization.
+</Tip>
+</Step>
+
+<Step title="Connect Tools (Optional)">
+Add MCP tools if your agent needs to interact with external systems.
+
+<CardGroup cols={2}>
+<Card title="Data Tools" icon="database">
+Retrieve information from CRMs, databases, documents, knowledge bases.
+</Card>
+
+<Card title="Action Tools" icon="bolt">
+Send emails, update records, create entries, trigger workflows.
+</Card>
+</CardGroup>
+
+**Tool selection principles:**
+- Only add tools the agent actually needs
+- Too many tools can cause selection confusion
+- Ensure you have permissions for assigned tools
+
+<Warning>
+Agents can only use tools you personally have permission to access.
+</Warning>
+
+**Example configurations:**
+- **Customer Support:** CRM, ticket system, knowledge base, email
+- **Data Analysis:** Database connections, visualization, spreadsheets
+- **Content:** Document storage, publishing platform, asset library
+</Step>
+
+<Step title="Review and Test">
+Test thoroughly before deployment.
+
+**Test:**
+- Core functionality with typical requests
+- Edge cases and incomplete information
+- Error handling when tools fail
+- Consistency across multiple similar requests
+
+<Check>
+Thorough testing ensures users get reliable results.
+</Check>
+</Step>
+
+<Step title="Deploy or Share">
+**Personal use:** Start using immediately, refine based on real usage
+
+**Organization sharing:** Contact administrator, provide context on purpose and value, await review and approval
+
+<Info>
+See [Access Control](/security-governance/access-control) for agent sharing details.
+</Info>
+</Step>
+</Steps>
+
+---
+
+## Best Practices
+
+<CardGroup cols={2}>
+<Card title="Use Existing Documents" icon="file">
+Base instructions on current operating procedures and policy documents.
+</Card>
+
+<Card title="Be Explicit" icon="list-check">
+Define specific actions for each step to reduce ambiguity.
+</Card>
+
+<Card title="Include Edge Cases" icon="diamond-exclamation">
+Anticipate unusual situations and provide handling guidance.
+</Card>
+
+<Card title="Iterate" icon="rotate">
+Start simple, test thoroughly, refine based on performance.
+</Card>
+</CardGroup>
+
+---
+
+## Common Mistakes
+
+<AccordionGroup>
+<Accordion title="Vague Instructions">
+**Problem:** "You are a helpful assistant" lacks guidance.  
+**Solution:** Be specific about role, expertise, tone, and guidelines.
+</Accordion>
+
+<Accordion title="Too Many Responsibilities">
+**Problem:** One agent handling unrelated tasks.  
+**Solution:** Create focused agents for specific workflows.
+</Accordion>
+
+<Accordion title="Tool Overload">
+**Problem:** Assigning every available tool.  
+**Solution:** Only add necessary tools to avoid selection confusion.
+</Accordion>
+
+<Accordion title="Insufficient Testing">
+**Problem:** Deploying without thorough testing.  
+**Solution:** Test extensively with realistic scenarios first.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Refining Your Agent
+
+After deployment:
+1. Monitor performance and note issues
+2. Identify recurring problems
+3. Update instructions to address issues
+4. Test changes
+5. Document learnings for future agents
+
+<Tip>
+The best agents evolve through continuous refinement based on real-world usage.
+</Tip>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+<Card title="Business Teaching" icon="graduation-cap" href="/ai-agents/business-teaching">
+Provide business context for better results.
+</Card>
+
+<Card title="Tools & Connection" icon="plug" href="/tools-connection/introduction">
+Explore available MCP tool connections.
+</Card>
+</CardGroup>
+
+</Tab>
+
+<Tab title="Advanced Knowledge">
+
+## System Prompt Engineering
+
+The system prompt (instructions) shapes all agent behavior. Effective prompts have clear structure:
+
+```
+[Role Definition]
+You are a [specific role] with [relevant expertise].
+
+[Core Responsibilities]
+1. [Primary function]
+2. [Secondary function]
+
+[Decision-Making Framework]
+When [condition], do [action].
+For [scenario], follow [procedure].
+
+[Communication Guidelines]
+- Tone and style requirements
+- Formatting standards
+
+[Tool Usage Instructions]
+Use [tool] when [condition].
+Prefer [approach] for [situation].
+
+[Guardrails]
+Never [prohibited action].
+Always [required behavior].
+Escalate when [escalation criteria].
+```
+
+---
+
+## Model Selection Strategy
+
+**Performance vs Cost:**
+
+1. **Establish baseline** with capable model
+2. **Test with smaller models** to check performance
+3. **Measure metrics**: accuracy, tool selection, response quality
+4. **Optimize iteratively**: replace only where quality remains acceptable
+
+<Tip>
+Use capable models during development, then optimize for cost in production if performance allows.
+</Tip>
+
+---
+
+## Model Parameters
+
+<Frame caption="Model configuration parameters">
+<img src="/images/model-parameters.png" alt="Advanced model configuration" />
+</Frame>
+
+<AccordionGroup>
+<Accordion title="Temperature (0.0-1.0)">
+Controls randomness. Lower = more deterministic.
+
+**Recommended:**
+- **0.0-0.3**: Factual tasks, data analysis
+- **0.4-0.7**: Balanced (default)
+- **0.8-1.0**: Creative writing, brainstorming
+</Accordion>
+
+<Accordion title="Top P (0.0-1.0)">
+Controls diversity. Lower = more focused.
+
+<Info>
+Adjust either temperature OR top_p, not both simultaneously.
+</Info>
+</Accordion>
+
+<Accordion title="Frequency Penalty (0.0-1.0)">
+Reduces repetition based on token frequency.
+
+Use when agent responses are overly repetitive.
+</Accordion>
+
+<Accordion title="Presence Penalty (0.0-1.0)">
+Encourages discussing new topics rather than revisiting covered ones.
+
+Use for comprehensive topic coverage.
+</Accordion>
+</AccordionGroup>
+
+<Warning>
+Default parameters work well for most agents. Only adjust when specific issues arise. Change one parameter at a time.
+</Warning>
+
+---
+
+## Advanced Instruction Patterns
+
+### Conditional Logic
+
+```
+When user requests [action type]:
+1. First verify [precondition]
+2. If [condition A], proceed with [workflow A]
+3. If [condition B], use [workflow B]
+4. Otherwise, ask for [specific details]
+
+For high-value transactions (>$1000):
+- Require additional verification
+- Document decision rationale
+```
+
+### Tool Usage Optimization
+
+```
+Tool Selection Guidelines:
+
+Primary data source: database_query
+Fallback: If database unavailable, use CRM_api
+
+For email operations:
+- Simple notifications: email_tool
+- Template communications: email_template_tool
+- Bulk: email_batch_tool
+
+Always prefer:
+- Read before write operations
+- Specific queries over broad searches
+```
+
+---
+
+## When to Split into Multiple Agents
+
+Consider creating separate agents when:
+- Instructions have many conditional branches
+- Agent struggles to select from many similar tools
+- Responsibilities span multiple unrelated domains
+- Single-agent testing reveals consistent issues
+
+<Info>
+Start with single agents. Split only when complexity becomes unwieldy.
+</Info>
+
+---
+
+## Security Guardrails
+
+Build safe agents with proper guardrails:
+
+**Input validation:**
+- Verify user authority for requested actions
+- Validate parameters within acceptable ranges
+- Confirm request aligns with agent scope
+
+**Output verification:**
+- Ensure no sensitive data exposure
+- Verify brand guideline alignment
+- Confirm actions were authorized
+
+**Tool safeguards:**
+- Require confirmation for high-risk tools
+- Log all actions for audit
+- Implement rate limiting
+- Set maximum impact thresholds
+
+<Info>
+See [Security & Governance](/security-governance/security-overview) for comprehensive security practices.
+</Info>
+
+---
+
+## Coming Soon
+
+<CardGroup cols={2}>
+<Card title="Prompt Engineering Resources" icon="book">
+Advanced techniques, patterns, and examples for optimization.
+</Card>
+
+<Card title="Model Comparison" icon="chart-bar">
+Detailed comparison, benchmarks, and selection criteria.
+</Card>
+
+<Card title="Multi-Agent Patterns" icon="sitemap">
+Design patterns for complex multi-agent systems.
+</Card>
+
+<Card title="Rate Limits & Quotas" icon="gauge">
+Usage limits, rate limiting, and capacity planning.
+</Card>
+</CardGroup>
+
+</Tab>
+</Tabs>

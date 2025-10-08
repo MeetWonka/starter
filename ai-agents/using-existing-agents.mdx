@@ -1,8 +1,217 @@
 ---
 title: "Using Existing Agents"
-description: "Learn how to interact with pre-built agents for the best results."
+description: "Get the best results from pre-built agents by understanding their capabilities and working with their instructions."
 ---
 
-# Using Existing Agents
+Pre-built agents come configured with specific instructions, tools, and expertise. Understanding how they work helps you interact with them effectively.
 
-This page explains how to interact with pre-built agents, understand their personalities, and provides tips for getting the best results.
+<Info>
+Each agent has a defined role that shapes all responses. You don't need to repeat context the agent already has.
+</Info>
+
+---
+
+## Working with Agents
+
+<Tabs>
+<Tab title="Getting Started">
+
+### Understanding Agent Instructions
+
+Agents have persistent instructions that define:
+- **Role**: Primary function and expertise area
+- **Tone**: Communication style (formal, casual, technical)
+- **Business context**: Company information and policies
+- **Tool access**: Which MCP connections the agent uses
+
+<Check>
+Agents apply their instructions automatically—no need to explain their role or provide context they already have.
+</Check>
+
+---
+
+## Getting the Best Results
+
+<Steps>
+<Step title="Choose the Right Agent">
+Select an agent whose role matches your task. Read descriptions to understand capabilities.
+</Step>
+
+<Step title="Be Specific">
+State your needs clearly. Provide relevant details like names, dates, or specific requirements.
+
+**Example:** "Generate Q4 report for EMEA region, focusing on enterprise customers, formatted as a presentation deck."
+</Step>
+
+<Step title="Trust the Instructions">
+Let agents apply their configured expertise. Don't override their role with contradictory instructions.
+</Step>
+
+<Step title="Iterate">
+If the first response isn't perfect, provide specific feedback about what to adjust.
+</Step>
+</Steps>
+
+---
+
+## Agent Tool Usage
+
+Agents with MCP tool access perform actions automatically:
+1. Analyze your request
+2. Select necessary tools
+3. Execute operations
+4. Synthesize results
+
+You don't need to specify which tools to use—agents handle this based on their configuration.
+
+---
+
+## Common Issues
+
+<AccordionGroup>
+<Accordion title="Agent doesn't have needed information">
+**Solution:** Provide the information in your request, or ask an administrator to update the agent's context.
+</Accordion>
+
+<Accordion title="Agent can't access required tool">
+**Solution:** Verify you have personal permissions for the underlying system. Contact administrator if the agent needs different tools.
+</Accordion>
+
+<Accordion title="Response doesn't match expectations">
+**Solution:** Read the agent description to understand its configuration. Provide more specific guidance or use a different agent.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Best Practices
+
+<CardGroup cols={2}>
+<Card title="Be Specific" icon="bullseye">
+Clear details produce better results, even with well-configured agents.
+</Card>
+
+<Card title="Use Appropriate Agents" icon="map-location-dot">
+Different agents for different tasks—don't force specialists into unrelated workflows.
+</Card>
+
+<Card title="Leverage Conversation Context" icon="comments">
+Agents maintain context within a conversation. Iterate and refine without re-explaining.
+</Card>
+
+<Card title="Test and Learn" icon="flask">
+Experiment to understand how each agent works best for your needs.
+</Card>
+</CardGroup>
+
+---
+
+## When to Create Your Own Agent
+
+Consider building a personal agent when:
+- No existing agent matches your workflow
+- You need a unique combination of tools
+- Your task requires specialized instructions
+- You want customized tone or style
+
+<Info>
+See [Creating Your First Agent](/ai-agents/creating-your-first-agent) to build custom agents.
+</Info>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+<Card title="Creating Your First Agent" icon="plus-circle" href="/ai-agents/creating-your-first-agent">
+Build your own agent tailored to specific workflows.
+</Card>
+
+<Card title="Business Teaching" icon="graduation-cap" href="/ai-agents/business-teaching">
+Learn how business context improves agent responses.
+</Card>
+</CardGroup>
+
+</Tab>
+
+<Tab title="Advanced Knowledge">
+
+## System Prompt Architecture
+
+Agents operate based on their system prompt—comprehensive guidelines that persist across all interactions.
+
+**System prompt includes:**
+- Role definition and expertise
+- Operational guidelines and decision frameworks
+- Tool usage instructions
+- Output formatting standards
+- Error handling procedures
+- Guardrails and constraints
+
+<Info>
+System prompts are foundational. Unlike conversation messages, they cannot be overridden mid-conversation.
+</Info>
+
+---
+
+## Agent Decision-Making
+
+**Execution flow:**
+```
+User Request → System Prompt Analysis → Task Decomposition → 
+Tool Selection → Execution → Result Synthesis → Response
+```
+
+The agent interprets all requests through its system prompt, ensuring consistent behavior aligned with its configured role.
+
+---
+
+## Agent Limitations
+
+**Agents cannot:**
+- Act outside their defined role (instructions create boundaries)
+- Access tools they're not configured with OR that you lack permission to use
+- Override their system prompt based on user requests
+- Remember previous conversations (each conversation is independent)
+
+<Warning>
+Agents follow their system prompt. You can't fundamentally change an agent's behavior mid-conversation.
+</Warning>
+
+---
+
+## Optimization Strategies
+
+**Align with agent expertise:**
+Frame requests using terminology from the agent's domain.
+
+**Provide structured input:**
+```
+Task: Quarterly business review
+Region: APAC
+Metrics: Revenue, Customer Acquisition, Churn
+Format: Executive presentation
+```
+
+**Leverage conversation continuity:**
+- Initial request: Broad task definition
+- Agent response: First-pass results
+- Your refinement: Specific adjustments
+- Agent iteration: Updated results
+
+---
+
+## Performance Indicators
+
+**Good agent performance:**
+- Responses consistent with defined role and tone
+- Appropriate tool selection and usage
+- Accurate application of business context
+- Clear error handling when operations fail
+
+<Warning>
+If an agent consistently underperforms, report to your administrator for potential reconfiguration.
+</Warning>
+
+</Tab>
+</Tabs>

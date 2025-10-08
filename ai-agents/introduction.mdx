@@ -1,39 +1,166 @@
 ---
 title: "What are AI Agents?"
-description: "Learn the fundamentals of AI Agents in Wonka Chat."
+description: "Understand how AI agents provide consistent, specialized assistance with persistent instructions and tool access."
 ---
 
-# AI Agents
+AI agents are specialized AI assistants with persistent instructions and dedicated tool access that deliver consistent, reliable results.
 
-Understand the concept of AI Agents, how they differ from regular chat, and the benefits they provide.
+<Info>
+Agents are like AI team members with specific roles and expertise—they remember their job across all conversations.
+</Info>
+
+---
+
+## How Agents Differ from Regular Chat
+
+<Tabs>
+<Tab title="Getting Started">
+
+Regular chat starts fresh each time. Agents have persistent instructions, roles, and tools that apply automatically to every conversation.
+
+**Key advantages:**
+
+<CardGroup cols={2}>
+<Card title="Persistent Instructions" icon="file-lines">
+Give agents permanent guidelines, roles, and expertise that apply to every conversation automatically.
+</Card>
+
+<Card title="Consistent Behavior" icon="equals">
+Agents follow the same approach every time, delivering predictable, reliable results across all interactions.
+</Card>
+
+<Card title="Dedicated Tools" icon="wrench">
+Equip agents with specific MCP tool connections they'll use automatically when needed for their tasks.
+</Card>
+
+<Card title="Specialized Roles" icon="user-tie">
+Define agent personalities, tone, and expertise to match specific workflows or team functions.
+</Card>
+</CardGroup>
+
+<Check>
+Configure once, use everywhere. Agents maintain their role and instructions across all conversations.
+</Check>
+
+---
+
+## Key Benefits
+
+<CardGroup cols={2}>
+<Card title="Consistency" icon="equals">
+Same instructions and approach every time—reliable, predictable results.
+</Card>
+
+<Card title="Efficiency" icon="bolt">
+No repetitive setup. Start working immediately with configured agents.
+</Card>
+
+<Card title="Tool Integration" icon="wrench">
+Equip agents with specific MCP tools for their workflow.
+</Card>
+
+<Card title="Business Context" icon="building">
+Ground responses in your company's processes and terminology.
+</Card>
+</CardGroup>
+
+---
+
+## When to Use Agents
+
+Use agents for:
+- **Recurring workflows**: Tasks you perform regularly with consistent requirements
+- **Specialized expertise**: Domain-specific knowledge applied consistently  
+- **Cross-tool workflows**: Complex tasks spanning multiple systems
+- **Team standardization**: Shared workflows across your organization
+
+---
+
+## Agent Use Cases
+
+<Info>
+**Coming soon:** Detailed use case examples showing real-world agent implementations across different industries and functions.
+</Info>
+
+---
+
+## Getting Started with Agents
 
 <CardGroup cols={2}>
   <Card
     title="Finding and Accessing Agents"
-    icon="search"
+    icon="magnifying-glass"
     href="/ai-agents/finding-and-accessing-agents"
   >
-    Discover where to find and how to access agents.
+    Learn where agents are located and how to access them in WonkaChat.
   </Card>
   <Card
     title="Using Existing Agents"
     icon="play"
     href="/ai-agents/using-existing-agents"
   >
-    Learn how to interact with pre-built agents.
+    Start using pre-built agents created by your organization.
   </Card>
   <Card
     title="Creating Your First Agent"
-    icon="plus"
+    icon="plus-circle"
     href="/ai-agents/creating-your-first-agent"
   >
-    A step-by-step guide to building your own agent.
+    Build your own agent tailored to your specific workflows.
   </Card>
   <Card
     title="Business Teaching"
     icon="graduation-cap"
     href="/ai-agents/business-teaching"
   >
-    Teach your business context to agents for better results.
+    Provide business context to agents for better, more accurate results.
   </Card>
 </CardGroup>
+
+</Tab>
+
+<Tab title="Advanced Knowledge">
+
+## Agent Architecture
+
+Agents are built on three core components:
+
+### Core Components
+
+**1. Model**: AI model powering reasoning and decision-making. Choose based on task complexity and cost.
+
+**2. Tools**: MCP integrations for data retrieval and actions across connected systems.
+
+**3. System Prompt**: Instructions defining role, behavior, tone, and operational guidelines. This persists across all conversations.
+
+---
+
+## Execution Loop
+
+Agents run autonomously: analyze request → select tools → execute → synthesize results → respond or continue until task complete.
+
+---
+
+## Agent Patterns
+
+**Single-agent**: One agent with multiple tools. Start here for most use cases.
+
+**Multi-agent**: Multiple specialized agents coordinate for complex workflows. Use only when single-agent instructions become unwieldy or too many similar tools cause selection issues.
+
+---
+
+## Model Selection
+
+**Thinking models** (o1, Claude Opus): Complex reasoning, nuanced decisions, ambiguous situations  
+**Non-thinking models** (GPT-4, Claude Sonnet): Quick responses, straightforward tasks, cost-effective
+
+Match model capability to task complexity.
+
+---
+
+## Security
+
+Agents inherit your permissions—they can only access what you can access. Administrators control tool access and sharing. All actions are logged. See [Security & Governance](/security-governance/access-control) for details.
+
+</Tab>
+</Tabs>

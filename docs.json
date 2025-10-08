@@ -26,6 +26,15 @@
             ]
           },
           {
+            "group": "Tools Connection",
+            "pages": [
+              "tools-connection/introduction",
+              "tools-connection/setting-up-your-first-connection",
+              "tools-connection/troubleshooting-connections",
+              "tools-connection/examples-of-tool-usage"
+            ]
+          },
+          {
             "group": "AI Agents",
             "pages": [
               "ai-agents/introduction",
@@ -33,15 +42,6 @@
               "ai-agents/using-existing-agents",
               "ai-agents/creating-your-first-agent",
               "ai-agents/business-teaching"
-            ]
-          },
-          {
-            "group": "Tools Connection",
-            "pages": [
-              "tools-connection/introduction",
-              "tools-connection/setting-up-your-first-connection",
-              "tools-connection/troubleshooting-connections",
-              "tools-connection/examples-of-tool-usage"
             ]
           },
           {

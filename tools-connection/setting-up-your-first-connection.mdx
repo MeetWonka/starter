@@ -1,8 +1,336 @@
 ---
 title: "Setting Up Your First Connection"
-description: "How to connect to your first tool, handle authentication, and test the connection."
+description: "Connect WonkaChat to your business tools and start using AI-powered workflows."
 ---
 
-# Setting Up Your First Connection
+Connect your first tool to WonkaChat and unlock AI-powered access to your business data. This guide walks you through the complete connection process, from selecting a tool to testing your first AI-powered request.
+## Before You Start
 
-This guide provides step-by-step instructions for connecting an external tool in Wonka Chat, including authentication, permissions, and connection testing.
+<CardGroup cols={2}>
+<Card title="Check Your Access" icon="user-check">
+Ensure you have login credentials for the tool you want to connect (e.g., your Outlook email and password).
+</Card>
+
+<Card title="Know Your Permissions" icon="shield">
+You'll only be able to access data in connected tools that you already have permission to view or edit.
+</Card>
+</CardGroup>
+
+
+## Step-by-Step Connection Process
+
+<Steps>
+<Step title="Locate the MCP Panel">
+In your WonkaChat interface, find the **MCP Settings** on the right side of the screen. This panel displays all available tool connections.
+
+<Frame caption="MCP tools panel location">
+<img src="/images/mcp-panel-location.png" alt="MCP panel showing available tool connections" />
+</Frame>
+
+<Tip>
+If you don't see the right side panel, click the arrow icon in the middle-right of your screen to expand the sidebar.
+</Tip>
+</Step>
+
+<Step title="Select Your Tool">
+Browse or search for the tool you want to connect. Click the tool's button to begin the connection process.
+
+**Popular first connections:**
+- **Outlook** or **Gmail** for email and calendar access
+- **Slack** for team communication
+- **Google Drive** or **OneDrive** for document access
+
+
+<Check>
+Not sure which tool to connect first? Start with your email provider—it's the most versatile connection for daily tasks.
+</Check>
+</Step>
+
+<Step title="Authenticate Your Account">
+A credential window will appear, requesting authentication for the selected tool. The process varies slightly by tool type:
+
+### For OAuth Tools (Outlook, Gmail, Google Drive, etc.)
+
+1. Click **"Initialize"**
+2. You'll be redirected to the tool's official login page
+3. Enter your credentials on the tool's secure site
+4. You'll be automatically redirected back to WonkaChat
+
+<Frame caption="OAuth authentication flow">
+<img src="/images/oauth-authentication.png" alt="OAuth authentication window" />
+</Frame>
+
+### For API Key Tools (Notion, Linear, etc.)
+
+1. Obtain your API key directly from the provider
+2. Paste the API key into the WonkaChat credential field
+3. Click **"Connect"**
+
+<Frame caption="API key authentication">
+<img src="/images/api-key-input.png" alt="API key input interface" />
+</Frame>
+
+<Tip>
+Need help finding your API key? Most tools have it under **Settings → API** or **Settings → Integrations**. Check the tool's documentation if you're not sure.
+</Tip>
+
+### For Custom Configuration Tools (Odoo, etc.)
+
+Some tools require additional connection parameters beyond standard authentication:
+- Database name or instance URL
+- Server endpoint
+- Username and password combination
+- Custom authentication tokens or credentials
+
+**Connection Process:**
+1. Review the connection requirements displayed in the WonkaChat credential window
+2. Enter all required fields
+3. Verify everything is accurate before proceeding
+4. Click **"Initialize"** to establish the connection
+
+<Info>
+Each tool displays its specific connection requirements in the credential window. 
+
+If you need assistance with connection details or encounter any issues, [contact our support team](https://www.meetwonka.com/fr/contact) for personalized help.
+</Info>
+
+<Warning>
+Always verify you're on the official WonkaChat page of your organization before entering credentials or connecting to any MCP server.
+</Warning>
+
+</Step>
+
+<Step title="Enable MCP for Your AI Model">
+After successful authentication, you need to activate the MCP connection for the AI model you're using.
+
+1. Click the **"MCP Servers"** button under the chat input field
+2. Find your tool in the list
+3. Click on it to enable the connection for the current chat
+
+<Check>
+Once enabled, the AI model can access this tool whenever you ask it to. You can enable or disable connections at any time.
+</Check>
+</Step>
+
+<Step title="Test Your Connection">
+Verify the connection is working by asking the AI a simple question that requires the tool.
+
+### Example For Email (Outlook/Gmail):
+```
+What emails did I receive today?
+```
+
+If the AI successfully retrieves and displays information, your connection is working correctly!
+
+<Check>
+Connection successful! You can now use natural language to access and interact with this tool through WonkaChat.
+</Check>
+</Step>
+
+
+<Step title="Disconnect a Tool">
+
+To remove a connection:
+1. Click the **"MCP Servers"** button under the chat input field
+2. Find your tool in the list
+3. Click on it to disable the connection for the current chat by removing it from the selected connections
+
+<Warning>
+Disconnecting a tool immediately revokes WonkaChat's access to that service. However, your authentication credentials remain stored securely for future reconnections.
+</Warning>
+
+</Step>
+</Steps>
+
+## Video Walkthrough
+
+Watch this step-by-step guide to see the entire connection process in action:
+
+<Frame caption="Complete guide to setting up your first MCP connection">
+<video
+  controls
+  className="w-full aspect-video rounded-xl"
+  src="VIDEO_PLACEHOLDER_FIRST_CONNECTION_SETUP"
+></video>
+</Frame>
+
+<Tip>
+Follow along with the video while setting up your first connection. Pause at each step to complete it in your own WonkaChat instance.
+</Tip>
+
+---
+
+
+## Understanding Permissions and Actions
+
+<AccordionGroup>
+<Accordion title="What Can WonkaChat Access?" icon="eye">
+WonkaChat can only access:
+- Data you personally have permission to view in the connected tool
+- Information you explicitly ask it to retrieve
+- Resources within your organizational boundaries (if applicable)
+
+**WonkaChat cannot:**
+- Access data from other users unless they've shared it with you
+- Bypass your tool's permission system
+- Read or modify data without your explicit request
+</Accordion>
+
+<Accordion title="What Actions Can WonkaChat Perform?" icon="hand">
+WonkaChat's capabilities depend entirely on what the MCP server implements for each tool. If a provider exposes an action through their MCP server, the AI can perform it. If an action isn't implemented in the MCP server, the AI cannot access it—regardless of whether the underlying tool supports it.
+
+**Common capabilities include:**
+- **Read**: View emails, documents, tasks, calendar events, database records, etc.
+- **Write**: Send emails, create tasks, update records, schedule meetings, add comments
+- **Delete**: Remove items, archive records, clear data (only when you explicitly ask)
+- **Search**: Query across documents, find specific records, filter data
+- **Execute**: Run workflows, trigger automations, perform calculations
+
+<Check>
+Each MCP server defines its own set of available actions. Check the specific tool's documentation to see what operations are supported through its MCP implementation.
+</Check>
+
+**Important:** The AI model is restricted to only the actions that the MCP server exposes. Even if a tool's native interface supports a feature, WonkaChat can only use it if the corresponding MCP server has implemented that capability.
+
+All actions require your explicit instruction through conversation. WonkaChat only performs actions when you ask it to.
+</Accordion>
+
+<Accordion title="How Are Credentials Stored?" icon="lock">
+Your authentication tokens are:
+- Encrypted at rest in our secure database
+- Unique to your user account (never shared with others)
+- Automatically refreshed to maintain connection
+- Deleted immediately when you disconnect a tool
+
+WonkaChat never stores your actual passwords—only the secure access tokens provided by the OAuth flow or API key you input.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Multiple Tool Workflows
+
+Once you've connected several tools, you can combine them in powerful ways:
+
+<CardGroup cols={2}>
+<Card title="Cross-Tool Queries" icon="arrows-left-right">
+Ask questions that span multiple tools in one request.
+
+**Example:** *"Check my Google Calendar for availability and send those times to Sarah via Outlook."*
+</Card>
+
+<Card title="Data Transfer" icon="arrow-right-arrow-left">
+Move information between tools without manual copy-paste.
+
+**Example:** *"Take the action items from this Slack thread and create tasks in ClickUp."*
+</Card>
+
+<Card title="Automated Workflows" icon="gears">
+Build agents that monitor one tool and take actions in another.
+
+**Example:** Agent that checks Salesforce for new leads and creates follow-up tasks in Asana.
+</Card>
+
+<Card title="Unified Reporting" icon="chart-line">
+Combine data from multiple sources for comprehensive insights.
+
+**Example:** *"Summarize my week: emails from Outlook, meetings from Calendar, and completed tasks from Notion."*
+</Card>
+</CardGroup>
+
+---
+
+## Best Practices
+
+<AccordionGroup>
+<Accordion title="Start with Essential Tools" icon="star">
+Connect your most-used tools first:
+1. Email (Outlook or Gmail)
+2. Calendar (Google Calendar or Cal.com)
+3. Primary project management tool
+4. Main document storage
+
+You can always add more connections later as you discover needs.
+</Accordion>
+
+<Accordion title="Test Before Complex Workflows" icon="vial">
+After connecting a tool:
+- Ask simple queries first to verify it works
+- Gradually increase complexity
+- Understand what data the tool exposes before building workflows
+</Accordion>
+
+<Accordion title="Review Permissions Periodically" icon="calendar-check">
+Every few months:
+- Review which tools are connected
+- Disconnect tools you no longer use
+- Verify connections are still active and working
+</Accordion>
+
+<Accordion title="Create AI Agents with Focused Tool Sets" icon="robot">
+**Why This Matters:**
+
+AI agents with purpose-built tool connections deliver significantly better results than general-purpose setups. When an agent has access only to relevant tools for its specific task, it:
+- **Reduces hallucinations** by limiting context to what's actually needed
+- **Improves accuracy** by focusing on domain-specific data sources
+- **Delivers faster responses** with fewer irrelevant tool checks
+- **Maintains better context** within its area of expertise
+
+**Best Practice Examples:**
+
+<Accordion title="Sales Agent" icon="handshake">
+**Connect only:** Salesforce, HubSpot, Gmail, Calendar
+
+- Focused on customer data and communication
+- Won't accidentally query unrelated developer tools
+- Understands sales pipeline context deeply
+</Accordion>
+
+<Accordion title="Development Agent" icon="code">
+**Connect only:** GitHub, GitLab, Linear, Slack
+
+- Specialized in code and project management
+- Faster because it's not checking email or CRM systems
+- Better at understanding technical context
+</Accordion>
+
+<Accordion title="Executive Assistant Agent" icon="briefcase">
+**Connect only:** Outlook, Google Calendar, Google Drive, Notion
+
+- Dedicated to scheduling and document management
+- Won't accidentally access technical or sales systems
+- More reliable for personal productivity tasks
+</Accordion>
+
+<Accordion title="Operations Agent" icon="gears">
+**Connect only:** Odoo, QuickBooks, Airtable, Slack
+
+- Focused on business operations and finance
+- Specialized knowledge of operational workflows
+- Better at cross-referencing operational data
+</Accordion>
+
+<Tip>
+Start by creating 2-3 specialized agents for your most common workflows. You'll quickly see the quality difference compared to one agent with all tools connected.
+</Tip>
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Next Steps
+
+<CardGroup cols={3}>
+<Card title="Troubleshooting" icon="wrench" href="/tools-connection/troubleshooting-connections">
+Having issues with connecting your tools? Find solutions to common connection problems.
+</Card>
+
+<Card title="See Examples" icon="video" href="/tools-connection/examples-of-tool-usage">
+Watch real examples of MCP connections in action with Outlook, Odoo, and more.
+</Card>
+
+<Card title="Create AI Agents" icon="robot" href="/ai-agents/introduction">
+Build specialized AI agents that leverage your connected tools for more accurate, context-aware results.
+</Card>
+</CardGroup>
+
