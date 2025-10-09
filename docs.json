@@ -9,7 +9,7 @@
   },
   "favicon": "/favicon.png",
   "banner": {
-    "content": "🚀 Version 2.0 is now live! See our [changelog](/changelog) for details.",
+    "content": "🚧 Version 1.0 incoming! We're currently working on it...",
     "dismissible": false
   },
   "navigation": {
@@ -49,7 +49,6 @@
             "pages": [
               "improved-usage/index",
               "improved-usage/asking-great-questions",
-              "improved-usage/prompt-engineering",
               "improved-usage/conversation-management",
               "improved-usage/prompt-library"
             ]

@@ -228,3 +228,71 @@ Use groups for scalable permission management rather than individual user settin
 Monitor who makes permission changes and review access control modifications regularly.
 </Card>
 </CardGroup>
+
+
+
+
+### Sharing Agents
+
+<Info>
+**TODO**: Add video tutorials for admin sharing workflow
+</Info>
+
+<Tabs>
+<Tab title="I'm an Administrator">
+
+As an administrator, you have direct control over agent sharing from the Agent Builder.
+
+#### How to Share an Agent
+
+In the Agent Builder panel, you'll find sharing options that allow you to control agent visibility and permissions:
+
+<Frame caption="Agent sharing options for administrators">
+<video
+  controls
+  className="w-full aspect-video rounded-xl"
+  src="/videos/admin-agent-sharing.mp4"
+  title="Admin Agent Sharing Workflow"
+>
+Your browser does not support the video tag.
+</video>
+</Frame>
+
+**Sharing controls:**
+
+1. **Share to Organization**: Toggle to make the agent available to all users or specific groups
+2. **Modification Permissions**: Control who can modify the agent
+   - **Admins only**: Only administrators can edit the agent configuration
+   - **All users**: Any user in the organization can modify the agent
+
+<Check>
+Use modification permissions wisely. Allowing all users to edit enables collaborative agent development but may reduce consistency.
+</Check>
+
+<Warning>
+Sharing an agent makes it visible based on your permission settings. Review agent instructions and tool access before sharing to ensure they meet security standards.
+</Warning>
+
+</Tab>
+
+<Tab title="I'm a User">
+
+As a standard user, you can create personal agents but need administrator approval to share them organization-wide.
+
+#### How to Request Agent Sharing
+
+1. Create and test your agent thoroughly
+2. Contact your administrator to request sharing
+3. Administrator reviews configuration and security
+4. Once approved, agent becomes available to designated users or groups
+
+<Tip>
+When requesting agent sharing, explain the use case and benefits to help administrators understand why the agent should be available organization-wide.
+</Tip>
+
+<Warning>
+Only administrators can share agents organization-wide. This maintains security and governance standards.
+</Warning>
+
+</Tab>
+</Tabs>

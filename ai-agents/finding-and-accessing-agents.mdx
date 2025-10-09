@@ -5,90 +5,68 @@ description: "Navigate WonkaChat to locate and access AI agents for your workflo
 
 Agents are located in two places: the creation interface for building and managing agents, and the usage interface for starting conversations with agents.
 
-<Info>
-Organization agents are shared by administrators. Personal agents are created by you for your own use.
-</Info>
-
 ---
 
 ## Locating Agents
 
-<Tabs>
-<Tab title="Getting Started">
+
+### Agent Usage Interface
+
+There are two ways to access and start conversations with agents:
+
+#### 1. Agent Marketplace
+
+Access the agent marketplace from the top left of your screen. The marketplace organizes agents by categories, making it easy to discover and browse available agents—especially useful when you have many agents to choose from.
+
+<Frame caption="Agent marketplace location">
+<img src="/images/agent-marketplace-location.png" alt="Agent marketplace on top left" />
+</Frame>
+
+**Features:**
+- Browse agents by category
+- Search functionality for quick discovery
+- View detailed agent descriptions
+
+
+#### 2. My Agents Quick Access
+
+Access your agents directly from the model selection dropdown at the top of the screen. At the bottom of the dropdown, you'll see "My Agents"—hover over it to reveal a list of all your available agents with a search field.
+
+<Frame caption="My Agents quick access in model selector">
+<img src="/images/my-agents-dropdown.png" alt="My Agents dropdown in model selector" />
+</Frame>
+
+**Features:**
+- Quick access to your frequently used agents
+- Integrated search field for fast agent lookup
+- No need to navigate away from your current screen
+
+<Tip>
+Use "My Agents" for quick access to agents you use regularly and the marketplace when exploring what agents are available or when you need to discover agents for specific use cases.
+</Tip>
 
 ### Agent Creation & Management
 
-Build, configure, and manage your agents here.
+In your WonkaChat interface, find the **Agent Builder** on the right side of the screen. This panel allows you to create and manage your AI agents.
 
-<Frame caption="Access agent creation and management">
-<img src="/images/agent-creation-interface.png" alt="Agent creation and management location" />
+<Frame caption="Agent Builder panel location">
+<img src="/images/mcp-panel-location.png" alt="Agent Builder panel" />
 </Frame>
+
+<Tip>
+If you don't see the right side panel, click the arrow icon in the middle-right of your screen to expand the sidebar.
+</Tip>
+
 
 **What you can do:**
 - Create new agents with custom instructions
-- Modify agent configurations
+- Modify existing agents configurations
 - Assign MCP tools to agents
 - Configure model and parameters
 
 <Check>
 All users can create personal agents. Organization-wide sharing requires administrator approval.
 </Check>
-
----
-
-### Agent Usage Interface
-
-Start conversations with existing agents here.
-
-<Frame caption="Select agents to begin conversations">
-<img src="/images/agent-usage-interface.png" alt="Agent usage location" />
-</Frame>
-
-**What you can do:**
-- Browse available agents
-- Start new conversations
-- View agent descriptions
-- Access conversation history
-
----
-
-## Agent Types
-
-<CardGroup cols={2}>
-<Card title="Organization Agents" icon="building">
-Pre-built by administrators, available organization-wide. Standardize common workflows across teams.
-</Card>
-
-<Card title="Personal Agents" icon="user">
-Created by you for your workflows. Only you can see and use these unless an administrator shares them.
-</Card>
-</CardGroup>
-
-### Sharing Personal Agents
-
-To make your personal agent available organization-wide:
-
-1. Create and test your agent
-2. Contact your administrator to request sharing
-3. Administrator reviews configuration and security
-4. Once approved, agent becomes available to designated users or groups
-
-<Warning>
-Only administrators can share agents organization-wide. This maintains security and governance standards.
-</Warning>
-
----
-
-## Permissions and Access
-
-- **Standard users**: Create personal agents, use organization agents they have permission to access
-- **Administrators**: Create organization agents, control sharing, manage access permissions
-- **Tool access**: Agents can only use tools you personally have permission to access
-
-<Info>
-For comprehensive access control details, see [Security & Governance](/security-governance/access-control).
-</Info>
-
 ---
 
 ## Next Steps
@@ -102,65 +80,3 @@ Learn how to get the best results from pre-built agents.
 Build your own agent tailored to your workflows.
 </Card>
 </CardGroup>
-
-</Tab>
-
-<Tab title="Advanced Knowledge">
-
-## Permission Model
-
-WonkaChat uses role-based access control for agents:
-
-**Standard Users:**
-- Create personal agents
-- Use organization agents (if granted access)
-- Modify own personal agents
-- Request administrator promotion to organization-wide
-
-**Administrators:**
-- All standard user capabilities
-- Create organization-wide agents
-- Control agent visibility and permissions
-- Assign agents to specific groups
-- Configure agent tool access boundaries
-
----
-
-## Agent Visibility
-
-Administrators configure agent visibility:
-- **Public**: Visible to all organization members
-- **Group-specific**: Visible only to specific groups
-- **Private**: Personal agents (creator only)
-
----
-
-## Tool Access Inheritance
-
-Agents execute with your user permissions, not elevated privileges.
-
-**Security model:**
-1. Agent configured with specific MCP tools
-2. When you use the agent, it can only access tools you have permission to use
-3. If agent requires a tool you lack access to, operation fails
-4. All actions are logged and attributable to you
-
-<Check>
-No permission escalation through agents—users cannot bypass access controls.
-</Check>
-
----
-
-## Audit and Compliance
-
-All agent operations are logged:
-- Agent creation and modification
-- Agent access and usage
-- Tool invocations through agents
-- Permission changes
-- Agent deletion
-
-See [Security & Governance](/security-governance/security-overview) for comprehensive details.
-
-</Tab>
-</Tabs>

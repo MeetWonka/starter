@@ -1,8 +1,201 @@
 ---
 title: "Conversation Management"
-description: "Strategies for managing conversations, switching context, and building on previous responses."
+description: "Understand context windows and learn strategies for managing effective AI conversations."
 ---
 
-# Conversation Management
+Understanding how AI models handle conversation history is essential for getting consistent, relevant responses. This guide explains context windows and strategies for managing conversations effectively.
 
-Learn strategies for managing long conversations, switching context effectively, and building upon previous responses to maintain a coherent dialogue.
+<Info>
+AI models don't have memory across separate conversations—they only remember what's in the current conversation's context window.
+</Info>
+
+---
+
+## What is a Context Window?
+
+Think of the context window as the AI's "working memory"—it's how much of your conversation the AI can "see" and remember at any given moment.
+
+**Analogy:**
+Imagine reading a book through a narrow slot that only shows you a few pages at a time. As you slide the slot forward to read new pages, the earlier pages slide out of view. That's how a context window works.
+
+<Frame caption="Context window visualization - the AI can only remember what fits in its window (Image credit: Anthropic)">
+<img src="https://mintcdn.com/anthropic-claude-docs/LF5WV0SNF6oudpT5/images/context-window-thinking-tools.svg?fit=max&auto=format&n=LF5WV0SNF6oudpT5&q=85&s=557310c0bf57d88b7a6e550abd35bc75" alt="Context window concept illustration" />
+</Frame>
+
+### Why It Matters
+
+<CardGroup cols={2}>
+<Card title="Response Relevance" icon="bullseye">
+The AI can only reference information within its current context window.
+</Card>
+
+<Card title="Coherence" icon="link">
+Details from early in very long conversations may be "forgotten" as they fall outside the window.
+</Card>
+</CardGroup>
+
+### What Happens When Context Fills Up?
+
+When a conversation exceeds the context window, the AI "forgets" the earliest parts of your conversation. This can lead to:
+
+- Loss of context from earlier decisions or information
+- Potential inconsistency with earlier statements
+- Confused responses when you reference old messages
+
+<Warning>
+If you reference something from much earlier in a long conversation and get a confused response, the context window may be full. Start a new conversation and summarize the relevant context.
+</Warning>
+
+---
+
+## When to Start vs. Continue Conversations
+
+Knowing when to continue a conversation versus starting a new one is crucial for maintaining quality responses.
+
+**When to Start a New Conversation**
+
+Start a new conversation when:
+
+<CardGroup cols={2}>
+<Card title="Changing Topics" icon="arrows-turn-to-dots">
+You're moving to a completely unrelated subject.
+</Card>
+
+<Card title="Getting Confused Responses" icon="circle-question">
+The AI seems confused or references incorrect information.
+</Card>
+
+<Card title="Long Conversations" icon="scroll">
+You've had an extended back-and-forth exchange.
+</Card>
+
+<Card title="Fresh Perspective" icon="sparkles">
+You want unbiased responses without influence from previous discussion.
+</Card>
+</CardGroup>
+
+<Warning>
+If responses decline in quality, starting a fresh conversation with a good summary is more efficient than trying to course-correct.
+</Warning>
+
+**When to Continue a Conversation**
+
+Continue the current conversation when:
+
+<CardGroup cols={2}>
+<Card title="Building on Previous Work" icon="layer-group">
+Each response directly relates to earlier messages.
+</Card>
+
+<Card title="Iterative Refinement" icon="pen-to-square">
+You're improving or modifying something discussed earlier.
+</Card>
+
+<Card title="Related Subtopics" icon="sitemap">
+You're exploring different facets of the same overall subject.
+</Card>
+
+<Card title="Maintaining Context" icon="memory">
+The AI needs to remember earlier choices or constraints.
+</Card>
+</CardGroup>
+
+<Tip>
+Ask yourself: "Does the AI need to remember our previous discussion to answer this well?" If yes, continue. If no, start fresh.
+</Tip>
+
+---
+
+## Building on Previous Responses
+
+Effective conversation flow builds naturally on what's already been discussed.
+
+**Example progression:**
+```
+You: "Explain the benefits of containerization with Docker."
+
+AI: [Provides explanation including portability, consistency, and isolation]
+
+You: "You mentioned isolation as a benefit. How does Docker's isolation 
+compare to traditional virtual machines in terms of resource usage?"
+```
+
+In longer conversations, periodically summarize key points to reinforce important context:
+
+```
+So far we've established that:
+1. Microservices offer scalability benefits for our use case
+2. The team needs Kubernetes experience
+3. The initial setup cost is approximately 3 months
+
+Given this context, what's the recommended team structure?
+```
+
+---
+
+## Advanced: Understanding Tokens and Model Selection
+
+Context windows are measured in **tokens**—units of text that represent roughly 4 characters or about ¾ of a word.
+
+**Common Models and Their Context Windows:**
+
+| Model | Context Window | Best For |
+|-------|---------------|----------|
+| **GPT-4o** | 128K tokens | Balanced performance, general-purpose tasks |
+| **GPT-4o mini** | 128K tokens | High-volume, cost-sensitive conversations |
+| **Claude Sonnet 4** | 200K tokens | Advanced reasoning, document analysis |
+| **Gemini 2.5 Pro** | 1M tokens | Extended conversations, large document analysis |
+| **Gemini 2.5 Flash** | 1M tokens | Speed-optimized long conversations |
+
+<Info>
+When selecting a model in WonkaChat, consider the context window if you're planning extended conversations. Learn more in [Creating Your First Agent](/ai-agents/creating-your-first-agent).
+</Info>
+
+### Managing Multiple Workstreams
+
+For juggling multiple projects, use separate conversations by project:
+
+```
+Conversation 1: "Project Alpha - Frontend Development"
+Conversation 2: "Project Alpha - Backend API"
+Conversation 3: "Project Beta - Data Analysis"
+```
+
+This approach keeps context clean and prevents "polluting" your context window with information that might bias future responses.
+
+### Rehydrating Context
+
+When starting a fresh conversation about a related topic, provide a concise summary of relevant prior context:
+
+```
+"Context from previous session: We're implementing a new CRM system for 
+our sales team of 50 people. Budget is $100K, timeline is 6 months, and 
+we need integration with our existing email platform and calendar system.
+
+New question: Given these requirements, what training approach would you 
+recommend for onboarding the sales team?"
+```
+
+---
+
+## Common Pitfalls to Avoid
+
+<AccordionGroup>
+<Accordion title="Expecting the AI to Remember Past Conversations">
+**Problem:** Starting a new conversation with "As we discussed yesterday..." without re-establishing context.
+
+**Solution:** Always provide relevant context at the start of new conversations.
+</Accordion>
+
+<Accordion title="Overloading a Single Conversation">
+**Problem:** Using one conversation for multiple unrelated tasks, leading to confused responses.
+
+**Solution:** Start new conversations for distinct topics.
+</Accordion>
+
+<Accordion title="Ignoring Quality Decline">
+**Problem:** Continuing a conversation even when responses become less relevant or accurate.
+
+**Solution:** Recognize when the context window is full and start fresh with a summary.
+</Accordion>
+</AccordionGroup>

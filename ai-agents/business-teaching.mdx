@@ -3,34 +3,41 @@ title: "Business Teaching"
 description: "Provide business context to agents for accurate, company-specific responses."
 ---
 
-Teaching your business context to agents ensures they understand your company's terminology, processes, and policies—delivering responses grounded in your operations.
-
-<Tabs>
-<Tab title="Getting Started">
+Teaching your business context to agents ensures they understand your company's terminology, processes, and policies—delivering responses grounded in your operations rather than generic assumptions.
 
 <Info>
-Business teaching means providing company-specific information so agents use your terminology, follow your processes, and align with your policies.
+Business teaching helps agents use your exact terminology, follow your processes, and align with your company policies.
 </Info>
 
 ---
 
 ## Why Teach Your Business Context?
 
+Without business context, agents make generic assumptions. With it, they provide accurate, company-specific responses.
+
+**Example - Writting a customer support email:**
+
+**Without context:** "Most companies offer refunds within 14-30 days. Check your company's specific policy."
+
+**With context:** "Our refund policy allows requests within 30 days, processed in 3-5 business days. Would you like me to initiate one?"
+
+### Key Benefits
+
 <CardGroup cols={2}>
-<Card title="Accurate Terminology" icon="book-open">
-Agents learn your company's terms, product names, and industry jargon.
+<Card title="Accurate responses" icon="check-circle">
+Agents use your exact terms, policies, and processes
 </Card>
 
-<Card title="Process Alignment" icon="list-check">
-Agents follow your actual workflows instead of making generic assumptions.
+<Card title="Reduced errors" icon="shield-check">
+Grounding in your information prevents hallucinations (AI making up incorrect details)
 </Card>
 
-<Card title="Policy Compliance" icon="shield-check">
-Agents understand and apply your company policies and guidelines.
+<Card title="Brand consistency" icon="palette">
+Agents maintain your voice, tone, and communication style
 </Card>
 
-<Card title="Reduced Errors" icon="circle-xmark">
-Grounding responses in your information reduces incorrect outputs.
+<Card title="Better outcomes" icon="trophy">
+Team members get reliable, actionable information
 </Card>
 </CardGroup>
 
@@ -38,370 +45,168 @@ Grounding responses in your information reduces incorrect outputs.
 
 ## How to Provide Business Context
 
-### 1. Instructions-Based Teaching
+### Add Context to Agent Instructions
 
-Include business context directly in agent instructions.
+Include company-specific information directly in agent instructions. Start with essentials and expand as needed.
 
 <AccordionGroup>
-<Accordion title="Company Information">
-**Example:**
-```
-Company background:
-- B2B SaaS platform serving mid-market companies
-- Product offers project management and team collaboration
-- Operate in North America and Europe
-```
-</Accordion>
+<Accordion title="Voice and Tone Guidelines" icon="message">
+Define how agents should communicate to match your brand.
 
-<Accordion title="Terminology">
-**Example:**
-```
-Key terms:
-- "Premium tier" = enterprise subscription level
-- "Quick-start" = 15-minute onboarding process
-- MRR = Monthly Recurring Revenue
-```
-</Accordion>
-
-<Accordion title="Voice and Tone">
 **Example:**
 ```
 Communication style:
 - Professional but friendly, never overly casual
 - Use active voice and direct language
 - Address customers by first name
+- Keep responses concise and actionable
 ```
+
+<Tip>
+Include specific phrases to use or avoid. This ensures consistency across all agent interactions.
+</Tip>
 </Accordion>
 
-<Accordion title="Policies">
+<Accordion title="Terminology and Glossaries" icon="book">
+Define company-specific terms, product names, and acronyms.
+
+**Example:**
+```
+Key terms:
+- "Premium tier" = enterprise subscription level
+- "Quick-start" = our 15-minute onboarding process
+- MRR = Monthly Recurring Revenue
+- CS = Customer Success (not Customer Support)
+```
+
+Clear definitions prevent misunderstandings and ensure agents use your language.
+</Accordion>
+
+<Accordion title="Policy Integration" icon="shield">
+Include relevant policies so agents can answer questions accurately.
+
 **Example:**
 ```
 Key policies:
-- Refunds: Approved within 30 days
-- Support hours: 9 AM-6 PM EST, M-F
-- Response time: Within 4 business hours
+- Refunds: Full refund within 30 days, processed in 3-5 business days
+- Support hours: 9 AM-6 PM EST, Monday-Friday
+- Response SLA: 4 business hours for standard, 1 hour for enterprise
+- Escalation: Issues over \$500 require manager approval
 ```
+
+<Warning>
+Always verify agents apply policies correctly before deploying to your team. Test with realistic scenarios.
+</Warning>
 </Accordion>
 
-<Accordion title="Processes">
+<Accordion title="Process Instructions" icon="list-check">
+Document step-by-step workflows agents should follow.
+
 **Example:**
 ```
-Onboarding process:
-1. Send welcome email with credentials
-2. Schedule orientation within 48 hours
-3. Assign success manager
-4. Provide training materials
+Customer onboarding process:
+1. Send welcome email with login credentials
+2. Schedule orientation call within 48 hours
+3. Assign dedicated success manager
+4. Provide access to training materials
+5. Follow up after 7 days
 ```
+
+Clear processes ensure consistency and completeness in agent actions.
 </Accordion>
 </AccordionGroup>
 
-<Tip>
-Start with critical information and add more context as you identify gaps.
-</Tip>
+**Best practice:** Update instructions when policies or processes change. Outdated context leads to incorrect information.
 
 ---
 
-### 2. Document-Based Teaching
+### Upload Documents for Deep Context
 
-Provide agents with access to company documents for deeper context.
+For extensive information like product documentation, policy manuals, or knowledge bases, upload documents that agents can automatically search and reference when answering questions.
 
 <Frame caption="Upload documents for agent context">
 <img src="/images/agent-document-upload.png" alt="Document upload interface" />
 </Frame>
 
-**Supported documents:**
-- Policy documents
-- Process guides and SOPs
-- Product documentation
-- Training materials
-- Knowledge base articles
+**Why upload documents?**
+- Agents can access detailed information without cluttering instructions
+- Perfect for comprehensive documentation that's too large for instructions
+- Information stays current—update documents anytime without changing agent instructions
 
-Agents can reference this information when generating responses, ensuring accuracy and consistency.
-
----
-
-## Benefits
-
-### Higher Accuracy
-
-**Without business context:**  
-"Most companies offer refunds within 14-30 days. Check your company's specific policy."
-
-**With business context:**  
-"Our refund policy allows customers to request full refunds within 30 days. Requests are processed within 3-5 business days. Would you like me to initiate a refund?"
-
-### Reduced Hallucinations
-
-Providing factual business information prevents agents from generating incorrect or fabricated details about your company.
-
-<Info>
-"Hallucinations" occur when AI generates plausible but incorrect information. Business context significantly reduces this issue.
-</Info>
-
----
-
-## Best Practices
-
-<CardGroup cols={2}>
-<Card title="Start with Essentials" icon="star">
-Begin with critical information: terminology, key policies, primary workflows.
-</Card>
-
-<Card title="Use Official Sources" icon="file-certificate">
-Base context on official documents and approved materials.
-</Card>
-
-<Card title="Keep Current" icon="arrows-rotate">
-Update agent context when policies or processes change.
-</Card>
-
-<Card title="Test" icon="vial">
-Verify agents correctly apply business context with realistic requests.
-</Card>
-</CardGroup>
-
----
-
-## Common Use Cases
-
-<AccordionGroup>
-<Accordion title="Customer Support">
-Product features, support policies, troubleshooting procedures, communication guidelines.
-</Accordion>
-
-<Accordion title="Sales and Marketing">
-Product positioning, target audience, messaging guidelines, sales processes.
-</Accordion>
-
-<Accordion title="HR and Operations">
-Employee policies, onboarding procedures, benefits information, internal processes.
-</Accordion>
-
-<Accordion title="Data and Analytics">
-Business metrics definitions, reporting standards, data sources, analysis frameworks.
-</Accordion>
-</AccordionGroup>
-
----
-
-## Updating Context
-
-Keep agent context current:
-1. Monitor agent responses for outdated information
-2. Update instructions when policies change
-3. Refresh documents with current versions
-4. Test updated context
-
-<Warning>
-Outdated context causes agents to provide incorrect information. Establish a review schedule.
-</Warning>
-
----
-
-## Next Steps
-
-<CardGroup cols={2}>
-<Card title="Creating Your First Agent" icon="plus-circle" href="/ai-agents/creating-your-first-agent">
-Apply business teaching when creating agents.
-</Card>
-
-<Card title="Using Existing Agents" icon="play" href="/ai-agents/using-existing-agents">
-Understand how business context shapes agent behavior.
-</Card>
-</CardGroup>
-
-</Tab>
-
-<Tab title="Advanced Knowledge">
-
-## Retrieval-Augmented Generation (RAG)
-
-When you provide documents to agents, WonkaChat uses **RAG (Retrieval-Augmented Generation)**.
-
-### What is RAG?
-
-RAG combines information retrieval with AI generation:
-1. **Retrieve**: Search documents for relevant information
-2. **Augment**: Incorporate retrieved information into context
-3. **Generate**: Produce responses grounded in retrieved information
-
-<Info>
-RAG allows agents to access specific company information without that information being part of the AI model's training data.
-</Info>
-
----
-
-## How RAG Works
-
-**Document processing:**
-```
-Document → Parse and split into chunks → Generate embeddings → 
-Create searchable index → Ready for retrieval
-```
-
-**Retrieval during conversations:**
-```
-User request → Semantic search → Rank relevance → 
-Inject context → Generate response
-```
-
-<Check>
-Users only see responses—the retrieval process is invisible.
-</Check>
-
----
-
-## RAG vs Instructions
-
-<Tabs>
-<Tab title="Instructions">
-**Best for:**
-- Critical information needed in every response
-- Policy constraints and operational rules
-- Tone, voice, communication style
-- Information that rarely changes
-
-**Characteristics:**
-- Always included in agent context
-- Limited by system prompt size
-- Best for concise, structured information
-
-**Example:**
-"Always verify account before sharing sensitive details. Escalate refunds over $500."
-</Tab>
-
-<Tab title="RAG Documents">
-**Best for:**
-- Large volumes of reference information
-- Detailed product documentation
-- Extensive policy documents
-- Frequently updated content
-
-**Characteristics:**
-- Retrieved only when relevant
-- Can handle large document collections
-- Dynamically selected based on context
-
-**Example:**
-Complete product documentation, comprehensive policy manuals, customer case studies
-</Tab>
-</Tabs>
+**Best for:** Product documentation, policy manuals, process guides, training materials, knowledge bases
 
 <Tip>
-Use instructions for "always-on" essential context; use RAG for comprehensive reference material.
+Use instructions for critical information needed in every response. Use documents for extensive reference material that agents retrieve only when relevant.
 </Tip>
+
+<Accordion title="Technical Details: How Document Retrieval Works" icon="gear">
+
+When you upload documents, WonkaChat uses **RAG (Retrieval-Augmented Generation)** to make them searchable for agents.
+
+**How it works:**
+
+1. **Upload** — You provide company documents
+2. **Index** — Documents are processed and made searchable
+3. **Retrieve** — When relevant, agents automatically find information from documents
+4. **Generate** — Agents produce responses grounded in your actual documentation
+
+**Document preparation tips:**
+- **Use clear headings** — Well-structured sections improve retrieval accuracy
+- **Keep sections focused** — One topic per section
+- **Include context** — Write sections to be understandable independently (e.g., "Our Premium tier (\$99/month) includes..." not just "It includes...")
+- **Stay consistent** — Use the same terminology throughout
+
+**Security and privacy:**
+- Documents stored securely within your WonkaChat environment
+- Never used to train AI models
+- Accessible only to users with agent permissions
+
+**Learn more about RAG:** For deeper technical details, see [Anthropic's](https://www.anthropic.com/engineering/contextual-retrieval) or [OpenAI's](https://platform.openai.com/docs/guides/optimizing-llm-accuracy#retrieval-augmented-generation-rag) or [Google's](https://cloud.google.com/use-cases/retrieval-augmented-generation) RAG Guides.
+
+</Accordion>
 
 ---
 
-## Document Preparation
-
-Prepare documents for optimal RAG effectiveness:
+## Examples by Use Case
 
 <AccordionGroup>
-<Accordion title="Use Clear Headings">
-Well-structured documents with clear section headings improve retrieval accuracy.
+<Accordion title="Customer Support Agent" icon="headset">
+**Context needed:** Product features, support policies, troubleshooting steps, communication guidelines
+
+**Example instruction snippet:**
+```
+Support guidelines:
+- Always verify account before sharing details
+- Use knowledge base articles for technical issues
+- Escalate billing issues over 500$ to finance team
+- Response tone: Empathetic, solution-focused, professional
+```
 </Accordion>
 
-<Accordion title="Keep Sections Focused">
-Each section should cover one topic completely.
+<Accordion title="Email Assistant" icon="envelope">
+**Context needed:** Company voice, common email types, approval workflows, internal terminology
+
+**Example instruction snippet:**
+```
+Email style:
+- Internal emails: Direct and concise
+- External emails: Professional and courteous
+- Always include relevant stakeholders in CC when appropriate
+- Use company signature format: [Name] | [Title] | [Department]
+```
 </Accordion>
 
-<Accordion title="Use Consistent Terminology">
-Maintain consistent terms throughout to improve semantic matching.
-</Accordion>
+<Accordion title="Sales Assistant" icon="chart-line">
+**Context needed:** Product positioning, pricing, target audience, sales processes, competitive info
 
-<Accordion title="Include Context">
-Make sections understandable independently—RAG may retrieve individual sections.
-
-**Good:** "Our Premium tier ($99/month) includes unlimited users, 500GB storage, priority support."
-
-**Avoid:** "It includes unlimited users." (unclear without context)
+**Example instruction snippet:**
+```
+Sales context:
+- Target: Mid-market companies (50-500 employees)
+- Key value prop: 40% time savings on project management
+- Pricing: Start at 49$/user/month
+- Never discount without manager approval
+```
 </Accordion>
 </AccordionGroup>
 
----
-
-## Supported Document Formats
-
-**Text-based:**
-- PDF, Word (.docx), Plain text (.txt), Markdown (.md), Rich text (.rtf)
-
-**Structured:**
-- Excel spreadsheets, CSV files, HTML documents
-
-<Info>
-Documents are processed to extract text content. Complex formatting may not be preserved.
-</Info>
-
----
-
-## RAG Performance
-
-**Factors affecting retrieval quality:**
-- **Document quality**: Clear, well-structured content retrieves better
-- **Query formulation**: Specific queries retrieve more relevant results
-- **Chunk size**: Automatically optimized by WonkaChat
-
-**Performance:**
-- Retrieval latency: Minimal (<1 second typically)
-- Scales to large document collections
-- Changes are processed and indexed automatically
-
----
-
-## RAG Security
-
-**Data handling:**
-- Documents stored securely within your WonkaChat environment
-- Never used to train AI models
-- Subject to your data retention policies
-- Accessible only to users with agent permissions
-
-**Access control:**
-- RAG respects WonkaChat's permission model
-- Retrieved information subject to user permissions
-- All document access logged for audit
-
-<Info>
-See [Security & Governance](/security-governance/security-overview) for comprehensive details.
-</Info>
-
----
-
-## Monitoring Effectiveness
-
-**Indicators of effective RAG:**
-- Agents correctly reference document information
-- Accurate policy and procedure citations
-- Fewer generic or incorrect answers
-- Consistent information across conversations
-
-**Signs needing improvement:**
-- Agents fail to find relevant information
-- Retrieved information is outdated
-- Inconsistent responses to similar questions
-
----
-
-## Coming Soon
-
-<CardGroup cols={2}>
-<Card title="Custom Embeddings" icon="microchip">
-Advanced embedding configuration for specialized domains.
-</Card>
-
-<Card title="Multi-Modal RAG" icon="images">
-Support for retrieving from images, charts, and diagrams.
-</Card>
-
-<Card title="Cross-Agent Knowledge" icon="share-nodes">
-Shared knowledge bases accessible by multiple agents.
-</Card>
-</CardGroup>
-
-<Info>
-**Note:** Fine-tuning capabilities are not currently available.
-</Info>
-
-</Tab>
-</Tabs>
