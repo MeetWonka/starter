@@ -1,46 +1,217 @@
 ---
 title: "FAQ"
-description: "Frequently Asked Questions about Wonka Chat."
+description: "Frequently Asked Questions about WonkaChat."
 ---
+Find quick answers about WonkaChat across setup, models, tool connections (MCP), agents, security, troubleshooting, and best practices.
 
-# FAQ
+<Tip>
+New to WonkaChat? Start with our [Introduction](/welcome/introduction), then explore [Tools & Connection](/tools-connection/introduction) and [AI Agents](/ai-agents/introduction).
+</Tip>
 
-This page will contain a list of frequently asked questions and their answers.
 
-
-## Common First Questions
+## Getting started
 
 <AccordionGroup>
-<Accordion title="How do I switch between AI models?" icon="toggle-on">
-Use the model selector in the top bar of the interface. Choose "Thinking" for complex tasks requiring deep analysis, or "Non-Thinking" for quick, straightforward queries.
+<Accordion title="What is WonkaChat?" icon="circle-question">
+WonkaChat is an enterprise AI assistant that connects to your business tools and data to execute multi‑step workflows through natural conversation—while keeping your data within your security perimeter. See [Welcome → What is Wonka Chat?](/welcome/introduction).
 
-You can change models mid-conversation if needed.
+<Check>
+Think of it as one interface that orchestrates actions across your apps (email, calendar, CRM, docs, ERP, and more).
+</Check>
 </Accordion>
 
-<Accordion title="Can WonkaChat access all my company data?" icon="lock">
-WonkaChat only accesses tools and data you explicitly connect. You control which systems are integrated and what permissions WonkaChat has within each system.
+<Accordion title="How do I get started in 5 minutes?" icon="rocket">
+1) Sign in via your organization (SSO or invite). 2) Send your first message to verify everything works. 3) Connect a first tool (email/calendar is a great start). 4) Try a simple workflow like “What’s on my calendar today?”. See [Quick Start](/welcome/quick-start).
 
-All access follows your organization's security policies and user permissions.
+<Tip>
+Start with your email provider (Outlook or Gmail). It unlocks high‑value daily workflows.
+</Tip>
 </Accordion>
 
-<Accordion title="What if I make a mistake or want to undo something?" icon="rotate-left">
-WonkaChat shows you what actions it plans to take before executing them (especially for write operations). You can review and confirm before changes are made.
-
-For audit and rollback capabilities, see your organization's governance settings.
+<Accordion title="Do I need to code to use WonkaChat?" icon="seedling">
+No. You interact through conversation. Advanced users can configure agents and connections without writing code.
 </Accordion>
 
-<Accordion title="How do I teach WonkaChat about my business?" icon="graduation-cap">
-You can upload documents, share company knowledge, and provide context through conversation. The platform learns your terminology and processes over time.
-
-For detailed guidance, see the [Business Teaching](/ai-agents/business-teaching) section.
+<Accordion title="What can WonkaChat help me accomplish?" icon="wand-magic-sparkles">
+Common examples include onboarding workflows, intelligent search across tools, automated reporting, meeting scheduling, and customer support triage. Explore examples in [Welcome → Introduction](/welcome/introduction).
 </Accordion>
 
-<Accordion title="Where can I get help if I'm stuck?" icon="life-ring">
-- Check the [FAQ](/support-resources/faq) for common questions
-- Visit [Troubleshooting](/support-resources/troubleshooting) for solutions
-- Contact your organization's WonkaChat administrator
-- Use the [Getting Help](/support-resources/getting-help) resources
+<Accordion title="Can I switch AI models?" icon="sliders">
+Yes. Choose thinking models for complex reasoning or fast/non‑thinking models for quick tasks. You can switch per task or conversation. See [Why Choose Wonka Chat? → Flexibility](/welcome/why-wonka-chat).
+</Accordion>
+</AccordionGroup>
+
+## Models and usage
+
+<AccordionGroup>
+<Accordion title="Which AI models are supported?" icon="microchip">
+WonkaChat is model‑agnostic. You can bring providers like OpenAI, Anthropic, and Google, and even self‑hosted models. Choose per task based on complexity, speed, and cost. See [Why Choose Wonka Chat? → Model Provider Flexibility](/welcome/why-wonka-chat).
+</Accordion>
+
+<Accordion title="When should I use a thinking model vs a fast model?" icon="brain">
+- **Thinking models**: deep analysis, multi‑step planning, complex workflows.
+- **Fast/non‑thinking models**: quick answers, formatting, short lookups.
+
+Details and examples in [Why Choose Wonka Chat?](/welcome/why-wonka-chat) and the model guidance in [Creating Your First Agent](/ai-agents/creating-your-first-agent).
+</Accordion>
+
+<Accordion title="How do context windows affect conversations?" icon="memory">
+Models only “remember” what fits in the current context window. Very long threads may push earlier details out of scope. If responses degrade, start a new conversation with a short summary. See [Conversation Management](/improved-usage/conversation-management).
+</Accordion>
+
+<Accordion title="How can I ask better questions?" icon="question">
+Be specific, set scope and audience, provide context, and request structured outputs. See patterns and templates in [Asking Great Questions](/improved-usage/asking-great-questions).
+</Accordion>
+</AccordionGroup>
+
+## Tool connections (MCP)
+
+<AccordionGroup>
+<Accordion title="What is MCP and why does it matter?" icon="plug">
+MCP (Model Context Protocol) securely connects AI models to your tools (email, calendar, CRM, storage, ERP, etc.) so the AI can read data and take actions with your permission. See [Tools & Connection → Understanding MCP](/tools-connection/introduction).
+</Accordion>
+
+<Accordion title="How do I connect my first tool?" icon="link">
+Open the MCP panel → select a tool → authenticate (OAuth/API key/custom fields) → enable the MCP server for your current chat → test with a simple query. Full walkthrough in [Setting Up Your First Connection](/tools-connection/setting-up-your-first-connection).
+
+<Check>
+Start with email/calendar to unlock daily productivity.
+</Check>
+</Accordion>
+
+<Accordion title="What can WonkaChat access and do with connected tools?" icon="hand">
+WonkaChat can only access data you already have permission to view and only when you ask. Actions depend on each tool’s MCP server (read, write, search, execute workflows). You approve actions by asking for them explicitly. See [Setting Up Your First Connection → Understanding Permissions and Actions](/tools-connection/setting-up-your-first-connection).
+</Accordion>
+
+<Accordion title="How are my credentials stored?" icon="lock">
+WonkaChat stores tokens securely (encrypted at rest), never your plain‑text passwords. Tokens are per‑user, auto‑refreshed, and deleted when you disconnect a tool. See [Setting Up Your First Connection](/tools-connection/setting-up-your-first-connection).
+</Accordion>
+
+<Accordion title="Why can’t the AI access a file or record I asked for?" icon="triangle-exclamation">
+Most often: you don’t have access in the underlying tool, or you denied permissions during OAuth. Verify you can access it directly, then reconnect and grant requested scopes. See [Troubleshooting Connections](/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="Which tools are supported?" icon="puzzle-piece">
+WonkaChat supports 75+ tools across communication, development, operations, analytics, and more (Outlook, Gmail, Slack, GitHub, Notion, Google Drive, Salesforce, Odoo…). See examples in [Examples of Tool Usage](/tools-connection/examples-of-tool-usage).
+</Accordion>
+</AccordionGroup>
+
+## AI agents
+
+<AccordionGroup>
+<Accordion title="What are AI agents and how are they different from regular chat?" icon="robot">
+Agents have persistent instructions, dedicated tools, and consistent roles across conversations—like specialized team members. Regular chat starts fresh each time. See [What are AI Agents?](/ai-agents/introduction).
+</Accordion>
+
+<Accordion title="When should I use or create an agent?" icon="bullseye">
+Use an agent for recurring workflows, cross‑tool processes, or standardized outputs. Create personal agents for your workflows; administrators can share organization‑wide agents. See [Creating Your First Agent](/ai-agents/creating-your-first-agent).
+</Accordion>
+
+<Accordion title="How do I find and start an agent?" icon="magnifying-glass">
+Use the Agent Marketplace (top left) or “My Agents” quick access within the model selector. See [Finding and Accessing Agents](/ai-agents/finding-and-accessing-agents).
+</Accordion>
+
+<Accordion title="An agent didn’t have the info/tools it needed—what now?" icon="wrench">
+- As a user: Provide needed details in your prompt, or pick a different agent with the right tools.
+- As an admin: Update the agent’s instructions, add documents, or add the required MCP tool. See [Using Existing Agents](/ai-agents/using-existing-agents).
+</Accordion>
+
+<Accordion title="What is Business Teaching and why should I use it?" icon="graduation-cap">
+Add your company’s terminology, policies, and processes to agents (instructions + uploaded docs) so answers match your reality, not generic assumptions. See [Business Teaching](/ai-agents/business-teaching).
+</Accordion>
+</AccordionGroup>
+
+## Security and governance
+
+<AccordionGroup>
+<Accordion title="Does WonkaChat train AI models on my data?" icon="ban">
+No. Your conversations are stored securely in WonkaChat for your history, but model providers process requests ephemerally without retention or training. See [Security Overview → Model Provider Security](/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="How is my data isolated and protected?" icon="building-lock">
+Organization‑scoped isolation, subdomain routing, encryption in transit (TLS) and at rest, token security, and automatic redaction of sensitive data in logs. See [Security Overview](/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="What authentication methods are supported?" icon="key">
+Local auth, OpenID Connect, and Azure AD/Entra ID now; additional providers are planned. Access tokens (15 min) and refresh tokens (7 days) balance security and usability. See [Security Overview → Authentication System](/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="How does access control and sharing work?" icon="user-shield">
+Two roles: **User** and **Administrator**. Admins manage users, share agents org‑wide, and control tool access. Users can create personal agents but cannot share org‑wide. See [Access Control](/security-governance/access-control).
+</Accordion>
+
+<Accordion title="Can agents escalate privileges or bypass permissions?" icon="shield-halved">
+No. Agents inherit your exact permissions. If you can’t do it manually, agents can’t either. Tool restriction lets you remove risky capabilities from agents. See [Access Control → Tool Restriction](/security-governance/access-control#tool-restriction).
+</Accordion>
+
+<Accordion title="What is Safe Mode and when should I use it?" icon="shield-check">
+Safe Mode requires your approval before executing actions—ideal for sending communications, modifying production data, deployments, and financial operations. See [Access Control → Safe Mode](/security-governance/access-control#safe-mode-human-in-the-loop).
+</Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+<Accordion title="I’m seeing authentication errors connecting a tool" icon="circle-xmark">
+Verify credentials by logging into the tool directly, then disconnect and reconnect the MCP, granting requested permissions. See [Troubleshooting Connections](/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="I get ‘permission denied’ when accessing data" icon="ban">
+Your organization may block third‑party apps, or you didn’t grant all scopes. Contact IT to approve WonkaChat and reconnect with full permissions. See [Troubleshooting Connections](/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="Slow responses or timeouts" icon="clock">
+Refresh WonkaChat, check your network, reduce query scope (e.g., time‑bound filters), and verify the tool’s status page. See [Troubleshooting Connections](/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="Agent responses don’t match expectations" icon="pen-to-square">
+Specify desired format and scope, review the agent’s role, and iterate. Admins can refine system prompts or add missing context/tools. See [Using Existing Agents](/ai-agents/using-existing-agents).
+</Accordion>
+
+<Accordion title="Where can I get help?" icon="life-ring">
+See [Getting Help](/support-resources/getting-help) or contact our [support team](https://www.meetwonka.com/fr/contact). Also review [Troubleshooting](/support-resources/troubleshooting) and this FAQ.
+</Accordion>
+</AccordionGroup>
+
+## Prompting, conversations, and the prompt library
+
+<AccordionGroup>
+<Accordion title="How do I structure better prompts?" icon="list">
+Use role, situation, goal, scope, audience, and examples; request structured outputs and constraints. Copy patterns from [Asking Great Questions](/improved-usage/asking-great-questions).
+</Accordion>
+
+<Accordion title="When should I start a new conversation?" icon="arrows-turn-to-dots">
+Start fresh when changing topics, after long threads, or when quality declines. Begin with a concise summary of relevant context. See [Conversation Management](/improved-usage/conversation-management).
+</Accordion>
+
+<Accordion title="How do I save and reuse effective prompts?" icon="bookmark">
+Use the Prompt Library with variables (basic, dropdown, and special variables like `{{current_date}}`). Invoke via slash commands. See [Prompt Library](/improved-usage/prompt-library).
+</Accordion>
+</AccordionGroup>
+
+## Policies and risk management
+
+<AccordionGroup>
+<Accordion title="What practices reduce risk with AI operations?" icon="clipboard-check">
+- Enable Safe Mode for high‑impact actions
+- Test in staging with least‑privilege access
+- Break workflows into reviewable steps
+- Restrict tools to remove irreversible actions
+
+See [Best Practices](/security-governance/best-practices).
+</Accordion>
+
+<Accordion title="Can I undo actions performed through tools?" icon="rotate-left">
+Some tool actions are irreversible (e.g., sends, deletions, deployments). Use Safe Mode, restrict destructive tools, and review drafts before executing. See [Best Practices](/security-governance/best-practices).
 </Accordion>
 </AccordionGroup>
 
 ---
+
+<Card title="Still have questions?" icon="life-ring" href="/support-resources/getting-help">
+Visit Getting Help to reach our team or explore more support resources.
+</Card>
+
+
+
+

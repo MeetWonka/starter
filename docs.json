@@ -26,7 +26,7 @@
             ]
           },
           {
-            "group": "Tools Connection",
+            "group": "Tools & Connection",
             "pages": [
               "tools-connection/introduction",
               "tools-connection/setting-up-your-first-connection",
@@ -66,8 +66,6 @@
           {
             "group": "Support & Resources",
             "pages": [
-              "support-resources/troubleshooting",
-              "support-resources/reference-materials",
               "support-resources/faq",
               "support-resources/getting-help"
             ]

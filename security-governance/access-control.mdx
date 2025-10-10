@@ -1,298 +1,451 @@
 ---
 title: "Access Control"
-description: "Configure user management, role-based permissions, and group administration to control access to WonkaChat features."
+description: "Manage user roles, user access, agent permissions, and tool restrictions to control what AI agents can do in your organization."
 ---
 
-Control who can access what in your WonkaChat organization. Define user roles, manage permissions, and monitor MCP operations with fine-grained security policies.
+Control who has access to what in your WonkaChat organization. Manage users, assign roles, define granular permissions for AI agents, and restrict which tools agents can use to ensure secure collaboration.
 
 <Info>
-Access control is your first line of defense. Use these features to implement the principle of least privilege across your organization.
+Access control implements the principle of least privilege—users and agents receive only the permissions they need to do their work.
 </Info>
 
 ---
 
 ## User Management
 
-Add, remove, and manage individual users in your WonkaChat organization.
-
-### Adding Users
+Add, manage, and remove users in your organization through the Settings panel.
 
 <Steps>
-<Step title="Navigate to User Management">
-Access the user management section from your organization settings.
+<Step title="Access Settings">
+Navigate to **Settings** in your WonkaChat dashboard. Only administrators can access user management functions.
+
+<Frame caption="Settings location">
+<img src="/images/settings.png" alt="Settings pannel location" />
+</Frame>
 </Step>
 
 <Step title="Invite New Users">
-Send email invitations to users you want to add to your organization. Users must accept the invitation to gain access.
+Send email invitations to users you want to add to your organization. Users receive an invitation link to create their account and join.
+
+<Frame caption="User invitation interface">
+<img src="/images/invite-users.png" alt="User invitation form" />
+</Frame>
 </Step>
 
-<Step title="Assign Initial Permissions">
-Define the user's initial role and permissions during the invitation process or immediately after they join.
+<Step title="Assign Role">
+Choose whether the new user will be an **Admin** or a **User** when sending the invitation.
+
+<Check>
+You can change user roles at any time after they join the organization.
+</Check>
 </Step>
 
-<Step title="Configure Tool Access">
-Grant or restrict access to specific MCP tools, AI agents, and organizational features based on the user's role.
+<Step title="Managing Existing Users">
+
+<AccordionGroup>
+<Accordion title="Change Roles" icon="user-gear">
+Promote users to administrators or remove admin privileges as responsibilities change.
+
+<Warning>
+Administrators can manage their own admin rights, but cannot override or remove admin privileges from other administrators.
+</Warning>
+</Accordion>
+
+<Accordion title="Remove Users" icon="user-slash">
+Permanently remove users from your organization. While you can easily delete and re-add users, all data associated with the account is permanently deleted and cannot be recovered.
+
+<Warning>
+Removing a user deletes all their data irreversibly. You can re-add the user later, but their previous agents, configurations, and settings will be gone forever. Consider deactivation for temporary access removal.
+</Warning>
+</Accordion>
+</AccordionGroup>
 </Step>
 </Steps>
 
-### Managing Existing Users
-
-<Tabs>
-<Tab title="Modify Permissions">
-Update user permissions at any time to grant or revoke access to specific tools, agents, or features as their role evolves.
-</Tab>
-
-<Tab title="Suspend Access">
-Temporarily suspend user accounts without deleting them. Suspended users cannot access WonkaChat but retain their configuration for future reactivation.
-</Tab>
-
-<Tab title="Remove Users">
-Permanently remove users from your organization. Their data and configurations are removed according to your data retention policies.
-</Tab>
-</Tabs>
-
-<Warning>
-Removing a user is permanent and cannot be undone. Consider suspending access instead if the removal might be temporary.
-</Warning>
 
 ---
 
 ## Role-Based Permissions
 
-Define and assign roles to control what users can do within WonkaChat.
+WonkaChat uses a simple two-role system for clear permission boundaries.
 
-### Built-In Roles
-
-WonkaChat provides default roles to get you started quickly.
+### Available Roles
 
 <CardGroup cols={2}>
+<Card title="User" icon="user">
+**Personal agent creation**
+
+Create their own personal AI agents\
+• Use agents shared by administrators\
+• Modify shared agents only if granted permission\
+• Access only the personal created agents or admin shared agents
+
+<Info>
+Users cannot share agents with others—only administrators can make agents available organization-wide.
+</Info>
+</Card>
+
 <Card title="Administrator" icon="user-shield">
-Full access to all features, including user management, security settings, and organization configuration.
-</Card>
+**Full organizational control**
 
-<Card title="Power User" icon="user-gear">
-Can create and manage AI agents, configure MCP connections, and access all available tools.
-</Card>
+Manage all users (add, remove, change roles)\
+• Create, modify, and share agents organization-wide\
+• Control agent permissions (who can view/modify)\
+• Control MCP connections permissions\
+• Promote users to administrator roles\
 
-<Card title="Standard User" icon="user">
-Can use existing AI agents and access tools based on assigned permissions.
-</Card>
-
-<Card title="Viewer" icon="eye">
-Read-only access to view conversations and agents without the ability to execute actions.
+<Check>
+Admins have complete control except they cannot override other administrators' privileges.
+</Check>
 </Card>
 </CardGroup>
 
-### Custom Roles
-
-Create custom roles tailored to your organization's specific needs.
-
-<AccordionGroup>
-<Accordion title="Define Permission Sets">
-Build custom roles by selecting specific permissions for tools, agents, and features. Mix and match capabilities to match your organizational structure.
-</Accordion>
-
-<Accordion title="Assign to Multiple Users">
-Apply custom roles to multiple users simultaneously, ensuring consistent permissions across teams or departments.
-</Accordion>
-
-<Accordion title="Update Role Definitions">
-Modify role definitions at any time. Changes automatically apply to all users assigned that role.
-</Accordion>
-</AccordionGroup>
-
 <Tip>
-Start with built-in roles and create custom roles only when you need specific permission combinations not covered by defaults.
+Keep the number of administrators limited to those who need full organizational control. Most team members should have User roles.
 </Tip>
 
----
-
-## Group Administration
-
-Organize users into groups for easier permission management at scale.
-
-### Creating and Managing Groups
-
-<Steps>
-<Step title="Create Groups">
-Define groups based on teams, departments, or projects to organize users logically.
-</Step>
-
-<Step title="Add Users to Groups">
-Assign users to one or more groups. Users inherit permissions from all their assigned groups.
-</Step>
-
-<Step title="Configure Group Permissions">
-Set permissions at the group level to control access to tools, agents, and features for all group members.
-</Step>
-
-<Step title="Monitor Group Activity">
-Track which groups are using which tools and agents to understand usage patterns and optimize access policies.
-</Step>
-</Steps>
-
-### Permission Hierarchy
+### Agent Visibility Scope
 
 <Tabs>
-<Tab title="User Permissions">
-Individual user permissions take the highest priority and override group and role settings.
+<Tab title="Personal Agents">
+Agents created by users are **private by default** and visible only to the creator.
+
+Users cannot share their personal agents organization-wide. Only administrators can share agents.
+
+<Tip>
+If a user creates a valuable agent and wants to share it, they should contact an administrator to review and share it.
+</Tip>
 </Tab>
 
-<Tab title="Group Permissions">
-Group permissions apply to all members and can be combined when users belong to multiple groups.
-</Tab>
+<Tab title="Shared Agents">
+Agents shared by administrators can be made available to:
+- **Specific users**: Select individuals who can access the agent
+- **Entire organization**: All users in the organization
 
-<Tab title="Role Permissions">
-Base permissions inherited from assigned roles form the foundation of user access.
+Admins control the exact permission level (Viewer, Editor, or Owner) for each shared agent.
+
+<Check>
+Shared agents appear in users' agent lists based on the permissions they've been granted.
+</Check>
 </Tab>
 </Tabs>
 
-<Info>
-Permissions are additive — users receive the combined permissions from their role, groups, and individual settings.
-</Info>
-
 ---
 
-## Controlling Agent Access
+## Sharing Agents
 
-Define which users can access specific AI agents within your organization.
-
-### Agent-Level Permissions
-
-<CardGroup cols={2}>
-<Card title="Agent Creators" icon="wand-magic-sparkles">
-Control who can create new AI agents in your organization.
-</Card>
-
-<Card title="Agent Users" icon="users">
-Specify which users or groups can interact with each AI agent.
-</Card>
-
-<Card title="Agent Editors" icon="pen-to-square">
-Define who can modify agent configurations, prompts, and tool access.
-</Card>
-
-<Card title="Agent Visibility" icon="eye">
-Set whether agents are visible organization-wide or restricted to specific teams.
-</Card>
-</CardGroup>
-
-<Tip>
-Create specialized agents for different teams with appropriate tool access, then use group permissions to ensure each team only sees relevant agents.
-</Tip>
-
----
-
-## Monitoring MCP Operations
-
-Track and control how AI agents interact with your connected tools through MCP.
-
-### MCP Access Policies
-
-<AccordionGroup>
-<Accordion title="Tool-Specific Permissions">
-Grant or restrict access to individual MCP tools on a per-user or per-group basis. Users only see and can use tools they're permitted to access.
-</Accordion>
-
-<Accordion title="Operation Monitoring">
-View real-time logs of MCP operations, including which users triggered which actions through AI agents.
-</Accordion>
-
-<Accordion title="Usage Limits">
-Set rate limits or usage quotas for MCP tool usage to prevent excessive API calls or resource consumption.
-</Accordion>
-</AccordionGroup>
-
-<Check>
-All MCP operations respect both WonkaChat access controls and the underlying tool's native permission system.
-</Check>
-
----
-
-## Best Practices for Access Control
-
-<CardGroup cols={2}>
-<Card title="Principle of Least Privilege" icon="shield-check">
-Grant users only the minimum permissions needed to perform their job functions.
-</Card>
-
-<Card title="Regular Access Reviews" icon="rotate">
-Periodically review user permissions to ensure they remain appropriate as roles change.
-</Card>
-
-<Card title="Group-Based Management" icon="users-gear">
-Use groups for scalable permission management rather than individual user settings.
-</Card>
-
-<Card title="Audit Access Changes" icon="clipboard-list">
-Monitor who makes permission changes and review access control modifications regularly.
-</Card>
-</CardGroup>
-
-
-
-
-### Sharing Agents
-
-<Info>
-**TODO**: Add video tutorials for admin sharing workflow
-</Info>
+Administrators can share agents directly from the Agent Builder panel.
 
 <Tabs>
 <Tab title="I'm an Administrator">
 
-As an administrator, you have direct control over agent sharing from the Agent Builder.
+As an administrator, you control agent sharing from the Agent Builder panel.
 
-#### How to Share an Agent
+### How to Share an Agent
 
-In the Agent Builder panel, you'll find sharing options that allow you to control agent visibility and permissions:
+<Steps>
+<Step title="Open Agent Builder">
+Navigate to the agent you want to share (or create a new one) in the Agent Builder.
 
-<Frame caption="Agent sharing options for administrators">
-<video
-  controls
-  className="w-full aspect-video rounded-xl"
-  src="/videos/admin-agent-sharing.mp4"
-  title="Admin Agent Sharing Workflow"
->
-Your browser does not support the video tag.
-</video>
+</Step>
+
+<Step title="Configure Sharing Settings">
+In the Agent Builder panel, you'll find sharing options:
+
+<Frame caption="Agent Sharing location">
+<img src="/images/agent-sharing-panel.png" alt="Agent Sharing showing sharing options" />
 </Frame>
 
-**Sharing controls:**
+**Visibility:**
+- Share with the entire organization, or
+- Share with specific users
 
-1. **Share to Organization**: Toggle to make the agent available to all users or specific groups
-2. **Modification Permissions**: Control who can modify the agent
-   - **Admins only**: Only administrators can edit the agent configuration
-   - **All users**: Any user in the organization can modify the agent
+**Permission Levels:**
+- **Viewer**: Can view and use the agent (no modifications)
+- **Editor**: Can view, use, and modify the agent
+- **Owner**: Has full control including sharing and deletion
 
-<Check>
-Use modification permissions wisely. Allowing all users to edit enables collaborative agent development but may reduce consistency.
-</Check>
+<Tip>
+For important organizational agents, use Viewer permissions for most users and grant Editor access only to trusted collaborators.
+</Tip>
+</Step>
+
+<Step title="Review Tool Access">
+Before sharing, verify which tools and MCP connections the agent has access to. Ensure they're appropriate for all users who will have access.
 
 <Warning>
-Sharing an agent makes it visible based on your permission settings. Review agent instructions and tool access before sharing to ensure they meet security standards.
+When users interact with a shared agent, the agent inherits that user's permissions in connected tools. Consider what data different users can access.
 </Warning>
+</Step>
+
+<Step title="Save and Share">
+Save your sharing configuration. The agent immediately becomes available to the specified users based on the permissions you set.
+
+<Check>
+Users will see the shared agent in their agent list and can start using it according to their granted permissions.
+</Check>
+</Step>
+</Steps>
 
 </Tab>
 
 <Tab title="I'm a User">
 
-As a standard user, you can create personal agents but need administrator approval to share them organization-wide.
+As a standard user, you can create personal agents but need administrator involvement to share them organization-wide.\
+If you create an agent that would benefit others, contact an administrator to request organization-wide sharing.
 
-#### How to Request Agent Sharing
-
-1. Create and test your agent thoroughly
-2. Contact your administrator to request sharing
-3. Administrator reviews configuration and security
-4. Once approved, agent becomes available to designated users or groups
+Provide:
+- Clear description of what the agent does
+- Intended use cases
+- Why it would benefit the organization
+- Which tools it requires
 
 <Tip>
-When requesting agent sharing, explain the use case and benefits to help administrators understand why the agent should be available organization-wide.
+Administrators need to review agents for security, tool access, and compliance before sharing them widely.
 </Tip>
 
+### Using Shared Agents
+
+When an administrator shares an agent, they can assign one of three permission levels:
+
+<AccordionGroup>
+<Accordion title="Viewer" icon="eye">
+**Can view and use the agent but cannot modify it**
+
+Viewers can:
+- Use the agent in conversations
+- See the agent in their agent list
+- Access the agent's capabilities
+
+Viewers cannot:
+- Modify the agent's configuration, prompts, or tools
+- Share the agent with others
+- Change agent settings
+
+<Check>
+Viewer permission is ideal for most users who need to use the agent without making changes.
+</Check>
+</Accordion>
+
+<Accordion title="Editor" icon="pen-to-square">
+**Can view and modify the agent**
+
+Editors can:
+- Use the agent in conversations
+- View the agent's configuration and settings
+- Modify the agent's prompts, tools, and configuration
+- Make changes that affect all users
+
+Editors cannot:
+- Share the agent with others
+- Change ownership or delete the agent
+
 <Warning>
-Only administrators can share agents organization-wide. This maintains security and governance standards.
+Granting editor permission allows users to change agent behavior for everyone. Use this carefully for collaborative agent development.
 </Warning>
+</Accordion>
+
+<Accordion title="Owner" icon="crown">
+**Has full control over the agent including sharing it**
+
+Owners can:
+- Use the agent in conversations
+- View and modify all agent settings
+- Share the agent with others (assign Viewer/Editor/Owner permissions)
+- Change or transfer ownership
+- Delete the agent
+
+<Info>
+Only administrators can be assigned as owners when sharing agents organization-wide. The agent creator is automatically the original owner.
+</Info>
+</Accordion>
+</AccordionGroup>
 
 </Tab>
 </Tabs>
+
+---
+
+## Tool Restriction
+
+When creating an AI agent, you can control exactly which tools it has access to—ensuring agents only have the capabilities they need to perform their intended function.
+
+### How Tool Restriction Works
+
+When you add an MCP connection (like Outlook, GitHub, or Slack) to an agent, you can selectively enable or disable individual tools within that connection.
+
+**For example**, if you add the Outlook MCP connection to an agent:
+- You can **keep** tools like "draft email" and "read emails"
+- You can **remove** tools like "send email" and "delete email"
+
+Removing the "send email" tool means the agent cannot send emails—even if instructed to—because the capability simply doesn't exist for that agent.
+
+<Check>
+Tool restriction happens at the agent creation level. Each agent can have different tool access based on its intended purpose.
+</Check>
+
+### Why Restrict Tools?
+
+<AccordionGroup>
+<Accordion title="Prevent Unintended Actions">
+By removing tools that perform irreversible actions (sending emails, deleting files, deploying code), you eliminate the risk of agents making mistakes or misinterpreting prompts.
+
+**Security through absence**: If an agent doesn't have the "send email" tool, it's impossible for it to send an email—even by accident.
+</Accordion>
+
+<Accordion title="Minimize Risk Surface">
+The fewer tools an agent has, the less can go wrong. Reduce the attack surface by giving agents only the specific capabilities they need.
+
+**Example**: A data analysis agent doesn't need tools to modify or delete data—only read access.
+</Accordion>
+
+<Accordion title="Purpose-Built Agents">
+Create specialized agents optimized for specific tasks by giving them precise tool sets.
+
+**Example**: A "Draft Email" agent with Outlook MCP but only drafting tools enabled—no sending, deleting, or forwarding capabilities.
+</Accordion>
+</AccordionGroup>
+
+### Example: Email Draft Agent
+
+The difference between a helpful drafting assistant and a potential security risk often comes down to a single tool.
+
+<Tabs>
+<Tab title="❌ Bad Example: Send Tool Enabled">
+
+An agent configured to help draft emails but with the `send-email` tool still enabled.
+
+**The Problem:**
+```
+User prompt: "Draft an email to john@example.com about the Q4 report."
+
+Agent response: "I've drafted and sent the following email to john@example.com..."
+```
+
+Because the agent had access to the `send-email` tool, it interpreted "draft an email" as permission to also send it. The email went out before the user could review it.
+
+<Warning>
+**Risk**: Unreviewed emails being sent, potential data leaks, unprofessional communication, or sending to wrong recipients.
+</Warning>
+
+<Frame caption="Bad example: Agent with send-email tool enabled">
+<img src="/images/email-bad-example.png" alt="Example showing agent sending email without approval" />
+</Frame>
+
+</Tab>
+
+<Tab title="✅ Good Example: Send Tool Disabled">
+
+The same agent, but with the `send-email` tool restricted.
+
+**The Result:**
+```
+User prompt: "Draft an email to john@example.com about the Q4 report."
+
+Agent response: "Here's a draft email for john@example.com about the Q4 report:
+
+Subject: Q4 Report Update
+
+Hi John,
+[draft content]
+
+Would you like me to revise anything?"
+```
+
+Without access to the `send-email` tool, the agent can only draft content. The user reviews it, makes changes if needed, and manually sends when ready.
+
+<Check>
+**Safe**: User maintains full control over when and what gets sent. Agent provides value without risk.
+</Check>
+
+<Frame caption="Good example: Agent without send-email tool (draft only)">
+<img src="/images/email-good-example.png" alt="Example showing agent drafting without sending" />
+</Frame>
+
+</Tab>
+</Tabs>
+
+<Tip>
+When creating agents, disable tools that execute final actions unless the agent specifically needs them. Enable tools for preparation and analysis, but restrict tools that send, delete, deploy, or modify production systems.
+</Tip>
+
+---
+
+## Safe Mode: Human-in-the-Loop
+
+Safe Mode ensures you approve every action an AI agent wants to take before it executes.
+
+<Frame>
+<img src="/images/safe-mode.png" alt="Safe Mode interface showing action approval" />
+</Frame>
+
+### How Safe Mode Works
+
+<Steps>
+
+<Step title="Identify When to Use Safe Mode">
+Enable Safe Mode for agents that perform high-risk operations:
+- Send communications (emails, messages, posts)
+- Modify or delete production data
+- Deploy code or configurations
+- Execute financial transactions
+
+<Warning>
+Safe Mode provides essential oversight to prevent mistakes and unauthorized actions in critical operations.
+</Warning>
+</Step>
+
+<Step title="Agent Requests Action">
+When an AI agent wants to use a tool or execute an action, it pauses and requests your approval.
+
+You see exactly what the agent wants to do, which tool it wants to use, and what parameters it will pass.
+</Step>
+
+<Step title="You Review & Decide">
+Review the requested action and decide whether to:
+- **Allow**: The action executes as requested
+- **Deny**: The action is blocked, and the agent continues without executing it
+
+<Tip>
+This is your opportunity to catch potential mistakes, verify actions are appropriate, and maintain oversight.
+</Tip>
+</Step>
+
+<Step title="Action Executes or Blocks">
+- If approved, the action executes and the agent receives the results
+- If denied, the agent is informed the action was not permitted and can adjust its approach
+
+<Check>
+You can disable Safe Mode for trusted agents performing routine tasks, but it's recommended for agents with access to powerful tools.
+</Check>
+</Step>
+
+</Steps>
+
+
+
+---
+
+## Access Control Advices 
+
+<CardGroup cols={2}>
+<Card title="Limit Administrators" icon="user-shield">
+Grant admin roles only to those who need full organizational control. Fewer admins = easier auditing and reduced risk.
+</Card>
+
+<Card title="Start Restrictive" icon="user-lock">
+Begin with minimal tool access and permissions, then add only as needed. It's easier to grant access than to recover from mistakes.
+</Card>
+
+<Card title="Review Regularly" icon="calendar-check">
+Periodically audit who has access to which agents and tools, adjusting as roles and responsibilities change.
+</Card>
+
+<Card title="Test with Safe Mode" icon="flask">
+Always test new agents with Safe Mode enabled to observe what actions they attempt before granting autonomous operation.
+</Card>
+</CardGroup>
+
+<Tip>
+Clear communication about agent purposes, permissions, and tool restrictions helps users understand what they can do and reduces support requests.
+</Tip>
