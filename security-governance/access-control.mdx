@@ -6,7 +6,7 @@ description: "Manage user roles, user access, agent permissions, and tool restri
 Control who has access to what in your WonkaChat organization. Manage users, assign roles, define granular permissions for AI agents, and restrict which tools agents can use to ensure secure collaboration.
 
 <Info>
-Access control implements the principle of least privilege—users and agents receive only the permissions they need to do their work.
+Access control implements the principle of least privilege that allows users and agents to receive only the permissions they need to do their work.
 </Info>
 
 ---
@@ -81,7 +81,7 @@ Create their own personal AI agents\
 • Access only the personal created agents or admin shared agents
 
 <Info>
-Users cannot share agents with others—only administrators can make agents available organization-wide.
+Users cannot share agents with others, only administrators can make agents available organization-wide.
 </Info>
 </Card>
 
@@ -268,7 +268,7 @@ Only administrators can be assigned as owners when sharing agents organization-w
 
 ## Tool Restriction
 
-When creating an AI agent, you can control exactly which tools it has access to—ensuring agents only have the capabilities they need to perform their intended function.
+When creating an AI agent, you can control exactly which tools it has access to. This ensures agents only have the capabilities they need to perform their intended function.
 
 ### How Tool Restriction Works
 
@@ -278,7 +278,7 @@ When you add an MCP connection (like Outlook, GitHub, or Slack) to an agent, you
 - You can **keep** tools like "draft email" and "read emails"
 - You can **remove** tools like "send email" and "delete email"
 
-Removing the "send email" tool means the agent cannot send emails—even if instructed to—because the capability simply doesn't exist for that agent.
+Removing the "send email" tool means the agent cannot send emails, even if instructed to, because the capability simply doesn't exist for that agent.
 
 <Check>
 Tool restriction happens at the agent creation level. Each agent can have different tool access based on its intended purpose.
@@ -290,19 +290,19 @@ Tool restriction happens at the agent creation level. Each agent can have differ
 <Accordion title="Prevent Unintended Actions">
 By removing tools that perform irreversible actions (sending emails, deleting files, deploying code), you eliminate the risk of agents making mistakes or misinterpreting prompts.
 
-**Security through absence**: If an agent doesn't have the "send email" tool, it's impossible for it to send an email—even by accident.
+**Security through absence**: If an agent doesn't have the "send email" tool, it's impossible for it to send an email (even by accident).
 </Accordion>
 
 <Accordion title="Minimize Risk Surface">
 The fewer tools an agent has, the less can go wrong. Reduce the attack surface by giving agents only the specific capabilities they need.
 
-**Example**: A data analysis agent doesn't need tools to modify or delete data—only read access.
+**Example**: A data analysis agent doesn't need tools to modify or delete data. He should only receive read access.
 </Accordion>
 
 <Accordion title="Purpose-Built Agents">
 Create specialized agents optimized for specific tasks by giving them precise tool sets.
 
-**Example**: A "Draft Email" agent with Outlook MCP but only drafting tools enabled—no sending, deleting, or forwarding capabilities.
+**Example**: A "Draft Email" agent with Outlook MCP but only drafting tools enabled. He should not receive any sending, deleting, or forwarding capabilities.
 </Accordion>
 </AccordionGroup>
 
@@ -311,29 +311,6 @@ Create specialized agents optimized for specific tasks by giving them precise to
 The difference between a helpful drafting assistant and a potential security risk often comes down to a single tool.
 
 <Tabs>
-<Tab title="❌ Bad Example: Send Tool Enabled">
-
-An agent configured to help draft emails but with the `send-email` tool still enabled.
-
-**The Problem:**
-```
-User prompt: "Draft an email to john@example.com about the Q4 report."
-
-Agent response: "I've drafted and sent the following email to john@example.com..."
-```
-
-Because the agent had access to the `send-email` tool, it interpreted "draft an email" as permission to also send it. The email went out before the user could review it.
-
-<Warning>
-**Risk**: Unreviewed emails being sent, potential data leaks, unprofessional communication, or sending to wrong recipients.
-</Warning>
-
-<Frame caption="Bad example: Agent with send-email tool enabled">
-<img src="/images/email-bad-example.png" alt="Example showing agent sending email without approval" />
-</Frame>
-
-</Tab>
-
 <Tab title="✅ Good Example: Send Tool Disabled">
 
 The same agent, but with the `send-email` tool restricted.
@@ -360,6 +337,29 @@ Without access to the `send-email` tool, the agent can only draft content. The u
 
 <Frame caption="Good example: Agent without send-email tool (draft only)">
 <img src="/images/email-good-example.png" alt="Example showing agent drafting without sending" />
+</Frame>
+
+</Tab>
+
+<Tab title="❌ Bad Example: Send Tool Enabled">
+
+An agent configured to help draft emails but with the `send-email` tool still enabled.
+
+**The Problem:**
+```
+User prompt: "Draft an email to john@example.com about the Q4 report."
+
+Agent response: "I've drafted and sent the following email to john@example.com..."
+```
+
+Because the agent had access to the `send-email` tool, it interpreted "draft an email" as permission to also send it. The email went out before the user could review it.
+
+<Warning>
+**Risk**: Unreviewed emails being sent, potential data leaks, unprofessional communication, or sending to wrong recipients.
+</Warning>
+
+<Frame caption="Bad example: Agent with send-email tool enabled">
+<img src="/images/email-bad-example.png" alt="Example showing agent sending email without approval" />
 </Frame>
 
 </Tab>

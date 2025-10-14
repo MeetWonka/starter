@@ -1,12 +1,12 @@
 ---
 title: "What are AI Agents?"
-description: "Understand how AI agents provide consistent, specialized assistance with persistent instructions and tool access."
+description: "Understand what AI agents are, how do they work and how they provide consistent & specialised assistance."
 ---
 
 AI agents are specialized AI assistants with persistent instructions and dedicated tool access that deliver consistent, reliable results.
 
 <Info>
-Agents are like AI team members with specific roles and expertise—they remember their job across all conversations.
+Agents are like AI team members with specific roles and expertise. They remember their job across all conversations.
 </Info>
 
 ---
@@ -58,7 +58,7 @@ Agents with MCP tool access perform actions automatically:
 3. Execute operations
 4. Synthesize results
 
-You don't need to specify which tools to use—agents handle this based on their configuration.
+You don't need to specify which tools to use, agents handle this based on their configuration.
 
 
 ## Agent Examples
@@ -102,7 +102,7 @@ Review new leads from multiple sources, enrich data from public sources, score b
 </Accordion>
 
 <Accordion title="Cross-System Workflow Agent" icon="diagram-project">
-Orchestrate processes across multiple systems—for example, retrieve information from Outlook, create records in Odoo, update spreadsheets, and notify teams via messaging platforms.
+Orchestrate processes across multiple systems. For example, retrieve information from Outlook, create records in Odoo, update spreadsheets, and notify teams via messaging platforms.
 
 **Tools needed:** Multiple system integrations  
 **Complexity:** Complex
@@ -162,7 +162,7 @@ A clear, descriptive identifier that indicates the agent's purpose and makes it 
 </Accordion>
 
 <Accordion title="2. System Prompt (Instructions)" icon="file-lines">
-The **system prompt** is the foundational set of instructions that defines your agent's identity and behavior. Unlike regular conversation messages that can be modified or ignored, the system prompt is persistent and authoritative—it shapes every response the agent generates.
+The **system prompt** is the foundational set of instructions that defines your agent's identity and behavior. Unlike regular conversation messages that can be modified or ignored, the system prompt is persistent and authoritative. This prompt shapes every response the agent generates.
 
 **System prompts include:**
 - Role definition and expertise areas
@@ -185,7 +185,7 @@ The AI model is an important choice that significantly affects both performance 
 - **Context window**: Determines how much information the agent can process at once
 
 <Warning>
-Model selection impacts your agent's quality and operational costs. Match model capability to task complexity—don't overspend on simple tasks or underinvest in complex workflows.
+Model selection impacts your agent's quality and operational costs. Match model capability to task complexity: don't overspend on simple tasks or underinvest in complex workflows.
 </Warning>
 
 In addition to the model choice, you can adjust **model parameters** that control response randomness, creativity, and repetition. See [Creating Your First Agent](/ai-agents/creating-your-first-agent) for detailed parameter configuration.
@@ -198,7 +198,7 @@ Agents can be equipped with various capabilities beyond text generation:
 
 **Web Search**: Access current information from the internet when needed for real-time data or recent events.
 
-**Tools (MCP Connections)**: The most important capability—direct integration with your business systems through the Model Context Protocol.
+**Tools (MCP Connections)**: The most important capability, direct integration with your business systems through the Model Context Protocol.
 
 Agents dynamically select which tools to use based on the task and their system prompt guidance.
 
@@ -257,7 +257,7 @@ For detailed guidance on selecting the right model for your agent, see [Creating
 
 ### Permission Inheritance
 
-Agents operate within your existing security boundaries—they cannot perform any action you couldn't perform yourself without WonkaChat. If you lack permission to access a system, read a file, or execute an operation manually, the agent cannot bypass those restrictions for your.
+Agents operate within your existing security boundaries. They cannot perform any action you couldn't perform yourself without WonkaChat. If you lack permission to access a system, read a file, or execute an operation manually, the agent cannot bypass those restrictions for your.
 
 <Warning>
 Agents provide no privilege escalation. All operations execute with your user permissions.

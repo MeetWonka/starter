@@ -17,21 +17,13 @@
       {
         "tab": "WonkaChat",
         "groups": [
+          
           {
             "group": "Welcome to Wonka Chat",
             "pages": [
               "welcome/introduction",
               "welcome/why-wonka-chat",
               "welcome/quick-start"
-            ]
-          },
-          {
-            "group": "Tools & Connection",
-            "pages": [
-              "tools-connection/introduction",
-              "tools-connection/setting-up-your-first-connection",
-              "tools-connection/troubleshooting-connections",
-              "tools-connection/examples-of-tool-usage"
             ]
           },
           {
@@ -44,6 +36,16 @@
               "ai-agents/business-teaching"
             ]
           },
+          {
+            "group": "Tools & Connection",
+            "pages": [
+              "tools-connection/introduction",
+              "tools-connection/setting-up-your-first-connection",
+              "tools-connection/troubleshooting-connections",
+              "tools-connection/examples-of-tool-usage"
+            ]
+          },
+          
           {
             "group": "Improved Usage",
             "pages": [
