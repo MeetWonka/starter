@@ -30,7 +30,7 @@ Agents follow the same approach every time, delivering predictable, reliable res
 </Card>
 
 <Card title="Dedicated Tools" icon="wrench">
-Equip agents with specific MCP tool connections they'll use automatically when needed for their tasks.
+Equip agents with specific external connections (MCP) they'll use automatically when needed for their tasks.
 </Card>
 
 <Card title="Specialized Roles" icon="user-tie">
@@ -49,16 +49,6 @@ Use agents for:
 - **Specialized expertise**: Domain-specific knowledge applied consistently  
 - **Cross-tool workflows**: Complex tasks spanning multiple systems
 - **Team standardization**: Shared workflows across your organization
-
-## Agent Tool Usage
-
-Agents with MCP tool access perform actions automatically:
-1. Analyze your request
-2. Select necessary tools
-3. Execute operations
-4. Synthesize results
-
-You don't need to specify which tools to use, agents handle this based on their configuration.
 
 
 ## Agent Examples
@@ -198,12 +188,12 @@ Agents can be equipped with various capabilities beyond text generation:
 
 **Web Search**: Access current information from the internet when needed for real-time data or recent events.
 
-**Tools (MCP Connections)**: The most important capability, direct integration with your business systems through the Model Context Protocol.
+**External Connections (MCP)**: The most important capability, direct integration with your business systems through the Model Context Protocol.
 
 Agents dynamically select which tools to use based on the task and their system prompt guidance.
 
 <Info>
-**MCP tools** connect agents to your business systems for real actions.\
+**MCP** connects agents to your business systems for real actions.\
 See [Tools Connection](/tools-connection/introduction) for setup details.
 </Info>
 
@@ -258,22 +248,6 @@ For detailed guidance on selecting the right model for your agent, see [Creating
 ### Permission Inheritance
 
 Agents operate within your existing security boundaries. They cannot perform any action you couldn't perform yourself without WonkaChat. If you lack permission to access a system, read a file, or execute an operation manually, the agent cannot bypass those restrictions for your.
-
-<Warning>
-Agents provide no privilege escalation. All operations execute with your user permissions.
-</Warning>
-
-### Agent Management
-
-**Administrators:**
-- Create and share organization-wide agents
-- Control which agents are available to all users
-- Configure tool access and permissions
-
-**Standard Users:**
-- Use shared agents (cannot modify them)
-- Create personal agents for individual workflows
-- Request administrator approval to share agents organization-wide
 
 <Info>
 See [Security & Governance](/security-governance/access-control) for comprehensive security details.

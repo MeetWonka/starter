@@ -12,7 +12,61 @@ Building an AI Agent means defining its role, writing instructions, selecting a 
 <Tabs>
 <Tab title="Getting Started">
 
-## Agent Creation Steps
+## Agent Creation - Video Explanation
+
+Explore these short videos for step-by-step instructions on creating AI agents. Each video visually demonstrates the key decisions and actions you need to build, configure, and deploy your own custom agents.
+
+
+<AccordionGroup>
+<Accordion title="Basic Agent Creation" icon="user" defaultOpen="true">
+
+### Basic Agent:
+
+Watch how to create a basic agent with straightforward instructions. This helps you learning the fundamentals of agent creation.
+
+<Frame>
+<video
+  controls
+  className="w-full aspect-video rounded-xl"
+  src="/videos/basic-agent-tutorial.mp4"
+  title="Creating a Basic Agent"
+>
+Your browser does not support the video tag.
+</video>
+</Frame>
+
+<Tip>
+Start with simple agents to understand the core concepts before moving to more complex multi-tool configurations.
+</Tip>
+
+</Accordion>
+
+<Accordion title="Tool Connected Agent Creation" icon="screwdriver-wrench">
+
+### Multi-Tool Agent: 
+
+Watch how to create an agent that connects multiple tools to automate workflows. This is a practical example of cross-system integration.
+
+<Frame>
+<video
+  controls
+  className="w-full aspect-video rounded-xl"
+  src="/videos/multi-tool-agent-tutorial.mp4"
+  title="Creating a Multi-Tool Agent"
+>
+Your browser does not support the video tag.
+</video>
+</Frame>
+
+<Tip>
+This example demonstrates how agents can connect multiple business systems to automate workflows that typically require manual data transfer.
+</Tip>
+
+</Accordion>
+</AccordionGroup>
+
+
+## Agent Creation - Step by Step Explanation
 
 <Steps>
 <Step title="Before You Begin">
@@ -110,8 +164,8 @@ Start with a cost-effective model like **GPT-4o mini** for most agents. Upgrade 
 </Info>
 </Step>
 
-<Step title="Connect Tools (Optional)">
-Add MCP tools if your agent needs to interact with external systems.
+<Step title="Connect External Softwares (Optional)">
+Add MCP connection if your agent needs to interact with external systems.
 
 
 **Tool selection principles:**
@@ -153,56 +207,6 @@ See [Access Control](/security-governance/access-control) for agent sharing deta
 </Info>
 </Step>
 </Steps>
-
-## Agent Creation Example
-
-<Tabs>
-<Tab title="Basic Agent Creation">
-
-### Basic Agent:
-
-Watch how to create a basic agent with straightforward instructions. This helps you learning the fundamentals of agent creation.
-
-<Frame>
-<video
-  controls
-  className="w-full aspect-video rounded-xl"
-  src="/videos/basic-agent-tutorial.mp4"
-  title="Creating a Basic Agent"
->
-Your browser does not support the video tag.
-</video>
-</Frame>
-
-<Tip>
-Start with simple agents to understand the core concepts before moving to more complex multi-tool configurations.
-</Tip>
-
-</Tab>
-
-<Tab title="Advanced Agent Creation">
-
-### Multi-Tool Agent: 
-
-Watch how to create an agent that connects multiple tools to automate workflows. This is a practical example of cross-system integration.
-
-<Frame>
-<video
-  controls
-  className="w-full aspect-video rounded-xl"
-  src="/videos/multi-tool-agent-tutorial.mp4"
-  title="Creating a Multi-Tool Agent"
->
-Your browser does not support the video tag.
-</video>
-</Frame>
-
-<Tip>
-This example demonstrates how agents can connect multiple business systems to automate workflows that typically require manual data transfer.
-</Tip>
-
-</Tab>
-</Tabs>
 
 ## Best Practices
 
@@ -247,36 +251,6 @@ Start simple, test thoroughly, refine based on performance and real world use ca
 **Solution:** Test extensively with realistic scenarios first.
 </Accordion>
 </AccordionGroup>
-
-## Refining Your Agent
-
-After deployment, follow this refinement cycle:
-
-<Steps>
-<Step title="Monitor agent performance">
-Track conversation logs, completion rates, and user feedback to identify where the agent struggles or succeeds.
-</Step>
-
-<Step title="Identify recurring problems">
-Look for patterns in failures, such as misunderstood intents, incorrect tool usage, or inconsistent responses.
-</Step>
-
-<Step title="Update instructions">
-Refine your system prompt to address specific issues by adding examples, adjusting decision-making rules, or refine tool usage guidelines.
-</Step>
-
-<Step title="Test changes thoroughly">
-Run updated agents through the same scenarios that previously caused issues to verify improvements.
-</Step>
-
-<Step title="Document learnings">
-Keep notes on what worked and what didn't to inform future agent development and team knowledge.
-</Step>
-</Steps>
-
-<Tip>
-The best agents evolve through continuous refinement based on real-world usage.
-</Tip>
 
 
 </Tab>

@@ -73,7 +73,7 @@ Let's make sure everything works with a simple test:
 Type something simple in the chat:
 
 ```
-Hello! Can you introduce yourself?
+Can you say "Hello World" please?
 ```
 
 WonkaChat will respond, confirming the platform is working correctly.
@@ -90,7 +90,7 @@ If you receive a response, you're all set! The AI is connected and ready to help
 Now let's connect WonkaChat to your email account so it can access your emails and calendar.
 
 <Warning>
-This example uses **Outlook**, but the process is identical for **Gmail**, or any other email system. Simply click the corresponding MCP button for your email provider and follow the same steps.
+This example uses **Outlook**, but the process is identical for **Gmail**, or any other email system. Simply click the corresponding the right connection button for your email provider and follow the same steps.
 </Warning>
 
 ### Step-by-Step Connection
@@ -100,12 +100,11 @@ This example uses **Outlook**, but the process is identical for **Gmail**, or an
 On the right side of your WonkaChat interface, locate and click the **Outlook MCP** button in the tools panel.
 
 <Frame caption="Outlook MCP button location">
-<img src="/images/outlook-mcp-button.png" alt="Outlook MCP button in the right panel" />
+<img src="/images/test.gif" alt="Outlook MCP button in the right panel" />
 </Frame>
 
 <Info>
-**What is MCP?** MCP (Model Context Protocol) is the technology that connects AI models to your tools and software, allowing WonkaChat to interact with your business systems. 
-For a deeper understanding of MCP and advanced connection options, visit the [Tools & Connection](/tools-connection/introduction) section.
+Learn about MCP connections in [Tools & Connection](/tools-connection/introduction).
 </Info>
 
 </Step>
@@ -125,17 +124,17 @@ WonkaChat uses secure authentication and never stores your password. All credent
 </Info>
 </Step>
 
-<Step title="Enable MCP for Your Model">
-After connecting, you need to authorize the MCP connection for the AI model you're using.
+<Step title="Enable Connection for Your Model">
+After connecting, you need to authorize the External connection (MCP) for the AI model you're using.
 
 <Frame caption="Enable MCP for your model">
-<img src="/images/enable-mcp-model.png" alt="Enable MCP connection for the AI model" />
+<img src="/images/enable-mcp-model.png" alt="Enable the connection for the AI model" />
 </Frame>
 
-Click **"MCP Servers"** and select which MCP you want the AI model to use.
+Click **"MCP Servers"** and select connection which (MCP) you want the AI model to use.
 
 <Check>
-Once the Outlook MCP is enabled, the AI can read your emails, access your calendar, send messages on your behalf, and handle any Outlook-related tasks through natural conversation.
+Once the Outlook connection (MCP) is enabled, the AI can read your emails, access your calendar, send messages on your behalf, and handle any Outlook-related tasks through natural conversation.
 </Check>
 </Step>
 </Steps>
@@ -159,7 +158,7 @@ The AI will only access Outlook data when you explicitly ask it to. It respects 
 
 
 WonkaChat will:
-- Access your Outlook calendar through the MCP connection
+- Access your Outlook calendar through the external connection
 - Retrieve your schedule
 - Present it in an organized format
 
@@ -212,23 +211,10 @@ The more context you provide, the better WonkaChat can help. Include relevant de
 <Card title="Start Simple" icon="seedling">
 Begin with straightforward queries and gradually work up to complex multi-step workflows as you learn the platform.
 </Card>
-
-<Card title="Use AI Agents" icon="robot">
-For recurring tasks, create agents that can run automatically rather than repeating the same prompts.
-</Card>
-
-<Card title="Save Great Prompts" icon="bookmark">
-When you craft a prompt that works well, bookmark it or save it to your library for future use.
-</Card>
 </CardGroup>
 
 </Step>
 </Steps>
-<Tip>
-You now have everything you need to start using WonkaChat effectively. Begin with simple queries, explore the connected tools, and gradually expand to more complex workflows.
-
-The best way to learn is by doing. Start a conversation, ask questions, and experiment with different types of requests. WonkaChat is designed to be intuitive and helpful.
-</Tip>
 
 ---
 
@@ -237,12 +223,12 @@ The best way to learn is by doing. Start a conversation, ask questions, and expe
 Now that you're familiar with the basics, explore more advanced capabilities:
 
 <CardGroup cols={2}>
-<Card title="Understand Tool Connection" icon="plug" href="/tools-connection/setting-up-your-first-connection">
-Learn how MCP connections work and scale from connecting a single tool to integrating your entire business ecosystem.
-</Card>
-
 <Card title="Create AI Agents" icon="robot" href="/ai-agents/creating-your-first-agent">
 Build specialized agents focused on specific tasks for more accurate, reliable results with reduced hallucinations.
+</Card>
+
+<Card title="Understand Tool Connection" icon="plug" href="/tools-connection/setting-up-your-first-connection">
+Learn how external connections (MCP) work and scale from connecting a single tool to integrating your entire business ecosystem.
 </Card>
 
 <Card title="Improve Your AI Usage" icon="wand-magic-sparkles" href="/improved-usage/index">

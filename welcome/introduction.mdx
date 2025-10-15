@@ -42,52 +42,22 @@ In this example, a simple request triggers actions across Notion, Outlook, Odoo,
 ## Key Capabilities
 
 <CardGroup cols={2}>
-<Card title="Business Teaching" icon="graduation-cap">
-Use your company's knowledge by uploading documents and providing context. The AI Agents will adapt to your processes, terminology, and workflows.
+<Card title="AI Agents" icon="robot">
+Create specialized agents for specific tasks like onboarding, reporting, or customer support that run autonomously on your behalf.
 </Card>
 
 <Card title="Tool Connections" icon="plug">
 Connect your existing business tools (from project management to CRM to communication platforms) so WonkaChat can work with your data.
 </Card>
 
-<Card title="AI Agents" icon="robot">
-Create specialized agents for specific tasks like onboarding, reporting, or customer support that run autonomously on your behalf.
-</Card>
-
 <Card title="Model Flexibility" icon="sliders">
 Choose between thinking and fast/non-thinking models based on task complexity, and choose any AI model provider.
 </Card>
+
+<Card title="Business Teaching" icon="graduation-cap">
+Use your company's knowledge by uploading documents and providing context. The AI Agents will adapt to your processes, terminology, and workflows.
+</Card>
 </CardGroup>
-
----
-
-## How It Works (Simple Overview)
-
-<Steps>
-<Step title="Connect Your Tools">
-Link Wonka Chat to your business systems: email, documents, databases, CRMs, and more. This happens once during setup.
-
-<Info>
-Common integrations include Google Workspace, Microsoft 365, Notion, Odoo, Salesforce, and many others.
-</Info>
-</Step>
-
-<Step title="Teach Your Business">
-Upload documentation, share company knowledge, and provide context about your processes. WonkaChat learns how your business operates.
-</Step>
-
-<Step title="Start Conversing">
-Ask questions, request actions, or create workflows using natural language. WonkaChat handles the complexity behind the scenes.
-</Step>
-
-<Step title="Automate with AI Agents">
-Build specialized agents for recurring tasks. They can run autonomously, handling multi-step processes across your connected tools.
-
-<Check>
-Your AI Agents have access to all your integrated tools, consistently performing tasks while you focus on other priorities.
-</Check>
-</Step>
-</Steps>
 
 ---
 
@@ -209,35 +179,6 @@ Connect to any AI provider including OpenAI, Anthropic, Google, or self-hosted m
 Choose models based on your specific trade-offs between response quality, speed, and cost.
 </Card>
 </CardGroup>
-
----
-
-## Security Architecture
-
-- **Data isolation**: Each tenant's data is isolated in separate namespaces
-- **Encryption**: Data encrypted at rest and in transit (TLS 1.3)
-- **Access control**: Role-based access control (RBAC) with fine-grained permissions
-- **Audit logging**: Complete audit trail of all actions and data access
-
-For comprehensive security documentation, see [Security & Governance](/security-governance/security-overview).
-
-
----
-
-## Scalability and Performance
-
-**Infrastructure capabilities:**
-- Multi-region deployment support
-- Load balancing across model providers
-- Response caching for frequently accessed data
-- Asynchronous processing for long-running tasks
-- Webhook support for real-time integrations
-
-**Performance characteristics:**
-- Sub-second response times for simple queries
-- Parallel tool execution for multi-step workflows
-- Configurable timeout and retry policies
-- Rate limiting and quota management
 
 </Tab>
 </Tabs>
