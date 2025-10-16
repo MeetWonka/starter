@@ -3,7 +3,7 @@ title: "Troubleshooting Connections"
 description: "Quick solutions to common MCP connection problems and how to get help when you need it."
 ---
 
-Having trouble connecting a tool or experiencing issues with an existing connection? This guide provides quick solutions to the most common problems.
+Having trouble connecting a business system or experiencing issues with an existing connection? This guide provides quick solutions to the most common problems.
 
 <Info>
 Most connection issues can be resolved in a few minutes by following the steps below. If you're still stuck, our [support team](https://www.meetwonka.com/fr/contact) is here to help.
@@ -20,7 +20,7 @@ Before contacting support, try these simple solutions:
 This resolves most connection issues:
 
 1. Go to the MCP panel on the right side
-2. Click on the problematic tool
+2. Click on the problematic business system
 3. Select **"Revoke"**
 4. Wait 10 seconds
 5. Click **"Initialize"** again and re-enter your credentials
@@ -66,16 +66,16 @@ Those 3 simple steps fixes most connection problems by refreshing the authentica
 
 **1. Check Your Credentials**
 - Make sure you're using the correct username and password
-- Try logging into the tool directly (outside WonkaChat) to verify your credentials work
+- Try logging into the business system directly (outside WonkaChat) to verify your credentials work
 - If you recently changed your password, update it in WonkaChat
 
-**2. Reconnect the Tool**
-- Disconnect the tool from the MCP panel
+**2. Reconnect the Business System**
+- Disconnect the business system from the MCP panel
 - Wait 10 seconds
 - Reconnect with your current credentials
 
 <Tip>
-Test your credentials on the tool's website first before trying to connect through WonkaChat.
+Test your credentials on the business system's website first before trying to connect through WonkaChat.
 </Tip>
 </Accordion>
 
@@ -107,9 +107,9 @@ Some companies restrict employees from connecting external applications for secu
 During the OAuth connection process, you may have denied some permissions that WonkaChat needs.
 
 **Solution:**
-- Disconnect the tool
+- Disconnect the business system
 - Reconnect and **grant all requested permissions** when prompted
-- Some tools let you selectively approve permissions. You need to check if WonkaChat need broader access or not.
+- Some business systems let you selectively approve permissions. You need to check if WonkaChat need broader access or not.
 
 
 </Accordion>
@@ -118,7 +118,7 @@ During the OAuth connection process, you may have denied some permissions that W
 **Symptoms:**
 - "Connection timed out" message
 - Requests take a very long time
-- No response from the tool
+- No response from the business system
 
 **Quick Fixes:**
 
@@ -136,42 +136,42 @@ During the OAuth connection process, you may have denied some permissions that W
 - Instead of "all emails this year," try "emails from this week"
 - Break complex requests into smaller steps
 
-**4. Check the Tool's Status**
-- The tool itself might be experiencing issues
-- Visit the tool's status page (e.g., status.google.com, status.microsoft.com)
+**4. Check the Business System's Status**
+- The business system itself might be experiencing issues
+- Visit the business system's status page (e.g., status.google.com, status.microsoft.com)
 - Wait for the service to come back online
 
 <Info>
-If the tool's servers are down, there's nothing WonkaChat can do until the provider fixes it.
+If the business system's servers are down, there's nothing WonkaChat can do until the provider fixes it.
 </Info>
 </Accordion>
 
 <Accordion title="Tool Not Responding" icon="triangle-exclamation">
 **Symptoms:**
-- AI says "Unable to connect to [tool]"
+- AI says "Unable to connect to [business system]"
 - Connection shows as active, but queries fail
-- No data returned from the tool
+- No data returned from the business system
 
-**1. You Don't Have Access in the Tool Itself**
+**1. You Don't Have Access in the Business System Itself**
 
-Sometimes you're trying to do something through AI that you can't do directly in the tool either.
+Sometimes you're trying to do something through AI that you can't do directly in the business system either.
 
 <Warning>
-**Important:** WonkaChat can only do what YOU can do. If you don't have permission to access a file, read an email, or edit a record in the tool itself, WonkaChat can't do it for you through MCP.
+**Important:** WonkaChat can only do what YOU can do. If you don't have permission to access a file, read an email, or edit a record in the business system itself, WonkaChat can't do it for you through MCP.
 </Warning>
 
 **Example:** If you can't access a specific Google Drive folder because you're not a member, WonkaChat can't access it either.
 
-**Solution:** Get the proper permissions in the tool first, then try again in WonkaChat.
+**Solution:** Get the proper permissions in the business system first, then try again in WonkaChat.
 
 
-**2. Check the Tool Directly**
-- Log into the tool outside of WonkaChat
+**2. Check the Business System Directly**
+- Log into the business system outside of WonkaChat
 - Verify it's working normally
 - Confirm you can access the data you're requesting
 
-**3. Tool API Limits**
-- Some tools limit how many requests you can make
+**3. Business System API Limits**
+- Some business systems limit how many requests you can make
 - If you've made many requests in a short time, wait 15-30 minutes
 - Then try again
 
@@ -201,7 +201,7 @@ If you've tried the quick fixes above and you're still having issues, our suppor
 - Connection problems persist after trying all quick fixes
 - You see error messages you don't understand
 - You need help with organizational permissions or IT approval
-- Multiple tools are having issues at the same time
+- Multiple business systems are having issues at the same time
 - You suspect a security or data issue
 
 
@@ -210,7 +210,7 @@ If you've tried the quick fixes above and you're still having issues, our suppor
 
 <CardGroup cols={2}>
 <Card title="Setup Guide" icon="plug" href="/tools-connection/setting-up-your-first-connection">
-Learn how to properly connect tools from the beginning to avoid common issues.
+Learn how to properly connect business systems from the beginning to avoid common issues.
 </Card>
 
 <Card title="Connection Examples" icon="video" href="/tools-connection/examples-of-tool-usage">

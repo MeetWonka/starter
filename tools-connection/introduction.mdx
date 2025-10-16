@@ -13,9 +13,9 @@ Want to understand the technical details of how these connections work?
 <Tabs>
 <Tab title="Getting Started">
 
-## What Connecting Your Tools Enables
+## What External connection Enables
 
-Connecting your tools transforms WonkaChat from a standalone AI assistant into a connected system that can work with your actual data and workflows. Instead of just answering general questions, WonkaChat can access your real emails, manage your calendar, update your CRM, create documents in your systems, and coordinate actions across multiple platforms, all through natural conversation.
+Connecting your external softwares and data sources transforms WonkaChat from a standalone AI assistant into a connected system that can work with your actual data and workflows. Instead of just answering general questions, WonkaChat can access your real emails, manage your calendar, update your CRM, create documents in your systems, and coordinate actions across multiple platforms, all through natural conversation.
 
 ### Real-World Capabilities
 
@@ -28,8 +28,8 @@ Read emails, calendar events, documents, and databases through natural conversat
 Send emails, create tasks, update records, and trigger workflows, all by asking WonkaChat in plain language.
 </Card>
 
-<Card title="Multi-Tool Workflows" icon="layer-group">
-Combine multiple tools in a single request. For example: "Check my calendar, find open slots, and email them to John."
+<Card title="Multi-Platform Workflows" icon="layer-group">
+Combine multiple connections in a single request. For example: "Check my calendar, find open slots, and email them to John."
 </Card>
 
 <Card title="Always Up-to-Date" icon="arrows-rotate">
@@ -40,8 +40,8 @@ Access live data from your systems rather than relying on static knowledge or ma
 ### How to Get Started
 
 <Steps>
-<Step title="Connect a tool">
-Click the MCP connection button for any tool (like Outlook, Gmail, or Slack) and provide your credentials once.
+<Step title="Start a connection">
+Click the MCP connection button for any platform you want to connect (like Outlook, Gmail, or Slack) and provide your credentials once.
 
 <Info>
 We call these connections to external data-sources or softwares "MCP" (Model Context Protocol). 
@@ -59,7 +59,7 @@ A secure connection is established between WonkaChat and your business tools. Wo
 </Step>
 
 <Step title="Chat naturally">
-Ask questions or make requests in plain language. WonkaChat automatically uses the right tools to help you.
+Ask questions or make requests in plain language. WonkaChat automatically uses the right tools and actions to help you.
 
 ```
 "What emails did I receive from Sarah this week?"
@@ -71,9 +71,9 @@ WonkaChat connects to your email, retrieves the information, and presents it cle
 
 ---
 
-## The Difference External Connections (MCP) Make
+## External Connections (MCP) Example
 
-Connecting your tools dramatically changes what WonkaChat can accomplish. Here's a real example showing the difference:
+Connecting your business tools dramatically changes what WonkaChat can accomplish. Here's a real example showing the difference:
 
 <Tabs>
 <Tab title="Without Connections">
@@ -142,7 +142,7 @@ With connections, WonkaChat accesses your real calendar, identifies team members
 </Tab>
 </Tabs>
 
-This example shows how connecting your tools enables WonkaChat to move from giving advice to taking real actions with your actual business data.
+This example shows how connecting your business tools enables WonkaChat to move from giving advice to taking real actions with your actual business data.
 
 ---
 
@@ -154,7 +154,7 @@ WonkaChat supports MCP connections to **75+ business tools** across all major ca
 <Accordion title="Communication & Collaboration" icon="comments">
 Connect your email, messaging, and scheduling tools for seamless communication management.
 
-**Available Tools:**
+**Available Connections:**
 - Outlook, Gmail (email)
 - Slack, Discord, WhatsApp (messaging)
 - Google Calendar, Cal.com, Calendly (scheduling)
@@ -163,7 +163,7 @@ Connect your email, messaging, and scheduling tools for seamless communication m
 <Accordion title="Development & Engineering" icon="code">
 Integrate with your development tools, repositories, and project management platforms.
 
-**Available Tools:**
+**Available Connections:**
 - GitHub, GitLab (version control)
 - Jira, Confluence, Linear (project management)
 - Vercel, Cloudflare (deployment)
@@ -172,7 +172,7 @@ Integrate with your development tools, repositories, and project management plat
 <Accordion title="Business Operations" icon="briefcase">
 Connect CRM, productivity tools, and document storage for streamlined operations.
 
-**Available Tools:**
+**Available Connections:**
 - Salesforce, HubSpot, Pipedrive (CRM)
 - Notion, ClickUp, Asana (productivity)
 - Google Drive, Dropbox, OneDrive (storage)
@@ -181,16 +181,16 @@ Connect CRM, productivity tools, and document storage for streamlined operations
 <Accordion title="Data & Analytics" icon="chart-line">
 Access databases, analytics platforms, and financial tools for data-driven decisions.
 
-**Available Tools:**
+**Available Connections:**
 - Postgres, Supabase (databases)
 - Mixpanel, PostHog, Google Sheets (analytics)
 - QuickBooks, Stripe (finance)
 </Accordion>
 
-<Accordion title="Specialized Tools" icon="stars">
+<Accordion title="Specialized Connections" icon="stars">
 Connect design, support, e-commerce, and research tools for specific workflows.
 
-**Available Tools:**
+**Available Connections:**
 - Figma (design)
 - Zendesk, Freshdesk (customer support)
 - Shopify (e-commerce)
@@ -211,9 +211,9 @@ New MCP connections are added regularly. If you need a specific integration that
 WonkaChat uses the **Model Context Protocol (MCP)** to connect AI models with your business tools, databases, and software, enabling AI to access real information and take actions on your behalf.
 
 <Info>
-MCP is an open protocol that allows AI systems to communicate with external data sources and software tools in a uniform way. 
+MCP is an open protocol that allows AI systems to communicate with external data sources and softwares in a uniform way. 
 
-Think of it as a universal connector (like USB for AI systems) that allows different AI models and tools to work together seamlessly without custom integrations for each combination.
+Think of it as a universal connector (like USB for AI systems) that allows different AI models and software tools to work together seamlessly without custom integrations for each combination.
 </Info>
 
 ### How MCP Works
@@ -275,7 +275,7 @@ This detailed logging is essential for regulatory compliance and security audits
 The Model Context Protocol is an open standard developed by [Anthropic](https://www.anthropic.com/news/model-context-protocol) that enables secure, two-way connections between AI applications and external data sources.
 
 <Info>
-WonkaChat implements MCP as a client, connecting to MCP servers that expose your tools and data to the AI models. Learn more at [modelcontextprotocol.io](https://modelcontextprotocol.io).
+WonkaChat implements MCP as a client, connecting to MCP servers that expose your business tools and data to the AI models. Learn more at [modelcontextprotocol.io](https://modelcontextprotocol.io).
 </Info>
 
 ### Technical Implementation
@@ -325,7 +325,7 @@ WonkaChat implements MCP with enterprise-grade security features that build upon
 - API key authentication for developer tools
 - Token encryption at rest (AES-256) with automatic refresh
 - Per-user token storage with complete isolation
-- Users inherit only their existing tool permissions
+- Users inherit only their existing platform permissions
 
 **Enterprise Security:**
 - Role-Based Access Control (RBAC) at organizational level
@@ -343,6 +343,10 @@ These are WonkaChat implementation features, not built into the MCP protocol its
 </Info>
 </Accordion>
 </AccordionGroup>
+
+<Tip>
+If you have specific requirements or unique needs for MCP integrations, reach out to our support team. We're here to help expand or tailor connections to fit your workflows.
+</Tip>
 
 
 </Tab>

@@ -49,7 +49,6 @@
           {
             "group": "Improved Usage",
             "pages": [
-              "improved-usage/index",
               "improved-usage/asking-great-questions",
               "improved-usage/conversation-management",
               "improved-usage/prompt-library"

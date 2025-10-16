@@ -30,6 +30,19 @@ Refine and iterate on prompts over time based on what works best.
 </Card>
 </CardGroup>
 
+## Video Walkthrough
+
+Watch this step-by-step guide to understand the usage of the prompt library:
+
+<Frame caption="Complete guide to create your first saved prompt">
+<video
+  controls
+  className="w-full aspect-video rounded-xl"
+  src="VIDEO_PLACEHOLDER_FIRST_CONNECTION_SETUP"
+></video>
+</Frame>
+
+
 ### Creating Your First Saved Prompt
 
 <Steps>
@@ -92,97 +105,57 @@ Quick usage: Prompts can be invoked by typing `/` followed by their name or your
 
 ## Variable Management
 
-Make your prompts flexible and reusable with variables that you customize each time you use a template. WonkaChat supports three types of variables: **basic variables** for custom input, **special variables** that auto-populate with system information, and **dropdown variables** for predefined options.
+Make your prompts flexible and reusable with variables you customize each time. WonkaChat supports three types of variables: **basic variables** for your own input, **special variables** that automatically insert system info, and **dropdown variables** that let you pick from preset options.
 
 <Tabs>
 <Tab title="Basic Variable Syntax">
-Use double curly braces to define variables in your prompts:
+Use double curly braces `{{ }}` to define variables anywhere in your prompt.
 
+**Example 1:**
 ```
-Analyze the {{component_name}} component and suggest improvements 
-for {{specific_aspect}}. Focus on {{priority_area}} and provide 
-code examples.
+Summarize the {{document_type}} for the {{target_audience}}.
 ```
+- When using, you'll be asked to fill in `{{document_type}}` (e.g., "meeting notes") and `{{target_audience}}` (e.g., "executive team").
 
-When using this prompt, you'll be prompted to fill in:
-- `{{component_name}}` → "UserAuthentication"
-- `{{specific_aspect}}` → "performance"
-- `{{priority_area}}` → "database queries"
+**Example 2:**
+```
+Review the {{codebase}} and highlight {{review_focus}}.
+```
 </Tab>
 
 <Tab title="Special Variables">
-WonkaChat provides built-in special variables that auto-populate:
+Insert dynamic information using these built-in options (no manual entry needed):
 
-- `{{current_date}}` - Current date (e.g., "October 7, 2025")
-- `{{current_datetime}}` - Current local date and time
-- `{{utc_iso_datetime}}` - Current UTC time in ISO format
-- `{{current_user}}` - Your username
+- `{{current_date}}` — Today's date
+- `{{current_user}}` — Your username
 
-Example:
+**Example 1:**
 ```
-Create a report for {{current_user}} dated {{current_date}}.
+Prepare a summary for {{current_user}} as of {{current_date}}.
+```
+
+**Example 2:**
+```
+Log entry created on {{current_datetime}} by {{current_user}}.
 ```
 </Tab>
 
 <Tab title="Dropdown Variables">
-Create dropdown menus with predefined options:
+Use dropdowns for fields with limited, pre-defined choices.
 
+**Example 1:**
 ```
-{{variable_name:option1|option2|option3}}
-```
-
-Example:
-```
-Summarize this document as {{format:bullet points|paragraphs|table}}.
+Summarize this as {{output_style:bullet points|paragraph|table}}.
 ```
 
-When using the prompt, you'll see a dropdown menu with the specified options.
+**Example 2:**
+```
+Compare the solution across {{environment:development|staging|production}} environments.
+```
+
+Choose an option from the dropdown each time you use the prompt.
 </Tab>
 </Tabs>
-
-### Common Variable Types
-
-<AccordionGroup>
-<Accordion title="Content Variables">
-Replace specific content like file names, code snippets, or data:
-
-```
-Debug the following {{programming_language}} code and fix {{error_type}}:
-
-{{code_snippet}}
-
-Provide explanations for each fix.
-```
-</Accordion>
-
-<Accordion title="Format Variables with Dropdowns">
-Control output format or structure using dropdown variables:
-
-```
-Summarize this document as {{format_type:bullet points|paragraphs|table|timeline}}.
-
-{{document_content}}
-```
-</Accordion>
-
-<Accordion title="Scope Variables">
-Define the breadth or depth of the response:
-
-```
-Explain {{concept}} at a {{complexity_level:beginner|intermediate|expert}} level, including {{number}} examples.
-```
-</Accordion>
-
-<Accordion title="Context Variables">
-Provide situational context:
-
-```
-As a {{role}}, review this {{artifact_type}} for {{project_name}}. 
-Consider {{specific_requirements}} and provide feedback on 
-{{focus_areas}}.
-```
-</Accordion>
-</AccordionGroup>
 
 <Check>
 Well-designed variables make your prompts adaptable to many situations without losing effectiveness.
@@ -192,294 +165,169 @@ Well-designed variables make your prompts adaptable to many situations without l
 
 ## Prompt Library Examples
 
-Ready-to-use prompt templates for common scenarios.
+Ready-to-use templates, organized by difficulty. Start with simple communication and organization prompts. Advance to technical and detailed prompts as you gain confidence.
 
-### Development and Coding
-
-<AccordionGroup>
-<Accordion title="Code Review Template" icon="code">
-**Purpose**: Get structured code reviews with specific feedback
-
-**Prompt**:
-```
-Review the following {{language}} code for {{component_name}}.
-
-{{code_block}}
-
-Please evaluate:
-1. Code quality and readability
-2. Performance considerations
-3. Security vulnerabilities
-4. Best practices compliance
-5. {{additional_focus}}
-
-Provide specific suggestions with code examples where applicable.
-```
-
-**Variables**:
-- `{{language}}`: Programming language (e.g., JavaScript, Python)
-- `{{component_name}}`: Name or purpose of the code
-- `{{code_block}}`: The actual code to review
-- `{{additional_focus}}`: Specific areas of concern (optional)
-</Accordion>
-
-<Accordion title="Bug Diagnosis Assistant" icon="bug">
-**Purpose**: Systematically diagnose and fix bugs
-
-**Prompt**:
-```
-I'm experiencing {{bug_description}} in {{system_component}}.
-
-Environment:
-- Language/Framework: {{tech_stack}}
-- Version: {{version}}
-- Environment: {{environment:development|staging|production}}
-
-Error message:
-{{error_message}}
-
-Relevant code:
-{{code_snippet}}
-
-Please:
-1. Identify the likely root cause
-2. Explain why this error occurs
-3. Provide a fix with code examples
-4. Suggest how to prevent similar issues
-```
-
-**Variables**:
-- `{{bug_description}}`: Brief description of the bug
-- `{{system_component}}`: Where the bug occurs
-- `{{tech_stack}}`: Technologies involved
-- `{{version}}`: Version numbers
-- `{{environment}}`: Development/staging/production (dropdown)
-- `{{error_message}}`: Full error output
-- `{{code_snippet}}`: Relevant code context
-</Accordion>
-
-<Accordion title="Documentation Generator" icon="file-lines">
-**Purpose**: Create comprehensive documentation
-
-**Prompt**:
-```
-Generate {{doc_type:API docs|README|inline comments}} documentation for the following {{language}} code:
-
-{{code_block}}
-
-Include:
-- Purpose and functionality overview
-- Parameter descriptions with types
-- Return value details
-- Usage examples
-- {{additional_sections}}
-
-Format the output as {{output_format:Markdown|JSDoc|reStructuredText}}.
-```
-
-**Variables**:
-- `{{doc_type}}`: Type of documentation (dropdown)
-- `{{language}}`: Programming language
-- `{{code_block}}`: Code to document
-- `{{additional_sections}}`: Edge cases, error handling, etc.
-- `{{output_format}}`: Format for the output (dropdown)
-</Accordion>
-</AccordionGroup>
-
-### Data Analysis and Research
-
-<AccordionGroup>
-<Accordion title="Data Analysis Framework" icon="chart-column">
-**Purpose**: Analyze data with structured insights
-
-**Prompt**:
-```
-Analyze the following {{data_type:sales|user behavior|performance metrics}} data for {{business_context}}:
-
-{{data_content}}
-
-Please provide:
-1. Key findings and trends
-2. Statistical summary
-3. Anomalies or outliers
-4. {{specific_metrics}} analysis
-5. Actionable recommendations
-
-Focus particularly on {{priority_area}}.
-```
-
-**Variables**:
-- `{{data_type}}`: Type of data (dropdown)
-- `{{business_context}}`: What business question to answer
-- `{{data_content}}`: The actual data
-- `{{specific_metrics}}`: KPIs or metrics to calculate
-- `{{priority_area}}`: Main area of interest
-</Accordion>
-
-<Accordion title="Research Summarizer" icon="magnifying-glass">
-**Purpose**: Synthesize research materials
-
-**Prompt**:
-```
-Summarize this {{content_type:article|paper|report|documentation}} about {{topic}}:
-
-{{content}}
-
-Provide:
-1. Executive summary (2-3 sentences)
-2. Main points (bullet list)
-3. Key takeaways for {{target_audience}}
-4. Relevant quotes or data
-5. Connections to {{related_topic}} (if applicable)
-
-Format: {{output_format:bullets|paragraphs|table}}
-Length: {{word_limit}} words maximum
-```
-
-**Variables**:
-- `{{content_type}}`: Type of content (dropdown)
-- `{{topic}}`: Subject matter
-- `{{content}}`: The text to summarize
-- `{{target_audience}}`: Who will read the summary
-- `{{related_topic}}`: Context to consider
-- `{{output_format}}`: Output format (dropdown)
-- `{{word_limit}}`: Maximum length
-</Accordion>
-</AccordionGroup>
-
-### Writing and Communication
+<Tabs>
+<Tab title="Simple Examples">
+### Communication and Organization
 
 <AccordionGroup>
 <Accordion title="Email Composer" icon="envelope">
-**Purpose**: Draft professional emails
+**Purpose**: Quickly draft a professional email
 
 **Prompt**:
 ```
-Write a {{tone:formal|casual|apologetic|celebratory}} email to {{recipient}} about {{subject}}.
-
-Context:
-{{background_info}}
-
-Key points to cover:
+Write a {{tone:formal|casual}} email to {{recipient}} about {{subject}}.
+Main points:
 {{main_points}}
-
-Call to action:
-{{desired_action}}
-
-Constraints:
-- Length: {{length_preference:brief|detailed|comprehensive}}
-- Include: {{required_elements}}
 ```
 
 **Variables**:
 - `{{tone}}`: Email tone (dropdown)
-- `{{recipient}}`: Team, client, manager, stakeholder
+- `{{recipient}}`: Person or group
 - `{{subject}}`: Email topic
-- `{{background_info}}`: Relevant context
-- `{{main_points}}`: Key messages
-- `{{desired_action}}`: What you want recipient to do
-- `{{length_preference}}`: Email length (dropdown)
-- `{{required_elements}}`: Attachments, deadlines, etc.
+- `{{main_points}}`: What to cover
 </Accordion>
 
-<Accordion title="Meeting Notes Formatter" icon="clipboard">
-**Purpose**: Transform raw notes into structured summaries
+<Accordion title="Meeting Notes Summary" icon="clipboard">
+**Purpose**: Turn rough notes into a clean summary
 
 **Prompt**:
 ```
-Convert these meeting notes into a structured summary:
+Summarize these meeting notes:
 
-Meeting: {{meeting_type:standup|planning|review|retrospective}}
 Date: {{current_date}}
-Attendees: {{participants}}
-
-Raw notes:
-{{raw_notes}}
-
-Format with:
-1. Overview and purpose
-2. Key decisions made
-3. Action items (with owners and deadlines)
-4. Open questions or blockers
-5. Next steps
-
-Highlight urgent items and deadlines.
+People: {{participants}}
+Notes: {{raw_notes}}
 ```
 
 **Variables**:
-- `{{meeting_type}}`: Type of meeting (dropdown)
-- `{{current_date}}`: Auto-filled with current date
+- `{{current_date}}`: Today's date
 - `{{participants}}`: Who attended
-- `{{raw_notes}}`: Unstructured notes
+- `{{raw_notes}}`: Notes from the meeting
+</Accordion>
+
+<Accordion title="Short Article Summarizer" icon="magnifying-glass">
+**Purpose**: Condense articles or web content
+
+**Prompt**:
+```
+Summarize this {{content_type:article|blog post}} about {{topic}} for {{target_audience}}:
+{{content}}
+```
+
+**Variables**:
+- `{{content_type}}`: Type of content (dropdown)
+- `{{topic}}`: Subject of the article
+- `{{target_audience}}`: Reader (e.g., students, team)
+- `{{content}}`: Text to summarize
 </Accordion>
 </AccordionGroup>
+</Tab>
 
-### Specialized Tasks
+<Tab title="Advanced Examples">
+### Technical, Coding, and Analytical Prompts
 
 <AccordionGroup>
-<Accordion title="Test Case Generator" icon="vial">
-**Purpose**: Create comprehensive test cases
+<Accordion title="Code Review Template" icon="code">
+**Purpose**: Request a focused code review
 
 **Prompt**:
 ```
-Generate test cases for {{feature_name}} in {{application_type:web app|API|mobile app}}.
+Review this {{language}} code for {{component_name}}.
+{{code_block}}
 
-Feature description:
-{{feature_details}}
-
-User stories:
-{{user_stories}}
-
-Create test cases covering:
-1. Happy path scenarios
-2. Edge cases
-3. Error conditions
-4. {{specific_test_type:performance|security|accessibility}} testing
-
-Format: {{test_format:Gherkin|table|prose}}
-Include: Test data, expected results, preconditions
+Comment on:
+1. Readability
+2. {{review_focus}}
 ```
 
 **Variables**:
-- `{{feature_name}}`: Name of the feature
-- `{{application_type}}`: Type of application (dropdown)
-- `{{feature_details}}`: What the feature does
-- `{{user_stories}}`: User requirements
-- `{{specific_test_type}}`: Test type (dropdown)
-- `{{test_format}}`: Output format (dropdown)
+- `{{language}}`: Programming language
+- `{{component_name}}`: Name or purpose of code
+- `{{code_block}}`: Code to review
+- `{{review_focus}}`: Priority area (e.g., security, performance)
 </Accordion>
 
-<Accordion title="SQL Query Assistant" icon="database">
-**Purpose**: Build and optimize SQL queries
+<Accordion title="Bug Diagnosis Request" icon="bug">
+**Purpose**: Analyze and fix a bug
 
 **Prompt**:
 ```
-{{task_type:Write|Optimize|Debug|Explain}} a SQL query for {{database_type:PostgreSQL|MySQL|SQL Server}}.
-
-Requirement:
-{{query_requirement}}
-
-Schema:
-{{table_schemas}}
-
-Constraints:
-- Performance: {{performance_needs}}
-- Output format: {{output_requirements}}
-- Special considerations: {{special_notes}}
-
-Provide the query with explanatory comments.
+Help debug this in {{system_component}}.
+Error: {{error_message}}
+Code:
+{{code_snippet}}
 ```
 
 **Variables**:
-- `{{task_type}}`: Action to perform (dropdown)
+- `{{system_component}}`: Where the bug occurs
+- `{{error_message}}`: Full error message
+- `{{code_snippet}}`: Relevant code
+</Accordion>
+
+<Accordion title="Quick Documentation Generator" icon="file-lines">
+**Purpose**: Generate code documentation fast
+
+**Prompt**:
+```
+Document this {{language}} code as {{doc_type:API|README}}.
+{{code_block}}
+```
+
+**Variables**:
+- `{{language}}`: Programming language
+- `{{doc_type}}`: Kind of documentation (dropdown)
+- `{{code_block}}`: Code to document
+</Accordion>
+
+<Accordion title="Data Analysis Brief" icon="chart-column">
+**Purpose**: Analyze data and summarize insights
+
+**Prompt**:
+```
+Analyze {{data_type:sales|user data}} for {{business_question}}:
+{{data_content}}
+```
+
+**Variables**:
+- `{{data_type}}`: Type of data (dropdown)
+- `{{business_question}}`: What to investigate
+- `{{data_content}}`: The data itself
+</Accordion>
+
+<Accordion title="Test Case Creator" icon="vial">
+**Purpose**: Suggest key test scenarios
+
+**Prompt**:
+```
+Create test cases for {{feature_name}} in a {{application_type:web|API}}.
+User story: {{user_story}}
+```
+
+**Variables**:
+- `{{feature_name}}`: Feature name
+- `{{application_type}}`: App type (dropdown)
+- `{{user_story}}`: Short user requirement
+</Accordion>
+
+<Accordion title="SQL Query Helper" icon="database">
+**Purpose**: Write or improve SQL queries
+
+**Prompt**:
+```
+{{task_type:Write|Optimize}} an SQL query for {{database_type:PostgreSQL|MySQL}}.
+Goal: {{query_requirement}}
+```
+
+**Variables**:
+- `{{task_type}}`: What to do (dropdown)
 - `{{database_type}}`: Database system (dropdown)
-- `{{query_requirement}}`: What data to retrieve/modify
-- `{{table_schemas}}`: Relevant table structures
-- `{{performance_needs}}`: Speed requirements
-- `{{output_requirements}}`: Columns, aggregations, format
-- `{{special_notes}}`: Indexes, joins, constraints
+- `{{query_requirement}}`: Query objective
 </Accordion>
 </AccordionGroup>
+</Tab>
+</Tabs>
 
 ---
 

@@ -43,7 +43,7 @@ These focused requests help AI understand exactly what you need and make outputs
 **Why caution**: Review outputs before execution to avoid unintended consequences
 
 <Warning>
-For these tasks, use Safe Mode, test in a staging environment first, or break them into smaller, reviewable steps.
+For these tasks, use [Safe Mode](/security-governance/access-control#safe-mode-human-in-the-loop), test in a staging environment first, or break them into smaller, reviewable steps.
 </Warning>
 </Tab>
 </Tabs>
@@ -66,7 +66,7 @@ The main risk with AI isn't security, it's accidentally doing something you can'
 - Removing user accounts or permissions
 
 <Warning>
-AI can execute these actions quickly. Use Safe Mode or review carefully before any operation that modifies or removes important data.
+AI can execute these actions quickly. Use [Safe Mode](/security-governance/access-control#safe-mode-human-in-the-loop) or review carefully before any operation that modifies or removes important data.
 </Warning>
 </Accordion>
 
@@ -90,7 +90,7 @@ When AI agents work with high-impact systems, implement safeguards to maintain c
 
 <AccordionGroup>
 <Accordion title="Enable Safe Mode" icon="shield-check">
-Require approval before actions execute. Safe Mode pauses the agent and shows you exactly what it wants to do before proceeding.
+Require approval before actions execute. [Safe Mode](/security-governance/access-control#safe-mode-human-in-the-loop) pauses the agent and shows you exactly what it wants to do before proceeding.
 
 **Best for**: Production systems, customer communications, financial operations, deployment changes.
 </Accordion>
@@ -108,7 +108,7 @@ Divide large operations into smaller, reviewable chunks. Execute one step, verif
 </Accordion>
 
 <Accordion title="Restrict Tool Access" icon="lock">
-Remove tools that perform final actions (send, delete, deploy) and keep only preparation tools (draft, analyze, read). This reduces the chance of unintended actions and keeps agents focused on their purpose.
+Remove tools that perform final actions (send, delete, deploy) and keep only preparation tools (draft, analyze, read). This reduces the chance of unintended actions and keeps agents focused on their purpose. Learn more about [tool restriction](/security-governance/access-control#tool-restriction).
 
 **Best for**: Agents that assist with decisions but shouldn't execute them autonomously.
 </Accordion>
@@ -171,7 +171,7 @@ When planning to use AI for a task, consider these factors:
 | **Data Permanence** | Temporary data, easy to recreate | Critical data, difficult to recover |
 
 <Check>
-For higher-risk tasks, use Safe Mode, restrict agent tools, or break the work into reviewable steps.
+For higher-risk tasks, use [Safe Mode](/security-governance/access-control#safe-mode-human-in-the-loop), [restrict agent tools](/security-governance/access-control#tool-restriction), or break the work into reviewable steps.
 </Check>
 
 ---
@@ -187,7 +187,7 @@ Create agents optimized for specific tasks:
 - **Draft agents**: Create content without sending
 - **Review agents**: Provide feedback without making changes
 
-Restrict tools to match the agent's purpose using [Tool Restriction](/security-governance/access-control#tool-restriction).
+Restrict tools to match the agent's purpose using [tool restriction](/security-governance/access-control#tool-restriction).
 </Card>
 
 <Card title="Test Before Trusting" icon="flask">

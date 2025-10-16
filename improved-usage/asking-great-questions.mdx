@@ -111,6 +111,8 @@ Use this structure to provide comprehensive context:
 
 💡 [EXAMPLES]: Relevant examples or current approach (if applicable)
 
+[OUTPUT]: Specify the exact format you want for the answer here. For example, request a table, summary, list of action steps, email draft, or bullet points—whatever would be most useful for your people or stakeholders.
+
 [Your specific question]
 ```
 
@@ -137,6 +139,18 @@ present to our executive team
 💡 EXAMPLES: Current approach includes basic satisfaction scores, but 
 executives have requested deeper analysis linking satisfaction to specific 
 operational factors
+
+Output:
+Please provide your answer in the following format:
+
+- [Factor Name]: [Brief explanation or insight]
+- [Factor Name]: [Brief explanation or insight]
+- [Factor Name]: [Brief explanation or insight]
+
+For example:
+- Waiting times: How quickly patients are attended impacts satisfaction
+- Staff friendliness: Positive staff interactions improve experience
+- Clarity of instructions: Patients value clear after-visit information
 
 Question: What analysis approach would you recommend, and what 
 visualization types should I use for the executive presentation?
@@ -224,16 +238,15 @@ Give me a brief one-sentence answer first, then expand with details.
 
 ## Prompt Engineering
 
-Advanced strategies for crafting prompts that consistently deliver high-quality, targeted responses:
+Use tailored prompt engineering strategies to get high-quality, targeted responses from AI. Choose the approach that matches your needs and your current experience level.
 
-- **Iterative refinement** – Start simple, evaluate, and refine based on responses
-- **Building on responses** – Use previous answers to go deeper
-- **Assign roles** – Give the AI a specific perspective or expertise
-- **Use constraints** – Set clear boundaries for format and scope
+<Tabs>
+<Tab title="Basic Strategies">
 
+Master these foundational techniques to consistently get better results:
 <AccordionGroup>
 <Accordion title="Iterative refinement" icon="arrows-rotate">
-Don't expect perfection on the first try. Refine your prompts based on the responses you receive.
+Don't expect the perfect answer on your first try. Adjust your prompt each time based on the previous AI response.
 
 <Steps>
 <Step title="Start with a basic prompt">
@@ -245,11 +258,11 @@ Explain how context windows work in AI models.
 </Step>
 
 <Step title="Evaluate the response">
-Assess whether the response matches your needs. Too technical? Too vague? Wrong focus?
+Check if the answer meets your needs. Was it too technical, too vague, or off-topic?
 </Step>
 
 <Step title="Refine and add specificity">
-Adjust your prompt based on what was missing.
+Adjust your question to clarify what you want.
 
 ```
 Explain how context windows work in AI models in simple terms. 
@@ -259,17 +272,17 @@ explain why this matters for everyday AI users.
 </Step>
 
 <Step title="Iterate until satisfied">
-Continue refining until you get the response quality you need.
+Repeat this process until the answer matches your needs.
 
 <Check>
-Each iteration helps you learn what works best for different types of questions.
+You’ll learn what works best for your goals by refining each time.
 </Check>
 </Step>
 </Steps>
 </Accordion>
 
 <Accordion title="Building on responses" icon="comments">
-Use the AI's previous answer to go deeper or pivot your inquiry.
+Use the AI’s previous answers as a springboard for further exploration or greater depth.
 
 **Pattern:**
 ```
@@ -284,12 +297,12 @@ challenges small teams face when adopting microservices?"
 ```
 
 <Tip>
-This conversational approach helps you explore topics naturally while maintaining focus.
+This approach leads to more natural, conversational, and productive exploration of complex topics.
 </Tip>
 </Accordion>
 
 <Accordion title="Assign roles for perspective" icon="user-tie">
-Assign the AI a specific role or expertise to shape its approach and tone.
+Ask the AI to take on a specific professional or subject matter expert role.
 
 **Example:**
 ```
@@ -302,7 +315,7 @@ vulnerabilities and performance bottlenecks.
 </Accordion>
 
 <Accordion title="Use constraints effectively" icon="sliders">
-Set clear boundaries to guide the AI's response format and scope.
+Clearly specify response rules to limit scope, structure, or style.
 
 **Example:**
 ```
@@ -314,23 +327,14 @@ Analyze this dataset with the following constraints:
 ```
 </Accordion>
 </AccordionGroup>
+</Tab>
 
----
+<Tab title="Advanced Techniques">
 
-## Advanced Prompting Techniques
-
-This section provides a quick overview of more sophisticated techniques. For deeper understanding and implementation details, explore comprehensive resources on prompt engineering.
-
-- **Chain-of-thought prompting** – Request step-by-step reasoning for complex problems
-- **Few-shot learning** – Provide examples of the pattern you want
-- **Zero-shot prompting** – Ask for tasks without examples when straightforward
-- **Prompt chaining** – Break complex tasks into sequential prompts
-- **Template creation** – Build reusable prompts for recurring tasks
-- **Using tools** – Explicitly request tool usage when available
-
+Level up your prompting with these more sophisticated approaches:
 <AccordionGroup>
 <Accordion title="Chain-of-thought prompting" icon="list-ol">
-Encourage step-by-step reasoning for complex problems by explicitly requesting the AI to show its work.
+Ask for step-by-step reasoning to see how the AI arrives at a solution.
 
 **Example:**
 ```
@@ -344,11 +348,11 @@ abandonment to 55%, and explain what interventions might achieve this.
 Show your calculations and reasoning for each step.
 ```
 
-**Why it works:** Explicitly requesting step-by-step reasoning activates more thorough processing and makes it easier to verify the logic.
+**Why it works:** Step-by-step requests generate more transparent, verifiable answers and reduce mistakes.
 </Accordion>
 
 <Accordion title="Few-shot learning" icon="graduation-cap">
-Provide examples of the input-output pattern you want the AI to follow.
+Show a few example inputs and the type of answers you expect. The AI will mimic your structure and approach.
 
 **Example:**
 ```
@@ -379,12 +383,11 @@ Now categorize this feedback:
 </Accordion>
 
 <Accordion title="Zero-shot prompting" icon="wand-magic-sparkles">
-Ask the AI to perform tasks without examples when the task is straightforward.
+Use this when your task is simple and expectations are obvious—no examples needed.
 
 **Best for:**
-- Well-defined tasks with clear expectations
-- Common operations (summarization, translation, classification)
-- When you want unbiased responses without influence from examples
+- Clear tasks like summarization, translation, or classification
+- When you want unbiased answers
 
 **Example:**
 ```
@@ -396,7 +399,7 @@ professional tone:
 </Accordion>
 
 <Accordion title="Prompt chaining" icon="link">
-Break complex tasks into multiple prompts, using output from one as input to the next.
+Break bigger challenges into smaller, sequential prompts. Use the output from one step as the input to the next.
 
 **Example sequence:**
 ```
@@ -410,14 +413,14 @@ Prompt 3: "For each theme: [output from prompt 2], suggest
 one product improvement that addresses multiple pain points."
 ```
 
-**Why chain prompts:**
-- Handles complex multi-stage tasks more reliably
-- Allows you to verify intermediate outputs
-- Easier to debug when something goes wrong
+**Why chain prompts:** 
+- Breaks up complex tasks
+- Lets you check (and fix) partial steps
+- Increases accuracy on multi-stage workflows
 </Accordion>
 
 <Accordion title="Template creation" icon="file-code">
-Develop reusable prompt templates for recurring tasks. Save them in the [Prompt Library](/improved-usage/prompt-library) for easy access.
+Save time by building your own prompt templates for tasks you repeat often. Store them in the [Prompt Library](/improved-usage/prompt-library).
 
 **Template Example:**
 ```
@@ -436,12 +439,12 @@ Format: {{output_format:bullets|paragraphs|table}}
 ```
 
 <Info>
-See the [Prompt Library](/improved-usage/prompt-library) page for comprehensive guidance on creating and managing reusable prompts with variables.
+For details on managing and sharing prompts, see the [Prompt Library](/improved-usage/prompt-library).
 </Info>
 </Accordion>
 
 <Accordion title="Using tools in prompts" icon="wrench">
-When working with AI agents that have access to tools (like WonkaChat with MCP connections), you can explicitly request tool usage in your prompts.
+Direct the AI to use plugins or integrations when available, like business data connectors.
 
 **Example:**
 ```
@@ -451,14 +454,17 @@ purchase. Then analyze the data and suggest targeted retention strategies.
 ```
 
 <Info>
-Learn more about connecting tools in the [Tools Connection](/tools-connection/introduction) section.
+For more on AI tool integration, visit [Tools Connection](/tools-connection/introduction).
 </Info>
 </Accordion>
 </AccordionGroup>
 
 <Info>
-For more information on advanced prompting techniques, visit [OpenAI's](https://platform.openai.com/docs/guides/prompt-engineering), [Anthropic's](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), or even [Google's](https://ai.google.dev/gemini-api/docs/prompting-intro) prompting guides.
+For further learning on prompt engineering, see guides from [OpenAI](https://platform.openai.com/docs/guides/prompt-engineering), [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), and [Google](https://ai.google.dev/gemini-api/docs/prompting-intro).
 </Info>
+</Tab>
+</Tabs>
+
 
 
 ## Common Mistakes to Avoid
