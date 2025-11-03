@@ -17,19 +17,13 @@ Add, manage, and remove users in your organization through the Settings panel.
 
 <Steps>
 <Step title="Access Settings">
-Navigate to **Settings** in your WonkaChat dashboard. Only administrators can access user management functions.
+Click your name in the bottom left corner of the WonkaChat dashboard, then select **User Management**. Only administrators can access user management functions.
 
-<Frame caption="Settings location">
-<img src="/images/settings.png" alt="Settings pannel location" />
-</Frame>
 </Step>
 
 <Step title="Invite New Users">
 Send email invitations to users you want to add to your organization. Users receive an invitation link to create their account and join.
 
-<Frame caption="User invitation interface">
-<img src="/images/invite-users.png" alt="User invitation form" />
-</Frame>
 </Step>
 
 <Step title="Assign Role">
@@ -153,7 +147,7 @@ Navigate to the agent you want to share (or create a new one) in the Agent Build
 In the Agent Builder panel, you'll find sharing options:
 
 <Frame caption="Agent Sharing location">
-<img src="/images/agent-sharing-panel.png" alt="Agent Sharing showing sharing options" />
+<img src="/images/share.png" alt="Agent Sharing showing sharing options" />
 </Frame>
 
 **Visibility:**
@@ -324,6 +318,9 @@ Create specialized agents optimized for specific tasks by giving them precise to
 
 The difference between a helpful drafting assistant and a potential security risk often comes down to a single tool.
 
+<Tip>
+When creating agents, disable tools that execute final actions unless the agent specifically needs them. Enable tools for preparation and analysis, but restrict tools that send, delete, deploy, or modify production systems.
+</Tip>
 <Tabs>
 <Tab title="✅ Good Example: Send Tool Disabled">
 
@@ -349,10 +346,6 @@ Without access to the `send-email` tool, the agent can only draft content. The u
 **Safe**: User maintains full control over when and what gets sent. Agent provides value without risk.
 </Check>
 
-<Frame caption="Good example: Agent without send-email tool (draft only)">
-<img src="/images/email-good-example.png" alt="Example showing agent drafting without sending" />
-</Frame>
-
 </Tab>
 
 <Tab title="❌ Bad Example: Send Tool Enabled">
@@ -372,16 +365,10 @@ Because the agent had access to the `send-email` tool, it interpreted "draft an 
 **Risk**: Unreviewed emails being sent, potential data leaks, unprofessional communication, or sending to wrong recipients.
 </Warning>
 
-<Frame caption="Bad example: Agent with send-email tool enabled">
-<img src="/images/email-bad-example.png" alt="Example showing agent sending email without approval" />
-</Frame>
 
 </Tab>
 </Tabs>
 
-<Tip>
-When creating agents, disable tools that execute final actions unless the agent specifically needs them. Enable tools for preparation and analysis, but restrict tools that send, delete, deploy, or modify production systems.
-</Tip>
 
 ---
 
@@ -389,10 +376,17 @@ When creating agents, disable tools that execute final actions unless the agent 
 
 Safe Mode ensures you approve every action an AI agent wants to take before it executes.
 
-<Frame caption="TODO gif/video to use ?">
-<img src="/images/safe-.png" alt="Safe Mode interface showing action approval" />
-</Frame>
 
+<Frame>
+<video
+  controls
+  className="w-full aspect-video rounded-xl"
+  src="/images/safe-mode.mp4"
+  title="Video Coming Soon"
+>
+Safe Mode interface showing action approval
+</video>
+</Frame>
 ### How Safe Mode Works
 
 <Steps>
