@@ -9,7 +9,7 @@
   },
   "favicon": "/favicon.png",
   "banner": {
-    "content": "🚧 Version 1.0 incoming! We're currently working on it...",
+    "content": "🚧 Welcome to the WonkaChat Wiki Beta! This is a beta release, some information may not be final and occasional errors might be present.",
     "dismissible": false
   },
   "navigation": {
@@ -75,6 +75,7 @@
       },
       {
         "tab": "Learning",
+        "hidden": true,
         "groups": [
           {
             "group": "Foundations of AI",
@@ -89,6 +90,7 @@
       },
       {
         "tab": "Use Cases",
+        "hidden": true,
         "groups": [
           {
             "group": "Use cases",
@@ -100,6 +102,7 @@
       },
       {
         "tab": "Updates",
+        "hidden": true,
         "groups": [
           {
             "group": "Changelog",
@@ -111,6 +114,7 @@
       },
       {
         "tab": "Roadmap",
+        "hidden": true,
         "groups": [
           {
             "group": "Roadmap",
