@@ -165,6 +165,12 @@
    ]
   },
   "footer": {
+    "links": [
+      {
+        "label": "Terms & Conditions",
+        "href": "/legal/terms-and-conditions"
+      }
+    ],
     "socials": {
       "linkedin": "https://www.linkedin.com/company/wonka-ai/",
       "instagram": "https://www.instagram.com/meetwonka/"
