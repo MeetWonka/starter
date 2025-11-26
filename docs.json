@@ -125,13 +125,13 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Legal",
         "hidden": true,
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Legal Documents",
             "pages": [
-              "api-reference/introduction"
+              "legal/terms-and-conditions"
             ]
           }
         ]
@@ -148,6 +148,11 @@
           "anchor": "Contact-us",
           "href": "https://www.meetwonka.com/contact",
           "icon": "envelope"
+        },
+        {
+          "anchor": "Terms and Conditions",
+          "href": "https://help.wonka.chat/legal/terms-and-conditions",
+          "icon": "book-open"
         }
       ]
     }
@@ -165,12 +170,6 @@
    ]
   },
   "footer": {
-    "links": [
-      {
-        "label": "Terms & Conditions",
-        "href": "/legal/terms-and-conditions"
-      }
-    ],
     "socials": {
       "linkedin": "https://www.linkedin.com/company/wonka-ai/",
       "instagram": "https://www.instagram.com/meetwonka/"
