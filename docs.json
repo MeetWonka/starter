@@ -70,7 +70,17 @@
               "support-resources/faq",
               "support-resources/getting-help"
             ]
-          }
+          },
+          {
+            "group": "Legal",
+                "pages": [
+                  "legal/terms-and-conditions", 
+                  "legal/terms-of-service",
+                  "legal/privacy-policy",
+                  "legal/legal-notice",
+                  "legal/cookie-policy"
+                ]
+              }
         ]
       },
       {
@@ -123,18 +133,6 @@
             ]
           }
         ]
-      },
-      {
-        "tab": "Legal",
-        "hidden": true,
-        "groups": [
-          {
-            "group": "Legal Documents",
-            "pages": [
-              "legal/terms-and-conditions"
-            ]
-          }
-        ]
       }
     ],
     "global": {
@@ -148,11 +146,6 @@
           "anchor": "Contact-us",
           "href": "https://www.meetwonka.com/contact",
           "icon": "envelope"
-        },
-        {
-          "anchor": "Terms and Conditions",
-          "href": "https://help.wonka.chat/legal/terms-and-conditions",
-          "icon": "book-open"
         }
       ]
     }
