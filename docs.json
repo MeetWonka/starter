@@ -19,7 +19,7 @@
         "groups": [
           
           {
-            "group": "Welcome to Wonka Chat",
+            "group": "Welcome to WonkaChat",
             "pages": [
               "welcome/introduction",
               "welcome/why-wonka-chat",
@@ -139,13 +139,13 @@
       "anchors": [
         {
           "anchor": "Our website",
-          "href": "https://www.meetwonka.com",
+          "href": "https://wonkachat.meetwonka.com/",
           "icon": "globe"
         },
         {
-          "anchor": "Contact-us",
-          "href": "https://www.meetwonka.com/contact",
-          "icon": "envelope"
+          "anchor": "Start for free",
+          "href": "https://wonka.chat/register",
+          "icon": "rocket"
         }
       ]
     }
@@ -176,7 +176,7 @@
   "404": {
     "redirect": false,
     "title": "Your page can't be found",
-    "description": "Please, go ask **WonkaChat** to help you find what you're looking for, I am sure he can help you !"
+    "description": "Please, go ask **WonkaChat** to help you find what you're looking for, I am sure it can help you!"
   }
 }
 }

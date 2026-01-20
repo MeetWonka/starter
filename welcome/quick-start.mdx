@@ -11,44 +11,71 @@ Get up and running with WonkaChat quickly and start experiencing AI-powered auto
 <Steps>
 <Step title="First Login and Account Access">
 
-Access WonkaChat through one of two methods:
+Access WonkaChat through one of four methods:
 
 <Tabs>
+
+<Tab title="Organization Invitation">
+If you received an invitation to join your organization's WonkaChat:
+
+1. Check your email for the WonkaChat invitation
+2. Click the invitation link
+3. Create your account using the provided setup flow
+4. Complete your profile
+5. Start using WonkaChat with your team's configuration
+
+<Info>
+Organization invitations come with pre-configured settings, tools, and AI Agents shared by your team.
+</Info>
+</Tab>
+
 <Tab title="Team SSO Login">
-If your organization has already set up WonkaChat, use your existing work credentials:
+If your organization already has WonkaChat set up, use your work credentials:
 
 **Sign in with:**
 - **Google Workspace** (your company Google account)
 - **Microsoft 365** (your company Microsoft account)
-- **Other SSO providers** your organization has configured
-
-<Info>
-SSO uses OpenID Connect for secure, seamless authentication with your existing credentials.
-</Info>
+- **Other SSO providers** your organization configured
 
 <Check>
-No new password to remember, you can just use your existing work account credentials.
+No new password needed, just use your existing work account to access WonkaChat instantly.
 </Check>
 </Tab>
 
-<Tab title="Invitation Setup">
-If you're the first user from your organization:
 
-1. Check your email for a WonkaChat invitation
-2. Click the invitation link
-3. Create your account credentials
-4. Complete your profile setup
-5. Begin configuring your organization's WonkaChat instance
+
+<Tab title="Individual Subscription">
+Create your personal WonkaChat account and subscribe directly:
+
+1. Visit [wonka.chat/register](https://wonka.chat/register)
+2. Enter your email address and create a password
+3. Accept the Terms and Conditions
+4. Click **Continue** to create your account
+5. Complete payment to activate your account
+
+<Check>
+Your subscription is managed through Stripe with secure payment processing.
+</Check>
+</Tab>
+
+<Tab title="Enterprise Setup">
+If you're setting up WonkaChat for your entire organization:
+
+1. Contact our team through the [Getting Help](/support-resources/getting-help) page
+2. Discuss your organization's requirements and user count
+3. Receive your custom enterprise invitation
+4. Configure SSO, governance policies, and team settings
+5. Invite your team members with pre-configured access
 
 <Tip>
-After initial setup, you can enable SSO for your team so everyone can use their existing work credentials.
+Enterprise plans include dedicated support, custom integrations, advanced security features, and volume pricing.
 </Tip>
 </Tab>
 </Tabs>
 
 **What you'll see after login:**
 - Clean chat interface in the center
-- Connected tools and agents in the sidebar
+- Connected tools and AI Agents in the sidebar
 - Model selection options in the settings
 - Your prompt library and saved conversations
 
@@ -61,7 +88,7 @@ After initial setup, you can enable SSO for your team so everyone can use their 
 
 <iframe
   className="w-full aspect-video rounded-xl"
-  src="https://www.youtube.com/embed/R_S4dWaf7xk"
+  src="https://www.youtube.com/embed/KBLdYB4DKrU"
   title="WonkaChat Dashboard Walkthrough"
   frameBorder="0"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -94,26 +121,26 @@ If you receive a response, you're all set! The AI is connected and ready to help
 
 </Step>
 
-<Step title="Connect Your First Tool (Outlook)">
+<Step title="Connect Your First Tool (Outlook Mail)">
 
 Now let's connect WonkaChat to your email account so it can access your emails and calendar.
 
 <Warning>
-This example uses **Outlook**, but the process is identical for **Gmail**, or any other email system. Simply click the corresponding the right connection button for your email provider and follow the same steps.
+This example uses **Outlook Mail**, but the process is identical for **Gmail**, or any other email system. Simply click the corresponding the right connection button for your email provider and follow the same steps.
 </Warning>
 
 ### Step-by-Step Connection
 
 <Steps>
-<Step title="Open the MCP Settings">
-On the right side of your WonkaChat interface, locate and click the **Outlook MCP** button in the tools panel.
+<Step title="Open the Connectors Settings">
+On the bottom left of your WonkaChat interface, locate the settings and open the **Connectors** button.
 
-<Frame caption="Outlook MCP button location">
-<img src="/images/mcp-gif.gif" alt="Outlook MCP button in the right panel" />
+<Frame caption="Outlook Mail button location">
+<img src="/images/connectors-gif.gif" alt="Outlook Mail button in the right panel" />
 </Frame>
 
 <Info>
-Learn about MCP connections in [Tools & Connection](/tools-connection/introduction).
+Learn about external connections in [Tools & Connection](/tools-connection/introduction).
 </Info>
 
 </Step>
@@ -130,16 +157,16 @@ WonkaChat uses secure authentication and never stores your password. All credent
 </Step>
 
 <Step title="Enable Connection for Your Model">
-After connecting, you need to authorize the External connection (MCP) for the AI model you're using.
+After connecting, you need to authorize the external connection for the AI model you're using.
 
-<Frame caption="Enable MCP for your model">
-<img src="/images/mcp-co.gif" alt="Enable the connection for the AI model" />
+<Frame caption="Enable the connection for your model">
+<img src="/images/connection-co.gif" alt="Enable the connection for the AI model" />
 </Frame>
 
-Click **"MCP Servers"** and select connection which (MCP) you want the AI model to use.
+Click **"Connectors"** and select which connection you want the AI model to use.
 
 <Check>
-Once the Outlook connection (MCP) is enabled, the AI can read your emails, access your calendar, send messages on your behalf, and handle any Outlook-related tasks through natural conversation.
+Once the Outlook Mail connection is enabled, the AI can read your emails, access your calendar, send messages on your behalf, and handle any Outlook-related tasks through natural conversation.
 </Check>
 </Step>
 </Steps>
@@ -148,24 +175,23 @@ Once the Outlook connection (MCP) is enabled, the AI can read your emails, acces
 
 <Step title="Your First Connected Conversation">
 
-Now that Outlook is connected, let's use it in a conversation:
+Now that Outlook Mail is connected, let's use it in a conversation:
 
 ### Send a message to the connected AI model
 
 Type something like:
 
 ```
-What's on my outlook calendar today?
+Send an email to Sarah letting her know I'll be 5 minutes late to the meeting.
 ```
 <Warning>
-The AI will only access Outlook data when you explicitly ask it to. It respects your existing permissions and won't perform actions without your knowledge.
+The AI will only interact with Outlook or send messages when you explicitly request it. It always follows your permissions and never takes action without your direction.
 </Warning>
 
-
 WonkaChat will:
-- Access your Outlook calendar through the external connection
-- Retrieve your schedule
-- Present it in an organized format
+- Access your Outlook account through the configured connection
+- Draft an email to Sarah with your update
+- Send directly the mail or present it for review before sending (depends on your prompt and on the model used)
 
 <Check>
 You've successfully connected a tool and used it through natural conversation!
@@ -178,35 +204,36 @@ You've successfully connected a tool and used it through natural conversation!
 Choose the right model for your task:
 
 <CardGroup cols={2}>
-<Card title="Thinking Models" icon="brain">
+<Card title="Pro Models" icon="brain">
 **Use for complex tasks:**
 - Strategic analysis
 - Multi-step problem solving
 - Data analysis and insights
 - Complex workflow planning
+- External tool connections
 
 **Example:** "Analyze our Q3 sales data and recommend improvements"
 </Card>
 
-<Card title="Fast/Non-Thinking Models" icon="bolt">
+<Card title="Fast Models" icon="bolt">
 **Use for quick tasks:**
 - Simple questions
 - Fast information retrieval
 - Basic formatting
 - Quick summaries
+- High-volume operations
 
 **Example:** "What's my next meeting?"
 </Card>
 </CardGroup>
 
 <Tip>
-When in doubt, start with thinking models for important tasks. You can always switch to fast/non-thinking models for speed and cost once you understand the query complexity.
+When in doubt, start with pro models for important tasks. You can always switch to fast models for speed and cost once you understand the query complexity.
 </Tip>
 
 </Step>
 
-<Step>
-## Quick Tips for Success
+<Step title="Quick Tips for Success">
 
 <CardGroup cols={2}>
 <Card title="Be Specific" icon="crosshairs">
@@ -228,15 +255,15 @@ Begin with straightforward queries and gradually work up to complex multi-step w
 Now that you're familiar with the basics, explore more advanced capabilities:
 
 <CardGroup cols={2}>
-<Card title="Create AI Agents" icon="robot" href="/ai-agents/creating-your-first-agent">
+<Card title="Create AI Agents" icon="robot" href="/ai-agents/introduction">
 Build specialized agents focused on specific tasks for more accurate, reliable results with reduced hallucinations.
 </Card>
 
-<Card title="Understand Tool Connection" icon="plug" href="/tools-connection/setting-up-your-first-connection">
+<Card title="Understand External Connections" icon="plug" href="/tools-connection/introduction">
 Learn how external connections (MCP) work and scale from connecting a single tool to integrating your entire business ecosystem.
 </Card>
 
-<Card title="Improve Your AI Usage" icon="wand-magic-sparkles" href="/improved-usage/index">
+<Card title="Improve Your AI Usage" icon="wand-magic-sparkles" href="/improved-usage/asking-great-questions">
 Discover techniques for asking better questions, managing conversations effectively, and getting more value from every AI interaction.
 </Card>
 

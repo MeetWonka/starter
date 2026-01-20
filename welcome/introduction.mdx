@@ -1,20 +1,18 @@
 ---
-title: "What is Wonka Chat?"
+title: "What is WonkaChat?"
 description: "Your enterprise AI assistant that connects to your business tools and runs securely in your environment."
 ---
 
-Wonka Chat is an enterprise AI assistant that connects directly to your business tools, software, and data to help you accomplish complex tasks through simple conversation while maintaining your privacy and data integrity.
+WonkaChat is an enterprise AI assistant that connects directly to your business tools, software, and data to help you accomplish complex tasks through simple conversation while maintaining your privacy and data integrity.
 
-<Tabs>
-<Tab title="Getting Started">
 
 ## Core Concept
 
-Wonka Chat consolidates your work across multiple software applications into a single chat interface. Instead of switching between different tools, you interact with one interface that coordinates actions across your connected systems.
+Wonka Chat consolidates your work across multiple software applications into a single chat interface. Instead of switching between different tools and softwares, you interact with one interface that coordinates actions across your connected systems.
 
 Think of it as your intelligent business assistant that:
 - Understands your company's processes and data
-- Connects to all your existing tools and systems
+- Connects to all your existing softwares and tools
 - Executes multi-step workflows across different platforms
 - Keeps your data secure within your environment
 
@@ -32,7 +30,7 @@ In this example, a request to "Run New Employee Onboarding" automatically:
 6. ✅ Sends onboarding presentation via email
 
 <Check>
-This is the power of WonkaChat: complex multi-step workflows across different tools, managed through natural conversation.
+This is the power of WonkaChat: complex multi-step workflows across different softwares, managed through natural conversation.
 </Check>
 
 In this example, a simple request triggers actions across Notion, Outlook, Odoo, and other tools, all coordinated through one platform and one conversation.
@@ -46,16 +44,16 @@ In this example, a simple request triggers actions across Notion, Outlook, Odoo,
 Create specialized agents for specific tasks like onboarding, reporting, or customer support that run autonomously on your behalf.
 </Card>
 
-<Card title="Tool Connections" icon="plug">
-Connect your existing business tools (from project management to CRM to communication platforms) so WonkaChat can work with your data.
+<Card title="External Connections" icon="plug">
+Connect your existing softwares and business tools (from PM to CRM to communication platforms) so WonkaChat can work with your data.
 </Card>
 
 <Card title="Model Flexibility" icon="sliders">
-Choose between thinking and fast/non-thinking models based on task complexity, and choose any AI model provider.
+Choose between thinking and fast/non-thinking models based on task complexity, and choose any AI model from any provider.
 </Card>
 
 <Card title="Business Teaching" icon="graduation-cap">
-Use your company's knowledge by uploading documents and providing context. The AI Agents will adapt to your processes, terminology, and workflows.
+Use your company's knowledge by uploading documents and providing context. The AI will adapt to your processes, terminology, and workflows.
 </Card>
 </CardGroup>
 
@@ -121,64 +119,3 @@ Get up and running with your first conversation in just 5 minutes.
 </Card>
 </CardGroup>
 
-</Tab>
-
-<Tab title="Technical Details">
-
-## Architecture Overview
-
-Wonka Chat is built on enterprise-grade infrastructure designed for security, scalability, and flexibility.
-
-### Deployment Model
-
-<Info>
-WonkaChat runs on **Kubernetes**, providing containerized deployment with automatic scaling, high availability, and resource management.
-</Info>
-
-**Key architectural characteristics:**
-- Containerized microservices architecture
-- Horizontal scaling based on demand
-- Self-healing infrastructure with automatic failover
-- Isolated tenant environments for enterprise deployments
-
-### Tool Connection Technology
-
-Wonka Chat uses **MCP (Model Context Protocol)** connections to integrate with your business tools and systems.
-
-<Tip>
-MCP connections are covered in detail in the [Tools & Connection](/tools-connection/introduction) section of this documentation.
-</Tip>
-
-**Connection capabilities:**
-- Secure, authenticated access to external APIs
-- Real-time data synchronization
-- Bidirectional communication (read and write operations)
-- Support for webhooks and event-driven workflows
-
----
-
-## AI Model Infrastructure
-
-### Model Selection Architecture
-
-WonkaChat is **model-agnostic**. We are not an AI provider, but rather a platform that integrates with your chosen AI models.
-
-**Supported model types:**
-- **Thinking models**: For complex reasoning tasks requiring multi-step analysis
-- **Fast/Non-thinking models**: For rapid responses to straightforward queries
-- **Custom models**: Integrate your own fine-tuned or proprietary models
-
-### Provider Flexibility
-
-<CardGroup cols={2}>
-<Card title="Bring Your Own Model" icon="box">
-Connect to any AI provider including OpenAI, Anthropic, Google, or self-hosted models.
-</Card>
-
-<Card title="Cost-Performance Optimization" icon="gauge-high">
-Choose models based on your specific trade-offs between response quality, speed, and cost.
-</Card>
-</CardGroup>
-
-</Tab>
-</Tabs>

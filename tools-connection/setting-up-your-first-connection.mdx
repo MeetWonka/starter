@@ -1,5 +1,5 @@
 ---
-title: "Setting Up Your First Connection"
+title: "Your First External Connection"
 description: "Connect WonkaChat to your business systems and start using AI-powered workflows."
 ---
 
@@ -34,8 +34,8 @@ Watch this step-by-step guide to see the entire connection process in action:
 
 <iframe
   className="w-full aspect-video rounded-xl"
-  src="https://www.youtube.com/embed/RWYa4FFSSrY"
-  title="Complete guide to setting up your first MCP connection"
+  src="https://www.youtube.com/embed/srw1U5-SonA"
+  title="Complete guide to setting up your first connection"
   frameBorder="0"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
@@ -49,11 +49,11 @@ Follow along with the video while setting up your first connection. Pause at eac
 ## Step-by-Step Connection Process
 
 <Steps>
-<Step title="Locate the MCP Panel">
-In your WonkaChat interface, find the **MCP Settings** on the right side of the screen. This panel displays all available business system connections.
+<Step title="Locate the Connectors Panel">
+In your WonkaChat interface, find the **Connectors** inside the settings at the bootom left of the screen. This panel displays all available business system connections.
 
-<Frame caption="MCP panel and Outlook connection example">
-<img src="/images/mcp-gif.gif" alt="MCP panel and Outlook connection example" />
+<Frame caption="Connectors panel and Outlook Mail connection example">
+<img src="/images/connectors-gif.gif" alt="Connectors panel and Outlook Mail connection example" />
 </Frame>
 
 <Tip>
@@ -65,13 +65,13 @@ If you don't see the right side panel, click the arrow icon in the middle-right 
 Browse or search for the connection you want to add. Click the connection's button to begin the connection process.
 
 **Popular first connections:**
-- **Outlook** or **Gmail** for email and calendar access
+- **Outlook Mail** or **Gmail** for email access
 - **Slack** for team communication
 - **Google Drive** or **OneDrive** for document access
 
 
 <Check>
-Not sure which tool to connect first? Start with your email provider, it's the most versatile connection for daily tasks.
+Not sure which software to connect first? Start with your email provider, it's the most versatile connection for daily tasks.
 </Check>
 </Step>
 
@@ -81,34 +81,35 @@ A credential window will appear, requesting authentication for the selected busi
 <Tabs>
 <Tab title="OAuth">
 <Info>
-Use **OAuth** authentication for tools like <strong>Outlook, Gmail, Google Drive</strong>, and most major cloud platforms.
+**OAuth** authentication is used for most of the softwares like <strong>Outlook, Gmail, Google Drive</strong>.
 </Info>
 
-1. Click **"Initialize"**.
-2. You'll be redirected to the tool's official login page.
-3. Enter your credentials on the tool's secure site.
+1. Click **"Connect"**.
+2. You'll be redirected to the software's official login page.
+3. Enter your credentials on the software's secure site.
 4. You'll be automatically redirected back to WonkaChat.
 
 </Tab>
 
 <Tab title="API Key">
 <Info>
-Choose this method for tools such as <strong>Notion, Linear</strong>, and other provider integrations that require an API key.
+Some softwares require an API key. If you need assistance obtaining or using your API key, see the <a href="/support-resources/getting-help">Getting Help</a> page for personalized support options.
 </Info>
 
-1. Obtain your API key directly from the provider.
-2. Paste the API key into the WonkaChat credential field.
-3. Click **"Connect"**.
+1. Click the **Gear Icon**.
+2. Obtain your API key directly from the provider.
+3. Paste the API key into the WonkaChat credential field.
+4. Click **"Connect"**.
 
 
 <Tip>
-Need help finding your API key? Most tools have it under <strong>Settings → API</strong> or <strong>Settings → Integrations</strong>. Check the tool's documentation if you're not sure.
+Need help finding your API key? Most softwares have it under <strong>Settings → API</strong> or <strong>Settings → Integrations</strong>. Check the software's documentation if you're not sure.
 </Tip>
 </Tab>
 
 <Tab title="Custom">
 <Info>
-Some business systems, such as <strong>Odoo</strong>, require custom configuration beyond standard authentication.
+Some business systems, such as <strong>Odoo</strong>, require custom configuration beyond standard authentication. If you need assistance to connect, see the <a href="/support-resources/getting-help">Getting Help</a> page for personalized support options.
 </Info>
 
 Some business systems require additional connection parameters:
@@ -118,19 +119,20 @@ Some business systems require additional connection parameters:
 - Custom authentication tokens or credentials
 
 **Connection Process:**
-1. Review the connection requirements displayed in the WonkaChat credential window.
-2. Enter all required fields.
-3. Verify everything is accurate before proceeding.
-4. Click **"Initialize"** to establish the connection.
+1. Click the **Gear Icon**.
+2. Review the connection requirements displayed in the WonkaChat credential window.
+3. Enter all required fields.
+4. Verify everything is accurate before proceeding.
+5. Click **"Connect"** to establish the connection.
 
 <Info>
-Each tool displays its specific connection requirements in the credential window.
+Each software displays its specific connection requirements in the credential window.
 
 If you need assistance with connection details or encounter any issues, <a href="https://www.meetwonka.com/fr/contact">contact our support team</a> for personalized help.
 </Info>
 
 <Warning>
-Always verify you're on the official WonkaChat page of your organization before entering credentials or connecting to any MCP server.
+Always verify you're on the official WonkaChat page of your organization before entering credentials or connecting to any software.
 </Warning>
 </Tab>
 </Tabs>
@@ -139,11 +141,15 @@ Always verify you're on the official WonkaChat page of your organization before 
 </Step>
 
 <Step title="Enable The Connection">
-After successful authentication, you need to activate the MCP connection for the AI model you're using.
+After successful authentication, you need to activate the connection for the AI model you're using.
 
-1. Click the **"MCP Servers"** button under the chat input field
+1. Click the **"Connectors"** button under the chat input field
 2. Find your business system in the list
 3. Click on it to enable the connection for the current chat
+
+<Frame caption="Outlook Mail connection example">
+<img src="/images/connection-co.gif" alt="Outlook Mail connection example" />
+</Frame>
 
 <Check>
 Once enabled, the AI model can access this business system whenever you ask it to. You can enable or disable connections at any time.
@@ -169,7 +175,7 @@ Connection successful! You can now use natural language to access and interact w
 <Step title="Disable A Connection">
 
 To remove a connection:
-1. Click the **"MCP Servers"** button under the chat input field
+1. Click the **"Connectors"** button under the chat input field
 2. Find your business system in the list
 3. Click on it to disable the connection for the current chat by removing it from the selected connections
 
@@ -199,7 +205,7 @@ WonkaChat can only access:
 </Accordion>
 
 <Accordion title="What Actions Can WonkaChat Perform?" icon="hand">
-WonkaChat's capabilities depend entirely on what the MCP server implements for each business system. If a provider exposes an action through their MCP server, the AI can perform it. If an action isn't implemented in the MCP server, the AI cannot access it, regardless of whether the underlying business system supports it.
+WonkaChat's capabilities depend entirely on what tools are implemented for each business system. If a provider exposes an action through their connection (MCP), the AI can perform it. If an action isn't implemented in the MCP, the AI cannot access it, regardless of whether the underlying business system supports it.
 
 **Common capabilities include:**
 - **Read**: View emails, documents, tasks, calendar events, database records, etc.
@@ -209,10 +215,10 @@ WonkaChat's capabilities depend entirely on what the MCP server implements for e
 - **Execute**: Run workflows, trigger automations, perform calculations
 
 <Check>
-Each MCP server defines its own set of available actions. Check the specific business system's documentation to see what operations are supported through its MCP implementation.
+Each connection (MCP) defines its own set of available actions. Check the specific business system's documentation to see what operations are supported through its MCP implementation.
 </Check>
 
-**Important:** The AI model is restricted to only the actions that the MCP server exposes. Even if a business system's native interface supports a feature, WonkaChat can only use it if the corresponding MCP server has implemented that capability.
+**Important:** The AI model is restricted to only the actions that the MCP exposes. Even if a business system's native interface supports a feature, WonkaChat can only use it if the corresponding MCP server has implemented that capability.
 
 All actions require your explicit instruction through conversation. WonkaChat only performs actions when you ask it to.
 </Accordion>
@@ -333,7 +339,7 @@ AI agents with purpose-built business system connections deliver significantly b
 </Accordion>
 
 <Tip>
-Start by creating 2-3 specialized agents for your most common workflows. You'll quickly see the quality difference compared to one agent with all tools connected.
+Start by creating 2-3 specialized agents for your most common workflows. You'll quickly see the quality difference compared to one agent with all tools and softwares connected.
 </Tip>
 </Accordion>
 </AccordionGroup>

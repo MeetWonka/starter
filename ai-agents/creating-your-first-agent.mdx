@@ -26,7 +26,7 @@ Watch how to create a basic agent with straightforward instructions. This helps 
 
 <iframe
   className="w-full aspect-video rounded-xl"
-  src="https://www.youtube.com/embed/pYU9vfomRh4"
+  src="https://www.youtube.com/embed/GQ8LYovybDU"
   title="Creating a Basic Agent"
   frameBorder="0"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -47,7 +47,7 @@ Watch how to create an agent that connects a tool to automate workflows. This is
 
 <iframe
   className="w-full aspect-video rounded-xl"
-  src="https://www.youtube.com/embed/TkMq3kDDpTU"
+  src="https://www.youtube.com/embed/N8rC1fks2oY"
   title="Creating a Tool Connected Agent"
   frameBorder="0"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -141,18 +141,19 @@ Select the right model based on your agent's task complexity and usage frequency
 
 **For simple, frequent tasks:**
 - Use **GPT-4o mini** (most cost-effective) or **Gemini 2.5 Flash** (fast with large context)
+- Also consider: **Claude Haiku 4.5** (fast with near-frontier intelligence)
 - Example tasks: Email drafting, data lookup, simple formatting, high-volume operations
 
 **For complex reasoning:**
-- Use **Claude Sonnet 4** or **GPT-5** (advanced capabilities)
-- Example tasks: Multi-step analysis, strategic planning, multi-tool usage
+- Use **Claude Opus 4.5**, **Claude Sonnet 4.5**, **GPT-5.2**, or **GPT-5** (advanced capabilities)
+- Example tasks: Multi-step analysis, strategic planning, multi-tool usage, complex coding
 
 **For long context:**
-- Use **Gemini 2.5 Pro** (1M context window)
-- Example tasks: Document analysis, comprehensive research
+- Use **Gemini 2.5 Pro** (1M context window) or **Gemini 2.5 Flash** (1M context, faster)
+- Example tasks: Document analysis, comprehensive research, processing large datasets
 
 <Tip>
-Start with a cost-effective model like **GPT-4o mini** for most agents. Upgrade to more capable models (GPT-5, Claude Sonnet 4, or Gemini 2.5 Pro) only if results don't meet your needs.
+Start with a cost-effective model like **GPT-4o mini** or **Claude Haiku 4.5** for most agents. Upgrade to more capable models (Claude Opus 4.5, GPT-5.2, or Gemini 2.5 Pro) only if results don't meet your needs.
 </Tip>
 
 <Info>
@@ -407,86 +408,102 @@ Quick comparison to help you choose the right model. For detailed specs and benc
 
 | Model | Context | Cost (Input/Output) | Best For |
 |-------|---------|---------------------|----------|
-| **GPT-5** | 400K | \$1.25 / \$10 per 1M | Advanced coding, agentic workflows, thinking mode |
-| **GPT-4o** | 128K | \$2.50 / \$10 per 1M | General-purpose, balanced tasks |
+| **GPT-5.2** | 128K+ | Premium pricing | Latest model, advanced reasoning, complex tasks |
+| **GPT-5** | 128K+ | \$2.50 / \$10 per 1M | Advanced coding, agentic workflows, complex reasoning |
+| **GPT-4o** | 128K | \$2.50 / \$10 per 1M | General-purpose, balanced tasks, multimodal |
 | **GPT-4o mini** | 128K | \$0.15 / \$0.60 per 1M | High-volume, cost-sensitive tasks |
 
-**Key Features:** Strong general performance, proven reliability
+**Key Features:** Strong general performance, proven reliability, multimodal capabilities
 </Accordion>
 
 <Accordion title="Anthropic (Claude) Models" icon="brain">
 
 | Model | Context | Cost (Input/Output) | Best For |
 |-------|---------|---------------------|----------|
-| **Claude Sonnet 4** | 200K | \$3 / \$15 per 1M | Advanced coding, thinking mode, reasoning |
-| **Claude Sonnet 3.7 Thinking** | 200K | \$3 / \$15 per 1M | Complex planning with optional thinking |
-| **Claude Sonnet 3.7** | 200K | \$3 / \$15 per 1M | General tasks, faster responses |
+| **Claude Opus 4.5** | 200K | \$5 / \$25 per 1M | Highest capability, complex reasoning, advanced coding |
+| **Claude Sonnet 4.5** | 200K-1M | \$3 / \$15 per 1M | Balanced performance, coding, agents (1M beta) |
+| **Claude Sonnet 4** | 200K | \$3 / \$15 per 1M | Strong coding and reasoning |
+| **Claude Haiku 4.5** | 200K | \$1 / \$5 per 1M | Fastest, most cost-efficient, near-frontier intelligence |
+| **Claude Sonnet 3.7** | 200K | \$3 / \$15 per 1M | General tasks, proven performance |
 
-**Key Features:** Industry-leading coding (72.7% SWE-bench), strong reasoning
+**Key Features:** Industry-leading coding, strong reasoning, flexible context windows
 </Accordion>
 
 <Accordion title="Google (Gemini) Models" icon="google">
 
 | Model | Context | Cost (Input/Output) | Best For |
 |-------|---------|---------------------|----------|
-| **Gemini 2.5 Pro** | 1M | \$1.25-2.50 / \$10-15 per 1M | Long documents, thinking mode, analysis |
+| **Gemini 3 Pro Preview** | 1M+ | Preview pricing | Next-gen capabilities, advanced analysis (preview) |
+| **Gemini 3 Flash Preview** | 1M+ | Preview pricing | Next-gen speed and efficiency (preview) |
+| **Gemini 2.5 Pro** | 1M | \$1.25-2.50 / \$10-15 per 1M | Long documents, complex analysis |
 | **Gemini 2.5 Flash** | 1M | \$0.30 / \$2.50 per 1M | Speed, real-time, cost-efficiency |
 
-**Key Features:** Largest context window (1M tokens), optimized for speed and document analysis
+**Key Features:** Largest context window (1M+ tokens), optimized for speed and document analysis
+</Accordion>
+
+<Accordion title="Mistral Models" icon="wind">
+
+| Model | Context | Cost (Input/Output) | Best For |
+|-------|---------|---------------------|----------|
+| **Mistral Large Latest** | 128K | Competitive pricing | Strong performance, European AI |
+| **Mistral Medium Latest** | 32K | Lower cost | Balanced tasks, cost-effective |
+
+**Key Features:** Open-source foundation, European data sovereignty option
 </Accordion>
 </AccordionGroup>
 
 <Info>
-**Thinking Models Available:** GPT-5, Claude Sonnet 4, Claude Sonnet 3.7 Thinking, and Gemini 2.5 Pro all support advanced reasoning and thinking capabilities.
+**Pro Models Available:** GPT-5.2, GPT-5, Claude Opus 4.5, Claude Sonnet 4.5, Claude Sonnet 4, and Gemini 2.5 Pro all support advanced reasoning and complex task handling.
 </Info>
 
 ### Quick Selection by Task
 
 <AccordionGroup>
 <Accordion title="Coding & Development" icon="code">
-**Premium:** Claude Sonnet 4 or GPT-5 (thinking mode, large context)  
-**Budget:** GPT-4o mini (87.2% HumanEval, \$0.15/\$0.60)
+**Pro:** Claude Opus 4.5, Claude Sonnet 4.5, GPT-5.2, or GPT-5 (advanced coding, large context)  
+**Budget:** GPT-4o mini (\$0.15/\$0.60) or Claude Haiku 4.5 (\$1/\$5)
 
 <Check>
-Use premium models for production code or complex refactoring. Use GPT-4o mini for scripts and simple tasks.
+Use Pro models for production code or complex refactoring. Use budget models for scripts and simple tasks.
 </Check>
 </Accordion>
 
 <Accordion title="Long Documents & Analysis" icon="chart-bar">
-**Best:** Gemini 2.5 Pro (1M context, thinking mode)  
-**Alternative:** GPT-5 (400K context) or Claude Sonnet 4 (200K context)
+**Best:** Gemini 2.5 Pro (1M context) or Gemini 3 Pro Preview (1M+ context)  
+**Alternative:** Claude Sonnet 4.5 (200K-1M beta), GPT-5.2, or GPT-5
 
 <Tip>
-Gemini 2.5 Pro handles documents over 200K tokens best. For shorter documents needing deep reasoning, use Claude Sonnet 4 or GPT-5.
+Gemini models handle documents over 200K tokens best with their 1M+ context windows. For deep reasoning on shorter documents, use Claude Opus 4.5, Claude Sonnet 4.5, or GPT-5.2.
 </Tip>
 </Accordion>
 
 <Accordion title="High-Volume Tasks" icon="bolt">
 **Best:** GPT-4o mini (lowest cost at \$0.15/\$0.60)  
-**Alternative:** Gemini 2.5 Flash (faster, 1M context, \$0.30/\$2.50)
+**Alternative:** Gemini 2.5 Flash (faster, 1M context, \$0.30/\$2.50) or Claude Haiku 4.5 (\$1/\$5)
 
 <Warning>
-Cost differences compound quickly at scale. GPT-4o mini can save thousands monthly on high-volume agents.
+Cost differences compound quickly at scale. GPT-4o mini and Claude Haiku 4.5 can save thousands monthly on high-volume agents.
 </Warning>
 </Accordion>
 
 <Accordion title="Complex Reasoning & Planning" icon="brain">
-**Models with Thinking Mode:** GPT-5, Claude Sonnet 4, Claude Sonnet 3.7 Thinking, Gemini 2.5 Pro
+**Premium Models for Complex Tasks:** GPT-5.2, GPT-5, Claude Opus 4.5, Claude Sonnet 4.5, Gemini 2.5 Pro
 
 **Choose based on needs:**
-- **Long context:** Gemini 2.5 Pro (1M tokens)
-- **Best coding:** Claude Sonnet 4 (72.7% SWE-bench)
-- **Balanced:** GPT-5 (400K context, 90% caching)
-- **Flexible:** Claude Sonnet 3.7 (toggle thinking on/off)
+- **Long context:** Gemini 2.5 Pro (1M tokens) or Claude Sonnet 4.5 (1M beta)
+- **Best coding:** Claude Opus 4.5 or Claude Sonnet 4.5 (industry-leading)
+- **Latest capabilities:** GPT-5.2 (newest OpenAI model)
+- **Balanced:** GPT-5 or Claude Sonnet 4.5
+- **Next-gen preview:** Gemini 3 Pro Preview
 
 <Info>
-Enable thinking mode only for genuinely complex reasoning tasks. For most tasks, standard modes suffice.
+Use premium models for genuinely complex reasoning, multi-step workflows, and agentic tasks. For simpler tasks, fast models like GPT-4o mini or Claude Haiku 4.5 suffice.
 </Info>
 </Accordion>
 
 <Accordion title="Speed & Real-Time" icon="gauge-high">
-**Fast:** Gemini 2.5 Flash (optimized latency, 1M context)  
-**Fastest & Cheapest:** GPT-4o mini (lowest cost, great speed)
+**Fast:** Gemini 2.5 Flash (optimized latency, 1M context) or Gemini 3 Flash Preview (next-gen speed)  
+**Fastest & Cheapest:** GPT-4o mini (lowest cost, great speed) or Claude Haiku 4.5 (near-frontier intelligence)
 
 Real-time chat, live data processing, interactive apps, streaming
 </Accordion>
@@ -501,13 +518,13 @@ graph TD
     A --> C[Long Documents]
     A --> D[Cost/Volume]
     A --> E[Speed]
-    A --> F[Thinking/Reasoning]
+    A --> F[Complex Reasoning]
     
-    B --> B1[Claude Sonnet 4<br/>or GPT-5]
-    C --> C1[Gemini 2.5 Pro<br/>1M context]
-    D --> D1[GPT-4o mini<br/>Cost: 0.15/0.60]
-    E --> E1[Gemini 2.5 Flash<br/>or GPT-4o mini]
-    F --> F1[GPT-5, Claude Sonnet 4,<br/>Claude 3.7 Thinking,<br/>or Gemini 2.5 Pro]
+    B --> B1[Claude Opus 4.5<br/>Claude Sonnet 4.5<br/>or GPT-5.2]
+    C --> C1[Gemini 2.5 Pro<br/>Gemini 3 Pro Preview<br/>1M+ context]
+    D --> D1[GPT-4o mini<br/>Claude Haiku 4.5<br/>Cost: 0.15-1.00]
+    E --> E1[Gemini 2.5 Flash<br/>GPT-4o mini<br/>Claude Haiku 4.5]
+    F --> F1[GPT-5.2, GPT-5<br/>Claude Opus 4.5<br/>Claude Sonnet 4.5<br/>Gemini 2.5 Pro]
     
     style B1 fill:#7B68EE,stroke:#5A4DB5,stroke-width:2px,color:#fff
     style C1 fill:#FFA94D,stroke:#CC8539,stroke-width:2px,color:#fff
@@ -531,7 +548,7 @@ Fine-tune agent behavior with these parameters. Defaults work for most cases, yo
 - Default usually sufficient for most agents
 
 <Tip>
-Check your model's context limit: GPT-4o (128K), Claude Sonnet 4 (200K), Gemini 2.5 Pro (1M)
+Check your model's context limit: GPT-4o (128K), GPT-5/5.2 (128K+), Claude models (200K-1M), Gemini models (1M+)
 </Tip>
 </Accordion>
 

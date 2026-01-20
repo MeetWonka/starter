@@ -1,9 +1,9 @@
 ---
-title: "Connect Your External Data Sources and Software (MCP)"
-description: "Connect WonkaChat to your business tools and data sources to access real information and take actions on your behalf."
+title: "External Connections"
+description: "Connect WonkaChat to your softwares, business tools and data sources to access real information and take actions on your behalf."
 ---
 
-WonkaChat can connect to your business tools, databases, and software, enabling you to access real information and take actions through natural conversation. These are called **MCP connections**.
+WonkaChat can connect to your business tools, databases, and software, enabling you to access real information and take actions through natural conversation. These are called **Connectors** or **MCP connections** for more technical people.
 
 <Info>
 Want to understand the technical details of how these connections work? 
@@ -41,10 +41,14 @@ Access live data from your systems rather than relying on static knowledge or ma
 
 <Steps>
 <Step title="Start a connection">
-Click the MCP connection button for any platform you want to connect (like Outlook, Gmail, or Slack) and provide your credentials once.
+Go to the settings and connect to the tool (like Outlook, Gmail, or Slack) by providing your credentials. Then add it to your chat.
+
+<Frame caption="Outlook Mail button location">
+<img src="/images/full-co.gif" alt="Outlook Mail button" />
+</Frame>
 
 <Info>
-We call these connections to external data-sources or softwares "MCP" (Model Context Protocol). 
+These external connections are called "MCP" (Model Context Protocol). 
 
 While **you don't need to understand the technical details to use them**, you can learn more in the [Technical Details](#technical-details) section if you're curious.
 </Info>
@@ -148,59 +152,96 @@ This example shows how connecting your business tools enables WonkaChat to move 
 
 ## Available External Connections (MCP)
 
-WonkaChat supports MCP connections to **75+ business tools** across all major categories. Here are some of the most popular connections:
+WonkaChat supports MCP connections to **40+ business tools** across all major categories. Here are all the currently available connections:
 
 <AccordionGroup>
-<Accordion title="Communication & Collaboration" icon="comments">
-Connect your email, messaging, and scheduling tools for seamless communication management.
+<Accordion title="Microsoft 365 & Productivity" icon="microsoft">
+Connect your Microsoft tools for comprehensive office productivity.
 
 **Available Connections:**
-- Outlook, Gmail (email)
-- Slack, Discord, WhatsApp (messaging)
-- Google Calendar, Cal.com, Calendly (scheduling)
+- Outlook Mail (email)
+- Outlook Calendar (scheduling)
+- Microsoft Teams (communication)
+- OneDrive (storage)
+- Excel (spreadsheets)
+- Word (documents)
+</Accordion>
+
+<Accordion title="Google Workspace" icon="google">
+Integrate with Google's suite of productivity and collaboration tools.
+
+**Available Connections:**
+- Gmail (email)
+- Google Calendar (scheduling)
+- Google Drive (storage)
+- Google Docs (documents)
+- Google Sheets (spreadsheets)
+</Accordion>
+
+<Accordion title="Project Management & Collaboration" icon="list-check">
+Connect your project management and team collaboration platforms.
+
+**Available Connections:**
+- Asana (project management)
+- ClickUp (productivity)
+- Jira (issue tracking)
+- Linear (project management)
+- Monday (work management)
+- Notion (knowledge base)
+- Confluence (documentation)
+</Accordion>
+
+<Accordion title="CRM & Sales" icon="handshake">
+Integrate with customer relationship management and sales platforms.
+
+**Available Connections:**
+- Salesforce (CRM)
+- HubSpot (CRM & marketing)
+- Attio (CRM)
+- Close (sales CRM)
+- Klaviyo (marketing automation)
 </Accordion>
 
 <Accordion title="Development & Engineering" icon="code">
-Integrate with your development tools, repositories, and project management platforms.
+Connect your development tools, repositories, and deployment platforms.
 
 **Available Connections:**
-- GitHub, GitLab (version control)
-- Jira, Confluence, Linear (project management)
-- Vercel, Cloudflare (deployment)
+- GitHub (version control)
+- GitLab (version control)
+- Vercel (deployment)
+- Supabase (database)
 </Accordion>
 
-<Accordion title="Business Operations" icon="briefcase">
-Connect CRM, productivity tools, and document storage for streamlined operations.
+<Accordion title="Communication & Scheduling" icon="comments">
+Integrate messaging and scheduling tools for seamless communication.
 
 **Available Connections:**
-- Salesforce, HubSpot, Pipedrive (CRM)
-- Notion, ClickUp, Asana (productivity)
-- Google Drive, Dropbox, OneDrive (storage)
+- Slack (team messaging)
+- Cal.com (scheduling)
+- LinkedIn (professional networking)
 </Accordion>
 
-<Accordion title="Data & Analytics" icon="chart-line">
-Access databases, analytics platforms, and financial tools for data-driven decisions.
+<Accordion title="Storage & Databases" icon="database">
+Connect file storage and data management platforms.
 
 **Available Connections:**
-- Postgres, Supabase (databases)
-- Mixpanel, PostHog, Google Sheets (analytics)
-- QuickBooks, Stripe (finance)
+- Airtable (database)
+- Box (storage)
+- Fathom (analytics)
 </Accordion>
 
-<Accordion title="Specialized Connections" icon="stars">
-Connect design, support, e-commerce, and research tools for specific workflows.
+<Accordion title="Design & Specialized Tools" icon="palette">
+Integrate design and specialized business tools.
 
 **Available Connections:**
 - Figma (design)
-- Zendesk, Freshdesk (customer support)
-- Shopify (e-commerce)
-- Perplexity, Brave Search (research)
+- Odoo (ERP)
 </Accordion>
 </AccordionGroup>
 
-<Tip>
-New MCP connections are added regularly. If you need a specific integration that's not listed, contact our support team.
-</Tip>
+<Info>
+Need a connection that's not listed? [Contact our support team](/support-resources/getting-help) to request new MCP integrations. We're constantly expanding our connection library based on user needs.
+</Info>
 
 </Tab>
 
