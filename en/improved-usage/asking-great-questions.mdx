@@ -1,0 +1,560 @@
+---
+title: "Asking Great Questions"
+description: "Master the fundamentals of effective prompting and advanced techniques to get the best results from AI models."
+---
+
+Getting high-quality responses from AI models starts with well-crafted questions. This guide progresses from basic principles to advanced techniques, helping you continuously improve your prompting skills.
+
+<Info>
+The quality of AI responses directly correlates with the clarity and structure of your prompts. Small improvements in how you ask questions can dramatically improve results.
+</Info>
+
+---
+
+## Basic Prompting Principles
+
+The foundation of effective AI interaction:
+
+- **Be clear and specific** - Vague questions produce vague answers.
+- **Use positive instructions** - Focus on what you want, not what you don't want.
+- **Provide context** - Give relevant background information to tailor responses.
+
+<AccordionGroup>
+<Accordion title="Be clear and specific" icon="bullseye">
+The more specific your request, the better the response.
+
+**Instead of:**
+```
+Tell me about marketing.
+```
+
+**Try:**
+```
+Explain the three most effective digital marketing strategies for 
+a B2B SaaS company with a $10,000 monthly budget.
+```
+</Accordion>
+
+<Accordion title="Use positive instructions" icon="check">
+Focus on what you want the AI to do, rather than what you don't want.
+
+**Instead of:**
+```
+Don't be too technical.
+```
+
+**Try:**
+```
+Explain this in simple terms that a non-technical business owner 
+would understand.
+```
+</Accordion>
+
+<Accordion title="Provide context" icon="circle-info">
+Give the AI relevant background information to tailor its response.
+
+**Example:**
+```
+I'm a product manager at a fintech startup. We're deciding between 
+microservices and monolithic architecture for our MVP. What factors 
+should we consider given our 3-month launch timeline and team of 
+4 developers?
+```
+
+<Tip>
+Think of the AI as a knowledgeable colleague who needs context to give you the best advice.
+</Tip>
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Context Setting Techniques
+
+Proper context ensures the AI understands your goals, audience, and constraints.
+
+<CardGroup cols={2}>
+<Card title="Define Your Audience" icon="users">
+Specify who will use or read the response to adjust complexity and tone.
+</Card>
+
+<Card title="Set the Scope" icon="bullseye">
+Clearly define boundaries to prevent overly broad or narrow responses.
+</Card>
+
+<Card title="Provide Examples" icon="lightbulb">
+Show examples of what you're looking for to guide the output style.
+</Card>
+
+<Card title="State Your Goal" icon="flag-checkered">
+Explain what you'll do with the response to get more actionable results.
+</Card>
+</CardGroup>
+
+### Effective Context-Setting Pattern
+
+Use this structure to provide comprehensive context:
+
+```
+[Role/Perspective]: I'm a [your role] working on [project/task]
+
+[Situation]: Currently, [describe your situation]
+
+🎯 [GOAL]: What I need to achieve
+
+📏 [SCOPE - Constraints]: 
+- [Constraint 1]
+- [Constraint 2]
+- [Constraint 3]
+
+👥 [AUDIENCE]: Who will use/read this or explain the format the output needs to have
+
+💡 [EXAMPLES]: Relevant examples or current approach (if applicable)
+
+[OUTPUT]: Specify the exact format you want for the answer here. For example, request a table, summary, list of action steps, email draft, or bullet points - whatever would be most useful for your people or stakeholders.
+
+[Your specific question]
+```
+
+**Example:**
+```
+Role: I'm a data analyst at a healthcare startup
+
+Situation: We have patient satisfaction survey data from 500 respondents 
+across 3 clinic locations over 6 months.
+
+🎯 GOAL: Identify the top 3 factors affecting patient satisfaction to 
+present to our executive team
+
+📏 SCOPE - Constraints:
+- Focus on actionable insights our clinics can implement
+- Results must be statistically significant (p < 0.05)
+- 6-month timeframe across 3 clinic locations
+- Use Tableau for data visualization (required by our organization)
+
+👥 AUDIENCE: Non-technical executives who need clear, actionable insights
+- Prefer visual presentations over raw statistics
+- Need to understand business impact
+
+💡 EXAMPLES: Current approach includes basic satisfaction scores, but 
+executives have requested deeper analysis linking satisfaction to specific 
+operational factors
+
+Output:
+Please provide your answer in the following format:
+
+- [Factor Name]: [Brief explanation or insight]
+- [Factor Name]: [Brief explanation or insight]
+- [Factor Name]: [Brief explanation or insight]
+
+For example:
+- Waiting times: How quickly patients are attended impacts satisfaction
+- Staff friendliness: Positive staff interactions improve experience
+- Clarity of instructions: Patients value clear after-visit information
+
+Question: What analysis approach would you recommend, and what 
+visualization types should I use for the executive presentation?
+```
+
+<Check>
+This structure applies all four context-setting techniques: **stating your goal** 🎯, **defining your audience** 👥, **setting the scope** 📏, and **providing relevant examples** 💡.
+</Check>
+
+### See It In Action: Video Example
+
+Watch the following video for a practical demonstration of using these best practices to instruct an AI agent and achieve high-quality results.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/rfY0m-yQ3fE"
+  title="How to Write Effective Instructions for an AI Agent"
+  frameBorder="0"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Info>
+This video guides you step-by-step in applying clarity, positive instructions, and effective context setting when prompting an AI agent.
+</Info>
+
+
+---
+
+## Structured Output Requests
+
+Requesting specific formats helps you get responses that are immediately usable.
+
+<AccordionGroup>
+<Accordion title="Lists and Bullet Points" icon="list">
+Request organized information in scannable format.
+
+**Example:**
+```
+List the 5 most important considerations when choosing a database 
+for a real-time analytics platform. For each point:
+- State the consideration
+- Explain why it matters
+- Provide one concrete example
+```
+</Accordion>
+
+<Accordion title="Tables and Comparisons" icon="table">
+Get side-by-side comparisons for decision-making.
+
+**Example:**
+```
+Create a comparison table of React, Vue, and Angular with these columns:
+- Framework name
+- Learning curve (easy/moderate/steep)
+- Best use case
+- Community size
+- Enterprise adoption
+```
+</Accordion>
+
+<Accordion title="Step-by-Step Instructions" icon="list-ol">
+Request procedures in sequential format.
+
+**Example:**
+```
+Provide step-by-step instructions to set up CI/CD for a Node.js 
+application using GitHub Actions. Include:
+1. Prerequisites needed
+2. Each configuration step
+3. How to verify each step worked
+4. Common troubleshooting tips
+```
+</Accordion>
+
+<Accordion title="Code Examples" icon="code">
+Request working code with explanations.
+
+**Example:**
+```
+Write a Python function to validate email addresses using regex.
+Include:
+- Complete, runnable code with type hints
+- Inline comments explaining the regex pattern
+- Example usage
+- Edge cases it handles
+```
+</Accordion>
+
+<Accordion title = "Output Length and Format" icon="book">
+
+Specify desired length and structure to get appropriately detailed responses.
+
+**Examples:**
+```
+Summarize this in exactly 3 bullet points.
+Provide a comprehensive analysis (approximately 500 words).
+Give me a brief one-sentence answer first, then expand with details.
+```
+</Accordion>
+</AccordionGroup>
+---
+
+## Prompt Engineering
+
+Use tailored prompt engineering strategies to get high-quality, targeted responses from AI. Choose the approach that matches your needs and your current experience level.
+
+<Tabs>
+<Tab title="Basic Strategies">
+
+Master these foundational techniques to consistently get better results:
+<AccordionGroup>
+<Accordion title="Iterative refinement" icon="arrows-rotate">
+Don't expect the perfect answer on your first try. Adjust your prompt each time based on the previous AI response.
+
+<Steps>
+<Step title="Start with a basic prompt">
+Begin with a clear but simple question.
+
+```
+Explain how context windows work in AI models.
+```
+</Step>
+
+<Step title="Evaluate the response">
+Check if the answer meets your needs. Was it too technical, too vague, or off-topic?
+</Step>
+
+<Step title="Refine and add specificity">
+Adjust your question to clarify what you want.
+
+```
+Explain how context windows work in AI models in simple terms. 
+Use an analogy to help a non-technical person understand, and 
+explain why this matters for everyday AI users.
+```
+</Step>
+
+<Step title="Iterate until satisfied">
+Repeat this process until the answer matches your needs.
+
+<Check>
+You’ll learn what works best for your goals by refining each time.
+</Check>
+</Step>
+</Steps>
+</Accordion>
+
+<Accordion title="Building on responses" icon="comments">
+Use the AI’s previous answers as a springboard for further exploration or greater depth.
+
+**Pattern:**
+```
+First prompt: "Explain the benefits of microservices architecture."
+
+Follow-up: "You mentioned scalability as a key benefit. Can you provide 
+a concrete example of how microservices enabled scalability for a company 
+handling rapid growth?"
+
+Further follow-up: "Given those scalability benefits, what are the main 
+challenges small teams face when adopting microservices?"
+```
+
+<Tip>
+This approach leads to more natural, conversational, and productive exploration of complex topics.
+</Tip>
+</Accordion>
+
+<Accordion title="Assign roles for perspective" icon="user-tie">
+Ask the AI to take on a specific professional or subject matter expert role.
+
+**Example:**
+```
+You are an experienced DevOps engineer with expertise in Kubernetes. 
+Review this deployment configuration and identify potential security 
+vulnerabilities and performance bottlenecks.
+
+[Your configuration here]
+```
+</Accordion>
+
+<Accordion title="Use constraints effectively" icon="sliders">
+Clearly specify response rules to limit scope, structure, or style.
+
+**Example:**
+```
+Analyze this dataset with the following constraints:
+- Focus only on Q4 2024 data
+- Exclude outliers beyond 2 standard deviations
+- Present findings in order of business impact
+- Include statistical confidence levels
+```
+</Accordion>
+</AccordionGroup>
+</Tab>
+
+<Tab title="Advanced Techniques">
+
+Level up your prompting with these more sophisticated approaches:
+<AccordionGroup>
+<Accordion title="Chain-of-thought prompting" icon="list-ol">
+Ask for step-by-step reasoning to see how the AI arrives at a solution.
+
+**Example:**
+```
+Solve this problem step-by-step, explaining your reasoning at each stage:
+
+Our e-commerce site has a 68% cart abandonment rate. Average cart 
+value is $120. We have 50,000 monthly visitors with a 12% add-to-cart 
+rate. Calculate the potential monthly revenue increase if we reduce 
+abandonment to 55%, and explain what interventions might achieve this.
+
+Show your calculations and reasoning for each step.
+```
+
+**Why it works:** Step-by-step requests generate more transparent, verifiable answers and reduce mistakes.
+</Accordion>
+
+<Accordion title="Few-shot learning" icon="graduation-cap">
+Show a few example inputs and the type of answers you expect. The AI will mimic your structure and approach.
+
+**Example:**
+```
+I'll show you examples of customer feedback and how I want them 
+categorized, then you categorize new feedback the same way:
+
+Example 1:
+Feedback: "The app crashes every time I try to upload photos"
+Category: Bug - Critical
+Sentiment: Frustrated
+Action: Escalate to engineering
+
+Example 2:
+Feedback: "Love the new dark mode! Makes it easier to use at night"
+Category: Feature feedback - Positive
+Sentiment: Satisfied
+Action: Share with product team
+
+Example 3:
+Feedback: "It would be great if we could export data to CSV"
+Category: Feature request
+Sentiment: Neutral
+Action: Add to feature backlog
+
+Now categorize this feedback:
+"The search function doesn't find exact matches sometimes"
+```
+</Accordion>
+
+<Accordion title="Zero-shot prompting" icon="wand-magic-sparkles">
+Use this when your task is simple and expectations are obvious - no examples needed.
+
+**Best for:**
+- Clear tasks like summarization, translation, or classification
+- When you want unbiased answers
+
+**Example:**
+```
+Translate the following English text to French, maintaining the 
+professional tone:
+
+[Your text here]
+```
+</Accordion>
+
+<Accordion title="Prompt chaining" icon="link">
+Break bigger challenges into smaller, sequential prompts. Use the output from one step as the input to the next.
+
+**Example sequence:**
+```
+Prompt 1: "Extract all customer pain points mentioned in these 
+support tickets: [tickets]"
+
+Prompt 2: "Take these pain points: [output from prompt 1] 
+and group them into themes."
+
+Prompt 3: "For each theme: [output from prompt 2], suggest 
+one product improvement that addresses multiple pain points."
+```
+
+**Why chain prompts:** 
+- Breaks up complex tasks
+- Lets you check (and fix) partial steps
+- Increases accuracy on multi-stage workflows
+</Accordion>
+
+<Accordion title="Template creation" icon="file-code">
+Save time by building your own prompt templates for tasks you repeat often. Store them in the [Prompt Library](/improved-usage/prompt-library).
+
+**Template Example:**
+```
+Analyze this {{document_type}} for a {{target_audience}} audience.
+
+Document:
+{{content}}
+
+Provide:
+1. Executive summary (2-3 sentences)
+2. Key insights (3-5 bullet points)
+3. Recommended actions
+4. Potential risks or considerations
+
+Format: {{output_format:bullets|paragraphs|table}}
+```
+
+<Info>
+For details on managing and sharing prompts, see the [Prompt Library](/improved-usage/prompt-library).
+</Info>
+</Accordion>
+
+<Accordion title="Using tools in prompts" icon="wrench">
+Direct the AI to use plugins or integrations when available, like business data connectors.
+
+**Example:**
+```
+Use the database connection tool to query our customer table and find 
+all customers who signed up in the last 30 days but haven't made a 
+purchase. Then analyze the data and suggest targeted retention strategies.
+```
+
+<Info>
+For more on AI tool integration, visit [Tools Connection](/tools-connection/introduction).
+</Info>
+</Accordion>
+</AccordionGroup>
+
+<Info>
+For further learning on prompt engineering, see guides from [OpenAI](https://platform.openai.com/docs/guides/prompt-engineering), [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), and [Google](https://ai.google.dev/gemini-api/docs/prompting-intro).
+</Info>
+</Tab>
+</Tabs>
+
+
+
+## Common Mistakes to Avoid
+
+<AccordionGroup>
+<Accordion title="Being Too Vague">
+**Problem:** "Tell me about AI."
+
+**Better:** "Explain the key differences between supervised and unsupervised machine learning for a business analyst evaluating which approach to use for customer segmentation."
+</Accordion>
+
+<Accordion title="Asking Multiple Questions at Once">
+**Problem:** "How do I improve our SEO, should we use social media ads, and what content strategy works best for B2B?"
+
+**Better:** Break into separate, focused prompts or explicitly request separate treatment of each question.
+</Accordion>
+
+<Accordion title="Providing No Context">
+**Problem:** "Is this a good approach?" [without explaining what 'this' is or what your goals are]
+
+**Better:** Provide the approach, your context, your goals, and criteria for "good."
+</Accordion>
+
+<Accordion title="Assuming Prior Knowledge">
+**Problem:** Starting a new conversation with "Continue from where we left off" without re-establishing context.
+
+**Why this fails:** AI models cannot access information from previous conversations. Each new conversation starts with an empty context window, so the AI has no way to retrieve or reference what was discussed before.
+
+<Info>
+Learn more about context windows and how they work in [Conversation Management](/improved-usage/conversation-management).
+</Info>
+
+**Better:** Briefly summarize relevant context from previous conversations when starting a new chat.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Best Practices Summary
+
+<CardGroup cols={2}>
+<Card title="Start Simple" icon="seedling">
+Begin with a clear basic prompt, then add complexity as needed.
+</Card>
+
+<Card title="Be Specific" icon="bullseye">
+Vague questions get vague answers. Provide details and context.
+</Card>
+
+<Card title="Iterate" icon="arrows-rotate">
+Refine your prompts based on the responses you receive.
+</Card>
+
+<Card title="Save What Works" icon="bookmark">
+Build a library of effective prompts for recurring tasks.
+</Card>
+</CardGroup>
+
+<Tip>
+The best prompt is one that gets you the result you need. Experiment with different approaches and learn what works for your use cases.
+</Tip>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+<Card title="Conversation Management" icon="comments" href="/en/improved-usage/conversation-management">
+Learn how to manage long conversations and understand context windows.
+</Card>
+
+<Card title="Prompt Library" icon="bookmark" href="/en/improved-usage/prompt-library">
+Save and reuse your best prompts with variables for efficiency.
+</Card>
+</CardGroup>

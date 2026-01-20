@@ -1,0 +1,447 @@
+---
+title: "Contrôle d'accès"
+description: "Gérez les rôles utilisateur, l'accès utilisateur, les autorisations des agents et les restrictions d'outils pour contrôler ce que les agents IA peuvent faire dans votre organisation."
+---
+
+Contrôlez qui a accès à quoi dans votre organisation WonkaChat. Gérez les utilisateurs, attribuez des rôles, définissez des autorisations granulaires pour les agents IA et restreignez les outils que les agents peuvent utiliser pour assurer une collaboration sécurisée.
+
+<Info>
+Le contrôle d'accès implémente le principe du moindre privilège qui permet aux utilisateurs et agents de ne recevoir que les autorisations dont ils ont besoin pour faire leur travail.
+</Info>
+
+---
+
+## Gestion des utilisateurs
+
+Ajoutez, gérez et supprimez des utilisateurs dans votre organisation via le panneau Paramètres.
+
+<Steps>
+<Step title="Accéder aux paramètres">
+Cliquez sur votre nom en bas à gauche du tableau de bord WonkaChat, puis sélectionnez **Gestion des utilisateurs**. Seuls les administrateurs peuvent accéder aux fonctions de gestion des utilisateurs.
+
+</Step>
+
+<Step title="Inviter de nouveaux utilisateurs">
+Envoyez des invitations par e-mail aux utilisateurs que vous souhaitez ajouter à votre organisation. Les utilisateurs reçoivent un lien d'invitation pour créer leur compte et rejoindre.
+
+</Step>
+
+<Step title="Attribuer un rôle">
+Choisissez si le nouvel utilisateur sera un **Admin** ou un **Utilisateur** lors de l'envoi de l'invitation.
+
+<Check>
+Vous pouvez changer les rôles utilisateur à tout moment après qu'ils aient rejoint l'organisation.
+</Check>
+</Step>
+
+<Step title="Gérer les utilisateurs existants">
+
+<AccordionGroup>
+<Accordion title="Changer les rôles" icon="user-gear">
+Promouvoir les utilisateurs à administrateurs ou retirer les privilèges admin au fur et à mesure que les responsabilités changent.
+
+<Warning>
+Les administrateurs peuvent gérer leurs propres droits admin, mais ne peuvent pas outrepasser ou retirer les privilèges admin d'autres administrateurs.
+</Warning>
+</Accordion>
+
+<Accordion title="Supprimer des utilisateurs" icon="user-slash">
+Supprimez définitivement les utilisateurs de votre organisation. Bien que vous puissiez facilement supprimer et réajouter des utilisateurs, toutes les données associées au compte sont définitivement supprimées et ne peuvent pas être récupérées.
+
+<Warning>
+Supprimer un utilisateur supprime toutes ses données de manière irréversible. Vous pouvez réajouter l'utilisateur plus tard, mais ses agents précédents, configurations et paramètres seront partis pour toujours. Considérez la désactivation pour un retrait d'accès temporaire.
+</Warning>
+</Accordion>
+</AccordionGroup>
+</Step>
+</Steps>
+
+
+---
+
+## Autorisations basées sur les rôles
+
+WonkaChat utilise un système simple à deux rôles pour des limites de permission claires.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/HiCEHQkDpms"
+  title="Gouvernance et RBAC expliqués"
+  frameBorder="0"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+### Rôles disponibles
+
+<CardGroup cols={2}>
+<Card title="Utilisateur" icon="user">
+**Création d'agent personnel**
+
+• Créer leurs propres agents IA personnels\
+• Utiliser les agents partagés par les administrateurs\
+• Modifier les agents partagés uniquement si autorisé\
+• Accéder uniquement aux agents créés personnellement ou aux agents partagés par les admins
+
+<Info>
+Les utilisateurs ne peuvent pas partager des agents avec d'autres, seuls les administrateurs peuvent rendre des agents disponibles à l'échelle de l'organisation.
+</Info>
+</Card>
+
+<Card title="Administrateur" icon="user-shield">
+**Contrôle organisationnel complet**
+
+• Gérer tous les utilisateurs\
+• Créer, modifier et partager des agents à l'échelle de l'organisation\
+• Contrôler les autorisations des agents (qui peut voir/modifier)\
+• Promouvoir les utilisateurs à des rôles d'administrateur
+
+<Check>
+Les admins ont un contrôle complet sauf qu'ils ne peuvent pas outrepasser les privilèges d'autres administrateurs.
+</Check>
+</Card>
+</CardGroup>
+
+<Tip>
+Gardez le nombre d'administrateurs limité à ceux qui ont besoin d'un contrôle organisationnel complet. La plupart des membres de l'équipe devraient avoir des rôles d'Utilisateur.
+</Tip>
+
+### Portée de visibilité des agents
+
+<Tabs>
+<Tab title="Agents personnels">
+Les agents créés par les utilisateurs sont **privés par défaut** et visibles uniquement par le créateur.
+
+Les utilisateurs ne peuvent pas partager leurs agents personnels à l'échelle de l'organisation. Seuls les administrateurs peuvent partager des agents.
+
+<Tip>
+Si un utilisateur crée un agent précieux et veut le partager, il devrait contacter un administrateur pour l'examiner et le partager.
+</Tip>
+</Tab>
+
+<Tab title="Agents partagés">
+Les agents partagés par les administrateurs peuvent être rendus disponibles à :
+- **Utilisateurs spécifiques** : Sélectionnez des individus qui peuvent accéder à l'agent
+- **Organisation entière** : Tous les utilisateurs de l'organisation
+
+Les admins contrôlent le niveau d'autorisation exact (Visualiseur, Éditeur ou Propriétaire) pour chaque agent partagé.
+
+<Check>
+Les agents partagés apparaissent dans les listes d'agents des utilisateurs en fonction des autorisations qui leur ont été accordées.
+</Check>
+</Tab>
+</Tabs>
+
+---
+
+## Partager des agents IA
+
+Les administrateurs peuvent partager les agents IA directement depuis le panneau Constructeur d'agent.
+
+<Tabs>
+<Tab title="Je suis administrateur">
+
+En tant qu'administrateur, vous contrôlez le partage d'agent depuis le panneau Constructeur d'agent.
+
+### Comment partager un agent
+
+<Steps>
+<Step title="Ouvrir le Constructeur d'agent">
+Naviguez vers l'agent que vous souhaitez partager (ou créez-en un nouveau) dans le Constructeur d'agent.
+
+</Step>
+
+<Step title="Configurer les paramètres de partage">
+Dans le panneau Constructeur d'agent, vous trouverez les options de partage :
+
+<Frame caption="Emplacement du partage d'agent">
+<img src="../../images/share.png" alt="Partage d'agent montrant les options de partage" />
+</Frame>
+
+**Visibilité :**
+- Partager avec toute l'organisation, ou
+- Partager avec des utilisateurs spécifiques
+
+**Niveaux d'autorisation :**
+- **Visualiseur** : Peut voir et utiliser l'agent (pas de modifications)
+- **Éditeur** : Peut voir, utiliser et modifier l'agent
+- **Propriétaire** : A le contrôle complet incluant le partage et la suppression
+
+<Tip>
+Pour les agents organisationnels importants, utilisez les autorisations de Visualiseur pour la plupart des utilisateurs et n'accordez l'accès Éditeur qu'aux collaborateurs de confiance.
+</Tip>
+</Step>
+
+<Step title="Examiner l'accès aux outils">
+Avant de partager, vérifiez à quels outils et connexions MCP l'agent a accès. Assurez-vous qu'ils sont appropriés pour tous les utilisateurs qui auront accès.
+
+<Warning>
+Lorsque les utilisateurs interagissent avec un agent partagé, l'agent hérite des autorisations de cet utilisateur dans les outils connectés. Considérez à quelles données les différents utilisateurs peuvent accéder.
+</Warning>
+</Step>
+
+<Step title="Sauvegarder et partager">
+Sauvegardez votre configuration de partage. L'agent devient immédiatement disponible aux utilisateurs spécifiés en fonction des autorisations que vous avez définies.
+
+<Check>
+Les utilisateurs verront l'agent partagé dans leur liste d'agents et peuvent commencer à l'utiliser selon leurs autorisations accordées.
+</Check>
+</Step>
+</Steps>
+
+</Tab>
+
+<Tab title="Je suis utilisateur">
+
+En tant qu'utilisateur standard, vous pouvez créer des agents personnels mais avez besoin de l'implication de l'administrateur pour les partager à l'échelle de l'organisation.
+Si vous créez un agent qui bénéficierait aux autres, contactez un administrateur pour demander un partage à l'échelle de l'organisation.
+
+Fournissez :
+- Description claire de ce que fait l'agent
+- Cas d'usage prévus
+- Pourquoi cela bénéficierait à l'organisation
+- Quels outils il nécessite
+
+<Tip>
+Les administrateurs doivent examiner les agents pour la sécurité, l'accès aux outils et la conformité avant de les partager largement.
+</Tip>
+
+### Utiliser les agents partagés
+
+Lorsqu'un administrateur partage un agent, il peut attribuer l'un des trois niveaux d'autorisation :
+
+<AccordionGroup>
+<Accordion title="Visualiseur" icon="eye">
+**Peut voir et utiliser l'agent mais ne peut pas le modifier**
+
+Les visualiseurs peuvent :
+- Utiliser l'agent dans les conversations
+- Voir l'agent dans leur liste d'agents
+- Accéder aux capacités de l'agent
+
+Les visualiseurs ne peuvent pas :
+- Modifier la configuration, prompts ou outils de l'agent
+- Partager l'agent avec d'autres
+- Changer les paramètres de l'agent
+
+<Check>
+L'autorisation de visualiseur est idéale pour la plupart des utilisateurs qui ont besoin d'utiliser l'agent sans faire de changements.
+</Check>
+</Accordion>
+
+<Accordion title="Éditeur" icon="pen-to-square">
+**Peut voir et modifier l'agent**
+
+Les éditeurs peuvent :
+- Utiliser l'agent dans les conversations
+- Voir la configuration et les paramètres de l'agent
+- Modifier les prompts, outils et configuration de l'agent
+- Faire des changements qui affectent tous les utilisateurs
+
+Les éditeurs ne peuvent pas :
+- Partager l'agent avec d'autres
+- Changer la propriété ou supprimer l'agent
+
+<Warning>
+Accorder l'autorisation d'éditeur permet aux utilisateurs de changer le comportement de l'agent pour tout le monde. Utilisez ceci avec précaution pour le développement collaboratif d'agents.
+</Warning>
+</Accordion>
+
+<Accordion title="Propriétaire" icon="crown">
+**A le contrôle complet sur l'agent incluant son partage**
+
+Les propriétaires peuvent :
+- Utiliser l'agent dans les conversations
+- Voir et modifier tous les paramètres de l'agent
+- Partager l'agent avec d'autres (attribuer les autorisations Visualiseur/Éditeur/Propriétaire)
+- Changer ou transférer la propriété
+- Supprimer l'agent
+
+<Info>
+Seuls les administrateurs peuvent être assignés comme propriétaires lors du partage d'agents à l'échelle de l'organisation. Le créateur de l'agent est automatiquement le propriétaire original.
+</Info>
+</Accordion>
+</AccordionGroup>
+
+</Tab>
+</Tabs>
+
+
+---
+
+## Restriction d'outils
+
+Lors de la création d'un agent IA, vous pouvez contrôler exactement à quels outils il a accès. Cela garantit que les agents n'ont que les capacités dont ils ont besoin pour effectuer leur fonction prévue.
+
+### Comment fonctionne la restriction d'outils
+
+Lorsque vous ajoutez une connexion MCP (comme Outlook, GitHub ou Slack) à un agent, vous pouvez sélectivement activer ou désactiver des outils individuels au sein de cette connexion.
+
+**Par exemple**, si vous ajoutez la connexion MCP Outlook à un agent :
+- Vous pouvez **garder** des outils comme « rédiger e-mail » et « lire e-mails »
+- Vous pouvez **supprimer** des outils comme « envoyer e-mail » et « supprimer e-mail »
+
+Supprimer l'outil « envoyer e-mail » signifie que l'agent ne peut pas envoyer d'e-mails, même s'il en reçoit l'instruction, parce que la capacité n'existe simplement pas pour cet agent.
+
+<Check>
+La restriction d'outils se produit au niveau de la création d'agent. Chaque agent peut avoir un accès aux outils différent en fonction de son objectif prévu.
+</Check>
+
+### Pourquoi restreindre les outils ?
+
+<AccordionGroup>
+<Accordion title="Prévenir les actions involontaires">
+En supprimant les outils qui effectuent des actions irréversibles (envoyer des e-mails, supprimer des fichiers, déployer du code), vous éliminez le risque que les agents fassent des erreurs ou interprètent mal les prompts.
+
+**Sécurité par absence** : Si un agent n'a pas l'outil « envoyer e-mail », il est impossible qu'il envoie un e-mail (même par accident).
+</Accordion>
+
+<Accordion title="Minimiser la surface de risque">
+Moins un agent a d'outils, moins les choses peuvent mal tourner. Réduisez la surface d'attaque en donnant aux agents uniquement les capacités spécifiques dont ils ont besoin.
+
+**Exemple** : Un agent d'analyse de données n'a pas besoin d'outils pour modifier ou supprimer des données. Il ne devrait recevoir qu'un accès en lecture.
+</Accordion>
+
+<Accordion title="Agents conçus pour un objectif">
+Créez des agents spécialisés optimisés pour des tâches spécifiques en leur donnant des ensembles d'outils précis.
+
+**Exemple** : Un agent « Brouillon d'e-mail » avec MCP Outlook mais uniquement les outils de brouillon activés. Il ne devrait pas recevoir de capacités d'envoi, de suppression ou de transfert.
+</Accordion>
+</AccordionGroup>
+
+### Exemple : Agent de brouillon d'e-mail
+
+La différence entre un assistant de rédaction utile et un risque de sécurité potentiel se résume souvent à un seul outil.
+
+<Tip>
+Lors de la création d'agents, désactivez les outils qui exécutent des actions finales sauf si l'agent en a spécifiquement besoin. Activez les outils pour la préparation et l'analyse, mais restreignez les outils qui envoient, suppriment, déploient ou modifient les systèmes de production.
+</Tip>
+<Tabs>
+<Tab title="✅ Bon exemple : Outil d'envoi désactivé">
+
+Le même agent, mais avec l'outil `send-email` restreint.
+
+**Le résultat :**
+```
+Prompt utilisateur : « Rédigez un e-mail à john@example.com sur le rapport Q4. »
+
+Réponse de l'agent : « Voici un brouillon d'e-mail pour john@example.com sur le rapport Q4 :
+
+Sujet : Mise à jour du rapport Q4
+
+Bonjour Jean,
+[contenu du brouillon]
+
+Souhaitez-vous que je révise quelque chose ? »
+```
+
+Sans accès à l'outil `send-email`, l'agent ne peut que rédiger du contenu. L'utilisateur l'examine, fait des changements si nécessaire et envoie manuellement quand il est prêt.
+
+<Check>
+**Sûr** : L'utilisateur maintient le contrôle complet sur quand et ce qui est envoyé. L'agent apporte de la valeur sans risque.
+</Check>
+
+</Tab>
+
+<Tab title="❌ Mauvais exemple : Outil d'envoi activé">
+
+Un agent configuré pour aider à rédiger des e-mails mais avec l'outil `send-email` toujours activé.
+
+**Le problème :**
+```
+Prompt utilisateur : « Rédigez un e-mail à john@example.com sur le rapport Q4. »
+
+Réponse de l'agent : « J'ai rédigé et envoyé l'e-mail suivant à john@example.com... »
+```
+
+Parce que l'agent avait accès à l'outil `send-email`, il a interprété « rédiger un e-mail » comme une permission de l'envoyer aussi. L'e-mail est parti avant que l'utilisateur puisse l'examiner.
+
+<Warning>
+**Risque** : E-mails non examinés envoyés, fuites de données potentielles, communication non professionnelle ou envoi aux mauvais destinataires.
+</Warning>
+
+
+</Tab>
+</Tabs>
+
+
+---
+
+## Mode sécurisé : Human-in-the-Loop
+
+Le Mode sécurisé garantit que vous approuvez chaque action qu'un agent IA veut entreprendre avant qu'elle ne s'exécute.
+
+<Info>
+**Guide visuel bientôt disponible** : Nous créons un guide visuel étape par étape avec des captures d'écran montrant exactement comment fonctionne le Mode sécurisé, incluant le dialogue d'approbation et le flux de décision.
+</Info>
+
+### Comment fonctionne le Mode sécurisé
+
+<Steps>
+
+<Step title="Identifier quand utiliser le Mode sécurisé">
+Activez le Mode sécurisé pour les agents qui effectuent des opérations à haut risque :
+- Envoyer des communications (e-mails, messages, publications)
+- Modifier ou supprimer des données de production
+- Déployer du code ou des configurations
+- Exécuter des transactions financières
+
+<Warning>
+Le Mode sécurisé fournit une surveillance essentielle pour prévenir les erreurs et les actions non autorisées dans les opérations critiques.
+</Warning>
+</Step>
+
+<Step title="L'agent demande une action">
+Lorsqu'un agent IA veut utiliser un outil ou exécuter une action, il se met en pause et demande votre approbation.
+
+Vous voyez exactement ce que l'agent veut faire, quel outil il veut utiliser et quels paramètres il passera.
+</Step>
+
+<Step title="Vous examinez et décidez">
+Examinez l'action demandée et décidez si vous voulez :
+- **Autoriser** : L'action s'exécute comme demandé
+- **Refuser** : L'action est bloquée et l'agent continue sans l'exécuter
+
+<Tip>
+C'est votre opportunité de détecter les erreurs potentielles, vérifier que les actions sont appropriées et maintenir la surveillance.
+</Tip>
+</Step>
+
+<Step title="L'action s'exécute ou se bloque">
+- Si approuvée, l'action s'exécute et l'agent reçoit les résultats
+- Si refusée, l'agent est informé que l'action n'a pas été permise et peut ajuster son approche
+
+<Check>
+Vous pouvez désactiver le Mode sécurisé pour les agents de confiance effectuant des tâches de routine, mais il est recommandé pour les agents avec accès à des outils puissants.
+</Check>
+</Step>
+
+</Steps>
+
+
+
+---
+
+## Conseils de contrôle d'accès
+
+<CardGroup cols={2}>
+<Card title="Limiter les administrateurs" icon="user-shield">
+N'accordez les rôles admin qu'à ceux qui ont besoin d'un contrôle organisationnel complet. Moins d'admins = audit plus facile et risque réduit.
+</Card>
+
+<Card title="Commencer restrictif" icon="user-lock">
+Commencez avec un accès minimal aux outils et autorisations, puis n'ajoutez que si nécessaire. Il est plus facile d'accorder l'accès que de récupérer après des erreurs.
+</Card>
+
+<Card title="Examiner régulièrement" icon="calendar-check">
+Auditez périodiquement qui a accès à quels agents et outils, en ajustant au fur et à mesure que les rôles et responsabilités changent.
+</Card>
+
+<Card title="Tester avec le Mode sécurisé" icon="flask">
+Testez toujours les nouveaux agents avec le Mode sécurisé activé pour observer quelles actions ils tentent avant d'accorder une opération autonome.
+</Card>
+</CardGroup>
+
+<Tip>
+Une communication claire sur les objectifs des agents, les autorisations et les restrictions d'outils aide les utilisateurs à comprendre ce qu'ils peuvent faire et réduit les demandes de support.
+</Tip>

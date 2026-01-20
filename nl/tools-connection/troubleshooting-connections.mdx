@@ -1,0 +1,243 @@
+---
+title: "Troubleshooting Verbindingen"
+description: "Snelle oplossingen voor veelvoorkomende externe verbindingsproblemen en hoe hulp te krijgen wanneer je het nodig hebt."
+---
+
+Problemen met het verbinden van een zakelijk systeem of problemen met een bestaande verbinding? Deze gids biedt snelle oplossingen voor de meest voorkomende problemen.
+
+<Info>
+De meeste verbindingsproblemen kunnen in een paar minuten worden opgelost door de onderstaande stappen te volgen. Als je nog steeds vastloopt, zie de [Getting Help](/support-resources/getting-help) pagina voor alle manieren om onze helpdesk te bereiken.
+</Info>
+
+---
+
+## Snelle Oplossingen Om Eerst Te Proberen
+
+Voordat je contact opneemt met support, probeer deze eenvoudige oplossingen:
+
+<Steps>
+<Step title="Loskoppelen en Opnieuw Verbinden">
+Dit lost de meeste verbindingsproblemen op:
+
+1. Ga naar het Connectors paneel
+2. Klik op het problematische zakelijke systeem
+3. Selecteer **"Disconnect"**
+4. Wacht 10 seconden
+5. Klik opnieuw op **"Connect"** en voer je credentials opnieuw in
+6. Schakel de verbinding in voor je AI-model
+
+</Step>
+
+<Step title="Ververs Je Pagina">
+Soms heeft de verbinding gewoon een refresh nodig:
+
+1. Ververs je browserpagina (F5 of Ctrl+R).
+2. Wacht tot WonkaChat opnieuw laadt.
+3. Probeer je vraag opnieuw.
+
+Dit kan tijdelijke verbindingshikken oplossen.
+
+</Step>
+
+<Step title="Wis Cache en Site Data">
+Als het verversen van de pagina niet werkt, probeer je browsercache en sitedata te wissen:
+
+1. Open de Developer Tools van je browser (druk op `F12` of klik met de rechtermuisknop ergens en selecteer **Inspect**).
+2. Klik op het **Application** tabblad in het Developer Tools paneel.
+3. Vind in de linkerzijbalk de **Storage** sectie en klik op **Clear site data**.
+4. Zodra gewist, herlaad de pagina en log opnieuw in.
+5. Maak opnieuw verbinding met je zakelijke systeem op WonkaChat.
+6. Test je verbinding om te zien of het probleem is opgelost.
+
+<Tip>
+Na het wissen van sitedata kun je uitgelogd zijn uit andere browsertabbladen voor WonkaChat en moet je opnieuw inloggen.
+</Tip>
+</Step>
+
+<Step title="Controleer Je Internetverbinding">
+Zorg ervoor dat je een stabiele verbinding hebt:
+
+- Test je internetsnelheid
+- Probeer andere websites te laden
+- Schakel indien mogelijk tussen netwerken (WiFi vs. mobiele hotspot)
+- Herstart je router indien nodig
+<Check>
+Deze troubleshooting stappen lossen vaak de meeste verbindingsproblemen op door het authenticatie token te verversen en eventuele gecachte credentials te wissen die verouderd of beschadigd zijn geraakt.
+</Check>
+</Step>
+
+</Steps>
+
+
+## Veelvoorkomende Verbindingsproblemen
+
+<AccordionGroup>
+<Accordion title="Authenticatie Mislukt" icon="circle-xmark">
+**Symptomen:**
+- "Authenticatie mislukt" foutmelding
+- Kan het inlogproces niet voltooien
+- Herhaaldelijk doorgestuurd naar loginpagina
+
+**Oplossingen:**
+
+**1. Controleer Je Credentials**
+- Zorg ervoor dat je de juiste gebruikersnaam en wachtwoord gebruikt
+- Probeer in te loggen op het zakelijke systeem direct (buiten WonkaChat) om te verifiëren dat je credentials werken
+- Als je recent je wachtwoord hebt gewijzigd, update het in WonkaChat
+
+**2. Maak Opnieuw Verbinding met het Zakelijke Systeem**
+- Koppel het zakelijke systeem los van het Connectors paneel
+- Wacht 10 seconden
+- Maak opnieuw verbinding met je huidige credentials
+
+<Tip>
+Test je credentials eerst op de website van het zakelijke systeem voordat je probeert verbinding te maken via WonkaChat.
+</Tip>
+</Accordion>
+
+<Accordion title="Permissie Geweigerd" icon="ban">
+**Symptomen:**
+- "Toegang geweigerd" of "Onvoldoende permissies" foutmelding
+- AI zegt dat het geen toegang heeft tot bepaalde data
+- "403 Forbidden" bericht
+
+**Waarom Dit Gebeurt:**
+
+
+**1. Je Organisatie Blokkeert Third-Party Apps**
+
+Sommige bedrijven beperken medewerkers in het verbinden van externe applicaties om veiligheidsredenen.
+
+**Oplossing:**
+- Neem contact op met je IT of Beveiligingsteam
+- Vraag hen om WonkaChat goed te keuren als vertrouwde third-party applicatie
+- Ze moeten mogelijk WonkaChat whitelisten in de beveiligingsinstellingen van je organisatie
+
+**Voorbeelden:**
+- Google Workspace admin instellingen
+- Microsoft 365 admin center
+- Bedrijfs firewall of VPN beperkingen
+
+**2. Je Hebt Niet Alle Permissies Verleend**
+
+Tijdens het OAuth verbindingsproces heb je mogelijk sommige permissies geweigerd die WonkaChat nodig heeft.
+
+**Oplossing:**
+- Koppel het zakelijke systeem los
+- Maak opnieuw verbinding en **verleen alle gevraagde permissies** wanneer daarom wordt gevraagd
+- Sommige zakelijke systemen laten je selectief permissies goedkeuren. Je moet controleren of WonkaChat bredere toegang nodig heeft of niet.
+
+
+</Accordion>
+
+<Accordion title="Verbinding Timeout of Langzame Reactie" icon="clock">
+**Symptomen:**
+- "Verbinding time-out" bericht
+- Verzoeken duren zeer lang
+- Geen reactie van het zakelijke systeem
+
+**Snelle Oplossingen:**
+
+**1. Ververs Je Pagina**
+- Druk op F5 of Ctrl+R om WonkaChat opnieuw te laden
+- Probeer je verzoek opnieuw
+
+**2. Controleer Je Internetverbinding**
+- Test je netwerksnelheid
+- Probeer tussen netwerken te schakelen
+- Sluit onnodige browsertabbladen
+
+**3. Vereenvoudig Je Verzoek**
+- Als je om veel data vraagt, probeer eerst een kleiner verzoek
+- In plaats van "alle e-mails dit jaar," probeer "e-mails van deze week"
+- Breek complexe verzoeken op in kleinere stappen
+
+**4. Controleer de Status van het Zakelijke Systeem**
+- Het zakelijke systeem zelf kan problemen ondervinden
+- Bezoek de statuspagina van het zakelijke systeem (bijv. status.google.com, status.microsoft.com)
+- Wacht tot de service weer online komt
+
+<Info>
+Als de servers van het zakelijke systeem down zijn, kan WonkaChat niets doen totdat de provider het repareert.
+</Info>
+</Accordion>
+
+<Accordion title="Tool Reageert Niet" icon="triangle-exclamation">
+**Symptomen:**
+- AI zegt "Kan geen verbinding maken met [zakelijk systeem]"
+- Verbinding wordt getoond als actief, maar vragen mislukken
+- Geen data geretourneerd van het zakelijke systeem
+
+**1. Je Hebt Geen Toegang in het Zakelijke Systeem Zelf**
+
+Soms probeer je iets te doen via AI dat je direct in het zakelijke systeem ook niet kunt doen.
+
+<Warning>
+**Belangrijk:** WonkaChat kan alleen doen wat JIJ kunt doen. Als je geen permissie hebt om toegang te krijgen tot een bestand, een e-mail te lezen of een record te bewerken in het zakelijke systeem zelf, kan WonkaChat het ook niet voor jou doen via zijn externe verbinding (MCP).
+</Warning>
+
+**Voorbeeld:** Als je geen toegang hebt tot een specifieke Google Drive map omdat je geen lid bent, kan WonkaChat er ook geen toegang toe krijgen.
+
+**Oplossing:** Krijg eerst de juiste permissies in het zakelijke systeem, probeer dan opnieuw in WonkaChat.
+
+
+**2. Controleer het Zakelijke Systeem Direct**
+- Log in op het zakelijke systeem buiten WonkaChat
+- Verifieer dat het normaal werkt
+- Bevestig dat je toegang hebt tot de data die je aanvraagt
+
+**3. Zakelijke Systeem API Limieten**
+- Sommige zakelijke systemen beperken hoeveel verzoeken je kunt doen
+- Als je veel verzoeken in korte tijd hebt gedaan, wacht 15-30 minuten
+- Probeer dan opnieuw
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Foutmeldingen Begrijpen
+
+<Info>
+WonkaChat biedt gedetailleerde foutmeldingen die ons helpen verbindingsproblemen te diagnosticeren. We werken momenteel aan gebruiksvriendelijke documentatie voor deze foutmeldingen.
+
+**Komt Binnenkort:** Een uitgebreide foutcode referentiegids die je zal helpen specifieke fouten sneller te begrijpen en op te lossen.
+</Info>
+
+Voor nu, als je een foutmelding ziet:
+1. Neem een screenshot van de volledige fout
+2. Noteer wat je probeerde te doen toen het gebeurde
+3. Neem contact op met support met deze informatie
+
+## Wanneer Support Contacteren
+
+Als je de snelle oplossingen hierboven hebt geprobeerd en je hebt nog steeds problemen, is ons supportteam er om te helpen.
+
+**Neem Contact Op met Support Wanneer:**
+- Verbindingsproblemen aanhouden na alle snelle oplossingen te hebben geprobeerd
+- Je foutmeldingen ziet die je niet begrijpt
+- Je hulp nodig hebt met organisatie permissies of IT goedkeuring
+- Meerdere zakelijke systemen tegelijk problemen hebben
+- Je vermoedt een beveiligings- of datakwestie
+
+
+
+## Aanvullende Resources
+
+<CardGroup cols={2}>
+<Card title="Setup Gids" icon="plug" href="/nl/tools-connection/setting-up-your-first-connection">
+Leer hoe je zakelijke systemen vanaf het begin correct verbindt om veelvoorkomende problemen te vermijden.
+</Card>
+
+<Card title="Verbindingsvoorbeelden" icon="video" href="/nl/tools-connection/examples-of-tool-usage">
+Bekijk voorbeelden van succesvolle externe verbindingen (MCP) met Outlook, Odoo en meer.
+</Card>
+
+<Card title="FAQ" icon="question" href="/nl/support-resources/faq">
+Vind antwoorden op veelgestelde vragen over WonkaChat verbindingen.
+</Card>
+
+<Card title="Getting Help" icon="life-ring" href="/nl/support-resources/getting-help">
+Alle manieren om ons supportteam te bereiken en gepersonaliseerde hulp te krijgen.
+</Card>
+</CardGroup>

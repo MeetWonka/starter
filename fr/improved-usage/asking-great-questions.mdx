@@ -1,0 +1,560 @@
+---
+title: "Poser des bonnes questions"
+description: "Maîtrisez les fondamentaux du prompting efficace et les techniques avancées pour obtenir les meilleurs résultats des modèles IA."
+---
+
+Obtenir des réponses de haute qualité des modèles IA commence par des questions bien conçues. Ce guide progresse des principes de base aux techniques avancées, vous aidant à améliorer continuellement vos compétences en prompting.
+
+<Info>
+La qualité des réponses IA est directement corrélée à la clarté et la structure de vos prompts. De petites améliorations dans la façon dont vous posez les questions peuvent améliorer considérablement les résultats.
+</Info>
+
+---
+
+## Principes de base du prompting
+
+Le fondement de l'interaction IA efficace :
+
+- **Soyez clair et spécifique** - Les questions vagues produisent des réponses vagues.
+- **Utilisez des instructions positives** - Concentrez-vous sur ce que vous voulez, pas sur ce que vous ne voulez pas.
+- **Fournissez du contexte** - Donnez des informations de base pertinentes pour adapter les réponses.
+
+<AccordionGroup>
+<Accordion title="Soyez clair et spécifique" icon="bullseye">
+Plus votre demande est spécifique, meilleure sera la réponse.
+
+**Au lieu de :**
+```
+Parlez-moi du marketing.
+```
+
+**Essayez :**
+```
+Expliquez les trois stratégies de marketing digital les plus efficaces pour 
+une entreprise B2B SaaS avec un budget mensuel de 10 000€.
+```
+</Accordion>
+
+<Accordion title="Utilisez des instructions positives" icon="check">
+Concentrez-vous sur ce que vous voulez que l'IA fasse, plutôt que sur ce que vous ne voulez pas.
+
+**Au lieu de :**
+```
+Ne soyez pas trop technique.
+```
+
+**Essayez :**
+```
+Expliquez cela en termes simples qu'un propriétaire d'entreprise non technique 
+pourrait comprendre.
+```
+</Accordion>
+
+<Accordion title="Fournissez du contexte" icon="circle-info">
+Donnez à l'IA des informations de base pertinentes pour adapter sa réponse.
+
+**Exemple :**
+```
+Je suis chef de produit dans une startup fintech. Nous décidons entre 
+les microservices et l'architecture monolithique pour notre MVP. Quels facteurs 
+devons-nous considérer compte tenu de notre calendrier de lancement de 3 mois et 
+d'une équipe de 4 développeurs ?
+```
+
+<Tip>
+Pensez à l'IA comme un collègue compétent qui a besoin de contexte pour vous donner les meilleurs conseils.
+</Tip>
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Techniques de définition du contexte
+
+Un contexte approprié garantit que l'IA comprend vos objectifs, votre public et vos contraintes.
+
+<CardGroup cols={2}>
+<Card title="Définir votre public" icon="users">
+Spécifiez qui va utiliser ou lire la réponse pour ajuster la complexité et le ton.
+</Card>
+
+<Card title="Définir la portée" icon="bullseye">
+Définissez clairement les limites pour éviter des réponses trop larges ou trop étroites.
+</Card>
+
+<Card title="Fournir des exemples" icon="lightbulb">
+Montrez des exemples de ce que vous recherchez pour guider le style de sortie.
+</Card>
+
+<Card title="Énoncer votre objectif" icon="flag-checkered">
+Expliquez ce que vous ferez avec la réponse pour obtenir des résultats plus exploitables.
+</Card>
+</CardGroup>
+
+### Modèle de définition de contexte efficace
+
+Utilisez cette structure pour fournir un contexte complet :
+
+```
+[Rôle/Perspective] : Je suis un [votre rôle] travaillant sur [projet/tâche]
+
+[Situation] : Actuellement, [décrivez votre situation]
+
+🎯 [OBJECTIF] : Ce que je dois accomplir
+
+📏 [PORTÉE - Contraintes] : 
+- [Contrainte 1]
+- [Contrainte 2]
+- [Contrainte 3]
+
+👥 [PUBLIC] : Qui va utiliser/lire ceci ou expliquez le format dont la sortie a besoin
+
+💡 [EXEMPLES] : Exemples pertinents ou approche actuelle (si applicable)
+
+[SORTIE] : Spécifiez le format exact que vous voulez pour la réponse ici. Par exemple, demandez un tableau, un résumé, une liste d'étapes d'action, un brouillon d'e-mail ou des points - ce qui serait le plus utile pour vos personnes ou parties prenantes.
+
+[Votre question spécifique]
+```
+
+**Exemple :**
+```
+Rôle : Je suis analyste de données dans une startup de santé
+
+Situation : Nous avons des données d'enquête de satisfaction des patients de 500 
+répondants dans 3 emplacements de clinique sur 6 mois.
+
+🎯 OBJECTIF : Identifier les 3 principaux facteurs affectant la satisfaction 
+des patients à présenter à notre équipe exécutive
+
+📏 PORTÉE - Contraintes :
+- Se concentrer sur les insights exploitables que nos cliniques peuvent mettre en œuvre
+- Les résultats doivent être statistiquement significatifs (p < 0,05)
+- Période de 6 mois dans 3 emplacements de clinique
+- Utiliser Tableau pour la visualisation de données (requis par notre organisation)
+
+👥 PUBLIC : Cadres non techniques qui ont besoin d'insights clairs et exploitables
+- Préfèrent les présentations visuelles aux statistiques brutes
+- Doivent comprendre l'impact métier
+
+💡 EXEMPLES : L'approche actuelle inclut des scores de satisfaction de base, mais 
+les cadres ont demandé une analyse plus approfondie reliant la satisfaction à des 
+facteurs opérationnels spécifiques
+
+Sortie :
+Veuillez fournir votre réponse dans le format suivant :
+
+- [Nom du facteur] : [Brève explication ou insight]
+- [Nom du facteur] : [Brève explication ou insight]
+- [Nom du facteur] : [Brève explication ou insight]
+
+Par exemple :
+- Temps d'attente : La rapidité avec laquelle les patients sont pris en charge impacte la satisfaction
+- Amabilité du personnel : Les interactions positives du personnel améliorent l'expérience
+- Clarté des instructions : Les patients apprécient les informations claires après la visite
+
+Question : Quelle approche d'analyse recommanderiez-vous, et quels types 
+de visualisation devrais-je utiliser pour la présentation exécutive ?
+```
+
+<Check>
+Cette structure applique les quatre techniques de définition de contexte : **énoncer votre objectif** 🎯, **définir votre public** 👥, **définir la portée** 📏 et **fournir des exemples pertinents** 💡.
+</Check>
+
+### Voir en action : Exemple vidéo
+
+Regardez la vidéo suivante pour une démonstration pratique de l'utilisation de ces Bonnes pratiques pour instruire un agent IA et obtenir des résultats de haute qualité.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/rfY0m-yQ3fE"
+  title="Comment écrire des instructions efficaces pour un agent IA"
+  frameBorder="0"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Info>
+Cette vidéo vous guide étape par étape dans l'application de la clarté, des instructions positives et de la définition de contexte efficace lors du prompting d'un agent IA.
+</Info>
+
+
+---
+
+## Demandes de sortie structurée
+
+Demander des formats spécifiques vous aide à obtenir des réponses immédiatement utilisables.
+
+<AccordionGroup>
+<Accordion title="Listes et points" icon="list">
+Demandez des informations organisées dans un format scannable.
+
+**Exemple :**
+```
+Listez les 5 considérations les plus importantes lors du choix d'une base de données 
+pour une plateforme d'analytique en temps réel. Pour chaque point :
+- Énoncez la considération
+- Expliquez pourquoi c'est important
+- Fournissez un exemple concret
+```
+</Accordion>
+
+<Accordion title="Tableaux et comparaisons" icon="table">
+Obtenez des comparaisons côte à côte pour la prise de décision.
+
+**Exemple :**
+```
+Créez un tableau de comparaison de React, Vue et Angular avec ces colonnes :
+- Nom du framework
+- Courbe d'apprentissage (facile/modérée/raide)
+- Meilleur cas d'usage
+- Taille de la communauté
+- Adoption en entreprise
+```
+</Accordion>
+
+<Accordion title="Instructions étape par étape" icon="list-ol">
+Demandez des procédures en format séquentiel.
+
+**Exemple :**
+```
+Fournissez des instructions étape par étape pour configurer CI/CD pour une 
+application Node.js en utilisant GitHub Actions. Incluez :
+1. Prérequis nécessaires
+2. Chaque étape de configuration
+3. Comment vérifier que chaque étape a fonctionné
+4. Conseils de dépannage courants
+```
+</Accordion>
+
+<Accordion title="Exemples de code" icon="code">
+Demandez du code fonctionnel avec des explications.
+
+**Exemple :**
+```
+Écrivez une fonction Python pour valider les adresses e-mail en utilisant regex.
+Incluez :
+- Code complet et exécutable avec indications de type
+- Commentaires en ligne expliquant le pattern regex
+- Exemple d'utilisation
+- Cas limites qu'elle gère
+```
+</Accordion>
+
+<Accordion title="Longueur et format de sortie" icon="book">
+
+Spécifiez la longueur et la structure souhaitées pour obtenir des réponses appropriément détaillées.
+
+**Exemples :**
+```
+Résumez ceci en exactement 3 points.
+Fournissez une analyse complète (environ 500 mots).
+Donnez-moi d'abord une réponse brève d'une phrase, puis développez avec des détails.
+```
+</Accordion>
+</AccordionGroup>
+---
+
+## Ingénierie de prompts
+
+Utilisez des stratégies d'ingénierie de prompts adaptées pour obtenir des réponses de haute qualité et ciblées de l'IA. Choisissez l'approche qui correspond à vos besoins et votre niveau d'expérience actuel.
+
+<Tabs>
+<Tab title="Stratégies de base">
+
+Maîtrisez ces techniques fondamentales pour obtenir systématiquement de meilleurs résultats :
+<AccordionGroup>
+<Accordion title="Raffinement itératif" icon="arrows-rotate">
+N'attendez pas la réponse parfaite du premier coup. Ajustez votre prompt à chaque fois en fonction de la réponse IA précédente.
+
+<Steps>
+<Step title="Commencer avec un prompt basique">
+Commencez avec une question claire mais simple.
+
+```
+Expliquez comment fonctionnent les fenêtres de contexte dans les modèles IA.
+```
+</Step>
+
+<Step title="Évaluer la réponse">
+Vérifiez si la réponse répond à vos besoins. Était-elle trop technique, trop vague ou hors sujet ?
+</Step>
+
+<Step title="Affiner et ajouter de la spécificité">
+Ajustez votre question pour clarifier ce que vous voulez.
+
+```
+Expliquez comment fonctionnent les fenêtres de contexte dans les modèles IA en termes simples. 
+Utilisez une analogie pour aider une personne non technique à comprendre, et 
+expliquez pourquoi cela importe pour les utilisateurs quotidiens de l'IA.
+```
+</Step>
+
+<Step title="Itérer jusqu'à satisfaction">
+Répétez ce processus jusqu'à ce que la réponse corresponde à vos besoins.
+
+<Check>
+Vous apprendrez ce qui fonctionne le mieux pour vos objectifs en raffinant à chaque fois.
+</Check>
+</Step>
+</Steps>
+</Accordion>
+
+<Accordion title="Construction sur les réponses" icon="comments">
+Utilisez les réponses précédentes de l'IA comme tremplin pour une exploration plus approfondie ou une plus grande profondeur.
+
+**Modèle :**
+```
+Premier prompt : « Expliquez les avantages de l'architecture microservices. »
+
+Suivi : « Vous avez mentionné la scalabilité comme avantage clé. Pouvez-vous fournir 
+un exemple concret de comment les microservices ont permis la scalabilité pour une entreprise 
+gérant une croissance rapide ? »
+
+Suivi supplémentaire : « Compte tenu de ces avantages de scalabilité, quels sont les principaux 
+défis que les petites équipes rencontrent lors de l'adoption des microservices ? »
+```
+
+<Tip>
+Cette approche conduit à une exploration plus naturelle, conversationnelle et productive de sujets complexes.
+</Tip>
+</Accordion>
+
+<Accordion title="Attribuer des rôles pour la perspective" icon="user-tie">
+Demandez à l'IA d'adopter un rôle professionnel spécifique ou d'expert en la matière.
+
+**Exemple :**
+```
+Vous êtes un ingénieur DevOps expérimenté avec une expertise en Kubernetes. 
+Examinez cette configuration de déploiement et identifiez les vulnérabilités de sécurité 
+potentielles et les goulots d'étranglement de performance.
+
+[Votre configuration ici]
+```
+</Accordion>
+
+<Accordion title="Utiliser efficacement les contraintes" icon="sliders">
+Spécifiez clairement les règles de réponse pour limiter la portée, la structure ou le style.
+
+**Exemple :**
+```
+Analysez cet ensemble de données avec les contraintes suivantes :
+- Se concentrer uniquement sur les données Q4 2024
+- Exclure les valeurs aberrantes au-delà de 2 écarts types
+- Présenter les résultats par ordre d'impact métier
+- Inclure les niveaux de confiance statistique
+```
+</Accordion>
+</AccordionGroup>
+</Tab>
+
+<Tab title="Techniques avancées">
+
+Améliorez votre prompting avec ces approches plus sophistiquées :
+<AccordionGroup>
+<Accordion title="Prompting en chaîne de pensée" icon="list-ol">
+Demandez un raisonnement étape par étape pour voir comment l'IA arrive à une solution.
+
+**Exemple :**
+```
+Résolvez ce problème étape par étape, en expliquant votre raisonnement à chaque étape :
+
+Notre site e-commerce a un taux d'abandon de panier de 68%. La valeur moyenne 
+du panier est de 120€. Nous avons 50 000 visiteurs mensuels avec un taux d'ajout 
+au panier de 12%. Calculez l'augmentation potentielle de revenu mensuel si nous 
+réduisons l'abandon à 55%, et expliquez quelles interventions pourraient atteindre cela.
+
+Montrez vos calculs et votre raisonnement pour chaque étape.
+```
+
+**Pourquoi ça fonctionne :** Les demandes étape par étape génèrent des réponses plus transparentes, vérifiables et réduisent les erreurs.
+</Accordion>
+
+<Accordion title="Apprentissage few-shot" icon="graduation-cap">
+Montrez quelques exemples d'entrées et le type de réponses que vous attendez. L'IA imitera votre structure et approche.
+
+**Exemple :**
+```
+Je vais vous montrer des exemples de retours clients et comment je veux qu'ils 
+soient catégorisés, puis vous catégorisez les nouveaux retours de la même manière :
+
+Exemple 1 :
+Retour : « L'application plante chaque fois que j'essaie de télécharger des photos »
+Catégorie : Bug - Critique
+Sentiment : Frustré
+Action : Escalader à l'ingénierie
+
+Exemple 2 :
+Retour : « J'adore le nouveau mode sombre ! Ça facilite l'utilisation la nuit »
+Catégorie : Retour sur fonctionnalité - Positif
+Sentiment : Satisfait
+Action : Partager avec l'équipe produit
+
+Exemple 3 :
+Retour : « Ce serait génial si nous pouvions exporter les données en CSV »
+Catégorie : Demande de fonctionnalité
+Sentiment : Neutre
+Action : Ajouter au backlog de fonctionnalités
+
+Maintenant catégorisez ce retour :
+« La fonction de recherche ne trouve pas les correspondances exactes parfois »
+```
+</Accordion>
+
+<Accordion title="Prompting zero-shot" icon="wand-magic-sparkles">
+Utilisez ceci quand votre tâche est simple et les attentes sont évidentes - aucun exemple n'est nécessaire.
+
+**Meilleur pour :**
+- Tâches claires comme la résumation, la traduction ou la classification
+- Quand vous voulez des réponses impartiales
+
+**Exemple :**
+```
+Traduisez le texte anglais suivant en français, en maintenant le 
+ton professionnel :
+
+[Votre texte ici]
+```
+</Accordion>
+
+<Accordion title="Enchaînement de prompts" icon="link">
+Décomposez les défis plus grands en prompts plus petits et séquentiels. Utilisez la sortie d'une étape comme entrée pour la suivante.
+
+**Exemple de séquence :**
+```
+Prompt 1 : « Extrayez tous les points de douleur clients mentionnés dans ces 
+tickets de support : [tickets] »
+
+Prompt 2 : « Prenez ces points de douleur : [sortie du prompt 1] 
+et regroupez-les en thèmes. »
+
+Prompt 3 : « Pour chaque thème : [sortie du prompt 2], suggérez 
+une amélioration produit qui répond à plusieurs points de douleur. »
+```
+
+**Pourquoi enchaîner les prompts :** 
+- Décompose les tâches complexes
+- Vous permet de vérifier (et corriger) les étapes partielles
+- Augmente la précision sur les flux de travail multi-étapes
+</Accordion>
+
+<Accordion title="Création de modèles" icon="file-code">
+Gagnez du temps en construisant vos propres modèles de prompts pour les tâches que vous répétez souvent. Stockez-les dans la [Bibliothèque de prompts](/fr/improved-usage/prompt-library).
+
+**Exemple de modèle :**
+```
+Analysez ce {{document_type}} pour un public {{target_audience}}.
+
+Document :
+{{content}}
+
+Fournissez :
+1. Résumé exécutif (2-3 phrases)
+2. Insights clés (3-5 points)
+3. Actions recommandées
+4. Risques potentiels ou considérations
+
+Format : {{output_format:points|paragraphes|tableau}}
+```
+
+<Info>
+Pour les détails sur la gestion et le partage des prompts, consultez la [Bibliothèque de prompts](/fr/improved-usage/prompt-library).
+</Info>
+</Accordion>
+
+<Accordion title="Utiliser les outils dans les prompts" icon="wrench">
+Dirigez l'IA pour utiliser les plugins ou intégrations si disponibles, comme les connecteurs de données métier.
+
+**Exemple :**
+```
+Utilisez l'outil de connexion à la base de données pour interroger notre table client et trouver 
+tous les clients qui se sont inscrits dans les 30 derniers jours mais n'ont pas effectué d'achat. 
+Ensuite, analysez les données et suggérez des stratégies de rétention ciblées.
+```
+
+<Info>
+Pour plus d'informations sur l'intégration d'outils IA, visitez [Connexion d'outils](/fr/tools-connection/introduction).
+</Info>
+</Accordion>
+</AccordionGroup>
+
+<Info>
+Pour un apprentissage plus approfondi sur l'ingénierie de prompts, consultez les guides [d'OpenAI](https://platform.openai.com/docs/guides/prompt-engineering), [d'Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) et [de Google](https://ai.google.dev/gemini-api/docs/prompting-intro).
+</Info>
+</Tab>
+</Tabs>
+
+
+
+## Erreurs courantes à éviter
+
+<AccordionGroup>
+<Accordion title="Être trop vague">
+**Problème :** « Parlez-moi de l'IA. »
+
+**Mieux :** « Expliquez les différences clés entre l'apprentissage supervisé et non supervisé pour un analyste métier évaluant quelle approche utiliser pour la segmentation client. »
+</Accordion>
+
+<Accordion title="Poser plusieurs questions à la fois">
+**Problème :** « Comment améliorer notre SEO, devrions-nous utiliser les publicités sur les réseaux sociaux, et quelle stratégie de contenu fonctionne le mieux pour le B2B ? »
+
+**Mieux :** Décomposez en prompts séparés et ciblés ou demandez explicitement un traitement séparé de chaque question.
+</Accordion>
+
+<Accordion title="Ne fournir aucun contexte">
+**Problème :** « Est-ce une bonne approche ? » [sans expliquer ce qu'est 'ceci' ou quels sont vos objectifs]
+
+**Mieux :** Fournissez l'approche, votre contexte, vos objectifs et les critères pour « bon ».
+</Accordion>
+
+<Accordion title="Supposer des connaissances préalables">
+**Problème :** Commencer une nouvelle conversation avec « Continuez là où nous nous sommes arrêtés » sans rétablir le contexte.
+
+**Pourquoi cela échoue :** Les modèles IA ne peuvent pas accéder aux informations des conversations précédentes. Chaque nouvelle conversation commence avec une fenêtre de contexte vide, donc l'IA n'a aucun moyen de récupérer ou référencer ce qui a été discuté avant.
+
+<Info>
+En savoir plus sur les fenêtres de contexte et comment elles fonctionnent dans [Gestion des conversations](/fr/improved-usage/conversation-management).
+</Info>
+
+**Mieux :** Résumez brièvement le contexte pertinent des conversations précédentes lors du démarrage d'un nouveau chat.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Résumé des Bonnes pratiques
+
+<CardGroup cols={2}>
+<Card title="Commencer simplement" icon="seedling">
+Commencez par un prompt de base clair, puis ajoutez de la complexité au besoin.
+</Card>
+
+<Card title="Soyez spécifique" icon="bullseye">
+Les questions vagues obtiennent des réponses vagues. Fournissez des détails et du contexte.
+</Card>
+
+<Card title="Itérez" icon="arrows-rotate">
+Affinez vos prompts en fonction des réponses que vous recevez.
+</Card>
+
+<Card title="Sauvegardez ce qui fonctionne" icon="bookmark">
+Construisez une bibliothèque de prompts efficaces pour les tâches récurrentes.
+</Card>
+</CardGroup>
+
+<Tip>
+Le meilleur prompt est celui qui vous donne le résultat dont vous avez besoin. Expérimentez avec différentes approches et apprenez ce qui fonctionne pour vos cas d'usage.
+</Tip>
+
+---
+
+## Prochaines étapes
+
+<CardGroup cols={2}>
+<Card title="Gestion des conversations" icon="comments" href="/fr/improved-usage/conversation-management">
+Apprenez à gérer les longues conversations et à comprendre les fenêtres de contexte.
+</Card>
+
+<Card title="Bibliothèque de prompts" icon="bookmark" href="/fr/improved-usage/prompt-library">
+Sauvegardez et réutilisez vos meilleurs prompts avec des variables pour l'efficacité.
+</Card>
+</CardGroup>

@@ -1,0 +1,281 @@
+---
+title: "Vue d'ensemble de la sécurité"
+description: "Comprenez l'architecture de sécurité intégrée de WonkaChat, les contrôles de gouvernance et les mesures de confidentialité des données."
+---
+
+WonkaChat est une plateforme de chat IA d'entreprise construite sur [LibreChat](https://www.librechat.ai/), un projet open-source robuste avec une communauté florissante. Nous l'avons amélioré avec une sécurité de niveau entreprise, des contrôles de gouvernance et des fonctionnalités de conformité conçues pour les organisations qui doivent utiliser l'IA de manière sécurisée avec leurs données.
+
+<Info>
+Cette page couvre les mesures de sécurité intégrées et les contrôles de gouvernance que WonkaChat fournit par défaut.
+</Info>
+
+---
+
+## Gouvernance
+
+Contrôlez quels modèles IA, outils et agents sont disponibles dans votre organisation. WonkaChat est livré avec des capacités étendues par défaut, mais vous pouvez personnaliser votre déploiement pour inclure uniquement ce qui est pertinent pour votre entreprise. Cela aide à réduire la complexité, minimiser les accès inutiles et maintenir un environnement ciblé et sécurisé.
+
+### Accès organisationnel
+
+<CardGroup cols={2}>
+<Card title="Sélection MCP" icon="plug">
+Wonka configure quels serveurs MCP sont disponibles pour votre organisation, garantissant que seuls les outils approuvés sont accessibles.
+</Card>
+
+<Card title="Sélection du modèle IA" icon="brain">
+Les administrateurs contrôlent quels modèles IA et fournisseurs (OpenAI, Anthropic, Google, etc.) les utilisateurs peuvent accéder dans l'organisation.
+</Card>
+</CardGroup>
+
+<Tip>
+Ces contrôles de gouvernance garantissent que votre organisation n'utilise que les ressources IA approuvées qui s'alignent avec vos politiques de sécurité et exigences de conformité.
+</Tip>
+
+Au-delà des mesures de sécurité intégrées de WonkaChat, votre organisation maintient un contrôle direct sur l'accès des utilisateurs. Par exemple, les admins gèrent quels agents sont disponibles pour les utilisateurs et accordent des autorisations granulaires par agent. Voir [Contrôle d'accès](/fr/security-governance/access-control) pour les détails.
+
+---
+
+## Architecture de sécurité
+
+WonkaChat implémente une sécurité de niveau entreprise avec plusieurs couches de protection.
+
+### Système d'authentification
+
+WonkaChat utilise un système d'authentification sécurisé basé sur les jetons pour protéger l'accès des utilisateurs :
+
+<AccordionGroup>
+<Accordion title="Jetons d'accès (15 minutes)" icon="key">
+Les jetons d'accès de courte durée permettent aux utilisateurs de s'authentifier et d'interagir avec la plateforme. Ces jetons expirent après 15 minutes, minimisant le risque d'accès non autorisé s'ils sont compromis.
+</Accordion>
+
+<Accordion title="Jetons de rafraîchissement (7 jours)" icon="rotate">
+Les jetons de rafraîchissement maintiennent les sessions utilisateur jusqu'à 7 jours sans nécessiter de ré-authentification. Après 7 jours, les utilisateurs doivent se reconnecter.
+</Accordion>
+
+<Accordion title="Technologie JWT" icon="shield-check">
+WonkaChat utilise JSON Web Tokens (JWT) pour une authentification sécurisée et sans état. Les JWT sont cryptographiquement signés pour empêcher la falsification et vérifier l'authenticité.
+</Accordion>
+</AccordionGroup>
+
+<Check>
+Cette approche à double jeton équilibre la sécurité (accès de courte durée) avec la commodité utilisateur (persistance de session).
+</Check>
+
+### Fournisseurs d'authentification
+
+Plusieurs méthodes d'authentification sont disponibles pour s'intégrer à vos systèmes d'identité existants :
+
+<Tabs>
+<Tab title="Disponible maintenant">
+WonkaChat prend actuellement en charge ces fournisseurs d'authentification :
+
+- **Authentification locale** : Authentification par nom d'utilisateur et mot de passe
+- **OpenID Connect** : Intégration avec les fournisseurs d'identité compatibles OpenID
+- **Azure AD / Entra ID** : Intégration directe avec Microsoft Azure Active Directory
+
+<Tip>
+Choisissez la méthode d'authentification qui s'aligne avec votre stratégie de gestion d'identité organisationnelle.
+</Tip>
+</Tab>
+
+<Tab title="Bientôt disponible">
+Des fournisseurs de connexion sociale supplémentaires sont prévus pour les versions futures :
+
+- Authentification Google
+- Authentification GitHub
+- Autres fournisseurs sociaux populaires
+
+<Info>
+Ces fournisseurs ne sont pas actuellement disponibles mais sont sur la feuille de route.
+</Info>
+</Tab>
+</Tabs>
+
+### Limitation de débit et prévention des abus
+
+WonkaChat implémente une limitation de débit pour se protéger contre les attaques par force brute et les abus du système. Les limites de débit sont appliquées sur les opérations critiques incluant les tentatives de connexion, l'inscription, les réinitialisations de mot de passe, les actions administratives et l'utilisation générale de l'API.
+
+<Check>
+Les limites de débit protègent votre organisation contre les attaques automatisées tout en permettant l'activité utilisateur normale.
+</Check>
+
+---
+
+## Confidentialité des données
+
+Vos données restent sécurisées et privées durant toutes les interactions avec WonkaChat.
+
+### Garanties de confidentialité
+
+<CardGroup cols={2}>
+<Card title="Isolation multi-locataire" icon="building-lock">
+Isolation complète des données entre organisations via le routage basé sur les sous-domaines (https://{org}.wonka.chat). Pas d'exposition accidentelle de données entre locataires.
+</Card>
+
+<Card title="Pas d'entraînement de modèle" icon="ban">
+Vos conversations et données ne sont jamais utilisées pour entraîner les modèles IA. Les fournisseurs de modèles traitent les demandes temporairement sans rétention. Vos données restent dans WonkaChat où vous les contrôlez.
+</Card>
+
+<Card title="Chiffré en transit" icon="lock">
+Toutes les données transmises vers et depuis WonkaChat sont chiffrées en utilisant les protocoles HTTPS/TLS pour des communications API sécurisées.
+</Card>
+
+<Card title="Chiffré au repos" icon="shield-halved">
+Les données stockées dans les bases de données MongoDB de WonkaChat sont protégées avec le support de chiffrement au repos pour sécuriser vos informations.
+</Card>
+</CardGroup>
+
+### Chiffrement des données
+
+<AccordionGroup>
+<Accordion title="Protection en transit">
+**HTTPS/TLS pour toutes les communications :**
+- Tous les appels API utilisent des protocoles HTTPS/TLS sécurisés
+- Les données sont chiffrées pendant la transmission entre votre navigateur et les serveurs WonkaChat
+- Connexions sécurisées aux fournisseurs de modèles IA (Azure, AWS Bedrock)
+</Accordion>
+
+<Accordion title="Protection au repos">
+**Chiffrement MongoDB et stockage sécurisé :**
+- Mots de passe : Hachés avec bcrypt utilisant des rounds de sel (jamais stockés en texte clair)
+- Jetons : Signature JWT avec secrets cryptographiques forts
+- Base de données : Support de chiffrement au repos MongoDB pour toutes les données stockées
+- Clés API : Jamais enregistrées en texte clair
+</Accordion>
+
+<Accordion title="Expurgation automatique">
+**Protection des données sensibles dans les journaux :**
+- Tous les journaux expurgent automatiquement les modèles sensibles (mots de passe, jetons, clés)
+- Les clés API et jetons d'authentification ne sont jamais enregistrés en texte clair
+- La rotation des jetons empêche l'exposition à long terme
+- Les mots de passe sont hachés avec bcrypt avant tout stockage
+
+<Check>
+Même les administrateurs système ne peuvent pas accéder à vos mots de passe ou identifiants sensibles dans les journaux ou bases de données.
+</Check>
+</Accordion>
+</AccordionGroup>
+
+### Isolation des données multi-locataire
+
+WonkaChat garantit une séparation complète entre organisations :
+
+<Tabs>
+<Tab title="Données délimitées par organisation">
+Chaque donnée dans WonkaChat est délimitée à votre organisation :
+- Conversations et historique de chat
+- Agents IA et configurations
+- Comptes utilisateur et autorisations
+- Connexions MCP et paramètres d'outils
+- Journaux d'audit et enregistrements d'activité
+
+<Check>
+Les données d'une organisation sont complètement isolées et inaccessibles aux autres organisations.
+</Check>
+</Tab>
+
+<Tab title="Routage par sous-domaine">
+Chaque organisation a son propre sous-domaine unique :
+- **Format** : `https://{votre-org}.wonka.chat`
+- **Avantage** : Isolation de namespace intégrée au niveau du réseau
+- **Sécurité** : Empêche la fuite de données entre organisations
+
+<Info>
+Le routage basé sur les sous-domaines ajoute une couche supplémentaire de séparation au-delà de l'isolation au niveau de la base de données.
+</Info>
+</Tab>
+</Tabs>
+
+### Sécurité du fournisseur de modèles
+
+<AccordionGroup>
+<Accordion title="API Azure et AWS Bedrock">
+WonkaChat se connecte aux modèles IA via des API Azure et AWS Bedrock sécurisées. Vos données sont traitées en temps réel et jamais stockées ou conservées par les fournisseurs de modèles.
+</Accordion>
+
+<Accordion title="Traitement de modèle éphémère">
+Lorsque vous interagissez avec un modèle IA, vos prompts et réponses sont envoyés au fournisseur de modèle, traités en mémoire et immédiatement jetés par le fournisseur après avoir généré la réponse. 
+
+**Vos conversations sont stockées en toute sécurité dans WonkaChat** pour que vous puissiez accéder à votre historique, mais les fournisseurs de modèles (Azure, AWS) ne retiennent, stockent ou utilisent jamais vos données pour l'entraînement ou tout autre objectif.
+</Accordion>
+</AccordionGroup>
+
+<Check>
+Votre historique de conversation est stocké en toute sécurité dans WonkaChat où vous le contrôlez. Les fournisseurs de modèles ne traitent que les demandes temporairement sans aucune rétention ou réutilisation de données.
+</Check>
+
+---
+
+## Contrôles de sécurité MCP
+
+WonkaChat prend en charge les serveurs MCP (Model Context Protocol) avec une configuration de sécurité granulaire et une isolation multi-utilisateur.
+
+### Isolation multi-utilisateur
+
+<AccordionGroup>
+<Accordion title="Stockage de jetons spécifique à l'utilisateur">
+Les jetons d'authentification MCP de chaque utilisateur sont stockés séparément et en toute sécurité :
+- Les jetons sont isolés par compte utilisateur
+- Pas d'accès ou de partage de jetons entre utilisateurs
+- Nettoyage automatique des jetons lors de la désactivation de l'utilisateur
+
+<Check>
+Vos identifiants MCP ne sont jamais accessibles à d'autres utilisateurs, même au sein de la même organisation.
+</Check>
+</Accordion>
+
+<Accordion title="Authentification basée sur la session">
+Les connexions MCP utilisent une authentification basée sur la session pour la sécurité :
+- Identification automatique de l'utilisateur via les en-têtes de demande
+- Validation de session sur chaque opération MCP
+- Application du délai d'expiration pour empêcher les sessions périmées
+</Accordion>
+
+<Accordion title="Stratégies d'authentification">
+WonkaChat prend en charge plusieurs méthodes d'authentification MCP :
+
+- **in-tool** : L'utilisateur s'authentifie directement dans l'outil connecté
+- **oauth** : Flux OAuth 2.0 pour un accès sécurisé et délégué
+- **api-key** : Authentification basée sur clé API pour les intégrations de service
+
+<Info>
+La stratégie d'authentification est déterminée par le fournisseur de serveur MCP et ne peut pas être modifiée par votre organisation.
+</Info>
+</Accordion>
+</AccordionGroup>
+
+### Pas d'escalade d'autorisation
+
+<CardGroup cols={2}>
+<Card title="Hériter vos autorisations" icon="user-lock">
+Les connexions MCP héritent de vos autorisations exactes lors de l'accès aux outils connectés. Elles ne peuvent accéder à rien que vous ne pourriez accéder manuellement.
+</Card>
+
+<Card title="Pas de contournement admin" icon="shield-halved">
+Les connexions MCP ne peuvent pas être utilisées pour outrepasser, contourner ou escalader les autorisations dans les systèmes connectés. Vos politiques de sécurité restent entièrement appliquées.
+</Card>
+</CardGroup>
+
+<Warning>
+Si vous ne pouvez pas accéder à une ressource ou effectuer une action manuellement dans un outil connecté, les modèles IA ne peuvent pas le faire non plus (même s'ils sont instruits d'essayer).
+</Warning>
+
+---
+
+## Ce que vous pouvez contrôler
+
+Tandis que WonkaChat fournit une sécurité intégrée robuste, vous contrôlez des couches supplémentaires :
+
+<CardGroup cols={2}>
+<Card title="Contrôle d'accès" icon="user-shield" href="/fr/security-governance/access-control">
+Gérez les rôles utilisateur et contrôlez qui peut accéder à des agents spécifiques
+</Card>
+
+<Card title="Bonnes pratiques" icon="clipboard-check" href="/fr/security-governance/best-practices">
+Suivez les directives recommandées pour une utilisation sécurisée de l'IA dans votre organisation
+</Card>
+</CardGroup>
+
+<Check>
+La combinaison de la sécurité intégrée de WonkaChat avec les contrôles d'accès et pratiques de votre organisation crée un cadre de sécurité complet.
+</Check>

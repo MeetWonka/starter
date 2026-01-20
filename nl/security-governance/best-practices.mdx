@@ -1,0 +1,218 @@
+---
+title: "Best Practices"
+description: "Praktische richtlijnen voor het veilig en effectief gebruiken van AI in je dagelijks werk met WonkaChat."
+---
+
+Gebruik deze praktische richtlijnen om het meeste uit AI te halen terwijl je professionele standaarden handhaaft en onomkeerbare fouten vermijdt.
+
+<Info>
+**WonkaChat is veilig by design**: je gegevens zijn versleuteld, geïsoleerd tussen organisaties en worden nooit gebruikt voor AI-training. Deze richtlijnen helpen je effectief en professioneel te werken.
+</Info>
+
+---
+
+## AI Effectief Gebruiken op het Werk
+
+Haal de meeste waarde uit AI terwijl je kwaliteit en controle behoudt.
+
+### Scope je Verzoeken
+
+<Tabs>
+<Tab title="Goede AI Taken" icon="circle-check">
+**Duidelijke, specifieke doelstellingen:**
+- Analyseer deze dataset en identificeer trends
+- Stel een antwoord op voor deze klantinquiry
+- Beoordeel dit document op duidelijkheid en fouten
+- Genereer testcases voor deze feature
+- Vat belangrijkste punten van deze vergadering samen
+
+**Waarom het werkt**: Specifieke taken krijgen betere resultaten en zijn gemakkelijker te beoordelen
+
+<Check>
+Deze gerichte verzoeken helpen AI precies te begrijpen wat je nodig hebt en maken outputs gemakkelijker te verifiëren.
+</Check>
+</Tab>
+
+<Tab title="Taken die Voorzichtigheid Vereisen" icon="triangle-exclamation">
+**Open-ended of hoge impact:**
+- Maak wijdverspreide wijzigingen over systemen
+- Beslissingen die productieomgevingen beïnvloeden
+- Onomkeerbare operaties (verwijderingen, implementaties)
+- Communicatie die je organisatie vertegenwoordigt
+
+**Waarom voorzichtigheid**: Beoordeel outputs voordat ze worden uitgevoerd om onbedoelde gevolgen te voorkomen
+
+<Warning>
+Voor deze taken, gebruik [Safe Mode](/nl/security-governance/access-control#safe-mode-human-in-the-loop), test eerst in een staging-omgeving, of breek ze op in kleinere, beoordeelbare stappen.
+</Warning>
+</Tab>
+</Tabs>
+
+---
+
+## Denk Voordat Je Uitvoert
+
+Het belangrijkste risico met AI is niet beveiliging, het is per ongeluk iets doen dat je niet ongedaan kunt maken.
+
+### Onomkeerbare Acties Begrijpen
+
+<AccordionGroup>
+<Accordion title="Wat Niet Ongedaan Kan Worden Gemaakt" icon="ban">
+**Acties die permanent gegevens veranderen of verwijderen:**
+- Databases, productiebestanden of gebruikersgegevens verwijderen
+- Code implementeren in productiesystemen
+- E-mails of berichten verzenden naar klanten
+- Live configuraties wijzigen
+- Gebruikersaccounts of permissies verwijderen
+
+<Warning>
+AI kan deze acties snel uitvoeren. Gebruik [Safe Mode](/nl/security-governance/access-control#safe-mode-human-in-the-loop) of beoordeel zorgvuldig voordat een operatie die belangrijke gegevens wijzigt of verwijdert.
+</Warning>
+</Accordion>
+
+<Accordion title="Veilige Activiteiten" icon="circle-check">
+**Acties die kunnen worden beoordeeld of teruggedraaid:**
+- Content opstellen (e-mails, documenten, code)
+- Gegevens analyseren en inzichten genereren
+- Informatie zoeken en ophalen
+- Testgegevens of voorbeelden maken
+- Documentatie genereren
+
+<Check>
+Deze activiteiten geven je tijd om te beoordelen en verfijnen voordat iets live gaat of anderen beïnvloedt.
+</Check>
+</Accordion>
+</AccordionGroup>
+
+### Strategieën voor Kritieke Operaties
+
+Wanneer AI-agents werken met high-impact systemen, implementeer beschermingsmaatregelen om controle te behouden:
+
+<AccordionGroup>
+<Accordion title="Schakel Safe Mode In" icon="shield-check">
+Vereist goedkeuring voordat acties worden uitgevoerd. [Safe Mode](/nl/security-governance/access-control#safe-mode-human-in-the-loop) pauzeert de agent en toont je precies wat het wil doen voordat het doorgaat.
+
+**Het beste voor**: Productiesystemen, klantcommunicatie, financiële operaties, implementatiewijzigingen.
+</Accordion>
+
+<Accordion title="Test Eerst in Staging" icon="flask">
+Voer agents uit in niet-productieomgevingen voordat je naar live systemen gaat. Verifieer gedrag met testgegevens voordat je met echte informatie werkt. Gebruik indien mogelijk synthetische of geanonimiseerde testgegevens.
+
+**Het beste voor**: Nieuwe agents, complexe workflows of operaties die meerdere systemen beïnvloeden.
+</Accordion>
+
+<Accordion title="Breek Op in Stappen" icon="list-check">
+Verdeel grote operaties in kleinere, beoordeelbare stukken. Voer één stap uit, verifieer het resultaat en ga dan door naar de volgende.
+
+**Het beste voor**: Multi-step processen, gegevensmigraties of operaties die meerdere systemen omvatten.
+</Accordion>
+
+<Accordion title="Beperk Tool Toegang" icon="lock">
+Verwijder tools die eindacties uitvoeren (verzenden, verwijderen, implementeren) en behoud alleen voorbereidingstools (opstellen, analyseren, lezen). Dit vermindert de kans op onbedoelde acties en houdt agents gefocust op hun doel. Lees meer over [tool-restrictie](/nl/security-governance/access-control#tool-restrictie).
+
+**Het beste voor**: Agents die assisteren bij beslissingen maar deze niet autonoom moeten uitvoeren.
+</Accordion>
+<Accordion title="Beoordeel Agent Toegang" icon="eye">
+Voordat je agents verbindt met je tools, beoordeel welke gegevens ze kunnen benaderen via MCP-verbindingen.
+
+**Het beste voor**: Zorgen voor least-privilege toegang en periodieke toegangsaudits.
+</Accordion>
+
+<Accordion title="Omgevingsvariabelen voor Keys" icon="key">
+Bij het delen van code met AI of het committen van voorbeelden, gebruik omgevingsvariabelen in plaats van hardcoded API-keys of credentials.
+
+**Het beste voor**: Code gedeeld in gesprekken, samples en samenwerkingsrepositories.
+</Accordion>
+</AccordionGroup>
+
+<Tip>
+Combineer meerdere strategieën voor de meest risicovolle operaties. Gebruik bijvoorbeeld beperkte tools EN Safe Mode voor agents die klantcommunicatie afhandelen.
+</Tip>
+
+---
+
+
+## Gezond Verstand Richtlijnen
+
+Basisprincipes voor professioneel AI-gebruik:
+
+<AccordionGroup>
+<Accordion title="Beoordeel Voordat Impact">
+Beoordeel altijd AI-outputs voordat ze anderen of productiesystemen beïnvloeden. Behandel AI-gegenereerde content als werk van een collega - je moet het verifiëren voordat het eruit gaat.
+</Accordion>
+
+<Accordion title="Gebruik Versiebeheer">
+Voor codewijzigingen, gebruik Git of je versiebeheer systeem. Commit AI-wijzigingen afzonderlijk zodat je kunt volgen en terugdraaien indien nodig. Dit is goede praktijk voor alle codewijzigingen, niet alleen AI-gegenereerde.
+</Accordion>
+
+<Accordion title="Vraag Niet om Illegale of Schadelijke Acties">
+Vraag AI niet om te helpen met illegale activiteiten, schadelijke content te creëren of misinformatie te genereren. Dit gaat over professionele ethiek en de reputatie van je organisatie, niet over platformbeveiliging.
+</Accordion>
+
+<Accordion title="Verifieer Belangrijke Informatie">
+Voor kritieke beslissingen, verifieer AI-gegenereerde informatie uit gezaghebbende bronnen. AI is uitstekend voor onderzoek en opstellen maar moet je expertise aanvullen, niet vervangen.
+</Accordion>
+</AccordionGroup>
+
+<Info>
+Deze richtlijnen zijn niet uniek voor AI - het zijn professionele standaarden voor elk werktool. Gebruik goed oordeel en beoordeel belangrijke outputs.
+</Info>
+---
+
+## Snelle Referentie: Risicobeoordeling
+
+Bij het plannen om AI voor een taak te gebruiken, overweeg deze factoren:
+
+| Factor | Lager Risico ✅ | Hoger Risico ⚠️ |
+|--------|---------------|----------------|
+| **Omkeerbaarheid** | Concepten, analyses, suggesties | Productiewijzigingen, verwijderingen, communicatie verzenden |
+| **Scope van Impact** | Persoonlijk werk, testomgevingen | Productiesystemen, klantgericht, organisatiebreed |
+| **Beoordelingsmogelijkheid** | Resultaten beoordeeld voor gebruik | Directe uitvoering zonder menselijke beoordeling |
+| **Gegevenspermanentie** | Tijdelijke gegevens, gemakkelijk opnieuw te maken | Kritieke gegevens, moeilijk te herstellen |
+
+<Check>
+Voor taken met hoger risico, gebruik [Safe Mode](/nl/security-governance/access-control#safe-mode-human-in-the-loop), [beperk agent tools](/nl/security-governance/access-control#tool-restrictie), of breek het werk op in beoordeelbare stappen.
+</Check>
+
+---
+
+## Slimme Agent Configuratie
+
+Configureer agents passend voor hun beoogde doel.
+
+<CardGroup cols={2}>
+<Card title="Doelgerichte Agents" icon="robot">
+Maak agents geoptimaliseerd voor specifieke taken:
+- **Onderzoeksagents**: Alleen lezen en analyseren
+- **Conceptagents**: Content maken zonder verzenden
+- **Beoordelingsagents**: Feedback geven zonder wijzigingen maken
+
+Beperk tools om overeen te komen met het doel van de agent met [tool-restrictie](/nl/security-governance/access-control#tool-restrictie).
+</Card>
+
+<Card title="Test Voordat je Vertrouwt" icon="flask">
+Voordat je een agent autonomie geeft:
+- Test met Safe Mode ingeschakeld
+- Beoordeel tot welke tools het toegang heeft
+- Verifieer dat het zich gedraagt zoals verwacht
+- Begin met beperkte scope, breid uit indien nodig
+
+Testen bouwt vertrouwen op en vangt configuratieproblemen.
+</Card>
+</CardGroup>
+
+---
+
+## De Essentie
+
+**WonkaChat biedt enterprise beveiliging**: versleuteling, isolatie en veilige authenticatie beschermen je gegevens, maar je moet nog steeds focussen op enkele belangrijke praktijken:
+
+1. **Denk voordat je uitvoert** - Beoordeel voordat je verwijdert, implementeert of verzendt
+2. **Scope passend** - Geef AI-Agents specifieke taken met duidelijke grenzen  
+3. **Gebruik goed oordeel** - Verifieer belangrijke informatie en behoud kwaliteit
+
+Deze richtlijnen helpen je effectief te werken terwijl je fouten vermijdt die je werk of organisatie kunnen beïnvloeden.
+
+<Tip>
+**Onthoud**: WonkaChat is veilig, maar je acties hebben nog steeds gevolgen. Gebruik hetzelfde goede oordeel dat je bij elk professioneel tool zou toepassen.
+</Tip>

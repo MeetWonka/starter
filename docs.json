@@ -9,158 +9,532 @@
   },
   "favicon": "/favicon.png",
   "banner": {
-    "content": "🚧 Welcome to the WonkaChat Wiki Beta! This is a beta release, some information may not be final and occasional errors might be present.",
+    "content": "🚧 Beta Version some errors might be present | Version Bêta des erreurs peuvent être présentes | Bètaversie er kunnen fouten aanwezig zijn 🚧",
     "dismissible": false
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "WonkaChat",
-        "groups": [
-          
+        "language": "en",
+        "tabs": [
           {
-            "group": "Welcome to WonkaChat",
-            "pages": [
-              "welcome/introduction",
-              "welcome/why-wonka-chat",
-              "welcome/quick-start"
-            ]
-          },
-          {
-            "group": "AI Agents",
-            "pages": [
-              "ai-agents/introduction",
-              "ai-agents/finding-and-accessing-agents",
-              "ai-agents/using-existing-agents",
-              "ai-agents/creating-your-first-agent",
-              "ai-agents/business-teaching"
-            ]
-          },
-          {
-            "group": "Tools & Connection",
-            "pages": [
-              "tools-connection/introduction",
-              "tools-connection/setting-up-your-first-connection",
-              "tools-connection/troubleshooting-connections",
-              "tools-connection/examples-of-tool-usage"
-            ]
-          },
-          
-          {
-            "group": "Improved Usage",
-            "pages": [
-              "improved-usage/asking-great-questions",
-              "improved-usage/conversation-management",
-              "improved-usage/prompt-library"
-            ]
-          },
-          {
-            "group": "Security & Governance",
-            "pages": [
-              "security-governance/index",
-              "security-governance/security-overview",
-              "security-governance/access-control",
-              "security-governance/best-practices",
-              "security-governance/compliance-and-governance"
-            ]
-          },
-          {
-            "group": "Support & Resources",
-            "pages": [
-              "support-resources/faq",
-              "support-resources/getting-help"
-            ]
-          },
-          {
-            "group": "Legal",
+            "tab": "WonkaChat",
+            "groups": [
+              {
+                "group": "Welcome to WonkaChat",
                 "pages": [
-                  "legal/terms-and-conditions", 
-                  "legal/terms-of-service",
-                  "legal/privacy-policy",
-                  "legal/legal-notice",
-                  "legal/cookie-policy"
+                  "en/welcome/introduction",
+                  "en/welcome/why-wonka-chat",
+                  "en/welcome/quick-start"
+                ]
+              },
+              {
+                "group": "AI Agents",
+                "pages": [
+                  "en/ai-agents/introduction",
+                  "en/ai-agents/finding-and-accessing-agents",
+                  "en/ai-agents/using-existing-agents",
+                  "en/ai-agents/creating-your-first-agent",
+                  "en/ai-agents/business-teaching"
+                ]
+              },
+              {
+                "group": "Tools & Connection",
+                "pages": [
+                  "en/tools-connection/introduction",
+                  "en/tools-connection/setting-up-your-first-connection",
+                  "en/tools-connection/troubleshooting-connections",
+                  "en/tools-connection/examples-of-tool-usage"
+                ]
+              },
+              {
+                "group": "Improved Usage",
+                "pages": [
+                  "en/improved-usage/asking-great-questions",
+                  "en/improved-usage/conversation-management",
+                  "en/improved-usage/prompt-library"
+                ]
+              },
+              {
+                "group": "Security & Governance",
+                "pages": [
+                  "en/security-governance/index",
+                  "en/security-governance/security-overview",
+                  "en/security-governance/access-control",
+                  "en/security-governance/best-practices",
+                  "en/security-governance/compliance-and-governance"
+                ]
+              },
+              {
+                "group": "Support & Resources",
+                "pages": [
+                  "en/support-resources/faq",
+                  "en/support-resources/getting-help",
+                  "en/support-resources/reference-materials",
+                  "en/support-resources/troubleshooting"
+                ]
+              },
+              {
+                "group": "Legal",
+                "pages": [
+                  "en/legal/terms-and-conditions",
+                  "en/legal/terms-of-service",
+                  "en/legal/privacy-policy",
+                  "en/legal/legal-notice",
+                  "en/legal/cookie-policy"
                 ]
               }
-        ]
-      },
-      {
-        "tab": "Learning",
-        "hidden": true,
-        "groups": [
+            ]
+          },
           {
-            "group": "Foundations of AI",
-            "pages": [
-              "learn/index",
-              "learn/ai-agent",
-              "learn/mcp",
-              "learn/build-agents"
+            "tab": "Learning",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Foundations of AI",
+                "pages": [
+                  "en/learn/index",
+                  "en/learn/ai-agent",
+                  "en/learn/mcp",
+                  "en/learn/build-agents"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Updates",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Changelog",
+                "pages": [
+                  "en/updates/changelog"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Roadmap",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Roadmap",
+                "pages": [
+                  "en/roadmap/index"
+                ]
+              }
             ]
           }
-        ]
-      },
-      {
-        "tab": "Use Cases",
-        "hidden": true,
-        "groups": [
-          {
-            "group": "Use cases",
-            "pages": [
-              "use/index"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Updates",
-        "hidden": true,
-        "groups": [
-          {
-            "group": "Changelog",
-            "pages": [
-              "updates/changelog"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Roadmap",
-        "hidden": true,
-        "groups": [
-          {
-            "group": "Roadmap",
-            "pages": [
-              "roadmap/index"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Our website",
-          "href": "https://wonkachat.meetwonka.com/",
-          "icon": "globe"
-        },
-        {
-          "anchor": "Start for free",
-          "href": "https://wonka.chat/register",
-          "icon": "rocket"
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Our website",
+              "href": "https://wonkachat.meetwonka.com/",
+              "icon": "globe"
+            },
+            {
+              "anchor": "Start for free",
+              "href": "https://wonka.chat/register",
+              "icon": "rocket"
+            }
+          ]
         }
-      ]
-    }
+      },
+      {
+        "language": "fr-CA",
+        "tabs": [
+          {
+            "tab": "WonkaChat",
+            "groups": [
+              {
+                "group": "Bienvenue dans WonkaChat",
+                "pages": [
+                  "fr/welcome/introduction",
+                  "fr/welcome/why-wonka-chat",
+                  "fr/welcome/quick-start"
+                ]
+              },
+              {
+                "group": "Agents IA",
+                "pages": [
+                  "fr/ai-agents/introduction",
+                  "fr/ai-agents/finding-and-accessing-agents",
+                  "fr/ai-agents/using-existing-agents",
+                  "fr/ai-agents/creating-your-first-agent",
+                  "fr/ai-agents/business-teaching"
+                ]
+              },
+              {
+                "group": "Outils et connexion",
+                "pages": [
+                  "fr/tools-connection/introduction",
+                  "fr/tools-connection/setting-up-your-first-connection",
+                  "fr/tools-connection/troubleshooting-connections",
+                  "fr/tools-connection/examples-of-tool-usage"
+                ]
+              },
+              {
+                "group": "Utilisation améliorée",
+                "pages": [
+                  "fr/improved-usage/asking-great-questions",
+                  "fr/improved-usage/conversation-management",
+                  "fr/improved-usage/prompt-library"
+                ]
+              },
+              {
+                "group": "Sécurité et gouvernance",
+                "pages": [
+                  "fr/security-governance/index",
+                  "fr/security-governance/security-overview",
+                  "fr/security-governance/access-control",
+                  "fr/security-governance/best-practices",
+                  "fr/security-governance/compliance-and-governance"
+                ]
+              },
+              {
+                "group": "Support et ressources",
+                "pages": [
+                  "fr/support-resources/faq",
+                  "fr/support-resources/getting-help",
+                  "fr/support-resources/reference-materials",
+                  "fr/support-resources/troubleshooting"
+                ]
+              },
+              {
+                "group": "Légal",
+                "pages": [
+                  "fr/legal/terms-and-conditions",
+                  "fr/legal/terms-of-service",
+                  "fr/legal/privacy-policy",
+                  "fr/legal/legal-notice",
+                  "fr/legal/cookie-policy"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Apprentissage",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Fondamentaux de l'IA",
+                "pages": [
+                  "fr/learn/index",
+                  "fr/learn/ai-agent",
+                  "fr/learn/mcp",
+                  "fr/learn/build-agents"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Mises à jour",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Journal des modifications",
+                "pages": [
+                  "fr/updates/changelog"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Feuille de route",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Feuille de route",
+                "pages": [
+                  "fr/roadmap/index"
+                ]
+              }
+            ]
+          }
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Notre site web",
+              "href": "https://wonkachat.meetwonka.com/",
+              "icon": "globe"
+            },
+            {
+              "anchor": "Commencer gratuitement",
+              "href": "https://wonka.chat/register",
+              "icon": "rocket"
+            }
+          ]
+        }
+      },
+      {
+        "language": "nl",
+        "tabs": [
+          {
+            "tab": "WonkaChat",
+            "groups": [
+              {
+                "group": "Welkom bij WonkaChat",
+                "pages": [
+                  "nl/welcome/introduction",
+                  "nl/welcome/why-wonka-chat",
+                  "nl/welcome/quick-start"
+                ]
+              },
+              {
+                "group": "AI-Agents",
+                "pages": [
+                  "nl/ai-agents/introduction",
+                  "nl/ai-agents/finding-and-accessing-agents",
+                  "nl/ai-agents/using-existing-agents",
+                  "nl/ai-agents/creating-your-first-agent",
+                  "nl/ai-agents/business-teaching"
+                ]
+              },
+              {
+                "group": "Tools en verbinding",
+                "pages": [
+                  "nl/tools-connection/introduction",
+                  "nl/tools-connection/setting-up-your-first-connection",
+                  "nl/tools-connection/troubleshooting-connections",
+                  "nl/tools-connection/examples-of-tool-usage"
+                ]
+              },
+              {
+                "group": "Verbeterd gebruik",
+                "pages": [
+                  "nl/improved-usage/asking-great-questions",
+                  "nl/improved-usage/conversation-management",
+                  "nl/improved-usage/prompt-library"
+                ]
+              },
+              {
+                "group": "Beveiliging en governance",
+                "pages": [
+                  "nl/security-governance/index",
+                  "nl/security-governance/security-overview",
+                  "nl/security-governance/access-control",
+                  "nl/security-governance/best-practices",
+                  "nl/security-governance/compliance-and-governance"
+                ]
+              },
+              {
+                "group": "Support en bronnen",
+                "pages": [
+                  "nl/support-resources/faq",
+                  "nl/support-resources/getting-help",
+                  "nl/support-resources/reference-materials",
+                  "nl/support-resources/troubleshooting"
+                ]
+              },
+              {
+                "group": "Juridisch",
+                "pages": [
+                  "nl/legal/terms-and-conditions",
+                  "nl/legal/terms-of-service",
+                  "nl/legal/privacy-policy",
+                  "nl/legal/legal-notice",
+                  "nl/legal/cookie-policy"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Leren",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "AI-fundamenten",
+                "pages": [
+                  "nl/learn/index",
+                  "nl/learn/ai-agent",
+                  "nl/learn/mcp",
+                  "nl/learn/build-agents"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Updates",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Wijzigingslogboek",
+                "pages": [
+                  "nl/updates/changelog"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Roadmap",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Roadmap",
+                "pages": [
+                  "nl/roadmap/index"
+                ]
+              }
+            ]
+          }
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Onze website",
+              "href": "https://wonkachat.meetwonka.com/",
+              "icon": "globe"
+            },
+            {
+              "anchor": "Start gratis",
+              "href": "https://wonka.chat/register",
+              "icon": "rocket"
+            }
+          ]
+        }
+      },
+      {
+        "language": "fr",
+        "tabs": [
+          {
+            "tab": "WonkaChat",
+            "groups": [
+              {
+                "group": "Bienvenue dans WonkaChat",
+                "pages": [
+                  "fr/welcome/introduction",
+                  "fr/welcome/why-wonka-chat",
+                  "fr/welcome/quick-start"
+                ]
+              },
+              {
+                "group": "Agents IA",
+                "pages": [
+                  "fr/ai-agents/introduction",
+                  "fr/ai-agents/finding-and-accessing-agents",
+                  "fr/ai-agents/using-existing-agents",
+                  "fr/ai-agents/creating-your-first-agent",
+                  "fr/ai-agents/business-teaching"
+                ]
+              },
+              {
+                "group": "Outils et connexion",
+                "pages": [
+                  "fr/tools-connection/introduction",
+                  "fr/tools-connection/setting-up-your-first-connection",
+                  "fr/tools-connection/troubleshooting-connections",
+                  "fr/tools-connection/examples-of-tool-usage"
+                ]
+              },
+              {
+                "group": "Utilisation améliorée",
+                "pages": [
+                  "fr/improved-usage/asking-great-questions",
+                  "fr/improved-usage/conversation-management",
+                  "fr/improved-usage/prompt-library"
+                ]
+              },
+              {
+                "group": "Sécurité et gouvernance",
+                "pages": [
+                  "fr/security-governance/index",
+                  "fr/security-governance/security-overview",
+                  "fr/security-governance/access-control",
+                  "fr/security-governance/best-practices",
+                  "fr/security-governance/compliance-and-governance"
+                ]
+              },
+              {
+                "group": "Support et ressources",
+                "pages": [
+                  "fr/support-resources/faq",
+                  "fr/support-resources/getting-help",
+                  "fr/support-resources/reference-materials",
+                  "fr/support-resources/troubleshooting"
+                ]
+              },
+              {
+                "group": "Légal",
+                "pages": [
+                  "fr/legal/terms-and-conditions",
+                  "fr/legal/terms-of-service",
+                  "fr/legal/privacy-policy",
+                  "fr/legal/legal-notice",
+                  "fr/legal/cookie-policy"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Apprentissage",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Fondamentaux de l'IA",
+                "pages": [
+                  "fr/learn/index",
+                  "fr/learn/ai-agent",
+                  "fr/learn/mcp",
+                  "fr/learn/build-agents"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Mises à jour",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Journal des modifications",
+                "pages": [
+                  "fr/updates/changelog"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Feuille de route",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Feuille de route",
+                "pages": [
+                  "fr/roadmap/index"
+                ]
+              }
+            ]
+          }
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Notre site web",
+              "href": "https://wonkachat.meetwonka.com/",
+              "icon": "globe"
+            },
+            {
+              "anchor": "Commencer gratuitement",
+              "href": "https://wonka.chat/register",
+              "icon": "rocket"
+            }
+          ]
+        }
+      }
+    ]
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
@@ -173,10 +547,10 @@
     "dark": "/logo/Wonka_Full_GradientPurpleHighRes.png"
   },
   "errors": {
-  "404": {
-    "redirect": false,
-    "title": "Your page can't be found",
-    "description": "Please, go ask **WonkaChat** to help you find what you're looking for, I am sure it can help you!"
+    "404": {
+      "redirect": false,
+      "title": "Your page can't be found | Votre page est introuvable | Je pagina kan niet worden gevonden",
+      "description": "Please, go ask **WonkaChat** to help you find what you're looking for, I am sure it can help you! | Veuillez demander à **WonkaChat** de vous aider à trouver ce que vous cherchez, je suis sûr qu'il peut vous aider ! | Vraag **WonkaChat** om je te helpen vinden wat je zoekt, ik weet zeker dat het je kan helpen!"
+    }
   }
-}
 }

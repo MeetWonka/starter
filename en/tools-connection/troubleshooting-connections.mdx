@@ -1,0 +1,243 @@
+---
+title: "Troubleshooting Connections"
+description: "Quick solutions to common external connection problems and how to get help when you need it."
+---
+
+Having trouble connecting a business system or experiencing issues with an existing connection? This guide provides quick solutions to the most common problems.
+
+<Info>
+Most connection issues can be resolved in a few minutes by following the steps below. If you're still stuck, see the [Getting Help](/support-resources/getting-help) page for all the ways to reach our help desk.
+</Info>
+
+---
+
+## Quick Fixes to Try First
+
+Before contacting support, try these simple solutions:
+
+<Steps>
+<Step title="Disconnect and Reconnect">
+This resolves most connection issues:
+
+1. Go to the Connectors panel
+2. Click on the problematic business system
+3. Select **"Disconnect"**
+4. Wait 10 seconds
+5. Click **"Connect"** again and re-enter your credentials
+6. Enable the connection for your AI model
+
+</Step>
+
+<Step title="Refresh Your Page">
+Sometimes the connection just needs a refresh:
+
+1. Refresh your browser page (F5 or Ctrl+R).
+2. Wait for WonkaChat to reload.
+3. Try your query again.
+
+This can resolve temporary connection hiccups.
+
+</Step>
+
+<Step title="Clear Cache and Site Data">
+If refreshing the page doesn't work, try clearing your browser cache and site data:
+
+1. Open your browser's Developer Tools (press `F12` or right-click anywhere and select **Inspect**).
+2. Click the **Application** tab in the Developer Tools panel.
+3. In the left sidebar, find the **Storage** section and click **Clear site data**.
+4. Once cleared, reload the page and log in again.
+5. Reconnect your business system on WonkaChat.
+6. Test your connection to see if the issue is resolved.
+
+<Tip>
+After clearing site data, you may be logged out of other browser tabs for WonkaChat and will need to sign in again.
+</Tip>
+</Step>
+
+<Step title="Check Your Internet Connection">
+Ensure you have a stable connection:
+
+- Test your internet speed
+- Try loading other websites
+- Switch networks if possible (WiFi vs. mobile hotspot)
+- Restart your router if needed
+<Check>
+These troubleshooting steps often fix most connection problems by refreshing the authentication token and clearing any cached credentials that may have become stale or corrupted.
+</Check>
+</Step>
+
+</Steps>
+
+
+## Common Connection Problems
+
+<AccordionGroup>
+<Accordion title="Authentication Failed" icon="circle-xmark">
+**Symptoms:**
+- "Authentication failed" error message
+- Can't complete the login process
+- Redirected to login page repeatedly
+
+**Solutions:**
+
+**1. Check Your Credentials**
+- Make sure you're using the correct username and password
+- Try logging into the business system directly (outside WonkaChat) to verify your credentials work
+- If you recently changed your password, update it in WonkaChat
+
+**2. Reconnect the Business System**
+- Disconnect the business system from the Connectors panel
+- Wait 10 seconds
+- Reconnect with your current credentials
+
+<Tip>
+Test your credentials on the business system's website first before trying to connect through WonkaChat.
+</Tip>
+</Accordion>
+
+<Accordion title="Permission Denied" icon="ban">
+**Symptoms:**
+- "Access denied" or "Insufficient permissions" error
+- AI says it cannot access certain data
+- "403 Forbidden" message
+
+**Why This Happens:**
+
+
+**1. Your Organization Blocks Third-Party Apps**
+
+Some companies restrict employees from connecting external applications for security reasons.
+
+**Solution:**
+- Contact your IT or Security team
+- Ask them to approve WonkaChat as a trusted third-party application
+- They may need to whitelist WonkaChat in your organization's security settings
+
+**Examples:**
+- Google Workspace admin settings
+- Microsoft 365 admin center
+- Company firewall or VPN restrictions
+
+**2. You Didn't Grant All Permissions**
+
+During the OAuth connection process, you may have denied some permissions that WonkaChat needs.
+
+**Solution:**
+- Disconnect the business system
+- Reconnect and **grant all requested permissions** when prompted
+- Some business systems let you selectively approve permissions. You need to check if WonkaChat need broader access or not.
+
+
+</Accordion>
+
+<Accordion title="Connection Timeout or Slow Response" icon="clock">
+**Symptoms:**
+- "Connection timed out" message
+- Requests take a very long time
+- No response from the business system
+
+**Quick Fixes:**
+
+**1. Refresh Your Page**
+- Press F5 or Ctrl+R to reload WonkaChat
+- Try your request again
+
+**2. Check Your Internet Connection**
+- Test your network speed
+- Try switching networks
+- Close unnecessary browser tabs
+
+**3. Simplify Your Request**
+- If you're asking for a lot of data, try a smaller request first
+- Instead of "all emails this year," try "emails from this week"
+- Break complex requests into smaller steps
+
+**4. Check the Business System's Status**
+- The business system itself might be experiencing issues
+- Visit the business system's status page (e.g., status.google.com, status.microsoft.com)
+- Wait for the service to come back online
+
+<Info>
+If the business system's servers are down, there's nothing WonkaChat can do until the provider fixes it.
+</Info>
+</Accordion>
+
+<Accordion title="Tool Not Responding" icon="triangle-exclamation">
+**Symptoms:**
+- AI says "Unable to connect to [business system]"
+- Connection shows as active, but queries fail
+- No data returned from the business system
+
+**1. You Don't Have Access in the Business System Itself**
+
+Sometimes you're trying to do something through AI that you can't do directly in the business system either.
+
+<Warning>
+**Important:** WonkaChat can only do what YOU can do. If you don't have permission to access a file, read an email, or edit a record in the business system itself, WonkaChat can't do it for you through its external connection (MCP).
+</Warning>
+
+**Example:** If you can't access a specific Google Drive folder because you're not a member, WonkaChat can't access it either.
+
+**Solution:** Get the proper permissions in the business system first, then try again in WonkaChat.
+
+
+**2. Check the Business System Directly**
+- Log into the business system outside of WonkaChat
+- Verify it's working normally
+- Confirm you can access the data you're requesting
+
+**3. Business System API Limits**
+- Some business systems limit how many requests you can make
+- If you've made many requests in a short time, wait 15-30 minutes
+- Then try again
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Understanding Error Messages
+
+<Info>
+WonkaChat provides detailed error messages that help us diagnose connection issues. We're currently working on user-friendly documentation for these error messages.
+
+**Coming Soon:** A comprehensive error code reference guide that will help you understand and resolve specific errors faster.
+</Info>
+
+For now, if you see an error message:
+1. Take a screenshot of the full error
+2. Note what you were trying to do when it happened
+3. Contact support with this information
+
+## When to Contact Support
+
+If you've tried the quick fixes above and you're still having issues, our support team is here to help.
+
+**Contact Support When:**
+- Connection problems persist after trying all quick fixes
+- You see error messages you don't understand
+- You need help with organizational permissions or IT approval
+- Multiple business systems are having issues at the same time
+- You suspect a security or data issue
+
+
+
+## Additional Resources
+
+<CardGroup cols={2}>
+<Card title="Setup Guide" icon="plug" href="/en/tools-connection/setting-up-your-first-connection">
+Learn how to properly connect business systems from the beginning to avoid common issues.
+</Card>
+
+<Card title="Connection Examples" icon="video" href="/en/tools-connection/examples-of-tool-usage">
+Watch examples of successful external connections (MCP) with Outlook, Odoo, and more.
+</Card>
+
+<Card title="FAQ" icon="question" href="/en/support-resources/faq">
+Find answers to frequently asked questions about WonkaChat connections.
+</Card>
+
+<Card title="Getting Help" icon="life-ring" href="/en/support-resources/getting-help">
+All the ways to reach our support team and get personalized assistance.
+</Card>
+</CardGroup>

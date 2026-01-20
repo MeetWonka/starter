@@ -1,0 +1,281 @@
+---
+title: "Security Overview"
+description: "Understand WonkaChat's built-in security architecture, governance controls, and data privacy measures."
+---
+
+WonkaChat is an enterprise AI chat platform built on top of [LibreChat](https://www.librechat.ai/), a robust open-source project with a thriving community. We've enhanced it with enterprise-grade security, governance controls, and compliance features designed for organizations that need to use AI securely with their data.
+
+<Info>
+This page covers the built-in security measures and governance controls that WonkaChat provides out of the box.
+</Info>
+
+---
+
+## Governance
+
+Control what AI models, tools, and agents are available in your organization. WonkaChat comes with extensive capabilities out of the box, but you can customize your deployment to include only what's relevant for your company. This helps reducing complexity, minimizing unnecessary access, and maintaining a focused, secure environment.
+
+### Organization Access
+
+<CardGroup cols={2}>
+<Card title="MCP Selection" icon="plug">
+Wonka configures which MCP servers are available to your organization, ensuring only approved tools are accessible.
+</Card>
+
+<Card title="AI Model Selection" icon="brain">
+Administrators control which AI models and providers (OpenAI, Anthropic, Google, etc.) users can access within the organization.
+</Card>
+</CardGroup>
+
+<Tip>
+These governance controls ensure your organization uses only approved AI resources that align with your security policies and compliance requirements.
+</Tip>
+
+Beyond WonkaChat's built-in security measures, your organization maintains direct control over user access. For example, admins manage which agents are available to users and grant granular permissions per agent. See [Access Control](/security-governance/access-control) for details.
+
+---
+
+## Security Architecture
+
+WonkaChat implements enterprise-grade security with multiple layers of protection.
+
+### Authentication System
+
+WonkaChat uses a secure, token-based authentication system to protect user access:
+
+<AccordionGroup>
+<Accordion title="Access Tokens (15 minutes)" icon="key">
+Short-lived access tokens allow users to authenticate and interact with the platform. These tokens expire after 15 minutes, minimizing the risk of unauthorized access if compromised.
+</Accordion>
+
+<Accordion title="Refresh Tokens (7 days)" icon="rotate">
+Refresh tokens maintain user sessions for up to 7 days without requiring re-authentication. After 7 days, users need to log in again.
+</Accordion>
+
+<Accordion title="JWT Technology" icon="shield-check">
+WonkaChat uses JSON Web Tokens (JWT) for secure, stateless authentication. JWTs are cryptographically signed to prevent tampering and verify authenticity.
+</Accordion>
+</AccordionGroup>
+
+<Check>
+This dual-token approach balances security (short-lived access) with user convenience (session persistence).
+</Check>
+
+### Authentication Providers
+
+Multiple authentication methods are available to integrate with your existing identity systems:
+
+<Tabs>
+<Tab title="Available Now">
+WonkaChat currently supports these authentication providers:
+
+- **Local Authentication**: Username and password authentication
+- **OpenID Connect**: Integration with OpenID-compliant identity providers
+- **Azure AD / Entra ID**: Direct integration with Microsoft Azure Active Directory
+
+<Tip>
+Choose the authentication method that aligns with your organization's identity management strategy.
+</Tip>
+</Tab>
+
+<Tab title="Coming Soon">
+Additional social login providers are planned for future releases:
+
+- Google authentication
+- GitHub authentication
+- Other popular social providers
+
+<Info>
+These providers are not currently available but are on the roadmap.
+</Info>
+</Tab>
+</Tabs>
+
+### Rate Limiting & Abuse Prevention
+
+WonkaChat implements rate limiting to protect against brute force attacks and system abuse. Rate limits are applied across critical operations including login attempts, registration, password resets, administrative actions, and general API usage.
+
+<Check>
+Rate limits protect your organization from automated attacks while allowing normal user activity.
+</Check>
+
+---
+
+## Data Privacy
+
+Your data remains secure and private throughout all interactions with WonkaChat.
+
+### Privacy Guarantees
+
+<CardGroup cols={2}>
+<Card title="Multi-Tenant Isolation" icon="building-lock">
+Complete data isolation between organizations through subdomain-based routing (https://{org}.wonka.chat). No accidental data exposure across tenants.
+</Card>
+
+<Card title="No Model Training" icon="ban">
+Your conversations and data are never used to train AI models. Model providers process requests temporarily without retention. Your data stays in WonkaChat where you control it.
+</Card>
+
+<Card title="Encrypted in Transit" icon="lock">
+All data transmitted to and from WonkaChat is encrypted using HTTPS/TLS protocols for secure API communications.
+</Card>
+
+<Card title="Encrypted at Rest" icon="shield-halved">
+Data stored in WonkaChat's MongoDB databases is protected with encryption-at-rest support to secure your information.
+</Card>
+</CardGroup>
+
+### Data Encryption
+
+<AccordionGroup>
+<Accordion title="In Transit Protection">
+**HTTPS/TLS for all communications:**
+- All API calls use secure HTTPS/TLS protocols
+- Data is encrypted during transmission between your browser and WonkaChat servers
+- Secure connections to AI model providers (Azure, AWS Bedrock)
+</Accordion>
+
+<Accordion title="At Rest Protection">
+**MongoDB encryption and secure storage:**
+- Passwords: Hashed with bcrypt using salt rounds (never stored in plain text)
+- Tokens: JWT signing with strong cryptographic secrets
+- Database: MongoDB encryption-at-rest support for all stored data
+- API Keys: Never logged in plain text
+</Accordion>
+
+<Accordion title="Automatic Redaction">
+**Sensitive data protection in logs:**
+- All logs automatically redact sensitive patterns (passwords, tokens, keys)
+- API keys and authentication tokens are never logged in plain text
+- Token rotation prevents long-term exposure
+- Passwords are hashed with bcrypt before any storage
+
+<Check>
+Even system administrators cannot access your passwords or sensitive credentials in logs or databases.
+</Check>
+</Accordion>
+</AccordionGroup>
+
+### Multi-Tenant Data Isolation
+
+WonkaChat ensures complete separation between organizations:
+
+<Tabs>
+<Tab title="Organization-Scoped Data">
+Every piece of data in WonkaChat is scoped to your organization:
+- Conversations and chat history
+- AI agents and configurations
+- User accounts and permissions
+- MCP connections and tool settings
+- Audit logs and activity records
+
+<Check>
+Data from one organization is completely isolated and inaccessible to other organizations.
+</Check>
+</Tab>
+
+<Tab title="Subdomain Routing">
+Each organization has its own unique subdomain:
+- **Format**: `https://{your-org}.wonka.chat`
+- **Benefit**: Built-in namespace isolation at the network level
+- **Security**: Prevents cross-organization data leakage
+
+<Info>
+Subdomain-based routing adds an extra layer of separation beyond database-level isolation.
+</Info>
+</Tab>
+</Tabs>
+
+### Model Provider Security
+
+<AccordionGroup>
+<Accordion title="Azure & AWS Bedrock APIs">
+WonkaChat connects to AI models through secure Azure and AWS Bedrock APIs. Your data is processed in real-time and never stored or retained by model providers.
+</Accordion>
+
+<Accordion title="Ephemeral Model Processing">
+When you interact with an AI model, your prompts and responses are sent to the model provider, processed in memory, and immediately discarded by the provider after generating the response. 
+
+**Your conversations are securely stored in WonkaChat** for you to access your history, but model providers (Azure, AWS) never retain, store, or use your data for training or any other purpose.
+</Accordion>
+</AccordionGroup>
+
+<Check>
+Your conversation history is securely stored in WonkaChat where you control it. Model providers only process requests temporarily without any data retention or reuse.
+</Check>
+
+---
+
+## MCP Security Controls
+
+WonkaChat supports MCP (Model Context Protocol) servers with granular security configuration and multi-user isolation.
+
+### Multi-User Isolation
+
+<AccordionGroup>
+<Accordion title="User-Specific Token Storage">
+Each user's MCP authentication tokens are stored separately and securely:
+- Tokens are isolated per user account
+- No cross-user token access or sharing
+- Automatic token cleanup on user deactivation
+
+<Check>
+Your MCP credentials are never accessible to other users, even within the same organization.
+</Check>
+</Accordion>
+
+<Accordion title="Session-Based Authentication">
+MCP connections use session-based authentication for security:
+- Automatic user identification via request headers
+- Session validation on every MCP operation
+- Timeout enforcement to prevent stale sessions
+</Accordion>
+
+<Accordion title="Authentication Strategies">
+WonkaChat supports multiple MCP authentication methods:
+
+- **in-tool**: User authenticates directly within the connected tool
+- **oauth**: OAuth 2.0 flow for secure, delegated access
+- **api-key**: API key-based authentication for service integrations
+
+<Info>
+The authentication strategy is determined by the MCP server provider and cannot be changed by your organization.
+</Info>
+</Accordion>
+</AccordionGroup>
+
+### No Permission Escalation
+
+<CardGroup cols={2}>
+<Card title="Inherit Your Permissions" icon="user-lock">
+MCP connections inherit your exact permissions when accessing connected tools. They cannot access anything you couldn't access manually.
+</Card>
+
+<Card title="No Admin Bypass" icon="shield-halved">
+MCP connections cannot be used to override, bypass, or escalate permissions in connected systems. Your security policies remain fully enforced.
+</Card>
+</CardGroup>
+
+<Warning>
+If you cannot access a resource or perform an action manually in a connected tool, the AI models cannot do it either (even if instructed to try).
+</Warning>
+
+---
+
+## What You Can Control
+
+While WonkaChat provides robust built-in security, you control additional layers:
+
+<CardGroup cols={2}>
+<Card title="Access Control" icon="user-shield" href="/en/security-governance/access-control">
+Manage user roles and control who can access specific agents
+</Card>
+
+<Card title="Best Practices" icon="clipboard-check" href="/en/security-governance/best-practices">
+Follow recommended guidelines for safe AI usage in your organization
+</Card>
+</CardGroup>
+
+<Check>
+Combining WonkaChat's built-in security with your organization's access controls and practices creates a comprehensive security framework.
+</Check>

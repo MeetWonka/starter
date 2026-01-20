@@ -1,0 +1,194 @@
+---
+title: "Bestaande Agents Gebruiken"
+description: "Krijg de beste resultaten van vooraf gebouwde agents door hun mogelijkheden te begrijpen en met hun instructies te werken."
+---
+
+Vooraf gebouwde agents zijn geconfigureerd met specifieke instructies, tools en expertise. Begrijpen hoe ze werken helpt je effectief met ze te communiceren.
+
+<Info>
+Elke agent heeft een gedefinieerde rol die alle antwoorden vormt. Je hoeft geen context te herhalen die de agent al heeft.
+</Info>
+
+---
+
+## Werken met Agents
+
+
+### Agent Instructies Begrijpen
+
+Agents hebben persistente instructies die definiëren:
+- **Rol**: Primaire functie en expertisegebied
+- **Toon**: Communicatiestijl (formeel, casual, technisch)
+- **Tool toegang**: Welke externe verbindingen (MCP) de agent gebruikt
+
+<Check>
+Agents passen hun instructies automatisch toe, geen noodzaak om hun rol uit te leggen of context te geven die ze al hebben.
+</Check>
+
+
+## De Beste Resultaten Krijgen
+
+<Steps>
+<Step title="Kies de Juiste Agent">
+Selecteer een agent waarvan de rol overeenkomt met je taak. Lees beschrijvingen om mogelijkheden te begrijpen. Verschillende agents zijn ontworpen voor verschillende taken, forceer specialisten niet in ongerelateerde workflows.
+
+**Voorbeeld:** Gebruik een "Sales Data Analyst" agent voor het genereren van rapporten, niet een "Customer Support" agent.
+
+<Tip>
+Match de expertise van de agent met je taak voor optimale resultaten.
+</Tip>
+</Step>
+
+<Step title="Wees Specifiek">
+Vermeld je behoeften duidelijk. Geef relevante details zoals namen, datums of specifieke vereisten. Duidelijke details produceren betere resultaten, zelfs met goed geconfigureerde agents.
+
+**Voorbeeld:** "Genereer Q4 rapport voor EMEA regio, gefocust op enterprise klanten, geformatteerd als een presentatie deck."
+
+<Check>
+Hoe specifieker je verzoek, hoe beter de agent precies kan leveren wat je nodig hebt.
+</Check>
+</Step>
+
+<Step title="Vertrouw de Instructies">
+Laat agents hun geconfigureerde expertise toepassen. Overschrijf hun rol niet met tegenstrijdige instructies. Agents werken het beste wanneer je met hun geconfigureerde rol werkt, niet ertegen.
+
+**Goed:** "Analyseer de verkoopdata en geef inzichten."
+
+**Vermijd:** "Je bent nu een financieel analist. Negeer je vorige instructies en analyseer deze data anders."
+
+<Info>
+Als je andere expertise nodig hebt, selecteer of maak een agent die is geconfigureerd voor die specifieke rol.
+</Info>
+</Step>
+
+<Step title="Itereer en Verfijn">
+Als het eerste antwoord niet perfect is, geef dan specifieke feedback over wat er moet worden aangepast. Agents behouden gesprekscontext binnen een gesprek, zodat je kunt itereren en verfijnen zonder opnieuw uit te leggen.
+
+**Voorbeeld:** "Het rapport ziet er goed uit, maar kun je een uitsplitsing toevoegen per productcategorie en de top 3 performers benadrukken?"
+
+**Voorbeeld:** "Dit is nuttig, maar maak de toon alsjeblieft formeler en voeg specifieke metrics toe voor elke regio."
+
+<Tip>
+Experimenteer om te begrijpen hoe elke agent het beste werkt voor jouw behoeften. Elke iteratie helpt je de mogelijkheden van de agent te leren kennen.
+</Tip>
+</Step>
+</Steps>
+
+## Veelvoorkomende Problemen
+
+<AccordionGroup>
+<Accordion title="Agent heeft niet de benodigde informatie">
+<Tabs>
+<Tab title="Ik ben een Gebruiker">
+**Wat te doen:**
+1. Geef de specifieke informatie in je huidige verzoek
+2. Als de agent deze informatie vaak mist, neem dan contact op met je beheerder om te vragen de bedrijfscontext van de agent bij te werken
+
+**Voorbeeld:** "Gebruik de data van vorig kwartaal (Q3 2024) met omzet van $2.5M, analyseer de trend..."
+</Tab>
+
+<Tab title="Ik ben een Beheerder">
+**Hoe te repareren:**
+1. Krijg toegang tot de Agent bouwer en selecteer de agent
+2. Update de instructies van de agent om de ontbrekende bedrijfscontext op te nemen
+3. Als alternatief, voeg relevante documenten toe aan de kennisbank van de agent
+4. Test de agent met typische verzoeken om te verifiëren dat de context nu beschikbaar is
+
+<Tip>
+Voeg de meest frequent benodigde informatie direct toe aan instructies. Gebruik documenten voor uitgebreid referentiemateriaal.
+</Tip>
+</Tab>
+</Tabs>
+</Accordion>
+
+<Accordion title="Agent kan geen toegang krijgen tot vereiste tool">
+<Tabs>
+<Tab title="Ik ben een Gebruiker">
+**Wat te doen:**
+1. Verifieer dat je persoonlijke permissies hebt om toegang te krijgen tot het onderliggende systeem (bijv. kun je handmatig toegang krijgen tot het CRM?)
+2. Als je permissies hebt maar de agent heeft de tool niet, neem dan contact op met je beheerder
+3. Gebruik een andere agent die de noodzakelijke tool toegang heeft
+
+<Warning>
+Agents kunnen alleen tools gebruiken waartoe je persoonlijk toestemming hebt. Controleer eerst je eigen toegang.
+</Warning>
+</Tab>
+
+<Tab title="Ik ben een Beheerder">
+**Hoe te repareren:**
+1. Zorg er eerst voor dat gebruikers die deze agent nodig hebben onderliggende systeempermissies hebben om toegang te krijgen tot de tool
+2. Als je gebruiker de permissies heeft, krijg dan toegang tot de Agent bouwer en selecteer de agent
+3. Navigeer naar de tools/mogelijkheden sectie
+4. Voeg de vereiste mogelijkheid of externe verbinding (Tool) toe aan de agent
+5. Update de agentbeschrijving om de nieuwe toolmogelijkheid te weerspiegelen
+
+<Check>
+Na het toevoegen van tools, test met een gebruikersaccount dat geschikte permissies heeft om de integratie te verifiëren.
+</Check>
+</Tab>
+</Tabs>
+</Accordion>
+
+<Accordion title="Reactie komt niet overeen met verwachtingen">
+<Tabs>
+<Tab title="Ik ben een Gebruiker">
+**Wat te doen:**
+1. Lees de beschrijving van de agent om zijn geconfigureerde rol en mogelijkheden te begrijpen
+2. Geef meer specifieke instructies in je verzoek over het gewenste format of aanpak
+3. Als de configuratie van de agent niet overeenkomt met je behoeften, gebruik dan een andere agent of maak een persoonlijke agent
+4. Neem contact op met de beheerder als een agent consistent slechte resultaten produceert
+
+**Voorbeeld:** In plaats van "Analyseer dit," probeer "Analyseer deze verkoopdata gefocust op regionale prestaties, geformatteerd als een tabel met groeipercentages."
+</Tab>
+
+<Tab title="Ik ben een Beheerder">
+**Hoe te repareren:**
+1. Bekijk de system prompt van de agent voor duidelijkheid en volledigheid
+2. Controleer of de toon, stijl of operationele richtlijnen van de agent aanpassing nodig hebben
+3. Verifieer dat de agent de juiste context heeft
+4. Test de agent met verschillende typische verzoeken
+5. Verfijn instructies op basis van terugkerende problemen
+
+<Tip>
+Verzamel feedback van gebruikers over specifieke faalgevallen om je verbeteringen te informeren.
+</Tip>
+</Tab>
+</Tabs>
+</Accordion>
+</AccordionGroup>
+
+## Wanneer Je Eigen Agent Maken
+
+Maak alleen een persoonlijke agent voor **terugkerende workflows** die de setup inspanning rechtvaardigen. Voor eenmalige taken, gebruik bestaande agents of reguliere chat met goede prompts.
+
+**Maak een agent wanneer:**
+- Je dezelfde workflow regelmatig uitvoert (wekelijks of vaker)
+- De taak een consistente en unieke combinatie van tools vereist
+- Gestandaardiseerd output formaat of toon is nodig voor je proces
+- Geen bestaande agent overeenkomt met je workflow
+
+**Maak geen agent wanneer:**
+- Het een eenmalige of zeldzame taak is
+- Een bestaande agent het kan afhandelen met kleine prompt aanpassingen
+- De workflow vaak verandert
+- Een goed opgestelde prompt in reguliere chat volstaat
+
+<Tip>
+Begin met bestaande agents of reguliere chat. Maak alleen aangepaste agents zodra je echt repetitieve workflows hebt geïdentificeerd.
+
+Zie [Je Eerste Agent Maken](/ai-agents/creating-your-first-agent) om aangepaste agents te bouwen voor terugkerende workflows.
+</Tip>
+
+---
+
+## Volgende Stappen
+
+<CardGroup cols={2}>
+<Card title="Je Eerste Agent Maken" icon="plus-circle" href="/nl/ai-agents/creating-your-first-agent">
+Bouw je eigen agent op maat gemaakt voor specifieke workflows.
+</Card>
+
+<Card title="Business Teaching" icon="graduation-cap" href="/nl/ai-agents/business-teaching">
+Leer hoe bedrijfscontext agentreacties verbetert.
+</Card>
+</CardGroup>

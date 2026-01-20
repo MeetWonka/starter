@@ -1,0 +1,394 @@
+---
+title: "Bibliothèque de prompts"
+description: "Sauvegardez, organisez et réutilisez vos meilleurs prompts avec des variables pour des interactions IA efficaces."
+---
+
+Construisez une bibliothèque personnelle de prompts efficaces que vous pouvez réutiliser et personnaliser avec des variables. 
+Conservez les prompts qui fonctionnent bien et réutilisez-les dans les conversations et projets ; gagnez du temps et maintenez la cohérence dans vos interactions IA.
+
+<Info>
+La Bibliothèque de prompts vous aide à capturer les prompts réussis et à les transformer en modèles réutilisables pour les tâches courantes.
+</Info>
+
+### Pourquoi construire une bibliothèque de prompts ?
+
+<CardGroup cols={2}>
+<Card title="Cohérence" icon="equals">
+Utilisez des prompts éprouvés qui offrent des résultats fiables à chaque fois.
+</Card>
+
+<Card title="Efficacité" icon="bolt">
+Évitez de réécrire les mêmes instructions et passez directement aux résultats.
+</Card>
+
+<Card title="Partage de connaissances" icon="users">
+Partagez des prompts efficaces avec votre équipe pour standardiser l'utilisation de l'IA.
+</Card>
+
+<Card title="Amélioration continue" icon="chart-line">
+Affinez et itérez sur les prompts au fil du temps en fonction de ce qui fonctionne le mieux.
+</Card>
+</CardGroup>
+
+## Visite guidée
+
+Regardez cette vidéo étape par étape pour apprendre comment créer et gérer les prompts sauvegardés dans votre bibliothèque :
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/0afpiO461LA"
+  title="Visite guidée de la bibliothèque de prompts"
+  frameBorder="0"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+## Créer votre premier prompt sauvegardé
+
+<Steps>
+<Step title="Identifier les prompts réussis">
+Lorsque vous obtenez d'excellents résultats d'un prompt, marquez-le comme candidat pour votre bibliothèque. Recherchez les prompts qui :
+- Produisent des sorties systématiquement bonnes
+- Résolvent des tâches récurrentes courantes
+- Incluent une structure ou un formatage utile
+- Minimisent les erreurs grâce à des tests approfondis
+
+<Tip>
+Envisagez d'utiliser la fonctionnalité de signets pour stocker les prompts dans votre bibliothèque personnelle avant de les ajouter officiellement à votre bibliothèque de prompts.
+</Tip>
+
+</Step>
+
+
+<Step title="Sauvegarder dans votre bibliothèque">
+Pour sauvegarder un prompt dans votre bibliothèque, naviguez vers le panneau de droite et sélectionnez la section « Prompts ». De là, créez ou accédez à n'importe quel prompt de votre bibliothèque.
+
+<Frame caption="Localiser l'icône Bibliothèque">
+<img src="../../images/library.gif" alt="Icône de bibliothèque dans la barre d'outils" />
+</Frame>
+
+
+</Step>
+
+<Step title="Remplir les détails du prompt">
+Dans le formulaire de création de prompt, fournissez :
+- **Nom du prompt** (requis) : Un nom descriptif pour votre prompt
+- **Texte** (requis) : Le texte complet du prompt avec toutes les [_variables_](#gestion-des-variables) dont vous avez besoin
+- **Description** (optionnel) : Une courte description affichée lors de l'utilisation du prompt
+- **Nom de commande** (optionnel) : Créez un raccourci de commande personnalisée pour invoquer ce prompt rapidement
+
+<Tip>
+Donnez à vos prompts sauvegardés des noms descriptifs qui expliquent leur objectif, comme « Modèle de revue de code » ou « Résumé de notes de réunion ».
+</Tip>
+
+</Step>
+
+<Step title="Sauvegarder et utiliser">
+Une fois sauvegardé, votre prompt apparaît dans la bibliothèque de Prompts où vous pouvez :
+- Rechercher des prompts par nom en utilisant le filtre
+- Cliquer sur un prompt pour l'utiliser dans une conversation
+- Remplir toutes les variables lors de l'utilisation du prompt
+
+<Tip>
+Utilisation rapide : Les prompts peuvent être invoqués en tapant `/` suivi de leur nom ou votre commande personnalisée directement depuis n'importe quelle conversation.
+</Tip>
+
+<Frame caption="Exemple de prompt avec une commande personnalisée '/exp'">
+<img src="../../images/library.png" alt="Exemple d'utilisation d'un prompt sauvegardé dans une conversation" />
+</Frame>
+
+
+</Step>
+</Steps>
+
+---
+
+## Gestion des variables
+
+Rendez vos prompts flexibles et réutilisables grâce à des variables personnalisables à chaque usage. WonkaChat prend en charge trois types de variables : **variables de base** pour une saisie libre, **variables spéciales** qui insèrent automatiquement des informations système, et **variables déroulantes** pour proposer des choix prédéfinis.
+
+<Tabs>
+<Tab title="Syntaxe des variables de base">
+Utilisez des doubles accolades `{{ }}` pour définir une variable à n’importe quel endroit dans votre prompt.
+
+**Exemple 1 :**
+```
+Résumez le {{type_de_document}} pour le {{public_cible}}.
+```
+- Lors de l’utilisation du prompt, on vous demandera de remplir `{{type_de_document}}` (par exemple : « notes de réunion ») et `{{public_cible}}` (par exemple : « équipe de direction »).
+
+**Exemple 2 :**
+```
+Examinez la base de code {{base_de_code}} et mettez en avant {{axe_de_revue}}.
+```
+- Ici, `{{base_de_code}}` pourrait être « service API », et `{{axe_de_revue}}` « sécurité » ou « performances ».
+</Tab>
+
+<Tab title="Variables spéciales">
+Insérez des informations dynamiques à l’aide de ces variables intégrées (aucune saisie manuelle nécessaire) :
+
+- `{{current_date}}` - La date d’aujourd’hui
+- `{{current_user}}` - Votre nom d’utilisateur
+- `{{current_datetime}}` - Date et heure actuelles
+
+**Exemple 1 :**
+```
+Préparez un résumé pour {{current_user}} en date du {{current_date}}.
+```
+
+**Exemple 2 :**
+```
+Entrée de journal créée le {{current_datetime}} par {{current_user}}.
+```
+</Tab>
+
+<Tab title="Variables déroulantes">
+Utilisez les variables déroulantes pour les champs à valeurs limitées.
+
+**Exemple 1 :**
+```
+Résumez ceci sous forme de {{style_de_sortie:points|paragraphe|tableau}}.
+```
+
+**Exemple 2 :**
+```
+Comparez la solution dans l’environnement {{environnement:développement|préproduction|production}}.
+```
+
+Chaque fois que vous utilisez le prompt, choisissez une option depuis le menu déroulant correspondant à la variable.
+</Tab>
+</Tabs>
+
+<Check>
+Des variables bien pensées rendent vos prompts adaptables à de nombreux contextes, tout en restant efficaces.
+</Check>
+
+---
+
+## Exemples de bibliothèque de prompts
+
+Des modèles prêts à l’emploi, classés par niveau de difficulté. Commencez avec des prompts simples pour la communication et l’organisation, puis progressez vers des modèles plus techniques ou détaillés à mesure que vous prenez en main l’outil.
+
+<Tabs>
+<Tab title="Exemples simples">
+### Communication et organisation
+
+<AccordionGroup>
+<Accordion title="Compositeur d’e-mail" icon="envelope">
+**Objectif :** Rédiger rapidement un e-mail professionnel
+
+**Prompt :**
+```
+Rédige un e-mail {{ton:formel|amical}} à {{destinataire}} au sujet de {{sujet}}.
+Points principaux :
+{{points_principaux}}
+```
+
+**Variables :**
+- `{{ton}}` : Ton de l’e-mail (déroulant)
+- `{{destinataire}}` : Personne ou groupe destinataire
+- `{{sujet}}` : Sujet de l’e-mail
+- `{{points_principaux}}` : Points importants à aborder
+</Accordion>
+
+<Accordion title="Résumé de notes de réunion" icon="clipboard">
+**Objectif :** Transformer des notes brutes en résumé clair
+
+**Prompt :**
+```
+Résume ces notes de réunion :
+
+Date : {{current_date}}
+Participants : {{participants}}
+Notes : {{notes_brutes}}
+```
+
+**Variables :**
+- `{{current_date}}` : Date d’aujourd’hui
+- `{{participants}}` : Liste des participants
+- `{{notes_brutes}}` : Notes de la réunion à résumer
+</Accordion>
+
+<Accordion title="Résumé d’article court" icon="magnifying-glass">
+**Objectif :** Résumer un article ou un contenu Web
+
+**Prompt :**
+```
+Résume ce {{type_contenu:article|billet de blog}} sur {{sujet}} pour {{public_cible}} :
+{{contenu}}
+```
+
+**Variables :**
+- `{{type_contenu}}` : Type de contenu (déroulant)
+- `{{sujet}}` : Sujet abordé
+- `{{public_cible}}` : Destinataire du résumé (ex : étudiants, équipe)
+- `{{contenu}}` : Texte à résumer
+</Accordion>
+</AccordionGroup>
+</Tab>
+
+<Tab title="Exemples avancés">
+### Modèles techniques, informatiques et analytiques
+
+<AccordionGroup>
+<Accordion title="Modèle de revue de code" icon="code">
+**Objectif :** Demander une revue de code ciblée
+
+**Prompt :**
+```
+Examine ce code {{langage}} pour {{nom_composant}}.
+{{bloc_code}}
+
+Commentaires attendus sur :
+1. Lisibilité
+2. {{axe_de_revue}}
+```
+
+**Variables :**
+- `{{langage}}` : Langage de programmation
+- `{{nom_composant}}` : Nom ou objectif du code
+- `{{bloc_code}}` : Code à examiner
+- `{{axe_de_revue}}` : Point de focalisation (ex : sécurité, performances)
+</Accordion>
+
+<Accordion title="Demande de diagnostic de bug" icon="bug">
+**Objectif :** Analyser puis corriger un bug
+
+**Prompt :**
+```
+Aide à déboguer ceci dans {{composant_systeme}}.
+Erreur : {{message_erreur}}
+Code :
+{{extrait_code}}
+```
+
+**Variables :**
+- `{{composant_systeme}}` : Emplacement du bug
+- `{{message_erreur}}` : Message d’erreur complet
+- `{{extrait_code}}` : Code concerné
+</Accordion>
+
+<Accordion title="Générateur de documentation rapide" icon="file-lines">
+**Objectif :** Générer rapidement de la documentation technique
+
+**Prompt :**
+```
+Documente ce code {{langage}} comme {{type_doc:API|README}}.
+{{bloc_code}}
+```
+
+**Variables :**
+- `{{langage}}` : Langage de programmation
+- `{{type_doc}}` : Type de documentation (déroulant)
+- `{{bloc_code}}` : Code à documenter
+</Accordion>
+
+<Accordion title="Résumé d’analyse de données" icon="chart-column">
+**Objectif :** Résumer et analyser un jeu de données
+
+**Prompt :**
+```
+Analyse {{type_donnee:ventes|données utilisateur}} afin de répondre à : {{question_metier}}
+{{donnees}}
+```
+
+**Variables :**
+- `{{type_donnee}}` : Type de données (déroulant)
+- `{{question_metier}}` : Problème ou question à investiguer
+- `{{donnees}}` : Données à analyser
+</Accordion>
+
+<Accordion title="Créateur de cas de test" icon="vial">
+**Objectif :** Suggérer des scénarios de test pertinents
+
+**Prompt :**
+```
+Crée des cas de test pour {{fonctionnalite}} dans une {{type_app:web|API}}.
+User story : {{user_story}}
+```
+
+**Variables :**
+- `{{fonctionnalite}}` : Nom de la fonctionnalité à tester
+- `{{type_app}}` : Type d’application (déroulant)
+- `{{user_story}}` : Exigence utilisateur brève
+</Accordion>
+
+<Accordion title="Assistant de requête SQL" icon="database">
+**Objectif :** Écrire ou optimiser des requêtes SQL
+
+**Prompt :**
+```
+{{action:Écrire|Optimiser}} une requête SQL pour {{sgbd:PostgreSQL|MySQL}}.
+Objectif : {{besoin_requete}}
+```
+
+**Variables :**
+- `{{action}}` : Action à réaliser (déroulant)
+- `{{sgbd}}` : Système de gestion de bases de données (déroulant)
+- `{{besoin_requete}}` : Objectif de la requête
+</Accordion>
+</AccordionGroup>
+</Tab>
+</Tabs>
+
+---
+
+### Bonnes pratiques
+
+<CardGroup cols={2}>
+<Card title="Noms descriptifs" icon="tag">
+Utilisez des noms clairs et explicites pour retrouver facilement vos prompts dans la bibliothèque.
+</Card>
+
+<Card title="Ajouter des descriptions" icon="note-sticky">
+Servez-vous du champ description pour préciser le contexte ou les cas d’utilisation d’un prompt.
+</Card>
+
+<Card title="Créer des commandes slash" icon="terminal">
+Pour les prompts fréquemment utilisés, créez des commandes slash pour y accéder instantanément.
+</Card>
+
+<Card title="Tester et affiner" icon="rotate">
+Testez puis ajustez régulièrement vos prompts selon les retours et vos besoins évolutifs.
+</Card>
+</CardGroup>
+
+<Tip>
+Commencez avec 5 à 10 prompts qui couvrent vos usages principaux, puis élargissez progressivement votre collection au fil du temps.
+</Tip>
+
+--- 
+
+## Conseils pour une bibliothèque de prompts propre
+
+<AccordionGroup>
+<Accordion title="Utiliser des noms de variables descriptifs">
+Privilégiez des noms de variables qui reflètent précisément l’information attendue. Par exemple, utilisez `{{retour_utilisateur}}` plutôt que `{{texte}}` ou `{{input}}`.
+</Accordion>
+
+<Accordion title="Exploiter les variables spéciales">
+Profitez de variables telles que `{{current_date}}`, `{{current_user}}` et autres pour intégrer le contexte automatiquement sans saisie manuelle.
+</Accordion>
+
+<Accordion title="Créer des options déroulantes pour les choix courants">
+Utilisez la syntaxe déroulante `{{variable:option1|option2|option3}}` pour limiter les valeurs acceptées, faciliter la saisie et éviter les erreurs.
+</Accordion>
+
+<Accordion title="Garder les prompts ciblés">
+Séparez vos prompts selon les tâches. Un prompt trop complexe est difficile à maintenir et moins efficace que plusieurs prompts spécialisés.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Prochaines étapes
+
+<CardGroup cols={2}>
+<Card title="Poser des questions exceptionnelles" icon="lightbulb" href="/fr/improved-usage/asking-great-questions">
+Découvrez les techniques pour formuler de meilleures questions et obtenir des résultats optimaux.
+</Card>
+
+<Card title="Gestion des conversations" icon="comments" href="/fr/improved-usage/conversation-management">
+Comprenez la notion de contexte et maîtrisez la gestion avancée de vos conversations.
+</Card>
+</CardGroup>
