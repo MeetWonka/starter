@@ -1,0 +1,560 @@
+---
+title: "Goede Vragen Stellen"
+description: "Beheers de grondbeginselen van effectief prompten en geavanceerde technieken om de beste resultaten te krijgen van AI-modellen."
+---
+
+Hoogwaardige antwoorden van AI-modellen beginnen met goed opgebouwde vragen. Deze gids gaat van basisprincipes naar geavanceerde technieken en helpt je je promptvaardigheden voortdurend te verbeteren.
+
+<Info>
+De kwaliteit van AI-antwoorden correleert direct met de duidelijkheid en structuur van je prompts. Kleine verbeteringen in hoe je vragen stelt kunnen de resultaten dramatisch verbeteren.
+</Info>
+
+---
+
+## Basisbeginselen van Prompten
+
+De basis van effectieve AI-interactie:
+
+- **Wees duidelijk en specifiek** - Vage vragen leiden tot vage antwoorden.
+- **Gebruik positieve instructies** - Focus op wat je wilt, niet op wat je niet wilt.
+- **Geef context** - Bied relevante achtergrondinformatie om antwoorden af te stemmen.
+
+<AccordionGroup>
+<Accordion title="Wees duidelijk en specifiek" icon="bullseye">
+Hoe specifieker je verzoek, hoe beter het antwoord.
+
+**In plaats van:**
+```
+Vertel me over marketing.
+```
+
+**Probeer:**
+```
+Leg de drie meest effectieve digitale marketingstrategieën uit voor 
+een B2B SaaS-bedrijf met een maandelijks budget van €10.000.
+```
+</Accordion>
+
+<Accordion title="Gebruik positieve instructies" icon="check">
+Focus op wat je wilt dat de AI doet, in plaats van wat je niet wilt.
+
+**In plaats van:**
+```
+Wees niet te technisch.
+```
+
+**Probeer:**
+```
+Leg dit uit in eenvoudige termen die een niet-technische ondernemer 
+zou begrijpen.
+```
+</Accordion>
+
+<Accordion title="Geef context" icon="circle-info">
+Geef de AI relevante achtergrondinformatie om het antwoord af te stemmen.
+
+**Voorbeeld:**
+```
+Ik ben een productmanager bij een fintech startup. We beslissen tussen 
+microservices en monolithische architectuur voor onze MVP. Welke factoren 
+moeten we overwegen gezien onze 3-maanden lanceringstermijn en team van 
+4 ontwikkelaars?
+```
+
+<Tip>
+Beschouw de AI als een deskundige collega die context nodig heeft om je het beste advies te geven.
+</Tip>
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Context Instellingstechnieken
+
+De juiste context zorgt ervoor dat de AI je doelen, publiek en beperkingen begrijpt.
+
+<CardGroup cols={2}>
+<Card title="Definieer je Publiek" icon="users">
+Specificeer wie het antwoord zal gebruiken of lezen om complexiteit en toon aan te passen.
+</Card>
+
+<Card title="Stel de Scope In" icon="bullseye">
+Definieer duidelijk de grenzen om te voorkomen dat antwoorden te breed of te smal zijn.
+</Card>
+
+<Card title="Geef Voorbeelden" icon="lightbulb">
+Toon voorbeelden van wat je zoekt om de outputstijl te begeleiden.
+</Card>
+
+<Card title="Vermeld je Doel" icon="flag-checkered">
+Leg uit wat je met het antwoord gaat doen om meer bruikbare resultaten te krijgen.
+</Card>
+</CardGroup>
+
+### Effectief Context-Instellingspatroon
+
+Gebruik deze structuur om uitgebreide context te bieden:
+
+```
+[Rol/Perspectief]: Ik ben een [jouw rol] die werkt aan [project/taak]
+
+[Situatie]: Momenteel, [beschrijf je situatie]
+
+🎯 [DOEL]: Wat ik moet bereiken
+
+📏 [SCOPE - Beperkingen]: 
+- [Beperking 1]
+- [Beperking 2]
+- [Beperking 3]
+
+👥 [PUBLIEK]: Wie dit zal gebruiken/lezen of leg het formaat uit dat de output moet hebben
+
+💡 [VOORBEELDEN]: Relevante voorbeelden of huidige aanpak (indien van toepassing)
+
+[OUTPUT]: Specificeer hier het exacte formaat dat je wilt voor het antwoord. Vraag bijvoorbeeld om een tabel, samenvatting, lijst met actiestappen, e-mailconcept of opsommingstekens - wat het meest nuttig zou zijn voor je mensen of stakeholders.
+
+[Je specifieke vraag]
+```
+
+**Voorbeeld:**
+```
+Rol: Ik ben een data-analist bij een gezondheidszorg startup
+
+Situatie: We hebben tevredenheidsenquêtegegevens van patiënten van 500 respondenten 
+over 3 klinieklocaties gedurende 6 maanden.
+
+🎯 DOEL: Identificeer de top 3 factoren die de patiënttevredenheid beïnvloeden om 
+te presenteren aan ons managementteam
+
+📏 SCOPE - Beperkingen:
+- Focus op bruikbare inzichten die onze klinieken kunnen implementeren
+- Resultaten moeten statistisch significant zijn (p < 0,05)
+- 6-maanden tijdlijn over 3 klinieklocaties
+- Gebruik Tableau voor datavisualisatie (vereist door onze organisatie)
+
+👥 PUBLIEK: Niet-technische leidinggevenden die duidelijke, bruikbare inzichten nodig hebben
+- Geven de voorkeur aan visuele presentaties boven ruwe statistieken
+- Moeten de bedrijfsimpact begrijpen
+
+💡 VOORBEELDEN: Huidige aanpak omvat basis tevredenheidscores, maar 
+leidinggevenden hebben om diepere analyse gevraagd die tevredenheid koppelt aan specifieke 
+operationele factoren
+
+Output:
+Gelieve je antwoord in het volgende formaat te verstrekken:
+
+- [Factornaam]: [Korte uitleg of inzicht]
+- [Factornaam]: [Korte uitleg of inzicht]
+- [Factornaam]: [Korte uitleg of inzicht]
+
+Bijvoorbeeld:
+- Wachttijden: Hoe snel patiënten worden geholpen beïnvloedt tevredenheid
+- Vriendelijkheid van personeel: Positieve personeelsinteracties verbetren de ervaring
+- Duidelijkheid van instructies: Patiënten waarderen duidelijke instructies na bezoek
+
+Vraag: Welke analysebenadering zou je aanbevelen, en welke 
+visualisatietypen moet ik gebruiken voor de leidinggevendenpresentatie?
+```
+
+<Check>
+Deze structuur past alle vier context-instellingstechnieken toe: **je doel vermelden** 🎯, **je publiek definiëren** 👥, **de scope instellen** 📏, en **relevante voorbeelden geven** 💡.
+</Check>
+
+### Zie het in Actie: Video Voorbeeld
+
+Bekijk de volgende video voor een praktische demonstratie van het gebruik van deze best practices om een AI-agent te instrueren en hoogwaardige resultaten te behalen.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/rfY0m-yQ3fE"
+  title="Hoe Effectieve Instructies te Schrijven voor een AI-Agent"
+  frameBorder="0"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Info>
+Deze video begeleidt je stap-voor-stap bij het toepassen van duidelijkheid, positieve instructies en effectieve contextinstelling bij het prompten van een AI-agent.
+</Info>
+
+
+---
+
+## Gestructureerde Output Verzoeken
+
+Het vragen van specifieke formaten helpt je antwoorden te krijgen die direct bruikbaar zijn.
+
+<AccordionGroup>
+<Accordion title="Lijsten en Opsommingstekens" icon="list">
+Vraag om georganiseerde informatie in scanbaar formaat.
+
+**Voorbeeld:**
+```
+Som de 5 belangrijkste overwegingen op bij het kiezen van een database 
+voor een real-time analyseplatform. Voor elk punt:
+- Vermeld de overweging
+- Leg uit waarom het belangrijk is
+- Geef één concreet voorbeeld
+```
+</Accordion>
+
+<Accordion title="Tabellen en Vergelijkingen" icon="table">
+Krijg zij-aan-zij vergelijkingen voor besluitvorming.
+
+**Voorbeeld:**
+```
+Maak een vergelijkingstabel van React, Vue en Angular met deze kolommen:
+- Frameworknaam
+- Leercurve (gemakkelijk/matig/steil)
+- Beste use case
+- Gemeenschapsgrootte
+- Enterprise-adoptie
+```
+</Accordion>
+
+<Accordion title="Stapsgewijze Instructies" icon="list-ol">
+Vraag procedures in sequentieel formaat.
+
+**Voorbeeld:**
+```
+Geef stapsgewijze instructies om CI/CD op te zetten voor een Node.js 
+applicatie met GitHub Actions. Inclusief:
+1. Benodigde vereisten
+2. Elke configuratiestap
+3. Hoe elke stap te verifiëren
+4. Veelvoorkomende tips voor probleemoplossing
+```
+</Accordion>
+
+<Accordion title="Codevoorbeelden" icon="code">
+Vraag werkende code met uitleg.
+
+**Voorbeeld:**
+```
+Schrijf een Python-functie om e-mailadressen te valideren met regex.
+Inclusief:
+- Complete, uitvoerbare code met type hints
+- Inline opmerkingen die het regex-patroon uitleggen
+- Voorbeeldgebruik
+- Randgevallen die het afhandelt
+```
+</Accordion>
+
+<Accordion title = "Outputlengte en Formaat" icon="book">
+
+Specificeer gewenste lengte en structuur om gepast gedetailleerde antwoorden te krijgen.
+
+**Voorbeelden:**
+```
+Vat dit samen in exact 3 opsommingstekens.
+Geef een uitgebreide analyse (ongeveer 500 woorden).
+Geef me eerst een kort antwoord van één zin, en breid dan uit met details.
+```
+</Accordion>
+</AccordionGroup>
+---
+
+## Prompt Engineering
+
+Gebruik op maat gemaakte prompt engineering-strategieën om hoogwaardige, gerichte antwoorden van AI te krijgen. Kies de aanpak die past bij je behoeften en je huidige ervaringsniveau.
+
+<Tabs>
+<Tab title="Basisstrategieën">
+
+Beheers deze fundamentele technieken om consequent betere resultaten te krijgen:
+<AccordionGroup>
+<Accordion title="Iteratieve verfijning" icon="arrows-rotate">
+Verwacht niet het perfecte antwoord bij je eerste poging. Pas je prompt elke keer aan op basis van het vorige AI-antwoord.
+
+<Steps>
+<Step title="Begin met een basisprompt">
+Begin met een duidelijke maar eenvoudige vraag.
+
+```
+Leg uit hoe contextvensters werken in AI-modellen.
+```
+</Step>
+
+<Step title="Evalueer het antwoord">
+Controleer of het antwoord aan je behoeften voldoet. Was het te technisch, te vaag of off-topic?
+</Step>
+
+<Step title="Verfijn en voeg specificiteit toe">
+Pas je vraag aan om te verduidelijken wat je wilt.
+
+```
+Leg in eenvoudige termen uit hoe contextvensters werken in AI-modellen. 
+Gebruik een analogie om een niet-technisch persoon te helpen begrijpen, en 
+leg uit waarom dit belangrijk is voor dagelijkse AI-gebruikers.
+```
+</Step>
+
+<Step title="Herhaal tot je tevreden bent">
+Herhaal dit proces totdat het antwoord aan je behoeften voldoet.
+
+<Check>
+Je leert wat het beste werkt voor jouw doelen door elke keer te verfijnen.
+</Check>
+</Step>
+</Steps>
+</Accordion>
+
+<Accordion title="Voortbouwen op antwoorden" icon="comments">
+Gebruik de eerdere antwoorden van de AI als springplank voor verdere verkenning of grotere diepte.
+
+**Patroon:**
+```
+Eerste prompt: "Leg de voordelen van microservices-architectuur uit."
+
+Opvolging: "Je noemde schaalbaarheid als een belangrijk voordeel. Kun je een 
+concreet voorbeeld geven van hoe microservices schaalbaarheid mogelijk maakten voor een bedrijf 
+dat snelle groei doormaakte?"
+
+Verdere opvolging: "Gezien die schaalvoordelen, wat zijn de belangrijkste 
+uitdagingen die kleine teams tegenkomen bij het adopteren van microservices?"
+```
+
+<Tip>
+Deze aanpak leidt tot meer natuurlijke, conversationele en productieve verkenning van complexe onderwerpen.
+</Tip>
+</Accordion>
+
+<Accordion title="Rollen toewijzen voor perspectief" icon="user-tie">
+Vraag de AI om een specifieke professionele rol of onderwerp-expert rol aan te nemen.
+
+**Voorbeeld:**
+```
+Je bent een ervaren DevOps engineer met expertise in Kubernetes. 
+Beoordeel deze implementatieconfiguratie en identificeer potentiële beveiligings-
+kwetsbaarheden en prestatieknelpunten.
+
+[Jouw configuratie hier]
+```
+</Accordion>
+
+<Accordion title="Gebruik beperkingen effectief" icon="sliders">
+Specificeer duidelijk antwoordregels om scope, structuur of stijl te beperken.
+
+**Voorbeeld:**
+```
+Analyseer deze dataset met de volgende beperkingen:
+- Focus alleen op Q4 2024 gegevens
+- Sluit uitschieters buiten 2 standaarddeviaties uit
+- Presenteer bevindingen in volgorde van bedrijfsimpact
+- Inclusief statistische betrouwbaarheidsniveaus
+```
+</Accordion>
+</AccordionGroup>
+</Tab>
+
+<Tab title="Geavanceerde Technieken">
+
+Verbeter je prompten met deze meer geavanceerde benaderingen:
+<AccordionGroup>
+<Accordion title="Chain-of-thought prompting" icon="list-ol">
+Vraag om stapsgewijze redenering om te zien hoe de AI tot een oplossing komt.
+
+**Voorbeeld:**
+```
+Los dit probleem stap-voor-stap op en leg je redenering uit bij elke fase:
+
+Onze e-commerce site heeft een winkelwagenverlating van 68%. Gemiddelde winkelwagenwaarde 
+is €120. We hebben 50.000 maandelijkse bezoekers met een 12% toevoeg-aan-winkelwagen 
+percentage. Bereken de potentiële maandelijkse omzetverhoging als we verlating verminderen 
+tot 55%, en leg uit welke interventies dit kunnen bereiken.
+
+Toon je berekeningen en redenering voor elke stap.
+```
+
+**Waarom het werkt:** Stapsgewijze verzoeken genereren meer transparante, verifieerbare antwoorden en verminderen fouten.
+</Accordion>
+
+<Accordion title="Few-shot learning" icon="graduation-cap">
+Toon een paar voorbeeldinvoer en het type antwoorden dat je verwacht. De AI zal je structuur en aanpak nabootsen.
+
+**Voorbeeld:**
+```
+Ik toon je voorbeelden van klantfeedback en hoe ik wil dat ze 
+gecategoriseerd worden, en dan categoriseer jij nieuwe feedback op dezelfde manier:
+
+Voorbeeld 1:
+Feedback: "De app crasht elke keer dat ik foto's probeer te uploaden"
+Categorie: Bug - Kritiek
+Sentiment: Gefrustreerd
+Actie: Escaleer naar engineering
+
+Voorbeeld 2:
+Feedback: "Hou van de nieuwe donkere modus! Maakt het gemakkelijker om 's nachts te gebruiken"
+Categorie: Feature feedback - Positief
+Sentiment: Tevreden
+Actie: Deel met productteam
+
+Voorbeeld 3:
+Feedback: "Het zou geweldig zijn als we gegevens naar CSV konden exporteren"
+Categorie: Feature verzoek
+Sentiment: Neutraal
+Actie: Voeg toe aan feature backlog
+
+Categoriseer nu deze feedback:
+"De zoekfunctie vindt soms geen exacte overeenkomsten"
+```
+</Accordion>
+
+<Accordion title="Zero-shot prompting" icon="wand-magic-sparkles">
+Gebruik dit wanneer je taak eenvoudig is en verwachtingen duidelijk zijn - geen voorbeelden nodig.
+
+**Het beste voor:**
+- Duidelijke taken zoals samenvatten, vertalen of classificeren
+- Wanneer je onbevooroordeelde antwoorden wilt
+
+**Voorbeeld:**
+```
+Vertaal de volgende Engelse tekst naar Frans, behoud de 
+professionele toon:
+
+[Jouw tekst hier]
+```
+</Accordion>
+
+<Accordion title="Prompt chaining" icon="link">
+Breek grotere uitdagingen op in kleinere, opeenvolgende prompts. Gebruik de output van één stap als invoer voor de volgende.
+
+**Voorbeeldreeks:**
+```
+Prompt 1: "Extraheer alle klantpijnpunten genoemd in deze 
+supporttickets: [tickets]"
+
+Prompt 2: "Neem deze pijnpunten: [output van prompt 1] 
+en groepeer ze in thema's."
+
+Prompt 3: "Voor elk thema: [output van prompt 2], stel 
+één productverbetering voor die meerdere pijnpunten aanpakt."
+```
+
+**Waarom prompts koppelen:** 
+- Breekt complexe taken op
+- Laat je gedeeltelijke stappen controleren (en corrigeren)
+- Verhoogt nauwkeurigheid bij workflows met meerdere fasen
+</Accordion>
+
+<Accordion title="Template creatie" icon="file-code">
+Bespaar tijd door je eigen prompttemplates te bouwen voor taken die je vaak herhaalt. Bewaar ze in de [Promptbibliotheek](/nl/improved-usage/prompt-library).
+
+**Template Voorbeeld:**
+```
+Analyseer dit {{document_type}} voor een {{target_audience}} publiek.
+
+Document:
+{{content}}
+
+Geef:
+1. Managementsamenvatting (2-3 zinnen)
+2. Belangrijkste inzichten (3-5 opsommingstekens)
+3. Aanbevolen acties
+4. Potentiële risico's of overwegingen
+
+Formaat: {{output_format:bullets|paragraphs|table}}
+```
+
+<Info>
+Voor details over het beheren en delen van prompts, zie de [Promptbibliotheek](/nl/improved-usage/prompt-library).
+</Info>
+</Accordion>
+
+<Accordion title="Tools gebruiken in prompts" icon="wrench">
+Instrueer de AI om plugins of integraties te gebruiken indien beschikbaar, zoals zakelijke data-connectors.
+
+**Voorbeeld:**
+```
+Gebruik de databaseverbindingstool om onze klanttabel op te vragen en alle 
+klanten te vinden die zich de afgelopen 30 dagen hebben aangemeld maar nog geen 
+aankoop hebben gedaan. Analyseer dan de gegevens en stel gerichte retentiestrategieën voor.
+```
+
+<Info>
+Voor meer over AI-tool integratie, bezoek [Tools Verbinding](/nl/tools-connection/introduction).
+</Info>
+</Accordion>
+</AccordionGroup>
+
+<Info>
+Voor verder leren over prompt engineering, zie handleidingen van [OpenAI](https://platform.openai.com/docs/guides/prompt-engineering), [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), en [Google](https://ai.google.dev/gemini-api/docs/prompting-intro).
+</Info>
+</Tab>
+</Tabs>
+
+
+
+## Veelvoorkomende Fouten om te Vermijden
+
+<AccordionGroup>
+<Accordion title="Te Vaag Zijn">
+**Probleem:** "Vertel me over AI."
+
+**Beter:** "Leg de belangrijkste verschillen uit tussen supervised en unsupervised machine learning voor een bedrijfsanalist die evalueert welke aanpak te gebruiken voor klantsegmentatie."
+</Accordion>
+
+<Accordion title="Meerdere Vragen Tegelijk Stellen">
+**Probleem:** "Hoe verbeter ik onze SEO, moeten we sociale media-advertenties gebruiken, en welke contentstrategie werkt het beste voor B2B?"
+
+**Beter:** Breek op in afzonderlijke, gerichte prompts of vraag expliciet om afzonderlijke behandeling van elke vraag.
+</Accordion>
+
+<Accordion title="Geen Context Geven">
+**Probleem:** "Is dit een goede aanpak?" [zonder uit te leggen wat 'dit' is of wat je doelen zijn]
+
+**Beter:** Geef de aanpak, je context, je doelen en criteria voor "goed."
+</Accordion>
+
+<Accordion title="Voorkennis Aannemen">
+**Probleem:** Een nieuw gesprek beginnen met "Ga verder waar we gebleven waren" zonder context te herstellen.
+
+**Waarom dit faalt:** AI-modellen hebben geen toegang tot informatie uit eerdere gesprekken. Elk nieuw gesprek begint met een leeg contextvenster, dus de AI heeft geen manier om eerder besproken zaken op te halen of ernaar te verwijzen.
+
+<Info>
+Lees meer over contextvensters en hoe ze werken in [Gespreksbeheer](/nl/improved-usage/conversation-management).
+</Info>
+
+**Beter:** Vat kort relevante context uit eerdere gesprekken samen bij het starten van een nieuwe chat.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Samenvatting Best Practices
+
+<CardGroup cols={2}>
+<Card title="Begin Eenvoudig" icon="seedling">
+Begin met een duidelijke basisprompt en voeg dan complexiteit toe indien nodig.
+</Card>
+
+<Card title="Wees Specifiek" icon="bullseye">
+Vage vragen krijgen vage antwoorden. Geef details en context.
+</Card>
+
+<Card title="Itereer" icon="arrows-rotate">
+Verfijn je prompts op basis van de antwoorden die je ontvangt.
+</Card>
+
+<Card title="Bewaar Wat Werkt" icon="bookmark">
+Bouw een bibliotheek van effectieve prompts voor terugkerende taken.
+</Card>
+</CardGroup>
+
+<Tip>
+De beste prompt is er één die je het resultaat geeft dat je nodig hebt. Experimenteer met verschillende benaderingen en leer wat werkt voor jouw use cases.
+</Tip>
+
+---
+
+## Volgende Stappen
+
+<CardGroup cols={2}>
+<Card title="Gespreksbeheer" icon="comments" href="/nl/improved-usage/conversation-management">
+Leer hoe je lange gesprekken beheert en contextvensters begrijpt.
+</Card>
+
+<Card title="Promptbibliotheek" icon="bookmark" href="/nl/improved-usage/prompt-library">
+Bewaar en hergebruik je beste prompts met variabelen voor efficiëntie.
+</Card>
+</CardGroup>

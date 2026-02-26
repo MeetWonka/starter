@@ -1,0 +1,125 @@
+---
+title: "Conformité et gouvernance"
+description: "Comprenez les fonctionnalités de conformité de WonkaChat, les capacités d'audit et la feuille de route de certification."
+---
+
+WonkaChat implémente des fonctionnalités robustes de conformité et de gouvernance pour prendre en charge vos exigences réglementaires. Bien que les certifications formelles soient en cours, les contrôles et capacités sous-jacents sont déjà intégrés dans la plateforme que vous utilisez aujourd'hui.
+
+<Warning>
+**Statut de certification** : WonkaChat a implémenté des contrôles de sécurité et de gouvernance alignés avec les principaux cadres de conformité (RGPD, SOC 2, ISO 27001). Les certifications formelles par des tiers sont actuellement en cours.
+</Warning>
+
+---
+
+## Sur quoi vous pouvez compter aujourd'hui
+
+<CardGroup cols={2}>
+<Card title="Pistes d'audit" icon="file-lines">
+Journalisation complète des actions utilisateur et agent avec pistes d'audit immuables.
+</Card>
+
+<Card title="Contrôles d'accès" icon="user-lock">
+RBAC, authentification et gestion des autorisations sur toute la plateforme.
+</Card>
+
+<Card title="Chiffrement et isolation" icon="shield-check">
+Chiffrement en transit et au repos avec isolation des données au niveau de l'organisation.
+</Card>
+
+<Card title="Contrôles de rétention" icon="clock">
+Politiques de rétention configurables pour les conversations, journaux et données utilisateur.
+</Card>
+</CardGroup>
+
+<Info>
+Ces contrôles sont opérationnels aujourd'hui. Les certifications valideront formellement ce qui est déjà en place.
+</Info>
+
+---
+
+## Statut de certification
+
+<Update label="En cours" description="Audits formels en cours">
+- SOC 2 Type II : audit tiers en cours
+- ISO 27001 : processus de certification initié
+- RGPD : fonctionnalités supportant les droits des personnes concernées implémentées ; effectuez une DPIA selon le besoin
+</Update>
+
+<Warning>
+WonkaChat ne détient pas encore de certifications formelles. Nous travaillons activement pour les obtenir.
+</Warning>
+
+<Check>
+Vous pouvez utiliser WonkaChat en toute confiance aujourd'hui ; les certifications reconnaîtront formellement les contrôles existants.
+</Check>
+
+---
+
+## Pistes d'audit et journalisation
+
+- **Système de journalisation complet** : Journalisation structurée basée sur Winston
+- **Niveaux de journal** : TRACE (10), DEBUG (20), INFO (30), WARN (40), ERROR (50), FATAL (60)
+- **Journalisation des événements de sécurité** : Tentatives d'auth, changements d'autorisations, limites de débit, activité suspecte
+- **Piste d'audit de migration** : Changements de schéma, mises à niveau, modifications de config, suivi de version
+- **Journalisation de l'activité utilisateur** : Sessions, utilisation d'agents et outils, accès/exports de données
+
+<Info>
+Les données sensibles (mots de passe, clés API, jetons) sont automatiquement expurgées des journaux.
+</Info>
+
+---
+
+## Politiques de rétention des données
+
+### Données de conversation
+
+<AccordionGroup>
+<Accordion title="Rétention de chat temporaire">
+Activez la suppression automatique de l'historique des conversations après une période configurée.
+
+- Chat temporaire : activé
+- Fenêtre de rétention : 24 heures
+- Fonctionnalités : tâches de nettoyage automatiques, suppression contrôlée par l'utilisateur, remplacement admin, suppression douce avec récupération
+</Accordion>
+
+<Accordion title="Conversations permanentes">
+Conservez les conversations indéfiniment jusqu'à suppression manuelle. Meilleur pour les bases de connaissances et projets à long terme.
+</Accordion>
+</AccordionGroup>
+
+### Rétention des journaux
+
+Rétention recommandée :
+
+- Journaux d'erreur : 90 jours (débogage et dépannage)
+- Journaux combinés : 30 jours (activité générale)
+- Journaux de sécurité : 365 jours (exigences de conformité)
+- Journaux d'audit : 7 ans (exigences légales et réglementaires)
+- Journaux de violation : 180 jours (suivi des violations)
+
+Paramètres de rotation :
+
+- Rotation quotidienne avec noms de fichiers basés sur la date
+- Taille de fichier max : 50 MB
+- Garder les 30 derniers jours de fichiers
+- Compresser les fichiers plus anciens
+
+### Données utilisateur
+
+Règles de rétention :
+
+- Utilisateurs actifs : conservés tant que le compte est actif
+- Utilisateurs inactifs : 90 jours après la dernière activité
+- Utilisateurs supprimés : 30 jours (suppression douce avec récupération)
+- Conversations : rétention contrôlée par l'utilisateur
+- Fichiers : 90 jours après le dernier accès
+- Sessions : 7 jours
+- Jetons : expirent au rafraîchissement (généralement 15 minutes à 7 jours)
+
+---
+
+## Besoin de plus d'informations ?
+
+<Card title="Contactez-nous" icon="handshake" href="/fr/support-resources/getting-help">
+Pour des questions sur la conformité, la documentation de sécurité ou les évaluations de fournisseurs, contactez notre équipe pour de l'assistance.
+</Card>

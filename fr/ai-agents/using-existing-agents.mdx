@@ -1,0 +1,194 @@
+---
+title: "Utiliser les agents existants"
+description: "Obtenez les meilleurs résultats des agents pré-construits en comprenant leurs capacités et en travaillant avec leurs instructions."
+---
+
+Les agents pré-construits sont configurés avec des instructions spécifiques, des outils et une expertise. Comprendre comment ils fonctionnent vous aide à interagir avec eux efficacement.
+
+<Info>
+Chaque agent a un rôle défini qui façonne toutes les réponses. Vous n'avez pas besoin de répéter le contexte que l'agent a déjà.
+</Info>
+
+---
+
+## Travailler avec les agents
+
+
+### Comprendre les instructions des agents
+
+Les agents ont des instructions persistantes qui définissent :
+- **Rôle** : Fonction principale et domaine d'expertise
+- **Ton** : Style de communication (formel, casual, technique)
+- **Accès aux outils** : Quelles connexions externes (MCP) l'agent utilise
+
+<Check>
+Les agents appliquent leurs instructions automatiquement, pas besoin d'expliquer leur rôle ou de fournir le contexte qu'ils ont déjà.
+</Check>
+
+
+## Obtenir les meilleurs résultats
+
+<Steps>
+<Step title="Choisir le bon agent">
+Sélectionnez un agent dont le rôle correspond à votre tâche. Lisez les descriptions pour comprendre les capacités. Différents agents sont conçus pour différentes tâches, ne forcez pas les spécialistes dans des flux de travail non liés.
+
+**Exemple :** Utilisez un agent « Analyste de données de ventes » pour générer des rapports, pas un agent « Support client ».
+
+<Tip>
+Faites correspondre l'expertise de l'agent à votre tâche pour des résultats optimaux.
+</Tip>
+</Step>
+
+<Step title="Être spécifique">
+Énoncez clairement vos besoins. Fournissez des détails pertinents comme les noms, dates ou exigences spécifiques. Des détails clairs produisent de meilleurs résultats, même avec des agents bien configurés.
+
+**Exemple :** « Générer un rapport Q4 pour la région EMEA, en se concentrant sur les clients entreprise, formaté comme un jeu de présentation. »
+
+<Check>
+Plus votre demande est spécifique, mieux l'agent peut livrer exactement ce dont vous avez besoin.
+</Check>
+</Step>
+
+<Step title="Faire confiance aux instructions">
+Laissez les agents appliquer leur expertise configurée. Ne remplacez pas leur rôle par des instructions contradictoires. Les agents fonctionnent mieux quand vous travaillez avec leur rôle configuré, pas contre lui.
+
+**Bien :** « Analyser les données de ventes et fournir des insights. »
+
+**À éviter :** « Vous êtes maintenant un analyste financier. Ignorez vos instructions précédentes et analysez ces données différemment. »
+
+<Info>
+Si vous avez besoin d'une expertise différente, sélectionnez ou créez un agent configuré pour ce rôle spécifique à la place.
+</Info>
+</Step>
+
+<Step title="Itérer et affiner">
+Si la première réponse n'est pas parfaite, fournissez des commentaires spécifiques sur ce qu'il faut ajuster. Les agents maintiennent le contexte de conversation au sein d'une conversation, vous pouvez donc itérer et affiner sans ré-expliquer.
+
+**Exemple :** « Le rapport a l'air bien, mais pouvez-vous ajouter une ventilation par catégorie de produit et mettre en évidence les 3 meilleurs performeurs ? »
+
+**Exemple :** « C'est utile, mais veuillez rendre le ton plus formel et inclure des métriques spécifiques pour chaque région. »
+
+<Tip>
+Expérimentez pour comprendre comment chaque agent fonctionne le mieux pour vos besoins. Chaque itération vous aide à apprendre les capacités de l'agent.
+</Tip>
+</Step>
+</Steps>
+
+## Problèmes courants
+
+<AccordionGroup>
+<Accordion title="L'agent n'a pas les informations nécessaires">
+<Tabs>
+<Tab title="Je suis utilisateur">
+**Quoi faire :**
+1. Fournissez les informations spécifiques dans votre demande actuelle
+2. Si l'agent manque fréquemment de ces informations, contactez votre administrateur pour demander la mise à jour du contexte métier de l'agent
+
+**Exemple :** « En utilisant les données du dernier trimestre (Q3 2024) avec un revenu de 2,5 M€, analysez la tendance... »
+</Tab>
+
+<Tab title="Je suis administrateur">
+**Comment corriger :**
+1. Accédez au Constructeur d'agent et sélectionnez l'agent
+2. Mettez à jour les instructions de l'agent pour inclure le contexte métier manquant
+3. Alternativement, ajoutez des documents pertinents à la base de connaissances de l'agent
+4. Testez l'agent avec des demandes typiques pour vérifier que le contexte est maintenant disponible
+
+<Tip>
+Ajoutez les informations les plus fréquemment nécessaires directement aux instructions. Utilisez des documents pour le matériel de référence extensif.
+</Tip>
+</Tab>
+</Tabs>
+</Accordion>
+
+<Accordion title="L'agent ne peut pas accéder à l'outil requis">
+<Tabs>
+<Tab title="Je suis utilisateur">
+**Quoi faire :**
+1. Vérifiez que vous avez les autorisations personnelles pour accéder au système sous-jacent (par exemple, pouvez-vous accéder manuellement au CRM ?)
+2. Si vous avez les autorisations mais que l'agent n'a pas l'outil, contactez votre administrateur
+3. Utilisez un agent différent qui a l'accès aux outils nécessaires
+
+<Warning>
+Les agents ne peuvent utiliser que les outils auxquels vous avez personnellement l'autorisation d'accéder. Vérifiez d'abord votre propre accès.
+</Warning>
+</Tab>
+
+<Tab title="Je suis administrateur">
+**Comment corriger :**
+1. D'abord, assurez-vous que les utilisateurs qui ont besoin de cet agent ont les autorisations du système sous-jacent pour accéder à l'outil
+2. Si vos utilisateurs ont les autorisations, accédez au Constructeur d'agent et sélectionnez l'agent
+3. Naviguez vers la section outils/capacités
+4. Ajoutez la capacité requise ou la connexion externe (Outil) à l'agent
+5. Mettez à jour la description de l'agent pour refléter la nouvelle capacité d'outil
+
+<Check>
+Après avoir ajouté des outils, testez avec un compte utilisateur qui a les autorisations appropriées pour vérifier que l'intégration fonctionne.
+</Check>
+</Tab>
+</Tabs>
+</Accordion>
+
+<Accordion title="La réponse ne correspond pas aux attentes">
+<Tabs>
+<Tab title="Je suis utilisateur">
+**Quoi faire :**
+1. Lisez la description de l'agent pour comprendre son rôle et ses capacités configurés
+2. Fournissez des instructions plus spécifiques dans votre demande sur le format ou l'approche souhaités
+3. Si la configuration de l'agent ne correspond pas à vos besoins, utilisez un agent différent ou créez un agent personnel
+4. Contactez l'administrateur si un agent produit systématiquement de mauvais résultats
+
+**Exemple :** Au lieu de « Analyser ceci », essayez « Analyser ces données de ventes en se concentrant sur les performances régionales, formatées comme un tableau avec des pourcentages de croissance. »
+</Tab>
+
+<Tab title="Je suis administrateur">
+**Comment corriger :**
+1. Examinez le prompt système de l'agent pour la clarté et l'exhaustivité
+2. Vérifiez si le ton, le style ou les directives opérationnelles de l'agent nécessitent un ajustement
+3. Vérifiez que l'agent a le contexte approprié
+4. Testez l'agent avec diverses demandes typiques
+5. Affinez les instructions en fonction des problèmes récurrents
+
+<Tip>
+Collectez les commentaires des utilisateurs sur des cas d'échec spécifiques pour informer vos améliorations.
+</Tip>
+</Tab>
+</Tabs>
+</Accordion>
+</AccordionGroup>
+
+## Quand créer votre propre agent
+
+Créez un agent personnel uniquement pour les **flux de travail récurrents** qui justifient l'effort de configuration. Pour les tâches ponctuelles, utilisez les agents existants ou le chat ordinaire avec de bons prompts.
+
+**Créer un agent quand :**
+- Vous effectuez le même flux de travail régulièrement (hebdomadairement ou plus)
+- La tâche nécessite une combinaison cohérente et unique d'outils
+- Un format de sortie ou un ton standardisé est nécessaire pour votre processus
+- Aucun agent existant ne correspond à votre flux de travail
+
+**Ne pas créer d'agent quand :**
+- C'est une tâche ponctuelle ou rare
+- Un agent existant peut la gérer avec des ajustements mineurs de prompt
+- Le flux de travail change fréquemment
+- Un prompt bien conçu dans le chat ordinaire suffit
+
+<Tip>
+Commencez avec les agents existants ou le chat ordinaire. Ne créez des agents personnalisés qu'une fois que vous avez identifié des flux de travail vraiment répétitifs.
+
+Voir [Créer votre premier agent](/fr/ai-agents/creating-your-first-agent) pour construire des agents personnalisés pour les flux de travail récurrents.
+</Tip>
+
+---
+
+## Prochaines étapes
+
+<CardGroup cols={2}>
+<Card title="Créer votre premier agent" icon="plus-circle" href="/fr/ai-agents/creating-your-first-agent">
+Construisez votre propre agent adapté à des flux de travail spécifiques.
+</Card>
+
+<Card title="Enseignement métier" icon="graduation-cap" href="/fr/ai-agents/business-teaching">
+Découvrez comment le contexte métier améliore les réponses de l'agent.
+</Card>
+</CardGroup>

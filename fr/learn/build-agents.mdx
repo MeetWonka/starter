@@ -1,0 +1,36 @@
+---
+title: "Créer et utiliser des agents IA"
+description: "Chemin pratique copier-coller pour construire, équiper et exécuter un agent."
+---
+
+<Steps>
+<Step title="Définir l'objectif et les contraintes">
+Écrivez un résultat en une phrase, des garde-fous et à quoi ressemble le succès.
+
+```text
+Objectif : Rédiger un résumé hebdomadaire du support client à partir des tickets Zendesk.
+Garde-fous : lecture seule, masquer les DCP.
+Succès : résumé en 5 points + top 3 problèmes.
+```
+</Step>
+
+<Step title="Fournir contexte et mémoire">
+Stockez les faits du domaine, le glossaire et les exemples. Persistez l'état à court terme entre les étapes.
+</Step>
+
+<Step title="Équiper des outils (MCP)">
+Exposez les sources de données et actions que l'agent peut utiliser (par exemple, recherche, tickets:list, analytics:topIssues). Voir `/fr/learn/mcp`.
+</Step>
+
+<Step title="Implémenter la boucle de raisonnement">
+Planifier → appeler des outils → observer → réviser le plan jusqu'à la fin. Gardez les sorties structurées.
+</Step>
+
+<Step title="Livrer les résultats">
+Retournez un artefact clair (rapport, JSON, message) et journalisez les décisions pour l'auditabilité.
+</Step>
+</Steps>
+
+<Check>
+Lorsque votre agent atteint de manière fiable l'objectif avec des valeurs par défaut sûres et des journaux clairs, vous êtes prêt à automatiser.
+</Check>

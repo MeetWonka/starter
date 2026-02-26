@@ -1,0 +1,281 @@
+---
+title: "Beveiligingsoverzicht"
+description: "Begrijp WonkaChat's ingebouwde beveiligingsarchitectuur, governance-controles en gegevensprivacymaatregelen."
+---
+
+WonkaChat is een enterprise AI-chatplatform gebouwd bovenop [LibreChat](https://www.librechat.ai/), een robuust open-source project met een bloeiende community. We hebben het uitgebreid met enterprise-grade beveiliging, governance-controles en compliance-functies ontworpen voor organisaties die AI veilig met hun gegevens moeten gebruiken.
+
+<Info>
+Deze pagina behandelt de ingebouwde beveiligingsmaatregelen en governance-controles die WonkaChat standaard biedt.
+</Info>
+
+---
+
+## Governance
+
+Beheer welke AI-modellen, tools en agents beschikbaar zijn in je organisatie. WonkaChat komt met uitgebreide mogelijkheden out-of-the-box, maar je kunt je implementatie aanpassen om alleen te bevatten wat relevant is voor je bedrijf. Dit helpt bij het verminderen van complexiteit, minimaliseren van onnodige toegang en het onderhouden van een gefocuste, veilige omgeving.
+
+### Organisatietoegang
+
+<CardGroup cols={2}>
+<Card title="MCP Selectie" icon="plug">
+Wonka configureert welke MCP-servers beschikbaar zijn voor je organisatie, zodat alleen goedgekeurde tools toegankelijk zijn.
+</Card>
+
+<Card title="AI Model Selectie" icon="brain">
+Beheerders bepalen welke AI-modellen en providers (OpenAI, Anthropic, Google, etc.) gebruikers binnen de organisatie kunnen gebruiken.
+</Card>
+</CardGroup>
+
+<Tip>
+Deze governance-controles zorgen ervoor dat je organisatie alleen goedgekeurde AI-bronnen gebruikt die aansluiten bij je beveiligingsbeleid en compliance-vereisten.
+</Tip>
+
+Naast WonkaChat's ingebouwde beveiligingsmaatregelen, behoudt je organisatie directe controle over gebruikerstoegang. Beheerders beheren bijvoorbeeld welke agents beschikbaar zijn voor gebruikers en verlenen gedetailleerde permissies per agent. Zie [Toegangsbeheer](/nl/security-governance/access-control) voor details.
+
+---
+
+## Beveiligingsarchitectuur
+
+WonkaChat implementeert enterprise-grade beveiliging met meerdere beschermingslagen.
+
+### Authenticatiesysteem
+
+WonkaChat gebruikt een veilig, token-gebaseerd authenticatiesysteem om gebruikerstoegang te beschermen:
+
+<AccordionGroup>
+<Accordion title="Access Tokens (15 minuten)" icon="key">
+Kortdurende access tokens stellen gebruikers in staat om te authenticeren en te interacteren met het platform. Deze tokens verlopen na 15 minuten, waardoor het risico op ongeautoriseerde toegang wordt geminimaliseerd als ze gecompromitteerd worden.
+</Accordion>
+
+<Accordion title="Refresh Tokens (7 dagen)" icon="rotate">
+Refresh tokens behouden gebruikerssessies tot 7 dagen zonder opnieuw authenticatie te vereisen. Na 7 dagen moeten gebruikers opnieuw inloggen.
+</Accordion>
+
+<Accordion title="JWT Technologie" icon="shield-check">
+WonkaChat gebruikt JSON Web Tokens (JWT) voor veilige, staatloze authenticatie. JWT's zijn cryptografisch ondertekend om manipulatie te voorkomen en authenticiteit te verifiëren.
+</Accordion>
+</AccordionGroup>
+
+<Check>
+Deze dual-token aanpak balanceert beveiliging (kortdurende toegang) met gebruikersgemak (sessie-persistentie).
+</Check>
+
+### Authenticatieproviders
+
+Meerdere authenticatiemethoden zijn beschikbaar om te integreren met je bestaande identiteitssystemen:
+
+<Tabs>
+<Tab title="Nu Beschikbaar">
+WonkaChat ondersteunt momenteel deze authenticatieproviders:
+
+- **Lokale Authenticatie**: Gebruikersnaam en wachtwoord authenticatie
+- **OpenID Connect**: Integratie met OpenID-compatibele identity providers
+- **Azure AD / Entra ID**: Directe integratie met Microsoft Azure Active Directory
+
+<Tip>
+Kies de authenticatiemethode die aansluit bij de identity management-strategie van je organisatie.
+</Tip>
+</Tab>
+
+<Tab title="Binnenkort Beschikbaar">
+Aanvullende sociale login providers zijn gepland voor toekomstige releases:
+
+- Google authenticatie
+- GitHub authenticatie
+- Andere populaire sociale providers
+
+<Info>
+Deze providers zijn momenteel niet beschikbaar maar staan op de roadmap.
+</Info>
+</Tab>
+</Tabs>
+
+### Rate Limiting & Misbruikpreventie
+
+WonkaChat implementeert rate limiting om te beschermen tegen brute force-aanvallen en systeemmisbruik. Rate limits worden toegepast op kritieke operaties, inclusief inlogpogingen, registratie, wachtwoordresets, administratieve acties en algemeen API-gebruik.
+
+<Check>
+Rate limits beschermen je organisatie tegen geautomatiseerde aanvallen terwijl normale gebruikersactiviteit mogelijk blijft.
+</Check>
+
+---
+
+## Gegevensprivacy
+
+Je gegevens blijven veilig en privé tijdens alle interacties met WonkaChat.
+
+### Privacy Garanties
+
+<CardGroup cols={2}>
+<Card title="Multi-Tenant Isolatie" icon="building-lock">
+Volledige gegevensisolatie tussen organisaties door subdomain-gebaseerde routing (https://{org}.wonka.chat). Geen accidentele gegevensblootstelling tussen tenants.
+</Card>
+
+<Card title="Geen Model Training" icon="ban">
+Je gesprekken en gegevens worden nooit gebruikt om AI-modellen te trainen. Modelproviders verwerken verzoeken tijdelijk zonder retentie. Je gegevens blijven in WonkaChat waar jij ze beheert.
+</Card>
+
+<Card title="Versleuteld in Transit" icon="lock">
+Alle gegevens die naar en van WonkaChat worden verzonden zijn versleuteld met HTTPS/TLS-protocollen voor veilige API-communicatie.
+</Card>
+
+<Card title="Versleuteld at Rest" icon="shield-halved">
+Gegevens opgeslagen in WonkaChat's MongoDB-databases zijn beschermd met encryption-at-rest ondersteuning om je informatie te beveiligen.
+</Card>
+</CardGroup>
+
+### Gegevensversleuteling
+
+<AccordionGroup>
+<Accordion title="In Transit Bescherming">
+**HTTPS/TLS voor alle communicatie:**
+- Alle API-calls gebruiken veilige HTTPS/TLS-protocollen
+- Gegevens worden versleuteld tijdens verzending tussen je browser en WonkaChat-servers
+- Veilige verbindingen met AI-modelproviders (Azure, AWS Bedrock)
+</Accordion>
+
+<Accordion title="At Rest Bescherming">
+**MongoDB versleuteling en veilige opslag:**
+- Wachtwoorden: Gehashed met bcrypt met salt rounds (nooit opgeslagen in platte tekst)
+- Tokens: JWT ondertekening met sterke cryptografische geheimen
+- Database: MongoDB encryption-at-rest ondersteuning voor alle opgeslagen gegevens
+- API Keys: Nooit gelogd in platte tekst
+</Accordion>
+
+<Accordion title="Automatische Redactie">
+**Gevoelige gegevensbescherming in logs:**
+- Alle logs redigeren automatisch gevoelige patronen (wachtwoorden, tokens, keys)
+- API-keys en authenticatietokens worden nooit in platte tekst gelogd
+- Token-rotatie voorkomt langdurige blootstelling
+- Wachtwoorden worden gehashed met bcrypt voor elke opslag
+
+<Check>
+Zelfs systeembeheerders hebben geen toegang tot je wachtwoorden of gevoelige credentials in logs of databases.
+</Check>
+</Accordion>
+</AccordionGroup>
+
+### Multi-Tenant Gegevensisolatie
+
+WonkaChat zorgt voor complete scheiding tussen organisaties:
+
+<Tabs>
+<Tab title="Organisatie-Scoped Gegevens">
+Elk stukje gegevens in WonkaChat is scoped naar je organisatie:
+- Gesprekken en chatgeschiedenis
+- AI-agents en configuraties
+- Gebruikersaccounts en permissies
+- MCP-verbindingen en tool-instellingen
+- Auditlogs en activiteitenregistraties
+
+<Check>
+Gegevens van één organisatie zijn volledig geïsoleerd en ontoegankelijk voor andere organisaties.
+</Check>
+</Tab>
+
+<Tab title="Subdomain Routing">
+Elke organisatie heeft zijn eigen unieke subdomain:
+- **Formaat**: `https://{jouw-org}.wonka.chat`
+- **Voordeel**: Ingebouwde namespace-isolatie op netwerkniveau
+- **Beveiliging**: Voorkomt cross-organisatie gegevenslekkage
+
+<Info>
+Subdomain-gebaseerde routing voegt een extra laag scheiding toe naast database-niveau isolatie.
+</Info>
+</Tab>
+</Tabs>
+
+### Model Provider Beveiliging
+
+<AccordionGroup>
+<Accordion title="Azure & AWS Bedrock APIs">
+WonkaChat verbindt met AI-modellen via veilige Azure en AWS Bedrock APIs. Je gegevens worden real-time verwerkt en nooit opgeslagen of behouden door modelproviders.
+</Accordion>
+
+<Accordion title="Efemere Model Verwerking">
+Wanneer je interacteert met een AI-model, worden je prompts en antwoorden naar de modelprovider gestuurd, in het geheugen verwerkt en onmiddellijk weggegooid door de provider na het genereren van het antwoord. 
+
+**Je gesprekken worden veilig opgeslagen in WonkaChat** zodat je toegang hebt tot je geschiedenis, maar modelproviders (Azure, AWS) behouden, slaan of gebruiken je gegevens nooit voor training of enig ander doel.
+</Accordion>
+</AccordionGroup>
+
+<Check>
+Je gespreksgeschiedenis wordt veilig opgeslagen in WonkaChat waar jij het beheert. Modelproviders verwerken alleen verzoeken tijdelijk zonder enige gegevensretentie of hergebruik.
+</Check>
+
+---
+
+## MCP Beveiligingscontroles
+
+WonkaChat ondersteunt MCP (Model Context Protocol) servers met gedetailleerde beveiligingsconfiguratie en multi-user isolatie.
+
+### Multi-User Isolatie
+
+<AccordionGroup>
+<Accordion title="Gebruikersspecifieke Token Opslag">
+De MCP-authenticatietokens van elke gebruiker worden afzonderlijk en veilig opgeslagen:
+- Tokens zijn geïsoleerd per gebruikersaccount
+- Geen cross-user token toegang of deling
+- Automatische token opschoning bij gebruikersdeactivering
+
+<Check>
+Je MCP-credentials zijn nooit toegankelijk voor andere gebruikers, zelfs niet binnen dezelfde organisatie.
+</Check>
+</Accordion>
+
+<Accordion title="Sessie-Gebaseerde Authenticatie">
+MCP-verbindingen gebruiken sessie-gebaseerde authenticatie voor beveiliging:
+- Automatische gebruikersidentificatie via request headers
+- Sessie-validatie bij elke MCP-operatie
+- Timeout-handhaving om verouderde sessies te voorkomen
+</Accordion>
+
+<Accordion title="Authenticatiestrategieën">
+WonkaChat ondersteunt meerdere MCP-authenticatiemethoden:
+
+- **in-tool**: Gebruiker authenticeert direct binnen de verbonden tool
+- **oauth**: OAuth 2.0 flow voor veilige, gedelegeerde toegang
+- **api-key**: API key-gebaseerde authenticatie voor service-integraties
+
+<Info>
+De authenticatiestrategie wordt bepaald door de MCP-serverprovider en kan niet worden gewijzigd door je organisatie.
+</Info>
+</Accordion>
+</AccordionGroup>
+
+### Geen Permissie-escalatie
+
+<CardGroup cols={2}>
+<Card title="Erven je Permissies" icon="user-lock">
+MCP-verbindingen erven je exacte permissies bij toegang tot verbonden tools. Ze hebben geen toegang tot iets waar jij niet handmatig toegang toe zou hebben.
+</Card>
+
+<Card title="Geen Admin Bypass" icon="shield-halved">
+MCP-verbindingen kunnen niet worden gebruikt om permissies in verbonden systemen te overschrijven, omzeilen of escaleren. Je beveiligingsbeleid blijft volledig gehandhaafd.
+</Card>
+</CardGroup>
+
+<Warning>
+Als je geen toegang hebt tot een resource of een actie niet handmatig kunt uitvoeren in een verbonden tool, kunnen de AI-modellen dat ook niet (zelfs als ze worden geïnstrueerd om het te proberen).
+</Warning>
+
+---
+
+## Wat Je Kunt Beheren
+
+Hoewel WonkaChat robuuste ingebouwde beveiliging biedt, beheer jij extra lagen:
+
+<CardGroup cols={2}>
+<Card title="Toegangsbeheer" icon="user-shield" href="/nl/security-governance/access-control">
+Beheer gebruikersrollen en bepaal wie toegang heeft tot specifieke agents
+</Card>
+
+<Card title="Best Practices" icon="clipboard-check" href="/nl/security-governance/best-practices">
+Volg aanbevolen richtlijnen voor veilig AI-gebruik in je organisatie
+</Card>
+</CardGroup>
+
+<Check>
+Het combineren van WonkaChat's ingebouwde beveiliging met je organisatie's toegangscontroles en praktijken creëert een uitgebreid beveiligingsraamwerk.
+</Check>

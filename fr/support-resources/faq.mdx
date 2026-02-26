@@ -1,0 +1,225 @@
+---
+title: "FAQ"
+description: "Foire aux questions sur WonkaChat."
+---
+
+Trouvez des réponses rapides sur WonkaChat concernant la configuration, les modèles, les connexions externes (MCP), les agents, la sécurité, le dépannage et les Bonnes pratiques.
+
+<Tip>
+Nouveau sur WonkaChat ? Commencez par notre [Introduction](/fr/welcome/introduction), puis explorez [Outils et connexion](/fr/tools-connection/introduction) et [Agents IA](/fr/ai-agents/introduction).
+</Tip>
+
+
+## Démarrage
+
+<AccordionGroup>
+<Accordion title="Qu'est-ce que WonkaChat ?" icon="circle-question">
+WonkaChat est un assistant IA d'entreprise qui se connecte à vos outils métier et données pour exécuter des flux de travail multi-étapes via une conversation naturelle, tout en gardant vos données dans votre périmètre de sécurité. Voir [Qu'est-ce que WonkaChat ?](/fr/welcome/introduction).
+
+<Check>
+Pensez-y comme une interface unique qui orchestre des actions dans vos applications (e-mail, calendrier, CRM, docs, ERP et plus).
+</Check>
+</Accordion>
+
+<Accordion title="Comment démarrer en 5 minutes ?" icon="rocket">
+1. Créez votre compte sur [wonka.chat/register](https://wonka.chat/register) ou connectez-vous via le SSO de votre organisation
+
+2. Envoyez votre premier message pour vérifier que tout fonctionne
+
+3. Connectez votre première connexion (l'e-mail est un bon départ) via les paramètres Connecteurs
+
+4. Essayez un flux de travail simple comme « Envoyer un e-mail à mon équipe sur la réunion de demain »
+
+Voir [Guide de démarrage rapide](/fr/welcome/quick-start).
+
+<Tip>
+Commencez par votre fournisseur d'e-mail (Outlook Mail ou Gmail). Cela débloque des flux de travail quotidiens à forte valeur.
+</Tip>
+</Accordion>
+
+<Accordion title="Dois-je coder pour utiliser WonkaChat ?" icon="seedling">
+Non. Vous interagissez via une conversation. Les utilisateurs avancés peuvent configurer des agents et des connexions sans écrire de code.
+</Accordion>
+
+<Accordion title="Que peut m'aider à accomplir WonkaChat ?" icon="wand-magic-sparkles">
+Les exemples courants incluent les flux de travail d'intégration, la recherche intelligente dans les logiciels, la génération de rapports automatisée, la planification de réunions et le tri du support client. Explorez les exemples dans [Bienvenue → Introduction](/fr/welcome/introduction).
+</Accordion>
+
+<Accordion title="Puis-je changer de modèles IA ?" icon="sliders">
+Oui. Choisissez les modèles pro pour le raisonnement complexe ou les modèles rapides pour les tâches rapides. Vous pouvez changer par tâche ou conversation. Voir [Pourquoi choisir WonkaChat ?](/fr/welcome/why-wonka-chat).
+</Accordion>
+</AccordionGroup>
+
+## Modèles et utilisation
+
+<AccordionGroup>
+<Accordion title="Quels modèles IA sont pris en charge ?" icon="microchip">
+WonkaChat est agnostique du modèle. Vous pouvez utiliser des fournisseurs comme OpenAI (GPT-5.2, GPT-5, GPT-4o), Anthropic Claude (Opus 4.5, Sonnet 4.5, Haiku 4.5), Google Gemini (2.5 Pro, 3 Flash) et Mistral. Choisissez par tâche en fonction de la complexité, vitesse et coût. Voir [Pourquoi choisir WonkaChat ?](/fr/welcome/why-wonka-chat).
+</Accordion>
+
+<Accordion title="Quand devrais-je utiliser un modèle pro vs un modèle rapide ?" icon="brain">
+- **Modèles pro** : Analyse approfondie, planification multi-étapes, flux de travail complexes, connexions externes
+- **Modèles rapides** : Réponses rapides, formatage, recherches courtes, opérations à haut volume
+
+Détails et exemples dans [Pourquoi choisir WonkaChat ?](/fr/welcome/why-wonka-chat) et [Créer votre premier agent](/fr/ai-agents/creating-your-first-agent).
+</Accordion>
+
+<Accordion title="Comment les fenêtres de contexte affectent-elles les conversations ?" icon="memory">
+Les modèles ne « se souviennent » que de ce qui rentre dans la fenêtre de contexte actuelle. Les fils très longs peuvent pousser les détails antérieurs hors de portée. Si les réponses se dégradent, démarrez une nouvelle conversation avec un court résumé. Voir [Gestion des conversations](/fr/improved-usage/conversation-management).
+</Accordion>
+
+<Accordion title="Comment puis-je poser de meilleures questions ?" icon="question">
+Soyez spécifique, définissez la portée et le public, fournissez du contexte et demandez des sorties structurées. Voir les modèles et exemples dans [Poser des questions exceptionnelles](/fr/improved-usage/asking-great-questions).
+</Accordion>
+</AccordionGroup>
+
+## Connexions externes (MCP)
+
+<AccordionGroup>
+<Accordion title="Qu'est-ce que MCP et pourquoi c'est important ?" icon="plug">
+MCP (Model Context Protocol) connecte de manière sécurisée les modèles IA à vos logiciels (e-mail, calendrier, CRM, stockage, ERP, etc.) pour que l'IA puisse lire les données et prendre des actions avec votre permission. Voir [Outils et connexion → Comprendre MCP](/fr/tools-connection/introduction).
+</Accordion>
+
+<Accordion title="Comment connecter mon premier logiciel externe ?" icon="link">
+Ouvrez les paramètres Connecteurs (en bas à gauche) → sélectionnez une connexion → authentifiez (OAuth/identifiants) → activez la connexion pour votre modèle IA → testez avec une requête simple. Guide complet dans [Guide de démarrage rapide](/fr/welcome/quick-start).
+
+<Check>
+Commencez par l'e-mail (Outlook Mail ou Gmail) pour débloquer la productivité quotidienne.
+</Check>
+</Accordion>
+
+<Accordion title="À quoi WonkaChat peut-il accéder et faire avec les logiciels connectés ?" icon="hand">
+WonkaChat ne peut accéder qu'aux données pour lesquelles vous avez déjà la permission de voir et uniquement quand vous le demandez explicitement. Les actions dépendent des capacités de chaque connexion (MCP) (lire, écrire, rechercher, exécuter des flux de travail). Vous contrôlez toutes les actions via vos demandes en langage naturel. Voir [Outils et connexion](/fr/tools-connection/introduction).
+</Accordion>
+
+<Accordion title="Comment mes identifiants sont-ils stockés ?" icon="lock">
+WonkaChat stocke les jetons d'authentification de manière sécurisée (chiffrés au repos), jamais vos mots de passe en texte clair. Les jetons sont par utilisateur, auto-rafraîchis si nécessaire et supprimés quand vous déconnectez un outil. Voir [Vue d'ensemble de la sécurité](/fr/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="Pourquoi l'IA ne peut-elle pas accéder à un fichier ou enregistrement que j'ai demandé ?" icon="triangle-exclamation">
+Raisons les plus courantes : vous n'avez pas d'accès dans l'outil sous-jacent, vous avez refusé des autorisations pendant l'authentification ou l'outil n'est pas connecté. Vérifiez que vous pouvez y accéder directement dans le logiciel, puis reconnectez et accordez les autorisations demandées. Voir [Dépannage des connexions](/fr/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="Quelles connexions externes sont prises en charge ?" icon="puzzle-piece">
+WonkaChat prend en charge plus de 40 connexions dans la communication, le développement, les opérations, l'analytique et plus, incluant Outlook, Gmail, Slack, GitHub, Notion, Google Drive, Salesforce, HubSpot, Asana et bien d'autres. Voir la liste complète dans [Outils et connexion](/fr/tools-connection/introduction).
+</Accordion>
+</AccordionGroup>
+
+## Agents IA
+
+<AccordionGroup>
+<Accordion title="Que sont les agents IA et comment sont-ils différents du chat ordinaire ?" icon="robot">
+Les agents IA ont des instructions persistantes, des outils dédiés et des rôles cohérents dans les conversations - comme des membres d'équipe spécialisés. Le chat ordinaire recommence à zéro à chaque fois. Les agents sont idéaux pour les tâches récurrentes avec des exigences spécifiques. Voir [Introduction aux agents IA](/fr/ai-agents/introduction).
+</Accordion>
+
+<Accordion title="Quand devrais-je créer ou utiliser un agent IA ?" icon="bullseye">
+Utilisez les agents IA pour les flux de travail récurrents, les processus multi-outils ou quand vous avez besoin de sorties standardisées. Créez des agents personnels pour vos flux de travail spécifiques, ou utilisez des agents à l'échelle de l'organisation partagés par les administrateurs. Voir [Créer votre premier agent](/fr/ai-agents/creating-your-first-agent).
+</Accordion>
+
+<Accordion title="Comment trouver et accéder aux agents ?" icon="magnifying-glass">
+Accédez aux agents via la Marketplace des agents ou la section « Mes agents » dans votre interface WonkaChat. Vous pouvez rechercher, filtrer et sélectionner des agents en fonction de vos besoins. Voir [Trouver et accéder aux agents](/fr/ai-agents/finding-and-accessing-agents).
+</Accordion>
+
+<Accordion title="Que faire si un agent n'a pas les informations ou outils dont il a besoin ?" icon="wrench">
+- **En tant qu'utilisateur** : Fournissez les détails manquants dans votre prompt, ou choisissez un agent différent avec les outils appropriés configurés
+- **En tant qu'administrateur** : Mettez à jour les instructions de l'agent, ajoutez des documents pertinents ou connectez les outils externes requis
+
+Voir [Utiliser les agents existants](/fr/ai-agents/using-existing-agents).
+</Accordion>
+
+<Accordion title="Qu'est-ce que l'enseignement métier et pourquoi devrais-je l'utiliser ?" icon="graduation-cap">
+L'enseignement métier vous permet d'ajouter la terminologie, les politiques et les processus de votre entreprise aux agents IA via des instructions personnalisées et des documents téléchargés. Cela garantit que les réponses correspondent au contexte spécifique de votre organisation plutôt qu'à des hypothèses génériques. Voir [Enseignement métier](/fr/ai-agents/business-teaching).
+</Accordion>
+</AccordionGroup>
+
+## Sécurité et gouvernance
+
+<AccordionGroup>
+<Accordion title="WonkaChat entraîne-t-il des modèles IA sur mes données ?" icon="ban">
+Non. Vos conversations sont stockées en toute sécurité dans WonkaChat pour votre historique et référence, mais les fournisseurs de modèles traitent les demandes de manière éphémère sans rétention de données ou entraînement. Vos données n'entraînent jamais les modèles IA. Voir [Vue d'ensemble de la sécurité](/fr/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="Comment mes données sont-elles isolées et protégées ?" icon="building-lock">
+WonkaChat utilise l'isolation délimitée par organisation, le chiffrement en transit (TLS) et au repos, le stockage sécurisé des jetons et l'expurgation automatique des données sensibles dans les journaux. Vos données restent dans votre périmètre de sécurité. Voir [Vue d'ensemble de la sécurité](/fr/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="Quelles méthodes d'authentification sont prises en charge ?" icon="key">
+WonkaChat prend en charge l'authentification Google Workspace, Microsoft 365 et e-mail/mot de passe. Les plans Entreprise peuvent configurer des fournisseurs SSO personnalisés. Les jetons d'accès et de rafraîchissement équilibrent la sécurité avec l'utilisabilité. Voir [Vue d'ensemble de la sécurité](/fr/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="Comment fonctionnent le contrôle d'accès et le partage ?" icon="user-shield">
+WonkaChat a deux rôles : **Utilisateur** et **Administrateur**. Les administrateurs gèrent les utilisateurs, partagent les agents IA à l'échelle de l'organisation et contrôlent l'accès aux outils. Les utilisateurs peuvent créer des agents personnels mais ne peuvent pas les partager dans l'organisation. Voir [Contrôle d'accès](/fr/security-governance/access-control).
+</Accordion>
+
+<Accordion title="Les agents IA peuvent-ils escalader les privilèges ou contourner les autorisations ?" icon="shield-halved">
+Non. Les agents IA héritent de vos autorisations exactes des logiciels connectés. Si vous ne pouvez pas effectuer une action manuellement, les agents ne peuvent pas non plus. Les fonctionnalités de restriction d'outils vous permettent de supprimer des capacités spécifiques des agents pour une sécurité supplémentaire. Voir [Contrôle d'accès](/fr/security-governance/access-control).
+</Accordion>
+
+<Accordion title="Qu'est-ce que le Mode sécurisé et quand devrais-je l'utiliser ?" icon="shield-check">
+Le Mode sécurisé nécessite votre approbation avant que les agents IA n'exécutent des actions. Utilisez-le pour les opérations sensibles comme l'envoi de communications, la modification de données de production, les déploiements et les transactions financières. Voir [Contrôle d'accès](/fr/security-governance/access-control).
+</Accordion>
+</AccordionGroup>
+
+## Dépannage
+
+<AccordionGroup>
+<Accordion title="Je vois des erreurs d'authentification lors de la connexion d'un outil" icon="circle-xmark">
+Vérifiez vos identifiants en vous connectant d'abord directement à l'outil. Ensuite, déconnectez et reconnectez via les paramètres Connecteurs de WonkaChat, en vous assurant d'accorder toutes les autorisations demandées pendant l'authentification. Voir [Dépannage des connexions](/fr/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="J'obtiens 'autorisation refusée' lors de l'accès aux données" icon="ban">
+Causes courantes : votre organisation bloque les applications tierces, vous n'avez pas accordé toutes les autorisations requises pendant la configuration ou votre compte manque d'accès à ces données. Contactez votre équipe IT pour approuver WonkaChat, puis reconnectez avec toutes les autorisations. Voir [Dépannage des connexions](/fr/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="Les réponses sont lentes ou expirent" icon="clock">
+Essayez ces étapes : actualisez WonkaChat, vérifiez votre connexion Internet, réduisez la portée de la requête (utilisez des plages de dates ou filtres), passez à un modèle plus rapide ou vérifiez le statut du logiciel connecté. Voir [Dépannage des connexions](/fr/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="Les réponses de l'agent IA ne correspondent pas à mes attentes" icon="pen-to-square">
+Soyez plus spécifique sur le format et la portée souhaités dans votre prompt. Examinez les instructions de l'agent pour assurer l'alignement. Les administrateurs peuvent affiner les instructions de l'agent, ajouter du contexte métier ou connecter des outils supplémentaires. Voir [Utiliser les agents existants](/fr/ai-agents/using-existing-agents) et [Poser des questions exceptionnelles](/fr/improved-usage/asking-great-questions).
+</Accordion>
+
+<Accordion title="Où puis-je obtenir de l'aide ?" icon="life-ring">
+Visitez [Obtenir de l'aide](/fr/support-resources/getting-help) pour les options de support, contactez notre équipe sur [meetwonka.com/contact](https://www.meetwonka.com/fr/contact), ou explorez [Dépannage](/fr/support-resources/troubleshooting) pour les problèmes courants et solutions.
+</Accordion>
+</AccordionGroup>
+
+## Prompting, conversations et bibliothèque de prompts
+
+<AccordionGroup>
+<Accordion title="Comment écrire de meilleurs prompts ?" icon="list">
+Structurez les prompts avec un contexte clair, des objectifs spécifiques, le format de sortie souhaité et les contraintes pertinentes. Fournissez des exemples si utile et spécifiez votre public. Plus vous êtes spécifique, meilleurs seront les résultats. Voir [Poser des questions exceptionnelles](/fr/improved-usage/asking-great-questions).
+</Accordion>
+
+<Accordion title="Quand devrais-je démarrer une nouvelle conversation ?" icon="arrows-turn-to-dots">
+Démarrez une nouvelle conversation lors du changement de sujets, après des fils très longs (limites de fenêtre de contexte) ou quand la qualité de réponse baisse. Commencez la nouvelle conversation avec un bref résumé du contexte pertinent si nécessaire. Voir [Gestion des conversations](/fr/improved-usage/conversation-management).
+</Accordion>
+
+<Accordion title="Comment sauvegarder et réutiliser les prompts ?" icon="bookmark">
+Utilisez la Bibliothèque de prompts pour sauvegarder des prompts efficaces avec des variables comme `{{current_date}}` ou `{{current_user}}`. Créez des modèles réutilisables pour les tâches courantes et invoquez-les rapidement avec des commandes slash. Voir [Bibliothèque de prompts](/fr/improved-usage/prompt-library).
+</Accordion>
+</AccordionGroup>
+
+## Politiques et gestion des risques
+
+<AccordionGroup>
+<Accordion title="Quelles pratiques réduisent le risque lors de l'utilisation de l'IA ?" icon="clipboard-check">
+- Activez le Mode sécurisé pour les actions à fort impact
+- Testez les flux de travail dans des environnements hors production d'abord
+- Utilisez l'accès au moindre privilège (n'accordez que les autorisations nécessaires)
+- Décomposez les flux de travail complexes en étapes examinables
+- Supprimez les capacités destructrices des agents IA quand elles ne sont pas nécessaires
+
+Voir [Bonnes pratiques](/fr/security-governance/best-practices).
+</Accordion>
+
+<Accordion title="Puis-je annuler des actions effectuées par l'IA ?" icon="rotate-left">
+Beaucoup d'actions d'outils sont irréversibles (envoi d'e-mails, suppression de données, déploiements, transactions financières). Utilisez toujours le Mode sécurisé pour les opérations sensibles, restreignez les capacités destructrices et examinez les sorties avant l'exécution finale. Voir [Bonnes pratiques](/fr/security-governance/best-practices).
+</Accordion>
+</AccordionGroup>
+
+---
+
+<Card title="Vous avez encore des questions ?" icon="life-ring" href="/fr/support-resources/getting-help">
+Visitez Obtenir de l'aide pour contacter notre équipe ou explorer plus de ressources de support.
+</Card>

@@ -1,0 +1,125 @@
+---
+title: "Compliance & Governance"
+description: "Begrijp WonkaChat's compliance-functies, auditcapaciteiten en certificeringsroadmap."
+---
+
+WonkaChat implementeert robuuste compliance- en governance-functies om je regelgevende vereisten te ondersteunen. Hoewel formele certificeringen in uitvoering zijn, zijn de onderliggende controles en capaciteiten al ingebouwd in het platform dat je vandaag gebruikt.
+
+<Warning>
+**Certificeringsstatus**: WonkaChat heeft beveiligings- en governance-controles geïmplementeerd die aansluiten bij belangrijke compliance-frameworks (GDPR, SOC 2, ISO 27001). Formele third-party certificeringen zijn momenteel in uitvoering.
+</Warning>
+
+---
+
+## Waar je vandaag op kunt vertrouwen
+
+<CardGroup cols={2}>
+<Card title="Audit trails" icon="file-lines">
+Volledige logging van gebruikers- en agent-acties met onveranderlijke audit trails.
+</Card>
+
+<Card title="Toegangscontroles" icon="user-lock">
+RBAC, authenticatie en permissiebeheer over het hele platform.
+</Card>
+
+<Card title="Versleuteling & isolatie" icon="shield-check">
+Versleuteling in transit en at rest met organisatieniveau gegevensisolatie.
+</Card>
+
+<Card title="Retentiecontroles" icon="clock">
+Configureerbare retentiebeleid voor gesprekken, logs en gebruikersgegevens.
+</Card>
+</CardGroup>
+
+<Info>
+Deze controles zijn vandaag operationeel. Certificeringen zullen formeel valideren wat al op zijn plaats is.
+</Info>
+
+---
+
+## Certificeringsstatus
+
+<Update label="In uitvoering" description="Formele audits bezig">
+- SOC 2 Type II: third-party audit in uitvoering
+- ISO 27001: certificeringsproces geïnitieerd
+- GDPR: functies ter ondersteuning van rechten van betrokkenen geïmplementeerd; voer DPIA uit waar gepast
+</Update>
+
+<Warning>
+WonkaChat beschikt nog niet over formele certificeringen. We werken er actief aan.
+</Warning>
+
+<Check>
+Je kunt WonkaChat vandaag met vertrouwen gebruiken; certificeringen zullen de bestaande controles formeel erkennen.
+</Check>
+
+---
+
+## Audit trails en logging
+
+- **Uitgebreid logging-systeem**: Winston-gebaseerde gestructureerde logging
+- **Log niveaus**: TRACE (10), DEBUG (20), INFO (30), WARN (40), ERROR (50), FATAL (60)
+- **Beveiligingsgebeurtenis logging**: Auth-pogingen, permissiewijzigingen, rate limits, verdachte activiteit
+- **Migratie audit trail**: Schema-wijzigingen, upgrades, config-modificaties, versie-tracking
+- **Gebruikersactiviteit logging**: Sessies, agent- en tool-gebruik, gegevenstoegang/exports
+
+<Info>
+Gevoelige gegevens (wachtwoorden, API-keys, tokens) worden automatisch geredigeerd uit logs.
+</Info>
+
+---
+
+## Gegevensretentiebeleid
+
+### Gespreksgegevens
+
+<AccordionGroup>
+<Accordion title="Tijdelijke chat retentie">
+Schakel automatische verwijdering van gespreksgeschiedenis in na een geconfigureerde periode.
+
+- Tijdelijke chat: ingeschakeld
+- Retentievenster: 24 uur
+- Functies: automatische opruimjobs, door gebruiker gecontroleerde verwijdering, admin override, soft delete met herstel
+</Accordion>
+
+<Accordion title="Permanente gesprekken">
+Behoud gesprekken voor onbepaalde tijd tot handmatig verwijderd. Het beste voor kennisbases en langetermijnprojecten.
+</Accordion>
+</AccordionGroup>
+
+### Log retentie
+
+Aanbevolen retentie:
+
+- Error logs: 90 dagen (debugging en probleemoplossing)
+- Combined logs: 30 dagen (algemene activiteit)
+- Security logs: 365 dagen (compliance-vereisten)
+- Audit logs: 7 jaar (juridische en regelgevende vereisten)
+- Violation logs: 180 dagen (overtreding tracking)
+
+Rotatie-instellingen:
+
+- Dagelijkse rotatie met datum-gebaseerde bestandsnamen
+- Max bestandsgrootte: 50 MB
+- Behoud laatste 30 dagen aan bestanden
+- Comprimeer oudere bestanden
+
+### Gebruikersgegevens
+
+Retentieregels:
+
+- Actieve gebruikers: behouden zolang account actief is
+- Inactieve gebruikers: 90 dagen na laatste activiteit
+- Verwijderde gebruikers: 30 dagen (soft delete met herstel)
+- Gesprekken: door gebruiker gecontroleerde retentie
+- Bestanden: 90 dagen na laatste toegang
+- Sessies: 7 dagen
+- Tokens: verlopen bij refresh (typisch 15 minuten tot 7 dagen)
+
+---
+
+## Meer informatie nodig?
+
+<Card title="Neem contact op" icon="handshake" href="/nl/support-resources/getting-help">
+Voor vragen over compliance, beveiligingsdocumentatie of leveranciersbeoordelingen, neem contact op met ons team voor assistentie.
+</Card>

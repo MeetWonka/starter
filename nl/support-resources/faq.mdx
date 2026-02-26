@@ -1,0 +1,224 @@
+---
+title: "FAQ"
+description: "Veelgestelde vragen over WonkaChat."
+---
+Vind snelle antwoorden over WonkaChat over setup, modellen, externe verbindingen (MCP), agents, beveiliging, probleemoplossing en best practices.
+
+<Tip>
+Nieuw bij WonkaChat? Begin met onze [Introductie](/nl/welcome/introduction), verken dan [Tools & Verbinding](/nl/tools-connection/introduction) en [AI-Agents](/nl/ai-agents/introduction).
+</Tip>
+
+
+## Aan de slag
+
+<AccordionGroup>
+<Accordion title="Wat is WonkaChat?" icon="circle-question">
+WonkaChat is een enterprise AI-assistent die verbindt met je zakelijke tools en gegevens om multi-step workflows uit te voeren via natuurlijke conversatie, terwijl je gegevens binnen je beveiligingsperimeter blijven. Zie [Wat is WonkaChat?](/nl/welcome/introduction).
+
+<Check>
+Beschouw het als één interface die acties coördineert over je apps (e-mail, agenda, CRM, documenten, ERP en meer).
+</Check>
+</Accordion>
+
+<Accordion title="Hoe begin ik in 5 minuten?" icon="rocket">
+1. Maak je account aan op [wonka.chat/register](https://wonka.chat/register) of log in via de SSO van je organisatie
+
+2. Stuur je eerste bericht om te verifiëren dat alles werkt
+
+3. Verbind je eerste verbinding (e-mail is een goede start) via de Connector-instellingen
+
+4. Probeer een eenvoudige workflow zoals "Stuur een e-mail naar mijn team over de vergadering van morgen"
+
+Zie [Snelstartgids](/nl/welcome/quick-start).
+
+<Tip>
+Begin met je e-mailprovider (Outlook Mail of Gmail). Het ontgrendelt hoogwaardige dagelijkse workflows.
+</Tip>
+</Accordion>
+
+<Accordion title="Moet ik kunnen programmeren om WonkaChat te gebruiken?" icon="seedling">
+Nee. Je communiceert via conversatie. Gevorderde gebruikers kunnen agents en verbindingen configureren zonder code te schrijven.
+</Accordion>
+
+<Accordion title="Wat kan WonkaChat me helpen bereiken?" icon="wand-magic-sparkles">
+Veelvoorkomende voorbeelden zijn onboarding-workflows, intelligent zoeken over software, geautomatiseerde rapportage, vergaderplanning en klantenondersteuningstriages. Verken voorbeelden in [Welkom → Introductie](/nl/welcome/introduction).
+</Accordion>
+
+<Accordion title="Kan ik van AI-model wisselen?" icon="sliders">
+Ja. Kies pro-modellen voor complexe redeneringen of snelle modellen voor snelle taken. Je kunt per taak of gesprek wisselen. Zie [Waarom WonkaChat Kiezen?](/nl/welcome/why-wonka-chat).
+</Accordion>
+</AccordionGroup>
+
+## Modellen en gebruik
+
+<AccordionGroup>
+<Accordion title="Welke AI-modellen worden ondersteund?" icon="microchip">
+WonkaChat is model-agnostisch. Je kunt providers gebruiken zoals OpenAI (GPT-5.2, GPT-5, GPT-4o), Anthropic Claude (Opus 4.5, Sonnet 4.5, Haiku 4.5), Google Gemini (2.5 Pro, 3 Flash) en Mistral. Kies per taak op basis van complexiteit, snelheid en kosten. Zie [Waarom WonkaChat Kiezen?](/nl/welcome/why-wonka-chat).
+</Accordion>
+
+<Accordion title="Wanneer moet ik een pro-model vs een snel model gebruiken?" icon="brain">
+- **Pro-modellen**: Diepgaande analyse, multi-step planning, complexe workflows, externe verbindingen
+- **Snelle modellen**: Snelle antwoorden, opmaak, korte lookups, operaties met hoog volume
+
+Details en voorbeelden in [Waarom WonkaChat Kiezen?](/nl/welcome/why-wonka-chat) en [Je Eerste Agent Maken](/nl/ai-agents/creating-your-first-agent).
+</Accordion>
+
+<Accordion title="Hoe beïnvloeden contextvensters gesprekken?" icon="memory">
+Modellen "onthouden" alleen wat in het huidige contextvenster past. Zeer lange threads kunnen eerdere details uit scope duwen. Als antwoorden verslechteren, start een nieuw gesprek met een korte samenvatting. Zie [Gespreksbeheer](/nl/improved-usage/conversation-management).
+</Accordion>
+
+<Accordion title="Hoe kan ik betere vragen stellen?" icon="question">
+Wees specifiek, stel scope en publiek in, geef context en vraag gestructureerde outputs. Zie patronen en templates in [Goede Vragen Stellen](/nl/improved-usage/asking-great-questions).
+</Accordion>
+</AccordionGroup>
+
+## Externe verbindingen (MCP)
+
+<AccordionGroup>
+<Accordion title="Wat is MCP en waarom is het belangrijk?" icon="plug">
+MCP (Model Context Protocol) verbindt AI-modellen veilig met je software (e-mail, agenda, CRM, opslag, ERP, etc.) zodat de AI gegevens kan lezen en acties kan ondernemen met je toestemming. Zie [Tools & Verbinding → MCP Begrijpen](/nl/tools-connection/introduction).
+</Accordion>
+
+<Accordion title="Hoe verbind ik mijn eerste externe software?" icon="link">
+Open de Connector-instellingen (linksonder) → selecteer een verbinding → authenticeer (OAuth/credentials) → schakel de verbinding in voor je AI-model → test met een eenvoudige query. Volledige walkthrough in [Snelstartgids](/nl/welcome/quick-start).
+
+<Check>
+Begin met e-mail (Outlook Mail of Gmail) om dagelijkse productiviteit te ontgrendelen.
+</Check>
+</Accordion>
+
+<Accordion title="Waartoe heeft WonkaChat toegang en wat kan het doen met verbonden software?" icon="hand">
+WonkaChat heeft alleen toegang tot gegevens waarvoor je al toestemming hebt om te bekijken en alleen wanneer je expliciet vraagt. Acties hangen af van de mogelijkheden van elke verbinding (MCP) (lezen, schrijven, zoeken, workflows uitvoeren). Je beheert alle acties via je natuurlijke taalverzoeken. Zie [Tools & Verbinding](/nl/tools-connection/introduction).
+</Accordion>
+
+<Accordion title="Hoe worden mijn inloggegevens opgeslagen?" icon="lock">
+WonkaChat slaat authenticatietokens veilig op (versleuteld at rest), nooit je platte tekst wachtwoorden. Tokens zijn per gebruiker, worden automatisch vernieuwd indien nodig en verwijderd wanneer je een tool ontkoppelt. Zie [Beveiligingsoverzicht](/nl/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="Waarom heeft de AI geen toegang tot een bestand of record waarnaar ik vroeg?" icon="triangle-exclamation">
+Meest voorkomende redenen: je hebt geen toegang in de onderliggende tool, je hebt permissies geweigerd tijdens authenticatie, of de tool is niet verbonden. Verifieer dat je er direct toegang toe hebt in de software, en verbind dan opnieuw en verleen de gevraagde permissies. Zie [Probleemoplossing Verbindingen](/nl/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="Welke externe verbindingen worden ondersteund?" icon="puzzle-piece">
+WonkaChat ondersteunt 40+ verbindingen over communicatie, ontwikkeling, operaties, analytics en meer, inclusief Outlook, Gmail, Slack, GitHub, Notion, Google Drive, Salesforce, HubSpot, Asana en vele anderen. Zie de volledige lijst in [Tools & Verbinding](/nl/tools-connection/introduction).
+</Accordion>
+</AccordionGroup>
+
+## AI-agents
+
+<AccordionGroup>
+<Accordion title="Wat zijn AI-Agents en hoe verschillen ze van gewone chat?" icon="robot">
+AI-Agents hebben persistente instructies, toegewijde tools en consistente rollen over gesprekken heen - zoals gespecialiseerde teamleden. Gewone chat begint elke keer opnieuw. Agents zijn ideaal voor terugkerende taken met specifieke vereisten. Zie [AI-Agents Introductie](/nl/ai-agents/introduction).
+</Accordion>
+
+<Accordion title="Wanneer moet ik een AI-Agent maken of gebruiken?" icon="bullseye">
+Gebruik AI-Agents voor terugkerende workflows, multi-tool processen, of wanneer je gestandaardiseerde outputs nodig hebt. Maak persoonlijke agents voor je specifieke workflows, of gebruik organisatiebrede agents gedeeld door beheerders. Zie [Je Eerste Agent Maken](/nl/ai-agents/creating-your-first-agent).
+</Accordion>
+
+<Accordion title="Hoe vind en gebruik ik agents?" icon="magnifying-glass">
+Krijg toegang tot agents via de Agent Marketplace of "Mijn Agents" sectie in je WonkaChat-interface. Je kunt agents zoeken, filteren en selecteren op basis van je behoeften. Zie [Agents Vinden en Openen](/nl/ai-agents/finding-and-accessing-agents).
+</Accordion>
+
+<Accordion title="Wat als een agent niet de informatie of tools heeft die het nodig heeft?" icon="wrench">
+- **Als gebruiker**: Geef ontbrekende details in je prompt, of kies een andere agent met de juiste tools geconfigureerd
+- **Als beheerder**: Werk de instructies van de agent bij, voeg relevante documenten toe of verbind de vereiste externe tools
+
+Zie [Bestaande Agents Gebruiken](/nl/ai-agents/using-existing-agents).
+</Accordion>
+
+<Accordion title="Wat is Business Teaching en waarom moet ik het gebruiken?" icon="graduation-cap">
+Business Teaching stelt je in staat om de terminologie, beleid en processen van je bedrijf toe te voegen aan AI-Agents via aangepaste instructies en geüploade documenten. Dit zorgt ervoor dat antwoorden overeenkomen met de specifieke context van je organisatie in plaats van generieke aannames. Zie [Business Teaching](/nl/ai-agents/business-teaching).
+</Accordion>
+</AccordionGroup>
+
+## Beveiliging en governance
+
+<AccordionGroup>
+<Accordion title="Traint WonkaChat AI-modellen op mijn gegevens?" icon="ban">
+Nee. Je gesprekken worden veilig opgeslagen in WonkaChat voor je geschiedenis en referentie, maar modelproviders verwerken verzoeken efemeer zonder gegevensretentie of training. Je gegevens trainen nooit AI-modellen. Zie [Beveiligingsoverzicht](/nl/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="Hoe worden mijn gegevens geïsoleerd en beschermd?" icon="building-lock">
+WonkaChat gebruikt organisatie-scoped isolatie, versleuteling in transit (TLS) en at rest, veilige token-opslag en automatische redactie van gevoelige gegevens in logs. Je gegevens blijven binnen je beveiligingsperimeter. Zie [Beveiligingsoverzicht](/nl/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="Welke authenticatiemethoden worden ondersteund?" icon="key">
+WonkaChat ondersteunt Google Workspace, Microsoft 365 en e-mail/wachtwoord authenticatie. Enterprise-abonnementen kunnen aangepaste SSO-providers configureren. Access tokens en refresh tokens balanceren beveiliging met bruikbaarheid. Zie [Beveiligingsoverzicht](/nl/security-governance/security-overview).
+</Accordion>
+
+<Accordion title="Hoe werkt toegangsbeheer en delen?" icon="user-shield">
+WonkaChat heeft twee rollen: **Gebruiker** en **Beheerder**. Beheerders beheren gebruikers, delen AI-Agents organisatiebreed en bepalen tool-toegang. Gebruikers kunnen persoonlijke agents maken maar kunnen ze niet delen over de organisatie. Zie [Toegangsbeheer](/nl/security-governance/access-control).
+</Accordion>
+
+<Accordion title="Kunnen AI-Agents privileges escaleren of permissies omzeilen?" icon="shield-halved">
+Nee. AI-Agents erven je exacte permissies van verbonden software. Als je een actie niet handmatig kunt uitvoeren, kunnen agents dat ook niet. Tool-restrictiefuncties laten je specifieke mogelijkheden van agents verwijderen voor extra veiligheid. Zie [Toegangsbeheer](/nl/security-governance/access-control).
+</Accordion>
+
+<Accordion title="Wat is Safe Mode en wanneer moet ik het gebruiken?" icon="shield-check">
+Safe Mode vereist je goedkeuring voordat AI-Agents acties uitvoeren. Gebruik het voor gevoelige operaties zoals het verzenden van communicatie, wijzigen van productiegegevens, implementaties en financiële transacties. Zie [Toegangsbeheer](/nl/security-governance/access-control).
+</Accordion>
+</AccordionGroup>
+
+## Probleemoplossing
+
+<AccordionGroup>
+<Accordion title="Ik zie authenticatiefouten bij het verbinden van een tool" icon="circle-xmark">
+Verifieer je inloggegevens door eerst direct in de tool in te loggen. Ontkoppel en verbind dan opnieuw via de Connector-instellingen van WonkaChat, en zorg ervoor dat je alle gevraagde permissies verleent tijdens authenticatie. Zie [Probleemoplossing Verbindingen](/nl/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="Ik krijg 'toestemming geweigerd' bij toegang tot gegevens" icon="ban">
+Veelvoorkomende oorzaken: je organisatie blokkeert third-party apps, je hebt niet alle vereiste permissies verleend tijdens setup, of je account heeft geen toegang tot die gegevens. Neem contact op met je IT-team om WonkaChat goed te keuren, en verbind dan opnieuw met volledige permissies. Zie [Probleemoplossing Verbindingen](/nl/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="Antwoorden zijn traag of time-out" icon="clock">
+Probeer deze stappen: ververs WonkaChat, controleer je internetverbinding, verminder query scope (gebruik datumbereiken of filters), schakel over naar een sneller model, of verifieer de status van de verbonden software. Zie [Probleemoplossing Verbindingen](/nl/tools-connection/troubleshooting-connections).
+</Accordion>
+
+<Accordion title="AI-Agent antwoorden komen niet overeen met mijn verwachtingen" icon="pen-to-square">
+Wees specifieker over gewenst formaat en scope in je prompt. Bekijk de instructies van de agent om afstemming te waarborgen. Beheerders kunnen agent-instructies verfijnen, zakelijke context toevoegen of extra tools verbinden. Zie [Bestaande Agents Gebruiken](/nl/ai-agents/using-existing-agents) en [Goede Vragen Stellen](/nl/improved-usage/asking-great-questions).
+</Accordion>
+
+<Accordion title="Waar kan ik hulp krijgen?" icon="life-ring">
+Bezoek [Hulp Krijgen](/nl/support-resources/getting-help) voor supportopties, neem contact op met ons team op [meetwonka.com/contact](https://www.meetwonka.com/fr/contact), of verken [Probleemoplossing](/nl/support-resources/troubleshooting) voor veelvoorkomende problemen en oplossingen.
+</Accordion>
+</AccordionGroup>
+
+## Prompten, gesprekken en de promptbibliotheek
+
+<AccordionGroup>
+<Accordion title="Hoe schrijf ik betere prompts?" icon="list">
+Structureer prompts met duidelijke context, specifieke doelen, gewenst outputformaat en relevante beperkingen. Geef voorbeelden wanneer nuttig en specificeer je publiek. Hoe specifieker je bent, hoe betere resultaten je krijgt. Zie [Goede Vragen Stellen](/nl/improved-usage/asking-great-questions).
+</Accordion>
+
+<Accordion title="Wanneer moet ik een nieuw gesprek starten?" icon="arrows-turn-to-dots">
+Start een nieuw gesprek bij het wisselen van onderwerpen, na zeer lange threads (contextvensterlimieten), of wanneer antwoordkwaliteit afneemt. Begin het nieuwe gesprek met een korte samenvatting van relevante context indien nodig. Zie [Gespreksbeheer](/nl/improved-usage/conversation-management).
+</Accordion>
+
+<Accordion title="Hoe bewaar en hergebruik ik prompts?" icon="bookmark">
+Gebruik de Promptbibliotheek om effectieve prompts op te slaan met variabelen zoals `{{current_date}}` of `{{current_user}}`. Maak herbruikbare templates voor veelvoorkomende taken en roep ze snel op met slash-commando's. Zie [Promptbibliotheek](/nl/improved-usage/prompt-library).
+</Accordion>
+</AccordionGroup>
+
+## Beleid en risicobeheer
+
+<AccordionGroup>
+<Accordion title="Welke praktijken verminderen risico bij het gebruik van AI?" icon="clipboard-check">
+- Schakel Safe Mode in voor high-impact acties
+- Test workflows eerst in niet-productieomgevingen
+- Gebruik least-privilege toegang (verleen alleen noodzakelijke permissies)
+- Breek complexe workflows op in beoordeelbare stappen
+- Verwijder destructieve mogelijkheden van AI-Agents wanneer niet nodig
+
+Zie [Best Practices](/nl/security-governance/best-practices).
+</Accordion>
+
+<Accordion title="Kan ik acties ongedaan maken die door AI zijn uitgevoerd?" icon="rotate-left">
+Veel tool-acties zijn onomkeerbaar (e-mails verzenden, gegevens verwijderen, implementaties, financiële transacties). Gebruik altijd Safe Mode voor gevoelige operaties, beperk destructieve mogelijkheden en beoordeel outputs voordat definitieve uitvoering. Zie [Best Practices](/nl/security-governance/best-practices).
+</Accordion>
+</AccordionGroup>
+
+---
+
+<Card title="Nog vragen?" icon="life-ring" href="/nl/support-resources/getting-help">
+Bezoek Hulp Krijgen om ons team te bereiken of meer supportbronnen te verkennen.
+</Card>

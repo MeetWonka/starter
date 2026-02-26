@@ -1,0 +1,491 @@
+---
+title: "Exemples d'utilisation de connexions"
+description: "Voyez les connexions externes (MCP) en action avec des exemples réels d'Outlook, Odoo et d'autres systèmes métier."
+---
+
+Apprenez à utiliser efficacement ces connexions en regardant des exemples réels de WonkaChat travaillant avec vos systèmes métier.
+
+<Info>
+Ces exemples démontrent la puissance des connexions externes, montrant comment l'IA peut interagir avec vos systèmes métier via une conversation naturelle.
+</Info>
+
+---
+
+## Exemples concrets
+
+Regardez ces exemples pour voir comment les connexions externes fonctionnent avec différents types de systèmes métier.
+
+<Tabs>
+<Tab title="Gestion d'e-mails">
+
+### Gérer les e-mails avec l'IA
+
+Voyez comment WonkaChat se connecte à Gmail pour vous aider à gérer les e-mails, créer des brouillons et rester organisé uniquement en utilisant une conversation en langage naturel.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/DzPcF-Z3S0Q"
+  title="Connexion Gmail en action"
+  frameBorder="0"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+### Cas d'utilisation Gmail courants
+
+<CardGroup cols={2}>
+<Card title="Briefing quotidien" icon="newspaper">
+« Donnez-moi mon briefing quotidien : calendrier d'aujourd'hui, e-mails non lus de mon équipe et éléments urgents »
+</Card>
+
+<Card title="Préparation de réunion" icon="clipboard-list">
+« Trouvez tous les e-mails sur la réunion de planification Q4 et résumez les points de discussion clés »
+</Card>
+
+<Card title="Nettoyage d'e-mails" icon="trash">
+« Montrez-moi les e-mails de plus de 30 jours provenant de newsletters et d'expéditeurs promotionnels »
+</Card>
+
+<Card title="Suivi des suivis" icon="clock-rotate-left">
+« Pour quels e-mails j'attends des réponses ? Montrez-moi les e-mails que j'ai envoyés qui n'ont pas reçu de réponse »
+</Card>
+</CardGroup>
+
+<Info>
+Les mêmes capacités montrées avec **Gmail** fonctionnent de manière identique avec **Outlook** ou tout autre fournisseur d'e-mail et de calendrier qui a un serveur MCP disponible sur WonkaChat. Connectez simplement le fournisseur correspondant à la place !
+</Info>
+
+</Tab>
+
+<Tab title="Système ERP Odoo">
+
+### Gérer les opérations métier avec Odoo
+
+Regardez comment WonkaChat s'intègre avec Odoo pour vous aider à gérer les clients, l'inventaire, les ventes et les opérations via une conversation alimentée par l'IA.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/8OLyI_73ba0"
+  title="Démonstration de connexion Odoo"
+  frameBorder="0"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+### Aller plus loin
+
+<AccordionGroup>
+<Accordion title="Gestion de la clientèle" icon="users">
+**Exemples de requêtes :**
+- « Montrez-moi nos 10 meilleurs clients par revenu ce trimestre »
+- « Trouvez les coordonnées de Acme Corporation »
+- « Créez un nouvel enregistrement client pour ABC Company avec l'e-mail contact@abc.com »
+
+**Ce qui se passe :**
+1. L'IA se connecte au module CRM d'Odoo
+2. Interroge la base de données clients
+3. Récupère et formate les informations client
+4. Peut créer ou mettre à jour les enregistrements client
+
+**Avantages :**
+- Accès rapide aux données client
+- Pas besoin de naviguer dans l'interface Odoo
+- Requêtes en langage naturel au lieu de filtres
+- Mettre à jour les enregistrements via une conversation
+</Accordion>
+
+<Accordion title="Pipeline de ventes" icon="chart-line">
+**Exemples de requêtes :**
+- « Quel est le statut de notre pipeline de ventes ce mois-ci ? »
+- « Montrez-moi toutes les opportunités en phase de négociation »
+- « Mettez à jour l'accord TechCorp à l'étape 'Proposition envoyée' »
+
+**Ce qui se passe :**
+1. L'IA accède au module ventes d'Odoo
+2. Récupère les données du pipeline et les opportunités
+3. Présente le statut actuel et les métriques
+4. Peut mettre à jour les étapes et détails des opportunités
+
+**Avantages :**
+- Visibilité du pipeline en temps réel
+- Mises à jour de statut rapides
+- Identifier les goulots d'étranglement plus rapidement
+- Suivre les transactions sans se connecter à Odoo
+</Accordion>
+
+<Accordion title="Gestion des stocks" icon="warehouse">
+**Exemples de requêtes :**
+- « Quel est notre niveau de stock actuel pour le produit SKU-12345 ? »
+- « Montrez-moi les produits en dessous du niveau de réapprovisionnement »
+- « Créez un bon de commande pour 100 unités de SKU-67890 »
+
+**Ce qui se passe :**
+1. L'IA interroge le module inventaire d'Odoo
+2. Récupère les niveaux de stock en temps réel
+3. Identifie les articles à faible stock
+4. Peut initier des bons de commande ou des transferts
+
+**Avantages :**
+- Visibilité instantanée de l'inventaire
+- Alertes proactives de faible stock
+- Processus de réapprovisionnement plus rapide
+- Réduire les ruptures de stock et le surstock
+</Accordion>
+
+<Accordion title="Traitement des commandes" icon="receipt">
+**Exemples de requêtes :**
+- « Montrez-moi les commandes qui doivent être expédiées »
+- « Quel est le statut de la commande SO-2024-001 ? »
+- « Créez une commande client pour le client ABC Company : 50 unités du Produit X »
+
+**Ce qui se passe :**
+1. L'IA accède aux modules ventes et entrepôt d'Odoo
+2. Récupère les informations de commande
+3. Affiche le statut d'exécution
+4. Peut créer de nouvelles commandes
+
+**Avantages :**
+- Suivre les commandes sans recherche manuelle
+- Création de commande plus rapide
+- Identifier les goulots d'étranglement d'exécution
+- Améliorer le temps de réponse client
+</Accordion>
+
+<Accordion title="Insights financiers" icon="chart-pie">
+**Exemples de requêtes :**
+- « Quel est notre revenu ce trimestre par rapport au dernier trimestre ? »
+- « Montrez-moi les factures en souffrance »
+- « Quels clients ont des paiements en retard ? »
+
+**Ce qui se passe :**
+1. L'IA se connecte au module comptabilité d'Odoo
+2. Récupère les données financières et les rapports
+3. Effectue des calculs et des comparaisons
+4. Identifie les créances et les dettes
+
+**Avantages :**
+- Insights financiers rapides
+- Pas besoin de générer des rapports formels
+- Suivre les créances de manière proactive
+- Meilleure gestion de la trésorerie
+</Accordion>
+</AccordionGroup>
+
+### Cas d'utilisation Odoo courants
+
+<CardGroup cols={2}>
+<Card title="Tableau de bord des opérations" icon="gauge">
+« Donnez-moi un aperçu des opérations : commandes en attente, articles à faible stock et factures en retard »
+</Card>
+
+<Card title="Service client" icon="headset">
+« Trouvez l'historique des commandes et les tickets de support ouverts pour le client TechCorp »
+</Card>
+
+<Card title="Rapports de ventes" icon="file-chart-column">
+« Comparez notre performance de ventes : ce mois-ci vs le mois dernier, ventilé par catégorie de produit »
+</Card>
+
+<Card title="Approvisionnement" icon="cart-shopping">
+« Quels produits dois-je réapprovisionner ? Montrez-moi tout ce qui est en dessous du niveau de stock minimum et créez des bons de commande »
+</Card>
+</CardGroup>
+
+<Info>
+Odoo a de nombreux modules (CRM, Ventes, Inventaire, Comptabilité, RH, Fabrication, etc.). La connexion externe (MCP) fonctionne avec tous les modules installés dans votre instance Odoo.
+</Info>
+
+</Tab>
+
+
+<Tab title="Exemple multi-outils">
+
+### Multi-outils : Connexion de Gmail et Odoo pour une vue d'ensemble unifiée
+
+Voyez un exemple réel de comment WonkaChat se connecte à Gmail et Odoo pour fournir une vue unifiée de vos contacts Odoo, déclenchée à partir de votre contexte d'e-mail.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/VickjjG8cLU"
+  title="Multi-outils : Vue d'ensemble des contacts Gmail et Odoo"
+  frameBorder="0"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+Connectez Gmail et Odoo avec WonkaChat pour voir instantanément qui vous devez contacter. 
+WonkaChat extrait vos contacts de votre CRM (par exemple Odoo) et crée un brouillon prêt à envoyer dans votre système de messagerie (par exemple Gmail) avec tous les détails.
+
+<Check>
+Faites le pont sans effort entre les informations entre systèmes et prenez des actions en une seule étape.
+</Check>
+
+</Tab>
+
+<Tab title="Plus d'exemples">
+
+### Exemples de systèmes métier supplémentaires
+
+Bien que nous ayons des exemples vidéo détaillés pour Outlook et Odoo, voici des démonstrations rapides d'autres connexions externes populaires :
+
+<AccordionGroup>
+<Accordion title="Slack - Communication d'équipe" icon="slack">
+**Ce que vous pouvez faire :**
+- Lire les messages de canaux spécifiques
+- Envoyer des messages ou des annonces
+- Rechercher dans l'historique des conversations
+- Surveiller les mentions et fils de discussion
+- Publier des mises à jour automatisées
+
+**Exemples de requêtes :**
+```
+« Montrez-moi les messages du canal #engineering d'aujourd'hui »
+« Publiez dans #general : 'Réunion d'équipe déplacée à 15h' »
+« Recherchez dans Slack les conversations sur la nouvelle fonctionnalité »
+« Quelles sont mes mentions non lues ? »
+```
+
+**Cas d'utilisation :**
+- Rester à jour sans basculer vers Slack
+- Automatiser les notifications d'équipe
+- Rechercher dans tous les canaux à la fois
+- Surveiller les canaux importants
+</Accordion>
+
+<Accordion title="GitHub - Dépôt de code" icon="github">
+**Ce que vous pouvez faire :**
+- Voir les informations du dépôt
+- Lister et filtrer les problèmes
+- Vérifier le statut des pull requests
+- Lire les fichiers de code
+- Examiner l'historique des commits
+
+**Exemples de requêtes :**
+```
+« Montrez-moi les problèmes ouverts dans le dépôt principal »
+« Quel est le statut de la PR #234 ? »
+« Listez les commits récents dans le dossier backend »
+« Montrez-moi les bugs haute priorité assignés à moi »
+```
+
+**Cas d'utilisation :**
+- Revues de code rapides
+- Suivi des problèmes sans quitter WonkaChat
+- Surveiller l'activité de l'équipe
+- Recherche de code dans les dépôts
+</Accordion>
+
+<Accordion title="Google Drive - Stockage de fichiers" icon="google-drive">
+**Ce que vous pouvez faire :**
+- Rechercher des fichiers et dossiers
+- Lire le contenu des documents
+- Voir les métadonnées des fichiers
+- Lister les fichiers partagés
+- Accéder aux fichiers récents
+
+**Exemples de requêtes :**
+```
+« Trouvez le document de planification Q3 »
+« Montrez-moi les fichiers partagés avec moi cette semaine »
+« Qu'y a-t-il dans le dossier 'Projet Alpha' ? »
+« Listez mes feuilles de calcul récentes »
+```
+
+**Cas d'utilisation :**
+- Recherche de fichiers rapide
+- Récupération de documents
+- Examen de contenu
+- Suivi des fichiers partagés
+</Accordion>
+
+<Accordion title="Salesforce - CRM" icon="salesforce">
+**Ce que vous pouvez faire :**
+- Interroger les prospects et opportunités
+- Voir les informations de compte
+- Vérifier le statut du pipeline
+- Mettre à jour les enregistrements
+- Exécuter des rapports
+
+**Exemples de requêtes :**
+```
+« Montrez-moi les prospects de ce mois »
+« Quelle est la valeur de notre pipeline en étape 'Proposition' ? »
+« Mettez à jour l'opportunité TechCorp à fermé-gagné »
+« Quels comptes n'ont pas été contactés en 30 jours ? »
+```
+
+**Cas d'utilisation :**
+- Surveillance du pipeline de ventes
+- Gestion des prospects
+- Recherche de comptes
+- Mises à jour rapides des enregistrements
+</Accordion>
+
+<Accordion title="Jira - Gestion de projet" icon="jira">
+**Ce que vous pouvez faire :**
+- Voir et filtrer les problèmes
+- Vérifier la progression du sprint
+- Mettre à jour le statut des problèmes
+- Attribuer des tâches
+- Suivre les tableaux de projet
+
+**Exemples de requêtes :**
+```
+« Montrez-moi les problèmes qui me sont assignés »
+« Quel est le statut du sprint actuel ? »
+« Mettez à jour PROJ-123 à 'En révision' »
+« Listez tous les bugs avec priorité haute »
+```
+
+**Cas d'utilisation :**
+- Gestion des tâches
+- Suivi des sprints
+- Suivi des bugs
+- Visibilité de la charge de travail de l'équipe
+</Accordion>
+</AccordionGroup>
+
+### Exemples de flux de travail multi-systèmes métier
+
+La vraie puissance des connexions externes (MCP) vient de la combinaison de plusieurs systèmes métier :
+
+<CardGroup cols={2}>
+<Card title="Recherche vers documentation" icon="arrows-turn-right">
+**Systèmes métier :** Google Drive + Odoo
+
+« Recherchez dans mon Google Drive les fichiers d'étude de marché, résumez les résultats et créez une page de résumé dans Odoo »
+</Card>
+
+<Card title="Problème vers communication" icon="bug-slash">
+**Systèmes métier :** GitHub + Slack
+
+« Trouvez les problèmes critiques dans le dépôt principal et publiez un résumé dans le canal #engineering sur Slack »
+</Card>
+
+<Card title="Pipeline de ventes vers e-mail" icon="envelope-circle-check">
+**Systèmes métier :** Salesforce + Outlook
+
+« Montrez-moi les opportunités qui se ferment cette semaine et rédigez des e-mails de suivi pour chaque contact »
+</Card>
+
+<Card title="Synchronisation des tâches" icon="arrows-rotate">
+**Systèmes métier :** Jira + ClickUp
+
+« Trouvez les tâches complétées dans Jira cette semaine et résumez-les pour ma mise à jour hebdomadaire dans ClickUp »
+</Card>
+
+<Card title="Préparation de réunion" icon="presentation-screen">
+**Systèmes métier :** Outlook + Google Drive + Odoo
+
+« Obtenez l'ordre du jour de la réunion de demain depuis Outlook, trouvez les documents liés dans Drive et créez une page de préparation dans Odoo »
+</Card>
+
+<Card title="Intelligence client" icon="magnifying-glass-chart">
+**Systèmes métier :** Salesforce + Outlook + Slack
+
+« Rassemblez toutes les informations sur Acme Corp : compte Salesforce, e-mails récents et mentions Slack »
+</Card>
+</CardGroup>
+
+</Tab>
+</Tabs>
+
+---
+
+## Conseils pour une utilisation efficace des systèmes métier
+
+<AccordionGroup>
+<Accordion title="Commencer avec des requêtes simples" icon="seedling">
+Lorsque vous connectez un système métier pour la première fois :
+
+1. **Tester l'accès de base** : « Montrez-moi mes éléments récents »
+2. **Vérifier les autorisations** : Essayez les opérations de lecture avant les opérations d'écriture
+3. **Explorer les capacités** : Demandez « Que pouvez-vous faire avec [système métier] ? »
+4. **Augmenter progressivement la complexité** : Commencez simple, puis combinez les opérations
+
+<Tip>
+Ne vous inquiétez pas d'avoir la requête parfaite. Décrivez simplement ce que vous voulez en langage naturel et l'IA trouvera les bonnes opérations du système métier.
+</Tip>
+</Accordion>
+
+<Accordion title="Soyez spécifique si nécessaire" icon="crosshairs">
+Bien que l'IA gère bien le langage naturel, des détails spécifiques améliorent les résultats :
+
+**Moins spécifique :**
+```
+« Montrez-moi les e-mails »
+```
+Résultat : Peut retourner trop de résultats ou par défaut aujourd'hui
+
+**Plus spécifique :**
+```
+« Montrez-moi les e-mails non lus de mon responsable cette semaine »
+```
+Résultat : Résultats précisément filtrés
+
+**Encore plus spécifique :**
+```
+« Trouvez les e-mails de john@company.com avec 'budget' dans le sujet, reçus dans les 30 derniers jours »
+```
+Résultat : Exactement ce dont vous avez besoin
+</Accordion>
+
+<Accordion title="Utiliser des contraintes de temps" icon="clock">
+Ajouter des limites de temps améliore les performances et la pertinence :
+
+- « aujourd'hui » / « cette semaine » / « ce mois-ci »
+- « dans les 7 derniers jours »
+- « entre le 1er janvier et le 31 janvier »
+- « après le 15 mars »
+- « avant la fin du Q2 »
+
+**Exemple :**
+```
+« Montrez-moi les messages Slack dans #engineering d'hier »
+```
+Beaucoup plus rapide que d'interroger tous les messages jamais envoyés.
+</Accordion>
+
+<Accordion title="Exploiter les demandes multi-étapes" icon="list-ol">
+Vous pouvez demander à l'IA d'effectuer plusieurs opérations en séquence :
+
+```
+« Vérifiez mon calendrier pour la disponibilité demain après-midi, 
+puis envoyez ces horaires par e-mail à sarah@company.com »
+```
+
+L'IA va :
+1. Se connecter au calendrier
+2. Trouver les créneaux disponibles
+3. Se connecter à l'e-mail
+4. Rédiger et envoyer l'e-mail
+
+**Pas besoin de le décomposer en requêtes séparées !**
+</Accordion>
+
+<Accordion title="Examiner avant action" icon="eye">
+Pour les opérations qui modifient les données (envoyer, créer, mettre à jour, supprimer) :
+
+- Demandez à l'IA de vous montrer un aperçu avant que des changements soient faits
+- Examinez minutieusement l'action proposée avant de l'approuver
+- Demandez des modifications si nécessaire : « Rendez l'e-mail plus formel »
+- Vérifiez toujours les adresses des destinataires et toutes les informations critiques
+- Dirigez l'IA quand vous voulez faire une pause : « N'envoyez pas encore ceci, montrez-moi juste le brouillon »
+
+<Info>
+Pour améliorer la sécurité, nous fournissons un <strong>Mode sécurisé</strong> qui vous garde en contrôle chaque fois que les agents ou modèles IA effectuent des actions. Lorsque le Mode sécurisé est activé, vous devez explicitement approuver ou rejeter toutes les modifications avant qu'elles ne prennent effet. 
+<br/>
+En savoir plus dans la section <a href="#mode-securise-human-in-the-loop">Mode sécurisé : Human-in-the-Loop</a>.
+</Info>
+
+<Warning>
+Certaines actions (comme l'envoi d'e-mails ou la création de commandes) peuvent être irréversibles. Vérifiez toujours votre intention avant de confirmer à l'IA de procéder.
+</Warning>
+</Accordion>
+</AccordionGroup>
+
+<Check>
+Vous avez maintenant une compréhension complète de comment les connexions MCP fonctionnent en pratique. Commencez à connecter des systèmes métier et expérimentez avec vos propres cas d'utilisation !
+</Check>

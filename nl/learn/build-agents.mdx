@@ -1,0 +1,36 @@
+---
+title: "Maak en gebruik AI-agents"
+description: "Praktisch, kopieer-plak pad om een agent te bouwen, uit te rusten en te draaien."
+---
+
+<Steps>
+<Step title="Definieer het doel en beperkingen">
+Schrijf een resultaat van één zin, beveiligingsmaatregelen en hoe succes eruitziet.
+
+```text
+Doel: Stel een wekelijkse klantenondersteuningssamenvatting op vanuit Zendesk-tickets.
+Beveiligingsmaatregelen: alleen-lezen, redact PII.
+Succes: 5-bullets samenvatting + top 3 problemen.
+```
+</Step>
+
+<Step title="Bied context en geheugen">
+Bewaar domeinfeitenen, verklarende woordenlijst en voorbeelden. Behoud kortetermijnstatus tussen stappen.
+</Step>
+
+<Step title="Rust tools uit (MCP)">
+Stel de gegevensbronnen en acties bloot die de agent kan gebruiken (bijv. zoeken, tickets:list, analytics:topIssues). Zie `/nl/learn/mcp`.
+</Step>
+
+<Step title="Implementeer de redeneringslus">
+Plan → roep tools aan → observeer → herzien plan totdat klaar. Houd outputs gestructureerd.
+</Step>
+
+<Step title="Lever resultaten">
+Retourneer een duidelijk artefact (rapport, JSON, bericht) en log beslissingen voor controleerbaarheid.
+</Step>
+</Steps>
+
+<Check>
+Wanneer je agent betrouwbaar het doel bereikt met veilige defaults en duidelijke logs, ben je klaar om te automatiseren.
+</Check>

@@ -1,0 +1,211 @@
+---
+title: "Business Teaching"
+description: "Geef bedrijfscontext aan agents voor nauwkeurige, bedrijfsspecifieke reacties."
+---
+
+Je bedrijfscontext leren aan agents zorgt ervoor dat ze de terminologie, processen en beleid van je bedrijf begrijpen. Dit stelt agents in staat om reacties te leveren die gebaseerd zijn op je werkelijke operaties in plaats van te vertrouwen op generieke aannames.
+
+<Info>
+Business teaching helpt agents je exacte terminologie te gebruiken, je processen te volgen en aan te sluiten bij je bedrijfsbeleid.
+</Info>
+
+---
+
+## Waarom Je Bedrijfscontext Leren?
+
+Zonder bedrijfscontext maken agents generieke aannames. Ermee geven ze nauwkeurige, bedrijfsspecifieke reacties.
+
+**Voorbeeld - Een klantenondersteuning e-mail schrijven:**
+
+**Zonder context:** "De meeste bedrijven bieden restituties binnen 14-30 dagen. Controleer het specifieke beleid van je bedrijf."
+
+**Met context:** "Ons restitutiebeleid staat verzoeken toe binnen 30 dagen, verwerkt in 3-5 werkdagen. Wil je dat ik er één initieer?"
+
+### Belangrijkste Voordelen
+
+<CardGroup cols={2}>
+<Card title="Nauwkeurige reacties" icon="check-circle">
+Agents gebruiken je exacte termen, beleid en processen
+</Card>
+
+<Card title="Verminderde fouten" icon="shield-check">
+Grondvesting in je informatie voorkomt hallucinaties (AI die onjuiste details verzint)
+</Card>
+
+<Card title="Merkconsistentie" icon="palette">
+Agents behouden je stem, toon en communicatiestijl
+</Card>
+
+<Card title="Betere uitkomsten" icon="trophy">
+Teamleden krijgen betrouwbare, bruikbare informatie
+</Card>
+</CardGroup>
+
+---
+
+## Hoe Bedrijfscontext Te Geven
+
+### Voeg Context Toe aan Agent Instructies
+
+Voeg bedrijfsspecifieke informatie direct toe aan agentinstructies. Begin met essentials en breid uit indien nodig.
+
+<AccordionGroup>
+<Accordion title="Stem en Toon Richtlijnen" icon="message">
+Definieer hoe agents moeten communiceren om te matchen met je merk.
+
+**Voorbeeld:**
+```
+Communicatiestijl:
+- Professioneel maar vriendelijk, nooit overdreven casual
+- Gebruik actieve stem en directe taal
+- Spreek klanten aan bij voornaam
+- Houd reacties beknopt en bruikbaar
+```
+
+<Tip>
+Voeg specifieke zinsneden toe om te gebruiken of te vermijden. Dit zorgt voor consistentie over alle agentinteracties.
+</Tip>
+</Accordion>
+
+<Accordion title="Terminologie en Glossaria" icon="book">
+Definieer bedrijfsspecifieke termen, productnamen en acroniemen.
+
+**Voorbeeld:**
+```
+Belangrijkste termen:
+- "Premium tier" = enterprise subscription niveau
+- "Quick-start" = ons 15-minuten onboarding proces
+- MRR = Monthly Recurring Revenue
+- CS = Customer Success (niet Customer Support)
+```
+
+Duidelijke definities voorkomen misverstanden en zorgen ervoor dat agents je taal gebruiken.
+</Accordion>
+
+<Accordion title="Beleidsintegratie" icon="shield">
+Voeg relevant beleid toe zodat agents vragen nauwkeurig kunnen beantwoorden.
+
+**Voorbeeld:**
+```
+Belangrijkste beleid:
+- Restituties: Volledige restitutie binnen 30 dagen, verwerkt in 3-5 werkdagen
+- Support uren: 9 AM-6 PM EST, Maandag-Vrijdag
+- Response SLA: 4 uur voor standaard, 1 uur voor enterprise
+- Escalatie: Kwesties boven \$500 vereisen manager goedkeuring
+```
+
+<Warning>
+Verifieer altijd dat agents beleid correct toepassen voordat je naar je team deployt. Test met realistische scenario's.
+</Warning>
+</Accordion>
+
+<Accordion title="Procesinstructies" icon="list-check">
+Documenteer stap-voor-stap workflows die agents moeten volgen.
+
+**Voorbeeld:**
+```
+Klant onboarding proces:
+1. Verstuur welkomst e-mail met login credentials
+2. Plan oriëntatie call binnen 48 uur
+3. Wijs toegewijde success manager toe
+4. Geef toegang tot trainingsmateriaal
+5. Follow up na 7 dagen
+```
+
+Duidelijke processen zorgen voor consistentie en volledigheid in agentacties.
+</Accordion>
+</AccordionGroup>
+
+**Best practice:** Update instructies wanneer beleid of processen veranderen. Verouderde context leidt tot onjuiste informatie.
+
+---
+
+### Upload Documenten voor Diepe Context
+
+Voor uitgebreide informatie zoals productdocumentatie, beleidshandboeken of kennisbanken, upload documenten die agents automatisch kunnen doorzoeken en raadplegen bij het beantwoorden van vragen.
+
+<Frame caption="Upload documenten voor agent context">
+<img src="../../images/rag.gif" alt="Document upload interface" />
+</Frame>
+
+**Waarom documenten uploaden?**
+- Agents kunnen gedetailleerde informatie openen zonder instructies te vervuilen
+- Perfect voor uitgebreide documentatie die te groot is voor instructies
+- Informatie blijft actueel door documenten op elk moment bij te werken zonder agentinstructies te wijzigen
+
+**Het beste voor:** Productdocumentatie, beleidshandboeken, procesgidsen, trainingsmateriaal, kennisbanken
+
+<Tip>
+Gebruik instructies voor kritieke informatie die nodig is in elke reactie. Gebruik documenten voor uitgebreid referentiemateriaal dat agents alleen ophalen wanneer relevant.
+</Tip>
+
+<Accordion title="Technische Details: Hoe Documentopvraging Werkt" icon="gear">
+
+Wanneer je documenten uploadt, gebruikt WonkaChat **RAG (Retrieval-Augmented Generation)** om ze doorzoekbaar te maken voor agents.
+
+**Hoe het werkt:**
+
+1. **Upload**: Je verstrekt bedrijfsdocumenten
+2. **Index**: Documenten worden verwerkt en doorzoekbaar gemaakt
+3. **Ophalen**: Wanneer relevant, vinden agents automatisch informatie uit documenten
+4. **Genereren**: Agents produceren reacties gebaseerd op je werkelijke documentatie
+
+**Document voorbereidingstips:**
+- **Gebruik duidelijke koppen**: Goed gestructureerde secties verbeteren ophaalprecisie
+- **Houd secties gefocust**: Eén onderwerp per sectie
+- **Voeg context toe**: Schrijf secties om onafhankelijk begrijpelijk te zijn (bijv. "Onze Premium tier (\$99/maand) bevat..." niet alleen "Het bevat...")
+- **Blijf consistent**: Gebruik dezelfde terminologie overal
+
+**Beveiliging en privacy:**
+- Documenten veilig opgeslagen binnen je WonkaChat omgeving
+- Nooit gebruikt om AI-modellen te trainen
+- Alleen toegankelijk voor gebruikers met agentpermissies
+
+**Leer meer over RAG:** Voor diepere technische details, zie [Anthropic's](https://www.anthropic.com/engineering/contextual-retrieval) of [OpenAI's](https://platform.openai.com/docs/guides/optimizing-llm-accuracy#retrieval-augmented-generation-rag) of [Google's](https://cloud.google.com/use-cases/retrieval-augmented-generation) RAG Guides.
+
+</Accordion>
+
+---
+
+## Voorbeelden per Use Case
+
+<AccordionGroup>
+<Accordion title="Klantenondersteuning Agent" icon="headset">
+**Benodigde Context:** Productfuncties, supportbeleid, troubleshooting stappen, communicatierichtlijnen
+
+**Voorbeeld instructie snippet:**
+```
+Support richtlijnen:
+- Verifieer altijd account voordat je details deelt
+- Gebruik kennisbank artikelen voor technische kwesties
+- Escaleer billing kwesties boven 500$ naar finance team
+- Response toon: Empathisch, oplossingsgericht, professioneel
+```
+</Accordion>
+
+<Accordion title="E-mail Assistent" icon="envelope">
+**Benodigde Context:** Bedrijfsstem, veelvoorkomende e-mailtypes, goedkeuringsworkflows, interne terminologie
+
+**Voorbeeld instructie snippet:**
+```
+E-mail stijl:
+- Interne e-mails: Direct en beknopt
+- Externe e-mails: Professioneel en hoffelijk
+- Voeg altijd relevante stakeholders toe in CC wanneer gepast
+- Gebruik bedrijf handtekening format: [Naam] | [Titel] | [Afdeling]
+```
+</Accordion>
+
+<Accordion title="Sales Assistent" icon="chart-line">
+**Benodigde Context:** Product positionering, prijzen, doelgroep, verkoopprocessen, concurrentie info
+
+**Voorbeeld instructie snippet:**
+```
+Sales context:
+- Doelgroep: Mid-market bedrijven (50-500 medewerkers)
+- Belangrijkste waardepropositie: 40% tijdsbesparing op projectmanagement
+- Prijzen: Start bij 49$/gebruiker/maand
+- Geef nooit korting zonder manager goedkeuring
+```
+</Accordion>
+</AccordionGroup>

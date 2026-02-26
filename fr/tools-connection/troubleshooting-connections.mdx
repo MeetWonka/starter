@@ -1,0 +1,243 @@
+---
+title: "Dépannage des connexions"
+description: "Solutions rapides aux problèmes de connexion externe courants et comment obtenir de l'aide si vous en avez besoin."
+---
+
+Vous avez des problèmes pour connecter un système métier ou rencontrez des problèmes avec une connexion existante ? Ce guide fournit des solutions rapides aux problèmes les plus courants.
+
+<Info>
+La plupart des problèmes de connexion peuvent être résolus en quelques minutes en suivant les étapes ci-dessous. Si vous êtes toujours bloqué, consultez la page [Obtenir de l'aide](/fr/support-resources/getting-help) pour tous les moyens de contacter notre bureau d'aide.
+</Info>
+
+---
+
+## Solutions rapides à essayer d'abord
+
+Avant de contacter le support, essayez ces solutions simples :
+
+<Steps>
+<Step title="Déconnecter et reconnecter">
+Cela résout la plupart des problèmes de connexion :
+
+1. Allez au panneau Connecteurs
+2. Cliquez sur le système métier problématique
+3. Sélectionnez **« Déconnecter »**
+4. Attendez 10 secondes
+5. Cliquez à nouveau sur **« Connecter »** et réentrez vos identifiants
+6. Activez la connexion pour votre modèle IA
+
+</Step>
+
+<Step title="Actualiser votre page">
+Parfois la connexion a juste besoin d'un rafraîchissement :
+
+1. Actualisez votre page de navigateur (F5 ou Ctrl+R).
+2. Attendez que WonkaChat se recharge.
+3. Réessayez votre requête.
+
+Cela peut résoudre les problèmes de connexion temporaires.
+
+</Step>
+
+<Step title="Effacer le cache et les données du site">
+Si l'actualisation de la page ne fonctionne pas, essayez d'effacer le cache de votre navigateur et les données du site :
+
+1. Ouvrez les Outils de développement de votre navigateur (appuyez sur `F12` ou faites un clic droit n'importe où et sélectionnez **Inspecter**).
+2. Cliquez sur l'onglet **Application** dans le panneau des Outils de développement.
+3. Dans la barre latérale gauche, trouvez la section **Stockage** et cliquez sur **Effacer les données du site**.
+4. Une fois effacées, rechargez la page et connectez-vous à nouveau.
+5. Reconnectez votre système métier sur WonkaChat.
+6. Testez votre connexion pour voir si le problème est résolu.
+
+<Tip>
+Après avoir effacé les données du site, vous pourriez être déconnecté des autres onglets de navigateur pour WonkaChat et devrez vous reconnecter.
+</Tip>
+</Step>
+
+<Step title="Vérifier votre connexion Internet">
+Assurez-vous d'avoir une connexion stable :
+
+- Testez votre vitesse Internet
+- Essayez de charger d'autres sites Web
+- Changez de réseau si possible (WiFi vs point d'accès mobile)
+- Redémarrez votre routeur si nécessaire
+<Check>
+Ces étapes de dépannage résolvent souvent la plupart des problèmes de connexion en rafraîchissant le jeton d'authentification et en effaçant tous les identifiants mis en cache qui peuvent être devenus obsolètes ou corrompus.
+</Check>
+</Step>
+
+</Steps>
+
+
+## Problèmes de connexion courants
+
+<AccordionGroup>
+<Accordion title="Échec d'authentification" icon="circle-xmark">
+**Symptômes :**
+- Message d'erreur « Échec d'authentification »
+- Impossible de terminer le processus de connexion
+- Redirigé vers la page de connexion de façon répétée
+
+**Solutions :**
+
+**1. Vérifier vos identifiants**
+- Assurez-vous que vous utilisez le bon nom d'utilisateur et mot de passe
+- Essayez de vous connecter au système métier directement (en dehors de WonkaChat) pour vérifier que vos identifiants fonctionnent
+- Si vous avez récemment changé votre mot de passe, mettez-le à jour dans WonkaChat
+
+**2. Reconnecter le système métier**
+- Déconnectez le système métier depuis le panneau Connecteurs
+- Attendez 10 secondes
+- Reconnectez avec vos identifiants actuels
+
+<Tip>
+Testez vos identifiants sur le site Web du système métier d'abord avant d'essayer de vous connecter via WonkaChat.
+</Tip>
+</Accordion>
+
+<Accordion title="Permission refusée" icon="ban">
+**Symptômes :**
+- Erreur « Accès refusé » ou « Autorisations insuffisantes »
+- L'IA dit qu'elle ne peut pas accéder à certaines données
+- Message « 403 Interdit »
+
+**Pourquoi cela se produit :**
+
+
+**1. Votre organisation bloque les applications tierces**
+
+Certaines entreprises restreignent les employés de connecter des applications externes pour des raisons de sécurité.
+
+**Solution :**
+- Contactez votre équipe IT ou Sécurité
+- Demandez-leur d'approuver WonkaChat comme une application tierce de confiance
+- Ils peuvent avoir besoin de mettre WonkaChat sur liste blanche dans les paramètres de sécurité de votre organisation
+
+**Exemples :**
+- Paramètres administrateur Google Workspace
+- Centre administrateur Microsoft 365
+- Restrictions de pare-feu ou VPN de l'entreprise
+
+**2. Vous n'avez pas accordé toutes les autorisations**
+
+Pendant le processus de connexion OAuth, vous avez peut-être refusé certaines autorisations dont WonkaChat a besoin.
+
+**Solution :**
+- Déconnectez le système métier
+- Reconnectez et **accordez toutes les autorisations demandées** lorsqu'on vous le demande
+- Certains systèmes métier vous permettent d'approuver sélectivement les autorisations. Vous devez vérifier si WonkaChat a besoin d'un accès plus large ou non.
+
+
+</Accordion>
+
+<Accordion title="Délai d'expiration de connexion ou réponse lente" icon="clock">
+**Symptômes :**
+- Message « Délai d'expiration de connexion »
+- Les demandes prennent très longtemps
+- Pas de réponse du système métier
+
+**Solutions rapides :**
+
+**1. Actualiser votre page**
+- Appuyez sur F5 ou Ctrl+R pour recharger WonkaChat
+- Réessayez votre demande
+
+**2. Vérifier votre connexion Internet**
+- Testez votre vitesse de réseau
+- Essayez de changer de réseau
+- Fermez les onglets de navigateur non nécessaires
+
+**3. Simplifier votre demande**
+- Si vous demandez beaucoup de données, essayez d'abord une demande plus petite
+- Au lieu de « tous les e-mails cette année », essayez « e-mails de cette semaine »
+- Décomposez les demandes complexes en étapes plus petites
+
+**4. Vérifier le statut du système métier**
+- Le système métier lui-même peut rencontrer des problèmes
+- Visitez la page de statut du système métier (par exemple, status.google.com, status.microsoft.com)
+- Attendez que le service revienne en ligne
+
+<Info>
+Si les serveurs du système métier sont en panne, WonkaChat ne peut rien faire jusqu'à ce que le fournisseur le répare.
+</Info>
+</Accordion>
+
+<Accordion title="L'outil ne répond pas" icon="triangle-exclamation">
+**Symptômes :**
+- L'IA dit « Impossible de se connecter à [système métier] »
+- La connexion s'affiche comme active, mais les requêtes échouent
+- Aucune donnée renvoyée du système métier
+
+**1. Vous n'avez pas d'accès dans le système métier lui-même**
+
+Parfois vous essayez de faire quelque chose via l'IA que vous ne pouvez pas faire directement dans le système métier non plus.
+
+<Warning>
+**Important :** WonkaChat ne peut faire que ce que VOUS pouvez faire. Si vous n'avez pas la permission d'accéder à un fichier, de lire un e-mail ou de modifier un enregistrement dans le système métier lui-même, WonkaChat ne peut pas le faire pour vous via sa connexion externe (MCP).
+</Warning>
+
+**Exemple :** Si vous ne pouvez pas accéder à un dossier Google Drive spécifique parce que vous n'êtes pas membre, WonkaChat ne peut pas y accéder non plus.
+
+**Solution :** Obtenez d'abord les autorisations appropriées dans le système métier, puis réessayez dans WonkaChat.
+
+
+**2. Vérifier le système métier directement**
+- Connectez-vous au système métier en dehors de WonkaChat
+- Vérifiez qu'il fonctionne normalement
+- Confirmez que vous pouvez accéder aux données que vous demandez
+
+**3. Limites d'API du système métier**
+- Certains systèmes métier limitent le nombre de demandes que vous pouvez faire
+- Si vous avez fait beaucoup de demandes en peu de temps, attendez 15-30 minutes
+- Puis réessayez
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Comprendre les messages d'erreur
+
+<Info>
+WonkaChat fournit des messages d'erreur détaillés qui nous aident à diagnostiquer les problèmes de connexion. Nous travaillons actuellement sur une documentation conviviale pour ces messages d'erreur.
+
+**Bientôt disponible :** Un guide de référence complet des codes d'erreur qui vous aidera à comprendre et résoudre les erreurs spécifiques plus rapidement.
+</Info>
+
+Pour l'instant, si vous voyez un message d'erreur :
+1. Prenez une capture d'écran de l'erreur complète
+2. Notez ce que vous essayiez de faire quand cela s'est produit
+3. Contactez le support avec ces informations
+
+## Quand contacter le support
+
+Si vous avez essayé les solutions rapides ci-dessus et que vous avez toujours des problèmes, notre équipe de support est là pour aider.
+
+**Contactez le support quand :**
+- Les problèmes de connexion persistent après avoir essayé toutes les solutions rapides
+- Vous voyez des messages d'erreur que vous ne comprenez pas
+- Vous avez besoin d'aide avec les autorisations organisationnelles ou l'approbation IT
+- Plusieurs systèmes métier ont des problèmes en même temps
+- Vous suspectez un problème de sécurité ou de données
+
+
+
+## Ressources supplémentaires
+
+<CardGroup cols={2}>
+<Card title="Guide de configuration" icon="plug" href="/fr/tools-connection/setting-up-your-first-connection">
+Apprenez à connecter correctement les systèmes métier dès le début pour éviter les problèmes courants.
+</Card>
+
+<Card title="Exemples de connexion" icon="video" href="/fr/tools-connection/examples-of-tool-usage">
+Regardez des exemples de connexions externes réussies (MCP) avec Outlook, Odoo et plus encore.
+</Card>
+
+<Card title="FAQ" icon="question" href="/fr/support-resources/faq">
+Trouvez des réponses aux questions fréquemment posées sur les connexions WonkaChat.
+</Card>
+
+<Card title="Obtenir de l'aide" icon="life-ring" href="/fr/support-resources/getting-help">
+Tous les moyens de contacter notre équipe de support et d'obtenir une assistance personnalisée.
+</Card>
+</CardGroup>

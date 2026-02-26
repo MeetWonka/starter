@@ -1,0 +1,218 @@
+---
+title: "Bonnes pratiques"
+description: "Directives pratiques pour utiliser l'IA de manière sécurisée et efficace dans votre travail quotidien avec WonkaChat."
+---
+
+Utilisez ces directives pratiques pour tirer le meilleur parti de l'IA tout en maintenant les normes professionnelles et en évitant les erreurs irréversibles.
+
+<Info>
+**WonkaChat est sécurisé par conception** : vos données sont chiffrées, isolées entre organisations et jamais utilisées pour l'entraînement IA. Ces directives vous aident à travailler efficacement et professionnellement.
+</Info>
+
+---
+
+## Utiliser l'IA efficacement au travail
+
+Obtenez le maximum de valeur de l'IA tout en maintenant la qualité et le contrôle.
+
+### Délimiter vos demandes
+
+<Tabs>
+<Tab title="Bonnes tâches pour l'IA" icon="circle-check">
+**Objectifs clairs et spécifiques :**
+- Analyser cet ensemble de données et identifier les tendances
+- Rédiger une réponse à cette demande client
+- Examiner ce document pour la clarté et les erreurs
+- Générer des cas de test pour cette fonctionnalité
+- Résumer les points clés de cette réunion
+
+**Pourquoi ça fonctionne** : Les tâches spécifiques obtiennent de meilleurs résultats et sont plus faciles à examiner
+
+<Check>
+Ces demandes ciblées aident l'IA à comprendre exactement ce dont vous avez besoin et rendent les sorties plus faciles à vérifier.
+</Check>
+</Tab>
+
+<Tab title="Tâches nécessitant de la prudence" icon="triangle-exclamation">
+**Ouverte ou à forte impact :**
+- Effectuer des changements généralisés dans les systèmes
+- Décisions affectant les environnements de production
+- Opérations irréversibles (suppressions, déploiements)
+- Communications représentant votre organisation
+
+**Pourquoi la prudence** : Examinez les sorties avant l'exécution pour éviter les conséquences involontaires
+
+<Warning>
+Pour ces tâches, utilisez le [Mode sécurisé](/fr/security-governance/access-control#mode-securise-human-in-the-loop), testez d'abord dans un environnement de staging ou décomposez-les en étapes plus petites et examinables.
+</Warning>
+</Tab>
+</Tabs>
+
+---
+
+## Réfléchir avant d'exécuter
+
+Le principal risque avec l'IA n'est pas la sécurité, c'est de faire accidentellement quelque chose que vous ne pouvez pas défaire.
+
+### Comprendre les actions irréversibles
+
+<AccordionGroup>
+<Accordion title="Ce qui ne peut pas être annulé" icon="ban">
+**Actions qui changent ou suppriment définitivement les données :**
+- Supprimer des bases de données, fichiers de production ou données utilisateur
+- Déployer du code vers les systèmes de production
+- Envoyer des e-mails ou messages aux clients
+- Modifier des configurations en direct
+- Supprimer des comptes utilisateur ou autorisations
+
+<Warning>
+L'IA peut exécuter ces actions rapidement. Utilisez le [Mode sécurisé](/fr/security-governance/access-control#mode-securise-human-in-the-loop) ou examinez attentivement avant toute opération qui modifie ou supprime des données importantes.
+</Warning>
+</Accordion>
+
+<Accordion title="Activités sûres" icon="circle-check">
+**Actions qui peuvent être examinées ou inversées :**
+- Rédiger du contenu (e-mails, documents, code)
+- Analyser des données et générer des insights
+- Rechercher et récupérer des informations
+- Créer des données de test ou des exemples
+- Générer de la documentation
+
+<Check>
+Ces activités vous donnent le temps d'examiner et d'affiner avant que quoi que ce soit ne soit en direct ou n'impacte les autres.
+</Check>
+</Accordion>
+</AccordionGroup>
+
+### Stratégies pour les opérations critiques
+
+Lorsque les agents IA travaillent avec des systèmes à fort impact, implémentez des protections pour maintenir le contrôle :
+
+<AccordionGroup>
+<Accordion title="Activer le Mode sécurisé" icon="shield-check">
+Exigez une approbation avant que les actions ne s'exécutent. Le [Mode sécurisé](/fr/security-governance/access-control#mode-securise-human-in-the-loop) met l'agent en pause et vous montre exactement ce qu'il veut faire avant de procéder.
+
+**Meilleur pour** : Systèmes de production, communications clients, opérations financières, changements de déploiement.
+</Accordion>
+
+<Accordion title="Tester en staging d'abord" icon="flask">
+Exécutez les agents dans des environnements hors production avant de déployer vers les systèmes en direct. Vérifiez le comportement avec des données de test avant de travailler avec des informations réelles. Utilisez des données de test synthétiques ou anonymisées si possible.
+
+**Meilleur pour** : Nouveaux agents, flux de travail complexes ou opérations affectant plusieurs systèmes.
+</Accordion>
+
+<Accordion title="Décomposer en étapes" icon="list-check">
+Divisez les grandes opérations en morceaux plus petits et examinables. Exécutez une étape, vérifiez le résultat, puis passez à la suivante.
+
+**Meilleur pour** : Processus multi-étapes, migrations de données ou opérations s'étendant sur plusieurs systèmes.
+</Accordion>
+
+<Accordion title="Restreindre l'accès aux outils" icon="lock">
+Supprimez les outils qui effectuent des actions finales (envoyer, supprimer, déployer) et ne gardez que les outils de préparation (brouillon, analyser, lire). Cela réduit les chances d'actions involontaires et garde les agents concentrés sur leur objectif. En savoir plus sur la [restriction d'outils](/fr/security-governance/access-control#restriction-d-outils).
+
+**Meilleur pour** : Agents qui aident avec les décisions mais ne devraient pas les exécuter de manière autonome.
+</Accordion>
+<Accordion title="Examiner l'accès des agents" icon="eye">
+Avant de connecter des agents à vos outils, examinez quelles données ils peuvent accéder via les connexions MCP.
+
+**Meilleur pour** : Assurer l'accès au moindre privilège et les audits d'accès périodiques.
+</Accordion>
+
+<Accordion title="Variables d'environnement pour les clés" icon="key">
+Lors du partage de code avec l'IA ou de la validation d'exemples, utilisez des variables d'environnement au lieu de clés API codées en dur ou d'identifiants.
+
+**Meilleur pour** : Code partagé dans les conversations, échantillons et dépôts collaboratifs.
+</Accordion>
+</AccordionGroup>
+
+<Tip>
+Combinez plusieurs stratégies pour les opérations à plus haut risque. Par exemple, utilisez des outils restreints ET le Mode sécurisé pour les agents gérant les communications clients.
+</Tip>
+
+---
+
+
+## Directives de bon sens
+
+Principes de base pour une utilisation professionnelle de l'IA :
+
+<AccordionGroup>
+<Accordion title="Examiner avant l'impact">
+Examinez toujours les sorties IA avant qu'elles n'affectent les autres ou les systèmes de production. Traitez le contenu généré par l'IA comme le travail d'un collègue, vous devez le vérifier avant qu'il ne sorte.
+</Accordion>
+
+<Accordion title="Utiliser le contrôle de version">
+Pour les changements de code, utilisez Git ou votre système de contrôle de version. Validez les changements IA séparément pour que vous puissiez suivre et revenir en arrière si nécessaire. C'est une bonne pratique pour tous les changements de code, pas seulement ceux générés par l'IA.
+</Accordion>
+
+<Accordion title="Ne pas demander des actions illégales ou nuisibles">
+Ne demandez pas à l'IA d'aider avec des activités illégales, de créer du contenu nuisible ou de générer de la désinformation. Cela concerne l'éthique professionnelle et la réputation de votre organisation, pas la sécurité de la plateforme.
+</Accordion>
+
+<Accordion title="Vérifier les informations importantes">
+Pour les décisions critiques, vérifiez les informations générées par l'IA auprès de sources faisant autorité. L'IA est excellente pour la recherche et la rédaction mais devrait augmenter votre expertise, pas la remplacer.
+</Accordion>
+</AccordionGroup>
+
+<Info>
+Ces directives ne sont pas uniques à l'IA, ce sont des normes professionnelles pour tout outil de travail. Utilisez un bon jugement et examinez les sorties importantes.
+</Info>
+---
+
+## Référence rapide : Évaluation des risques
+
+Lors de la planification d'utilisation de l'IA pour une tâche, considérez ces facteurs :
+
+| Facteur | Risque plus faible ✅ | Risque plus élevé ⚠️ |
+|--------|---------------|----------------|
+| **Réversibilité** | Brouillons, analyse, suggestions | Changements de production, suppressions, envoi de communications |
+| **Portée de l'impact** | Travail personnel, environnements de test | Systèmes de production, face client, à l'échelle de l'organisation |
+| **Opportunité d'examen** | Résultats examinés avant utilisation | Exécution directe sans examen humain |
+| **Permanence des données** | Données temporaires, faciles à recréer | Données critiques, difficiles à récupérer |
+
+<Check>
+Pour les tâches à risque plus élevé, utilisez le [Mode sécurisé](/fr/security-governance/access-control#mode-securise-human-in-the-loop), [restreignez les outils de l'agent](/fr/security-governance/access-control#restriction-d-outils) ou décomposez le travail en étapes examinables.
+</Check>
+
+---
+
+## Configuration intelligente d'agent
+
+Configurez les agents de manière appropriée pour leur objectif prévu.
+
+<CardGroup cols={2}>
+<Card title="Agents conçus pour un objectif" icon="robot">
+Créez des agents optimisés pour des tâches spécifiques :
+- **Agents de recherche** : Lire et analyser uniquement
+- **Agents de brouillon** : Créer du contenu sans envoyer
+- **Agents d'examen** : Fournir des commentaires sans faire de changements
+
+Restreignez les outils pour correspondre à l'objectif de l'agent en utilisant la [restriction d'outils](/fr/security-governance/access-control#restriction-d-outils).
+</Card>
+
+<Card title="Tester avant de faire confiance" icon="flask">
+Avant de donner de l'autonomie à un agent :
+- Testez avec le Mode sécurisé activé
+- Examinez à quels outils il a accès
+- Vérifiez qu'il se comporte comme prévu
+- Commencez avec une portée limitée, développez si nécessaire
+
+Les tests renforcent la confiance et détectent les problèmes de configuration.
+</Card>
+</CardGroup>
+
+---
+
+## L'essentiel
+
+**WonkaChat fournit une sécurité d'entreprise** : chiffrement, isolation et authentification sécurisée protègent vos données, mais vous devez toujours vous concentrer sur quelques pratiques clés :
+
+1. **Réfléchir avant d'exécuter** - Examiner avant de supprimer, déployer ou envoyer
+2. **Délimiter de manière appropriée** - Donner aux agents IA des tâches spécifiques avec des limites claires
+3. **Utiliser un bon jugement** - Vérifier les informations importantes et maintenir la qualité
+
+Ces directives vous aident à travailler efficacement tout en évitant les erreurs qui pourraient impacter votre travail ou votre organisation.
+
+<Tip>
+**Rappelez-vous** : WonkaChat est sécurisé, mais vos actions ont toujours des conséquences. Utilisez le même bon jugement que vous appliqueriez à n'importe quel outil professionnel.
+</Tip>
