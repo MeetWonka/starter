@@ -1,0 +1,601 @@
+---
+title: "Tarification des jetons"
+description: "Comprendre les coûts des jetons des modèles d'IA et choisir le bon modèle pour votre cas d'usage"
+---
+
+## Que sont les jetons ?
+
+<Info>
+Les jetons sont les unités qui mesurent l'utilisation du modèle d'IA. Votre entrée (prompt) et la réponse de l'IA (completion) consomment des jetons. Pensez aux jetons comme environ 3/4 d'un mot en français.
+
+Exemple : "Bonjour, comment allez-vous aujourd'hui ?" ≈ 6 jetons
+</Info>
+
+Tous les prix des jetons sont listés en **USD par 1 million de jetons**.
+
+---
+
+## Aperçu de la tarification des jetons
+
+Choisissez les modèles en fonction de votre cas d'usage : modèles rapides pour les tâches simples, modèles de raisonnement pour les problèmes complexes.
+
+<Tabs>
+<Tab title="Modèles populaires">
+
+### Modèles d'IA les plus courants
+
+<CardGroup cols={2}>
+<Card title="OpenAI GPT" icon="openai">
+Idéal pour les tâches polyvalentes
+
+| Modèle | Entrée | Sortie |
+|-------|-------|--------|
+| GPT-4o Mini | $0.15 | $0.60 |
+| GPT-4o | $2.50 | $10.00 |
+| GPT-4 Turbo | $10.00 | $30.00 |
+| O1-Mini (raisonnement) | $1.10 | $4.40 |
+| O1 (raisonnement) | $15.00 | $60.00 |
+
+<Tip>
+GPT-4o Mini offre le meilleur rapport qualité-prix pour la plupart des tâches professionnelles.
+</Tip>
+</Card>
+
+<Card title="Anthropic Claude" icon="brain">
+Idéal pour le raisonnement complexe et la sécurité
+
+| Modèle | Entrée | Sortie |
+|-------|-------|--------|
+| Claude 3.5 Haiku | $0.80 | $4.00 |
+| Claude 3.5 Sonnet | $3.00 | $15.00 |
+| Claude Opus 4 | $15.00 | $75.00 |
+
+<Check>
+Les modèles Claude excellent dans le suivi d'instructions complexes et les tâches nuancées.
+</Check>
+</Card>
+
+<Card title="Google Gemini" icon="google">
+Idéal pour le rapport coût-efficacité
+
+| Modèle | Entrée | Sortie |
+|-------|-------|--------|
+| Gemini 2.0 Flash Lite | $0.075 | $0.30 |
+| Gemini 2.0 Flash | $0.10 | $0.40 |
+| Gemini 2.5 Flash | $0.15 | $3.50 |
+| Gemini 2.5 Pro | $1.25 | $10.00 |
+| Gemini 1.5 Pro | $2.50 | $10.00 |
+
+<Info>
+Certains modèles Gemini offrent des niveaux gratuits pour l'expérimentation.
+</Info>
+</Card>
+
+<Card title="Options économiques" icon="wallet">
+Idéal pour les tâches simples à volume élevé
+
+| Modèle | Entrée | Sortie |
+|-------|-------|--------|
+| DeepSeek | $0.14 | $0.28 |
+| Ministral 3B | $0.04 | $0.04 |
+| Ministral 8B | $0.10 | $0.10 |
+| Amazon Nova Micro | $0.035 | $0.14 |
+| Amazon Nova Lite | $0.06 | $0.24 |
+
+<Tip>
+Parfait pour les chatbots, classifications simples et tâches à haute fréquence.
+</Tip>
+</Card>
+</CardGroup>
+
+</Tab>
+
+<Tab title="Par fournisseur">
+
+### Modèles OpenAI
+
+<AccordionGroup>
+<Accordion title="Série GPT-4 (Prêt pour la production)" icon="circle-check">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) | Idéal pour |
+|-------|----------------|-----------------|----------|
+| GPT-4o Mini | $0.15 | $0.60 | Tâches générales, meilleur rapport qualité-prix |
+| GPT-4o | $2.50 | $10.00 | Réponses de haute qualité |
+| GPT-4o (2024-05-13) | $5.00 | $15.00 | Version spécifique |
+| GPT-4 Turbo | $10.00 | $30.00 | Raisonnement complexe |
+| GPT-4 (contexte 8K) | $30.00 | $60.00 | GPT-4 standard |
+| GPT-4 (contexte 32K) | $60.00 | $120.00 | Documents longs |
+
+</Accordion>
+
+<Accordion title="Série O (Modèles de raisonnement)" icon="brain-circuit">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) | Idéal pour |
+|-------|----------------|-----------------|----------|
+| O1-Mini | $1.10 | $4.40 | Raisonnement économique |
+| O1 | $15.00 | $60.00 | Résolution de problèmes complexes |
+| O1-Preview | $15.00 | $60.00 | Version préliminaire |
+| O3-Mini | $1.10 | $4.40 | Raisonnement nouvelle génération (mini) |
+| O3 | $2.00 | $8.00 | Raisonnement nouvelle génération |
+| O4-Mini | $1.10 | $4.40 | Dernier mini raisonnement |
+
+<Info>
+Les modèles série O utilisent le raisonnement en chaîne de pensée pour les tâches complexes comme les mathématiques, le codage et la logique.
+</Info>
+
+</Accordion>
+
+<Accordion title="Série GPT-3.5 (Ancien)" icon="clock-rotate-left">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| GPT-3.5 Turbo (4K) | $1.50 | $2.00 |
+| GPT-3.5 Turbo (16K) | $3.00 | $4.00 |
+| GPT-3.5 Turbo 1106 | $1.00 | $2.00 |
+| GPT-3.5 Turbo 0125 | $0.50 | $1.50 |
+
+</Accordion>
+
+<Accordion title="Modèles futurs (GPT-4.1, GPT-5)" icon="rocket">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| GPT-4.1 Nano | $0.10 | $0.40 |
+| GPT-4.1 Mini | $0.40 | $1.60 |
+| GPT-4.1 | $2.00 | $8.00 |
+| GPT-4.5 | $75.00 | $150.00 |
+| GPT-5 Nano | $0.05 | $0.40 |
+| GPT-5 Mini | $0.25 | $2.00 |
+| GPT-5 | $1.25 | $10.00 |
+
+<Warning>
+La tarification des modèles futurs est sujette à changement lors de la sortie.
+</Warning>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Anthropic Claude
+
+<AccordionGroup>
+<Accordion title="Séries Claude 3.5 & 4 (Derniers)" icon="star">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) | Idéal pour |
+|-------|----------------|-----------------|----------|
+| Claude 3.5 Haiku | $0.80 | $4.00 | Tâches rapides et efficaces |
+| Claude 3.5 Sonnet | $3.00 | $15.00 | Performance équilibrée |
+| Claude 3.7 Sonnet | $3.00 | $15.00 | Version améliorée |
+| Claude Sonnet 4 | $3.00 | $15.00 | Dernier Sonnet |
+| Claude Opus 4 | $15.00 | $75.00 | Capacité maximale |
+
+<Check>
+Les modèles Claude 4 offrent un raisonnement amélioré et des fenêtres de contexte étendues.
+</Check>
+
+</Accordion>
+
+<Accordion title="Série Claude 3" icon="circle">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Claude 3 Haiku | $0.25 | $1.25 |
+| Claude 3 Sonnet | $3.00 | $15.00 |
+| Claude 3 Opus | $15.00 | $75.00 |
+
+</Accordion>
+
+<Accordion title="Série Claude 2 (Ancien)" icon="clock-rotate-left">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Claude 2 | $8.00 | $24.00 |
+| Claude 2.1 | $8.00 | $24.00 |
+| Claude Instant | $0.80 | $2.40 |
+
+</Accordion>
+
+<Accordion title="Mise en cache des prompts (Claude uniquement)" icon="database">
+
+Les modèles Claude prennent en charge la mise en cache des prompts pour réduire les coûts pour les entrées répétées.
+
+| Modèle | Écriture cache | Lecture cache |
+|-------|-------------|------------|
+| Claude 3.5/3.7 Sonnet | $3.75/1M | $0.30/1M |
+| Claude Sonnet 4 | $3.75/1M | $0.30/1M |
+| Claude 3.5 Haiku | $1.00/1M | $0.08/1M |
+| Claude 3 Haiku | $0.30/1M | $0.03/1M |
+| Claude Opus 4 | $18.75/1M | $1.50/1M |
+
+<Info>
+Qu'est-ce que la mise en cache des prompts ? Lorsque vous envoyez des prompts similaires de manière répétée (par ex., mêmes instructions système), Claude met en cache les parties communes. Vous payez le prix "écriture" une fois, puis des prix "lecture" beaucoup moins chers pour les utilisations suivantes.
+
+Économies : Jusqu'à 90% de réduction de coût sur les prompts répétés.
+</Info>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Google Gemini
+
+<AccordionGroup>
+<Accordion title="Série Gemini 2.x (Derniers)" icon="sparkles">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) | Idéal pour |
+|-------|----------------|-----------------|----------|
+| Gemini 2.0 Flash Lite | $0.075 | $0.30 | Tâches ultra-rapides |
+| Gemini 2.0 Flash | $0.10 | $0.40 | Tâches rapides |
+| Gemini 2.0 | Gratuit | Gratuit | Expérimentation |
+| Gemini 2.5 Flash | $0.15 | $3.50 | Vitesse équilibrée |
+| Gemini 2.5 Pro | $1.25 | $10.00 | Raisonnement complexe |
+| Gemini 2.5 | Gratuit | Gratuit | Niveau gratuit limité |
+
+<Tip>
+Gemini 2.0 Flash offre d'excellentes performances à un coût extrêmement bas.
+</Tip>
+
+</Accordion>
+
+<Accordion title="Série Gemini 1.x" icon="circle">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Gemini 1.5 Flash 8B | $0.075 | $0.30 |
+| Gemini 1.5 Flash | $0.15 | $0.60 |
+| Gemini 1.5 Pro | $2.50 | $10.00 |
+| Gemini Pro | $0.50 | $1.50 |
+| Gemini Pro Vision | $0.50 | $1.50 |
+
+</Accordion>
+
+<Accordion title="Série Gemma (Open Source)" icon="code">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Gemma | Gratuit | Gratuit |
+| Gemma 2 | Gratuit | Gratuit |
+| Gemma 3 | Gratuit | Gratuit |
+| Gemma 3 27B | Gratuit | Gratuit |
+
+<Info>
+Les modèles Gemma sont open source et gratuits via Google AI.
+</Info>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Meta Llama
+
+<AccordionGroup>
+<Accordion title="Série Llama 3.3 (Derniers)" icon="fire">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Llama 3.3 70B | $2.65 | $3.50 |
+
+</Accordion>
+
+<Accordion title="Série Llama 3.2" icon="circle">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Llama 3.2 1B | $0.10 | $0.10 |
+| Llama 3.2 3B | $0.15 | $0.15 |
+| Llama 3.2 11B | $0.16 | $0.16 |
+| Llama 3.2 90B | $0.72 | $0.72 |
+
+</Accordion>
+
+<Accordion title="Série Llama 3.1" icon="circle">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Llama 3.1 8B | $0.22 | $0.22 |
+| Llama 3.1 70B | $0.72 | $0.72 |
+| Llama 3.1 405B | $2.40 | $2.40 |
+
+</Accordion>
+
+<Accordion title="Séries Llama 3 & 2" icon="clock-rotate-left">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Llama 3 8B | $0.30 | $0.60 |
+| Llama 3 70B | $2.65 | $3.50 |
+| Llama 2 13B | $0.75 | $1.00 |
+| Llama 2 70B | $1.95 | $2.56 |
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Mistral AI
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) | Idéal pour |
+|-------|----------------|-----------------|----------|
+| Ministral 3B | $0.04 | $0.04 | Ultra-économique |
+| Ministral 8B | $0.10 | $0.10 | Économique |
+| Mistral 7B / Small | $0.15 | $0.20 | Tâches générales |
+| Mixtral 8x7B | $0.45 | $0.70 | Mélange d'experts |
+| Codestral | $0.30 | $0.90 | Génération de code |
+| Mistral Large (2402) | $4.00 | $12.00 | Avancé (ancien) |
+| Mistral Large (2407) | $3.00 | $9.00 | Avancé (nouveau) |
+| Mistral Large (Dernier) | $2.00 | $6.00 | Tâches avancées |
+| Pixtral Large | $2.00 | $6.00 | Vision + texte |
+| Mistral Saba | $0.20 | $0.60 | Spécialisé |
+
+---
+
+### Modèles Amazon Bedrock
+
+<AccordionGroup>
+<Accordion title="Série Amazon Nova" icon="aws">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Nova Micro | $0.035 | $0.14 |
+| Nova Lite | $0.06 | $0.24 |
+| Nova Pro | $0.80 | $3.20 |
+
+<Check>
+Les modèles Amazon Nova sont optimisés pour l'infrastructure AWS avec une excellente latence.
+</Check>
+
+</Accordion>
+
+<Accordion title="Série Amazon Titan" icon="amazon">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Titan Text Lite | $0.15 | $0.20 |
+| Titan Text Express | $0.20 | $0.60 |
+| Titan Text Premier | $0.50 | $1.50 |
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles DeepSeek
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) | Idéal pour |
+|-------|----------------|-----------------|----------|
+| DeepSeek | $0.14 | $0.28 | Usage général ultra-économique |
+| DeepSeek Reasoner | $0.55 | $2.19 | Raisonnement économique |
+| DeepSeek R1 (Bedrock) | $1.35 | $5.40 | Raisonnement avancé |
+
+<Tip>
+DeepSeek offre le meilleur rapport qualité-prix pour de nombreuses tâches.
+</Tip>
+
+---
+
+### Modèles xAI Grok
+
+<AccordionGroup>
+<Accordion title="Série Grok 4 (Derniers)" icon="star">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Grok 4 | $3.00 | $15.00 |
+
+</Accordion>
+
+<Accordion title="Série Grok 3" icon="circle">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Grok 3 Mini | $0.30 | $0.50 |
+| Grok 3 Mini Fast | $0.60 | $4.00 |
+| Grok 3 | $3.00 | $15.00 |
+| Grok 3 Fast | $5.00 | $25.00 |
+
+</Accordion>
+
+<Accordion title="Série Grok 2" icon="circle">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Grok 2 | $2.00 | $10.00 |
+| Grok 2 Latest | $2.00 | $10.00 |
+| Grok 2 (1212) | $2.00 | $10.00 |
+| Grok 2 Vision | $2.00 | $10.00 |
+| Grok 2 Vision Latest | $2.00 | $10.00 |
+| Grok 2 Vision (1212) | $2.00 | $10.00 |
+
+</Accordion>
+
+<Accordion title="Grok Beta" icon="flask">
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| Grok Beta | $5.00 | $15.00 |
+| Grok Vision Beta | $5.00 | $15.00 |
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Cohere
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) | Plateforme |
+|-------|----------------|-----------------|----------|
+| Command (ancien) | $0.38 | $0.38 | Direct |
+| Command Light | $0.30 | $0.60 | Bedrock |
+| Command Text | $1.50 | $2.00 | Bedrock |
+| Command R | $0.50 | $1.50 | Direct |
+| Command R+ | $3.00 | $15.00 | Direct |
+
+---
+
+### Modèles AI21 Labs
+
+| Modèle | Entrée (USD/1M) | Sortie (USD/1M) |
+|-------|----------------|-----------------|
+| J2 Mid | $12.50 | $12.50 |
+| J2 Ultra | $18.80 | $18.80 |
+| Jamba Instruct | $0.50 | $0.70 |
+
+</Tab>
+
+<Tab title="Comparaison des modèles">
+
+## Choisir le bon modèle
+
+<Steps>
+<Step title="Définissez votre cas d'usage">
+
+Tâches simples (FAQ, catégorisation, résumés) :
+- Utilisez des modèles économiques : DeepSeek (0.14 USD), Ministral (0.04-0.10 USD), Gemini Flash (0.10 USD)
+
+Tâches professionnelles générales (emails, rapports, recherche) :
+- Utilisez des modèles équilibrés : GPT-4o Mini (0.15 USD), Claude Haiku (0.80 USD), Gemini Pro (1.25 USD)
+
+Raisonnement complexe (analyse, stratégie, codage) :
+- Utilisez des modèles avancés : GPT-4o (2.50 USD), Claude Sonnet (3.00 USD), O1-Mini (1.10 USD)
+
+Capacité maximale (décisions critiques, recherche) :
+- Utilisez des modèles premium : Claude Opus (15.00 USD), O1 (15.00 USD), GPT-4 Turbo (10.00 USD)
+
+</Step>
+
+<Step title="Considérez le volume et le coût">
+
+Opérations à volume élevé (chatbots, automatisation) :
+- Priorisez le coût par jeton : Amazon Nova Micro (0.035 USD), Ministral 3B (0.04 USD), DeepSeek (0.14 USD)
+
+Volume moyen :
+- Équilibrez coût et qualité : Gemini 2.0 Flash (0.10 USD), GPT-4o Mini (0.15 USD), Claude Haiku (0.80 USD)
+
+Volume faible, enjeux élevés :
+- Priorisez la qualité : Claude Opus (15.00 USD), O1 (15.00 USD), GPT-4 Turbo (10.00 USD)
+
+</Step>
+
+<Step title="Testez et optimisez">
+
+Commencez avec un modèle de milieu de gamme, mesurez la qualité, puis ajustez :
+- Qualité trop faible ? → Passez à un modèle plus performant
+- Qualité acceptable ? → Testez des alternatives moins chères
+- Prompts répétés ? → Utilisez Claude avec mise en cache pour 90% d'économies
+
+</Step>
+</Steps>
+
+---
+
+## Exemples de coûts
+
+<CardGroup cols={2}>
+<Card title="Exemple : Bot de support client" icon="headset">
+
+Scénario : 10,000 conversations par jour, ~500 jetons chacune
+
+Option économique (DeepSeek) :
+- Coût : ~0.21 USD par jour = 6.30 USD par mois
+- Qualité : Bonne pour les FAQ
+
+Option équilibrée (GPT-4o Mini) :
+- Coût : ~0.38 USD par jour = 11.40 USD par mois
+- Qualité : Excellente pour la plupart des cas
+
+Économies : 45% avec DeepSeek
+</Card>
+
+<Card title="Exemple : Analyse de documents" icon="file-magnifying-glass">
+
+Scénario : 100 documents par jour, ~5,000 jetons chacun
+
+Option rapide (Gemini 2.0 Flash) :
+- Coût : ~0.50 USD par jour = 15 USD par mois
+- Qualité : Très bonne
+
+Option premium (Claude Sonnet 4) :
+- Coût : ~7.50 USD par jour = 225 USD par mois
+- Qualité : Exceptionnelle
+
+Économies : 93% avec Gemini
+</Card>
+</CardGroup>
+
+</Tab>
+</Tabs>
+
+---
+
+## Foire aux questions
+
+<AccordionGroup>
+<Accordion title="Comment les jetons sont-ils comptés ?" icon="calculator">
+Les jetons sont comptés pour l'entrée (votre prompt + instructions de l'agent) et la sortie (la réponse de l'IA).
+
+Estimation approximative : 1 jeton ≈ 0.75 mot français
+
+Exemple de conversation :
+- Votre question : "Résumez ce document" (3 jetons)
+- Contenu du document : 2,000 mots (≈2,666 jetons)
+- Résumé IA : 200 mots (≈267 jetons)
+- Total : ~2,936 jetons consommés
+</Accordion>
+
+<Accordion title="Quel modèle dois-je utiliser ?" icon="circle-question">
+Commencez ici :
+- La plupart des équipes : GPT-4o Mini (0.15 USD) - meilleur rapport qualité-prix
+- Soucieux du budget : DeepSeek (0.14 USD) ou Gemini Flash (0.10 USD)
+- Tâches complexes : Claude Sonnet 4 (3.00 USD) ou GPT-4o (2.50 USD)
+- Tâches de raisonnement : O1-Mini (1.10 USD) pour la chaîne de pensée
+
+Testez avec votre cas d'usage réel pour trouver le sweet spot.
+</Accordion>
+
+<Accordion title="Puis-je changer de modèle ?" icon="arrows-rotate">
+Oui ! Vous pouvez configurer différents modèles pour différents agents. Utilisez des modèles coûteux uniquement là où la qualité compte le plus.
+
+Stratégie :
+- Face au client : Modèles premium
+- Outils internes : Modèles économiques
+- Test : Modèles gratuits/bon marché
+</Accordion>
+
+<Accordion title="Qu'est-ce que la mise en cache des prompts ?" icon="hard-drive">
+Disponible uniquement sur les modèles Claude. Si vous envoyez des prompts similaires de manière répétée (par ex., mêmes instructions système), Claude met en cache les parties répétées.
+
+Première requête : Payez le prix "écriture" complet (3.75 USD par 1M pour Sonnet)  
+Requêtes suivantes : Payez un prix "lecture" 10× moins cher (0.30 USD par 1M)
+
+Idéal pour : Agents avec de longues instructions système, analyse répétée de documents
+</Accordion>
+
+<Accordion title="Y a-t-il des modèles gratuits ?" icon="gift">
+Certains modèles offrent des niveaux gratuits :
+- Série Gemma (Google) : Gratuit pour l'expérimentation
+- Gemini 2.0/2.5 : Gratuit pour une durée limitée
+
+Cependant, l'utilisation en production nécessite généralement des jetons payants.
+</Accordion>
+
+<Accordion title="Comment la tarification des jetons est-elle calculée ?" icon="coins">
+La tarification des jetons est basée sur :
+1. Jetons d'entrée : Votre prompt + instructions système + contexte
+2. Jetons de sortie : La réponse générée par l'IA
+
+Différents modèles ont des tarifs différents pour l'entrée et la sortie. La plupart des modèles facturent moins pour l'entrée que pour la sortie.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Besoin d'aide pour choisir ?
+
+<Card title="Contactez notre équipe" icon="comments">
+Pas sûr des modèles qui correspondent à votre cas d'usage ? Notre équipe de support commercial peut analyser vos besoins et recommander le mix de modèles optimal pour votre budget.
+
+[Obtenir des recommandations de modèles](/fr/support-resources/getting-help)
+</Card>

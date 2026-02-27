@@ -56,6 +56,14 @@
                 ]
               },
               {
+                "group": "Pricing & Plans",
+                "pages": [
+                  "en/pricing/plans",
+                  "en/pricing/tokens-guide",
+                  "en/pricing/tokens-pricing"
+                ]
+              },
+              {
                 "group": "Security & Governance",
                 "pages": [
                   "en/security-governance/index",
@@ -178,6 +186,14 @@
                   "fr/improved-usage/asking-great-questions",
                   "fr/improved-usage/conversation-management",
                   "fr/improved-usage/prompt-library"
+                ]
+              },
+              {
+                "group": "Tarifs et forfaits",
+                "pages": [
+                  "fr/pricing/plans",
+                  "fr/pricing/tokens-guide",
+                  "fr/pricing/tokens-pricing"
                 ]
               },
               {
@@ -306,6 +322,14 @@
                 ]
               },
               {
+                "group": "Prijzen en pakketten",
+                "pages": [
+                  "nl/pricing/plans",
+                  "nl/pricing/tokens-guide",
+                  "nl/pricing/tokens-pricing"
+                ]
+              },
+              {
                 "group": "Beveiliging en governance",
                 "pages": [
                   "nl/security-governance/index",
@@ -428,6 +452,14 @@
                   "fr/improved-usage/asking-great-questions",
                   "fr/improved-usage/conversation-management",
                   "fr/improved-usage/prompt-library"
+                ]
+              },
+              {
+                "group": "Tarifs et forfaits",
+                "pages": [
+                  "fr/pricing/plans",
+                  "fr/pricing/tokens-guide",
+                  "fr/pricing/tokens-pricing"
                 ]
               },
               {

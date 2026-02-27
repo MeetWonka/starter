@@ -1,0 +1,268 @@
+---
+title: "Understanding Token Pricing"
+description: "A simple guide to understanding how AI model pricing works and choosing the right model for your needs"
+---
+
+## What Are Tokens?
+
+<Info>
+Tokens are the units that measure AI model usage. Think of them as the "currency" that AI models consume when they process your requests.
+
+**Simple analogy:** If AI models were cars, tokens would be gallons of gas. Different cars (models) use different amounts of gas (tokens) to go the same distance.
+</Info>
+
+### How to Think About Tokens
+
+- **1 token** ≈ **3/4 of a word** in English
+- **"Hello, how are you?"** = approximately 6 tokens
+- **A typical email** (200 words) = approximately 265 tokens
+- **A full page of text** (500 words) = approximately 665 tokens
+
+<Check>
+Both your question AND the AI's answer consume tokens. You pay for both.
+</Check>
+
+---
+
+## Why Different Models Cost Different Amounts
+
+Just like cars, AI models come in different sizes with different capabilities:
+
+<CardGroup cols={3}>
+<Card title="Economy Models" icon="piggy-bank">
+0.04 to 0.15 USD per 1M tokens
+
+Like a compact car - efficient for everyday tasks.
+
+Best for:
+- Simple questions
+- Categorization
+- Basic summaries
+- High-volume tasks
+</Card>
+
+<Card title="Standard Models" icon="gauge">
+0.60 to 3.00 USD per 1M tokens
+
+Like a sedan - reliable for most needs.
+
+Best for:
+- Business emails
+- Reports
+- Research
+- General conversations
+</Card>
+
+<Card title="Premium Models" icon="rocket">
+10.00 to 75.00 USD per 1M tokens
+
+Like a luxury car - maximum capability.
+
+Best for:
+- Critical decisions
+- Complex analysis
+- Strategic planning
+- Maximum accuracy
+</Card>
+</CardGroup>
+
+---
+
+## Which Model Should You Use?
+
+<Steps>
+<Step title="Start with the question: How important is this task?">
+
+Low stakes, high volume:
+- Customer FAQs
+- Simple categorization
+- Basic summaries
+- Internal notes
+
+→ Use Economy Models (0.04 to 0.15 USD)
+
+Medium importance:
+- Customer-facing emails
+- Internal reports
+- Research tasks
+- General business tasks
+
+→ Use Standard Models (0.60 to 3.00 USD)
+
+High stakes, critical:
+- Client proposals
+- Strategic decisions
+- Complex analysis
+- Sensitive communications
+
+→ Use Premium Models (10 to 75 USD)
+
+</Step>
+
+<Step title="Consider your volume">
+
+How many requests per day?
+
+- High volume (1,000+ per day): Every cent matters → Use economy models
+- Medium volume (100-1,000 per day): Balance quality and cost → Use standard models
+- Low volume (less than 100 per day): Quality over cost → Use premium models where needed
+
+</Step>
+
+<Step title="Test and adjust">
+
+<Tip>
+Pro tip: Start with a mid-tier model (like GPT-4o Mini at 0.15 USD), evaluate the quality, then adjust:
+- Quality not good enough? → Try a better model
+- Quality is great? → Test a cheaper model to save money
+</Tip>
+
+</Step>
+</Steps>
+
+---
+
+## Real-World Cost Examples
+
+<CardGroup cols={2}>
+<Card title="Customer Support Chatbot" icon="headset">
+Scenario:
+- 10,000 customer chats per day
+- Average 500 tokens per conversation
+
+Economy Model (DeepSeek - 0.14 USD per 1M):
+- Daily cost: 0.70 USD
+- Monthly cost: 21 USD
+
+Standard Model (GPT-4o Mini - 0.15 USD per 1M):
+- Daily cost: 0.75 USD
+- Monthly cost: 22.50 USD
+
+Difference: Just 1.50 USD per month for better quality!
+</Card>
+
+<Card title="Document Analysis" icon="file-magnifying-glass">
+Scenario:
+- 50 documents per day
+- Average 5,000 tokens per document
+
+Standard Model (Gemini Flash - 0.10 USD per 1M):
+- Daily cost: 2.50 USD
+- Monthly cost: 75 USD
+
+Premium Model (Claude Sonnet - 3.00 USD per 1M):
+- Daily cost: 75 USD
+- Monthly cost: 2,250 USD
+
+Difference: 30× more expensive, but exceptional quality
+</Card>
+</CardGroup>
+
+---
+
+## Common Questions
+
+<AccordionGroup>
+<Accordion title="How much will this actually cost me?" icon="dollar-sign">
+Quick calculation:
+
+1. Estimate your daily requests
+2. Estimate average tokens per request (use examples above)
+3. Multiply: Daily requests × Tokens × Model price
+
+Example:
+- 500 customer support chats/day
+- 400 tokens per chat
+- GPT-4o Mini (0.15 USD per million tokens)
+- Cost: 500 × 400 × (0.15 / 1,000,000) = 0.03 USD per day = 0.90 USD per month
+
+Most businesses spend 10 to 500 USD per month depending on volume.
+</Accordion>
+
+<Accordion title="Can I mix different models?" icon="shuffle">
+Yes! This is actually a smart strategy:
+
+- Customer-facing tasks: Use better models (they represent your brand)
+- Internal tasks: Use economy models (quality matters less)
+- Testing/development: Use the cheapest models
+
+You can configure different models for different AI agents.
+</Accordion>
+
+<Accordion title="What if I pick the wrong model?" icon="triangle-exclamation">
+No problem! You can switch models anytime:
+
+1. Test with a mid-tier model
+2. Evaluate quality for your use case
+3. Adjust up or down based on results
+
+There's no penalty for switching, and you only pay for what you use.
+</Accordion>
+
+<Accordion title="Are there any free models?" icon="gift">
+Some options:
+
+- Gemma models (Google): Free for experimentation
+- Gemini 2.0/2.5: Free tier for limited use
+
+However, for production/business use, paid models are more reliable and have better support.
+</Accordion>
+
+<Accordion title="How do I know which model I'm using?" icon="circle-question">
+When creating or editing an AI agent in WonkaChat, you select the model in the agent settings. Each agent can use a different model.
+
+Our recommendation: Start with GPT-4o Mini - it's the best balance of quality and cost for most business tasks.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Recommended Starting Models
+
+Not sure where to start? Here are our top recommendations:
+
+<CardGroup cols={3}>
+<Card title="Best Overall Value" icon="star">
+GPT-4o Mini
+
+0.15 USD per 1M tokens
+
+Excellent quality for most business tasks. This is what we recommend to 80% of our customers.
+
+Use for: Emails, reports, general questions, customer support
+</Card>
+
+<Card title="Best Budget Option" icon="coins">
+DeepSeek
+
+0.14 USD per 1M tokens
+
+Surprisingly good quality at rock-bottom prices. Great for high-volume, less critical tasks.
+
+Use for: FAQs, simple classifications, internal tools
+</Card>
+
+<Card title="Best for Complex Tasks" icon="brain">
+Claude 3.5 Sonnet
+
+3.00 USD per 1M tokens
+
+Exceptional at following complex instructions and nuanced reasoning.
+
+Use for: Analysis, strategy, sensitive communications
+</Card>
+</CardGroup>
+
+---
+
+## Need More Details?
+
+<CardGroup cols={2}>
+<Card title="Detailed Model Pricing" icon="table" href="/en/pricing/tokens-pricing">
+See complete pricing tables for all available AI models from every provider.
+</Card>
+
+<Card title="Contact Sales" icon="phone" href="/en/support-resources/getting-help">
+Not sure which model is right? Our team can analyze your needs and recommend the best fit.
+</Card>
+</CardGroup>

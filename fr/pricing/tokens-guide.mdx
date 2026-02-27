@@ -1,0 +1,268 @@
+---
+title: "Comprendre la tarification des jetons"
+description: "Un guide simple pour comprendre le fonctionnement de la tarification des modèles d'IA et choisir le bon modèle pour vos besoins"
+---
+
+## Que sont les jetons ?
+
+<Info>
+Les jetons sont les unités qui mesurent l'utilisation du modèle d'IA. Considérez-les comme la "monnaie" que les modèles d'IA consomment lorsqu'ils traitent vos requêtes.
+
+Analogie simple : Si les modèles d'IA étaient des voitures, les jetons seraient des litres d'essence. Différentes voitures (modèles) utilisent différentes quantités d'essence (jetons) pour parcourir la même distance.
+</Info>
+
+### Comment penser aux jetons
+
+- 1 jeton ≈ 3/4 d'un mot en français
+- "Bonjour, comment allez-vous ?" = environ 6 jetons
+- Un email typique (200 mots) = environ 265 jetons
+- Une page complète de texte (500 mots) = environ 665 jetons
+
+<Check>
+Votre question ET la réponse de l'IA consomment des jetons. Vous payez pour les deux.
+</Check>
+
+---
+
+## Pourquoi différents modèles coûtent différents montants
+
+Comme les voitures, les modèles d'IA existent en différentes tailles avec différentes capacités :
+
+<CardGroup cols={3}>
+<Card title="Modèles économiques" icon="piggy-bank">
+0.04 à 0.15 USD par 1M de jetons
+
+Comme une voiture compacte - efficace pour les tâches quotidiennes.
+
+Idéal pour :
+- Questions simples
+- Catégorisation
+- Résumés basiques
+- Tâches à volume élevé
+</Card>
+
+<Card title="Modèles standards" icon="gauge">
+0.60 à 3.00 USD par 1M de jetons
+
+Comme une berline - fiable pour la plupart des besoins.
+
+Idéal pour :
+- Emails professionnels
+- Rapports
+- Recherche
+- Conversations générales
+</Card>
+
+<Card title="Modèles premium" icon="rocket">
+10.00 à 75.00 USD par 1M de jetons
+
+Comme une voiture de luxe - capacité maximale.
+
+Idéal pour :
+- Décisions critiques
+- Analyses complexes
+- Planification stratégique
+- Précision maximale
+</Card>
+</CardGroup>
+
+---
+
+## Quel modèle devriez-vous utiliser ?
+
+<Steps>
+<Step title="Commencez par la question : Quelle est l'importance de cette tâche ?">
+
+Enjeux faibles, volume élevé :
+- FAQ clients
+- Catégorisation simple
+- Résumés basiques
+- Notes internes
+
+→ Utilisez les modèles économiques (0.04 à 0.15 USD)
+
+Importance moyenne :
+- Emails clients
+- Rapports internes
+- Tâches de recherche
+- Tâches professionnelles générales
+
+→ Utilisez les modèles standards (0.60 à 3.00 USD)
+
+Enjeux élevés, critique :
+- Propositions clients
+- Décisions stratégiques
+- Analyses complexes
+- Communications sensibles
+
+→ Utilisez les modèles premium (10 à 75 USD)
+
+</Step>
+
+<Step title="Considérez votre volume">
+
+Combien de requêtes par jour ?
+
+- Volume élevé (1,000+ par jour) : Chaque centime compte → Utilisez des modèles économiques
+- Volume moyen (100-1,000 par jour) : Équilibrez qualité et coût → Utilisez des modèles standards
+- Volume faible (moins de 100 par jour) : Qualité avant coût → Utilisez des modèles premium si nécessaire
+
+</Step>
+
+<Step title="Testez et ajustez">
+
+<Tip>
+Conseil : Commencez avec un modèle de milieu de gamme (comme GPT-4o Mini à 0.15 USD), évaluez la qualité, puis ajustez :
+- Qualité insuffisante ? → Essayez un meilleur modèle
+- Qualité excellente ? → Testez un modèle moins cher pour économiser
+</Tip>
+
+</Step>
+</Steps>
+
+---
+
+## Exemples de coûts réels
+
+<CardGroup cols={2}>
+<Card title="Chatbot de support client" icon="headset">
+Scénario :
+- 10,000 chats clients par jour
+- Moyenne de 500 jetons par conversation
+
+Modèle économique (DeepSeek - 0.14 USD par 1M) :
+- Coût quotidien : 0.70 USD
+- Coût mensuel : 21 USD
+
+Modèle standard (GPT-4o Mini - 0.15 USD par 1M) :
+- Coût quotidien : 0.75 USD
+- Coût mensuel : 22.50 USD
+
+Différence : Seulement 1.50 USD par mois pour une meilleure qualité !
+</Card>
+
+<Card title="Analyse de documents" icon="file-magnifying-glass">
+Scénario :
+- 50 documents par jour
+- Moyenne de 5,000 jetons par document
+
+Modèle standard (Gemini Flash - 0.10 USD par 1M) :
+- Coût quotidien : 2.50 USD
+- Coût mensuel : 75 USD
+
+Modèle premium (Claude Sonnet - 3.00 USD par 1M) :
+- Coût quotidien : 75 USD
+- Coût mensuel : 2,250 USD
+
+Différence : 30× plus cher, mais qualité exceptionnelle
+</Card>
+</CardGroup>
+
+---
+
+## Questions courantes
+
+<AccordionGroup>
+<Accordion title="Combien cela me coûtera-t-il réellement ?" icon="dollar-sign">
+Calcul rapide :
+
+1. Estimez vos requêtes quotidiennes
+2. Estimez la moyenne de jetons par requête (utilisez les exemples ci-dessus)
+3. Multipliez : Requêtes quotidiennes × Jetons × Prix du modèle
+
+Exemple :
+- 500 chats de support client par jour
+- 400 jetons par chat
+- GPT-4o Mini (0.15 USD par million de jetons)
+- Coût : 500 × 400 × (0.15 / 1,000,000) = 0.03 USD par jour = 0.90 USD par mois
+
+La plupart des entreprises dépensent 10 à 500 USD par mois selon le volume.
+</Accordion>
+
+<Accordion title="Puis-je mélanger différents modèles ?" icon="shuffle">
+Oui ! C'est en fait une stratégie intelligente :
+
+- Tâches clients : Utilisez de meilleurs modèles (ils représentent votre marque)
+- Tâches internes : Utilisez des modèles économiques (la qualité importe moins)
+- Test/développement : Utilisez les modèles les moins chers
+
+Vous pouvez configurer différents modèles pour différents agents IA.
+</Accordion>
+
+<Accordion title="Que se passe-t-il si je choisis le mauvais modèle ?" icon="triangle-exclamation">
+Pas de problème ! Vous pouvez changer de modèle à tout moment :
+
+1. Testez avec un modèle de milieu de gamme
+2. Évaluez la qualité pour votre cas d'usage
+3. Ajustez vers le haut ou le bas selon les résultats
+
+Il n'y a aucune pénalité pour changer, et vous ne payez que ce que vous utilisez.
+</Accordion>
+
+<Accordion title="Y a-t-il des modèles gratuits ?" icon="gift">
+Quelques options :
+
+- Modèles Gemma (Google) : Gratuit pour l'expérimentation
+- Gemini 2.0/2.5 : Niveau gratuit pour utilisation limitée
+
+Cependant, pour une utilisation professionnelle en production, les modèles payants sont plus fiables et ont un meilleur support.
+</Accordion>
+
+<Accordion title="Comment savoir quel modèle j'utilise ?" icon="circle-question">
+Lors de la création ou de la modification d'un agent IA dans WonkaChat, vous sélectionnez le modèle dans les paramètres de l'agent. Chaque agent peut utiliser un modèle différent.
+
+Notre recommandation : Commencez avec GPT-4o Mini - c'est le meilleur équilibre entre qualité et coût pour la plupart des tâches professionnelles.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Modèles recommandés pour commencer
+
+Pas sûr de par où commencer ? Voici nos meilleures recommandations :
+
+<CardGroup cols={3}>
+<Card title="Meilleur rapport qualité-prix" icon="star">
+GPT-4o Mini
+
+0.15 USD par 1M de jetons
+
+Excellente qualité pour la plupart des tâches professionnelles. C'est ce que nous recommandons à 80% de nos clients.
+
+Utiliser pour : Emails, rapports, questions générales, support client
+</Card>
+
+<Card title="Meilleure option économique" icon="coins">
+DeepSeek
+
+0.14 USD par 1M de jetons
+
+Qualité étonnamment bonne à des prix très bas. Idéal pour les tâches à volume élevé et moins critiques.
+
+Utiliser pour : FAQ, classifications simples, outils internes
+</Card>
+
+<Card title="Meilleur pour tâches complexes" icon="brain">
+Claude 3.5 Sonnet
+
+3.00 USD par 1M de jetons
+
+Exceptionnel pour suivre des instructions complexes et le raisonnement nuancé.
+
+Utiliser pour : Analyse, stratégie, communications sensibles
+</Card>
+</CardGroup>
+
+---
+
+## Besoin de plus de détails ?
+
+<CardGroup cols={2}>
+<Card title="Tarification détaillée des modèles" icon="table" href="/fr/pricing/tokens-pricing">
+Consultez les tableaux de prix complets pour tous les modèles d'IA disponibles de tous les fournisseurs.
+</Card>
+
+<Card title="Contacter les ventes" icon="phone" href="/fr/support-resources/getting-help">
+Pas sûr du modèle qui convient ? Notre équipe peut analyser vos besoins et recommander le meilleur choix.
+</Card>
+</CardGroup>

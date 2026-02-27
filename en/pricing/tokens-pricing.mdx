@@ -1,0 +1,601 @@
+---
+title: "Token Pricing"
+description: "Understand AI model token costs and choose the right model for your use case"
+---
+
+## What Are Tokens?
+
+<Info>
+Tokens are the units that measure AI model usage. Both your input (prompt) and the AI's response (completion) consume tokens. Think of tokens as roughly 3/4 of a word in English.
+
+Example: "Hello, how are you today?" ≈ 6 tokens
+</Info>
+
+All token prices are listed in USD per 1 million tokens.
+
+---
+
+## Token Pricing Overview
+
+Choose models based on your use case: fast models for simple tasks, reasoning models for complex problems.
+
+<Tabs>
+<Tab title="Popular Models">
+
+### Most Common AI Models
+
+<CardGroup cols={2}>
+<Card title="OpenAI GPT" icon="openai">
+Best for general-purpose tasks
+
+| Model | Input | Output |
+|-------|-------|--------|
+| GPT-4o Mini | $0.15 | $0.60 |
+| GPT-4o | $2.50 | $10.00 |
+| GPT-4 Turbo | $10.00 | $30.00 |
+| O1-Mini (reasoning) | $1.10 | $4.40 |
+| O1 (reasoning) | $15.00 | $60.00 |
+
+<Tip>
+GPT-4o Mini offers the best value for most business tasks.
+</Tip>
+</Card>
+
+<Card title="Anthropic Claude" icon="brain">
+Best for complex reasoning & safety
+
+| Model | Input | Output |
+|-------|-------|--------|
+| Claude 3.5 Haiku | $0.80 | $4.00 |
+| Claude 3.5 Sonnet | $3.00 | $15.00 |
+| Claude Opus 4 | $15.00 | $75.00 |
+
+<Check>
+Claude models excel at following complex instructions and nuanced tasks.
+</Check>
+</Card>
+
+<Card title="Google Gemini" icon="google">
+Best for cost-effectiveness
+
+| Model | Input | Output |
+|-------|-------|--------|
+| Gemini 2.0 Flash Lite | $0.075 | $0.30 |
+| Gemini 2.0 Flash | $0.10 | $0.40 |
+| Gemini 2.5 Flash | $0.15 | $3.50 |
+| Gemini 2.5 Pro | $1.25 | $10.00 |
+| Gemini 1.5 Pro | $2.50 | $10.00 |
+
+<Info>
+Some Gemini models offer free tiers for experimentation.
+</Info>
+</Card>
+
+<Card title="Budget-Friendly Options" icon="wallet">
+Best for high-volume, simple tasks
+
+| Model | Input | Output |
+|-------|-------|--------|
+| DeepSeek | $0.14 | $0.28 |
+| Ministral 3B | $0.04 | $0.04 |
+| Ministral 8B | $0.10 | $0.10 |
+| Amazon Nova Micro | $0.035 | $0.14 |
+| Amazon Nova Lite | $0.06 | $0.24 |
+
+<Tip>
+Perfect for chatbots, simple classifications, and high-frequency tasks.
+</Tip>
+</Card>
+</CardGroup>
+
+</Tab>
+
+<Tab title="By Provider">
+
+### OpenAI Models
+
+<AccordionGroup>
+<Accordion title="GPT-4 Series (Production-Ready)" icon="circle-check">
+
+| Model | Input (USD/1M) | Output (USD/1M) | Best For |
+|-------|----------------|-----------------|----------|
+| **GPT-4o Mini** | $0.15 | $0.60 | General tasks, best value |
+| **GPT-4o** | $2.50 | $10.00 | High-quality responses |
+| GPT-4o (2024-05-13) | $5.00 | $15.00 | Specific version |
+| **GPT-4 Turbo** | $10.00 | $30.00 | Complex reasoning |
+| GPT-4 (8K context) | $30.00 | $60.00 | Standard GPT-4 |
+| GPT-4 (32K context) | $60.00 | $120.00 | Long documents |
+
+</Accordion>
+
+<Accordion title="O-Series (Reasoning Models)" icon="brain-circuit">
+
+| Model | Input (USD/1M) | Output (USD/1M) | Best For |
+|-------|----------------|-----------------|----------|
+| **O1-Mini** | $1.10 | $4.40 | Cost-effective reasoning |
+| **O1** | $15.00 | $60.00 | Complex problem-solving |
+| O1-Preview | $15.00 | $60.00 | Preview version |
+| O3-Mini | $1.10 | $4.40 | Next-gen reasoning (mini) |
+| O3 | $2.00 | $8.00 | Next-gen reasoning |
+| O4-Mini | $1.10 | $4.40 | Latest mini reasoning |
+
+<Info>
+O-series models use chain-of-thought reasoning for complex tasks like math, coding, and logic.
+</Info>
+
+</Accordion>
+
+<Accordion title="GPT-3.5 Series (Legacy)" icon="clock-rotate-left">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| GPT-3.5 Turbo (4K) | $1.50 | $2.00 |
+| GPT-3.5 Turbo (16K) | $3.00 | $4.00 |
+| GPT-3.5 Turbo 1106 | $1.00 | $2.00 |
+| GPT-3.5 Turbo 0125 | $0.50 | $1.50 |
+
+</Accordion>
+
+<Accordion title="Future Models (GPT-4.1, GPT-5)" icon="rocket">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| GPT-4.1 Nano | $0.10 | $0.40 |
+| GPT-4.1 Mini | $0.40 | $1.60 |
+| GPT-4.1 | $2.00 | $8.00 |
+| GPT-4.5 | $75.00 | $150.00 |
+| GPT-5 Nano | $0.05 | $0.40 |
+| GPT-5 Mini | $0.25 | $2.00 |
+| GPT-5 | $1.25 | $10.00 |
+
+<Warning>
+Future model pricing is subject to change upon release.
+</Warning>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Anthropic Claude Models
+
+<AccordionGroup>
+<Accordion title="Claude 3.5 & 4 Series (Latest)" icon="star">
+
+| Model | Input (USD/1M) | Output (USD/1M) | Best For |
+|-------|----------------|-----------------|----------|
+| **Claude 3.5 Haiku** | $0.80 | $4.00 | Fast, efficient tasks |
+| **Claude 3.5 Sonnet** | $3.00 | $15.00 | Balanced performance |
+| Claude 3.7 Sonnet | $3.00 | $15.00 | Enhanced version |
+| **Claude Sonnet 4** | $3.00 | $15.00 | Latest Sonnet |
+| **Claude Opus 4** | $15.00 | $75.00 | Maximum capability |
+
+<Check>
+Claude 4 models feature improved reasoning and extended context windows.
+</Check>
+
+</Accordion>
+
+<Accordion title="Claude 3 Series" icon="circle">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Claude 3 Haiku | $0.25 | $1.25 |
+| Claude 3 Sonnet | $3.00 | $15.00 |
+| Claude 3 Opus | $15.00 | $75.00 |
+
+</Accordion>
+
+<Accordion title="Claude 2 Series (Legacy)" icon="clock-rotate-left">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Claude 2 | $8.00 | $24.00 |
+| Claude 2.1 | $8.00 | $24.00 |
+| Claude Instant | $0.80 | $2.40 |
+
+</Accordion>
+
+<Accordion title="Prompt Caching (Claude Only)" icon="database">
+
+Claude models support prompt caching to reduce costs for repeated inputs.
+
+| Model | Cache Write | Cache Read |
+|-------|-------------|------------|
+| Claude 3.5/3.7 Sonnet | $3.75/1M | $0.30/1M |
+| Claude Sonnet 4 | $3.75/1M | $0.30/1M |
+| Claude 3.5 Haiku | $1.00/1M | $0.08/1M |
+| Claude 3 Haiku | $0.30/1M | $0.03/1M |
+| Claude Opus 4 | $18.75/1M | $1.50/1M |
+
+<Info>
+What is prompt caching? When you send similar prompts repeatedly (e.g., same system instructions), Claude caches the common parts. You pay the "write" price once, then much cheaper "read" prices for subsequent uses.
+
+Savings: Up to 90% cost reduction on repeated prompts.
+</Info>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Google Gemini Models
+
+<AccordionGroup>
+<Accordion title="Gemini 2.x Series (Latest)" icon="sparkles">
+
+| Model | Input (USD/1M) | Output (USD/1M) | Best For |
+|-------|----------------|-----------------|----------|
+| **Gemini 2.0 Flash Lite** | $0.075 | $0.30 | Ultra-fast tasks |
+| **Gemini 2.0 Flash** | $0.10 | $0.40 | Fast tasks |
+| Gemini 2.0 | Free | Free | Experimentation |
+| **Gemini 2.5 Flash** | $0.15 | $3.50 | Balanced speed |
+| **Gemini 2.5 Pro** | $1.25 | $10.00 | Complex reasoning |
+| Gemini 2.5 | Free | Free | Limited free tier |
+
+<Tip>
+Gemini 2.0 Flash offers excellent performance at extremely low cost.
+</Tip>
+
+</Accordion>
+
+<Accordion title="Gemini 1.x Series" icon="circle">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Gemini 1.5 Flash 8B | $0.075 | $0.30 |
+| Gemini 1.5 Flash | $0.15 | $0.60 |
+| Gemini 1.5 Pro | $2.50 | $10.00 |
+| Gemini Pro | $0.50 | $1.50 |
+| Gemini Pro Vision | $0.50 | $1.50 |
+
+</Accordion>
+
+<Accordion title="Gemma Series (Open Source)" icon="code">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Gemma | Free | Free |
+| Gemma 2 | Free | Free |
+| Gemma 3 | Free | Free |
+| Gemma 3 27B | Free | Free |
+
+<Info>
+Gemma models are open source and free to use via Google AI.
+</Info>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Meta Llama Models
+
+<AccordionGroup>
+<Accordion title="Llama 3.3 Series (Latest)" icon="fire">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Llama 3.3 70B | $2.65 | $3.50 |
+
+</Accordion>
+
+<Accordion title="Llama 3.2 Series" icon="circle">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Llama 3.2 1B | $0.10 | $0.10 |
+| Llama 3.2 3B | $0.15 | $0.15 |
+| Llama 3.2 11B | $0.16 | $0.16 |
+| Llama 3.2 90B | $0.72 | $0.72 |
+
+</Accordion>
+
+<Accordion title="Llama 3.1 Series" icon="circle">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Llama 3.1 8B | $0.22 | $0.22 |
+| Llama 3.1 70B | $0.72 | $0.72 |
+| Llama 3.1 405B | $2.40 | $2.40 |
+
+</Accordion>
+
+<Accordion title="Llama 3 & 2 Series" icon="clock-rotate-left">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Llama 3 8B | $0.30 | $0.60 |
+| Llama 3 70B | $2.65 | $3.50 |
+| Llama 2 13B | $0.75 | $1.00 |
+| Llama 2 70B | $1.95 | $2.56 |
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Mistral AI Models
+
+| Model | Input (USD/1M) | Output (USD/1M) | Best For |
+|-------|----------------|-----------------|----------|
+| **Ministral 3B** | $0.04 | $0.04 | Ultra-budget |
+| **Ministral 8B** | $0.10 | $0.10 | Budget-friendly |
+| Mistral 7B / Small | $0.15 | $0.20 | General tasks |
+| Mixtral 8x7B | $0.45 | $0.70 | Mixture of experts |
+| Codestral | $0.30 | $0.90 | Code generation |
+| Mistral Large (2402) | $4.00 | $12.00 | Advanced (older) |
+| Mistral Large (2407) | $3.00 | $9.00 | Advanced (newer) |
+| **Mistral Large (Latest)** | $2.00 | $6.00 | Advanced tasks |
+| Pixtral Large | $2.00 | $6.00 | Vision + text |
+| Mistral Saba | $0.20 | $0.60 | Specialized |
+
+---
+
+### Amazon Bedrock Models
+
+<AccordionGroup>
+<Accordion title="Amazon Nova Series" icon="aws">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| **Nova Micro** | $0.035 | $0.14 |
+| **Nova Lite** | $0.06 | $0.24 |
+| **Nova Pro** | $0.80 | $3.20 |
+
+<Check>
+Amazon Nova models are optimized for AWS infrastructure with excellent latency.
+</Check>
+
+</Accordion>
+
+<Accordion title="Amazon Titan Series" icon="amazon">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Titan Text Lite | $0.15 | $0.20 |
+| Titan Text Express | $0.20 | $0.60 |
+| Titan Text Premier | $0.50 | $1.50 |
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### DeepSeek Models
+
+| Model | Input (USD/1M) | Output (USD/1M) | Best For |
+|-------|----------------|-----------------|----------|
+| **DeepSeek** | $0.14 | $0.28 | Ultra-budget general use |
+| **DeepSeek Reasoner** | $0.55 | $2.19 | Budget reasoning |
+| DeepSeek R1 (Bedrock) | $1.35 | $5.40 | Advanced reasoning |
+
+<Tip>
+DeepSeek offers the best price-to-performance ratio for many tasks.
+</Tip>
+
+---
+
+### xAI Grok Models
+
+<AccordionGroup>
+<Accordion title="Grok 4 Series (Latest)" icon="star">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| **Grok 4** | $3.00 | $15.00 |
+
+</Accordion>
+
+<Accordion title="Grok 3 Series" icon="circle">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Grok 3 Mini | $0.30 | $0.50 |
+| Grok 3 Mini Fast | $0.60 | $4.00 |
+| **Grok 3** | $3.00 | $15.00 |
+| Grok 3 Fast | $5.00 | $25.00 |
+
+</Accordion>
+
+<Accordion title="Grok 2 Series" icon="circle">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Grok 2 | $2.00 | $10.00 |
+| Grok 2 Latest | $2.00 | $10.00 |
+| Grok 2 (1212) | $2.00 | $10.00 |
+| Grok 2 Vision | $2.00 | $10.00 |
+| Grok 2 Vision Latest | $2.00 | $10.00 |
+| Grok 2 Vision (1212) | $2.00 | $10.00 |
+
+</Accordion>
+
+<Accordion title="Grok Beta" icon="flask">
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| Grok Beta | $5.00 | $15.00 |
+| Grok Vision Beta | $5.00 | $15.00 |
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Cohere Models
+
+| Model | Input (USD/1M) | Output (USD/1M) | Platform |
+|-------|----------------|-----------------|----------|
+| Command (legacy) | $0.38 | $0.38 | Direct |
+| Command Light | $0.30 | $0.60 | Bedrock |
+| Command Text | $1.50 | $2.00 | Bedrock |
+| **Command R** | $0.50 | $1.50 | Direct |
+| **Command R+** | $3.00 | $15.00 | Direct |
+
+---
+
+### AI21 Labs Models
+
+| Model | Input (USD/1M) | Output (USD/1M) |
+|-------|----------------|-----------------|
+| J2 Mid | $12.50 | $12.50 |
+| J2 Ultra | $18.80 | $18.80 |
+| Jamba Instruct | $0.50 | $0.70 |
+
+</Tab>
+
+<Tab title="Model Comparison">
+
+## Choosing the Right Model
+
+<Steps>
+<Step title="Define Your Use Case">
+
+**Simple tasks** (FAQ, categorization, summaries):
+- Use budget models: DeepSeek ($0.14), Ministral ($0.04-0.10), Gemini Flash ($0.10)
+
+**General business tasks** (emails, reports, research):
+- Use balanced models: GPT-4o Mini ($0.15), Claude Haiku ($0.80), Gemini Pro ($1.25)
+
+**Complex reasoning** (analysis, strategy, coding):
+- Use advanced models: GPT-4o ($2.50), Claude Sonnet ($3.00), O1-Mini ($1.10)
+
+**Maximum capability** (critical decisions, research):
+- Use premium models: Claude Opus ($15.00), O1 ($15.00), GPT-4 Turbo ($10.00)
+
+</Step>
+
+<Step title="Consider Volume & Cost">
+
+**High-volume operations** (chatbots, automation):
+- Prioritize cost-per-token: Amazon Nova Micro ($0.035), Ministral 3B ($0.04), DeepSeek ($0.14)
+
+**Medium volume**:
+- Balance cost & quality: Gemini 2.0 Flash ($0.10), GPT-4o Mini ($0.15), Claude Haiku ($0.80)
+
+**Low volume, high stakes**:
+- Prioritize quality: Claude Opus ($15.00), O1 ($15.00), GPT-4 Turbo ($10.00)
+
+</Step>
+
+<Step title="Test & Optimize">
+
+Start with a mid-tier model, measure quality, then adjust:
+- **Quality too low?** → Upgrade to more capable model
+- **Quality acceptable?** → Test cheaper alternatives
+- **Repeated prompts?** → Use Claude with caching for 90% savings
+
+</Step>
+</Steps>
+
+---
+
+## Cost Examples
+
+<CardGroup cols={2}>
+<Card title="Example: Customer Support Bot" icon="headset">
+
+**Scenario:** 10,000 conversations/day, ~500 tokens each
+
+**Budget Option (DeepSeek):**
+- Cost: ~$0.21/day = $6.30/month
+- Quality: Good for FAQs
+
+**Balanced Option (GPT-4o Mini):**
+- Cost: ~$0.38/day = $11.40/month
+- Quality: Excellent for most cases
+
+**Savings:** 45% with DeepSeek
+</Card>
+
+<Card title="Example: Document Analysis" icon="file-magnifying-glass">
+
+**Scenario:** 100 documents/day, ~5,000 tokens each
+
+**Fast Option (Gemini 2.0 Flash):**
+- Cost: ~$0.50/day = $15/month
+- Quality: Very good
+
+**Premium Option (Claude Sonnet 4):**
+- Cost: ~$7.50/day = $225/month
+- Quality: Exceptional
+
+**Savings:** 93% with Gemini
+</Card>
+</CardGroup>
+
+</Tab>
+</Tabs>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+<Accordion title="How are tokens counted?" icon="calculator">
+Tokens are counted for both input (your prompt + agent instructions) and output (the AI's response).
+
+Rough estimate: 1 token ≈ 0.75 English words
+
+Example conversation:
+- Your question: "Summarize this document" (3 tokens)
+- Document content: 2,000 words (≈2,666 tokens)
+- AI summary: 200 words (≈267 tokens)
+- Total: ~2,936 tokens consumed
+</Accordion>
+
+<Accordion title="Which model should I use?" icon="circle-question">
+Start here:
+- Most teams: GPT-4o Mini (0.15 USD) - best value
+- Budget-conscious: DeepSeek (0.14 USD) or Gemini Flash (0.10 USD)
+- Complex tasks: Claude Sonnet 4 (3.00 USD) or GPT-4o (2.50 USD)
+- Reasoning tasks: O1-Mini (1.10 USD) for chain-of-thought
+
+Test with your actual use case to find the sweet spot.
+</Accordion>
+
+<Accordion title="Can I switch models?" icon="arrows-rotate">
+Yes! You can configure different models for different agents. Use expensive models only where quality matters most.
+
+Strategy: 
+- Customer-facing: Premium models
+- Internal tools: Budget models
+- Testing: Free/cheap models
+</Accordion>
+
+<Accordion title="What is prompt caching?" icon="hard-drive">
+Available on Claude models only. If you send similar prompts repeatedly (e.g., same system instructions), Claude caches the repeated parts.
+
+First request: Pay full "write" price (3.75 USD per 1M for Sonnet)  
+Subsequent requests: Pay 10× cheaper "read" price (0.30 USD per 1M)
+
+Best for: Agents with long system prompts, repeated document analysis
+</Accordion>
+
+<Accordion title="Are there free models?" icon="gift">
+Some models offer free tiers:
+- Gemma series (Google): Free for experimentation
+- Gemini 2.0/2.5: Free for limited time
+
+However, production use typically requires paid tokens.
+</Accordion>
+
+<Accordion title="How is token pricing calculated?" icon="coins">
+Token pricing is based on:
+1. Input tokens: Your prompt + system instructions + context
+2. Output tokens: The AI's generated response
+
+Different models have different pricing for input vs output. Most models charge less for input than output.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Need Help Choosing?
+
+<Card title="Contact Our Team" icon="comments">
+Not sure which models fit your use case? Our Sales Support team can analyze your requirements and recommend the optimal model mix for your budget.
+
+[Get Model Recommendations](/en/support-resources/getting-help)
+</Card>
