@@ -68,6 +68,165 @@ Idéal pour :
 
 ---
 
+## Modèles disponibles dans WonkaChat
+
+<Tabs>
+<Tab title="Par fournisseur">
+
+### Modèles OpenAI
+
+<AccordionGroup>
+<Accordion title="Série GPT-5 (Derniers)" icon="star">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| GPT-5.2 | Tâches générales les plus avancées |
+| GPT-5 | Réponses de haute qualité |
+
+<Tip>
+La série GPT-5 offre des performances de pointe pour les tâches complexes.
+</Tip>
+
+</Accordion>
+
+<Accordion title="Série GPT-4o" icon="circle-check">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| GPT-4o | Réponses de haute qualité, raisonnement complexe |
+| GPT-4o Mini | Tâches générales, meilleur rapport qualité-prix |
+
+<Check>
+GPT-4o Mini est recommandé pour la plupart des tâches professionnelles - excellent équilibre entre qualité et coût.
+</Check>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Anthropic Claude
+
+<AccordionGroup>
+<Accordion title="Série Claude Sonnet" icon="brain">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| Claude Sonnet 4.6 | Dernière version, performances améliorées |
+| Claude Sonnet 4.5 | Performance équilibrée |
+| Claude Sonnet 4 | Raisonnement complexe et instructions |
+
+<Tip>
+Les modèles Claude Sonnet excellent dans le suivi d'instructions complexes et de tâches nuancées.
+</Tip>
+
+</Accordion>
+
+<Accordion title="Claude Haiku & Opus" icon="circle">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| Claude Haiku 4.5 | Tâches rapides et efficaces |
+| Claude Opus 4.5 | Capacité maximale et précision |
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Google Gemini
+
+<AccordionGroup>
+<Accordion title="Série Gemini 3 (Aperçu)" icon="sparkles">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| Gemini 3 Pro Preview | Raisonnement complexe nouvelle génération |
+| Gemini 3 Flash Preview | Tâches rapides nouvelle génération |
+
+<Info>
+Les modèles Gemini 3 sont des versions d'aperçu avec des capacités de pointe.
+</Info>
+
+</Accordion>
+
+<Accordion title="Série Gemini 2.5" icon="google">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| Gemini 2.5 Pro | Tâches de raisonnement complexes |
+| Gemini 2.5 Flash | Tâches rapides et rentables |
+
+<Check>
+Gemini 2.5 Flash offre d'excellentes performances à des tarifs très compétitifs.
+</Check>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Mistral AI
+
+<AccordionGroup>
+<Accordion title="Série Mistral Latest" icon="sparkles">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| Mistral Large Latest | Tâches avancées nécessitant une capacité élevée |
+| Mistral Medium Latest | Performance équilibrée pour usage général |
+
+<Info>
+Les modèles Mistral "Latest" se mettent à jour automatiquement vers les versions les plus récentes, vous garantissant toujours l'accès aux améliorations.
+</Info>
+
+</Accordion>
+</AccordionGroup>
+
+</Tab>
+
+<Tab title="Par cas d'usage">
+
+### Tâches simples (FAQ, catégorisation, résumés)
+
+Meilleures options :
+- GPT-4o Mini - Meilleur rapport qualité-prix global
+- Claude Haiku 4.5 - Rapide et efficace
+- Gemini 2.5 Flash - Très rentable
+
+---
+
+### Tâches professionnelles générales (emails, rapports, recherche)
+
+Meilleures options :
+- GPT-4o - Haute qualité
+- Claude Sonnet 4.6 - Excellent suivi des instructions
+- Gemini 2.5 Pro - Performance solide
+
+---
+
+### Raisonnement complexe (analyse, stratégie, codage)
+
+Meilleures options :
+- GPT-5.2 - Le plus avancé
+- Claude Opus 4.5 - Capacité maximale
+- Claude Sonnet 4.6 - Instructions complexes
+- Gemini 3 Pro Preview - Raisonnement nouvelle génération
+
+---
+
+### Opérations à volume élevé (chatbots, automatisation)
+
+Meilleures options :
+- GPT-4o Mini - Meilleur rapport qualité-prix
+- Gemini 2.5 Flash - Très rentable
+- Claude Haiku 4.5 - Traitement rapide
+
+</Tab>
+</Tabs>
+
+---
+
 ## Quel modèle devriez-vous utiliser ?
 
 <Steps>
@@ -79,7 +238,7 @@ Enjeux faibles, volume élevé :
 - Résumés basiques
 - Notes internes
 
-→ Utilisez les modèles économiques (0.04 à 0.15 USD)
+→ Utilisez les modèles économiques : GPT-4o Mini, Gemini 2.5 Flash, Claude Haiku 4.5
 
 Importance moyenne :
 - Emails clients
@@ -87,7 +246,7 @@ Importance moyenne :
 - Tâches de recherche
 - Tâches professionnelles générales
 
-→ Utilisez les modèles standards (0.60 à 3.00 USD)
+→ Utilisez les modèles standards : GPT-4o, Claude Sonnet 4.6, Gemini 2.5 Pro
 
 Enjeux élevés, critique :
 - Propositions clients
@@ -95,7 +254,7 @@ Enjeux élevés, critique :
 - Analyses complexes
 - Communications sensibles
 
-→ Utilisez les modèles premium (10 à 75 USD)
+→ Utilisez les modèles premium : GPT-5.2, Claude Opus 4.5, Gemini 3 Pro Preview
 
 </Step>
 
@@ -112,7 +271,7 @@ Combien de requêtes par jour ?
 <Step title="Testez et ajustez">
 
 <Tip>
-Conseil : Commencez avec un modèle de milieu de gamme (comme GPT-4o Mini à 0.15 USD), évaluez la qualité, puis ajustez :
+Conseil : Commencez avec un modèle de milieu de gamme (comme GPT-4o Mini), évaluez la qualité, puis ajustez :
 - Qualité insuffisante ? → Essayez un meilleur modèle
 - Qualité excellente ? → Testez un modèle moins cher pour économiser
 </Tip>
@@ -122,61 +281,19 @@ Conseil : Commencez avec un modèle de milieu de gamme (comme GPT-4o Mini à 0.1
 
 ---
 
-## Exemples de coûts réels
-
-<CardGroup cols={2}>
-<Card title="Chatbot de support client" icon="headset">
-Scénario :
-- 10,000 chats clients par jour
-- Moyenne de 500 jetons par conversation
-
-Modèle économique (DeepSeek - 0.14 USD par 1M) :
-- Coût quotidien : 0.70 USD
-- Coût mensuel : 21 USD
-
-Modèle standard (GPT-4o Mini - 0.15 USD par 1M) :
-- Coût quotidien : 0.75 USD
-- Coût mensuel : 22.50 USD
-
-Différence : Seulement 1.50 USD par mois pour une meilleure qualité !
-</Card>
-
-<Card title="Analyse de documents" icon="file-magnifying-glass">
-Scénario :
-- 50 documents par jour
-- Moyenne de 5,000 jetons par document
-
-Modèle standard (Gemini Flash - 0.10 USD par 1M) :
-- Coût quotidien : 2.50 USD
-- Coût mensuel : 75 USD
-
-Modèle premium (Claude Sonnet - 3.00 USD par 1M) :
-- Coût quotidien : 75 USD
-- Coût mensuel : 2,250 USD
-
-Différence : 30× plus cher, mais qualité exceptionnelle
-</Card>
-</CardGroup>
-
----
-
 ## Questions courantes
 
 <AccordionGroup>
 <Accordion title="Combien cela me coûtera-t-il réellement ?" icon="dollar-sign">
-Calcul rapide :
+Pour estimer vos coûts :
 
-1. Estimez vos requêtes quotidiennes
-2. Estimez la moyenne de jetons par requête (utilisez les exemples ci-dessus)
-3. Multipliez : Requêtes quotidiennes × Jetons × Prix du modèle
+1. Suivez votre utilisation réelle pendant quelques jours
+2. Comptez les jetons par requête typique
+3. Calculez en fonction du tarif de votre modèle choisi
 
-Exemple :
-- 500 chats de support client par jour
-- 400 jetons par chat
-- GPT-4o Mini (0.15 USD par million de jetons)
-- Coût : 500 × 400 × (0.15 / 1,000,000) = 0.03 USD par jour = 0.90 USD par mois
+Votre équipe de support commercial peut vous aider à estimer les coûts en fonction de votre cas d'usage spécifique et du volume attendu.
 
-La plupart des entreprises dépensent 10 à 500 USD par mois selon le volume.
+[Contacter le support commercial](/fr/support-resources/getting-help)
 </Accordion>
 
 <Accordion title="Puis-je mélanger différents modèles ?" icon="shuffle">
@@ -199,19 +316,10 @@ Pas de problème ! Vous pouvez changer de modèle à tout moment :
 Il n'y a aucune pénalité pour changer, et vous ne payez que ce que vous utilisez.
 </Accordion>
 
-<Accordion title="Y a-t-il des modèles gratuits ?" icon="gift">
-Quelques options :
-
-- Modèles Gemma (Google) : Gratuit pour l'expérimentation
-- Gemini 2.0/2.5 : Niveau gratuit pour utilisation limitée
-
-Cependant, pour une utilisation professionnelle en production, les modèles payants sont plus fiables et ont un meilleur support.
-</Accordion>
-
 <Accordion title="Comment savoir quel modèle j'utilise ?" icon="circle-question">
 Lors de la création ou de la modification d'un agent IA dans WonkaChat, vous sélectionnez le modèle dans les paramètres de l'agent. Chaque agent peut utiliser un modèle différent.
 
-Notre recommandation : Commencez avec GPT-4o Mini - c'est le meilleur équilibre entre qualité et coût pour la plupart des tâches professionnelles.
+Notre recommandation : Commencez avec GPT-4o Mini pour la plupart des tâches professionnelles, puis ajustez en fonction de vos besoins en qualité.
 </Accordion>
 </AccordionGroup>
 
@@ -225,27 +333,21 @@ Pas sûr de par où commencer ? Voici nos meilleures recommandations :
 <Card title="Meilleur rapport qualité-prix" icon="star">
 GPT-4o Mini
 
-0.15 USD par 1M de jetons
-
 Excellente qualité pour la plupart des tâches professionnelles. C'est ce que nous recommandons à 80% de nos clients.
 
 Utiliser pour : Emails, rapports, questions générales, support client
 </Card>
 
-<Card title="Meilleure option économique" icon="coins">
-DeepSeek
+<Card title="Meilleur pour la vitesse" icon="gauge">
+Gemini 2.5 Flash
 
-0.14 USD par 1M de jetons
+Très rapide et rentable. Idéal pour les tâches à volume élevé et urgentes.
 
-Qualité étonnamment bonne à des prix très bas. Idéal pour les tâches à volume élevé et moins critiques.
-
-Utiliser pour : FAQ, classifications simples, outils internes
+Utiliser pour : Réponses rapides, FAQ, classifications simples
 </Card>
 
 <Card title="Meilleur pour tâches complexes" icon="brain">
-Claude 3.5 Sonnet
-
-3.00 USD par 1M de jetons
+Claude Sonnet 4.6
 
 Exceptionnel pour suivre des instructions complexes et le raisonnement nuancé.
 
@@ -259,7 +361,7 @@ Utiliser pour : Analyse, stratégie, communications sensibles
 
 <CardGroup cols={2}>
 <Card title="Tarification détaillée des modèles" icon="table" href="/fr/pricing/tokens-pricing">
-Consultez les tableaux de prix complets pour tous les modèles d'IA disponibles de tous les fournisseurs.
+Consultez les tableaux de prix complets pour tous les modèles d'IA disponibles.
 </Card>
 
 <Card title="Contacter les ventes" icon="phone" href="/fr/support-resources/getting-help">
