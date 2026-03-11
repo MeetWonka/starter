@@ -21,19 +21,16 @@ steps:
 
 - script: |
     echo "Syncing to GitHub dev branch..."
+    
+    # Configure git
+    git config --global user.email "azure-pipeline@wonka.dev"
+    git config --global user.name "Azure Pipeline"
+    
+    # Add GitHub as a remote
     git remote add github https://$(Github_pat)@github.com/MeetWonka/starter.git || git remote set-url github https://$(Github_pat)@github.com/MeetWonka/starter.git
     
-    # Create a fresh bundle to avoid corruption
-    git bundle create repo.bundle --all
-    git clone repo.bundle temp-repo
-    cd temp-repo
-    
-    # Checkout main branch (it's in detached HEAD state after cloning from bundle)
-    git checkout -b main
-    
-    # Set up the GitHub remote and force push to dev branch
-    git remote add github https://$(Github_pat)@github.com/MeetWonka/starter.git
-    git push github main:dev --force
+    # Push current branch to GitHub dev (without fetching to avoid corruption)
+    git push github HEAD:dev --force
   displayName: 'Push to GitHub dev branch'
   env:
     GITHUB_PAT: $(Github_pat)
