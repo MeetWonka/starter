@@ -21,7 +21,7 @@ steps:
 
 - script: |
     echo "Syncing to GitHub..."
-    git remote add github https://$(Github_pat)@github.com/meetwonka/HelpDesk.git || git remote set-url github https://$(Github_pat)@github.com/meetwonka/HelpDesk.git
+    git remote add github https://$(Github_pat)@github.com/MeetWonka/starter.git || git remote set-url github https://$(Github_pat)@github.com/MeetWonka/starter.git
     git fetch github
     git push github HEAD:main --force
   displayName: 'Push to GitHub'
