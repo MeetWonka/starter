@@ -28,6 +28,9 @@ steps:
     git clone repo.bundle temp-repo
     cd temp-repo
     
+    # Checkout main branch (it's in detached HEAD state after cloning from bundle)
+    git checkout -b main
+    
     # Set up the GitHub remote and force push to dev branch
     git remote add github https://$(Github_pat)@github.com/MeetWonka/starter.git
     git push github main:dev --force
