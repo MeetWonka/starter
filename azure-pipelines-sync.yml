@@ -20,9 +20,14 @@ steps:
   displayName: 'Configure Git'
 
 - script: |
-    echo "Pushing dev branch to GitHub..."
+    echo "Syncing all branches to GitHub (except deleting main)..."
     git remote add github https://$(Github_pat)@github.com/MeetWonka/starter.git
-    git push github dev --force
-  displayName: 'Push dev to GitHub'
+    
+    # Push all branches
+    git push github --all --force
+    
+    # Push all tags
+    git push github --tags --force
+  displayName: 'Sync to GitHub'
   env:
     GITHUB_PAT: $(Github_pat)
