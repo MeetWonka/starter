@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - main
+      - dev
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -20,9 +20,9 @@ steps:
   displayName: 'Configure Git'
 
 - script: |
-    echo "Mirroring to GitHub dev branch..."
+    echo "Mirroring to GitHub..."
     git remote add github https://$(Github_pat)@github.com/MeetWonka/starter.git
-    git push github refs/heads/main:refs/heads/dev --force
-  displayName: 'Mirror to GitHub dev branch'
+    git push --mirror github
+  displayName: 'Mirror to GitHub'
   env:
     GITHUB_PAT: $(Github_pat)
