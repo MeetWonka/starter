@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - dev
+      - '*'
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -17,7 +17,18 @@ steps:
 - script: |
     git config --global user.email "azure-pipeline@wonka.dev"
     git config --global user.name "Azure Pipeline"
-  displayName: 'Configure Git'
+    
+    # Fetch all remote branches
+    git fetch origin
+    
+    # Create local tracking branches for all remote branches
+    for branch in $(git branch -r | grep -v '\->' | sed 's/origin\///'); do
+      git branch --track "$branch" "origin/$branch" 2>/dev/null || true
+    done
+    
+    echo "Listing all branches:"
+    git branch -a
+  displayName: 'Configure Git and fetch all branches'
 
 - script: |
     echo "Syncing all branches to GitHub (except deleting main)..."
