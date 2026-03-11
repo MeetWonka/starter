@@ -20,10 +20,17 @@ steps:
   displayName: 'Configure Git'
 
 - script: |
-    echo "Syncing to GitHub..."
+    echo "Syncing to GitHub dev branch..."
     git remote add github https://$(Github_pat)@github.com/MeetWonka/starter.git || git remote set-url github https://$(Github_pat)@github.com/MeetWonka/starter.git
-    git fetch github
-    git push github HEAD:main --force
-  displayName: 'Push to GitHub'
+    
+    # Create a fresh bundle to avoid corruption
+    git bundle create repo.bundle --all
+    git clone repo.bundle temp-repo
+    cd temp-repo
+    
+    # Set up the GitHub remote and force push to dev branch
+    git remote add github https://$(Github_pat)@github.com/MeetWonka/starter.git
+    git push github main:dev --force
+  displayName: 'Push to GitHub dev branch'
   env:
     GITHUB_PAT: $(Github_pat)
