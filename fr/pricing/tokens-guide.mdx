@@ -1,0 +1,370 @@
+---
+title: "Comprendre la tarification des jetons"
+description: "Un guide simple pour comprendre le fonctionnement de la tarification des modèles d'IA et choisir le bon modèle pour vos besoins"
+---
+
+## Que sont les jetons ?
+
+<Info>
+Les jetons sont les unités qui mesurent l'utilisation du modèle d'IA. Considérez-les comme la "monnaie" que les modèles d'IA consomment lorsqu'ils traitent vos requêtes.
+
+Analogie simple : Si les modèles d'IA étaient des voitures, les jetons seraient des litres d'essence. Différentes voitures (modèles) utilisent différentes quantités d'essence (jetons) pour parcourir la même distance.
+</Info>
+
+### Comment penser aux jetons
+
+- 1 jeton ≈ 3/4 d'un mot en français
+- "Bonjour, comment allez-vous ?" = environ 6 jetons
+- Un email typique (200 mots) = environ 265 jetons
+- Une page complète de texte (500 mots) = environ 665 jetons
+
+<Check>
+Votre question ET la réponse de l'IA consomment des jetons. Vous payez pour les deux.
+</Check>
+
+---
+
+## Pourquoi différents modèles coûtent différents montants
+
+Comme les voitures, les modèles d'IA existent en différentes tailles avec différentes capacités :
+
+<CardGroup cols={3}>
+<Card title="Modèles économiques" icon="piggy-bank">
+0.04 à 0.15 USD par 1M de jetons
+
+Comme une voiture compacte - efficace pour les tâches quotidiennes.
+
+Idéal pour :
+- Questions simples
+- Catégorisation
+- Résumés basiques
+- Tâches à volume élevé
+</Card>
+
+<Card title="Modèles standards" icon="gauge">
+0.60 à 3.00 USD par 1M de jetons
+
+Comme une berline - fiable pour la plupart des besoins.
+
+Idéal pour :
+- Emails professionnels
+- Rapports
+- Recherche
+- Conversations générales
+</Card>
+
+<Card title="Modèles premium" icon="rocket">
+10.00 à 75.00 USD par 1M de jetons
+
+Comme une voiture de luxe - capacité maximale.
+
+Idéal pour :
+- Décisions critiques
+- Analyses complexes
+- Planification stratégique
+- Précision maximale
+</Card>
+</CardGroup>
+
+---
+
+## Modèles disponibles dans WonkaChat
+
+<Tabs>
+<Tab title="Par fournisseur">
+
+### Modèles OpenAI
+
+<AccordionGroup>
+<Accordion title="Série GPT-5 (Derniers)" icon="star">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| GPT-5.2 | Tâches générales les plus avancées |
+| GPT-5 | Réponses de haute qualité |
+
+<Tip>
+La série GPT-5 offre des performances de pointe pour les tâches complexes.
+</Tip>
+
+</Accordion>
+
+<Accordion title="Série GPT-4o" icon="circle-check">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| GPT-4o | Réponses de haute qualité, raisonnement complexe |
+| GPT-4o Mini | Tâches générales, meilleur rapport qualité-prix |
+
+<Check>
+GPT-4o Mini est recommandé pour la plupart des tâches professionnelles - excellent équilibre entre qualité et coût.
+</Check>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Anthropic Claude
+
+<AccordionGroup>
+<Accordion title="Série Claude Sonnet" icon="brain">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| Claude Sonnet 4.6 | Dernière version, performances améliorées |
+| Claude Sonnet 4.5 | Performance équilibrée |
+| Claude Sonnet 4 | Raisonnement complexe et instructions |
+
+<Tip>
+Les modèles Claude Sonnet excellent dans le suivi d'instructions complexes et de tâches nuancées.
+</Tip>
+
+</Accordion>
+
+<Accordion title="Claude Haiku & Opus" icon="circle">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| Claude Haiku 4.5 | Tâches rapides et efficaces |
+| Claude Opus 4.5 | Capacité maximale et précision |
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Google Gemini
+
+<AccordionGroup>
+<Accordion title="Série Gemini 3 (Aperçu)" icon="sparkles">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| Gemini 3 Pro Preview | Raisonnement complexe nouvelle génération |
+| Gemini 3 Flash Preview | Tâches rapides nouvelle génération |
+
+<Info>
+Les modèles Gemini 3 sont des versions d'aperçu avec des capacités de pointe.
+</Info>
+
+</Accordion>
+
+<Accordion title="Série Gemini 2.5" icon="google">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| Gemini 2.5 Pro | Tâches de raisonnement complexes |
+| Gemini 2.5 Flash | Tâches rapides et rentables |
+
+<Check>
+Gemini 2.5 Flash offre d'excellentes performances à des tarifs très compétitifs.
+</Check>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Modèles Mistral AI
+
+<AccordionGroup>
+<Accordion title="Série Mistral Latest" icon="sparkles">
+
+| Modèle | Idéal pour |
+|-------|----------|
+| Mistral Large Latest | Tâches avancées nécessitant une capacité élevée |
+| Mistral Medium Latest | Performance équilibrée pour usage général |
+
+<Info>
+Les modèles Mistral "Latest" se mettent à jour automatiquement vers les versions les plus récentes, vous garantissant toujours l'accès aux améliorations.
+</Info>
+
+</Accordion>
+</AccordionGroup>
+
+</Tab>
+
+<Tab title="Par cas d'usage">
+
+### Tâches simples (FAQ, catégorisation, résumés)
+
+Meilleures options :
+- GPT-4o Mini - Meilleur rapport qualité-prix global
+- Claude Haiku 4.5 - Rapide et efficace
+- Gemini 2.5 Flash - Très rentable
+
+---
+
+### Tâches professionnelles générales (emails, rapports, recherche)
+
+Meilleures options :
+- GPT-4o - Haute qualité
+- Claude Sonnet 4.6 - Excellent suivi des instructions
+- Gemini 2.5 Pro - Performance solide
+
+---
+
+### Raisonnement complexe (analyse, stratégie, codage)
+
+Meilleures options :
+- GPT-5.2 - Le plus avancé
+- Claude Opus 4.5 - Capacité maximale
+- Claude Sonnet 4.6 - Instructions complexes
+- Gemini 3 Pro Preview - Raisonnement nouvelle génération
+
+---
+
+### Opérations à volume élevé (chatbots, automatisation)
+
+Meilleures options :
+- GPT-4o Mini - Meilleur rapport qualité-prix
+- Gemini 2.5 Flash - Très rentable
+- Claude Haiku 4.5 - Traitement rapide
+
+</Tab>
+</Tabs>
+
+---
+
+## Quel modèle devriez-vous utiliser ?
+
+<Steps>
+<Step title="Commencez par la question : Quelle est l'importance de cette tâche ?">
+
+Enjeux faibles, volume élevé :
+- FAQ clients
+- Catégorisation simple
+- Résumés basiques
+- Notes internes
+
+→ Utilisez les modèles économiques : GPT-4o Mini, Gemini 2.5 Flash, Claude Haiku 4.5
+
+Importance moyenne :
+- Emails clients
+- Rapports internes
+- Tâches de recherche
+- Tâches professionnelles générales
+
+→ Utilisez les modèles standards : GPT-4o, Claude Sonnet 4.6, Gemini 2.5 Pro
+
+Enjeux élevés, critique :
+- Propositions clients
+- Décisions stratégiques
+- Analyses complexes
+- Communications sensibles
+
+→ Utilisez les modèles premium : GPT-5.2, Claude Opus 4.5, Gemini 3 Pro Preview
+
+</Step>
+
+<Step title="Considérez votre volume">
+
+Combien de requêtes par jour ?
+
+- Volume élevé (1,000+ par jour) : Chaque centime compte → Utilisez des modèles économiques
+- Volume moyen (100-1,000 par jour) : Équilibrez qualité et coût → Utilisez des modèles standards
+- Volume faible (moins de 100 par jour) : Qualité avant coût → Utilisez des modèles premium si nécessaire
+
+</Step>
+
+<Step title="Testez et ajustez">
+
+<Tip>
+Conseil : Commencez avec un modèle de milieu de gamme (comme GPT-4o Mini), évaluez la qualité, puis ajustez :
+- Qualité insuffisante ? → Essayez un meilleur modèle
+- Qualité excellente ? → Testez un modèle moins cher pour économiser
+</Tip>
+
+</Step>
+</Steps>
+
+---
+
+## Questions courantes
+
+<AccordionGroup>
+<Accordion title="Combien cela me coûtera-t-il réellement ?" icon="dollar-sign">
+Pour estimer vos coûts :
+
+1. Suivez votre utilisation réelle pendant quelques jours
+2. Comptez les jetons par requête typique
+3. Calculez en fonction du tarif de votre modèle choisi
+
+Votre équipe de support commercial peut vous aider à estimer les coûts en fonction de votre cas d'usage spécifique et du volume attendu.
+
+[Contacter le support commercial](/fr/support-resources/getting-help)
+</Accordion>
+
+<Accordion title="Puis-je mélanger différents modèles ?" icon="shuffle">
+Oui ! C'est en fait une stratégie intelligente :
+
+- Tâches clients : Utilisez de meilleurs modèles (ils représentent votre marque)
+- Tâches internes : Utilisez des modèles économiques (la qualité importe moins)
+- Test/développement : Utilisez les modèles les moins chers
+
+Vous pouvez configurer différents modèles pour différents agents IA.
+</Accordion>
+
+<Accordion title="Que se passe-t-il si je choisis le mauvais modèle ?" icon="triangle-exclamation">
+Pas de problème ! Vous pouvez changer de modèle à tout moment :
+
+1. Testez avec un modèle de milieu de gamme
+2. Évaluez la qualité pour votre cas d'usage
+3. Ajustez vers le haut ou le bas selon les résultats
+
+Il n'y a aucune pénalité pour changer, et vous ne payez que ce que vous utilisez.
+</Accordion>
+
+<Accordion title="Comment savoir quel modèle j'utilise ?" icon="circle-question">
+Lors de la création ou de la modification d'un agent IA dans WonkaChat, vous sélectionnez le modèle dans les paramètres de l'agent. Chaque agent peut utiliser un modèle différent.
+
+Notre recommandation : Commencez avec GPT-4o Mini pour la plupart des tâches professionnelles, puis ajustez en fonction de vos besoins en qualité.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Modèles recommandés pour commencer
+
+Pas sûr de par où commencer ? Voici nos meilleures recommandations :
+
+<CardGroup cols={3}>
+<Card title="Meilleur rapport qualité-prix" icon="star">
+GPT-4o Mini
+
+Excellente qualité pour la plupart des tâches professionnelles. C'est ce que nous recommandons à 80% de nos clients.
+
+Utiliser pour : Emails, rapports, questions générales, support client
+</Card>
+
+<Card title="Meilleur pour la vitesse" icon="gauge">
+Gemini 2.5 Flash
+
+Très rapide et rentable. Idéal pour les tâches à volume élevé et urgentes.
+
+Utiliser pour : Réponses rapides, FAQ, classifications simples
+</Card>
+
+<Card title="Meilleur pour tâches complexes" icon="brain">
+Claude Sonnet 4.6
+
+Exceptionnel pour suivre des instructions complexes et le raisonnement nuancé.
+
+Utiliser pour : Analyse, stratégie, communications sensibles
+</Card>
+</CardGroup>
+
+---
+
+## Besoin de plus de détails ?
+
+<CardGroup cols={2}>
+<Card title="Tarification détaillée des modèles" icon="table" href="/fr/pricing/tokens-pricing">
+Consultez les tableaux de prix complets pour tous les modèles d'IA disponibles.
+</Card>
+
+<Card title="Contacter les ventes" icon="phone" href="/fr/support-resources/getting-help">
+Pas sûr du modèle qui convient ? Notre équipe peut analyser vos besoins et recommander le meilleur choix.
+</Card>
+</CardGroup>

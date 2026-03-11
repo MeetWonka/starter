@@ -1,0 +1,370 @@
+---
+title: "Begrijp token-prijzen"
+description: "Een eenvoudige gids om te begrijpen hoe AI-modelprijzen werken en het juiste model voor uw behoeften te kiezen"
+---
+
+## Wat zijn tokens?
+
+<Info>
+Tokens zijn de eenheden die het gebruik van AI-modellen meten. Beschouw ze als de "valuta" die AI-modellen verbruiken bij het verwerken van uw verzoeken.
+
+Simpele analogie: Als AI-modellen auto's waren, dan zouden tokens liters benzine zijn. Verschillende auto's (modellen) gebruiken verschillende hoeveelheden brandstof (tokens) om dezelfde afstand af te leggen.
+</Info>
+
+### Hoe tokens te zien
+
+- 1 token ≈ 3/4 van een woord in het Nederlands
+- "Hallo, hoe gaat het?" = ongeveer 6 tokens
+- Een typische e-mail (200 woorden) = ongeveer 265 tokens
+- Een volledige pagina tekst (500 woorden) = ongeveer 665 tokens
+
+<Check>
+Zowel uw vraag ALS het antwoord van de AI verbruiken tokens. U betaalt voor beide.
+</Check>
+
+---
+
+## Waarom verschillende modellen verschillende prijzen hebben
+
+Net als auto's, komen AI-modellen in verschillende maten met verschillende mogelijkheden:
+
+<CardGroup cols={3}>
+<Card title="Budget modellen" icon="piggy-bank">
+0.04 tot 0.15 USD per 1M tokens
+
+Zoals een compacte auto - efficiënt voor dagelijkse taken.
+
+Ideaal voor:
+- Eenvoudige vragen
+- Categorisatie
+- Basis samenvattingen
+- Taken met hoog volume
+</Card>
+
+<Card title="Standaard modellen" icon="gauge">
+0.60 tot 3.00 USD per 1M tokens
+
+Zoals een sedan - betrouwbaar voor de meeste behoeften.
+
+Ideaal voor:
+- Zakelijke e-mails
+- Rapporten
+- Onderzoek
+- Algemene gesprekken
+</Card>
+
+<Card title="Premium modellen" icon="rocket">
+10.00 tot 75.00 USD per 1M tokens
+
+Zoals een luxe auto - maximale capaciteit.
+
+Ideaal voor:
+- Kritieke beslissingen
+- Complexe analyses
+- Strategische planning
+- Maximale nauwkeurigheid
+</Card>
+</CardGroup>
+
+---
+
+## Beschikbare modellen in WonkaChat
+
+<Tabs>
+<Tab title="Per provider">
+
+### OpenAI modellen
+
+<AccordionGroup>
+<Accordion title="GPT-5 serie (Nieuwste)" icon="star">
+
+| Model | Ideaal voor |
+|-------|----------|
+| GPT-5.2 | Meest geavanceerde algemene taken |
+| GPT-5 | Hoogwaardige antwoorden |
+
+<Tip>
+De GPT-5 serie biedt topprestaties voor complexe taken.
+</Tip>
+
+</Accordion>
+
+<Accordion title="GPT-4o serie" icon="circle-check">
+
+| Model | Ideaal voor |
+|-------|----------|
+| GPT-4o | Hoogwaardige antwoorden, complex redeneren |
+| GPT-4o Mini | Algemene taken, beste prijs-kwaliteit |
+
+<Check>
+GPT-4o Mini wordt aanbevolen voor de meeste zakelijke taken - uitstekende balans tussen kwaliteit en kosten.
+</Check>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Anthropic Claude modellen
+
+<AccordionGroup>
+<Accordion title="Claude Sonnet serie" icon="brain">
+
+| Model | Ideaal voor |
+|-------|----------|
+| Claude Sonnet 4.6 | Nieuwste versie, verbeterde prestaties |
+| Claude Sonnet 4.5 | Gebalanceerde prestaties |
+| Claude Sonnet 4 | Complex redeneren en instructies |
+
+<Tip>
+Claude Sonnet modellen blinken uit in het volgen van complexe instructies en genuanceerde taken.
+</Tip>
+
+</Accordion>
+
+<Accordion title="Claude Haiku & Opus" icon="circle">
+
+| Model | Ideaal voor |
+|-------|----------|
+| Claude Haiku 4.5 | Snelle en efficiënte taken |
+| Claude Opus 4.5 | Maximale capaciteit en nauwkeurigheid |
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Google Gemini modellen
+
+<AccordionGroup>
+<Accordion title="Gemini 3 serie (Preview)" icon="sparkles">
+
+| Model | Ideaal voor |
+|-------|----------|
+| Gemini 3 Pro Preview | Volgende generatie complex redeneren |
+| Gemini 3 Flash Preview | Volgende generatie snelle taken |
+
+<Info>
+Gemini 3 modellen zijn preview-versies met geavanceerde mogelijkheden.
+</Info>
+
+</Accordion>
+
+<Accordion title="Gemini 2.5 serie" icon="google">
+
+| Model | Ideaal voor |
+|-------|----------|
+| Gemini 2.5 Pro | Complexe redeneertaken |
+| Gemini 2.5 Flash | Snelle en kosteneffectieve taken |
+
+<Check>
+Gemini 2.5 Flash biedt uitstekende prestaties tegen zeer competitieve tarieven.
+</Check>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Mistral AI modellen
+
+<AccordionGroup>
+<Accordion title="Mistral Latest serie" icon="sparkles">
+
+| Model | Ideaal voor |
+|-------|----------|
+| Mistral Large Latest | Geavanceerde taken die hoge capaciteit vereisen |
+| Mistral Medium Latest | Gebalanceerde prestaties voor algemeen gebruik |
+
+<Info>
+Mistral "Latest" modellen worden automatisch bijgewerkt naar de nieuwste versies, zodat u altijd toegang heeft tot verbeteringen.
+</Info>
+
+</Accordion>
+</AccordionGroup>
+
+</Tab>
+
+<Tab title="Per use case">
+
+### Eenvoudige taken (FAQ's, categorisatie, samenvattingen)
+
+Beste opties:
+- GPT-4o Mini - Beste algehele prijs-kwaliteit
+- Claude Haiku 4.5 - Snel en efficiënt
+- Gemini 2.5 Flash - Zeer kosteneffectief
+
+---
+
+### Algemene zakelijke taken (e-mails, rapporten, onderzoek)
+
+Beste opties:
+- GPT-4o - Hoge kwaliteit
+- Claude Sonnet 4.6 - Uitstekend instructievolgen
+- Gemini 2.5 Pro - Solide prestaties
+
+---
+
+### Complex redeneren (analyse, strategie, coderen)
+
+Beste opties:
+- GPT-5.2 - Meest geavanceerd
+- Claude Opus 4.5 - Maximale capaciteit
+- Claude Sonnet 4.6 - Complexe instructies
+- Gemini 3 Pro Preview - Volgende generatie redeneren
+
+---
+
+### Hoog-volume operaties (chatbots, automatisering)
+
+Beste opties:
+- GPT-4o Mini - Beste prijs-kwaliteit
+- Gemini 2.5 Flash - Zeer kosteneffectief
+- Claude Haiku 4.5 - Snelle verwerking
+
+</Tab>
+</Tabs>
+
+---
+
+## Welk model moet u gebruiken?
+
+<Steps>
+<Step title="Begin met de vraag: Hoe belangrijk is deze taak?">
+
+Laag risico, hoog volume:
+- Klant FAQ's
+- Eenvoudige categorisatie
+- Basis samenvattingen
+- Interne notities
+
+→ Gebruik budget modellen: GPT-4o Mini, Gemini 2.5 Flash, Claude Haiku 4.5
+
+Gemiddeld belang:
+- Klant e-mails
+- Interne rapporten
+- Onderzoekstaken
+- Algemene zakelijke taken
+
+→ Gebruik standaard modellen: GPT-4o, Claude Sonnet 4.6, Gemini 2.5 Pro
+
+Hoog risico, kritiek:
+- Klantvoorstellen
+- Strategische beslissingen
+- Complexe analyses
+- Gevoelige communicatie
+
+→ Gebruik premium modellen: GPT-5.2, Claude Opus 4.5, Gemini 3 Pro Preview
+
+</Step>
+
+<Step title="Overweeg uw volume">
+
+Hoeveel verzoeken per dag?
+
+- Hoog volume (1,000+ per dag): Elke cent telt → Gebruik budget modellen
+- Gemiddeld volume (100-1,000 per dag): Balanceer kwaliteit en kosten → Gebruik standaard modellen
+- Laag volume (minder dan 100 per dag): Kwaliteit boven kosten → Gebruik premium modellen indien nodig
+
+</Step>
+
+<Step title="Test en pas aan">
+
+<Tip>
+Tip: Begin met een mid-range model (zoals GPT-4o Mini), evalueer de kwaliteit, pas dan aan:
+- Kwaliteit onvoldoende? → Probeer een beter model
+- Kwaliteit uitstekend? → Test een goedkoper model om te besparen
+</Tip>
+
+</Step>
+</Steps>
+
+---
+
+## Veelgestelde vragen
+
+<AccordionGroup>
+<Accordion title="Hoeveel gaat dit mij werkelijk kosten?" icon="dollar-sign">
+Om uw kosten in te schatten:
+
+1. Volg uw werkelijke gebruik gedurende enkele dagen
+2. Tel de tokens per typisch verzoek
+3. Bereken op basis van het tarief van uw gekozen model
+
+Uw verkoopteam kan u helpen kosten in te schatten op basis van uw specifieke use case en verwacht volume.
+
+[Neem contact op met verkoop](/nl/support-resources/getting-help)
+</Accordion>
+
+<Accordion title="Kan ik verschillende modellen mixen?" icon="shuffle">
+Ja! Dit is eigenlijk een slimme strategie:
+
+- Klanttaken: Gebruik betere modellen (ze vertegenwoordigen uw merk)
+- Interne taken: Gebruik budget modellen (kwaliteit minder belangrijk)
+- Testen/ontwikkeling: Gebruik de goedkoopste modellen
+
+U kunt verschillende modellen configureren voor verschillende AI-agents.
+</Accordion>
+
+<Accordion title="Wat als ik het verkeerde model kies?" icon="triangle-exclamation">
+Geen probleem! U kunt op elk moment van model wisselen:
+
+1. Test met een mid-range model
+2. Evalueer de kwaliteit voor uw use case
+3. Pas aan naar boven of beneden op basis van resultaten
+
+Er is geen boete voor wisselen, en u betaalt alleen voor wat u gebruikt.
+</Accordion>
+
+<Accordion title="Hoe weet ik welk model ik gebruik?" icon="circle-question">
+Bij het aanmaken of bewerken van een AI-agent in WonkaChat, selecteert u het model in de agent-instellingen. Elke agent kan een ander model gebruiken.
+
+Onze aanbeveling: Begin met GPT-4o Mini voor de meeste zakelijke taken, pas vervolgens aan op basis van uw kwaliteitsbehoeften.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Aanbevolen modellen om mee te starten
+
+Niet zeker waar te beginnen? Hier zijn onze topaanbevelingen:
+
+<CardGroup cols={3}>
+<Card title="Beste prijs-kwaliteit" icon="star">
+GPT-4o Mini
+
+Uitstekende kwaliteit voor de meeste zakelijke taken. Dit is wat we aanraden aan 80% van onze klanten.
+
+Gebruiken voor: E-mails, rapporten, algemene vragen, klantenondersteuning
+</Card>
+
+<Card title="Beste voor snelheid" icon="gauge">
+Gemini 2.5 Flash
+
+Zeer snel en kosteneffectief. Ideaal voor hoog-volume en urgente taken.
+
+Gebruiken voor: Snelle antwoorden, FAQ's, eenvoudige classificaties
+</Card>
+
+<Card title="Beste voor complexe taken" icon="brain">
+Claude Sonnet 4.6
+
+Uitzonderlijk in het volgen van complexe instructies en genuanceerd redeneren.
+
+Gebruiken voor: Analyse, strategie, gevoelige communicatie
+</Card>
+</CardGroup>
+
+---
+
+## Meer details nodig?
+
+<CardGroup cols={2}>
+<Card title="Gedetailleerde modelprijzen" icon="table" href="/nl/pricing/tokens-pricing">
+Bekijk de volledige prijstabellen voor alle beschikbare AI-modellen.
+</Card>
+
+<Card title="Neem contact op met verkoop" icon="phone" href="/nl/support-resources/getting-help">
+Niet zeker welk model past? Ons team kan uw behoeften analyseren en de beste keuze aanbevelen.
+</Card>
+</CardGroup>

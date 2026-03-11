@@ -1,0 +1,370 @@
+---
+title: "Understanding Token Pricing"
+description: "A simple guide to understanding how AI model pricing works and choosing the right model for your needs"
+---
+
+## What Are Tokens?
+
+<Info>
+Tokens are the units that measure AI model usage. Think of them as the "currency" that AI models consume when they process your requests.
+
+Simple analogy: If AI models were cars, tokens would be gallons of gas. Different cars (models) use different amounts of gas (tokens) to go the same distance.
+</Info>
+
+### How to Think About Tokens
+
+- 1 token ≈ 3/4 of a word in English
+- "Hello, how are you?" = approximately 6 tokens
+- A typical email (200 words) = approximately 265 tokens
+- A full page of text (500 words) = approximately 665 tokens
+
+<Check>
+Both your question AND the AI's answer consume tokens. You pay for both.
+</Check>
+
+---
+
+## Why Different Models Cost Different Amounts
+
+Just like cars, AI models come in different sizes with different capabilities:
+
+<CardGroup cols={3}>
+<Card title="Economy Models" icon="piggy-bank">
+0.04 to 0.15 USD per 1M tokens
+
+Like a compact car - efficient for everyday tasks.
+
+Best for:
+- Simple questions
+- Categorization
+- Basic summaries
+- High-volume tasks
+</Card>
+
+<Card title="Standard Models" icon="gauge">
+0.60 to 3.00 USD per 1M tokens
+
+Like a sedan - reliable for most needs.
+
+Best for:
+- Business emails
+- Reports
+- Research
+- General conversations
+</Card>
+
+<Card title="Premium Models" icon="rocket">
+10.00 to 75.00 USD per 1M tokens
+
+Like a luxury car - maximum capability.
+
+Best for:
+- Critical decisions
+- Complex analysis
+- Strategic planning
+- Maximum accuracy
+</Card>
+</CardGroup>
+
+---
+
+## Available Models in WonkaChat
+
+<Tabs>
+<Tab title="By Provider">
+
+### OpenAI Models
+
+<AccordionGroup>
+<Accordion title="GPT-5 Series (Latest)" icon="star">
+
+| Model | Best For |
+|-------|----------|
+| GPT-5.2 | Most advanced general tasks |
+| GPT-5 | High-quality responses |
+
+<Tip>
+GPT-5 series offers cutting-edge performance for complex tasks.
+</Tip>
+
+</Accordion>
+
+<Accordion title="GPT-4o Series" icon="circle-check">
+
+| Model | Best For |
+|-------|----------|
+| GPT-4o | High-quality responses, complex reasoning |
+| GPT-4o Mini | General tasks, best value |
+
+<Check>
+GPT-4o Mini is recommended for most business tasks - excellent balance of quality and cost.
+</Check>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Anthropic Claude Models
+
+<AccordionGroup>
+<Accordion title="Claude Sonnet Series" icon="brain">
+
+| Model | Best For |
+|-------|----------|
+| Claude Sonnet 4.6 | Latest version, enhanced performance |
+| Claude Sonnet 4.5 | Balanced performance |
+| Claude Sonnet 4 | Complex reasoning and instructions |
+
+<Tip>
+Claude Sonnet models excel at following complex instructions and nuanced tasks.
+</Tip>
+
+</Accordion>
+
+<Accordion title="Claude Haiku & Opus" icon="circle">
+
+| Model | Best For |
+|-------|----------|
+| Claude Haiku 4.5 | Fast, efficient tasks |
+| Claude Opus 4.5 | Maximum capability and accuracy |
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Google Gemini Models
+
+<AccordionGroup>
+<Accordion title="Gemini 3 Series (Preview)" icon="sparkles">
+
+| Model | Best For |
+|-------|----------|
+| Gemini 3 Pro Preview | Next-gen complex reasoning |
+| Gemini 3 Flash Preview | Next-gen fast tasks |
+
+<Info>
+Gemini 3 models are preview versions with cutting-edge capabilities.
+</Info>
+
+</Accordion>
+
+<Accordion title="Gemini 2.5 Series" icon="google">
+
+| Model | Best For |
+|-------|----------|
+| Gemini 2.5 Pro | Complex reasoning tasks |
+| Gemini 2.5 Flash | Fast, cost-effective tasks |
+
+<Check>
+Gemini 2.5 Flash offers excellent performance at very competitive pricing.
+</Check>
+
+</Accordion>
+</AccordionGroup>
+
+---
+
+### Mistral AI Models
+
+<AccordionGroup>
+<Accordion title="Mistral Latest Series" icon="sparkles">
+
+| Model | Best For |
+|-------|----------|
+| Mistral Large Latest | Advanced tasks requiring high capability |
+| Mistral Medium Latest | Balanced performance for general use |
+
+<Info>
+Mistral "Latest" models automatically update to the newest versions, ensuring you always have access to improvements.
+</Info>
+
+</Accordion>
+</AccordionGroup>
+
+</Tab>
+
+<Tab title="By Use Case">
+
+### Simple Tasks (FAQ, categorization, summaries)
+
+Best options:
+- GPT-4o Mini - Best overall value
+- Claude Haiku 4.5 - Fast and efficient
+- Gemini 2.5 Flash - Very cost-effective
+
+---
+
+### General Business Tasks (emails, reports, research)
+
+Best options:
+- GPT-4o - High quality
+- Claude Sonnet 4.6 - Excellent instruction following
+- Gemini 2.5 Pro - Strong performance
+
+---
+
+### Complex Reasoning (analysis, strategy, coding)
+
+Best options:
+- GPT-5.2 - Most advanced
+- Claude Opus 4.5 - Maximum capability
+- Claude Sonnet 4.6 - Complex instructions
+- Gemini 3 Pro Preview - Next-gen reasoning
+
+---
+
+### High-Volume Operations (chatbots, automation)
+
+Best options:
+- GPT-4o Mini - Best value
+- Gemini 2.5 Flash - Very cost-effective
+- Claude Haiku 4.5 - Fast processing
+
+</Tab>
+</Tabs>
+
+---
+
+## Which Model Should You Use?
+
+<Steps>
+<Step title="Start with the question: How important is this task?">
+
+Low stakes, high volume:
+- Customer FAQs
+- Simple categorization
+- Basic summaries
+- Internal notes
+
+→ Use Economy Models: GPT-4o Mini, Gemini 2.5 Flash, Claude Haiku 4.5
+
+Medium importance:
+- Customer-facing emails
+- Internal reports
+- Research tasks
+- General business tasks
+
+→ Use Standard Models: GPT-4o, Claude Sonnet 4.6, Gemini 2.5 Pro
+
+High stakes, critical:
+- Client proposals
+- Strategic decisions
+- Complex analysis
+- Sensitive communications
+
+→ Use Premium Models: GPT-5.2, Claude Opus 4.5, Gemini 3 Pro Preview
+
+</Step>
+
+<Step title="Consider your volume">
+
+How many requests per day?
+
+- High volume (1,000+ per day): Every cent matters → Use economy models
+- Medium volume (100-1,000 per day): Balance quality and cost → Use standard models
+- Low volume (less than 100 per day): Quality over cost → Use premium models where needed
+
+</Step>
+
+<Step title="Test and adjust">
+
+<Tip>
+Pro tip: Start with a mid-tier model (like GPT-4o Mini), evaluate the quality, then adjust:
+- Quality not good enough? → Try a better model
+- Quality is great? → Test a cheaper model to save money
+</Tip>
+
+</Step>
+</Steps>
+
+---
+
+## Common Questions
+
+<AccordionGroup>
+<Accordion title="How much will this actually cost me?" icon="dollar-sign">
+To estimate your costs:
+
+1. Track your actual usage for a few days
+2. Count tokens per typical request
+3. Calculate based on your chosen model's rate
+
+Your Sales Support team can help you estimate costs based on your specific use case and expected volume.
+
+[Contact Sales Support Team](/en/support-resources/getting-help)
+</Accordion>
+
+<Accordion title="Can I mix different models?" icon="shuffle">
+Yes! This is actually a smart strategy:
+
+- Customer-facing tasks: Use better models (they represent your brand)
+- Internal tasks: Use economy models (quality matters less)
+- Testing/development: Use the cheapest models
+
+You can configure different models for different AI agents.
+</Accordion>
+
+<Accordion title="What if I pick the wrong model?" icon="triangle-exclamation">
+No problem! You can switch models anytime:
+
+1. Test with a mid-tier model
+2. Evaluate quality for your use case
+3. Adjust up or down based on results
+
+There's no penalty for switching, and you only pay for what you use.
+</Accordion>
+
+<Accordion title="How do I know which model I'm using?" icon="circle-question">
+When creating or editing an AI agent in WonkaChat, you select the model in the agent settings. Each agent can use a different model.
+
+Our recommendation: Start with GPT-4o Mini for most business tasks, then adjust based on your quality needs.
+</Accordion>
+</AccordionGroup>
+
+---
+
+## Recommended Starting Models
+
+Not sure where to start? Here are our top recommendations:
+
+<CardGroup cols={3}>
+<Card title="Best Overall Value" icon="star">
+GPT-4o Mini
+
+Excellent quality for most business tasks. This is what we recommend to 80% of our customers.
+
+Use for: Emails, reports, general questions, customer support
+</Card>
+
+<Card title="Best for Speed" icon="gauge">
+Gemini 2.5 Flash
+
+Very fast and cost-effective. Great for high-volume, time-sensitive tasks.
+
+Use for: Quick responses, FAQs, simple classifications
+</Card>
+
+<Card title="Best for Complex Tasks" icon="brain">
+Claude Sonnet 4.6
+
+Exceptional at following complex instructions and nuanced reasoning.
+
+Use for: Analysis, strategy, sensitive communications
+</Card>
+</CardGroup>
+
+---
+
+## Need More Details?
+
+<CardGroup cols={2}>
+<Card title="Detailed Model Pricing" icon="table" href="/en/pricing/tokens-pricing">
+See complete pricing tables for all available AI models.
+</Card>
+
+<Card title="Contact Sales" icon="phone" href="/en/support-resources/getting-help">
+Not sure which model is right? Our team can analyze your needs and recommend the best fit.
+</Card>
+</CardGroup>
