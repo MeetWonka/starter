@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - '*'
+      - main
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -18,27 +18,19 @@ steps:
     git config --global user.email "azure-pipeline@wonka.dev"
     git config --global user.name "Azure Pipeline"
     
-    # Fetch all remote branches
-    git fetch origin
+    # Checkout main branch
+    git checkout main
     
-    # Create local tracking branches for all remote branches
-    for branch in $(git branch -r | grep -v '\->' | sed 's/origin\///'); do
-      git branch --track "$branch" "origin/$branch" 2>/dev/null || true
-    done
-    
-    echo "Listing all branches:"
-    git branch -a
-  displayName: 'Configure Git and fetch all branches'
+    echo "Current branch:"
+    git branch
+  displayName: 'Configure Git and checkout main'
 
 - script: |
-    echo "Syncing all branches to GitHub (except deleting main)..."
+    echo "Syncing main branch to GitHub..."
     git remote add github https://$(Github_pat)@github.com/MeetWonka/starter.git
     
-    # Push all branches
-    git push github --all --force
-    
-    # Push all tags
-    git push github --tags --force
-  displayName: 'Sync to GitHub'
+    # Push only main branch
+    git push github main:main --force
+  displayName: 'Sync main to GitHub'
   env:
     GITHUB_PAT: $(Github_pat)
