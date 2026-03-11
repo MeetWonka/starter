@@ -17,12 +17,20 @@ steps:
 - script: |
     git config --global user.email "azure-pipeline@wonka.dev"
     git config --global user.name "Azure Pipeline"
-  displayName: 'Configure Git'
+    
+    # Checkout main branch
+    git checkout main
+    
+    echo "Current branch:"
+    git branch
+  displayName: 'Configure Git and checkout main'
 
 - script: |
-    echo "Mirroring to GitHub dev branch..."
+    echo "Syncing main branch to GitHub..."
     git remote add github https://$(Github_pat)@github.com/MeetWonka/starter.git
-    git push github refs/heads/main:refs/heads/dev --force
-  displayName: 'Mirror to GitHub dev branch'
+    
+    # Push only main branch
+    git push github main:main --force
+  displayName: 'Sync main to GitHub'
   env:
     GITHUB_PAT: $(Github_pat)
