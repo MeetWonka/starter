@@ -1,0 +1,86 @@
+/*
+ * Wonka AI brand layer for Mintlify.
+ * Values mirror the Wonka design system tokens (www.wonka-ai.com/design-system).
+ * Mintlify auto-includes any .css file at the repo root.
+ */
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/InterDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --wonka-black: #0e1a16;
+  --wonka-light-brown: #76766b;
+  --wonka-dark-gray: #d9d9d5;
+  --wonka-gray: #f6f6f4;
+  --wonka-blue-600: #2f6de0;
+  --wonka-blue-400: #75a3fd;
+  --wonka-radius-sm: 0.5rem;
+  --wonka-font-mono: "Cascadia Mono", "Segoe UI Mono", ui-monospace, monospace;
+}
+
+/* Typography: editorial serif headings, regular weight, full-contrast text */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400 !important;
+  letter-spacing: -0.01em;
+}
+
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4 {
+  color: var(--wonka-black);
+}
+
+html:not(.dark) body {
+  color: var(--wonka-black);
+}
+
+strong,
+b {
+  font-weight: 500;
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--wonka-font-mono);
+}
+
+/* Links use the accessible primary blue */
+#content-area a:not([class*="card"]) {
+  text-decoration-color: var(--wonka-blue-600);
+}
+
+/* Cards and callouts: neutral warm borders, design-system radius */
+html:not(.dark) #content-area .card,
+html:not(.dark) #content-area [class*="callout"] {
+  border-color: var(--wonka-dark-gray);
+}
+
+#content-area .card,
+#content-area [class*="callout"],
+#content-area pre,
+#content-area img {
+  border-radius: var(--wonka-radius-sm);
+}
+
+/* Sidebar group labels read like the site's eyebrows */
+#sidebar-content .sidebar-group-header,
+#sidebar-content h5 {
+  font-family: "Inter Display", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Dark theme text follows the Wonka near-black palette */
+html.dark #content-area {
+  color: #ffffff;
+}

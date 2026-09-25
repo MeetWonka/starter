@@ -3,9 +3,29 @@
   "theme": "mint",
   "name": "WonkaChat Wiki",
   "colors": {
-    "primary": "#5a4bff",
-    "light": "#7e72ff",
-    "dark": "#362d9a"
+    "primary": "#2f6de0",
+    "light": "#75a3fd",
+    "dark": "#2f6de0"
+  },
+  "background": {
+    "color": {
+      "light": "#ffffff",
+      "dark": "#0e1a16"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "GT Sectra",
+      "weight": 400,
+      "source": "/fonts/GT-Sectra-Regular.woff2",
+      "format": "woff2"
+    },
+    "body": {
+      "family": "Inter Display",
+      "weight": 400,
+      "source": "/fonts/InterDisplay-Regular.woff2",
+      "format": "woff2"
+    }
   },
   "favicon": "/favicon.png",
   "banner": {
@@ -136,7 +156,7 @@
           "anchors": [
             {
               "anchor": "Our website",
-              "href": "https://wonkachat.meetwonka.com/",
+              "href": "https://www.wonka-ai.com/",
               "icon": "globe"
             },
             {
@@ -269,7 +289,7 @@
           "anchors": [
             {
               "anchor": "Notre site web",
-              "href": "https://wonkachat.meetwonka.com/",
+              "href": "https://www.wonka-ai.com/",
               "icon": "globe"
             },
             {
@@ -402,7 +422,7 @@
           "anchors": [
             {
               "anchor": "Onze website",
-              "href": "https://wonkachat.meetwonka.com/",
+              "href": "https://www.wonka-ai.com/",
               "icon": "globe"
             },
             {
@@ -535,7 +555,7 @@
           "anchors": [
             {
               "anchor": "Notre site web",
-              "href": "https://wonkachat.meetwonka.com/",
+              "href": "https://www.wonka-ai.com/",
               "icon": "globe"
             },
             {
@@ -567,8 +587,9 @@
     }
   },
   "logo": {
-    "light": "/logo/Wonka_Full_GradientPurpleHighRes.png",
-    "dark": "/logo/Wonka_Full_GradientPurpleHighRes.png"
+    "light": "/logo/wonka-logo-black.svg",
+    "dark": "/logo/wonka-logo-white.svg",
+    "href": "https://www.wonka-ai.com"
   },
   "errors": {
     "404": {
