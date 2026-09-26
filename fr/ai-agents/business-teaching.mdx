@@ -1,167 +1,159 @@
 ---
-title: "Enseignement métier"
-description: "Fournissez un contexte métier aux agents pour des réponses précises et spécifiques à votre entreprise."
+title: "Enseigner votre contexte métier"
+description: "Donnez du contexte métier à vos agents pour des réponses précises et propres à votre entreprise."
 ---
 
-Enseigner le contexte métier à vos agents garantit qu'ils comprennent la terminologie, les processus et les politiques de votre entreprise. Cela permet aux agents de fournir des réponses fondées sur vos opérations réelles au lieu de s'appuyer sur des hypothèses génériques.
+Enseigner votre contexte métier à vos agents leur permet de comprendre la terminologie, les processus et les politiques de votre entreprise. Ils donnent ainsi des réponses ancrées dans votre activité réelle plutôt que des suppositions génériques.
 
 <Info>
-L'enseignement métier aide les agents à utiliser votre terminologie exacte, à suivre vos processus et à s'aligner avec les politiques de votre entreprise.
+L'enseignement métier aide l'agent à utiliser votre terminologie exacte, à suivre vos processus et à respecter les politiques de votre entreprise.
 </Info>
 
 ---
 
 ## Pourquoi enseigner votre contexte métier ?
 
-Sans contexte métier, les agents font des hypothèses génériques. Avec lui, ils fournissent des réponses précises et spécifiques à l'entreprise.
+Sans contexte métier, l'agent fait des suppositions génériques. Avec, il donne des réponses précises et propres à votre entreprise.
 
-**Exemple - Rédiger un e-mail de support client :**
+**Exemple — rédiger un e-mail de support client :**
 
-**Sans contexte :** « La plupart des entreprises offrent des remboursements dans les 14-30 jours. Vérifiez la politique spécifique de votre entreprise. »
+**Sans contexte :** « La plupart des entreprises proposent un remboursement sous 14 à 30 jours. Vérifiez la politique de votre entreprise. »
 
-**Avec contexte :** « Notre politique de remboursement permet les demandes dans les 30 jours, traitées en 3-5 jours ouvrables. Souhaitez-vous que j'en initie une ? »
+**Avec contexte :** « Notre politique de remboursement autorise une demande sous 30 jours, traitée en 3 à 5 jours ouvrés. Voulez-vous que j'en lance une ? »
 
-### Avantages clés
+### Bénéfices clés
 
 <CardGroup cols={2}>
 <Card title="Réponses précises" icon="check-circle">
-Les agents utilisent vos termes exacts, politiques et processus
+L'agent utilise vos termes, politiques et processus exacts.
 </Card>
 
-<Card title="Erreurs réduites" icon="shield-check">
-L'ancrage dans vos informations empêche les hallucinations (l'IA qui invente des détails incorrects)
+<Card title="Moins d'erreurs" icon="shield-check">
+S'appuyer sur vos informations réduit les hallucinations (l'IA qui invente des détails incorrects).
 </Card>
 
 <Card title="Cohérence de marque" icon="palette">
-Les agents maintiennent votre voix, ton et style de communication
+L'agent conserve votre voix, votre ton et votre style de communication.
 </Card>
 
-<Card title="Meilleurs résultats" icon="trophy">
-Les membres de l'équipe obtiennent des informations fiables et exploitables
+<Card title="De meilleurs résultats" icon="trophy">
+Vos équipes obtiennent une information fiable et exploitable.
 </Card>
 </CardGroup>
 
 ---
 
-## Comment fournir un contexte métier
+## Comment fournir du contexte métier
 
-### Ajouter du contexte aux instructions de l'agent
+### Ajouter du contexte dans la section Comportement
 
-Incluez des informations spécifiques à l'entreprise directement dans les instructions de l'agent. Commencez par l'essentiel et développez au besoin.
+Incluez les informations propres à votre entreprise directement dans les instructions de l'agent, dans la section **Comportement**. Commencez par l'essentiel et complétez au fil du temps.
 
 <AccordionGroup>
-<Accordion title="Directives de voix et de ton" icon="message">
-Définissez comment les agents doivent communiquer pour correspondre à votre marque.
+<Accordion title="Ton et style de communication" icon="message">
+Définissez comment l'agent doit communiquer pour respecter votre marque.
 
 **Exemple :**
 ```
 Style de communication :
-- Professionnel mais amical, jamais trop décontracté
-- Utiliser la voix active et un langage direct
+- Professionnel mais chaleureux, jamais trop décontracté
+- Voix active, langage direct
 - S'adresser aux clients par leur prénom
-- Garder les réponses concises et exploitables
+- Réponses concises et actionnables
 ```
 
 <Tip>
-Incluez des phrases spécifiques à utiliser ou à éviter. Cela garantit la cohérence dans toutes les interactions de l'agent.
+Indiquez des formulations précises à utiliser ou à éviter. Cela garantit la cohérence sur toutes les interactions de l'agent.
 </Tip>
 </Accordion>
 
-<Accordion title="Terminologie et glossaires" icon="book">
-Définissez les termes spécifiques à l'entreprise, les noms de produits et les acronymes.
+<Accordion title="Terminologie et glossaire" icon="book">
+Définissez les termes, noms de produits et acronymes propres à votre entreprise.
 
 **Exemple :**
 ```
 Termes clés :
-- "Niveau Premium" = niveau d'abonnement entreprise
-- "Démarrage rapide" = notre processus d'intégration de 15 minutes
-- MRR = Revenu Mensuel Récurrent
+- « Formule Premium » = niveau d'abonnement enterprise
+- « Quick-start » = notre parcours d'onboarding de 15 minutes
+- MRR = revenu récurrent mensuel
 - CS = Customer Success (pas Customer Support)
 ```
 
-Des définitions claires préviennent les malentendus et garantissent que les agents utilisent votre langage.
+Des définitions claires évitent les malentendus et garantissent que l'agent utilise votre vocabulaire.
 </Accordion>
 
 <Accordion title="Intégration des politiques" icon="shield">
-Incluez les politiques pertinentes pour que les agents puissent répondre aux questions avec précision.
+Incluez les politiques pertinentes pour que l'agent puisse répondre avec précision.
 
 **Exemple :**
 ```
 Politiques clés :
-- Remboursements : Remboursement complet dans les 30 jours, traité en 3-5 jours ouvrables
-- Heures de support : 9h-18h EST, lundi-vendredi
-- SLA de réponse : 4 heures ouvrables pour standard, 1 heure pour entreprise
-- Escalade : Les problèmes dépassant 500€ nécessitent l'approbation du responsable
+- Remboursements : intégral sous 30 jours, traité en 3-5 jours ouvrés
+- Horaires du support : 9h-18h, du lundi au vendredi
+- SLA de réponse : 4h ouvrées en standard, 1h en enterprise
+- Escalade : les demandes de plus de 500 € nécessitent l'accord d'un manager
 ```
 
 <Warning>
-Vérifiez toujours que les agents appliquent correctement les politiques avant de les déployer à votre équipe. Testez avec des scénarios réalistes.
+Vérifiez toujours que l'agent applique correctement les politiques avant de le partager avec votre équipe. Testez avec des scénarios réalistes.
 </Warning>
 </Accordion>
 
 <Accordion title="Instructions de processus" icon="list-check">
-Documentez les flux de travail étape par étape que les agents doivent suivre.
+Documentez les workflows étape par étape que l'agent doit suivre.
 
 **Exemple :**
 ```
-Processus d'intégration client :
-1. Envoyer un e-mail de bienvenue avec les identifiants de connexion
-2. Planifier un appel d'orientation dans les 48 heures
-3. Attribuer un responsable de succès dédié
-4. Fournir l'accès aux supports de formation
-5. Faire un suivi après 7 jours
+Processus d'onboarding client :
+1. Envoyer l'e-mail de bienvenue avec les identifiants
+2. Planifier un appel d'orientation sous 48h
+3. Assigner un chargé de succès client dédié
+4. Donner accès aux supports de formation
+5. Relancer après 7 jours
 ```
 
-Des processus clairs garantissent la cohérence et l'exhaustivité des actions de l'agent.
+Des processus clairs garantissent la cohérence et la complétude des actions de l'agent.
 </Accordion>
 </AccordionGroup>
 
-**Bonne pratique :** Mettez à jour les instructions lorsque les politiques ou processus changent. Un contexte obsolète conduit à des informations incorrectes.
+**Bonne pratique :** mettez à jour les instructions quand vos politiques ou processus changent. Un contexte obsolète produit une information incorrecte.
 
 ---
 
-### Télécharger des documents pour un contexte approfondi
+### Charger des documents pour un contexte approfondi
 
-Pour des informations étendues comme la documentation produit, les manuels de politiques ou les bases de connaissances, téléchargez des documents que les agents peuvent automatiquement rechercher et référencer lorsqu'ils répondent aux questions.
+Pour des informations volumineuses — documentation produit, manuels de politiques, bases de connaissances — chargez des documents dans la section **Connaissances** : l'agent les recherche et les référence automatiquement pour répondre aux questions.
 
-<Frame caption="Téléchargez des documents pour le contexte de l'agent">
-<img src="../../images/rag.gif" alt="Interface de téléchargement de documents" />
-</Frame>
+**Pourquoi charger des documents ?**
+- L'agent accède à des informations détaillées sans surcharger les instructions
+- Idéal pour une documentation trop volumineuse pour tenir dans les instructions
+- L'information reste à jour : mettez à jour les documents à tout moment sans toucher aux instructions de l'agent
 
-**Pourquoi télécharger des documents ?**
-- Les agents peuvent accéder aux informations détaillées sans encombrer les instructions
-- Parfait pour la documentation complète qui est trop volumineuse pour les instructions
-- Les informations restent à jour en mettant à jour les documents à tout moment sans changer les instructions de l'agent
-
-**Meilleur pour :** Documentation produit, manuels de politiques, guides de processus, supports de formation, bases de connaissances
+**Idéal pour :** documentation produit, manuels de politiques, guides de process, supports de formation, bases de connaissances
 
 <Tip>
-Utilisez les instructions pour les informations critiques nécessaires dans chaque réponse. Utilisez les documents pour le matériel de référence extensif que les agents récupèrent uniquement si pertinent.
+Utilisez les instructions pour l'information critique nécessaire à chaque réponse. Utilisez les documents pour la documentation de référence volumineuse, que l'agent consulte seulement quand c'est pertinent.
 </Tip>
 
-<Accordion title="Détails techniques : Comment fonctionne la récupération de documents" icon="gear">
+<Accordion title="Détails techniques : comment fonctionne la recherche documentaire" icon="gear">
 
-Lorsque vous téléchargez des documents, WonkaChat utilise **RAG (Retrieval-Augmented Generation)** pour les rendre consultables par les agents.
+Quand vous chargez des documents, WonkaChat utilise le **RAG (Retrieval-Augmented Generation)** pour les rendre consultables par l'agent.
 
-**Comment ça fonctionne :**
-
-1. **Téléchargement** : Vous fournissez les documents de l'entreprise
-2. **Indexation** : Les documents sont traités et rendus consultables
-3. **Récupération** : Si pertinent, les agents trouvent automatiquement les informations des documents
-4. **Génération** : Les agents produisent des réponses ancrées dans votre documentation réelle
+**Fonctionnement :**
+1. **Chargement** : vous fournissez les documents de l'entreprise
+2. **Indexation** : les documents sont traités et rendus consultables
+3. **Recherche** : quand c'est pertinent, l'agent retrouve automatiquement l'information dans les documents
+4. **Génération** : l'agent produit une réponse ancrée dans votre documentation réelle
 
 **Conseils de préparation des documents :**
-- **Utiliser des titres clairs** : Les sections bien structurées améliorent la précision de la récupération
-- **Garder les sections ciblées** : Un sujet par section
-- **Inclure du contexte** : Rédigez les sections pour qu'elles soient compréhensibles indépendamment (par exemple, « Notre niveau Premium (99€/mois) comprend... » et non pas simplement « Il comprend... »)
-- **Rester cohérent** : Utilisez la même terminologie partout
+- **Utilisez des titres clairs** : des sections bien structurées améliorent la précision de la recherche
+- **Gardez des sections ciblées** : un sujet par section
+- **Incluez le contexte** : rédigez des sections compréhensibles indépendamment (par ex. « Notre formule Premium comprend... » plutôt que juste « Elle comprend... »)
+- **Restez cohérent** : utilisez la même terminologie partout
 
-**Sécurité et confidentialité :**
-- Documents stockés en toute sécurité dans votre environnement WonkaChat
-- Jamais utilisés pour entraîner des modèles IA
-- Accessibles uniquement aux utilisateurs avec des autorisations d'agent
-
-**En savoir plus sur RAG :** Pour des détails techniques plus approfondis, consultez les guides RAG [d'Anthropic](https://www.anthropic.com/engineering/contextual-retrieval), [d'OpenAI](https://platform.openai.com/docs/guides/optimizing-llm-accuracy#retrieval-augmented-generation-rag) ou [de Google](https://cloud.google.com/use-cases/retrieval-augmented-generation).
+<Info>
+Les documents chargés restent au sein de votre environnement WonkaChat et ne sont accessibles qu'aux utilisateurs autorisés à utiliser l'agent.
+</Info>
 
 </Accordion>
 
@@ -171,95 +163,54 @@ Lorsque vous téléchargez des documents, WonkaChat utilise **RAG (Retrieval-Aug
 
 <AccordionGroup>
 <Accordion title="Agent de support client" icon="headset">
-**Contexte nécessaire :** Fonctionnalités produit, politiques de support, étapes de dépannage, directives de communication
+**Contexte nécessaire :** fonctionnalités produit, politiques de support, étapes de dépannage, consignes de communication
 
-**Exemple d'extrait d'instruction :**
+**Exemple d'extrait d'instructions :**
 ```
-Directives de support :
+Consignes de support :
 - Toujours vérifier le compte avant de partager des détails
 - Utiliser les articles de la base de connaissances pour les problèmes techniques
-- Escalader les problèmes de facturation dépassant 500€ à l'équipe finance
-- Ton de réponse : Empathique, axé sur les solutions, professionnel
+- Escalader vers la finance les problèmes de facturation de plus de 500 €
+- Ton de réponse : empathique, orienté solution, professionnel
 ```
 </Accordion>
 
 <Accordion title="Assistant e-mail" icon="envelope">
-**Contexte nécessaire :** Voix de l'entreprise, types d'e-mails courants, flux d'approbation, terminologie interne
+**Contexte nécessaire :** voix de l'entreprise, types d'e-mails courants, workflows de validation, terminologie interne
 
-**Exemple d'extrait d'instruction :**
+**Exemple d'extrait d'instructions :**
 ```
-Style d'e-mail :
-- E-mails internes : Direct et concis
-- E-mails externes : Professionnel et courtois
-- Toujours inclure les parties prenantes pertinentes en CC le cas échéant
+Style des e-mails :
+- E-mails internes : directs et concis
+- E-mails externes : professionnels et courtois
+- Toujours mettre en copie les parties prenantes concernées le cas échéant
 - Utiliser le format de signature de l'entreprise : [Nom] | [Titre] | [Département]
 ```
 </Accordion>
 
 <Accordion title="Assistant commercial" icon="chart-line">
-**Contexte nécessaire :** Positionnement produit, tarification, public cible, processus de vente, informations concurrentielles
+**Contexte nécessaire :** positionnement produit, tarifs, cible, processus commercial, informations concurrentielles
 
-**Exemple d'extrait d'instruction :**
+**Exemple d'extrait d'instructions :**
 ```
 Contexte commercial :
-- Cible : Entreprises du marché intermédiaire (50-500 employés)
-- Proposition de valeur clé : Économie de temps de 40% sur la gestion de projets
-- Tarification : À partir de 49€/utilisateur/mois
-- Jamais accorder de réduction sans approbation du responsable
+- Cible : entreprises mid-market (50-500 employés)
+- Proposition de valeur clé : 40% de temps gagné sur la gestion de projet
+- Jamais de remise sans accord du manager
 ```
 </Accordion>
 </AccordionGroup>
 
 ---
 
-## Maintenir le contexte métier à jour
-
-<Steps>
-<Step title="Examens réguliers">
-Planifiez des examens trimestriels des instructions et documents de l'agent pour garantir l'exactitude.
-
-<Tip>
-Créez un rappel de calendrier pour examiner le contexte de l'agent après les changements de politique ou de processus majeurs.
-</Tip>
-</Step>
-
-<Step title="Collecte de commentaires">
-Demandez aux membres de l'équipe de signaler quand les agents fournissent des informations obsolètes ou incorrectes.
-
-**Ce qu'il faut surveiller :**
-- Anciens prix ou conditions mentionnés
-- Processus qui ont changé
-- Politiques qui ne sont plus en vigueur
-- Nouvelles fonctionnalités de produit non reflétées
-</Step>
-
-<Step title="Mises à jour de version">
-Versionner vos instructions et documents d'agent. Lorsque vous apportez des modifications, notez ce qui a changé et quand.
-
-**Exemple :**
-```
-Version 2.1 (Janv 2024) :
-- Mise à jour de la politique de remboursement : 30 jours → 45 jours
-- Ajout d'un nouveau niveau de tarification Premium Plus
-- Heures de support étendues : 9h-18h → 8h-20h
-```
-</Step>
-</Steps>
-
-<Warning>
-Un contexte métier obsolète est pire que pas de contexte du tout. Il conduit à une confiance mal placée dans des informations incorrectes.
-</Warning>
-
----
-
-## Prochaines étapes
+## Étapes suivantes
 
 <CardGroup cols={2}>
 <Card title="Créer votre premier agent" icon="plus-circle" href="/fr/ai-agents/creating-your-first-agent">
-Appliquez l'enseignement métier lors de la création d'agents.
+Appliquez le contexte métier pendant la construction de votre agent.
 </Card>
 
-<Card title="Utiliser les agents existants" icon="play" href="/fr/ai-agents/using-existing-agents">
-Tirez le meilleur parti des agents avec un bon contexte.
+<Card title="Partager des agents" icon="share-nodes" href="/fr/ai-agents/sharing-agents">
+Partagez votre agent bien renseigné avec votre équipe.
 </Card>
 </CardGroup>

@@ -1,0 +1,39 @@
+---
+title: "Audit Log"
+description: "Track access changes across your organization, and review agent activity if your organization has enabled it."
+---
+
+## RBAC audit log
+
+<Note>
+Settings → Organization → Security → RBAC audit log. Visible to admins who can manage security.
+</Note>
+
+The RBAC audit log records every access change in your organization — who changed what, and when: connector policy rules (added, removed, or applied in bulk), groups (created, deleted, members added or removed), and role permission updates.
+
+Each entry shows the **Time**, **Actor** (or **System** for automated changes), **Action** (for example *Allow rule added* or *Member removed*), the affected **Entity** and **Type** (Group, Group membership, MCP server, Role permission, Connector policy), the **Target**, and an optional **Reason**.
+
+Filter by entity type, action, or a date range (**From** / **To**), and **Clear filters** to reset. If the log fails to load, retry from the same page.
+
+<Tip>
+Review the audit log periodically for unexpected permission or connector-access changes — especially after onboarding a new admin.
+</Tip>
+
+## Agent audit
+
+<Note>
+Only visible when your organization has enabled **Audit your agent** for a given agent, and the **Agent Audit** organization feature. Ask your administrator if you don't see this.
+</Note>
+
+When enabled on an agent, the agent's owner (or org admins/owners) can review its activity from **Settings → Agent Stats** or the agent's own audit panel:
+
+- **Audit - View conversations**: see conversation content the agent handled, if enabled.
+- **Audit - View tool calls**: see the tool calls and their arguments/output the agent made, if enabled.
+
+Enabling **View tool calls** or **View conversations** requires **Audit your agent** to be turned on first for that agent; turning **Audit your agent** off also turns off both of these.
+
+The audit view shows, per conversation: date, title, tokens, cost, and message/tool-call counts, with the ability to open a conversation for detail (args and output of each tool call, if that sub-permission is on).
+
+<Warning>
+Audit data can include real conversation content and tool inputs/outputs. Restrict who has **Audit - View conversations** and **Audit - View tool calls** to the people who need it for oversight.
+</Warning>

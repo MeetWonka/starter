@@ -1,0 +1,99 @@
+---
+title: "Custom Connectors"
+description: "Add your own MCP connector when the tool you need isn't in WonkaChat's built-in catalog."
+---
+
+WonkaChat ships with dozens of ready-to-use connectors, but you can also add your own **custom MCP connector** to reach any tool that exposes a Model Context Protocol (MCP) server, whether it's an internal system or a provider not yet in the catalog.
+
+<Info>
+Adding custom connectors is an admin-level capability. If you don't see an **"Add MCP Tool"** button on the Connectors page, your organization hasn't enabled this feature for your role.
+</Info>
+
+## Before You Start
+
+<CardGroup cols={2}>
+<Card title="You Need an MCP Server" icon="server">
+Custom connectors point to an existing MCP server endpoint. WonkaChat doesn't build the server for you, it connects to one that's already running.
+</Card>
+
+<Card title="Admin Access Required" icon="user-shield">
+Creating and editing custom connectors is controlled by an organization-level permission. Ask your admin if the option isn't available to you.
+</Card>
+</CardGroup>
+
+<Warning>
+**Custom connectors are not verified by Wonka AI.** You are responsible for trusting the endpoint you connect to and reviewing what data and actions it exposes before enabling it for yourself or your team.
+</Warning>
+
+## Adding a Custom Connector
+
+<Steps>
+<Step title="Open the Connectors page">
+Go to **Customize → Connectors**, then click **"Add MCP Tool"**.
+</Step>
+
+<Step title="Fill in the basics">
+- **Name**: a short, recognizable label (letters, numbers, and spaces only)
+- **Description** (optional): what the connector does, shown to anyone browsing the catalog
+- **Icon** (optional): upload an image to help identify the connector at a glance
+</Step>
+
+<Step title="Set the connection details">
+- **Connector URL**: the address of the MCP server (for example `https://mcp.example.com`)
+- **Transport type**: choose **Streamable HTTP** or **SSE**, depending on what the server supports
+</Step>
+
+<Step title="Choose authentication">
+Pick the authentication method the MCP server requires:
+
+<Tabs>
+<Tab title="No Authentication">
+Use this for internal or public MCP servers that don't require credentials.
+</Tab>
+
+<Tab title="API Key">
+- Enter the header format: **Bearer**, **Basic**, or **Custom**
+- Optionally check **"User provides their own API key"** so each teammate supplies their own key instead of sharing one admin-level key
+</Tab>
+
+<Tab title="OAuth">
+- WonkaChat can auto-discover the server's OAuth configuration, or you can enter the authorization and token endpoints manually
+- After creating the connector, WonkaChat shows a **redirect URI** to register with your OAuth provider
+</Tab>
+</Tabs>
+</Step>
+
+<Step title="Add custom headers (optional)">
+If the MCP server needs extra headers beyond the authorization header (for example a tenant ID or API version), add them as name/value pairs. There's a limit on how many you can add per connector.
+</Step>
+
+<Step title="Confirm and create">
+Check **"I trust this application"** to confirm you understand the connector isn't verified by Wonka AI, then click **"Create"**.
+
+<Check>
+Once created, the connector appears alongside built-in connectors on the Connectors page. Connect and enable it the same way you would any other connector.
+</Check>
+</Step>
+</Steps>
+
+## Editing and Removing Custom Connectors
+
+- **Edit**: click a connector you created to update its URL, authentication, or headers.
+- **Delete**: deleting a custom connector is restricted to organization admins.
+- Custom connectors can be tagged and shared with specific teammates the same way as any other resource in WonkaChat, if your organization has sharing enabled.
+
+## Controlling Access
+
+Admins decide which custom (and built-in) connectors are available to which users or groups through [tool policies](/en/administration/groups-and-tool-policies). Use this to limit a sensitive internal connector to the team that owns it, for example, rather than exposing it organization-wide.
+
+## Next Steps
+
+<CardGroup cols={2}>
+<Card title="Setup Guide" icon="plug" href="/en/tools-connection/setting-up-your-first-connection">
+Connect and enable a connector for your chat once it's been created.
+</Card>
+
+<Card title="Troubleshooting" icon="wrench" href="/en/tools-connection/troubleshooting-connections">
+Solutions for common connection problems, including custom connectors.
+</Card>
+</CardGroup>

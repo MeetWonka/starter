@@ -1,0 +1,81 @@
+---
+title: "Compétences"
+description: "Regroupez des instructions réutilisables une seule fois, puis laissez les agents les appliquer automatiquement ou invoquez-les vous-même."
+---
+
+Une **Compétence** est un ensemble réutilisable d'instructions — des consignes de rédaction, un processus à suivre, des règles de marque — qu'un agent peut appliquer automatiquement lorsque c'est pertinent, ou que vous pouvez invoquer vous-même dans n'importe quelle conversation. Considérez-la comme une capacité ciblée que vous enseignez une fois et réutilisez partout.
+
+<Info>
+Les Compétences sont une fonctionnalité optionnelle de l'organisation. Si vous ne voyez pas **Compétences** sous **Customize** dans votre barre latérale, contactez votre administrateur.
+</Info>
+
+---
+
+## Créer une compétence
+
+<Steps>
+<Step title="Ouvrez Compétences">
+Dans la barre latérale, développez **Customize**, puis sélectionnez **Compétences**.
+</Step>
+<Step title="Démarrez une nouvelle compétence">
+Cliquez sur **Créer une compétence**.
+</Step>
+<Step title="Décrivez-la">
+Donnez-lui un nom (lettres minuscules, chiffres et tirets uniquement, par ex. `brand-guidelines`) et une description. Précisez quand cette compétence doit s'appliquer — c'est cette description que l'agent utilise pour juger de sa pertinence.
+</Step>
+<Step title="Rédigez les instructions">
+Dans **Instructions**, écrivez ce que la compétence doit faire, en markdown.
+</Step>
+</Steps>
+
+## Téléverser une compétence
+
+Si vous avez déjà une compétence écrite ailleurs, vous pouvez l'importer plutôt que de la rédiger depuis le début :
+
+<Steps>
+<Step title="Ouvrez la boîte de dialogue de téléversement">
+Dans **Compétences**, choisissez **Téléverser une compétence**.
+</Step>
+<Step title="Fournissez le fichier">
+Téléversez un simple fichier **.md**, ou une archive **.zip** / **.skill**. Un fichier `.zip` ou `.skill` doit inclure un fichier `SKILL.md` ; un dossier téléversé est empaqueté automatiquement et doit également en contenir un à sa racine (ou dans un unique sous-dossier).
+</Step>
+</Steps>
+
+<Warning>
+Les imports de compétences sont limités en taille (votre administrateur définit la limite exacte, 50 Mo par défaut). Les fichiers trop volumineux sont refusés avant le téléversement.
+</Warning>
+
+## Compétences appliquées automatiquement ou invoquées manuellement
+
+Chaque compétence a un **Mode d'invocation** :
+
+<CardGroup cols={3}>
+<Card title="Automatique" icon="wand-magic-sparkles">
+La compétence est appliquée automatiquement par l'agent lorsqu'elle est pertinente pour la conversation.
+</Card>
+<Card title="Manuel" icon="hand-pointer">
+La compétence n'est utilisée que lorsqu'elle est explicitement invoquée par vous.
+</Card>
+<Card title="Les deux" icon="arrows-repeat">
+La compétence peut se déclencher automatiquement, ou être invoquée manuellement.
+</Card>
+</CardGroup>
+
+Pour invoquer une compétence manuellement, tapez **`$`** dans la zone de message pour ouvrir le sélecteur de compétences, puis choisissez celle que vous voulez utiliser pour ce message.
+
+<Tip>
+Vous pouvez activer ou désactiver n'importe quelle compétence pour vous-même sans la modifier — utilisez l'interrupteur à côté d'une compétence dans la liste pour contrôler si elle est active.
+</Tip>
+
+## Partager des compétences
+
+Les compétences se partagent comme les agents et les invites :
+- **Viewer** — peut consulter et utiliser la compétence, mais pas la modifier
+- **Editor** — peut consulter et modifier la compétence
+- **Propriétaire** — contrôle total, y compris le partage et la suppression
+
+Partagez une compétence avec des personnes précises, un groupe, ou (si votre administrateur l'autorise) tout le monde dans votre organisation.
+
+<Note>
+Votre administrateur peut restreindre qui est autorisé à créer ou partager des compétences au niveau de l'organisation.
+</Note>

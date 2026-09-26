@@ -1,0 +1,154 @@
+---
+title: "Agenten aanroepen via de API"
+description: "Roep uw WonkaChat-agenten aan vanuit uw eigen code of vanuit automatiseringstools zoals n8n en Make, via een OpenAI-compatibele API."
+---
+
+WonkaChat stelt elke agent die u heeft gebouwd beschikbaar als een OpenAI-compatibel endpoint. Als u de Chat Completions API van OpenAI kunt aanroepen, kunt u uw agent op dezelfde manier aanroepen — richt de client gewoon op WonkaChat en gebruik het ID van de agent als `model`.
+
+<Note>
+Hiervoor moet de functie **Agent API-sleutels** zijn ingeschakeld voor uw organisatie, en moet uw rol de rechten **Externe agenten → Gebruiken** hebben. Standaard hebben alleen beheerders dit recht — vraag uw beheerder om het toe te kennen indien nodig. U heeft ook minimaal bekijktoegang nodig tot de agent die u wilt aanroepen.
+</Note>
+
+## Vereisten
+
+<Check>
+- Uw organisatie heeft **Agent API-sleutels** ingeschakeld.
+- Uw rol heeft **Externe agenten → Gebruiken** ingeschakeld.
+- U bent **eigenaar** (Owner) van de agent die u wilt aanroepen. Editor of Viewer zijn van een gedeelde agent volstaat niet om die via de API aan te roepen.
+</Check>
+
+## 1. Maak een API-sleutel aan
+
+<Steps>
+<Step title="Open API-sleutels">
+Ga naar **Instellingen → API-sleutels**.
+</Step>
+<Step title="Maak een sleutel aan">
+Maak een nieuwe sleutel aan. Kopieer deze meteen — u kunt hem daarna niet meer opnieuw bekijken.
+</Step>
+<Step title="Bewaar hem veilig">
+Behandel hem als een wachtwoord: bewaar hem in een secrets manager of omgevingsvariabele, nooit in client-side code of een publieke repository.
+</Step>
+</Steps>
+
+## 2. Vind het ID van uw agent
+
+De API identificeert een agent aan de hand van zijn ID, niet zijn naam. De eenvoudigste manier om dit te vinden:
+
+<Steps>
+<Step title="Open Agenten → Alle agenten">
+Zoek de agent die u wilt aanroepen.
+</Step>
+<Step title="Kopieer de link">
+Open het **⋯**-menu van de agent en kies **Link kopiëren**. Dit kopieert een URL die eruitziet als `https://wonka.chat/c/new?agent_id=<AGENT_ID>`.
+</Step>
+<Step title="Haal het ID eruit">
+De waarde na `agent_id=` is het ID van de agent. Gebruik dit als `model`-waarde in uw API-aanroepen.
+</Step>
+</Steps>
+
+## Basis-URL en authenticatie
+
+```
+https://<uw-domein>/api/agents/v1
+```
+
+Elke aanvraag heeft een `Authorization`-header nodig met uw API-sleutel:
+
+```
+Authorization: Bearer <uw_api_sleutel>
+```
+
+## Chat Completions
+
+<Tabs>
+<Tab title="curl">
+```bash
+curl https://<uw-domein>/api/agents/v1/chat/completions \
+  -H "Authorization: Bearer $WONKACHAT_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "<AGENT_ID>",
+    "messages": [
+      { "role": "user", "content": "Vat de openstaande tickets van deze week samen." }
+    ],
+    "stream": false
+  }'
+```
+</Tab>
+<Tab title="Python (OpenAI SDK)">
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://<uw-domein>/api/agents/v1",
+    api_key="<uw_api_sleutel>",
+)
+
+response = client.chat.completions.create(
+    model="<AGENT_ID>",
+    messages=[{"role": "user", "content": "Vat de openstaande tickets van deze week samen."}],
+)
+
+print(response.choices[0].message.content)
+```
+</Tab>
+</Tabs>
+
+Om een gesprek met meerdere beurten voort te zetten, geeft u `conversation_id` en `parent_message_id` van het vorige antwoord door in de volgende aanvraag. Stel `"stream": true` in om een SSE-stream van `chat.completion.chunk`-events te ontvangen in plaats van één JSON-antwoord.
+
+## Open Responses API
+
+Voor agentic use cases die gestructureerde, item-gebaseerde output willen, is dezelfde agent ook beschikbaar via het [Open Responses](https://openresponses.org/specification)-endpoint:
+
+```
+POST https://<uw-domein>/api/agents/v1/responses
+```
+
+```json
+{
+  "model": "<AGENT_ID>",
+  "input": "Vat de openstaande tickets van deze week samen.",
+  "stream": false,
+  "previous_response_id": "resp_optioneel_id_om_een_thread_voort_te_zetten"
+}
+```
+
+Het antwoord bevat een `id` (`resp_...`) dat u kunt teruggeven als `previous_response_id` om dezelfde thread voort te zetten, een `output`-array van items, en een `usage`-object.
+
+## Agenten opvragen
+
+```
+GET /api/agents/v1/models
+GET /api/agents/v1/models/:model
+```
+
+<Info>
+`GET /models` toont alleen agenten die expliciet zijn ingeschakeld voor externe API-toegang — voor de meeste organisaties is deze lijst kort of leeg. Vertrouw hier niet op om het ID van een agent te achterhalen: haal het ID uit de WonkaChat-interface zoals hierboven beschreven, en gebruik `GET /models/:model` om te controleren of een specifiek agent-ID aanroepbaar is.
+</Info>
+
+## Foutcodes
+
+| Status | Betekenis |
+|--------|---------|
+| `400` | De aanvraag mist een verplicht veld, meestal `model` (het agent-ID). |
+| `401` | De `Authorization`-header ontbreekt, is onjuist opgemaakt, of de API-sleutel is ongeldig. |
+| `403` | Uw rol heeft **Externe agenten → Gebruiken** niet, of u heeft geen toegang tot deze agent. |
+| `404` | Er bestaat geen agent met dat ID. |
+
+Foutantwoorden volgen de OpenAI-foutstructuur: `{ "error": { "message": "...", "type": "...", "code": "..." } }`.
+
+## Gebruik vanuit n8n of Make
+
+Beide tools bieden een generieke **OpenAI**-node/module die een aangepaste basis-URL accepteert. Richt deze op `https://<uw-domein>/api/agents/v1`, gebruik uw WonkaChat API-sleutel als credential, en stel het modelveld in op het ID van uw agent. Zo roept u een WonkaChat-agent aan als stap in een automatisering, zonder zelf HTTP-aanvragen te schrijven.
+
+## Beveiliging
+
+<Warning>
+Een API-sleutel erft uw eigen toegang tot WonkaChat. Iedereen met de sleutel kan elke agent aanroepen waartoe u toegang heeft. Roteer sleutels regelmatig, verwijder sleutels die u niet meer gebruikt via **Instellingen → API-sleutels**, en plaats nooit een sleutel in een frontend, mobiele app of publieke repository.
+</Warning>
+
+## Gerelateerd
+
+- [Uw eerste agent maken](/nl/ai-agents/creating-your-first-agent)
+- [Uw agenten auditen](/nl/ai-agents/audit-your-agents)

@@ -1,0 +1,58 @@
+---
+title: "Souvenirs"
+description: "Ce que l'assistant retient de vous d'une conversation à l'autre, et comment le contrôler."
+---
+
+Les **Souvenirs** permettent à l'assistant de conserver des informations utiles d'une conversation à l'autre — votre rôle, un projet récurrent, une préférence que vous avez exprimée — au lieu que vous vous répétiez à chaque fois. Les souvenirs sont personnels : vous seul(e) voyez les vôtres.
+
+<Info>
+Les Souvenirs sont une fonctionnalité optionnelle de l'organisation. Si vous ne voyez pas **Souvenirs** dans votre barre latérale ou dans les Paramètres, contactez votre administrateur.
+</Info>
+
+---
+
+## Comment les souvenirs sont créés
+
+L'assistant peut enregistrer un souvenir de lui-même lorsque quelque chose mérite d'être retenu au cours d'une conversation — par exemple « le client s'appelle Acme Corp » ou « je préfère des listes à puces plutôt que de longs paragraphes ». Vous pouvez aussi en ajouter un vous-même.
+
+<Steps>
+<Step title="Ouvrez les Souvenirs">
+Rendez-vous dans **Customize** ou votre barre latérale et ouvrez **Souvenirs** pour voir tout ce qui est actuellement enregistré.
+</Step>
+<Step title="Ajoutez-en un manuellement">
+Cliquez sur **Créer un Souvenir**, puis renseignez une **Clé** et une **Valeur** — par exemple, clé `preferred_language`, valeur `French`.
+</Step>
+</Steps>
+
+## Consulter, modifier et supprimer des souvenirs
+
+Chaque souvenir enregistré apparaît dans la vue **Souvenirs** avec sa clé et sa valeur. Vous pouvez y :
+- Modifier la valeur d'un souvenir existant
+- Supprimer un souvenir que vous ne souhaitez plus conserver
+- Filtrer la liste pour retrouver un souvenir précis
+
+<Tip>
+Les clés de souvenir doivent uniquement utiliser des lettres minuscules et des underscores (par exemple `favorite_tools`, pas `Favorite Tools`).
+</Tip>
+
+## Limiter un souvenir à un projet
+
+Par défaut, les souvenirs s'appliquent à toutes vos conversations (portée **Utilisateur**). Si [Projets](/fr/improved-usage/projects) est activé pour votre organisation, vous pouvez à la place limiter un souvenir à **Ce projet**, afin qu'il ne s'applique que lorsque vous travaillez dans ce projet.
+
+## Limites de stockage
+
+Votre organisation définit une taille totale pour vos souvenirs enregistrés (un budget de jetons et de caractères). Si vous approchez de la limite, WonkaChat vous prévient lors de la création ou de la modification d'un souvenir si cela la dépasserait — supprimez ce dont vous n'avez plus besoin pour faire de la place.
+
+## Désactiver les souvenirs
+
+Si vous préférez que l'assistant n'utilise pas ce qu'il a enregistré, rendez-vous dans **Paramètres → Souvenirs** et désactivez **Indexer les Souvenirs enregistrés**. Cela empêche l'assistant d'utiliser vos souvenirs enregistrés dans ses réponses, sans les supprimer.
+
+<Note>
+Votre administrateur peut aussi désactiver la création, la lecture, la modification ou la possibilité de se désinscrire des souvenirs au niveau de l'organisation. Si l'un de ces contrôles vous manque, c'est probablement pour cette raison.
+</Note>
+
+---
+
+## Pour les administrateurs
+
+Les propriétaires d'organisation contrôlent les autorisations liées aux souvenirs depuis **Paramètres → Organisation** : autoriser la création, la lecture et la modification des souvenirs, et permettre ou non aux utilisateurs de s'en désinscrire. Les souvenirs peuvent être désactivés pour toute l'organisation à tout moment.

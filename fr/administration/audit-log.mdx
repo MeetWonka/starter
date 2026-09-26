@@ -1,0 +1,39 @@
+---
+title: "Journal d'audit"
+description: "Suivez les changements d'accès dans votre organisation, et consultez l'activité de vos agents si votre organisation l'a activé."
+---
+
+## Journal d'audit RBAC
+
+<Note>
+Paramètres → Organisation → Sécurité → Journal d'audit RBAC. Visible par les administrateurs autorisés à gérer la sécurité.
+</Note>
+
+Le journal d'audit RBAC enregistre chaque changement d'accès dans votre organisation — qui a changé quoi, et quand : règles de politique de connecteur (ajoutées, supprimées, ou appliquées en masse), groupes (créés, supprimés, membres ajoutés ou retirés), et mises à jour des permissions de rôle.
+
+Chaque entrée affiche l'**heure**, l'**acteur** (ou **Système** pour les changements automatisés), l'**action** (par exemple *Règle d'autorisation ajoutée* ou *Membre retiré*), l'**entité** et le **type** concernés (Groupe, Appartenance au groupe, Serveur MCP, Permission de rôle, Politique de connecteur), la **cible**, et une **raison** facultative.
+
+Filtrez par type d'entité, par action, ou par plage de dates (**De** / **À**), et **Effacer les filtres** pour réinitialiser. Si le journal ne se charge pas, réessayez depuis la même page.
+
+<Tip>
+Consultez le journal d'audit régulièrement pour repérer des changements de permission ou d'accès aux connecteurs inattendus — en particulier après l'intégration d'un nouvel administrateur.
+</Tip>
+
+## Audit des agents
+
+<Note>
+Visible uniquement lorsque votre organisation a activé **Auditer votre agent** pour un agent donné, et la fonctionnalité organisationnelle **Audit des agents**. Demandez à votre administrateur si vous ne voyez pas cette option.
+</Note>
+
+Lorsqu'il est activé sur un agent, le propriétaire de l'agent (ou les administrateurs/le propriétaire de l'organisation) peuvent consulter son activité depuis **Paramètres → Stats Agent** ou le panneau d'audit propre à l'agent :
+
+- **Audit - Voir les conversations** : consulter le contenu des conversations traitées par l'agent, si activé.
+- **Audit - Voir les appels d'outils** : consulter les appels d'outils effectués par l'agent, avec leurs arguments et résultats, si activé.
+
+Activer **Voir les appels d'outils** ou **Voir les conversations** nécessite d'abord d'activer **Auditer votre agent** pour cet agent ; désactiver **Auditer votre agent** désactive aussi ces deux options.
+
+La vue d'audit affiche, par conversation : date, titre, tokens, coût, et nombre de messages/appels d'outils, avec la possibilité d'ouvrir une conversation pour le détail (arguments et résultat de chaque appel d'outil, si cette sous-permission est activée).
+
+<Warning>
+Les données d'audit peuvent inclure du contenu de conversation réel ainsi que les entrées/sorties des outils. Restreignez **Audit - Voir les conversations** et **Audit - Voir les appels d'outils** aux seules personnes qui en ont besoin pour le contrôle.
+</Warning>

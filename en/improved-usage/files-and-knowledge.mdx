@@ -1,0 +1,108 @@
+---
+title: "Files & Knowledge"
+description: "Upload files to a chat, let agents search them, and manage what you've shared."
+---
+
+You can attach files to any chat so an agent can read them, search them, or work with them directly. WonkaChat also lets agents pull files straight from SharePoint and extract text from scanned documents and images with OCR.
+
+<Info>
+Which upload options you see depends on what your organization and the agent you're talking to have enabled. If an option described here is missing, ask your administrator.
+</Info>
+
+---
+
+## Uploading a File to a Chat
+
+<Steps>
+<Step title="Open the attachment picker">
+Click the attachment icon in the message box, or drag a file directly onto the chat window.
+</Step>
+<Step title="Choose where the file comes from">
+Pick the file from your computer.
+</Step>
+<Step title="Choose how the agent should use it">
+If more than one option applies to your file, WonkaChat asks how to handle it:
+- **Upload for File Search** — index the file's content so the agent can search it (see below).
+- **Upload files** — attach the file for the Code Interpreter, if that agent has it enabled.
+- **Upload as Text** — run OCR on the file and add the extracted text as context.
+- **Upload an image** — for image files, when no other option applies.
+</Step>
+</Steps>
+
+<Tip>
+You can also upload a file straight into the message box without asking — WonkaChat picks the option matching the current agent's capabilities.
+</Tip>
+
+## Upload for File Search (Knowledge Search)
+
+**Upload for File Search** turns a file into searchable knowledge for the conversation. Instead of loading the whole document into the agent's context, WonkaChat indexes it and lets the agent search it as needed — better suited to long documents or many files at once.
+
+Use this when you want the agent to answer questions grounded in a specific document (a policy, a contract, a report) rather than general knowledge.
+
+<Note>
+Agent builders can also attach File Search as a permanent **Knowledge** source when creating an agent, so every conversation with that agent can search the same files. See the agent builder's Knowledge section.
+</Note>
+
+## OCR: Reading Text From Images and Scans
+
+Choosing **Upload as Text** runs Optical Character Recognition (OCR) on the file and adds the extracted text to the conversation as context. This is the right choice for:
+- Scanned PDFs that don't have a text layer
+- Photos of documents, whiteboards, or printed pages
+- Screenshots containing text you want the agent to read
+
+The extracted text is added directly to the agent's context, so it works well for shorter documents where you want the full text available rather than searched.
+
+## Files From SharePoint
+
+When you build an agent, you can add files to its knowledge straight from SharePoint instead of downloading them first. In the agent builder, open the **Knowledge** section, choose **From SharePoint**, then browse and select your files. This option appears only if your organization has connected SharePoint.
+
+<Note>
+SharePoint access follows your own Microsoft permissions — you can only pick files you're already authorized to see.
+</Note>
+
+## Files for Code Interpreter
+
+If the agent you're using has the Code Interpreter enabled, you can upload files (spreadsheets, CSVs, datasets, scripts) for it to read, transform, or run computations on in a code sandbox. Choose **Upload files** in the upload picker when this option is available.
+
+<Info>
+Code Interpreter is an agent capability — not every agent has it turned on. If you don't see this option, ask the agent's builder or your administrator to enable it.
+</Info>
+
+## Supported File Types and Size Limits
+
+WonkaChat accepts common document, text, code, image, audio, video, and archive formats, including:
+
+<CardGroup cols={2}>
+<Card title="Documents" icon="file-lines">
+PDF, Word, PowerPoint, Excel, and OpenDocument files
+</Card>
+<Card title="Text & code" icon="code">
+Markdown, JSON, YAML, HTML, CSS, and most programming languages
+</Card>
+<Card title="Images" icon="image">
+JPEG, PNG, GIF, HEIC/HEIF, and SVG
+</Card>
+<Card title="Audio, video & archives" icon="file-zipper">
+Common audio and video formats, plus ZIP and TAR archives
+</Card>
+</CardGroup>
+
+Default limits (your administrator may set different ones for your organization):
+- Up to 12 files per message
+- Up to 512 MB per file
+
+<Warning>
+If a file is rejected, check its size and format first — then ask your administrator, since these limits are configurable per organization.
+</Warning>
+
+## Managing Your Files
+
+Go to **Settings → Files** to see every file you've uploaded across your conversations. From there you can review what's stored and delete files you no longer need.
+
+---
+
+## For Agent Builders and Admins: Azure AI Search
+
+Agent builders can connect **Azure AI Search** as a tool when configuring an agent, letting it query an existing Azure Cognitive/AI Search index as an additional knowledge source. It supports either an API key or Microsoft OAuth, and when using SharePoint-backed indexes with OAuth, results respect your organization's SharePoint security trimming — users only see documents they're already authorized to access.
+
+This is set up per agent, in the agent builder's Tools section.

@@ -1,0 +1,154 @@
+---
+title: "Calling Agents via API"
+description: "Call your WonkaChat agents from your own code or from automation tools like n8n and Make, using an OpenAI-compatible API."
+---
+
+WonkaChat exposes any agent you've built as an OpenAI-compatible endpoint. If you can call OpenAI's Chat Completions API, you can call your agent the same way — just point the client at WonkaChat and use the agent's ID as the `model`.
+
+<Note>
+This requires the **Agent API Keys** feature to be enabled for your organization, and the **Remote Agents → Use** permission on your role. By default, only administrators have this permission — ask your administrator to grant it if you need it. You also need at least view access to the agent you want to call.
+</Note>
+
+## Prerequisites
+
+<Check>
+- Your organization has enabled **Agent API Keys**.
+- Your role has **Remote Agents → Use** enabled.
+- You are the **owner** of the agent you want to call. Being an editor or viewer of a shared agent is not enough to call it through the API.
+</Check>
+
+## 1. Create an API key
+
+<Steps>
+<Step title="Open API Keys">
+Go to **Settings → API Keys**.
+</Step>
+<Step title="Create a key">
+Create a new key. Copy it immediately — you won't be able to see it again.
+</Step>
+<Step title="Store it securely">
+Treat it like a password: store it in a secrets manager or environment variable, never in client-side code or a public repository.
+</Step>
+</Steps>
+
+## 2. Find your agent's ID
+
+The API identifies an agent by its ID, not its name. The simplest way to get it:
+
+<Steps>
+<Step title="Open Agents → All agents">
+Find the agent you want to call.
+</Step>
+<Step title="Copy its link">
+Open the agent's **⋯** menu and choose **Copy link**. This copies a URL that looks like `https://wonka.chat/c/new?agent_id=<AGENT_ID>`.
+</Step>
+<Step title="Extract the ID">
+The value after `agent_id=` is the agent's ID. Use it as the `model` value in your API calls.
+</Step>
+</Steps>
+
+## Base URL and authentication
+
+```
+https://<your-domain>/api/agents/v1
+```
+
+Every request needs an `Authorization` header with your API key:
+
+```
+Authorization: Bearer <your_api_key>
+```
+
+## Chat Completions
+
+<Tabs>
+<Tab title="curl">
+```bash
+curl https://<your-domain>/api/agents/v1/chat/completions \
+  -H "Authorization: Bearer $WONKACHAT_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "<AGENT_ID>",
+    "messages": [
+      { "role": "user", "content": "Summarize this week'\''s open tickets." }
+    ],
+    "stream": false
+  }'
+```
+</Tab>
+<Tab title="Python (OpenAI SDK)">
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://<your-domain>/api/agents/v1",
+    api_key="<your_api_key>",
+)
+
+response = client.chat.completions.create(
+    model="<AGENT_ID>",
+    messages=[{"role": "user", "content": "Summarize this week's open tickets."}],
+)
+
+print(response.choices[0].message.content)
+```
+</Tab>
+</Tabs>
+
+To keep a multi-turn conversation going, pass `conversation_id` and `parent_message_id` from the previous response on the next request. Set `"stream": true` to receive an SSE stream of `chat.completion.chunk` events instead of a single JSON response.
+
+## Open Responses API
+
+For agentic use cases that want structured, item-based output, the same agent is also available through the [Open Responses](https://openresponses.org/specification) endpoint:
+
+```
+POST https://<your-domain>/api/agents/v1/responses
+```
+
+```json
+{
+  "model": "<AGENT_ID>",
+  "input": "Summarize this week's open tickets.",
+  "stream": false,
+  "previous_response_id": "resp_optional_id_to_continue_a_thread"
+}
+```
+
+The response includes an `id` (`resp_...`) you can pass back as `previous_response_id` to continue the same thread, an `output` array of items, and a `usage` object.
+
+## Listing agents
+
+```
+GET /api/agents/v1/models
+GET /api/agents/v1/models/:model
+```
+
+<Info>
+`GET /models` only lists agents that have been explicitly enabled for remote API access — for most organizations this list is short or empty. Don't rely on it to discover an agent's ID; get the ID from the WonkaChat UI as shown above, and use `GET /models/:model` to check whether a specific agent ID is callable.
+</Info>
+
+## Errors
+
+| Status | Meaning |
+|--------|---------|
+| `400` | The request is missing a required field, most often `model` (the agent ID). |
+| `401` | The `Authorization` header is missing, malformed, or the API key is invalid. |
+| `403` | Your role doesn't have **Remote Agents → Use**, or you don't have access to this agent. |
+| `404` | No agent exists with that ID. |
+
+Error responses follow the OpenAI error shape: `{ "error": { "message": "...", "type": "...", "code": "..." } }`.
+
+## Using it from n8n or Make
+
+Both tools ship a generic **OpenAI** node/module that accepts a custom base URL. Point it at `https://<your-domain>/api/agents/v1`, use your WonkaChat API key as the credential, and set the model field to your agent's ID. This lets you call a WonkaChat agent as a step in an automation without writing custom HTTP requests.
+
+## Security
+
+<Warning>
+An API key inherits your own access to WonkaChat. Anyone with the key can call every agent you have access to. Rotate keys periodically, delete keys you no longer use from **Settings → API Keys**, and never embed a key in a frontend, mobile app, or public repository.
+</Warning>
+
+## Related
+
+- [Create your first agent](/en/ai-agents/creating-your-first-agent)
+- [Audit your agents](/en/ai-agents/audit-your-agents)

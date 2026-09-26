@@ -4,6 +4,7 @@ description: "Connect WonkaChat to your business systems and start using AI-powe
 ---
 
 Connect your first business system to WonkaChat and unlock AI-powered access to your business data. This guide walks you through the complete connection process, from selecting a connection to testing your first AI-powered request.
+
 ## Understanding Connections vs Tools
 
 <AccordionGroup>
@@ -41,7 +42,6 @@ Watch this step-by-step guide to see the entire connection process in action:
   allowFullScreen
 ></iframe>
 
-
 <Tip>
 Follow along with the video while setting up your first connection. Pause at each step to complete it in your own WonkaChat instance.
 </Tip>
@@ -49,26 +49,21 @@ Follow along with the video while setting up your first connection. Pause at eac
 ## Step-by-Step Connection Process
 
 <Steps>
-<Step title="Locate the Connectors Panel">
-In your WonkaChat interface, find the **Connectors** inside the settings at the bootom left of the screen. This panel displays all available business system connections.
+<Step title="Locate the Connectors Page">
+In your WonkaChat sidebar, go to **Customize → Connectors**. This page lists all available business system connections, with search, filters, and view options.
 
-<Frame caption="Connectors panel and Outlook Mail connection example">
-<img src="../../images/connectors-gif.gif" alt="Connectors panel and Outlook Mail connection example" />
+<Frame caption="Connectors button under the chat input">
+<img src="../../images/connectors-gif.gif" alt="Connectors button under the chat input" />
 </Frame>
-
-<Tip>
-If you don't see the right side panel, click the arrow icon in the middle-right of your screen to expand the sidebar.
-</Tip>
 </Step>
 
 <Step title="Select Your Connection">
-Browse or search for the connection you want to add. Click the connection's button to begin the connection process.
+Browse or search for the connection you want to add. Click the connection's card to begin the connection process.
 
 **Popular first connections:**
 - **Outlook Mail** or **Gmail** for email access
 - **Slack** for team communication
 - **Google Drive** or **OneDrive** for document access
-
 
 <Check>
 Not sure which software to connect first? Start with your email provider, it's the most versatile connection for daily tasks.
@@ -76,12 +71,12 @@ Not sure which software to connect first? Start with your email provider, it's t
 </Step>
 
 <Step title="Authenticate Your Account">
-A credential window will appear, requesting authentication for the selected business system. The process varies slightly by connection type:
+A credential window will appear, requesting authentication for the selected business system. The process varies by connection type:
 
 <Tabs>
 <Tab title="OAuth">
 <Info>
-**OAuth** authentication is used for most of the softwares like <strong>Outlook, Gmail, Google Drive</strong>.
+**OAuth** authentication is used for most software connections, such as <strong>Outlook, Gmail, Google Drive</strong>.
 </Info>
 
 1. Click **"Connect"**.
@@ -93,17 +88,16 @@ A credential window will appear, requesting authentication for the selected busi
 
 <Tab title="API Key">
 <Info>
-Some softwares require an API key. If you need assistance obtaining or using your API key, see the <a href="/en/support-resources/getting-help">Getting Help</a> page for personalized support options.
+Some connectors require an API key. If you need assistance obtaining or using your API key, see the <a href="/en/support-resources/getting-help">Getting Help</a> page for personalized support options.
 </Info>
 
-1. Click the **Gear Icon**.
+1. Click the connector card, then open its configuration.
 2. Obtain your API key directly from the provider.
 3. Paste the API key into the WonkaChat credential field.
 4. Click **"Connect"**.
 
-
 <Tip>
-Need help finding your API key? Most softwares have it under <strong>Settings → API</strong> or <strong>Settings → Integrations</strong>. Check the software's documentation if you're not sure.
+Need help finding your API key? Most software has it under <strong>Settings → API</strong> or <strong>Settings → Integrations</strong>. Check the software's documentation if you're not sure.
 </Tip>
 </Tab>
 
@@ -113,22 +107,21 @@ Some business systems, such as <strong>Odoo</strong>, require custom configurati
 </Info>
 
 Some business systems require additional connection parameters:
-- Database name or instance URL
-- Server endpoint
+- Instance URL or database name
 - Username and password combination
 - Custom authentication tokens or credentials
 
 **Connection Process:**
-1. Click the **Gear Icon**.
+1. Click the connector card to open its configuration.
 2. Review the connection requirements displayed in the WonkaChat credential window.
 3. Enter all required fields.
 4. Verify everything is accurate before proceeding.
 5. Click **"Connect"** to establish the connection.
 
 <Info>
-Each software displays its specific connection requirements in the credential window.
+Each connector displays its specific connection requirements in the credential window.
 
-If you need assistance with connection details or encounter any issues, <a href="https://www.meetwonka.com/fr/contact">contact our support team</a> for personalized help.
+If you need assistance with connection details or encounter any issues, <a href="https://www.wonka-ai.com/contact">contact our support team</a> for personalized help.
 </Info>
 
 <Warning>
@@ -137,18 +130,17 @@ Always verify you're on the official WonkaChat page of your organization before 
 </Tab>
 </Tabs>
 
-
 </Step>
 
 <Step title="Enable The Connection">
-After successful authentication, you need to activate the connection for the AI model you're using.
+After successful authentication, activate the connection for the chat you're using.
 
 1. Click the **"Connectors"** button under the chat input field
 2. Find your business system in the list
 3. Click on it to enable the connection for the current chat
 
-<Frame caption="Outlook Mail connection example">
-<img src="../../images/connection-co.gif" alt="Outlook Mail connection example" />
+<Frame caption="Enabling a connection from the chat input">
+<img src="../../images/connection-co.gif" alt="Enabling a connection from the chat input" />
 </Frame>
 
 <Check>
@@ -171,7 +163,6 @@ Connection successful! You can now use natural language to access and interact w
 </Check>
 </Step>
 
-
 <Step title="Disable A Connection">
 
 To remove a connection:
@@ -187,7 +178,6 @@ Disconnecting a business system immediately revokes WonkaChat's access to that s
 </Steps>
 
 ---
-
 
 ## Understanding Permissions and Actions
 
@@ -230,7 +220,7 @@ Your authentication tokens are:
 - Automatically refreshed to maintain connection
 - Deleted immediately when you disconnect a business system
 
-WonkaChat never stores your actual passwords. It only stores the secure access tokens provided by the OAuth flow or API key you input.
+WonkaChat never stores your actual passwords. It only stores the secure access tokens provided by the OAuth flow or the API key you input.
 </Accordion>
 </AccordionGroup>
 
@@ -278,7 +268,7 @@ Connect your most-used business systems first:
 3. Primary project management tool
 4. Main document storage
 
-You can always add more connections later as you discover needs.
+You can always add more connections later as you discover needs. Mark your most-used connectors as favorites (star icon on the Connectors page) so they surface first in the chat input.
 </Accordion>
 
 <Accordion title="Test Before Complex Workflows" icon="vial">
@@ -331,7 +321,7 @@ AI agents with purpose-built business system connections deliver significantly b
 </Accordion>
 
 <Accordion title="Operations Agent" icon="gears">
-**Connect only:** Odoo, QuickBooks, Airtable, Slack
+**Connect only:** Odoo, Airtable, Slack
 
 - Focused on business operations and finance
 - Specialized knowledge of operational workflows
@@ -339,7 +329,7 @@ AI agents with purpose-built business system connections deliver significantly b
 </Accordion>
 
 <Tip>
-Start by creating 2-3 specialized agents for your most common workflows. You'll quickly see the quality difference compared to one agent with all tools and softwares connected.
+Start by creating 2-3 specialized agents for your most common workflows. You'll quickly see the quality difference compared to one agent with all tools and software connected.
 </Tip>
 </Accordion>
 </AccordionGroup>
@@ -357,4 +347,3 @@ Having issues with connecting your business systems? Find solutions to common co
 Watch real examples of MCP connections in action with Outlook, Odoo, and more.
 </Card>
 </CardGroup>
-

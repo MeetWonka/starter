@@ -1,0 +1,99 @@
+---
+title: "Connecteurs personnalisés"
+description: "Ajoutez votre propre connecteur MCP quand l'outil dont vous avez besoin ne fait pas partie du catalogue intégré de WonkaChat."
+---
+
+WonkaChat est livré avec des dizaines de connecteurs prêts à l'emploi, mais vous pouvez aussi ajouter votre propre **connecteur MCP personnalisé** pour atteindre n'importe quel outil qui expose un serveur Model Context Protocol (MCP), qu'il s'agisse d'un système interne ou d'un fournisseur pas encore présent dans le catalogue.
+
+<Info>
+Ajouter des connecteurs personnalisés est une capacité de niveau administrateur. Si vous ne voyez pas de bouton **« Ajouter un outil MCP »** sur la page Connecteurs, votre organisation n'a pas activé cette fonctionnalité pour votre rôle.
+</Info>
+
+## Avant de commencer
+
+<CardGroup cols={2}>
+<Card title="Vous avez besoin d'un serveur MCP" icon="server">
+Les connecteurs personnalisés pointent vers un serveur MCP existant. WonkaChat ne crée pas le serveur pour vous : il se connecte à un serveur déjà en fonctionnement.
+</Card>
+
+<Card title="Accès administrateur requis" icon="user-shield">
+La création et la modification de connecteurs personnalisés sont contrôlées par une permission au niveau de l'organisation. Demandez à votre administrateur si l'option ne vous est pas accessible.
+</Card>
+</CardGroup>
+
+<Warning>
+**Connecteurs personnalisés non vérifiés par Wonka AI.** Vous êtes responsable de la confiance accordée au serveur auquel vous vous connectez, et de la vérification des données et actions qu'il expose, avant de l'activer pour vous-même ou pour votre équipe.
+</Warning>
+
+## Ajouter un connecteur personnalisé
+
+<Steps>
+<Step title="Ouvrir la page Connecteurs">
+Allez dans **Personnaliser → Connecteurs**, puis cliquez sur **« Ajouter un outil MCP »**.
+</Step>
+
+<Step title="Renseigner les informations de base">
+- **Nom** : un libellé court et reconnaissable (lettres, chiffres et espaces uniquement)
+- **Description** (facultatif) : ce que fait le connecteur, affiché à toute personne qui parcourt le catalogue
+- **Icône** (facultatif) : téléversez une image pour identifier le connecteur en un coup d'œil
+</Step>
+
+<Step title="Définir les détails de connexion">
+- **Adresse URL du serveur MCP** : l'adresse du serveur MCP (par exemple `https://mcp.example.com`)
+- **Type de transport** : choisissez **Streamable HTTP** ou **SSE**, selon ce que prend en charge le serveur
+</Step>
+
+<Step title="Choisir l'authentification">
+Choisissez la méthode d'authentification requise par le serveur MCP :
+
+<Tabs>
+<Tab title="Aucune authentification">
+Utilisez cette option pour les serveurs MCP internes ou publics qui ne nécessitent pas d'identifiants.
+</Tab>
+
+<Tab title="Clé API">
+- Indiquez le format d'en-tête : **Bearer**, **Basic** ou **Custom**
+- Cochez éventuellement **« L'utilisateur fournit sa propre clé API »** pour que chaque collègue fournisse sa propre clé au lieu de partager une clé unique de niveau administrateur
+</Tab>
+
+<Tab title="OAuth">
+- WonkaChat peut découvrir automatiquement la configuration OAuth du serveur, ou vous pouvez saisir manuellement les points de terminaison d'autorisation et de jeton
+- Une fois le connecteur créé, WonkaChat affiche un **URI de redirection** à enregistrer auprès de votre fournisseur OAuth
+</Tab>
+</Tabs>
+</Step>
+
+<Step title="Ajouter des en-têtes personnalisés (facultatif)">
+Si le serveur MCP a besoin d'en-têtes supplémentaires au-delà de l'en-tête d'autorisation (par exemple un identifiant de tenant ou une version d'API), ajoutez-les sous forme de paires nom/valeur. Il y a une limite au nombre que vous pouvez ajouter par connecteur.
+</Step>
+
+<Step title="Confirmer et créer">
+Cochez **« J'ai confiance en cette application »** pour confirmer que vous comprenez que le connecteur n'est pas vérifié par Wonka AI, puis cliquez sur **« Créer »**.
+
+<Check>
+Une fois créé, le connecteur apparaît aux côtés des connecteurs intégrés sur la page Connecteurs. Connectez-le et activez-le de la même manière que n'importe quel autre connecteur.
+</Check>
+</Step>
+</Steps>
+
+## Modifier et supprimer des connecteurs personnalisés
+
+- **Modifier** : cliquez sur un connecteur que vous avez créé pour mettre à jour son URL, son authentification ou ses en-têtes.
+- **Supprimer** : la suppression d'un connecteur personnalisé est réservée aux administrateurs de l'organisation.
+- Les connecteurs personnalisés peuvent être tagués et partagés avec des collègues spécifiques, comme n'importe quelle autre ressource dans WonkaChat, si le partage est activé pour votre organisation.
+
+## Contrôler l'accès
+
+Les administrateurs décident quels connecteurs personnalisés (et intégrés) sont disponibles pour quels utilisateurs ou groupes via les [politiques d'outils](/fr/administration/groups-and-tool-policies). Utilisez cette fonctionnalité pour limiter un connecteur interne sensible à l'équipe qui le possède, par exemple, plutôt que de l'exposer à toute l'organisation.
+
+## Prochaines étapes
+
+<CardGroup cols={2}>
+<Card title="Guide de configuration" icon="plug" href="/fr/tools-connection/setting-up-your-first-connection">
+Connectez et activez un connecteur pour votre chat une fois qu'il a été créé.
+</Card>
+
+<Card title="Dépannage" icon="wrench" href="/fr/tools-connection/troubleshooting-connections">
+Solutions aux problèmes de connexion courants, y compris pour les connecteurs personnalisés.
+</Card>
+</CardGroup>

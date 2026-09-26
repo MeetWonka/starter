@@ -1,0 +1,81 @@
+---
+title: "Skills"
+description: "Package reusable instructions once, then let agents apply them automatically or invoke them yourself."
+---
+
+A **Skill** is a reusable set of instructions — writing guidelines, a process to follow, brand rules — that an agent can apply automatically when it's relevant, or that you can invoke yourself in any chat. Think of it as a focused capability you teach once and reuse everywhere.
+
+<Info>
+Skills is an optional organization feature. If you don't see **Skills** under **Customize** in your sidebar, ask your administrator.
+</Info>
+
+---
+
+## Creating a Skill
+
+<Steps>
+<Step title="Open Skills">
+In the sidebar, expand **Customize**, then select **Skills**.
+</Step>
+<Step title="Start a new skill">
+Click **Create Skill**.
+</Step>
+<Step title="Describe it">
+Give it a **Name** (lowercase letters, digits, and dashes only, e.g. `brand-guidelines`) and a **Description**. Be specific about when this skill should apply — the description is what an agent uses to decide whether it's relevant.
+</Step>
+<Step title="Write the instructions">
+In **Instructions**, write what the skill should do in markdown.
+</Step>
+</Steps>
+
+## Uploading a Skill
+
+If you already have a skill written elsewhere, you can import it instead of writing it from scratch:
+
+<Steps>
+<Step title="Open the upload dialog">
+In **Skills**, choose **Upload a skill**.
+</Step>
+<Step title="Provide the file">
+Upload a single **.md** file, or a **.zip** / **.skill** archive. A `.zip` or `.skill` file must include a `SKILL.md` file; a folder upload is packaged automatically and must also include one at its root (or in a single subfolder).
+</Step>
+</Steps>
+
+<Warning>
+Skill imports are limited in size (your administrator sets the exact limit, 50 MB by default). Oversized files are rejected before upload.
+</Warning>
+
+## Auto-Applied vs. Manually Invoked Skills
+
+Each skill has an **Invocation Mode**:
+
+<CardGroup cols={3}>
+<Card title="Auto" icon="wand-magic-sparkles">
+The skill is automatically applied by the agent when relevant to the conversation.
+</Card>
+<Card title="Manual" icon="hand-pointer">
+The skill is only used when you explicitly invoke it.
+</Card>
+<Card title="Both" icon="arrows-repeat">
+The skill can trigger automatically, or be invoked manually.
+</Card>
+</CardGroup>
+
+To invoke a skill manually, type **`$`** in the message box to open the skill picker, then select the skill you want to use for that message.
+
+<Tip>
+You can turn any skill on or off for yourself without editing it — use the toggle next to a skill in the list to control whether it's active.
+</Tip>
+
+## Sharing Skills
+
+Skills can be shared the same way agents and prompts are:
+- **Viewer** — can view and use the skill, but not edit it
+- **Editor** — can view and edit the skill
+- **Owner** — full control, including sharing and deletion
+
+Share a skill with specific people, a group, or (if your administrator allows it) everyone in your organization.
+
+<Note>
+Your administrator can restrict who is allowed to create or share skills at the organization level.
+</Note>

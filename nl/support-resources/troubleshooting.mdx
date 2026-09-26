@@ -1,24 +1,54 @@
 ---
 title: "Probleemoplossing"
-description: "Oplossingen voor veelvoorkomende problemen, diagnostische stappen en prestatieproblemen."
+description: "Snelle oplossingen voor veelvoorkomende problemen, met links naar uitgebreidere gidsen."
 ---
 
-<CardGroup cols={1}>
-<Card title="Uitgebreide probleemoplossingsgids komt binnenkort" icon="wrench">
-We bouwen een gedetailleerde probleemoplossing-sectie met stapsgewijze oplossingen, diagnostische tools en veelvoorkomende probleem-oplossingsgidsen om je te helpen problemen snel op te lossen.
-</Card>
-</CardGroup>
+Veelvoorkomende problemen en hun snelle oplossingen. Voor connector-specifieke problemen, zie de speciale gids hieronder.
 
-<Info>
-In de tussentijd, bekijk onze [MCP Verbinding Probleemoplossing](/nl/tools-connection/troubleshooting-connections) gids en [FAQ](/nl/support-resources/faq) voor antwoorden op veelgestelde vragen.
-</Info>
+<AccordionGroup>
+
+<Accordion title="Inlog- of SSO-problemen" icon="key">
+Als u niet kunt inloggen:
+- Controleer of u de juiste inlogmethode gebruikt (e-mail/wachtwoord, Google Workspace, Microsoft 365, of de SSO van uw organisatie).
+- Wis de cache en cookies van uw browser en probeer het opnieuw.
+- Als uw organisatie SSO gebruikt en het inloggen mislukt of terugkeert naar de inlogpagina, neem dan contact op met uw beheerder — de SSO-configuratie kan aandacht nodig hebben aan hun kant.
+</Accordion>
+
+<Accordion title="Authenticatiefouten bij een connector" icon="plug">
+"Authenticatie mislukt," "toestemming geweigerd," of een connector die niet verbonden blijft, wordt bijna altijd opgelost door te ontkoppelen en opnieuw te verbinden via Aanpassen → Connectors, waarbij u alle gevraagde permissies verleent. Zie de volledige gids [Probleemoplossing Verbindingen](/nl/tools-connection/troubleshooting-connections) voor stapsgewijze oplossingen.
+</Accordion>
+
+<Accordion title="Limieten voor bestandsuploads" icon="file">
+Er is een limiet aan het aantal bestanden dat u aan één bericht kunt toevoegen. Als uw upload wordt geweigerd, probeer dan minder bestanden tegelijk toe te voegen, of vraag uw beheerder naar de exacte limiet van uw organisatie.
+</Accordion>
+
+<Accordion title="Agent niet zichtbaar of niet met u gedeeld" icon="robot">
+Als u een agent die iemand noemde niet kunt vinden:
+- Controleer zowel de Agent Marketplace als "Mijn Agents" — organisatiebrede agents en persoonlijke agents worden apart weergegeven.
+- De agent is mogelijk nog niet met u gedeeld. Vraag de eigenaar van de agent of uw beheerder om deze te delen met uw organisatie of team.
+- Zie [Agents Vinden en Openen](/nl/ai-agents/finding-and-accessing-agents) voor meer informatie over hoe delen en zichtbaarheid werken.
+</Accordion>
+
+<Accordion title="Model niet beschikbaar of regiobeperking" icon="globe">
+Modellen in de modelkiezer tonen een regiobadge (bijvoorbeeld EU of US). Als een model grijs of niet beschikbaar lijkt, heeft uw beheerder mogelijk beperkt welke regio's of modellen uw organisatie kan gebruiken. Neem contact op met uw beheerder om toegang aan te vragen.
+</Accordion>
+
+<Accordion title="Agent API-sleutelfouten" icon="key">
+Als uw organisatie Agent API-sleutels heeft ingeschakeld, zorgt een ongeldige of verlopen sleutel ervoor dat API-verzoeken mislukken met een authenticatiefout. Controleer of de sleutel nog actief is, en vraag uw beheerder om indien nodig een nieuwe te genereren. Weet u niet zeker of deze functie voor uw organisatie is ingeschakeld, vraag dit dan na bij uw beheerder.
+</Accordion>
+
+</AccordionGroup>
+
+## Nog steeds vastzitten?
 
 <CardGroup cols={2}>
-<Card title="Verbindingsproblemen" icon="plug" href="/nl/tools-connection/troubleshooting-connections">
-Los problemen op met MCP-verbindingen en tool-integraties.
+
+<Card title="Probleemoplossing Verbindingen" icon="plug" href="/nl/tools-connection/troubleshooting-connections">
+Volledige gids voor connector- en MCP-verbindingsproblemen.
 </Card>
 
-<Card title="Krijg Hulp" icon="life-ring" href="/nl/support-resources/getting-help">
-Neem contact op met ons supportteam voor persoonlijke assistentie.
+<Card title="Hulp Krijgen" icon="life-ring" href="/nl/support-resources/getting-help">
+Neem contact op met support met de details die u een sneller antwoord geven.
 </Card>
+
 </CardGroup>

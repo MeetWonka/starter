@@ -1,0 +1,121 @@
+---
+title: "Agents planifiés et déclenchés"
+description: "Faites exécuter un agent automatiquement selon un planning ou lorsqu'un événement se produit dans une application connectée, et consultez chaque exécution."
+---
+
+Un agent planifié s'exécute seul, sans que vous ouvriez de conversation. Vous choisissez **quand** il s'exécute et **ce qu'il doit faire**. Chaque exécution crée une conversation dans votre compte, que vous pouvez ouvrir plus tard.
+
+Il existe deux types de déclencheurs :
+
+- **Planning (Cron)** : l'agent s'exécute à des horaires fixes, par exemple chaque jour ouvré à 08h00.
+- **Événement externe** : l'agent s'exécute lorsqu'un événement se produit dans une application connectée, par exemple à la réception d'un nouvel e-mail.
+
+<Note>
+Les agents planifiés doivent être activés pour votre organisation (fonctionnalité **Agents planifiés**). Les déclencheurs d'événements externes sont une fonctionnalité distincte (**Agents déclenchés**). Si vous ne voyez pas la section **Planification** dans le constructeur d'agent, demandez à votre administrateur de l'activer.
+</Note>
+
+## Configurer un planning
+
+Vous devez disposer des droits d'édition sur l'agent (vous l'avez créé, ou vous êtes **Editor** ou **Propriétaire**).
+
+<Steps>
+<Step title="Ouvrez l'agent dans le constructeur">
+Ouvrez l'agent que vous souhaitez automatiser et allez dans la section **Planification** (« Exécuter cet agent automatiquement selon un planning. »).
+</Step>
+<Step title="Activez le planning">
+Activez le curseur à côté de **Planification**.
+</Step>
+<Step title="Choisissez le type de déclencheur">
+Si votre organisation a activé les déclencheurs d'événements, choisissez **Planning (Cron)** ou **Événement externe** dans **Type de déclencheur**. Sinon, le planning est basé sur le temps.
+</Step>
+<Step title="Définissez la fréquence">
+Choisissez une **Période**, puis renseignez les champs nécessaires (voir le tableau ci-dessous). Définissez la **Date et heure de début** si le planning doit commencer plus tard.
+</Step>
+<Step title="Rédigez l'invite">
+Dans **Invite**, indiquez à l'agent ce qu'il doit faire à chaque exécution, par exemple « Résumez les nouveaux tickets de support d'hier et listez les urgents. »
+</Step>
+<Step title="Enregistrez l'agent">
+Cliquez sur **Enregistrer**. Le planning est enregistré avec l'agent.
+</Step>
+</Steps>
+
+### Fréquences prises en charge
+
+| Période | Vous choisissez |
+|--------|------------|
+| **Quotidien** | **Heure** |
+| **Jours ouvrés** | **Heure** (du lundi au vendredi) |
+| **Hebdomadaire** | **Jour** et **Heure** |
+| **Mensuel** | **Jour du mois** et **Heure** |
+| **Trimestriel** | **Jour du mois**, **Mois du trimestre** (par exemple janvier, avril, juillet, octobre) et **Heure** |
+
+Les heures utilisent le fuseau horaire de votre navigateur.
+
+Pour d'autres fréquences, ouvrez **Avancé** et sélectionnez **Utiliser une expression cron personnalisée**. Saisissez cinq champs : minute, heure, jour du mois, mois, jour de la semaine. Exemple : `0 9 * * 1` s'exécute chaque lundi à 09h00. Un planning ne peut pas s'exécuter plus souvent qu'une fois toutes les 5 minutes.
+
+## Déclencher un agent depuis un événement externe
+
+Avec un déclencheur **Événement externe**, l'agent s'exécute lorsqu'un événement se produit dans une application que vous avez connectée, au lieu d'un horaire fixe.
+
+<Steps>
+<Step title="Choisissez l'événement">
+Sous **Événement de déclenchement**, cliquez sur **Sélectionner une application et un déclencheur** et recherchez l'événement souhaité.
+</Step>
+<Step title="Connectez l'application">
+Si votre compte n'est pas encore connecté à cette application, cliquez sur **Se connecter** et authentifiez-vous. Le statut passe à **Connecté**.
+</Step>
+<Step title="Configurez le déclencheur">
+Renseignez les champs de **Configuration du déclencheur**, si l'événement en a.
+</Step>
+<Step title="Utilisez les données de l'événement dans l'invite">
+Dans **Invite**, tapez `{{metadata}}` à l'endroit où les données de l'événement (objet, expéditeur, message…) doivent apparaître. Puis cliquez sur **Enregistrer**.
+</Step>
+</Steps>
+
+<Info>
+Les déclencheurs d'événements fonctionnent via les applications que vous connectez dans WonkaChat. Il n'y a aucune URL de webhook ni aucun secret à copier ou à gérer — la connexion entre l'application et votre agent est entièrement prise en charge par la plateforme. Si aucun événement n'est listé, connectez une application prise en charge ou demandez à votre administrateur d'activer les connecteurs.
+</Info>
+
+## Consulter les résultats
+
+Chaque exécution crée une conversation dans votre compte.
+
+Pour consulter les exécutions, ouvrez le menu **⋯** de l'agent (sur sa carte dans **Agents → Tous les agents**, ou dans le constructeur) et choisissez **Agents planifiés · Historique**.
+
+La fenêtre **Historique des exécutions** affiche :
+
+- La **dernière exécution**, la **prochaine exécution**, le nombre d'**exécutions** et d'**échecs**.
+- Une ligne par exécution avec son statut (terminée, échouée, en cours ou en attente) et son heure de début.
+- **Ouvrir la conversation** pour lire la conversation créée par l'exécution. **Aucun message** signifie que l'exécution n'a rien produit.
+
+Depuis la même fenêtre, vous pouvez mettre en pause, reprendre ou supprimer un planning.
+
+## Agents partagés : pour qui le planning s'exécute
+
+Un planning exécute l'agent **sur votre propre compte**, avec vos propres connexions. Lorsque quelqu'un partage avec vous un agent qui a un planning, celui-ci ne s'exécute **pas** pour vous par défaut. Pour l'activer, ouvrez l'agent et activez **Exécuter cette planification sur mon compte**. Vous pouvez le désactiver à tout moment.
+
+## Quand un agent est modifié, ses plannings se mettent en pause
+
+Lorsque quelqu'un modifie un agent (instructions, outils, fichiers de connaissances…), tous les plannings de cet agent sont désactivés. Le planning affiche **Agent modifié**. Cela vous protège d'un agent qui se comporterait soudainement différemment pendant qu'il s'exécute sans surveillance.
+
+Vérifiez ce que fait désormais l'agent, puis réactivez le planning. Enregistrer un agent sans modification ne met pas ses plannings en pause.
+
+## Dépannage
+
+<AccordionGroup>
+<Accordion title="Je ne vois pas la section Planification">
+Votre organisation n'a pas activé les Agents planifiés, ou vous ne pouvez pas modifier cet agent. Demandez au propriétaire de l'agent ou à votre administrateur.
+</Accordion>
+<Accordion title="Le planning affiche Paused">
+Quelqu'un l'a mis en pause, ou l'agent a été modifié. Ouvrez le planning, vérifiez l'agent, puis réactivez-le.
+</Accordion>
+<Accordion title="Une exécution a échoué">
+Ouvrez l'historique des exécutions. L'erreur apparaît sous le nom de l'agent. Une cause fréquente est une application déconnectée : reconnectez-la dans Personnaliser → Connecteurs.
+</Accordion>
+</AccordionGroup>
+
+## Voir aussi
+
+- [Créer votre premier agent](/fr/ai-agents/creating-your-first-agent)
+- [Auditer vos agents](/fr/ai-agents/audit-your-agents)
+- [Connecter des outils](/fr/tools-connection/introduction)

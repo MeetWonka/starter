@@ -1,211 +1,216 @@
 ---
-title: "Business Teaching"
-description: "Geef bedrijfscontext aan agents voor nauwkeurige, bedrijfsspecifieke reacties."
+title: "Zakelijke context meegeven"
+description: "Geef agenten zakelijke context voor nauwkeurige, bedrijfsspecifieke antwoorden."
 ---
 
-Je bedrijfscontext leren aan agents zorgt ervoor dat ze de terminologie, processen en beleid van je bedrijf begrijpen. Dit stelt agents in staat om reacties te leveren die gebaseerd zijn op je werkelijke operaties in plaats van te vertrouwen op generieke aannames.
+Als je je zakelijke context aan agenten meegeeft, begrijpen ze de terminologie, processen en het beleid van je bedrijf. Zo geven ze antwoorden die aansluiten bij jouw werkelijke activiteiten in plaats van generieke aannames.
 
 <Info>
-Business teaching helpt agents je exacte terminologie te gebruiken, je processen te volgen en aan te sluiten bij je bedrijfsbeleid.
+Zakelijke context helpt een agent om jouw exacte terminologie te gebruiken, jouw processen te volgen en zich aan het beleid van je bedrijf te houden.
 </Info>
 
 ---
 
-## Waarom Je Bedrijfscontext Leren?
+## Waarom zakelijke context meegeven?
 
-Zonder bedrijfscontext maken agents generieke aannames. Ermee geven ze nauwkeurige, bedrijfsspecifieke reacties.
+Zonder zakelijke context doet een agent generieke aannames. Mét context geeft hij nauwkeurige, bedrijfsspecifieke antwoorden.
 
-**Voorbeeld - Een klantenondersteuning e-mail schrijven:**
+**Voorbeeld — een klantenservice-e-mail schrijven:**
 
-**Zonder context:** "De meeste bedrijven bieden restituties binnen 14-30 dagen. Controleer het specifieke beleid van je bedrijf."
+**Zonder context:** "De meeste bedrijven bieden terugbetaling binnen 14 tot 30 dagen. Controleer het beleid van je bedrijf."
 
-**Met context:** "Ons restitutiebeleid staat verzoeken toe binnen 30 dagen, verwerkt in 3-5 werkdagen. Wil je dat ik er één initieer?"
+**Met context:** "Ons terugbetalingsbeleid staat een aanvraag toe binnen 30 dagen, verwerkt binnen 3-5 werkdagen. Zal ik er een starten?"
 
-### Belangrijkste Voordelen
+### Belangrijkste voordelen
 
 <CardGroup cols={2}>
-<Card title="Nauwkeurige reacties" icon="check-circle">
-Agents gebruiken je exacte termen, beleid en processen
+<Card title="Nauwkeurige antwoorden" icon="check-circle">
+De agent gebruikt jouw exacte termen, beleid en processen.
 </Card>
 
-<Card title="Verminderde fouten" icon="shield-check">
-Grondvesting in je informatie voorkomt hallucinaties (AI die onjuiste details verzint)
+<Card title="Minder fouten" icon="shield-check">
+Onderbouwing met jouw informatie vermindert hallucinaties (verzonnen, onjuiste details).
 </Card>
 
 <Card title="Merkconsistentie" icon="palette">
-Agents behouden je stem, toon en communicatiestijl
+De agent behoudt jouw stem, toon en communicatiestijl.
 </Card>
 
-<Card title="Betere uitkomsten" icon="trophy">
-Teamleden krijgen betrouwbare, bruikbare informatie
+<Card title="Betere resultaten" icon="trophy">
+Teamleden krijgen betrouwbare, bruikbare informatie.
 </Card>
 </CardGroup>
 
 ---
 
-## Hoe Bedrijfscontext Te Geven
+## Hoe geef je zakelijke context mee?
 
-### Voeg Context Toe aan Agent Instructies
+### Voeg context toe in de sectie Gedrag
 
-Voeg bedrijfsspecifieke informatie direct toe aan agentinstructies. Begin met essentials en breid uit indien nodig.
+Voeg bedrijfsspecifieke informatie rechtstreeks toe aan de instructies van de agent, in de sectie **Gedrag**. Begin met de essentie en breid uit waar nodig.
 
 <AccordionGroup>
-<Accordion title="Stem en Toon Richtlijnen" icon="message">
-Definieer hoe agents moeten communiceren om te matchen met je merk.
+<Accordion title="Toon en stijl" icon="message">
+Bepaal hoe de agent moet communiceren, passend bij je merk.
 
 **Voorbeeld:**
 ```
 Communicatiestijl:
-- Professioneel maar vriendelijk, nooit overdreven casual
-- Gebruik actieve stem en directe taal
-- Spreek klanten aan bij voornaam
-- Houd reacties beknopt en bruikbaar
+- Professioneel maar vriendelijk, nooit te informeel
+- Actieve stem en directe taal
+- Klanten aanspreken met voornaam
+- Beknopte, bruikbare antwoorden
 ```
 
 <Tip>
-Voeg specifieke zinsneden toe om te gebruiken of te vermijden. Dit zorgt voor consistentie over alle agentinteracties.
+Geef specifieke zinnen op die gebruikt of vermeden moeten worden. Dit zorgt voor consistentie over alle interacties van de agent.
 </Tip>
 </Accordion>
 
-<Accordion title="Terminologie en Glossaria" icon="book">
-Definieer bedrijfsspecifieke termen, productnamen en acroniemen.
+<Accordion title="Terminologie en woordenlijst" icon="book">
+Definieer bedrijfsspecifieke termen, productnamen en afkortingen.
 
 **Voorbeeld:**
 ```
-Belangrijkste termen:
-- "Premium tier" = enterprise subscription niveau
-- "Quick-start" = ons 15-minuten onboarding proces
-- MRR = Monthly Recurring Revenue
+Belangrijke termen:
+- "Premium-niveau" = enterprise-abonnementsniveau
+- "Quick-start" = ons onboardingtraject van 15 minuten
+- MRR = maandelijkse terugkerende omzet
 - CS = Customer Success (niet Customer Support)
 ```
 
-Duidelijke definities voorkomen misverstanden en zorgen ervoor dat agents je taal gebruiken.
+Duidelijke definities voorkomen misverstanden en zorgen dat de agent jouw taal gebruikt.
 </Accordion>
 
-<Accordion title="Beleidsintegratie" icon="shield">
-Voeg relevant beleid toe zodat agents vragen nauwkeurig kunnen beantwoorden.
+<Accordion title="Beleid integreren" icon="shield">
+Voeg relevant beleid toe zodat de agent vragen nauwkeurig kan beantwoorden.
 
 **Voorbeeld:**
 ```
-Belangrijkste beleid:
-- Restituties: Volledige restitutie binnen 30 dagen, verwerkt in 3-5 werkdagen
-- Support uren: 9 AM-6 PM EST, Maandag-Vrijdag
-- Response SLA: 4 uur voor standaard, 1 uur voor enterprise
-- Escalatie: Kwesties boven \$500 vereisen manager goedkeuring
+Belangrijk beleid:
+- Terugbetalingen: volledig binnen 30 dagen, verwerkt in 3-5 werkdagen
+- Openingsuren support: 9-18u, maandag-vrijdag
+- Reactie-SLA: 4 werkuren standaard, 1 uur voor enterprise
+- Escalatie: aanvragen boven 500 € vereisen goedkeuring van een manager
 ```
 
 <Warning>
-Verifieer altijd dat agents beleid correct toepassen voordat je naar je team deployt. Test met realistische scenario's.
+Controleer altijd of de agent het beleid correct toepast voordat je hem met je team deelt. Test met realistische scenario's.
 </Warning>
 </Accordion>
 
 <Accordion title="Procesinstructies" icon="list-check">
-Documenteer stap-voor-stap workflows die agents moeten volgen.
+Documenteer stapsgewijze workflows die de agent moet volgen.
 
 **Voorbeeld:**
 ```
-Klant onboarding proces:
-1. Verstuur welkomst e-mail met login credentials
-2. Plan oriëntatie call binnen 48 uur
-3. Wijs toegewijde success manager toe
+Onboardingproces klant:
+1. Verstuur welkomstmail met inloggegevens
+2. Plan een kennismakingsgesprek binnen 48 uur
+3. Wijs een dedicated success manager toe
 4. Geef toegang tot trainingsmateriaal
-5. Follow up na 7 dagen
+5. Volg op na 7 dagen
 ```
 
-Duidelijke processen zorgen voor consistentie en volledigheid in agentacties.
+Duidelijke processen zorgen voor consistentie en volledigheid in de acties van de agent.
 </Accordion>
 </AccordionGroup>
 
-**Best practice:** Update instructies wanneer beleid of processen veranderen. Verouderde context leidt tot onjuiste informatie.
+**Beste praktijk:** werk de instructies bij wanneer beleid of processen wijzigen. Verouderde context leidt tot onjuiste informatie.
 
 ---
 
-### Upload Documenten voor Diepe Context
+### Documenten uploaden voor diepere context
 
-Voor uitgebreide informatie zoals productdocumentatie, beleidshandboeken of kennisbanken, upload documenten die agents automatisch kunnen doorzoeken en raadplegen bij het beantwoorden van vragen.
-
-<Frame caption="Upload documenten voor agent context">
-<img src="../../images/rag.gif" alt="Document upload interface" />
-</Frame>
+Voor uitgebreide informatie zoals productdocumentatie, beleidshandboeken of kennisbanken upload je documenten in de sectie **Kennis**, zodat de agent ze automatisch kan doorzoeken en raadplegen bij het beantwoorden van vragen.
 
 **Waarom documenten uploaden?**
-- Agents kunnen gedetailleerde informatie openen zonder instructies te vervuilen
-- Perfect voor uitgebreide documentatie die te groot is voor instructies
-- Informatie blijft actueel door documenten op elk moment bij te werken zonder agentinstructies te wijzigen
+- De agent krijgt toegang tot gedetailleerde informatie zonder de instructies te overladen
+- Ideaal voor documentatie die te omvangrijk is voor de instructies
+- Informatie blijft actueel: werk documenten op elk moment bij zonder de instructies van de agent aan te passen
 
-**Het beste voor:** Productdocumentatie, beleidshandboeken, procesgidsen, trainingsmateriaal, kennisbanken
+**Ideaal voor:** productdocumentatie, beleidshandboeken, procesgidsen, trainingsmateriaal, kennisbanken
 
 <Tip>
-Gebruik instructies voor kritieke informatie die nodig is in elke reactie. Gebruik documenten voor uitgebreid referentiemateriaal dat agents alleen ophalen wanneer relevant.
+Gebruik instructies voor kritieke informatie die bij elk antwoord nodig is. Gebruik documenten voor uitgebreid referentiemateriaal dat de agent alleen raadpleegt wanneer relevant.
 </Tip>
 
-<Accordion title="Technische Details: Hoe Documentopvraging Werkt" icon="gear">
+<Accordion title="Technische details: hoe documentopvraging werkt" icon="gear">
 
-Wanneer je documenten uploadt, gebruikt WonkaChat **RAG (Retrieval-Augmented Generation)** om ze doorzoekbaar te maken voor agents.
+Wanneer je documenten uploadt, gebruikt WonkaChat **RAG (Retrieval-Augmented Generation)** om ze doorzoekbaar te maken voor de agent.
 
 **Hoe het werkt:**
+1. **Upload**: jij levert de bedrijfsdocumenten aan
+2. **Indexering**: documenten worden verwerkt en doorzoekbaar gemaakt
+3. **Opvraging**: indien relevant vindt de agent automatisch informatie in de documenten
+4. **Generatie**: de agent geeft een antwoord dat is onderbouwd door jouw echte documentatie
 
-1. **Upload**: Je verstrekt bedrijfsdocumenten
-2. **Index**: Documenten worden verwerkt en doorzoekbaar gemaakt
-3. **Ophalen**: Wanneer relevant, vinden agents automatisch informatie uit documenten
-4. **Genereren**: Agents produceren reacties gebaseerd op je werkelijke documentatie
+**Tips voor documentvoorbereiding:**
+- **Gebruik duidelijke titels**: goed gestructureerde secties verbeteren de nauwkeurigheid van opvraging
+- **Houd secties gericht**: één onderwerp per sectie
+- **Neem context op**: schrijf secties die op zichzelf begrijpelijk zijn (bijv. "Ons Premium-niveau omvat..." in plaats van enkel "Het omvat...")
+- **Blijf consistent**: gebruik overal dezelfde terminologie
 
-**Document voorbereidingstips:**
-- **Gebruik duidelijke koppen**: Goed gestructureerde secties verbeteren ophaalprecisie
-- **Houd secties gefocust**: Eén onderwerp per sectie
-- **Voeg context toe**: Schrijf secties om onafhankelijk begrijpelijk te zijn (bijv. "Onze Premium tier (\$99/maand) bevat..." niet alleen "Het bevat...")
-- **Blijf consistent**: Gebruik dezelfde terminologie overal
-
-**Beveiliging en privacy:**
-- Documenten veilig opgeslagen binnen je WonkaChat omgeving
-- Nooit gebruikt om AI-modellen te trainen
-- Alleen toegankelijk voor gebruikers met agentpermissies
-
-**Leer meer over RAG:** Voor diepere technische details, zie [Anthropic's](https://www.anthropic.com/engineering/contextual-retrieval) of [OpenAI's](https://platform.openai.com/docs/guides/optimizing-llm-accuracy#retrieval-augmented-generation-rag) of [Google's](https://cloud.google.com/use-cases/retrieval-augmented-generation) RAG Guides.
+<Info>
+Geüploade documenten blijven binnen jouw WonkaChat-omgeving en zijn alleen toegankelijk voor gebruikers met toestemming om de agent te gebruiken.
+</Info>
 
 </Accordion>
 
 ---
 
-## Voorbeelden per Use Case
+## Voorbeelden per use case
 
 <AccordionGroup>
-<Accordion title="Klantenondersteuning Agent" icon="headset">
-**Benodigde Context:** Productfuncties, supportbeleid, troubleshooting stappen, communicatierichtlijnen
+<Accordion title="Klantenserviceagent" icon="headset">
+**Benodigde context:** productfuncties, supportbeleid, probleemoplossingsstappen, communicatierichtlijnen
 
-**Voorbeeld instructie snippet:**
+**Voorbeeld van instructiefragment:**
 ```
-Support richtlijnen:
-- Verifieer altijd account voordat je details deelt
-- Gebruik kennisbank artikelen voor technische kwesties
-- Escaleer billing kwesties boven 500$ naar finance team
-- Response toon: Empathisch, oplossingsgericht, professioneel
-```
-</Accordion>
-
-<Accordion title="E-mail Assistent" icon="envelope">
-**Benodigde Context:** Bedrijfsstem, veelvoorkomende e-mailtypes, goedkeuringsworkflows, interne terminologie
-
-**Voorbeeld instructie snippet:**
-```
-E-mail stijl:
-- Interne e-mails: Direct en beknopt
-- Externe e-mails: Professioneel en hoffelijk
-- Voeg altijd relevante stakeholders toe in CC wanneer gepast
-- Gebruik bedrijf handtekening format: [Naam] | [Titel] | [Afdeling]
+Supportrichtlijnen:
+- Verifieer altijd het account voordat je details deelt
+- Gebruik kennisbankartikelen voor technische problemen
+- Escaleer factuurproblemen boven 500 € naar finance
+- Toon van antwoord: empathisch, oplossingsgericht, professioneel
 ```
 </Accordion>
 
-<Accordion title="Sales Assistent" icon="chart-line">
-**Benodigde Context:** Product positionering, prijzen, doelgroep, verkoopprocessen, concurrentie info
+<Accordion title="E-mailassistent" icon="envelope">
+**Benodigde context:** stem van het bedrijf, veelvoorkomende e-mailtypes, goedkeuringsworkflows, interne terminologie
 
-**Voorbeeld instructie snippet:**
+**Voorbeeld van instructiefragment:**
 ```
-Sales context:
-- Doelgroep: Mid-market bedrijven (50-500 medewerkers)
-- Belangrijkste waardepropositie: 40% tijdsbesparing op projectmanagement
-- Prijzen: Start bij 49$/gebruiker/maand
-- Geef nooit korting zonder manager goedkeuring
+E-mailstijl:
+- Interne e-mails: direct en beknopt
+- Externe e-mails: professioneel en beleefd
+- Zet relevante belanghebbenden waar nodig in CC
+- Gebruik het handtekeningformaat van het bedrijf: [Naam] | [Functie] | [Afdeling]
+```
+</Accordion>
+
+<Accordion title="Salesassistent" icon="chart-line">
+**Benodigde context:** productpositionering, prijzen, doelgroep, salesproces, concurrentie-informatie
+
+**Voorbeeld van instructiefragment:**
+```
+Salescontext:
+- Doelgroep: mid-market bedrijven (50-500 werknemers)
+- Belangrijkste waardepropositie: 40% tijdsbesparing op projectbeheer
+- Nooit korting geven zonder goedkeuring van een manager
 ```
 </Accordion>
 </AccordionGroup>
+
+---
+
+## Volgende stappen
+
+<CardGroup cols={2}>
+<Card title="Je eerste agent maken" icon="plus-circle" href="/nl/ai-agents/creating-your-first-agent">
+Pas zakelijke context toe tijdens het bouwen van je agent.
+</Card>
+
+<Card title="Agenten delen" icon="share-nodes" href="/nl/ai-agents/sharing-agents">
+Deel je goed onderbouwde agent met je team.
+</Card>
+</CardGroup>

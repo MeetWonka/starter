@@ -1,0 +1,72 @@
+---
+title: "Auditer vos agents"
+description: "Consultez comment les autres utilisent les agents que vous possédez ou éditez, comprenez ce que vous pouvez voir, et sachez ce qui est indiqué aux utilisateurs finaux."
+---
+
+Si vous possédez ou éditez un agent utilisé par d'autres personnes de votre organisation, vous pouvez consulter son activité : qui l'a utilisé, combien de fois et — si vous choisissez de l'autoriser — le contenu des conversations et des appels d'outils qu'il a effectués.
+
+<Note>
+L'audit des agents est une fonctionnalité d'organisation. Votre administrateur l'active dans Paramètres → Organisation → **Auditer votre agent**, avec deux sous-fonctionnalités associées : **Audit - Voir les conversations** et **Audit - Voir les appels d'outils**. Si aucune n'est activée, vous ne voyez que des chiffres d'usage anonymisés, jamais le contenu des conversations.
+</Note>
+
+## Deux niveaux de contrôle
+
+Voir ce qui se passe dans une conversation avec votre agent dépend de deux conditions réunies :
+
+1. **Votre organisation active la fonctionnalité d'audit.** Un administrateur doit activer **Voir les conversations** et/ou **Voir les appels d'outils** pour votre organisation.
+2. **Vous, en tant que propriétaire ou éditeur de l'agent, l'activez pour cet agent.** Même si votre organisation l'autorise, rien n'est visible tant que vous ne l'activez pas pour cet agent précis.
+
+Activer l'audit au niveau de l'organisation n'expose donc aucune conversation par elle-même — chaque propriétaire d'agent décide, agent par agent, de partager ou non ces données avec les éditeurs.
+
+### Activer le partage de données pour un agent
+
+<Steps>
+<Step title="Ouvrez l'agent">
+Ouvrez l'agent que vous souhaitez auditer. Vous devez disposer des droits **Editor** ou **Propriétaire**.
+</Step>
+<Step title="Trouvez Accès aux données pour les éditeurs">
+Repérez la section **Accès aux données pour les éditeurs** (« Choisissez les données d'audit que les éditeurs de l'agent peuvent consulter. »).
+</Step>
+<Step title="Choisissez ce que vous partagez">
+Activez **Partager les conversations avec les éditeurs de l'agent** pour permettre aux éditeurs de lire le texte des messages. Activez **Partager les appels d'outils avec les éditeurs de l'agent** pour leur permettre de voir les appels d'outils effectués par l'agent. Chaque curseur n'apparaît que si votre organisation a activé la fonctionnalité correspondante.
+</Step>
+</Steps>
+
+## Ce que vous pouvez voir sans activer le partage
+
+Même sans activer le partage de données, les éditeurs et propriétaires d'un agent peuvent déjà voir, pour chaque conversation avec l'agent :
+
+- Le titre de la conversation et les dates.
+- Le nombre de messages de l'utilisateur et de l'agent.
+- Le nombre d'appels d'outils.
+- Le total de tokens utilisés et les modèles impliqués.
+
+Ce sont uniquement des métadonnées — aucun texte de message, aucun contenu d'appel d'outil. Par défaut, vous ne voyez que vos propres conversations avec l'agent ; le partage étend cette visibilité aux conversations de tous les utilisateurs de l'agent.
+
+## Ouvrir la vue d'audit
+
+Ouvrez le menu **⋯** de l'agent et choisissez l'action d'audit, ou allez dans **Paramètres → Auditer vos agents** puis sélectionnez l'agent dans la liste. Chaque conversation s'ouvre en un détail par message, affichant les métadonnées ci-dessus, ainsi que le texte des messages et les détails des appels d'outils partout où votre organisation et le propriétaire de l'agent l'ont autorisé.
+
+## Ce qui est indiqué aux utilisateurs finaux
+
+Dès qu'un partage est activé pour un agent, WonkaChat en informe les personnes qui discutent avec lui avant qu'elles poursuivent. Elles voient un badge d'avertissement, **« Conversation auditable par l'éditeur de l'agent »**, et, selon ce qui est partagé :
+
+- **« Cette conversation est partagée avec les éditeurs de l'agent »** lorsque le partage du contenu des conversations est activé.
+- **« Les appels d'outils de cette conversation sont partagés avec les éditeurs de l'agent »** lorsque le partage des appels d'outils est activé.
+
+<Warning>
+Cet avertissement est affiché aux utilisateurs finaux, pas seulement à vous. N'activez le partage que pour les agents dont les conversations sont censées être examinées — par exemple des agents de support interne ou de conformité — et assurez-vous que la politique d'usage de votre organisation le reflète.
+</Warning>
+
+## Stats Agent
+
+Indépendamment de l'audit, **Stats Agent** (Paramètres → Stats Agent) fournit aux propriétaires et éditeurs de l'agent des chiffres d'usage anonymisés et agrégés : activité quotidienne, usage de tokens et coût par modèle, ainsi qu'un journal des transactions — le tout combiné pour tous les utilisateurs de l'agent, sans révéler qui a dit quoi. Votre organisation doit activer la fonctionnalité correspondante pour que cet onglet apparaisse.
+
+<Info>
+Votre propre usage sur tous les agents est disponible dans **Paramètres → Mes Stats**. Les totaux à l'échelle de l'organisation sont dans **Paramètres → Statistiques de l'organisation**, réservés aux administrateurs.
+</Info>
+
+## Voir aussi
+
+- [Créer votre premier agent](/fr/ai-agents/creating-your-first-agent)
+- [Agents planifiés et déclenchés](/fr/ai-agents/scheduled-agents)

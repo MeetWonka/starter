@@ -1,0 +1,99 @@
+---
+title: "Aangepaste Connectoren"
+description: "Voeg je eigen MCP-connector toe wanneer de tool die je nodig hebt niet in de ingebouwde catalogus van WonkaChat staat."
+---
+
+WonkaChat wordt geleverd met tientallen kant-en-klare connectoren, maar je kunt ook je eigen **aangepaste MCP-connector** toevoegen om elke tool te bereiken die een Model Context Protocol-server (MCP) aanbiedt, of het nu een intern systeem is of een provider die nog niet in de catalogus staat.
+
+<Info>
+Aangepaste connectoren toevoegen is een mogelijkheid op beheerdersniveau. Zie je geen knop **"MCP-tool toevoegen"** op de Connectoren-pagina, dan heeft je organisatie deze functie niet ingeschakeld voor jouw rol.
+</Info>
+
+## Voordat Je Begint
+
+<CardGroup cols={2}>
+<Card title="Je Hebt een MCP-Server Nodig" icon="server">
+Aangepaste connectoren wijzen naar een bestaand MCP-server-endpoint. WonkaChat bouwt de server niet voor je, het maakt verbinding met een server die al draait.
+</Card>
+
+<Card title="Beheerderstoegang Vereist" icon="user-shield">
+Het aanmaken en bewerken van aangepaste connectoren wordt geregeld via een recht op organisatieniveau. Vraag je beheerder als de optie niet beschikbaar is voor jou.
+</Card>
+</CardGroup>
+
+<Warning>
+**Aangepaste connectoren worden niet geverifieerd door Wonka AI.** Jij bent zelf verantwoordelijk voor het vertrouwen van het endpoint waarmee je verbindt, en voor het nagaan welke data en acties het beschikbaar stelt, voordat je het inschakelt voor jezelf of je team.
+</Warning>
+
+## Een Aangepaste Connector Toevoegen
+
+<Steps>
+<Step title="Open de Connectoren-pagina">
+Ga naar **Aanpassen → Connectoren** en klik op **"MCP-tool toevoegen"**.
+</Step>
+
+<Step title="Vul de Basisgegevens In">
+- **Naam**: een korte, herkenbare label (alleen letters, cijfers en spaties)
+- **Beschrijving** (optioneel): wat de connector doet, zichtbaar voor iedereen die de catalogus doorbladert
+- **Icoon** (optioneel): upload een afbeelding om de connector snel te herkennen
+</Step>
+
+<Step title="Stel de Verbindingsgegevens In">
+- **Connector-URL**: het adres van de MCP-server (bijvoorbeeld `https://mcp.example.com`)
+- **Transporttype**: kies **Streamable HTTP** of **SSE**, afhankelijk van wat de server ondersteunt
+</Step>
+
+<Step title="Kies de Authenticatiemethode">
+Kies de authenticatiemethode die de MCP-server vereist:
+
+<Tabs>
+<Tab title="Geen Authenticatie">
+Gebruik dit voor interne of publieke MCP-servers die geen gegevens vereisen.
+</Tab>
+
+<Tab title="API-Sleutel">
+- Voer het headerformaat in: **Bearer**, **Basic** of **Custom**
+- Vink optioneel **"Gebruiker levert eigen API-sleutel"** aan zodat elke teamgenoot zijn eigen sleutel invoert in plaats van één sleutel op beheerdersniveau te delen
+</Tab>
+
+<Tab title="OAuth">
+- WonkaChat kan de OAuth-configuratie van de server automatisch detecteren, of je voert de autorisatie- en token-endpoints handmatig in
+- Na het aanmaken van de connector toont WonkaChat een **redirect-URI** om te registreren bij je OAuth-provider
+</Tab>
+</Tabs>
+</Step>
+
+<Step title="Voeg Aangepaste Headers Toe (optioneel)">
+Heeft de MCP-server extra headers nodig naast de autorisatieheader (bijvoorbeeld een tenant-ID of API-versie), voeg die dan toe als naam/waarde-paren. Er geldt een limiet op het aantal dat je per connector kunt toevoegen.
+</Step>
+
+<Step title="Bevestig en Maak Aan">
+Vink **"I trust this application"** aan om te bevestigen dat je begrijpt dat de connector niet is geverifieerd door Wonka AI, en klik dan op **"Create"**.
+
+<Check>
+Eenmaal aangemaakt verschijnt de connector naast de ingebouwde connectoren op de Connectoren-pagina. Verbind en schakel hem in zoals bij elke andere connector.
+</Check>
+</Step>
+</Steps>
+
+## Aangepaste Connectoren Bewerken en Verwijderen
+
+- **Bewerken**: klik op een connector die je hebt aangemaakt om de URL, authenticatie of headers bij te werken.
+- **Verwijderen**: het verwijderen van een aangepaste connector is voorbehouden aan organisatiebeheerders.
+- Aangepaste connectoren kunnen worden getagd en gedeeld met specifieke teamgenoten, net zoals elke andere resource in WonkaChat, als je organisatie delen heeft ingeschakeld.
+
+## Toegang Beheren
+
+Beheerders bepalen welke aangepaste (en ingebouwde) connectoren beschikbaar zijn voor welke gebruikers of groepen via [tool policies](/nl/administration/groups-and-tool-policies). Gebruik dit bijvoorbeeld om een gevoelige interne connector te beperken tot het team dat hem beheert, in plaats van hem organisatiebreed beschikbaar te stellen.
+
+## Volgende Stappen
+
+<CardGroup cols={2}>
+<Card title="Installatiegids" icon="plug" href="/nl/tools-connection/setting-up-your-first-connection">
+Verbind en schakel een connector in voor je chat zodra hij is aangemaakt.
+</Card>
+
+<Card title="Probleemoplossing" icon="wrench" href="/nl/tools-connection/troubleshooting-connections">
+Oplossingen voor veelvoorkomende verbindingsproblemen, ook bij aangepaste connectoren.
+</Card>
+</CardGroup>

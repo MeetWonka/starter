@@ -1,0 +1,54 @@
+---
+title: "Groepen en connectorbeleid"
+description: "Maak groepen aan om delen te vereenvoudigen, en bepaal welke connectors elke gebruiker of groep mag gebruiken."
+---
+
+<Note>
+Instellingen → Organisatie → Groepen en Connectortoegang. Zichtbaar voor beheerders en de eigenaar, wanneer deze functies zijn ingeschakeld voor uw organisatie.
+</Note>
+
+## Groepen
+
+Met groepen deelt u agents, prompts en skills, en beheert u connectortoegang, voor een heel team tegelijk in plaats van persoon per persoon.
+
+<Steps>
+<Step title="Groepen openen">
+Ga naar **Instellingen → Organisatie → Groepen**.
+</Step>
+<Step title="Een groep aanmaken">
+Klik op **Groep aanmaken**, geef een **groepsnaam** en optioneel een **beschrijving**, en **selecteer leden**.
+</Step>
+<Step title="Gebruiken">
+Zoek groepen via het zoekveld. Met **Bewerken** hernoemt u een groep, past u de beschrijving aan of werkt u de leden bij; **Groep verwijderen** verwijdert de groep definitief.
+</Step>
+</Steps>
+
+Zodra een groep bestaat, kan elke gebruiker deze als deeldoel kiezen — kies bijvoorbeeld bij het delen van een agent de groep in plaats van personen één voor één toe te voegen.
+
+## Connectorbeleid (connectortoegang)
+
+Connectorbeleid bepaalt welke gebruikers en groepen elke connector (MCP-server) mogen gebruiken. Een geweigerde gebruiker of groep kan de connector nooit gebruiken; wanneer u specifieke gebruikers of groepen voor een connector toestaat, kunnen alleen zij de connector gebruiken.
+
+Open **Instellingen → Organisatie → Connectortoegang**. Er zijn drie weergaven beschikbaar:
+
+<Tabs>
+<Tab title="Per connector">
+Selecteer een connector om te zien en te beheren wie deze mag gebruiken. Elke connector toont een status: **Open** (iedereen in de organisatie), **Beperkt** (alleen vermelde gebruikers/groepen), **Uitzonderingen** (iedereen behalve vermelde gebruikers/groepen), of **Geblokkeerd** (niemand).
+
+Gebruik **Regel toevoegen** om een gebruiker of groep toe te staan of te weigeren, of **Weigeren voor iedereen in de organisatie** om de connector volledig te blokkeren.
+</Tab>
+<Tab title="Per persoon">
+Selecteer een gebruiker of groep om alle connectors te zien die toegestaan of geweigerd zijn, en beheer de lijst van daaruit.
+</Tab>
+<Tab title="Bulk toewijzen">
+Selecteer meerdere connectors en meerdere gebruikers of groepen, kies **Toestaan** of **Weigeren**, voeg optioneel een reden toe, en pas alle combinaties in één actie toe. Eén bulkactie kan een beperkt aantal combinaties tegelijk dekken.
+</Tab>
+</Tabs>
+
+<Info>
+Beheerders van uw eigen organisatie worden nooit beïnvloed door haar connectorbeleid; beheerders van andere organisaties wel.
+</Info>
+
+<Tip>
+Begin met gevoelige connectors (CRM, e-mail, financiële tools): beperk deze tot de specifieke groep die ze nodig heeft, en laat connectors met een laag risico open voor iedereen.
+</Tip>

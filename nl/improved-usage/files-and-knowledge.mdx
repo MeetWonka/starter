@@ -1,0 +1,108 @@
+---
+title: "Bestanden en kennis"
+description: "Upload bestanden naar een chat, laat agents erin zoeken, en beheer wat u heeft gedeeld."
+---
+
+U kunt bestanden aan elke chat toevoegen zodat een agent ze kan lezen, doorzoeken of er direct mee kan werken. WonkaChat laat agents ook bestanden rechtstreeks uit SharePoint halen en tekst uit gescande documenten en afbeeldingen extraheren met OCR.
+
+<Info>
+Welke uploadopties u ziet, hangt af van wat uw organisatie en de agent waarmee u chat hebben ingeschakeld. Ontbreekt een optie die hier wordt beschreven, neem dan contact op met uw beheerder.
+</Info>
+
+---
+
+## Een bestand naar een chat uploaden
+
+<Steps>
+<Step title="Open de bijlagekiezer">
+Klik op het bijlage-icoon in het berichtenveld, of sleep een bestand rechtstreeks naar het chatvenster.
+</Step>
+<Step title="Kies waar het bestand vandaan komt">
+Kies het bestand op uw computer.
+</Step>
+<Step title="Kies hoe de agent het moet gebruiken">
+Als meerdere opties op uw bestand van toepassing zijn, vraagt WonkaChat hoe het ermee om moet gaan:
+- **Upload for File Search** — indexeer de inhoud van het bestand zodat de agent erin kan zoeken (zie hieronder).
+- **Upload files** — voeg het bestand toe voor de Code Interpreter, als die agent dit heeft ingeschakeld.
+- **Upload as Text** — voer OCR uit op het bestand en voeg de geëxtraheerde tekst toe als context.
+- **Upload an image** — voor afbeeldingsbestanden, wanneer geen andere optie van toepassing is.
+</Step>
+</Steps>
+
+<Tip>
+U kunt een bestand ook direct in het berichtenveld plaatsen zonder dat ernaar wordt gevraagd — WonkaChat kiest de optie die past bij de mogelijkheden van de huidige agent.
+</Tip>
+
+## Upload for File Search (kennis doorzoeken)
+
+**Upload for File Search** maakt van een bestand doorzoekbare kennis voor het gesprek. In plaats van het hele document in de context van de agent te laden, indexeert WonkaChat het en kan de agent het naar behoefte doorzoeken — beter geschikt voor lange documenten of meerdere bestanden tegelijk.
+
+Gebruik dit wanneer u wilt dat de agent antwoordt op basis van een specifiek document (een beleid, een contract, een rapport) in plaats van algemene kennis.
+
+<Note>
+Agentbouwers kunnen File Search ook als vaste **Knowledge**-bron toevoegen bij het maken van een agent, zodat elk gesprek met die agent dezelfde bestanden kan doorzoeken. Zie de Knowledge-sectie van de agentbouwer.
+</Note>
+
+## OCR: tekst lezen uit afbeeldingen en scans
+
+Door **Upload as Text** te kiezen, wordt Optical Character Recognition (OCR) op het bestand uitgevoerd en wordt de geëxtraheerde tekst als context aan het gesprek toegevoegd. Dit is de juiste keuze voor:
+- Gescande pdf's zonder tekstlaag
+- Foto's van documenten, whiteboards of gedrukte pagina's
+- Screenshots met tekst die u de agent wilt laten lezen
+
+De geëxtraheerde tekst wordt rechtstreeks aan de context van de agent toegevoegd, wat goed werkt voor kortere documenten waarvan u de volledige tekst beschikbaar wilt hebben in plaats van doorzocht.
+
+## Bestanden vanuit SharePoint
+
+Wanneer u een agent bouwt, kunt u bestanden rechtstreeks vanuit SharePoint aan de kennis van de agent toevoegen, zonder ze eerst te downloaden. Open in de agentbouwer de sectie **Kennis**, kies **From SharePoint** en blader vervolgens naar uw bestanden. Deze optie verschijnt alleen als uw organisatie SharePoint heeft gekoppeld.
+
+<Note>
+Toegang tot SharePoint volgt uw eigen Microsoft-rechten — u kunt alleen bestanden kiezen waarvoor u al geautoriseerd bent.
+</Note>
+
+## Bestanden voor Code Interpreter
+
+Als de agent die u gebruikt de Code Interpreter heeft ingeschakeld, kunt u bestanden uploaden (spreadsheets, csv's, datasets, scripts) zodat deze ze kan lezen, transformeren of er berekeningen op kan uitvoeren in een geïsoleerde code-omgeving. Kies **Upload files** in de uploadkiezer wanneer deze optie beschikbaar is.
+
+<Info>
+Code Interpreter is een agentmogelijkheid — niet elke agent heeft dit ingeschakeld. Ziet u deze optie niet, vraag dan de bouwer van de agent of uw beheerder om deze in te schakelen.
+</Info>
+
+## Ondersteunde bestandstypen en groottelimieten
+
+WonkaChat accepteert veelgebruikte document-, tekst-, code-, afbeeldings-, audio-, video- en archiefformaten, waaronder:
+
+<CardGroup cols={2}>
+<Card title="Documenten" icon="file-lines">
+PDF, Word, PowerPoint, Excel en OpenDocument-bestanden
+</Card>
+<Card title="Tekst en code" icon="code">
+Markdown, JSON, YAML, HTML, CSS en de meeste programmeertalen
+</Card>
+<Card title="Afbeeldingen" icon="image">
+JPEG, PNG, GIF, HEIC/HEIF en SVG
+</Card>
+<Card title="Audio, video en archieven" icon="file-zipper">
+Veelgebruikte audio- en videoformaten, plus ZIP- en TAR-archieven
+</Card>
+</CardGroup>
+
+Standaardlimieten (uw beheerder kan andere limieten instellen voor uw organisatie):
+- Tot 12 bestanden per bericht
+- Tot 512 MB per bestand
+
+<Warning>
+Wordt een bestand geweigerd, controleer dan eerst de grootte en het formaat — en neem daarna contact op met uw beheerder, want deze limieten zijn per organisatie instelbaar.
+</Warning>
+
+## Uw bestanden beheren
+
+Ga naar **Settings → Files** om alle bestanden te zien die u in uw gesprekken heeft geüpload. Daar kunt u bekijken wat is opgeslagen en bestanden verwijderen die u niet meer nodig heeft.
+
+---
+
+## Voor agentbouwers en beheerders: Azure AI Search
+
+Agentbouwers kunnen **Azure AI Search** als tool koppelen bij het configureren van een agent, zodat deze een bestaande Azure Cognitive/AI Search-index kan raadplegen als extra kennisbron. Dit ondersteunt zowel een API-sleutel als Microsoft OAuth; bij op SharePoint gebaseerde indexen met OAuth respecteren de resultaten de SharePoint-beveiligingsfiltering van uw organisatie — gebruikers zien alleen documenten waartoe ze al geautoriseerd zijn.
+
+Dit wordt per agent ingesteld, in de Tools-sectie van de agentbouwer.

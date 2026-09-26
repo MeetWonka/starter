@@ -1,0 +1,116 @@
+---
+title: "Een model kiezen"
+description: "Begrijp modelgroottes, de Router, de modi Fast en Pro, en hoe u het juiste model voor uw taak kiest."
+---
+
+WonkaChat geeft u toegang tot verschillende AI-modellen zonder dat u expert hoeft te worden in modelnamen. Gebruik de modelselector boven het berichtenveld om te kiezen hoe de AI uw taak moet aanpakken.
+
+<Info>
+Welke modellen beschikbaar zijn, hangt af van de configuratie van uw organisatie. Ziet u een model of modus die hier beschreven staat niet? Vraag dan uw beheerder.
+</Info>
+
+## De modelselector
+
+Klik op de modelnaam boven het berichtenveld om de modelselector te openen. Daar kunt u:
+
+- Schakelen tussen de modi **Fast** en **Pro**
+- Direct een specifieke modelgrootte kiezen
+- De **Router** automatisch laten kiezen
+
+<Tip>
+U kunt tijdens een gesprek van model wisselen. Dit wist de gespreksgeschiedenis niet — het nieuw gekozen model gaat gewoon verder waar het vorige gebleven was.
+</Tip>
+
+---
+
+## Modelgroottes
+
+In plaats van individuele modelnamen te onthouden, denkt u in termen van grootte en capaciteit:
+
+<CardGroup cols={2}>
+<Card title="Fast" icon="bolt">
+Licht en snel. Ideaal voor eenvoudige verzoeken met een hoog volume: snelle vragen, korte samenvattingen, opmaak. Niet bedoeld voor diepgaand redeneren of complex toolgebruik.
+</Card>
+
+<Card title="Standaard" icon="scale-balanced">
+Een balans tussen snelheid en redeneervermogen. Een solide standaardkeuze voor het dagelijkse professionele werk, inclusief de meeste gesprekken met connectoren en tools.
+</Card>
+
+<Card title="Geavanceerd redeneren" icon="brain">
+De diepste analyse die beschikbaar is. Ideaal voor complexe, meerstapsproblemen, strategische planning en taken die redeneren combineren met meerdere externe tools.
+</Card>
+</CardGroup>
+
+<Warning>
+Fast-modellen hebben geen redeneervermogen en zijn niet geschikt voor systeemgebruik (ERP, CRM en vergelijkbare tools). Gebruik voor dat soort werk een standaard- of geavanceerd redeneermodel.
+</Warning>
+
+---
+
+## De Router: laat WonkaChat kiezen
+
+Wilt u liever niet zelf een modelgrootte kiezen? Selecteer dan de **Router** in de modelselector. Deze leest uw verzoek en stuurt het automatisch naar een geschikt model, met een balans tussen kwaliteit, snelheid en kosten.
+
+<Tip>
+De Router is een goede standaardkeuze wanneer de complexiteit van uw verzoeken per bericht verschilt, omdat hij zich automatisch aanpast in plaats van dat u zelf steeds moet wisselen.
+</Tip>
+
+Als uw organisatie dit toestaat, kunt u het gedrag van de Router aanpassen via **Instellingen → Algemeen** door een voorinstelling te kiezen, bijvoorbeeld gericht op prestaties, op kosten, of een gebalanceerde optie.
+
+---
+
+## De modi Fast en Pro
+
+Naast losse modelgroottes biedt WonkaChat twee kant-en-klare modi:
+
+<CardGroup cols={2}>
+<Card title="Fast-modus" icon="gauge-high">
+Geschikt voor algemeen werk. Heeft geen redeneervermogen — niet geschikt voor systeemgebruik (ERP, CRM en vergelijkbare tools).
+</Card>
+
+<Card title="Pro-modus" icon="wand-magic-sparkles">
+Geschikt voor complexe taken en redeneren, inclusief systeemgebruik (ERP, CRM en vergelijkbare tools).
+</Card>
+</CardGroup>
+
+Schakel op elk moment tussen deze modi vanuit de modelselector, afhankelijk van wat het huidige bericht vereist.
+
+---
+
+## Regio's van modellen
+
+Elk model in de selector toont een regiobadge. Modellen worden aangeboden via verschillende providers: de meeste draaien in de EU, maar sommige draaien in de VS of wereldwijd, afhankelijk van de provider. Controleer de badge voordat u een model gebruikt voor gevoelige gegevens, en vraag uw beheerder of uw organisatie beperkingen instelt voor toegestane regio's.
+
+Voor het volledige overzicht van gegevensverwerking en certificeringen, zie [Security & Governance](/nl/security-governance/security-overview).
+
+---
+
+## Modelkeuze voor agents
+
+Wanneer u een [agent](/nl/ai-agents/introduction) bouwt of bewerkt, kiest u het model onafhankelijk van uw eigen chatmodel. Zo kunt u bijvoorbeeld een klantenondersteuningsagent een snel model geven voor korte antwoorden, terwijl u een geavanceerd redeneermodel gebruikt voor een agent die diepgaand onderzoek doet.
+
+<Tip>
+Gedraagt een agent zich inconsistent of lijkt hij moeite te hebben met een taak? Controleer dan eerst welk model hij gebruikt, voordat u ervan uitgaat dat de prompt zelf moet worden aangepast.
+</Tip>
+
+---
+
+## De juiste aanpak kiezen
+
+<AccordionGroup>
+<Accordion title="Ik weet niet precies wat ik nodig heb">
+Begin met de **Router**. Die is hier precies voor gemaakt: u beschrijft de taak, en de Router kiest een geschikt model.
+</Accordion>
+
+<Accordion title="Ik heb snel een antwoord nodig op iets eenvoudigs">
+Gebruik de **Fast**-modus of een snel model. Snelle vragen, korte samenvattingen en lichte opmaak vereisen geen diepgaand redeneren.
+</Accordion>
+
+<Accordion title="Ik werk met een verbonden bedrijfssysteem">
+Gebruik de **Pro**-modus of een standaard-/geavanceerd redeneermodel. Systeemgebruik (ERP, CRM en vergelijkbare tools) vereist redeneervermogen dat Fast-modellen niet hebben.
+</Accordion>
+
+<Accordion title="Ik doe complexe, meerstapsanalyse">
+Gebruik een geavanceerd redeneermodel. Dit is gemaakt voor de zwaarste taken.
+</Accordion>
+</AccordionGroup>

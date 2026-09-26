@@ -1,0 +1,90 @@
+---
+title: "Organisatie-instellingen"
+description: "Gebruikersbeheer, uitnodigingen, systeemprompt van de organisatie, tags, abonnement en permissies per functie."
+---
+
+Organisatiebrede instellingen vindt u onder **Instellingen → Organisatie**. Wat u ziet, hangt af van uw rol: de **eigenaar** van de organisatie ziet het meest, andere beheerders zien een subset.
+
+## Gebruikersbeheer
+
+<Note>
+Alleen zichtbaar voor de **eigenaar** van de organisatie.
+</Note>
+
+Open **Instellingen → Organisatie → Gebruikersbeheer** om iedereen in uw organisatie te zien, met rol, gebruik en status (Actief, In behandeling, Verlopen).
+
+<Steps>
+<Step title="Uitnodigen via deellink">
+Klik op **Deellink genereren** om een link te maken waarmee iedereen zich zonder e-mailuitnodiging bij uw organisatie kan aansluiten. Gebruik **Kopiëren** om de link over te nemen, of **Nieuwe link genereren** om hem te vervangen.
+</Step>
+<Step title="Handmatig uitnodigen">
+Gebruik **Leden handmatig toevoegen** om individuele e-mailuitnodigingen te sturen, of **CSV-bestand toevoegen** om een hele lijst in één keer uit te nodigen.
+</Step>
+<Step title="Bestaande uitnodigingen beheren">
+Openstaande uitnodigingen kunt u **opnieuw versturen** of **negeren**. Leden kunnen worden bewerkt (rol, gebruikslimiet) of verwijderd.
+</Step>
+<Step title="Gebruikslimieten instellen">
+Gebruik **Limiet instellen** bij een lid om diens gebruik te begrenzen, of **Org-limiet instellen** voor een harde grens op de totale uitgaven van de organisatie — leden krijgen dan het verzoek een beheerder te contacteren zodra die grens is bereikt.
+</Step>
+</Steps>
+
+## Systeemprompt van de organisatie
+
+<Note>
+Zichtbaar voor beheerders die de systeemprompt van de organisatie mogen beheren.
+</Note>
+
+Open **Instellingen → Organisatie → Systeemprompt**. Deze instructies worden toegevoegd aan elke chat binnen uw organisatie, voor alle gebruikers — na de algemene WonkaChat-instructies, en met voorrang bij tegenspraak. Schrijf uw huisregels (toon, wat altijd of nooit moet) en **Opslaan**, of **Wissen** om ze te verwijderen en terug te vallen op enkel de algemene instructies.
+
+## Werkruimte-tags
+
+Open **Instellingen → Organisatie → Tags** om tags te beheren die gedeeld worden tussen agents en connectors in uw werkruimte. Maak een tag aan, zoek bestaande tags, hernoem of verwijder ze.
+
+## Abonnement
+
+<Note>
+Zichtbaar voor de eigenaar van de organisatie, wanneer abonnementen zijn ingeschakeld voor uw plan.
+</Note>
+
+Open **Instellingen → Organisatie → Abonnement** om uw huidige plan, gefactureerde gebruikers, facturen en de volgende betaaldatum te zien. Hier kunt u het aantal gebruikers van uw plan aanpassen, facturatie beheren, of uw abonnement annuleren/heractiveren. Er is een **gratis proefperiode van 7 dagen** beschikbaar; zie [Plannen](/nl/pricing/plans) voor details.
+
+## Meerdere organisaties beheren
+
+Als u eigenaar bent van meerdere organisaties, wissel dan van organisatie via de organisatiekiezer, of maak een nieuwe aan vanuit het beheergedeelte als uw account dit toelaat. Elke organisatie heeft haar eigen gebruikers, connectors, agents en instellingen.
+
+## Permissies per functie
+
+<Note>
+Niet op deze instellingenpagina — elke functie beheert haar eigen permissies.
+</Note>
+
+Beheerders kunnen per rol (Gebruiker of Beheerder) bepalen of mensen agents en prompts mogen **aanmaken** of **delen**, en vergelijkbare instellingen voor memories. Open de knop **Admin** (schildicoon) binnen de eigen pagina van elke functie:
+
+<CardGroup cols={3}>
+<Card title="Agents" icon="robot">
+Vanuit **Agents → Alle agents** opent u de beheerinstellingen om het aanmaken en delen van agents toe te staan of te beperken.
+</Card>
+<Card title="Prompts" icon="message">
+Vanuit **Aanpassen → Prompts** opent u de beheerinstellingen om het aanmaken en delen van prompts toe te staan of te beperken.
+</Card>
+<Card title="Memories" icon="brain">
+Vanuit **Instellingen → Memories** opent u de beheerinstellingen om te bepalen wie memories mag aanmaken, bijwerken of weigeren.
+</Card>
+</CardGroup>
+
+## Functies die Wonka AI inschakelt
+
+Verschillende mogelijkheden zijn functievlaggen op organisatieniveau die Wonka AI op aanvraag voor uw organisatie inschakelt — ze hebben geen schakelaar in de interface. Mist u er een, neem dan contact op met **support@meetwonka.com**:
+
+- Geplande en getriggerde agents
+- Skills
+- Aanmaken van aangepaste connectors (MCP)
+- Memories
+- Projecten
+- Audit van agents (en, daarbinnen, het bekijken van gesprekken of tool-aanroepen)
+- API-sleutels voor agents
+- Interactieve filters voor gebruiksstatistieken
+
+<Warning>
+Een organisatie verwijderen (Instellingen → Organisatie → Algemeen → **Organisatie verwijderen**) is definitief: alle organisatiegegevens worden verwijderd, en elke gebruiker die alleen tot deze organisatie behoort, wordt permanent verwijderd. Dit kan niet ongedaan worden gemaakt.
+</Warning>

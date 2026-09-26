@@ -5,7 +5,6 @@ description: "Get started with WonkaChat in 5 minutes, from first login to your 
 
 Get up and running with WonkaChat quickly and start experiencing AI-powered automation across your business tools.
 
-
 ## Your 5-Minute Success Path
 
 <Steps>
@@ -39,8 +38,6 @@ No new password needed, just use your existing work account to access WonkaChat 
 </Check>
 </Tab>
 
-
-
 <Tab title="Individual Subscription">
 Create your personal WonkaChat account and subscribe directly:
 
@@ -51,30 +48,30 @@ Create your personal WonkaChat account and subscribe directly:
 5. Complete payment to activate your account
 
 <Check>
-Your subscription is managed through Stripe with secure payment processing.
+Your subscription is managed through Stripe with secure payment processing. See [Pricing & Plans](/en/pricing/plans) for details.
 </Check>
 </Tab>
 
 <Tab title="Enterprise Setup">
 If you're setting up WonkaChat for your entire organization:
 
-1. Contact our team through the [Getting Help](/support-resources/getting-help) page
+1. Contact our team through the [Getting Help](/en/support-resources/getting-help) page
 2. Discuss your organization's requirements and user count
 3. Receive your custom enterprise invitation
 4. Configure SSO, governance policies, and team settings
 5. Invite your team members with pre-configured access
 
 <Tip>
-Enterprise plans include dedicated support, custom integrations, advanced security features, and volume pricing.
+Enterprise plans include dedicated support, custom integrations, and advanced security features.
 </Tip>
 </Tab>
 </Tabs>
 
 **What you'll see after login:**
 - Clean chat interface in the center
-- Connected tools and AI Agents in the sidebar
-- Model selection options in the settings
-- Your prompt library and saved conversations
+- **New chat**, **Agents**, **Customize** (Connectors, Skills, Prompts), **Conversations**, and **Archived chats** in the sidebar
+- The model selector above the message box
+- **Settings**, including your **Tasks** checklist, at the bottom of the sidebar
 
 </Step>
 
@@ -94,6 +91,10 @@ Enterprise plans include dedicated support, custom integrations, advanced securi
 
 In this video, you'll learn how to navigate the WonkaChat interface, access essential features, and customize your workspace for maximum productivity.
 </Info>
+
+<Tip>
+New to WonkaChat? Open **Settings → Tasks** for a short "Get started" checklist that walks you through the essentials — connecting a tool, saving a prompt, and more.
+</Tip>
 
 </Step>
 
@@ -115,7 +116,6 @@ WonkaChat will respond, confirming the platform is working correctly.
 If you receive a response, you're all set! The AI is connected and ready to help.
 </Check>
 
-
 </Step>
 
 <Step title="Connect Your First Tool (Outlook Mail)">
@@ -123,47 +123,44 @@ If you receive a response, you're all set! The AI is connected and ready to help
 Now let's connect WonkaChat to your email account so it can access your emails and calendar.
 
 <Warning>
-This example uses **Outlook Mail**, but the process is identical for **Gmail**, or any other email system. Simply click the corresponding the right connection button for your email provider and follow the same steps.
+This example uses **Outlook Mail**, but the process is identical for **Gmail** or any other supported connector. Just pick the matching connector and follow the same steps.
 </Warning>
 
 ### Step-by-Step Connection
 
 <Steps>
-<Step title="Open the Connectors Settings">
-On the bottom left of your WonkaChat interface, locate the settings and open the **Connectors** button.
+<Step title="Open Connectors">
+In the sidebar, open **Customize → Connectors** (`/connectors`).
 
-<Frame caption="Outlook Mail button location">
-<img src="../../images/connectors-gif.gif" alt="Outlook Mail button in the right panel" />
+<Frame caption="Connectors, accessible from Customize in the sidebar and from the composer">
+<img src="../../images/connectors-gif.gif" alt="Connectors button in the WonkaChat composer" />
 </Frame>
 
 <Info>
-Learn about external connections in [Tools & Connection](/tools-connection/introduction).
+Learn more about external connections in [Tools & Connection](/en/tools-connection/introduction).
 </Info>
 
 </Step>
 
-
 <Step title="Add Your Credentials">
-A connection window will appear asking for your credentials. Enter the required information:
+Select **Outlook Mail** and a connection window will appear asking for your credentials:
 - Your Outlook email address
-- Authentication credentials (this will use your organization's authentication method)
+- Authentication credentials (this uses your organization's authentication method)
 
 <Info>
 WonkaChat uses secure authentication and never stores your password. All credentials are encrypted.
 </Info>
 </Step>
 
-<Step title="Enable Connection for Your Model">
-After connecting, you need to authorize the external connection for the AI model you're using.
+<Step title="Enable the Connector for Your Conversation">
+Once connected, open the **Connectors** picker in the message box and select the connection you want the AI to use for this conversation.
 
-<Frame caption="Enable the connection for your model">
-<img src="../../images/connection-co.gif" alt="Enable the connection for the AI model" />
+<Frame caption="Enabling a connector from the message box">
+<img src="../../images/connection-co.gif" alt="Enabling a connector for use in the conversation" />
 </Frame>
 
-Click **"Connectors"** and select which connection you want the AI model to use.
-
 <Check>
-Once the Outlook Mail connection is enabled, the AI can read your emails, access your calendar, send messages on your behalf, and handle any Outlook-related tasks through natural conversation.
+Once Outlook Mail is enabled, the AI can read your emails, access your calendar, send messages on your behalf, and handle Outlook-related tasks through natural conversation.
 </Check>
 </Step>
 </Steps>
@@ -182,13 +179,13 @@ Type something like:
 Send an email to Sarah letting her know I'll be 5 minutes late to the meeting.
 ```
 <Warning>
-The AI will only interact with Outlook or send messages when you explicitly request it. It always follows your permissions and never takes action without your direction.
+The AI only interacts with Outlook or sends messages when you explicitly request it. It always follows your permissions and never takes action without your direction.
 </Warning>
 
 WonkaChat will:
 - Access your Outlook account through the configured connection
 - Draft an email to Sarah with your update
-- Send directly the mail or present it for review before sending (depends on your prompt and on the model used)
+- Send the email directly or present it for review before sending, depending on your prompt and the model used
 
 <Check>
 You've successfully connected a tool and used it through natural conversation!
@@ -198,10 +195,10 @@ You've successfully connected a tool and used it through natural conversation!
 
 <Step title="Understanding Model Selection">
 
-Choose the right model for your task:
+Choose the right model for your task, directly from the model selector above the message box:
 
 <CardGroup cols={2}>
-<Card title="Pro Models" icon="brain">
+<Card title="Standard and advanced models" icon="brain">
 **Use for complex tasks:**
 - Strategic analysis
 - Multi-step problem solving
@@ -212,7 +209,7 @@ Choose the right model for your task:
 **Example:** "Analyze our Q3 sales data and recommend improvements"
 </Card>
 
-<Card title="Fast Models" icon="bolt">
+<Card title="Fast models" icon="bolt">
 **Use for quick tasks:**
 - Simple questions
 - Fast information retrieval
@@ -225,7 +222,7 @@ Choose the right model for your task:
 </CardGroup>
 
 <Tip>
-When in doubt, start with pro models for important tasks. You can always switch to fast models for speed and cost once you understand the query complexity.
+Not sure which to pick? Let the **Router** choose automatically, or start with a standard model for important tasks and switch to a fast model once you know the query is simple. See [Choosing a Model](/en/improved-usage/choosing-a-model) for the full guide.
 </Tip>
 
 </Step>
@@ -268,4 +265,3 @@ Discover techniques for asking better questions, managing conversations effectiv
 Learn how to use AI securely, maintain data privacy, and implement governance policies that protect your organization while maximizing AI capabilities.
 </Card>
 </CardGroup>
-

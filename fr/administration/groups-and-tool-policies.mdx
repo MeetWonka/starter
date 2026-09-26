@@ -1,0 +1,54 @@
+---
+title: "Groupes et politiques de connecteurs"
+description: "Créez des groupes pour simplifier le partage, et contrôlez quels connecteurs chaque utilisateur ou groupe peut utiliser."
+---
+
+<Note>
+Paramètres → Organisation → Groupes et Politiques de connecteurs. Visible par les administrateurs et le propriétaire, lorsque ces fonctionnalités sont activées pour votre organisation.
+</Note>
+
+## Groupes
+
+Les groupes permettent de partager des agents, des prompts et des skills, et de gérer l'accès aux connecteurs, pour toute une équipe à la fois plutôt que personne par personne.
+
+<Steps>
+<Step title="Ouvrir Groupes">
+Allez dans **Paramètres → Organisation → Groupes**.
+</Step>
+<Step title="Créer un groupe">
+Cliquez sur **Créer un groupe**, donnez-lui un **nom de groupe** et une **description** facultative, puis **sélectionnez les membres**.
+</Step>
+<Step title="L'utiliser">
+Recherchez des groupes depuis le champ de recherche. **Modifier** un groupe permet de le renommer, de changer sa description ou de mettre à jour ses membres ; **Supprimer le groupe** le retire définitivement.
+</Step>
+</Steps>
+
+Une fois un groupe créé, tout utilisateur peut le choisir comme destinataire de partage — par exemple lors du partage d'un agent, choisissez le groupe plutôt que d'ajouter les personnes une par une.
+
+## Politiques de connecteurs (accès aux connecteurs)
+
+Les politiques de connecteurs contrôlent quels utilisateurs et groupes peuvent utiliser chaque connecteur (serveur MCP). Un utilisateur ou un groupe refusé ne pourra jamais utiliser le connecteur ; lorsque vous autorisez des utilisateurs ou des groupes spécifiques pour un connecteur, eux seuls peuvent l'utiliser.
+
+Ouvrez **Paramètres → Organisation → Accès aux connecteurs**. Trois vues sont disponibles :
+
+<Tabs>
+<Tab title="Par connecteur">
+Sélectionnez un connecteur pour voir et gérer qui peut l'utiliser. Chaque connecteur affiche un statut : **Ouvert** (tout le monde dans l'organisation), **Restreint** (seuls les utilisateurs/groupes listés), **Exceptions** (tout le monde sauf les utilisateurs/groupes listés), ou **Bloqué** (personne).
+
+Utilisez **Ajouter une règle** pour autoriser ou refuser un utilisateur ou un groupe, ou **Refuser pour tout le monde dans l'organisation** pour le bloquer totalement.
+</Tab>
+<Tab title="Par personne">
+Sélectionnez un utilisateur ou un groupe pour voir tous les connecteurs qui lui sont autorisés ou refusés, et gérer la liste depuis là.
+</Tab>
+<Tab title="Attribution en masse">
+Sélectionnez plusieurs connecteurs et plusieurs utilisateurs ou groupes, choisissez **Autoriser** ou **Refuser**, ajoutez une raison facultative, et appliquez toutes les combinaisons en une seule action. Une action en masse ne peut couvrir qu'un nombre limité de combinaisons à la fois.
+</Tab>
+</Tabs>
+
+<Info>
+Les administrateurs de votre propre organisation ne sont jamais affectés par ses politiques de connecteurs ; les administrateurs d'autres organisations le sont.
+</Info>
+
+<Tip>
+Commencez par les connecteurs sensibles (CRM, e-mail, outils financiers) : restreignez-les au groupe spécifique qui en a besoin, et laissez les connecteurs à faible risque ouverts à tous.
+</Tip>

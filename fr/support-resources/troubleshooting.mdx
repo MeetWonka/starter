@@ -1,24 +1,54 @@
 ---
 title: "Dépannage"
-description: "Solutions pour les problèmes courants, étapes de diagnostic et problèmes de performance."
+description: "Solutions rapides aux problèmes courants, avec des liens vers des guides plus complets."
 ---
 
-<CardGroup cols={1}>
-<Card title="Guide de dépannage complet bientôt disponible" icon="wrench">
-Nous construisons une section de dépannage détaillée avec des solutions étape par étape, des outils de diagnostic et des guides de résolution de problèmes courants pour vous aider à résoudre rapidement les problèmes.
-</Card>
-</CardGroup>
+Problèmes courants et leurs solutions rapides. Pour les problèmes spécifiques aux connecteurs, consultez le guide dédié ci-dessous.
 
-<Info>
-En attendant, consultez notre guide [Dépannage des connexions MCP](/fr/tools-connection/troubleshooting-connections) et [FAQ](/fr/support-resources/faq) pour des réponses aux questions courantes.
-</Info>
+<AccordionGroup>
+
+<Accordion title="Problèmes de connexion ou SSO" icon="key">
+Si vous ne parvenez pas à vous connecter :
+- Vérifiez que vous utilisez la bonne méthode de connexion (e-mail/mot de passe, Google Workspace, Microsoft 365, ou le SSO de votre organisation).
+- Videz le cache et les cookies de votre navigateur, puis réessayez.
+- Si votre organisation utilise le SSO et que la connexion échoue ou revient en boucle à la page de connexion, contactez votre administrateur — la configuration SSO peut nécessiter une intervention de sa part.
+</Accordion>
+
+<Accordion title="Erreurs d'authentification d'un connecteur" icon="plug">
+« Authentification échouée », « autorisation refusée », ou un connecteur qui ne reste pas connecté se résolvent presque toujours en déconnectant puis reconnectant via Personnaliser → Connecteurs, en accordant toutes les autorisations demandées. Voir le guide complet [Dépannage des connexions](/fr/tools-connection/troubleshooting-connections) pour des solutions détaillées.
+</Accordion>
+
+<Accordion title="Limites de téléchargement de fichiers" icon="file">
+Il existe une limite au nombre de fichiers que vous pouvez joindre à un seul message. Si votre envoi est refusé, essayez de joindre moins de fichiers à la fois, ou vérifiez auprès de votre administrateur la limite exacte de votre organisation.
+</Accordion>
+
+<Accordion title="Agent non visible ou non partagé avec vous" icon="robot">
+Si vous ne trouvez pas un agent mentionné par quelqu'un :
+- Vérifiez à la fois la Marketplace des agents et « Mes agents » — les agents à l'échelle de l'organisation et les agents personnels sont listés séparément.
+- L'agent n'est peut-être pas encore partagé avec vous. Demandez au propriétaire de l'agent ou à votre administrateur de le partager avec votre organisation ou équipe.
+- Voir [Trouver et accéder aux agents](/fr/ai-agents/finding-and-accessing-agents) pour comprendre le fonctionnement du partage et de la visibilité.
+</Accordion>
+
+<Accordion title="Modèle indisponible ou restriction régionale" icon="globe">
+Les modèles dans le sélecteur de modèle affichent un badge de région (par exemple, UE ou US). Si un modèle apparaît grisé ou indisponible, votre administrateur a peut-être restreint les régions ou modèles que votre organisation peut utiliser. Contactez votre administrateur pour demander l'accès.
+</Accordion>
+
+<Accordion title="Erreurs de clé API Agent" icon="key">
+Si votre organisation a activé les clés API Agent, une clé invalide ou expirée entraînera l'échec des requêtes API avec une erreur d'authentification. Vérifiez que la clé est toujours active, et demandez à votre administrateur d'en générer une nouvelle si nécessaire. Si vous n'êtes pas sûr que cette fonctionnalité soit activée pour votre organisation, vérifiez auprès de votre administrateur.
+</Accordion>
+
+</AccordionGroup>
+
+## Toujours bloqué ?
 
 <CardGroup cols={2}>
-<Card title="Problèmes de connexion" icon="plug" href="/fr/tools-connection/troubleshooting-connections">
-Résolvez les problèmes avec les connexions MCP et les intégrations d'outils.
+
+<Card title="Dépannage des connexions" icon="plug" href="/fr/tools-connection/troubleshooting-connections">
+Guide complet pour les problèmes de connecteurs et de connexions MCP.
 </Card>
 
 <Card title="Obtenir de l'aide" icon="life-ring" href="/fr/support-resources/getting-help">
-Contactez notre équipe de support pour une assistance personnalisée.
+Contactez le support avec les détails qui vous permettront d'obtenir une réponse plus rapide.
 </Card>
+
 </CardGroup>

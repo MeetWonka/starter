@@ -1,0 +1,72 @@
+---
+title: "Uw agenten auditen"
+description: "Bekijk hoe anderen de agenten gebruiken die u bezit of bewerkt, begrijp wat u kunt zien, en weet wat eindgebruikers te zien krijgen."
+---
+
+Als u een agent bezit of bewerkt die door andere mensen in uw organisatie wordt gebruikt, kunt u de activiteit ervan bekijken: wie hem heeft gebruikt, hoeveel, en — als u dat toestaat — de inhoud van de gesprekken en tool-aanroepen die hij heeft uitgevoerd.
+
+<Note>
+Agentaudit is een organisatiefunctie. Uw beheerder schakelt deze in bij Instellingen → Organisatie → **Audit uw agent**, samen met twee bijbehorende subfuncties: **Audit - Bekijk gesprekken** en **Audit - Bekijk tool-aanroepen**. Als geen van beide is ingeschakeld, ziet u alleen geanonimiseerde gebruikscijfers, nooit de inhoud van gesprekken.
+</Note>
+
+## Twee controlelagen
+
+Of u kunt zien wat er in een gesprek met uw agent gebeurt, hangt af van twee zaken die tegelijk waar moeten zijn:
+
+1. **Uw organisatie schakelt de auditfunctie in.** Een beheerder moet **Bekijk gesprekken** en/of **Bekijk tool-aanroepen** inschakelen voor uw organisatie.
+2. **U, als agenteigenaar of -editor, schakelt dit per agent in.** Zelfs als uw organisatie het toestaat, is er niets zichtbaar totdat u dit voor die specifieke agent inschakelt.
+
+Het inschakelen van audit op organisatieniveau maakt dus op zichzelf geen enkel gesprek zichtbaar — elke agenteigenaar beslist, per agent, of hij die gegevens met editors deelt.
+
+### Gegevensdeling inschakelen voor een agent
+
+<Steps>
+<Step title="Open de agent">
+Open de agent die u wilt auditen. U heeft **Editor**- of **Eigenaar**-rechten nodig.
+</Step>
+<Step title="Zoek Gegevenstoegang voor editors">
+Zoek de sectie **Gegevenstoegang voor editors** ("Kies welke auditgegevens agenteditors kunnen bekijken.").
+</Step>
+<Step title="Kies wat u deelt">
+Schakel **Deel gesprekken met agentbeheerders** in zodat editors de berichttekst kunnen lezen. Schakel **Deel tool-aanroepen met agentbeheerders** in zodat editors de tool-aanroepen van de agent kunnen zien. Elke schakelaar verschijnt alleen als uw organisatie de bijbehorende functie heeft ingeschakeld.
+</Step>
+</Steps>
+
+## Wat u kunt zien zonder deling in te schakelen
+
+Ook zonder gegevensdeling in te schakelen, kunnen agenteditors en -eigenaren voor elk gesprek met de agent al zien:
+
+- De titel en datums van het gesprek.
+- Het aantal berichten van gebruiker en agent.
+- Het aantal tool-aanroepen.
+- Het totale aantal gebruikte tokens en de betrokken modellen.
+
+Dit zijn alleen metagegevens — geen berichttekst en geen inhoud van tool-aanroepen. Standaard ziet u alleen uw eigen gesprekken met de agent; delen breidt dit uit naar gesprekken van alle gebruikers van de agent.
+
+## De auditweergave openen
+
+Open het **⋯**-menu van de agent en kies de auditactie, of ga naar **Instellingen → Audit uw agenten** en selecteer de agent in de lijst. Elk gesprek opent in een overzicht per bericht met de bovenstaande metagegevens, plus berichttekst en details van tool-aanroepen overal waar zowel uw organisatie als de agenteigenaar dit hebben ingeschakeld.
+
+## Wat eindgebruikers te zien krijgen
+
+Zodra delen is ingeschakeld voor een agent, informeert WonkaChat de mensen die ermee chatten hierover voordat ze verdergaan. Zij zien een waarschuwingsbadge, **"Gesprek controleerbaar door agentbeheerder"**, en, afhankelijk van wat wordt gedeeld:
+
+- **"Dit gesprek wordt gedeeld met de agentbeheerders"** wanneer het delen van gespreksinhoud is ingeschakeld.
+- **"Tool-aanroepen in dit gesprek worden gedeeld met de agentbeheerders"** wanneer het delen van tool-aanroepen is ingeschakeld.
+
+<Warning>
+Deze waarschuwing wordt getoond aan eindgebruikers, niet alleen aan u. Schakel delen alleen in voor agenten waarvan wordt verwacht dat gesprekken worden beoordeeld — bijvoorbeeld interne support- of compliance-agenten — en zorg dat het gebruiksbeleid van uw organisatie dit weerspiegelt.
+</Warning>
+
+## Agent Statistieken
+
+Los van audit geeft **Agent Statistieken** (Instellingen → Agent Statistieken) agenteigenaren en -editors geanonimiseerde, samengevoegde gebruikscijfers voor een agent: dagelijkse activiteit, tokengebruik en kosten per model, en een transactielogboek — allemaal gecombineerd over alle gebruikers van de agent, zonder te tonen wie wat heeft gezegd. Uw organisatie moet de bijbehorende functie inschakelen voordat dit tabblad verschijnt.
+
+<Info>
+Uw eigen gebruik over alle agenten vindt u onder **Instellingen → Mijn Statistieken**. Organisatiebrede totalen staan onder **Instellingen → Organisatie Statistieken**, voor beheerders.
+</Info>
+
+## Gerelateerd
+
+- [Uw eerste agent maken](/nl/ai-agents/creating-your-first-agent)
+- [Geplande en getriggerde agenten](/nl/ai-agents/scheduled-agents)

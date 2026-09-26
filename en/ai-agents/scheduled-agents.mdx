@@ -1,0 +1,121 @@
+---
+title: "Scheduled and Triggered Agents"
+description: "Run an agent automatically on a schedule or when an event happens in a connected app, and review every run."
+---
+
+A scheduled agent runs on its own, without you opening a chat. You choose **when** it runs and **what** it should do. Each run creates a conversation in your account that you can open later.
+
+There are two kinds of triggers:
+
+- **Schedule (Cron)**: the agent runs at fixed times, for example every weekday at 08:00.
+- **External event**: the agent runs when something happens in a connected app, for example when a new email arrives.
+
+<Note>
+Scheduled agents must be enabled for your organization (feature **Scheduled Agents**). External event triggers are a separate feature (**Triggered Agents**). If you don't see the **Scheduling** section in the agent builder, ask your administrator to enable it.
+</Note>
+
+## Set up a schedule
+
+You need edit rights on the agent (you created it, or you are an **Editor** or **Owner**).
+
+<Steps>
+<Step title="Open the agent in the builder">
+Open the agent you want to automate and go to the **Scheduling** section ("Run this agent automatically on a schedule.").
+</Step>
+<Step title="Turn the schedule on">
+Switch on the toggle next to **Scheduling**.
+</Step>
+<Step title="Choose the trigger type">
+If your organization has event triggers enabled, pick **Schedule (Cron)** or **External event** under **Trigger type**. Otherwise the schedule is time-based.
+</Step>
+<Step title="Set the cadence">
+Choose a **Period**, then fill in the fields it needs (see the table below). Set the **Start date and time** if the schedule should begin later.
+</Step>
+<Step title="Write the prompt">
+In **Prompt**, tell the agent what to do on each run, for example "Summarize yesterday's new support tickets and list the urgent ones."
+</Step>
+<Step title="Save the agent">
+Click **Save**. The schedule is saved together with the agent.
+</Step>
+</Steps>
+
+### Supported frequencies
+
+| Period | You choose |
+|--------|------------|
+| **Daily** | **Time** |
+| **Weekdays** | **Time** (Monday to Friday) |
+| **Weekly** | **Day** and **Time** |
+| **Monthly** | **Day of month** and **Time** |
+| **Quarterly** | **Day of month**, **Quarter months** (for example January, April, July, October) and **Time** |
+
+Times use the time zone of your browser.
+
+For other cadences, open **Advanced** and select **Use a custom cron expression**. Enter five fields: minute, hour, day of month, month, day of week. Example: `0 9 * * 1` runs every Monday at 09:00. A schedule cannot run more often than once every 5 minutes.
+
+## Trigger an agent from an external event
+
+With an **External event** trigger, the agent runs when an event happens in an app you have connected, instead of at a fixed time.
+
+<Steps>
+<Step title="Pick the event">
+Under **Trigger event**, click **Select an app & a trigger** and search for the event you want.
+</Step>
+<Step title="Connect the app">
+If your account isn't connected to that app yet, click **Connect** and sign in to the app. The status changes to **Connected**.
+</Step>
+<Step title="Configure the trigger">
+Fill in the **Trigger configuration** fields, if the event has any.
+</Step>
+<Step title="Use the event data in the prompt">
+In **Prompt**, type `{{metadata}}` where you want the event data (subject, sender, message…) to appear. Then click **Save**.
+</Step>
+</Steps>
+
+<Info>
+Event triggers work through the apps you connect in WonkaChat. There is no webhook URL or secret for you to copy or manage — the connection between the app and your agent is handled entirely by the platform. If no events are listed, connect a supported app or ask your administrator to enable connectors.
+</Info>
+
+## See the results
+
+Each run creates a conversation in your account.
+
+To review runs, open the agent's **⋯** menu (on its card in **Agents → All agents**, or in the builder) and choose **Scheduled Agents · History**.
+
+The **Run history** window shows:
+
+- **Last run**, **Next run**, the number of **Runs** and **Failures**.
+- One line per run with its status (completed, failed, running or pending) and start time.
+- **Open chat** to read the conversation the run created. **No messages** means the run produced nothing.
+
+From the same window, you can pause, resume or delete a schedule.
+
+## Shared agents: who the schedule runs for
+
+A schedule runs the agent **on your own account**, with your own connections. When someone shares an agent that has a schedule with you, it does **not** run for you by default. To opt in, open the agent and turn on **Run this schedule on my account**. You can turn it off at any time.
+
+## When an agent changes, its schedules pause
+
+When anyone edits an agent (instructions, tools, knowledge files…), every schedule on that agent is turned off. The schedule shows **Agent modified**. This protects you from an agent that suddenly behaves differently while it runs unattended.
+
+Review what the agent now does, then turn the schedule back on. Saving an agent without changes does not pause its schedules.
+
+## Troubleshooting
+
+<AccordionGroup>
+<Accordion title="I don't see the Scheduling section">
+Your organization hasn't enabled Scheduled Agents, or you can't edit this agent. Ask the agent owner or your administrator.
+</Accordion>
+<Accordion title="The schedule shows Paused">
+Someone paused it, or the agent was modified. Open the schedule, check the agent, and turn it back on.
+</Accordion>
+<Accordion title="A run failed">
+Open the run history. The error appears under the agent name. A common cause is a disconnected app: reconnect it in Customize → Connectors.
+</Accordion>
+</AccordionGroup>
+
+## Related
+
+- [Create your first agent](/en/ai-agents/creating-your-first-agent)
+- [Audit your agents](/en/ai-agents/audit-your-agents)
+- [Connect tools](/en/tools-connection/introduction)

@@ -1,0 +1,54 @@
+---
+title: "Groups and Tool Policies"
+description: "Create groups to simplify sharing, and control which connectors each user or group can use."
+---
+
+<Note>
+Settings → Organization → Groups and Tool policies. Visible to admins and owners, when groups and tool policies are enabled for your organization.
+</Note>
+
+## Groups
+
+Groups let you share agents, prompts and skills, and manage connector access, for a whole team at once instead of person by person.
+
+<Steps>
+<Step title="Open Groups">
+Go to **Settings → Organization → Groups**.
+</Step>
+<Step title="Create a group">
+Click **Create group**, give it a **Group name** and an optional **Description**, then **Select members**.
+</Step>
+<Step title="Use it">
+Search groups from the search box. **Edit** a group to rename it, change its description or update its members; **Delete group** removes it (this cannot be undone).
+</Step>
+</Steps>
+
+Once a group exists, any user can pick it as a sharing target — for example when sharing an agent, choose the group instead of adding people one by one.
+
+## Tool policies (connector access)
+
+Tool policies control which users and groups can use each connector (MCP server). A denied user or group can never use the connector; when you allow specific users or groups for a connector, only they can use it.
+
+Open **Settings → Organization → Tool policies**. Three views are available:
+
+<Tabs>
+<Tab title="By connector">
+Select a connector to see and manage who can use it. Each connector shows a status: **Open** (everyone in the organization), **Restricted** (only listed users/groups), **Exceptions** (everyone except listed users/groups), or **Blocked** (no one).
+
+Use **Add a rule** to allow or deny a user or group, or **Deny for everyone in the organization** to block it outright.
+</Tab>
+<Tab title="By people">
+Select a user or group to see every connector they're allowed or denied, and manage the list from there.
+</Tab>
+<Tab title="Bulk assign">
+Select several connectors and several users or groups, choose **Allow** or **Deny**, add an optional reason, and apply every combination in one action. A single bulk action can cover a limited number of combinations at once.
+</Tab>
+</Tabs>
+
+<Info>
+Admins of your own organization are never affected by its tool policies; admins of other organizations are.
+</Info>
+
+<Tip>
+Start with sensitive connectors (CRM, email, finance tools): restrict them to the specific group that needs them, and leave low-risk connectors open to everyone.
+</Tip>

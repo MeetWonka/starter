@@ -35,7 +35,10 @@
                   "en/ai-agents/finding-and-accessing-agents",
                   "en/ai-agents/using-existing-agents",
                   "en/ai-agents/creating-your-first-agent",
-                  "en/ai-agents/business-teaching"
+                  "en/ai-agents/sharing-agents",
+                  "en/ai-agents/business-teaching",
+                  "en/ai-agents/scheduled-agents",
+                  "en/ai-agents/audit-your-agents"
                 ]
               },
               {
@@ -43,6 +46,7 @@
                 "pages": [
                   "en/tools-connection/introduction",
                   "en/tools-connection/setting-up-your-first-connection",
+                  "en/tools-connection/custom-connectors",
                   "en/tools-connection/troubleshooting-connections",
                   "en/tools-connection/examples-of-tool-usage"
                 ]
@@ -51,16 +55,23 @@
                 "group": "Improved Usage",
                 "pages": [
                   "en/improved-usage/asking-great-questions",
+                  "en/improved-usage/choosing-a-model",
                   "en/improved-usage/conversation-management",
-                  "en/improved-usage/prompt-library"
+                  "en/improved-usage/sharing-conversations",
+                  "en/improved-usage/prompt-library",
+                  "en/improved-usage/files-and-knowledge",
+                  "en/improved-usage/projects",
+                  "en/improved-usage/memories",
+                  "en/improved-usage/skills",
+                  "en/improved-usage/artifacts",
+                  "en/improved-usage/voice-images-web-search"
                 ]
               },
               {
                 "group": "Pricing & Plans",
                 "pages": [
                   "en/pricing/plans",
-                  "en/pricing/tokens-guide",
-                  "en/pricing/tokens-pricing"
+                  "en/pricing/tokens-guide"
                 ]
               },
               {
@@ -74,9 +85,27 @@
                 ]
               },
               {
+                "group": "Administration",
+                "pages": [
+                  "en/administration/index",
+                  "en/administration/organization-settings",
+                  "en/administration/sso-and-2fa",
+                  "en/administration/groups-and-tool-policies",
+                  "en/administration/audit-log",
+                  "en/administration/usage-and-stats"
+                ]
+              },
+              {
+                "group": "Developers",
+                "pages": [
+                  "en/ai-agents/agents-api"
+                ]
+              },
+              {
                 "group": "Support & Resources",
                 "pages": [
                   "en/support-resources/faq",
+                  "en/support-resources/troubleshooting",
                   "en/support-resources/getting-help"
                 ]
               },
@@ -136,7 +165,7 @@
           "anchors": [
             {
               "anchor": "Our website",
-              "href": "https://wonkachat.meetwonka.com/",
+              "href": "https://www.wonka-ai.com/",
               "icon": "globe"
             },
             {
@@ -168,7 +197,10 @@
                   "fr/ai-agents/finding-and-accessing-agents",
                   "fr/ai-agents/using-existing-agents",
                   "fr/ai-agents/creating-your-first-agent",
-                  "fr/ai-agents/business-teaching"
+                  "fr/ai-agents/sharing-agents",
+                  "fr/ai-agents/business-teaching",
+                  "fr/ai-agents/scheduled-agents",
+                  "fr/ai-agents/audit-your-agents"
                 ]
               },
               {
@@ -176,6 +208,7 @@
                 "pages": [
                   "fr/tools-connection/introduction",
                   "fr/tools-connection/setting-up-your-first-connection",
+                  "fr/tools-connection/custom-connectors",
                   "fr/tools-connection/troubleshooting-connections",
                   "fr/tools-connection/examples-of-tool-usage"
                 ]
@@ -184,16 +217,23 @@
                 "group": "Utilisation améliorée",
                 "pages": [
                   "fr/improved-usage/asking-great-questions",
+                  "fr/improved-usage/choosing-a-model",
                   "fr/improved-usage/conversation-management",
-                  "fr/improved-usage/prompt-library"
+                  "fr/improved-usage/sharing-conversations",
+                  "fr/improved-usage/prompt-library",
+                  "fr/improved-usage/files-and-knowledge",
+                  "fr/improved-usage/projects",
+                  "fr/improved-usage/memories",
+                  "fr/improved-usage/skills",
+                  "fr/improved-usage/artifacts",
+                  "fr/improved-usage/voice-images-web-search"
                 ]
               },
               {
                 "group": "Tarifs et forfaits",
                 "pages": [
                   "fr/pricing/plans",
-                  "fr/pricing/tokens-guide",
-                  "fr/pricing/tokens-pricing"
+                  "fr/pricing/tokens-guide"
                 ]
               },
               {
@@ -207,9 +247,27 @@
                 ]
               },
               {
+                "group": "Administration",
+                "pages": [
+                  "fr/administration/index",
+                  "fr/administration/organization-settings",
+                  "fr/administration/sso-and-2fa",
+                  "fr/administration/groups-and-tool-policies",
+                  "fr/administration/audit-log",
+                  "fr/administration/usage-and-stats"
+                ]
+              },
+              {
+                "group": "Développeurs",
+                "pages": [
+                  "fr/ai-agents/agents-api"
+                ]
+              },
+              {
                 "group": "Support et ressources",
                 "pages": [
                   "fr/support-resources/faq",
+                  "fr/support-resources/troubleshooting",
                   "fr/support-resources/getting-help"
                 ]
               },
@@ -269,7 +327,7 @@
           "anchors": [
             {
               "anchor": "Notre site web",
-              "href": "https://wonkachat.meetwonka.com/",
+              "href": "https://www.wonka-ai.com/",
               "icon": "globe"
             },
             {
@@ -301,7 +359,10 @@
                   "nl/ai-agents/finding-and-accessing-agents",
                   "nl/ai-agents/using-existing-agents",
                   "nl/ai-agents/creating-your-first-agent",
-                  "nl/ai-agents/business-teaching"
+                  "nl/ai-agents/sharing-agents",
+                  "nl/ai-agents/business-teaching",
+                  "nl/ai-agents/scheduled-agents",
+                  "nl/ai-agents/audit-your-agents"
                 ]
               },
               {
@@ -309,6 +370,7 @@
                 "pages": [
                   "nl/tools-connection/introduction",
                   "nl/tools-connection/setting-up-your-first-connection",
+                  "nl/tools-connection/custom-connectors",
                   "nl/tools-connection/troubleshooting-connections",
                   "nl/tools-connection/examples-of-tool-usage"
                 ]
@@ -317,16 +379,23 @@
                 "group": "Verbeterd gebruik",
                 "pages": [
                   "nl/improved-usage/asking-great-questions",
+                  "nl/improved-usage/choosing-a-model",
                   "nl/improved-usage/conversation-management",
-                  "nl/improved-usage/prompt-library"
+                  "nl/improved-usage/sharing-conversations",
+                  "nl/improved-usage/prompt-library",
+                  "nl/improved-usage/files-and-knowledge",
+                  "nl/improved-usage/projects",
+                  "nl/improved-usage/memories",
+                  "nl/improved-usage/skills",
+                  "nl/improved-usage/artifacts",
+                  "nl/improved-usage/voice-images-web-search"
                 ]
               },
               {
                 "group": "Prijzen en pakketten",
                 "pages": [
                   "nl/pricing/plans",
-                  "nl/pricing/tokens-guide",
-                  "nl/pricing/tokens-pricing"
+                  "nl/pricing/tokens-guide"
                 ]
               },
               {
@@ -340,9 +409,27 @@
                 ]
               },
               {
+                "group": "Beheer",
+                "pages": [
+                  "nl/administration/index",
+                  "nl/administration/organization-settings",
+                  "nl/administration/sso-and-2fa",
+                  "nl/administration/groups-and-tool-policies",
+                  "nl/administration/audit-log",
+                  "nl/administration/usage-and-stats"
+                ]
+              },
+              {
+                "group": "Ontwikkelaars",
+                "pages": [
+                  "nl/ai-agents/agents-api"
+                ]
+              },
+              {
                 "group": "Support en bronnen",
                 "pages": [
                   "nl/support-resources/faq",
+                  "nl/support-resources/troubleshooting",
                   "nl/support-resources/getting-help"
                 ]
               },
@@ -402,7 +489,7 @@
           "anchors": [
             {
               "anchor": "Onze website",
-              "href": "https://wonkachat.meetwonka.com/",
+              "href": "https://www.wonka-ai.com/",
               "icon": "globe"
             },
             {
@@ -434,7 +521,10 @@
                   "fr/ai-agents/finding-and-accessing-agents",
                   "fr/ai-agents/using-existing-agents",
                   "fr/ai-agents/creating-your-first-agent",
-                  "fr/ai-agents/business-teaching"
+                  "fr/ai-agents/sharing-agents",
+                  "fr/ai-agents/business-teaching",
+                  "fr/ai-agents/scheduled-agents",
+                  "fr/ai-agents/audit-your-agents"
                 ]
               },
               {
@@ -442,6 +532,7 @@
                 "pages": [
                   "fr/tools-connection/introduction",
                   "fr/tools-connection/setting-up-your-first-connection",
+                  "fr/tools-connection/custom-connectors",
                   "fr/tools-connection/troubleshooting-connections",
                   "fr/tools-connection/examples-of-tool-usage"
                 ]
@@ -450,16 +541,23 @@
                 "group": "Utilisation améliorée",
                 "pages": [
                   "fr/improved-usage/asking-great-questions",
+                  "fr/improved-usage/choosing-a-model",
                   "fr/improved-usage/conversation-management",
-                  "fr/improved-usage/prompt-library"
+                  "fr/improved-usage/sharing-conversations",
+                  "fr/improved-usage/prompt-library",
+                  "fr/improved-usage/files-and-knowledge",
+                  "fr/improved-usage/projects",
+                  "fr/improved-usage/memories",
+                  "fr/improved-usage/skills",
+                  "fr/improved-usage/artifacts",
+                  "fr/improved-usage/voice-images-web-search"
                 ]
               },
               {
                 "group": "Tarifs et forfaits",
                 "pages": [
                   "fr/pricing/plans",
-                  "fr/pricing/tokens-guide",
-                  "fr/pricing/tokens-pricing"
+                  "fr/pricing/tokens-guide"
                 ]
               },
               {
@@ -473,9 +571,27 @@
                 ]
               },
               {
+                "group": "Administration",
+                "pages": [
+                  "fr/administration/index",
+                  "fr/administration/organization-settings",
+                  "fr/administration/sso-and-2fa",
+                  "fr/administration/groups-and-tool-policies",
+                  "fr/administration/audit-log",
+                  "fr/administration/usage-and-stats"
+                ]
+              },
+              {
+                "group": "Développeurs",
+                "pages": [
+                  "fr/ai-agents/agents-api"
+                ]
+              },
+              {
                 "group": "Support et ressources",
                 "pages": [
                   "fr/support-resources/faq",
+                  "fr/support-resources/troubleshooting",
                   "fr/support-resources/getting-help"
                 ]
               },
@@ -535,7 +651,7 @@
           "anchors": [
             {
               "anchor": "Notre site web",
-              "href": "https://wonkachat.meetwonka.com/",
+              "href": "https://www.wonka-ai.com/",
               "icon": "globe"
             },
             {
@@ -576,5 +692,31 @@
       "title": "Your page can't be found | Votre page est introuvable | Je pagina kan niet worden gevonden",
       "description": "Please, go ask **WonkaChat** to help you find what you're looking for, I am sure it can help you! | Veuillez demander à **WonkaChat** de vous aider à trouver ce que vous cherchez, je suis sûr qu'il peut vous aider ! | Vraag **WonkaChat** om je te helpen vinden wat je zoekt, ik weet zeker dat het je kan helpen!"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/en/pricing/tokens-pricing",
+      "destination": "/en/improved-usage/choosing-a-model"
+    },
+    {
+      "source": "/en/support-resources/reference-materials",
+      "destination": "/en/support-resources/getting-help"
+    },
+    {
+      "source": "/fr/pricing/tokens-pricing",
+      "destination": "/fr/improved-usage/choosing-a-model"
+    },
+    {
+      "source": "/fr/support-resources/reference-materials",
+      "destination": "/fr/support-resources/getting-help"
+    },
+    {
+      "source": "/nl/pricing/tokens-pricing",
+      "destination": "/nl/improved-usage/choosing-a-model"
+    },
+    {
+      "source": "/nl/support-resources/reference-materials",
+      "destination": "/nl/support-resources/getting-help"
+    }
+  ]
 }

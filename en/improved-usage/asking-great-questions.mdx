@@ -438,7 +438,7 @@ one product improvement that addresses multiple pain points."
 </Accordion>
 
 <Accordion title="Template creation" icon="file-code">
-Save time by building your own prompt templates for tasks you repeat often. Store them in the [Prompt Library](/improved-usage/prompt-library).
+Save time by building your own prompt templates for tasks you repeat often. Store them in the [Prompt Library](/en/improved-usage/prompt-library).
 
 **Template Example:**
 ```
@@ -457,7 +457,7 @@ Format: {{output_format:bullets|paragraphs|table}}
 ```
 
 <Info>
-For details on managing and sharing prompts, see the [Prompt Library](/improved-usage/prompt-library).
+For details on managing and sharing prompts, see the [Prompt Library](/en/improved-usage/prompt-library).
 </Info>
 </Accordion>
 
@@ -472,7 +472,7 @@ purchase. Then analyze the data and suggest targeted retention strategies.
 ```
 
 <Info>
-For more on AI tool integration, visit [Tools Connection](/tools-connection/introduction).
+For more on AI tool integration, visit [Tools Connection](/en/tools-connection/introduction).
 </Info>
 </Accordion>
 </AccordionGroup>
@@ -509,13 +509,13 @@ For further learning on prompt engineering, see guides from [OpenAI](https://pla
 <Accordion title="Assuming Prior Knowledge">
 **Problem:** Starting a new conversation with "Continue from where we left off" without re-establishing context.
 
-**Why this fails:** AI models cannot access information from previous conversations. Each new conversation starts with an empty context window, so the AI has no way to retrieve or reference what was discussed before.
+**Why this fails:** Each new conversation starts with its own context window, so the AI can't automatically read what was discussed in a different, unrelated conversation.
 
 <Info>
-Learn more about context windows and how they work in [Conversation Management](/improved-usage/conversation-management).
+If your organization has enabled [Memories](/en/improved-usage/memories) or [Projects](/en/improved-usage/projects), the AI can carry some context across conversations automatically. Otherwise, learn more about context windows in [Conversation Management](/en/improved-usage/conversation-management).
 </Info>
 
-**Better:** Briefly summarize relevant context from previous conversations when starting a new chat.
+**Better:** Briefly summarize relevant context from previous conversations when starting a new chat, or group related work in a Project so context is shared automatically.
 </Accordion>
 </AccordionGroup>
 
@@ -556,5 +556,9 @@ Learn how to manage long conversations and understand context windows.
 
 <Card title="Prompt Library" icon="bookmark" href="/en/improved-usage/prompt-library">
 Save and reuse your best prompts with variables for efficiency.
+</Card>
+
+<Card title="Choosing a Model" icon="sliders" href="/en/improved-usage/choosing-a-model">
+Pick the right model size, or let the Router choose for you.
 </Card>
 </CardGroup>

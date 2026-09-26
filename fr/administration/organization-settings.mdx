@@ -1,0 +1,90 @@
+---
+title: "Paramètres de l'organisation"
+description: "Gestion des utilisateurs, invitations, invite système de l'organisation, tags, abonnement et permissions par fonctionnalité."
+---
+
+Les paramètres de l'organisation se trouvent dans **Paramètres → Organisation**. Ce que vous y voyez dépend de votre rôle : le **propriétaire** de l'organisation voit le plus d'options, les autres administrateurs en voient un sous-ensemble.
+
+## Gestion des utilisateurs
+
+<Note>
+Visible uniquement par le **propriétaire** de l'organisation.
+</Note>
+
+Ouvrez **Paramètres → Organisation → Gestion des utilisateurs** pour voir tous les membres de votre organisation, avec leur rôle, leur usage et leur statut (Actif, En attente, Expiré).
+
+<Steps>
+<Step title="Inviter par lien de partage">
+Cliquez sur **Générer un lien de partage** pour créer un lien que n'importe qui peut utiliser pour rejoindre votre organisation sans invitation par e-mail. Utilisez **Copier** pour le récupérer, ou **Générer un nouveau lien** pour le remplacer.
+</Step>
+<Step title="Inviter manuellement">
+Utilisez **Ajouter des membres manuellement** pour envoyer des invitations individuelles par e-mail, ou **Ajouter un fichier CSV** pour inviter une liste en une fois.
+</Step>
+<Step title="Gérer les invitations existantes">
+Les invitations en attente peuvent être **Renvoyées** ou **Ignorées**. Les membres peuvent être modifiés (rôle, limite d'usage) ou supprimés.
+</Step>
+<Step title="Définir des limites d'usage">
+Utilisez **Définir une limite** sur un membre pour plafonner son usage, ou **Définir la limite de l'organisation** pour fixer un plafond strict sur les dépenses totales de l'organisation — les membres sont invités à contacter un administrateur une fois ce plafond atteint.
+</Step>
+</Steps>
+
+## Invite système de l'organisation
+
+<Note>
+Visible par les administrateurs autorisés à gérer l'invite système de l'organisation.
+</Note>
+
+Ouvrez **Paramètres → Organisation → Invite système**. Ces instructions sont ajoutées à toutes les conversations de votre organisation, pour tous les utilisateurs — après les instructions générales de WonkaChat, et prioritaires en cas de contradiction. Rédigez vos règles maison (ton, choses à toujours ou ne jamais faire) et **Enregistrez**, ou **Effacez** pour les retirer et revenir aux seules instructions générales.
+
+## Tags de l'espace de travail
+
+Ouvrez **Paramètres → Organisation → Tags** pour gérer les tags partagés entre agents et connecteurs dans votre espace de travail. Créez un tag, recherchez-en dans la liste, renommez-les ou supprimez-les.
+
+## Abonnement
+
+<Note>
+Visible par le propriétaire de l'organisation, lorsque les abonnements sont activés pour votre offre.
+</Note>
+
+Ouvrez **Paramètres → Organisation → Abonnement** pour voir votre offre actuelle, les utilisateurs facturés, les factures et la prochaine date de paiement. Vous pouvez y ajuster le nombre d'utilisateurs de votre offre, gérer la facturation, ou annuler/réactiver votre abonnement. Un **essai gratuit de 7 jours** est disponible ; voir [Offres](/fr/pricing/plans) pour plus de détails.
+
+## Gérer plusieurs organisations
+
+Si vous possédez plusieurs organisations, changez d'organisation depuis le sélecteur d'organisation, ou créez-en une nouvelle depuis la zone d'administration si votre compte le permet. Chaque organisation a ses propres utilisateurs, connecteurs, agents et paramètres.
+
+## Permissions par fonctionnalité
+
+<Note>
+Pas sur cette page de paramètres — chaque fonctionnalité gère ses propres permissions.
+</Note>
+
+Les administrateurs peuvent contrôler, par rôle (Utilisateur ou Admin), si les personnes peuvent **créer** ou **partager** des agents et des prompts, ainsi que des réglages similaires pour les mémoires. Ouvrez le bouton **Admin** (icône bouclier) depuis la page propre à chaque fonctionnalité :
+
+<CardGroup cols={3}>
+<Card title="Agents" icon="robot">
+Depuis **Agents → Tous les agents**, ouvrez les paramètres administrateur pour autoriser ou restreindre la création et le partage d'agents.
+</Card>
+<Card title="Prompts" icon="message">
+Depuis **Personnaliser → Prompts**, ouvrez les paramètres administrateur pour autoriser ou restreindre la création et le partage de prompts.
+</Card>
+<Card title="Mémoires" icon="brain">
+Depuis **Paramètres → Mémoires**, ouvrez les paramètres administrateur pour contrôler qui peut créer, modifier ou refuser les mémoires.
+</Card>
+</CardGroup>
+
+## Fonctionnalités activées par Wonka AI
+
+Plusieurs fonctionnalités sont des indicateurs au niveau de l'organisation que Wonka AI active sur demande — elles n'ont pas d'interrupteur dans l'interface. Si l'une d'elles vous manque, contactez **support@meetwonka.com** :
+
+- Agents planifiés et déclenchés
+- Skills
+- Création de connecteurs personnalisés (MCP)
+- Mémoires
+- Projets
+- Audit des agents (et, au sein de celui-ci, la consultation des conversations ou des appels d'outils)
+- Clés API des agents
+- Filtres interactifs des statistiques d'usage
+
+<Warning>
+Supprimer une organisation (Paramètres → Organisation → Général → **Supprimer l'organisation**) est définitif : cela supprime toutes les données de l'organisation, et supprime définitivement tout utilisateur qui n'appartient qu'à cette organisation. Cette action est irréversible.
+</Warning>

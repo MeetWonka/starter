@@ -509,13 +509,13 @@ Pour un apprentissage plus approfondi sur l'ingénierie de prompts, consultez le
 <Accordion title="Supposer des connaissances préalables">
 **Problème :** Commencer une nouvelle conversation avec « Continuez là où nous nous sommes arrêtés » sans rétablir le contexte.
 
-**Pourquoi cela échoue :** Les modèles IA ne peuvent pas accéder aux informations des conversations précédentes. Chaque nouvelle conversation commence avec une fenêtre de contexte vide, donc l'IA n'a aucun moyen de récupérer ou référencer ce qui a été discuté avant.
+**Pourquoi cela échoue :** Chaque nouvelle conversation a sa propre fenêtre de contexte, donc l'IA ne peut pas lire automatiquement ce qui a été discuté dans une autre conversation, sans lien avec celle-ci.
 
 <Info>
-En savoir plus sur les fenêtres de contexte et comment elles fonctionnent dans [Gestion des conversations](/fr/improved-usage/conversation-management).
+Si votre organisation a activé les [Souvenirs](/fr/improved-usage/memories) ou les [Projets](/fr/improved-usage/projects), l'IA peut conserver une partie du contexte d'une conversation à l'autre automatiquement. Sinon, découvrez comment fonctionnent les fenêtres de contexte dans [Gestion des conversations](/fr/improved-usage/conversation-management).
 </Info>
 
-**Mieux :** Résumez brièvement le contexte pertinent des conversations précédentes lors du démarrage d'un nouveau chat.
+**Mieux :** Résumez brièvement le contexte pertinent des conversations précédentes lors du démarrage d'un nouveau chat, ou regroupez le travail lié dans un Projet pour que le contexte soit partagé automatiquement.
 </Accordion>
 </AccordionGroup>
 
@@ -556,5 +556,9 @@ Apprenez à gérer les longues conversations et à comprendre les fenêtres de c
 
 <Card title="Bibliothèque de prompts" icon="bookmark" href="/fr/improved-usage/prompt-library">
 Sauvegardez et réutilisez vos meilleurs prompts avec des variables pour l'efficacité.
+</Card>
+
+<Card title="Choisir un modèle" icon="sliders" href="/fr/improved-usage/choosing-a-model">
+Choisissez la bonne taille de modèle, ou laissez le Routeur choisir pour vous.
 </Card>
 </CardGroup>

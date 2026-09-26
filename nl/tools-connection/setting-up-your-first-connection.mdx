@@ -1,19 +1,19 @@
 ---
 title: "Je Eerste Externe Verbinding"
-description: "Verbind WonkaChat met je zakelijke systemen en begin AI-powered workflows te gebruiken."
+description: "Verbind WonkaChat met je zakelijke systemen en begin AI-workflows te gebruiken."
 ---
 
-Verbind je eerste zakelijke systeem met WonkaChat en ontsluit AI-powered toegang tot je bedrijfsdata. Deze gids leidt je door het complete verbindingsproces, van het selecteren van een verbinding tot het testen van je eerste AI-powered verzoek.
+Verbind je eerste zakelijke systeem met WonkaChat en ontsluit AI-toegang tot je bedrijfsdata. Deze gids leidt je door het volledige verbindingsproces, van het kiezen van een connector tot het testen van je eerste AI-verzoek.
 
-## Verbindingen vs Tools Begrijpen
+## Verbindingen versus Tools
 
 <AccordionGroup>
 <Accordion title="Verbindingen" icon="usb">
-**Verbindingen** zijn wat je toevoegt aan AI-modellen - ze koppelen WonkaChat aan je zakelijke systemen zoals Outlook, Slack of Google Drive.
+**Verbindingen** zijn wat je toevoegt aan AI-modellen. Ze koppelen WonkaChat aan je zakelijke systemen zoals Outlook, Slack of Google Drive.
 </Accordion>
 
 <Accordion title="Tools" icon="wrench">
-**Tools** zijn de individuele mogelijkheden binnen elke verbinding. Bijvoorbeeld, een Outlook verbinding kan tools bevatten voor het lezen van e-mails, versturen van berichten en beheren van agenda-evenementen.
+**Tools** zijn de individuele mogelijkheden binnen elke verbinding. Een Outlook-verbinding bevat bijvoorbeeld tools om e-mails te lezen, berichten te versturen en agenda-afspraken te beheren.
 </Accordion>
 </AccordionGroup>
 
@@ -21,167 +21,157 @@ Verbind je eerste zakelijke systeem met WonkaChat en ontsluit AI-powered toegang
 
 <CardGroup cols={2}>
 <Card title="Controleer Je Toegang" icon="user-check">
-Zorg ervoor dat je inloggegevens hebt voor het zakelijke systeem dat je wilt verbinden (bijv. je Outlook e-mail en wachtwoord).
+Zorg dat je over de inloggegevens beschikt voor het zakelijke systeem dat je wilt verbinden (bv. je Outlook e-mailadres en wachtwoord).
 </Card>
 
-<Card title="Ken Je Permissies" icon="shield">
-Je kunt alleen toegang krijgen tot data in verbonden zakelijke systemen die je al permissie hebt om te bekijken of te bewerken.
+<Card title="Ken Je Rechten" icon="shield">
+Je krijgt in verbonden zakelijke systemen alleen toegang tot data die je al mag bekijken of bewerken.
 </Card>
 </CardGroup>
 
 ## Video Walkthrough
 
-Bekijk deze stap-voor-stap gids om het hele verbindingsproces in actie te zien:
+Bekijk deze stapsgewijze gids om het volledige verbindingsproces in actie te zien:
 
 <iframe
   className="w-full aspect-video rounded-xl"
   src="https://www.youtube.com/embed/srw1U5-SonA"
-  title="Volledige gids voor het opzetten van je eerste verbinding"
+  title="Volledige gids voor het instellen van je eerste verbinding"
   frameBorder="0"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
 
-
 <Tip>
-Volg de video terwijl je je eerste verbinding opzet. Pauzeer bij elke stap om het te voltooien in je eigen WonkaChat instance.
+Volg de video terwijl je je eerste verbinding instelt. Pauzeer bij elke stap om die in je eigen WonkaChat-omgeving te voltooien.
 </Tip>
 
 ## Stap-voor-Stap Verbindingsproces
 
 <Steps>
-<Step title="Vind het Connectors Paneel">
-In je WonkaChat interface, vind de **Connectors** binnen de instellingen linksonder op het scherm. Dit paneel toont alle beschikbare zakelijke systeemverbindingen.
+<Step title="Ga naar de Connectoren-pagina">
+Ga in je WonkaChat-zijbalk naar **Aanpassen → Connectoren**. Deze pagina toont alle beschikbare verbindingen met zakelijke systemen, met zoekfunctie, filters en weergaveopties.
 
-<Frame caption="Connectors paneel en Outlook Mail verbindingsvoorbeeld">
-<img src="../../images/connectors-gif.gif" alt="Connectors paneel en Outlook Mail verbindingsvoorbeeld" />
+<Frame caption="Connectoren-knop onder het chatveld">
+<img src="../../images/connectors-gif.gif" alt="Connectoren-knop onder het chatveld" />
 </Frame>
-
-<Tip>
-Als je het rechterpaneel niet ziet, klik dan op het pijlpictogram in het midden-rechts van je scherm om de zijbalk uit te klappen.
-</Tip>
 </Step>
 
-<Step title="Selecteer Je Verbinding">
-Blader of zoek naar de verbinding die je wilt toevoegen. Klik op de verbindingsknop om het verbindingsproces te beginnen.
+<Step title="Kies Je Verbinding">
+Blader of zoek naar de verbinding die je wilt toevoegen. Klik op de kaart van de verbinding om het proces te starten.
 
 **Populaire eerste verbindingen:**
-- **Outlook Mail** of **Gmail** voor e-mailtoegang
+- **Outlook Mail** of **Gmail** voor toegang tot e-mail
 - **Slack** voor teamcommunicatie
-- **Google Drive** of **OneDrive** voor documenttoegang
-
+- **Google Drive** of **OneDrive** voor toegang tot documenten
 
 <Check>
-Niet zeker welke software eerst te verbinden? Begin met je e-mailprovider, het is de meest veelzijdige verbinding voor dagelijkse taken.
+Niet zeker met welke software je moet beginnen? Start met je e-mailprovider: dat is de meest veelzijdige verbinding voor dagelijkse taken.
 </Check>
 </Step>
 
 <Step title="Authenticeer Je Account">
-Er verschijnt een credential venster, dat authenticatie vraagt voor het geselecteerde zakelijke systeem. Het proces varieert enigszins per verbindingstype:
+Er verschijnt een venster dat om authenticatie vraagt voor het gekozen zakelijke systeem. Het proces verschilt per type verbinding:
 
 <Tabs>
 <Tab title="OAuth">
 <Info>
-**OAuth** authenticatie wordt gebruikt voor de meeste software zoals <strong>Outlook, Gmail, Google Drive</strong>.
+**OAuth**-authenticatie wordt gebruikt voor de meeste softwareverbindingen, zoals <strong>Outlook, Gmail, Google Drive</strong>.
 </Info>
 
 1. Klik op **"Connect"**.
-2. Je wordt doorgestuurd naar de officiële loginpagina van de software.
-3. Voer je credentials in op de beveiligde site van de software.
+2. Je wordt doorgestuurd naar de officiële inlogpagina van de software.
+3. Voer je gegevens in op de beveiligde site van de software.
 4. Je wordt automatisch teruggeleid naar WonkaChat.
 
 </Tab>
 
-<Tab title="API Key">
+<Tab title="API-sleutel">
 <Info>
-Sommige software vereist een API key. Als je hulp nodig hebt bij het verkrijgen of gebruiken van je API key, zie de <a href="/nl/support-resources/getting-help">Getting Help</a> pagina voor gepersonaliseerde supportopties.
+Sommige connectoren vereisen een API-sleutel. Heb je hulp nodig bij het verkrijgen of gebruiken van je API-sleutel? Bekijk de pagina <a href="/nl/support-resources/getting-help">Hulp Krijgen</a> voor persoonlijke ondersteuning.
 </Info>
 
-1. Klik op het **Tandwiel Icoon**.
-2. Verkrijg je API key direct van de provider.
-3. Plak de API key in het WonkaChat credential veld.
+1. Klik op de connectorkaart en open de configuratie.
+2. Vraag je API-sleutel aan bij de provider.
+3. Plak de API-sleutel in het gegevensveld van WonkaChat.
 4. Klik op **"Connect"**.
 
-
 <Tip>
-Hulp nodig bij het vinden van je API key? De meeste software heeft het onder <strong>Settings → API</strong> of <strong>Settings → Integrations</strong>. Controleer de documentatie van de software als je het niet zeker weet.
+Je API-sleutel niet snel gevonden? Bij de meeste software vind je die onder **Settings → API** of **Settings → Integrations**. Raadpleeg de documentatie van de software als je het niet zeker weet.
 </Tip>
 </Tab>
 
-<Tab title="Custom">
+<Tab title="Aangepast">
 <Info>
-Sommige zakelijke systemen, zoals <strong>Odoo</strong>, vereisen aangepaste configuratie naast standaard authenticatie. Als je hulp nodig hebt om te verbinden, zie de <a href="/nl/support-resources/getting-help">Getting Help</a> pagina voor gepersonaliseerde supportopties.
+Sommige zakelijke systemen, zoals <strong>Odoo</strong>, vereisen een aangepaste configuratie naast de standaardauthenticatie. Heb je hulp nodig bij het verbinden? Bekijk de pagina <a href="/nl/support-resources/getting-help">Hulp Krijgen</a> voor persoonlijke ondersteuning.
 </Info>
 
-Sommige zakelijke systemen vereisen aanvullende verbindingsparameters:
-- Database naam of instance URL
-- Server endpoint
-- Gebruikersnaam en wachtwoord combinatie
-- Aangepaste authenticatie tokens of credentials
+Sommige zakelijke systemen vereisen extra verbindingsparameters:
+- Instance-URL of databasenaam
+- Combinatie van gebruikersnaam en wachtwoord
+- Aangepaste authenticatietokens of gegevens
 
 **Verbindingsproces:**
-1. Klik op het **Tandwiel Icoon**.
-2. Bekijk de verbindingsvereisten die worden weergegeven in het WonkaChat credential venster.
-3. Voer alle vereiste velden in.
-4. Verifieer dat alles nauwkeurig is voordat je doorgaat.
+1. Klik op de connectorkaart om de configuratie te openen.
+2. Bekijk de verbindingsvereisten in het gegevensvenster van WonkaChat.
+3. Vul alle vereiste velden in.
+4. Controleer of alles klopt voordat je verdergaat.
 5. Klik op **"Connect"** om de verbinding tot stand te brengen.
 
 <Info>
-Elke software toont zijn specifieke verbindingsvereisten in het credential venster.
+Elke connector toont zijn specifieke verbindingsvereisten in het gegevensvenster.
 
-Als je hulp nodig hebt met verbindingsdetails of problemen tegenkomt, <a href="https://www.meetwonka.com/fr/contact">neem contact op met ons supportteam</a> voor gepersonaliseerde hulp.
+Heb je hulp nodig bij de verbindingsdetails of loop je tegen problemen aan? <a href="https://www.wonka-ai.com/contact">Neem contact op met ons supportteam</a> voor persoonlijke hulp.
 </Info>
 
 <Warning>
-Verifieer altijd dat je op de officiële WonkaChat pagina van je organisatie bent voordat je credentials invoert of verbinding maakt met software.
+Controleer altijd of je op de officiële WonkaChat-pagina van je organisatie bent voordat je gegevens invoert of verbinding maakt met software.
 </Warning>
 </Tab>
 </Tabs>
 
-
 </Step>
 
-<Step title="Schakel De Verbinding In">
-Na succesvolle authenticatie moet je de verbinding activeren voor het AI-model dat je gebruikt.
+<Step title="Schakel de Verbinding In">
+Activeer de verbinding voor je huidige chat na succesvolle authenticatie.
 
-1. Klik op de **"Connectors"** knop onder het chatinvoerveld
-2. Vind je zakelijke systeem in de lijst
+1. Klik op de knop **"Connectoren"** onder het chatveld
+2. Zoek je zakelijke systeem in de lijst
 3. Klik erop om de verbinding in te schakelen voor de huidige chat
 
-<Frame caption="Outlook Mail verbindingsvoorbeeld">
-<img src="../../images/connection-co.gif" alt="Outlook Mail verbindingsvoorbeeld" />
+<Frame caption="Een verbinding inschakelen vanuit het chatveld">
+<img src="../../images/connection-co.gif" alt="Een verbinding inschakelen vanuit het chatveld" />
 </Frame>
 
 <Check>
-Zodra ingeschakeld kan het AI-model toegang krijgen tot dit zakelijke systeem wanneer je het vraagt. Je kunt verbindingen op elk moment in- of uitschakelen.
+Zodra ingeschakeld, kan het AI-model dit zakelijke systeem raadplegen wanneer je daarom vraagt. Je kunt verbindingen op elk moment in- of uitschakelen.
 </Check>
 </Step>
 
 <Step title="Test Je Verbinding">
-Verifieer dat de verbinding werkt door de AI een eenvoudige vraag te stellen die het zakelijke systeem vereist.
+Controleer of de verbinding werkt door de AI een eenvoudige vraag te stellen die het zakelijke systeem vereist.
 
-### Voorbeeld Voor E-mail (Outlook/Gmail):
+### Voorbeeld voor E-mail (Outlook/Gmail):
 ```
 Welke e-mails heb ik vandaag ontvangen?
 ```
 
-Als de AI succesvol informatie ophaalt en weergeeft, werkt je verbinding correct!
+Als de AI de informatie succesvol ophaalt en toont, werkt je verbinding correct!
 
 <Check>
-Verbinding succesvol! Je kunt nu natuurlijke taal gebruiken om toegang te krijgen tot en te communiceren met dit zakelijke systeem via WonkaChat.
+Verbinding gelukt! Je kunt nu natuurlijke taal gebruiken om dit zakelijke systeem te raadplegen en ermee te werken via WonkaChat.
 </Check>
 </Step>
 
-
-<Step title="Schakel Een Verbinding Uit">
+<Step title="Schakel een Verbinding Uit">
 
 Om een verbinding te verwijderen:
-1. Klik op de **"Connectors"** knop onder het chatinvoerveld
-2. Vind je zakelijke systeem in de lijst
-3. Klik erop om de verbinding uit te schakelen voor de huidige chat door het te verwijderen uit de geselecteerde verbindingen
+1. Klik op de knop **"Connectoren"** onder het chatveld
+2. Zoek je zakelijke systeem in de lijst
+3. Klik erop om de verbinding voor de huidige chat uit te schakelen door ze te verwijderen uit de geselecteerde verbindingen
 
 <Warning>
-Het loskoppelen van een zakelijk systeem trekt onmiddellijk de toegang van WonkaChat tot die service in. Je authenticatie credentials blijven echter veilig opgeslagen voor toekomstige herverbindingen.
+Het loskoppelen van een zakelijk systeem trekt de toegang van WonkaChat tot die dienst onmiddellijk in. Je authenticatiegegevens blijven wel veilig bewaard voor toekomstige herverbindingen.
 </Warning>
 
 </Step>
@@ -189,55 +179,54 @@ Het loskoppelen van een zakelijk systeem trekt onmiddellijk de toegang van Wonka
 
 ---
 
-
-## Permissies en Acties Begrijpen
+## Rechten en Acties Begrijpen
 
 <AccordionGroup>
-<Accordion title="Waar Kan WonkaChat Toegang Tot Krijgen?" icon="eye">
-WonkaChat kan alleen toegang krijgen tot:
-- Data waartoe jij persoonlijk permissie hebt om te bekijken in het verbonden zakelijke systeem
+<Accordion title="Wat Kan WonkaChat Raadplegen?" icon="eye">
+WonkaChat kan alleen het volgende raadplegen:
+- Data waarvoor jij persoonlijk toestemming hebt om ze te bekijken in het verbonden zakelijke systeem
 - Informatie die je expliciet vraagt op te halen
-- Resources binnen je organisatiegrenzen (indien van toepassing)
+- Resources binnen de grenzen van je organisatie (indien van toepassing)
 
 **WonkaChat kan niet:**
-- Toegang krijgen tot data van andere gebruikers tenzij ze het met jou hebben gedeeld
-- Het permissiesysteem van je zakelijke systeem omzeilen
+- Data van andere gebruikers raadplegen, tenzij zij die met jou hebben gedeeld
+- Het rechtensysteem van je zakelijke systeem omzeilen
 - Data lezen of wijzigen zonder je expliciete verzoek
 </Accordion>
 
 <Accordion title="Welke Acties Kan WonkaChat Uitvoeren?" icon="hand">
-WonkaChat's mogelijkheden hangen volledig af van welke tools zijn geïmplementeerd voor elk zakelijk systeem. Als een provider een actie blootstelt via hun verbinding (MCP), kan de AI het uitvoeren. Als een actie niet is geïmplementeerd in de MCP, kan de AI er geen toegang toe krijgen, ongeacht of het onderliggende zakelijke systeem het ondersteunt.
+Wat WonkaChat kan doen, hangt volledig af van welke tools voor elk zakelijk systeem zijn geïmplementeerd. Stelt een provider een actie beschikbaar via zijn verbinding (MCP), dan kan de AI die uitvoeren. Is een actie niet geïmplementeerd in de MCP, dan kan de AI er niet bij, ongeacht of het onderliggende zakelijke systeem dit wel ondersteunt.
 
-**Veelvoorkomende mogelijkheden zijn:**
-- **Lezen**: Bekijk e-mails, documenten, taken, agenda-evenementen, database records, etc.
-- **Schrijven**: Verstuur e-mails, maak taken aan, update records, plan meetings, voeg opmerkingen toe
-- **Verwijderen**: Verwijder items, archiveer records, wis data (alleen wanneer je het expliciet vraagt)
-- **Zoeken**: Bevraag documenten, vind specifieke records, filter data
-- **Uitvoeren**: Voer workflows uit, trigger automatiseringen, voer berekeningen uit
+**Veelvoorkomende mogelijkheden:**
+- **Lezen**: e-mails, documenten, taken, agenda-afspraken, databaserecords enz. bekijken
+- **Schrijven**: e-mails versturen, taken aanmaken, records bijwerken, meetings plannen, opmerkingen toevoegen
+- **Verwijderen**: items verwijderen, records archiveren, data wissen (alleen wanneer je dat expliciet vraagt)
+- **Zoeken**: documenten doorzoeken, specifieke records vinden, data filteren
+- **Uitvoeren**: workflows uitvoeren, automatiseringen triggeren, berekeningen maken
 
 <Check>
-Elke verbinding (MCP) definieert zijn eigen set van beschikbare acties. Controleer de documentatie van het specifieke zakelijke systeem om te zien welke operaties worden ondersteund via zijn MCP implementatie.
+Elke verbinding (MCP) definieert zijn eigen set beschikbare acties. Raadpleeg de documentatie van het specifieke zakelijke systeem om te zien welke bewerkingen worden ondersteund via zijn MCP-implementatie.
 </Check>
 
-**Belangrijk:** Het AI-model is beperkt tot alleen de acties die de MCP blootstelt. Zelfs als de native interface van een zakelijk systeem een functie ondersteunt, kan WonkaChat het alleen gebruiken als de corresponderende MCP server die mogelijkheid heeft geïmplementeerd.
+**Belangrijk:** het AI-model is beperkt tot enkel de acties die de MCP beschikbaar stelt. Ook al ondersteunt de eigen interface van een zakelijk systeem een functie, WonkaChat kan die alleen gebruiken als de bijbehorende MCP-server die mogelijkheid heeft geïmplementeerd.
 
-Alle acties vereisen je expliciete instructie via conversatie. WonkaChat voert alleen acties uit wanneer je het vraagt.
+Alle acties vereisen jouw expliciete instructie via de conversatie. WonkaChat voert alleen acties uit wanneer je daarom vraagt.
 </Accordion>
 
-<Accordion title="Hoe Worden Credentials Opgeslagen?" icon="lock">
-Je authenticatie tokens zijn:
-- Versleuteld at rest in onze veilige database
-- Uniek voor je gebruikersaccount (nooit gedeeld met anderen)
-- Automatisch ververst om verbinding te behouden
-- Onmiddellijk verwijderd wanneer je een zakelijk systeem loskoppelt
+<Accordion title="Hoe Worden Gegevens Opgeslagen?" icon="lock">
+Je authenticatietokens zijn:
+- Versleuteld opgeslagen in onze beveiligde database
+- Uniek voor jouw gebruikersaccount (nooit gedeeld met anderen)
+- Automatisch vernieuwd om de verbinding actief te houden
+- Onmiddellijk verwijderd zodra je een zakelijk systeem loskoppelt
 
-WonkaChat slaat nooit je daadwerkelijke wachtwoorden op. Het slaat alleen de veilige toegangstokens op die worden verstrekt door de OAuth flow of API key die je invoert.
+WonkaChat slaat nooit je echte wachtwoorden op. Het bewaart alleen de beveiligde toegangstokens die door de OAuth-flow worden verstrekt, of de API-sleutel die je zelf invoert.
 </Accordion>
 </AccordionGroup>
 
 ---
 
-## Multi-Platform Workflows
+## Workflows over Meerdere Platforms
 
 Zodra je meerdere zakelijke systemen hebt verbonden, kun je ze op krachtige manieren combineren:
 
@@ -245,25 +234,25 @@ Zodra je meerdere zakelijke systemen hebt verbonden, kun je ze op krachtige mani
 <Card title="Cross-Platform Vragen" icon="arrows-left-right">
 Stel vragen die meerdere zakelijke systemen omvatten in één verzoek.
 
-**Voorbeeld:** *"Controleer mijn Google Calendar voor beschikbaarheid en verstuur die tijden naar Sarah via Outlook."*
+**Voorbeeld:** *"Controleer mijn Google Calendar op beschikbaarheid en stuur die tijden naar Sarah via Outlook."*
 </Card>
 
-<Card title="Dataoverdracht" icon="arrow-right-arrow-left">
-Verplaats informatie tussen zakelijke systemen zonder handmatig kopiëren-plakken.
+<Card title="Data Overzetten" icon="arrow-right-arrow-left">
+Verplaats informatie tussen zakelijke systemen zonder handmatig te kopiëren en plakken.
 
-**Voorbeeld:** *"Neem de actiepunten van deze Slack thread en maak taken aan in ClickUp."*
+**Voorbeeld:** *"Neem de actiepunten uit deze Slack-thread en maak er taken van in ClickUp."*
 </Card>
 
 <Card title="Geautomatiseerde Workflows" icon="gears">
-Bouw agents die één zakelijk systeem monitoren en acties ondernemen in een ander.
+Bouw agents die één zakelijk systeem monitoren en actie ondernemen in een ander.
 
-**Voorbeeld:** Agent die Salesforce controleert op nieuwe leads en follow-up taken aanmaakt in Asana.
+**Voorbeeld:** een agent die Salesforce controleert op nieuwe leads en opvolgtaken aanmaakt in Asana.
 </Card>
 
-<Card title="Geïntegreerde Rapportage" icon="chart-line">
-Combineer data uit meerdere bronnen voor uitgebreide inzichten.
+<Card title="Gebundelde Rapportage" icon="chart-line">
+Combineer data uit meerdere bronnen tot een volledig overzicht.
 
-**Voorbeeld:** *"Vat mijn week samen: e-mails van Outlook, meetings van Calendar en voltooide taken van Notion."*
+**Voorbeeld:** *"Vat mijn week samen: e-mails uit Outlook, meetings uit de agenda en afgeronde taken uit Notion."*
 </Card>
 </CardGroup>
 
@@ -276,71 +265,71 @@ Combineer data uit meerdere bronnen voor uitgebreide inzichten.
 Verbind eerst je meest gebruikte zakelijke systemen:
 1. E-mail (Outlook of Gmail)
 2. Agenda (Google Calendar of Cal.com)
-3. Primaire projectmanagement tool
-4. Hoofd documentopslag
+3. Je belangrijkste projectmanagementtool
+4. Je belangrijkste documentopslag
 
-Je kunt altijd later meer verbindingen toevoegen naarmate je behoeften ontdekt.
+Je kunt later altijd meer verbindingen toevoegen naarmate je nieuwe behoeften ontdekt. Markeer je meest gebruikte connectoren als favoriet (stericoon op de Connectoren-pagina), zodat ze bovenaan verschijnen in het chatveld.
 </Accordion>
 
-<Accordion title="Test Voordat Je Complexe Workflows Maakt" icon="vial">
-Na het verbinden van een zakelijk systeem:
-- Stel eerst eenvoudige vragen om te verifiëren dat het werkt
+<Accordion title="Test Voordat Je Complexe Workflows Bouwt" icon="vial">
+Nadat je een zakelijk systeem hebt verbonden:
+- Stel eerst eenvoudige vragen om te controleren of het werkt
 - Verhoog geleidelijk de complexiteit
-- Begrijp welke data het zakelijke systeem blootstelt voordat je workflows bouwt
+- Begrijp welke data het zakelijke systeem beschikbaar stelt voordat je workflows bouwt
 </Accordion>
 
-<Accordion title="Beoordeel Permissies Periodiek" icon="calendar-check">
+<Accordion title="Controleer Rechten Regelmatig" icon="calendar-check">
 Om de paar maanden:
-- Beoordeel welke zakelijke systemen verbonden zijn
+- Bekijk welke zakelijke systemen verbonden zijn
 - Koppel zakelijke systemen los die je niet meer gebruikt
-- Verifieer dat verbindingen nog actief en werkend zijn
+- Controleer of verbindingen nog steeds actief zijn en werken
 </Accordion>
 
-<Accordion title="Maak AI Agents met Gefocuste Tool Sets" icon="robot">
-**Waarom Dit Belangrijk Is:**
+<Accordion title="Bouw AI-Agents met Gerichte Toolsets" icon="robot">
+**Waarom dit belangrijk is:**
 
-AI agents met speciaal gebouwde zakelijke systeemverbindingen leveren aanzienlijk betere resultaten dan algemene setups. Wanneer een agent alleen toegang heeft tot relevante zakelijke systemen voor zijn specifieke taak:
-- **Vermindert hallucinaties** door context te beperken tot wat daadwerkelijk nodig is
-- **Verbetert nauwkeurigheid** door te focussen op domein-specifieke databronnen
-- **Levert snellere reacties** met minder irrelevante toolcontroles
-- **Behoudt betere context** binnen zijn expertisegebied
+AI-agents met doelgerichte verbindingen naar zakelijke systemen leveren aanzienlijk betere resultaten op dan generieke opstellingen. Wanneer een agent alleen toegang heeft tot de zakelijke systemen die relevant zijn voor zijn specifieke taak:
+- **Vermindert dit hallucinaties** doordat de context beperkt blijft tot wat echt nodig is
+- **Verbetert dit de nauwkeurigheid** door te focussen op domeinspecifieke databronnen
+- **Levert dit snellere antwoorden** op met minder irrelevante toolcontroles
+- **Behoudt dit betere context** binnen zijn expertisegebied
 
-**Best Practice Voorbeelden:**
+**Praktijkvoorbeelden:**
 
 <Accordion title="Sales Agent" icon="handshake">
-**Verbind alleen:** Salesforce, HubSpot, Gmail, Calendar
+**Verbind alleen:** Salesforce, HubSpot, Gmail, agenda
 
-- Gefocust op klantdata en communicatie
-- Zal niet per ongeluk ongerelateerde ontwikkeltools bevragen
-- Begrijpt sales pipeline context diepgaand
+- Gericht op klantdata en communicatie
+- Bevraagt niet per ongeluk ongerelateerde ontwikkeltools
+- Kent de context van de salespipeline grondig
 </Accordion>
 
-<Accordion title="Ontwikkelings Agent" icon="code">
+<Accordion title="Development Agent" icon="code">
 **Verbind alleen:** GitHub, GitLab, Linear, Slack
 
 - Gespecialiseerd in code en projectmanagement
-- Sneller omdat het geen e-mail of CRM systemen controleert
-- Beter in het begrijpen van technische context
+- Sneller omdat het geen e-mail- of CRM-systemen raadpleegt
+- Begrijpt technische context beter
 </Accordion>
 
-<Accordion title="Executive Assistent Agent" icon="briefcase">
+<Accordion title="Executive Assistant Agent" icon="briefcase">
 **Verbind alleen:** Outlook, Google Calendar, Google Drive, Notion
 
 - Toegewijd aan planning en documentbeheer
-- Zal niet per ongeluk toegang krijgen tot technische of verkoop systemen
+- Raadpleegt geen technische of sales-systemen per ongeluk
 - Betrouwbaarder voor persoonlijke productiviteitstaken
 </Accordion>
 
 <Accordion title="Operations Agent" icon="gears">
-**Verbind alleen:** Odoo, QuickBooks, Airtable, Slack
+**Verbind alleen:** Odoo, Airtable, Slack
 
-- Gefocust op bedrijfsoperaties en financiën
+- Gericht op bedrijfsvoering en financiën
 - Gespecialiseerde kennis van operationele workflows
-- Beter in het cross-referencen van operationele data
+- Beter in het combineren van operationele data
 </Accordion>
 
 <Tip>
-Begin met het maken van 2-3 gespecialiseerde agents voor je meest voorkomende workflows. Je zult snel het kwaliteitsverschil zien vergeleken met één agent met alle tools en software verbonden.
+Begin met 2-3 gespecialiseerde agents voor je meest voorkomende workflows. Je zult snel het kwaliteitsverschil merken ten opzichte van één agent met alle tools en software verbonden.
 </Tip>
 </Accordion>
 </AccordionGroup>
@@ -350,11 +339,11 @@ Begin met het maken van 2-3 gespecialiseerde agents voor je meest voorkomende wo
 ## Volgende Stappen
 
 <CardGroup cols={2}>
-<Card title="Troubleshooting" icon="wrench" href="/nl/tools-connection/troubleshooting-connections">
-Problemen met het verbinden van je zakelijke systemen? Vind oplossingen voor veelvoorkomende verbindingsproblemen.
+<Card title="Probleemoplossing" icon="wrench" href="/nl/tools-connection/troubleshooting-connections">
+Problemen bij het verbinden van je zakelijke systemen? Vind oplossingen voor veelvoorkomende verbindingsproblemen.
 </Card>
 
 <Card title="Bekijk Voorbeelden" icon="video" href="/nl/tools-connection/examples-of-tool-usage">
-Bekijk echte voorbeelden van MCP verbindingen in actie met Outlook, Odoo en meer.
+Bekijk echte voorbeelden van MCP-verbindingen in actie met Outlook, Odoo en meer.
 </Card>
 </CardGroup>

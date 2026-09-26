@@ -1,0 +1,116 @@
+---
+title: "Choosing a Model"
+description: "Understand model sizes, the Router, Fast and Pro modes, and how to pick the right one for your task."
+---
+
+WonkaChat gives you access to several AI models without asking you to become an expert in model names. Use the model selector above the message box to pick how the AI should approach your task.
+
+<Info>
+Which models are available to you depends on your organization's configuration. If you don't see a model or mode described here, ask your administrator.
+</Info>
+
+## The Model Selector
+
+Click the model name above the message box to open the model selector. From there you can:
+
+- Switch between **Fast** and **Pro** modes
+- Pick a specific model size directly
+- Let the **Router** choose automatically
+
+<Tip>
+You can switch models mid-conversation. Changing models doesn't erase your conversation history — the newly selected model simply continues from where the previous one left off.
+</Tip>
+
+---
+
+## Model Sizes
+
+Instead of tracking individual model names, think in terms of size and capability:
+
+<CardGroup cols={2}>
+<Card title="Fast" icon="bolt">
+Lightweight and quick. Best for simple, high-volume requests: quick questions, short summaries, formatting. Not designed for deep reasoning or complex tool use.
+</Card>
+
+<Card title="Standard" icon="scale-balanced">
+Balanced speed and reasoning. A solid default for everyday professional work, including most conversations that use connectors and tools.
+</Card>
+
+<Card title="Advanced reasoning" icon="brain">
+The deepest analysis available. Best for complex, multi-step problems, strategic planning, and tasks that combine reasoning with several external tools.
+</Card>
+</CardGroup>
+
+<Warning>
+Fast models don't have reasoning capabilities and aren't a good fit for system usage (ERP, CRM, and similar tools). Use a standard or advanced reasoning model for that kind of work.
+</Warning>
+
+---
+
+## The Router: Let WonkaChat Choose
+
+If you'd rather not pick a model size yourself, select the **Router** in the model selector. It reads your request and automatically routes it to a model suited to the task, balancing quality, speed, and cost.
+
+<Tip>
+The Router is a good default when your requests vary in complexity from one message to the next, since it adapts automatically instead of asking you to switch models yourself.
+</Tip>
+
+If your organization allows it, you can tune the Router's behavior in **Settings → General** by choosing a preset, for example one that favors performance, one that favors cost, or a balanced option.
+
+---
+
+## Fast and Pro Modes
+
+Alongside individual model sizes, WonkaChat offers two ready-to-use modes:
+
+<CardGroup cols={2}>
+<Card title="Fast mode" icon="gauge-high">
+Good for general-purpose work. Doesn't have reasoning capabilities — not a good fit for system usage (ERP, CRM, and similar tools).
+</Card>
+
+<Card title="Pro mode" icon="wand-magic-sparkles">
+Good for complex tasks and reasoning, including system usage (ERP, CRM, and similar tools).
+</Card>
+</CardGroup>
+
+Switch between them from the model selector at any time, based on what the current message needs.
+
+---
+
+## Model Regions
+
+Each model in the selector shows a region badge. Models are provided through different providers: most run in the EU, but some run in the US or globally, depending on the provider. Check the badge before using a model for sensitive data, and ask your administrator if your organization restricts which regions are allowed.
+
+For the full picture on data handling and certifications, see [Security & Governance](/en/security-governance/security-overview).
+
+---
+
+## Model Selection for Agents
+
+When you build or edit an [agent](/en/ai-agents/introduction), you choose its model independently from your own chat model. This lets you, for example, give a customer-support agent a fast model for quick replies while keeping an advanced reasoning model for an agent that does in-depth research.
+
+<Tip>
+If an agent behaves inconsistently or seems to struggle with a task, check which model it's configured to use before assuming the prompt itself needs work.
+</Tip>
+
+---
+
+## Choosing the Right Approach
+
+<AccordionGroup>
+<Accordion title="I'm not sure what I need">
+Start with the **Router**. It's built for exactly this — you describe the task, and it picks a suitable model.
+</Accordion>
+
+<Accordion title="I need a quick answer to something simple">
+Use **Fast** mode or a fast model. Quick questions, short summaries, and light formatting don't need deep reasoning.
+</Accordion>
+
+<Accordion title="I'm working with a connected business system">
+Use **Pro** mode or a standard/advanced reasoning model. System usage (ERP, CRM, and similar tools) needs reasoning capabilities that fast models don't have.
+</Accordion>
+
+<Accordion title="I'm doing complex, multi-step analysis">
+Use an advanced reasoning model. It's built for the hardest, most demanding tasks.
+</Accordion>
+</AccordionGroup>

@@ -1,0 +1,90 @@
+---
+title: "Organization Settings"
+description: "User management, invites, the organization system prompt, tags, subscription and per-feature permissions."
+---
+
+Organization-wide settings live under **Settings → Organization**. What you see there depends on your role: the organization **owner** sees the most, other admins see a subset.
+
+## User Management
+
+<Note>
+Visible only to the organization **owner**.
+</Note>
+
+Open **Settings → Organization → User Management** to see everyone in your organization, with their role, usage and status (Active, Pending, Expired).
+
+<Steps>
+<Step title="Invite by share link">
+Click **Generate Share Link** to create a link anyone can use to join your organization without an email invitation. Use **Copy** to grab it, or **Generate New Link** to replace it.
+</Step>
+<Step title="Invite manually">
+Use **Manually Add Members** to send individual email invitations, or **Add CSV File** to invite a list at once.
+</Step>
+<Step title="Manage existing invitations">
+Pending invitations can be **Resend**ed or **Dismiss**ed. Members can be edited (role, usage limit) or deleted.
+</Step>
+<Step title="Set usage limits">
+Use **Set limit** on a member to cap their usage, or **Set org limit** to set a hard cap on total organization spending — members are asked to contact an admin once it's reached.
+</Step>
+</Steps>
+
+## Organization system prompt
+
+<Note>
+Visible to admins who can manage the organization system prompt.
+</Note>
+
+Open **Settings → Organization → System prompt**. These instructions are added to every chat in your organization, for every user — after WonkaChat's general instructions, and taking priority if the two disagree. Write your house rules (tone, things to always or never do) and **Save**, or **Clear** to remove them and fall back to the general instructions only.
+
+## Workspace tags
+
+Open **Settings → Organization → Tags** to manage tags shared across agents and connectors in your workspace. Create a tag, search existing ones, rename or delete them from the tag list.
+
+## Subscription
+
+<Note>
+Visible to the organization owner, when subscriptions are enabled for your plan.
+</Note>
+
+Open **Settings → Organization → Subscription** to see your current plan, billed users, invoices, and next payment date. From here you can adjust the number of users on your plan, manage billing, or cancel/reactivate your subscription. A **7-day free trial** is available; see [Plans](/en/pricing/plans) for details.
+
+## Managing organizations
+
+If you own more than one organization, switch between them from the organization selector, or create a new one from the admin area if your account allows it. Each organization has its own users, connectors, agents and settings.
+
+## Per-feature permissions
+
+<Note>
+Not on this settings page — each feature manages its own permissions.
+</Note>
+
+Admins can control, per role (User or Admin), whether people can **create** or **share** agents and prompts, and similar settings for memories. Open the **Admin** (shield icon) button inside each feature's own page:
+
+<CardGroup cols={3}>
+<Card title="Agents" icon="robot">
+From **Agents → All agents**, open the admin settings to allow or restrict creating and sharing agents.
+</Card>
+<Card title="Prompts" icon="message">
+From **Customize → Prompts**, open the admin settings to allow or restrict creating and sharing prompts.
+</Card>
+<Card title="Memories" icon="brain">
+From **Settings → Memories**, open the admin settings to control who can create, update or opt out of memories.
+</Card>
+</CardGroup>
+
+## Feature flags enabled by Wonka AI
+
+Several capabilities are organization-level flags that Wonka AI turns on for your organization on request — they don't have a toggle in the interface. If you don't see one of these and want it, contact **support@meetwonka.com**:
+
+- Scheduled and triggered agents
+- Skills
+- Custom connectors (MCP) creation
+- Memories
+- Projects
+- Agent audit (and, within it, viewing conversations or tool calls)
+- Agent API keys
+- Interactive usage-stats filters
+
+<Warning>
+Deleting an organization (Settings → Organization → General → **Delete Organization**) is permanent: it removes all organization data, and permanently deletes any user who belongs only to that organization. This cannot be undone.
+</Warning>

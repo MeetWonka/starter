@@ -3,244 +3,187 @@ title: "Externe Verbindingen"
 description: "Verbind WonkaChat met je software, zakelijke tools en databronnen om toegang te krijgen tot echte informatie en acties namens jou uit te voeren."
 ---
 
-WonkaChat kan verbinden met je zakelijke tools, databases en software, waardoor je toegang krijgt tot echte informatie en acties kunt uitvoeren via natuurlijke conversatie. Deze worden **Connectors** of **MCP connections** genoemd voor meer technische mensen.
+WonkaChat kan verbinding maken met je zakelijke tools, databases en software, waardoor je toegang krijgt tot echte informatie en acties kunt uitvoeren via natuurlijke conversatie. Deze worden **Connectors** of **MCP-verbindingen** genoemd voor meer technische mensen.
 
 <Info>
 Wil je de technische details begrijpen van hoe deze verbindingen werken?
-[Spring naar Technische Details](#technische-details) om te leren over het Model Context Protocol (MCP) dat deze integraties aandrijft.
+[Ga naar Technische Details](#technical-details) om te leren over het Model Context Protocol (MCP) dat deze integraties aandrijft.
 </Info>
 
 <Tabs>
 <Tab title="Aan de Slag">
 
-## Wat Externe Verbinding Mogelijk Maakt
+## Wat Externe Verbindingen Mogelijk Maken
 
-Het verbinden van je externe software en databronnen transformeert WonkaChat van een standalone AI-assistent naar een verbonden systeem dat kan werken met je werkelijke data en workflows. In plaats van alleen algemene vragen te beantwoorden, kan WonkaChat toegang krijgen tot je echte e-mails, je agenda beheren, je CRM updaten, documenten maken in je systemen en acties coördineren over meerdere platforms, allemaal via natuurlijke conversatie.
+Het verbinden van je externe software en databronnen transformeert WonkaChat van een standalone AI-assistent naar een verbonden systeem dat kan werken met je werkelijke data en workflows. In plaats van alleen algemene vragen te beantwoorden, kan WonkaChat toegang krijgen tot je echte e-mails, je agenda beheren, je CRM bijwerken, documenten aanmaken in je systemen en acties coördineren over meerdere platforms, allemaal via natuurlijke conversatie.
 
-### Real-World Mogelijkheden
+### Mogelijkheden in de Praktijk
 
 <CardGroup cols={2}>
-<Card title="Toegang Tot Je Data" icon="database">
-Lees e-mails, agenda-evenementen, documenten en databases via natuurlijke conversatie zonder tussen apps te schakelen.
+<Card title="Toegang tot Je Data" icon="database">
+Lees e-mails, agenda-afspraken, documenten en databases via natuurlijke conversatie, zonder tussen apps te schakelen.
 </Card>
 
 <Card title="Voer Acties Uit" icon="bolt">
-Verstuur e-mails, maak taken aan, update records en trigger workflows, allemaal door WonkaChat te vragen in gewone taal.
+Verstuur e-mails, maak taken aan, werk records bij en trigger workflows, allemaal door WonkaChat gewoon iets te vragen.
 </Card>
 
 <Card title="Multi-Platform Workflows" icon="layer-group">
-Combineer meerdere verbindingen in één enkel verzoek. Bijvoorbeeld: "Controleer mijn agenda, vind open slots en e-mail ze naar John."
+Combineer meerdere verbindingen in één enkel verzoek. Bijvoorbeeld: "Controleer mijn agenda, vind vrije momenten en e-mail ze naar John."
 </Card>
 
-<Card title="Altijd Up-to-Date" icon="arrows-rotate">
-Krijg toegang tot live data van je systemen in plaats van te vertrouwen op statische kennis of handmatige updates.
+<Card title="Altijd Actueel" icon="arrows-rotate">
+Krijg toegang tot live data uit je systemen in plaats van te vertrouwen op statische kennis of handmatige updates.
 </Card>
 </CardGroup>
 
-### Hoe Te Beginnen
+### Hoe Je Begint
 
 <Steps>
 <Step title="Start een verbinding">
-Ga naar de instellingen en maak verbinding met de tool (zoals Outlook, Gmail of Slack) door je credentials te verstrekken. Voeg het dan toe aan je chat.
+Ga naar **Aanpassen → Connectoren** en verbind met de tool die je wilt (bijvoorbeeld Outlook, Gmail of Slack) door je gegevens in te voeren. Schakel de connector daarna in voor je chat via de knop **Connectoren** onder het berichtenveld.
 
-<Frame caption="Outlook Mail knop locatie">
-<img src="../../images/full-co.gif" alt="Outlook Mail knop" />
+<Frame caption="Connectoren-knop onder het chatveld">
+<img src="../../images/full-co.gif" alt="Connectoren-knop onder het chatveld" />
 </Frame>
 
 <Info>
 Deze externe verbindingen worden "MCP" (Model Context Protocol) genoemd.
 
-Hoewel **je de technische details niet hoeft te begrijpen om ze te gebruiken**, kun je meer leren in de [Technische Details](#technische-details) sectie als je nieuwsgierig bent.
+Hoewel **je de technische details niet hoeft te begrijpen om ze te gebruiken**, kun je meer lezen in de sectie [Technische Details](#technical-details) als je nieuwsgierig bent.
 </Info>
 </Step>
 
 <Step title="WonkaChat krijgt veilige toegang">
-Er wordt een veilige verbinding tot stand gebracht tussen WonkaChat en je zakelijke tools. WonkaChat werkt namens jou met natuurlijke taal, werkend binnen je bestaande permissies.
+Er wordt een veilige verbinding tot stand gebracht tussen WonkaChat en je zakelijke tools. WonkaChat werkt namens jou via natuurlijke taal, binnen je bestaande rechten.
 
 <Warning>
-**Belangrijk:** WonkaChat erft je exacte permissies. Het kan alleen toegang krijgen tot data en acties uitvoeren waartoe jij persoonlijk permissie hebt. Als je geen toegang hebt tot een bestand, een e-mail kunt versturen vanaf een specifiek account of een record kunt wijzigen in je reguliere workflow, kan WonkaChat het ook niet.
+**Belangrijk:** WonkaChat erft exact jouw rechten. Het kan alleen data raadplegen en acties uitvoeren waarvoor jij persoonlijk toestemming hebt. Kun je een bestand niet openen, geen e-mail versturen vanaf een specifiek account of geen record wijzigen in je normale workflow? Dan kan WonkaChat dat ook niet.
 </Warning>
 </Step>
 
 <Step title="Chat natuurlijk">
-Stel vragen of maak verzoeken in gewone taal. WonkaChat gebruikt automatisch de juiste tools en acties om je te helpen.
+Stel vragen of doe verzoeken in gewone taal. WonkaChat gebruikt automatisch de juiste tools en acties om je te helpen.
 
 ```
 "Welke e-mails heb ik deze week van Sarah ontvangen?"
 ```
 
-WonkaChat maakt verbinding met je e-mail, haalt de informatie op en presenteert het duidelijk.
+WonkaChat maakt verbinding met je e-mail, haalt de informatie op en presenteert ze duidelijk.
 </Step>
 </Steps>
 
 ---
 
-## Externe Verbindingen (MCP) Voorbeeld
+## Voorbeeld van Externe Verbindingen (MCP)
 
-Het verbinden van je zakelijke tools verandert dramatisch wat WonkaChat kan bereiken. Hier is een echt voorbeeld dat het verschil toont:
+Het verbinden van je zakelijke tools verandert drastisch wat WonkaChat kan doen. Hier is een concreet voorbeeld dat het verschil laat zien:
 
 <Tabs>
 <Tab title="Zonder Verbindingen">
 
-**Je verzoek:**
+**Jouw verzoek:**
 ```
-"Plan een meeting met het marketingteam voor volgende dinsdag om 14:00 om de Q2 campagneresultaten te bespreken."
+"Plan een meeting met het marketingteam voor volgende dinsdag om 14u om de Q2-campagneresultaten te bespreken."
 ```
 
-**WonkaChat's reactie (beperkt):**
+**WonkaChat's antwoord (beperkt):**
 ```
-Ik kan je helpen een meeting uitnodiging op te stellen, maar ik kan geen toegang krijgen tot je agenda 
-of e-mailsysteem om de meeting daadwerkelijk in te plannen.
+Ik kan je helpen een uitnodiging op te stellen, maar ik heb geen toegang tot
+je agenda of e-mailsysteem om de meeting daadwerkelijk in te plannen.
 
-Dit is wat ik voorst el:
-1. Controleer je agenda voor beschikbaarheid op dinsdag om 14:00
-2. Verstuur een meeting uitnodiging naar je marketingteam
-3. Voeg "Q2 Campagneresultaten Bespreking" toe als onderwerp
+Dit stel ik voor:
+1. Controleer je agenda op beschikbaarheid dinsdag om 14u
+2. Verstuur een uitnodiging naar je marketingteam
+3. Gebruik "Bespreking Q2-campagneresultaten" als onderwerp
 
-Wil je dat ik de meeting uitnodigingstekst voor je opstel?
+Wil je dat ik de uitnodigingstekst voor je opstel?
 ```
 
 <Warning>
-Zonder verbindingen kan WonkaChat alleen algemene richtlijnen geven en geen toegang krijgen tot je werkelijke data of echte acties ondernemen.
+Zonder verbindingen kan WonkaChat alleen algemeen advies geven en heeft het geen toegang tot je echte data of de mogelijkheid om zelf actie te ondernemen.
 </Warning>
 
 </Tab>
 
 <Tab title="Met Verbindingen">
 
-**Je verzoek:**
+**Jouw verzoek:**
 ```
-"Plan een meeting met het marketingteam voor volgende dinsdag om 14:00 om de Q2 campagneresultaten te bespreken."
+"Plan een meeting met het marketingteam voor volgende dinsdag om 14u om de Q2-campagneresultaten te bespreken."
 ```
 
-**WonkaChat's reactie (krachtig):**
+**WonkaChat's antwoord (krachtig):**
 ```
-Ik zal die meeting voor je inplannen.
+Ik plan die meeting voor je in.
 
-Je agenda controleren... Dinsdag om 14:00 is beschikbaar.
+Je agenda controleren... Dinsdag om 14u is beschikbaar.
 
 "marketingteam" leden opzoeken... 5 teamleden gevonden:
 - Sarah Johnson (Marketing Director)
-- Mike Chen (Content Lead)  
+- Mike Chen (Content Lead)
 - Emma Rodriguez (Social Media Manager)
 - David Kim (Analytics Specialist)
 - Lisa Wang (Designer)
 
-Meeting uitnodiging maken met:
-- Titel: "Q2 Campagneresultaten Bespreking"
-- Tijd: Dinsdag 21 oktober 2025 om 14:00 - 15:00
-- Locatie: Vergaderruimte B (gereserveerd)
-- Deelnemers: Alle 5 marketingteamleden
+Uitnodiging aanmaken met:
+- Titel: "Bespreking Q2-campagneresultaten"
+- Tijd: dinsdag 14:00 - 15:00
+- Deelnemers: alle 5 marketingteamleden
 
-✓ Meeting ingepland en uitnodigingen verzonden.
-✓ Vergaderruimte gereserveerd.
+✓ Meeting ingepland en uitnodigingen verstuurd.
 ✓ Agenda bijgewerkt.
 
-Is er nog iets anders dat je wilt toevoegen aan de meeting?
+Wil je nog iets toevoegen aan de meeting?
 ```
 
 <Check>
-Met verbindingen krijgt WonkaChat toegang tot je echte agenda, identificeert teamleden, controleert kamerbeschikbaarheid en voltooit de hele taak automatisch.
+Met verbindingen krijgt WonkaChat toegang tot je echte agenda, herkent het teamleden en voltooit het de hele taak automatisch.
 </Check>
 
 </Tab>
 </Tabs>
 
-Dit voorbeeld toont hoe het verbinden van je zakelijke tools WonkaChat in staat stelt om van advies geven naar echte acties ondernemen met je werkelijke bedrijfsdata te gaan.
+Dit voorbeeld toont hoe het verbinden van je zakelijke tools WonkaChat laat evolueren van advies geven naar echte acties uitvoeren met je werkelijke bedrijfsdata.
 
 ---
 
 ## Beschikbare Externe Verbindingen (MCP)
 
-WonkaChat ondersteunt MCP verbindingen met **40+ zakelijke tools** over alle belangrijke categorieën. Hier zijn alle momenteel beschikbare verbindingen:
+WonkaChat ondersteunt MCP-verbindingen met tientallen zakelijke tools, verspreid over alle belangrijke categorieën.
 
 <AccordionGroup>
-<Accordion title="Microsoft 365 & Productiviteit" icon="microsoft">
-Verbind je Microsoft tools voor uitgebreide kantoorproductiviteit.
-
-**Beschikbare Verbindingen:**
-- Outlook Mail (e-mail)
-- Outlook Calendar (planning)
-- Microsoft Teams (communicatie)
-- OneDrive (opslag)
-- Excel (spreadsheets)
-- Word (documenten)
-</Accordion>
-
-<Accordion title="Google Workspace" icon="google">
-Integreer met Google's suite van productiviteits- en samenwerkingstools.
-
-**Beschikbare Verbindingen:**
-- Gmail (e-mail)
-- Google Calendar (planning)
-- Google Drive (opslag)
-- Google Docs (documenten)
-- Google Sheets (spreadsheets)
-</Accordion>
-
-<Accordion title="Projectmanagement & Samenwerking" icon="list-check">
-Verbind je projectmanagement en teamsamenwerking platforms.
-
-**Beschikbare Verbindingen:**
-- Asana (projectmanagement)
-- ClickUp (productiviteit)
-- Jira (issue tracking)
-- Linear (projectmanagement)
-- Monday (werkbeheer)
-- Notion (kennisbank)
-- Confluence (documentatie)
-</Accordion>
-
 <Accordion title="CRM & Sales" icon="handshake">
-Integreer met customer relationship management en verkoopplatforms.
-
-**Beschikbare Verbindingen:**
-- Salesforce (CRM)
-- HubSpot (CRM & marketing)
-- Attio (CRM)
-- Close (sales CRM)
-- Klaviyo (marketing automatisering)
+Salesforce, HubSpot, Attio, Close, Dynamics 365
 </Accordion>
 
-<Accordion title="Ontwikkeling & Engineering" icon="code">
-Verbind je ontwikkelingstools, repositories en deployment platforms.
-
-**Beschikbare Verbindingen:**
-- GitHub (version control)
-- GitLab (version control)
-- Vercel (deployment)
-- Supabase (database)
+<Accordion title="Productiviteit & Documenten" icon="file-lines">
+Airtable, Asana, Box, ClickUp, Confluence, Google Docs, Google Sheets, Google Drive, Notion, OneDrive, OneNote, SharePoint, monday.com, Canva, Figma
 </Accordion>
 
-<Accordion title="Communicatie & Planning" icon="comments">
-Integreer messaging en planningstools voor naadloze communicatie.
-
-**Beschikbare Verbindingen:**
-- Slack (team messaging)
-- Cal.com (planning)
-- LinkedIn (professioneel netwerken)
+<Accordion title="Communicatie" icon="comments">
+Slack, Microsoft Teams, Gmail, Outlook Mail, LinkedIn
 </Accordion>
 
-<Accordion title="Opslag & Databases" icon="database">
-Verbind bestandsopslag en databeheer platforms.
-
-**Beschikbare Verbindingen:**
-- Airtable (database)
-- Box (opslag)
-- Fathom (analytics)
+<Accordion title="Agenda & Meetings" icon="calendar">
+Google Calendar, Outlook Calendar, Cal.com, Fathom, Leexi
 </Accordion>
 
-<Accordion title="Design & Gespecialiseerde Tools" icon="palette">
-Integreer design en gespecialiseerde zakelijke tools.
+<Accordion title="Ontwikkeltools" icon="code">
+GitHub, GitLab, Vercel, Supabase, Jira, Linear
+</Accordion>
 
-**Beschikbare Verbindingen:**
-- Figma (design)
-- Odoo (ERP)
+<Accordion title="Marketing & Analytics" icon="chart-line">
+Google Ads, Google Analytics, Klaviyo, Mailchimp
+</Accordion>
+
+<Accordion title="Business & ERP" icon="building">
+Odoo
 </Accordion>
 </AccordionGroup>
 
 <Info>
-Heb je een verbinding nodig die niet vermeld staat? [Neem contact op met ons supportteam](/support-resources/getting-help) om nieuwe MCP integraties aan te vragen. We breiden onze verbindingsbibliotheek voortdurend uit op basis van gebruikersbehoeften.
+Deze lijst geeft de connectoren weer die beschikbaar waren op het moment van schrijven. De lijst in de app (**Aanpassen → Connectoren**) is de referentie. Mis je een connector? [Neem contact op met ons supportteam](/nl/support-resources/getting-help) om die aan te vragen.
 </Info>
 
 </Tab>
@@ -249,24 +192,24 @@ Heb je een verbinding nodig die niet vermeld staat? [Neem contact op met ons sup
 
 ## Het Model Context Protocol (MCP) Begrijpen
 
-WonkaChat gebruikt het **Model Context Protocol (MCP)** om AI-modellen te verbinden met je zakelijke tools, databases en software, waardoor AI toegang kan krijgen tot echte informatie en acties namens jou kan uitvoeren.
+WonkaChat gebruikt het **Model Context Protocol (MCP)** om AI-modellen te verbinden met je zakelijke tools, databases en software, zodat AI toegang krijgt tot echte informatie en namens jou acties kan uitvoeren.
 
 <Info>
-MCP is een open protocol dat AI-systemen in staat stelt om op uniforme wijze te communiceren met externe databronnen en software.
+MCP is een open protocol waarmee AI-systemen op een uniforme manier kunnen communiceren met externe databronnen en software.
 
-Zie het als een universele connector (zoals USB voor AI-systemen) die verschillende AI-modellen en softwaretools naadloos laat samenwerken zonder aangepaste integraties voor elke combinatie.
+Zie het als een universele connector (zoals USB voor AI-systemen) waarmee verschillende AI-modellen en softwaretools naadloos samenwerken, zonder aangepaste integraties per combinatie.
 </Info>
 
 ### Hoe MCP Werkt
 
-In plaats van aangepaste connectors te bouwen voor elk AI- en databron-paar, stelt MCP alle AI-clients en databronnen in staat om via één enkele integratie verbonden te worden.
+In plaats van voor elk AI- en databron-paar een aparte connector te bouwen, laat MCP alle AI-clients en databronnen via één enkele integratie verbinden.
 
-<Frame caption="Voor en na MCP - van gefragmenteerde verbindingen naar verenigd protocol">
+<Frame caption="Voor en na MCP: van versnipperde verbindingen naar één protocol">
 <img className="block dark:hidden" src="../../images/mcp-simple.png" alt="MCP vereenvoudigt verbindingen tussen AI-modellen en zakelijke tools" />
 <img className="hidden dark:block" src="../../images/black-mcp-simple.png" alt="MCP vereenvoudigt verbindingen tussen AI-modellen en zakelijke tools" />
 </Frame>
 
-**In eenvoudige bewoordingen:** De AI Client (WonkaChat) verstuurt gestructureerde verzoeken via MCP. De MCP Server communiceert met je onderliggende systemen (Outlook, GitHub, Odoo, etc.) en stuurt een gestructureerde reactie terug.
+**Eenvoudig gezegd:** de AI-client (WonkaChat) stuurt gestructureerde verzoeken via MCP. De MCP-server communiceert met je onderliggende systemen (Outlook, GitHub, Odoo, enz.) en stuurt een gestructureerd antwoord terug.
 
 ---
 
@@ -278,117 +221,114 @@ In plaats van aangepaste connectors te bouwen voor elk AI- en databron-paar, ste
 </Frame>
 
 <Warning>
-Een van de grootste zorgen rond AI is hoe het toegang krijgt tot en gevoelige data gebruikt.
+Een van de grootste zorgen rond AI is hoe het toegang krijgt tot gevoelige data en die gebruikt.
 </Warning>
 
-**MCP pakt dit aan door te fungeren als beveiligingscheckpoint voor al je AI-systemen**, elke data-interactie volgen en bedrijfsbeleid afdwingen. Zie het als een gedetailleerd logboek van wie toegang heeft tot wat, wanneer en waarom, wat essentieel is voor regulatory compliance.
+**MCP pakt dit aan door te fungeren als een beveiligingscheckpoint voor al je AI-systemen**, waarbij elke data-interactie wordt bijgehouden en bedrijfsbeleid wordt afgedwongen. Zie het als een gedetailleerd logboek van wie wat, wanneer en waarom heeft geraadpleegd, essentieel voor regelgevingsconformiteit.
 
 ### Hoe MCP Je Data Beschermt
 
 <AccordionGroup>
 <Accordion title="Centrale Beveiligingslaag" icon="shield-halved">
-MCP introduceert een centrale laag waardoor alle AI-interacties worden geleid. Dit biedt **consistentie in beveiligingsbeleid**, waardoor bedrijven authenticatie, autorisatie en datamaskering kunnen afdwingen op protocolniveau.
+MCP introduceert een centrale laag waarlangs alle AI-interacties verlopen. Dit zorgt voor **consistent beveiligingsbeleid**, waardoor bedrijven authenticatie, autorisatie en datamaskering kunnen afdwingen op protocolniveau.
 
-Al je AI-tools maken verbinding via één veilige gateway, in plaats van afzonderlijke beveiligingsimplementaties te hebben voor elke verbinding.
+Al je AI-tools verbinden via één veilige gateway, in plaats van via afzonderlijke beveiligingsimplementaties per verbinding.
 </Accordion>
 
-<Accordion title="Gecontroleerd AI Gedrag" icon="gavel">
-MCP lijnt AI-gedrag uit met intern bedrijfsbeleid. Omdat alle mogelijkheden worden blootgesteld en beheerd via de MCP server, kunnen bedrijven exact definiëren **wat een AI-systeem mag doen** en niets meer.
+<Accordion title="Gecontroleerd AI-Gedrag" icon="gavel">
+MCP stemt AI-gedrag af op intern bedrijfsbeleid. Omdat alle mogelijkheden worden blootgesteld en beheerd via de MCP-server, kunnen bedrijven exact bepalen **wat een AI-systeem mag doen**, en niets meer.
 
-AI-systemen **kunnen geen toegang krijgen tot gevoelige data** of acties triggeren die ze niet expliciet zijn verleend. Elke permissie wordt gecontroleerd en is controleerbaar.
+AI-systemen **kunnen geen gevoelige data raadplegen** of acties triggeren die niet expliciet zijn toegestaan. Elke toestemming is gecontroleerd en controleerbaar. Beheerders kunnen bovendien beperken welke connectoren en acties beschikbaar zijn via [tool policies](/nl/administration/groups-and-tool-policies).
 </Accordion>
 
 <Accordion title="Volledig Audit Trail" icon="clipboard-list">
 Elke interactie via MCP wordt gelogd:
-- **Wie** toegang had tot de data (gebruikersidentiteit)
-- **Wat** voor data werd toegankelijk gemaakt (resources, acties)
-- **Wanneer** het gebeurde (timestamps)
+- **Wie** de data heeft geraadpleegd (gebruikersidentiteit)
+- **Welke** data werd geraadpleegd (resources, acties)
+- **Wanneer** het gebeurde (tijdstempels)
 - **Waarom** het nodig was (context, verzoekdetails)
 
-Deze gedetailleerde logging is essentieel voor regulatory compliance en beveiligingsaudits.
+Deze gedetailleerde logging is essentieel voor regelgevingsconformiteit en beveiligingsaudits.
 </Accordion>
 </AccordionGroup>
 
 ---
 
-## MCP Architectuur Overzicht
+## MCP-Architectuur in Vogelvlucht
 
-Het Model Context Protocol is een open standaard ontwikkeld door [Anthropic](https://www.anthropic.com/news/model-context-protocol) die veilige, tweerichtingsverbindingen mogelijk maakt tussen AI-applicaties en externe databronnen.
+Het Model Context Protocol is een open standaard, ontwikkeld door [Anthropic](https://www.anthropic.com/news/model-context-protocol), die veilige, tweerichtingsverbindingen mogelijk maakt tussen AI-toepassingen en externe databronnen.
 
 <Info>
-WonkaChat implementeert MCP als client, verbindend met MCP servers die je zakelijke tools en data blootstellen aan de AI-modellen. Leer meer op [modelcontextprotocol.io](https://modelcontextprotocol.io).
+WonkaChat implementeert MCP als client en verbindt met MCP-servers die je zakelijke tools en data beschikbaar stellen aan de AI-modellen. Meer info op [modelcontextprotocol.io](https://modelcontextprotocol.io).
 </Info>
 
 ### Technische Implementatie
 
-MCP gebruikt een **client-server architectuur** waarbij WonkaChat fungeert als de MCP Client, verbindend met MCP Servers die integreren met je zakelijke tools:
+MCP gebruikt een **client-server-architectuur** waarbij WonkaChat optreedt als MCP-client en verbindt met MCP-servers die integreren met je zakelijke tools:
 
-<Frame caption="WonkaChat verbindt met meerdere MCP servers voor verschillende soorten systemen">
-<img className="block dark:hidden" src="../../images/wc-mcp.png" alt="WonkaChat MCP architectuur diagram" />
-<img className="hidden dark:block" src="../../images/black-wc-mcp.png" alt="WonkaChat MCP architectuur diagram" />
+<Frame caption="WonkaChat verbindt met meerdere MCP-servers voor verschillende soorten systemen">
+<img className="block dark:hidden" src="../../images/wc-mcp.png" alt="Architectuurdiagram van WonkaChat MCP" />
+<img className="hidden dark:block" src="../../images/black-wc-mcp.png" alt="Architectuurdiagram van WonkaChat MCP" />
 </Frame>
 
+**Architectuurstroom:**
+- **WonkaChat (MCP-client)** stuurt gestructureerde verzoeken en beheert authenticatie
+- **MCP-server** fungeert als integratielaag en verbindt met externe systemen
+- **Externe systemen** (Outlook, Odoo, Salesforce, enz.) leveren data via hun eigen API's
+- Alle antwoorden lopen via hetzelfde beveiligde kanaal terug
 
-**Architectuur Flow:**
-- **WonkaChat (MCP Client)** verstuurt gestructureerde verzoeken en beheert authenticatie
-- **MCP Server** fungeert als integratielaag, verbindend met externe systemen
-- **Externe Systemen** (Outlook, Odoo, Salesforce, etc.) leveren data via hun API's
-- Alle reacties stromen terug via hetzelfde veilige kanaal
-
-**Belangrijkste Technische Voordelen:**
-- JSON-RPC gebaseerd communicatieprotocol
-- Capability negotiation tijdens initialisatie
-- Duidelijke beveiligingsgrenzen via client-host-server architectuur
-- Gebruikerstoestemmingsmechanismen voor AI-interacties
+**Belangrijkste technische voordelen:**
+- Communicatieprotocol op basis van JSON-RPC
+- Onderhandeling van mogelijkheden tijdens initialisatie
+- Duidelijke beveiligingsgrenzen via een client-host-server-architectuur
+- Toestemmingsmechanismen voor AI-interacties
 
 ### Beveiligingsimplementatie
 
 WonkaChat implementeert MCP met enterprise-grade beveiligingsfuncties die voortbouwen op de basis van het protocol:
 
 <AccordionGroup>
-<Accordion title="MCP Protocol Beveiliging" icon="shield">
-**Ingebouwd in het Protocol:**
-- **Gebruikerstoestemming**: Alle AI-acties vereisen expliciete gebruikersautorisatie ([MCP Best Practices](https://modelcontextprotocol.io/specification/draft/basic/security_best_practices))
-- **Capability Negotiation**: Clients en servers komen overeen over beschikbare functies tijdens initialisatie
-- **Token Validatie**: Servers accepteren alleen tokens die expliciet voor hen zijn uitgegeven (OAuth 2.1 framework)
-- **Sessiebeheer**: Veilig sessiebeheer om hijacking en impersonatie te voorkomen
-- **Beveiligingsgrenzen**: Client-host-server architectuur met duidelijke isolatie
+<Accordion title="Beveiliging van het MCP-Protocol" icon="shield">
+**Ingebouwd in het protocol:**
+- **Gebruikerstoestemming**: elke AI-actie vereist expliciete toestemming van de gebruiker ([MCP Best Practices](https://modelcontextprotocol.io/specification/draft/basic/security_best_practices))
+- **Onderhandeling van mogelijkheden**: clients en servers spreken tijdens initialisatie af welke functies beschikbaar zijn
+- **Tokenvalidatie**: servers accepteren alleen tokens die expliciet voor hen zijn uitgegeven (OAuth 2.1-framework)
+- **Sessiebeheer**: veilig sessiebeheer om hijacking en identiteitsdiefstal te voorkomen
+- **Beveiligingsgrenzen**: client-host-server-architectuur met duidelijke afscherming
 
 **Aanbevolen door MCP:**
-- Input validatie en sanitatie voor alle parameters
-- Rate limiting en misbruikmonitoring
-- Veilig transport (TLS encryptie) voor alle verbindingen
+- Invoervalidatie en -opschoning voor alle parameters
+- Rate limiting en monitoring van misbruik
+- Beveiligd transport (TLS-encryptie) voor alle verbindingen
 </Accordion>
 
-<Accordion title="WonkaChat's Implementatie" icon="lock">
-**Authenticatie & Toegangscontrole:**
-- OAuth 2.0 voor third-party services (Google, Microsoft, Salesforce)
-- API key authenticatie voor ontwikkeltools
-- Token encryptie at rest (AES-256) met automatische refresh
-- Per-gebruiker token opslag met volledige isolatie
-- Gebruikers erven alleen hun bestaande platformpermissies
+<Accordion title="Implementatie van WonkaChat" icon="lock">
+**Authenticatie & toegangscontrole:**
+- OAuth 2.0 voor externe diensten (Google, Microsoft, Salesforce en meer)
+- API-sleutel-authenticatie voor ontwikkeltools
+- Tokenversleuteling in rust (AES-256) met automatische vernieuwing
+- Opslag van tokens per gebruiker, volledig geïsoleerd
+- Gebruikers erven alleen hun bestaande platformrechten
 
-**Enterprise Beveiliging:**
-- Role-Based Access Control (RBAC) op organisatieniveau
-- Gecentraliseerd beveiligingsbeleid over alle MCP verbindingen
-- Verbinding timeouts en resource bescherming
-- Multi-region deployment met veilige failover
+**Enterprise-beveiliging:**
+- Rolgebaseerde toegangscontrole (RBAC) op organisatieniveau
+- Gecentraliseerd beveiligingsbeleid voor alle MCP-verbindingen
+- Verbindingstime-outs en resourcebescherming
 </Accordion>
 
 <Accordion title="Audit & Compliance" icon="clipboard-list">
-**WonkaChat's Audit Trail:**
+**Audit trail van WonkaChat:**
 <Info>
-Gedetailleerde audit en compliance functiedocumentatie komt binnenkort.
+Documentatie over gedetailleerde audit- en compliancefuncties volgt binnenkort.
 
-Dit zijn WonkaChat implementatiefuncties, niet ingebouwd in het MCP protocol zelf.
+Dit zijn functies van de WonkaChat-implementatie, niet standaard ingebouwd in het MCP-protocol zelf.
 </Info>
 </Accordion>
 </AccordionGroup>
 
 <Tip>
-Als je specifieke vereisten of unieke behoeften hebt voor MCP integraties, neem dan contact op met ons supportteam. We zijn er om te helpen verbindingen uit te breiden of aan te passen aan je workflows.
+Heb je specifieke vereisten of unieke behoeften voor MCP-integraties? Neem contact op met ons supportteam. We helpen je graag verbindingen uit te breiden of af te stemmen op je workflows.
 </Tip>
-
 
 </Tab>
 </Tabs>
