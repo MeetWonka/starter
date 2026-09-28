@@ -1,0 +1,116 @@
+---
+title: "Choisir un modèle"
+description: "Comprenez les tailles de modèles, le Routeur, les modes Fast et Pro, et comment choisir le bon pour votre tâche."
+---
+
+WonkaChat vous donne accès à plusieurs modèles IA sans vous demander de devenir expert en noms de modèles. Utilisez le sélecteur de modèle au-dessus de la zone de message pour choisir comment l'IA doit aborder votre tâche.
+
+<Info>
+Les modèles disponibles dépendent de la configuration de votre organisation. Si un modèle ou un mode décrit ici n'apparaît pas chez vous, contactez votre administrateur.
+</Info>
+
+## Le sélecteur de modèle
+
+Cliquez sur le nom du modèle au-dessus de la zone de message pour ouvrir le sélecteur. Vous pouvez alors :
+
+- Basculer entre les modes **Fast** et **Pro**
+- Choisir directement une taille de modèle précise
+- Laisser le **Routeur** choisir automatiquement
+
+<Tip>
+Vous pouvez changer de modèle en cours de conversation. Cela n'efface pas l'historique : le modèle nouvellement sélectionné poursuit simplement la conversation là où le précédent s'est arrêté.
+</Tip>
+
+---
+
+## Les tailles de modèles
+
+Plutôt que de suivre des noms de modèles individuels, raisonnez en termes de taille et de capacité :
+
+<CardGroup cols={2}>
+<Card title="Fast" icon="bolt">
+Léger et rapide. Idéal pour les demandes simples et à fort volume : questions rapides, résumés courts, mise en forme. Pas conçu pour le raisonnement approfondi ni l'usage d'outils complexes.
+</Card>
+
+<Card title="Standard" icon="scale-balanced">
+Un équilibre entre vitesse et raisonnement. Un bon choix par défaut pour le travail professionnel quotidien, y compris la plupart des conversations utilisant des connecteurs et des outils.
+</Card>
+
+<Card title="Raisonnement avancé" icon="brain">
+L'analyse la plus poussée disponible. Idéal pour les problèmes complexes en plusieurs étapes, la planification stratégique et les tâches combinant raisonnement et plusieurs outils externes.
+</Card>
+</CardGroup>
+
+<Warning>
+Les modèles Fast n'ont pas de capacités de raisonnement et ne conviennent pas à un usage système (ERP, CRM, et outils similaires). Utilisez un modèle standard ou à raisonnement avancé pour ce type de travail.
+</Warning>
+
+---
+
+## Le Routeur : laissez WonkaChat choisir
+
+Si vous préférez ne pas choisir vous-même une taille de modèle, sélectionnez le **Routeur** dans le sélecteur de modèle. Il analyse votre demande et la dirige automatiquement vers un modèle adapté à la tâche, en équilibrant qualité, vitesse et coût.
+
+<Tip>
+Le Routeur est un bon choix par défaut si la complexité de vos demandes varie d'un message à l'autre : il s'adapte automatiquement, sans que vous ayez à changer de modèle vous-même.
+</Tip>
+
+Si votre organisation l'autorise, vous pouvez ajuster le comportement du Routeur dans **Paramètres → Général** en choisissant un préréglage, par exemple orienté performance, orienté coût, ou équilibré.
+
+---
+
+## Les modes Fast et Pro
+
+En plus des tailles de modèles individuelles, WonkaChat propose deux modes prêts à l'emploi :
+
+<CardGroup cols={2}>
+<Card title="Mode Fast" icon="gauge-high">
+Adapté au travail généraliste. N'a pas de capacités de raisonnement — ne convient pas à un usage système (ERP, CRM, et outils similaires).
+</Card>
+
+<Card title="Mode Pro" icon="wand-magic-sparkles">
+Adapté aux tâches complexes et au raisonnement, y compris l'usage système (ERP, CRM, et outils similaires).
+</Card>
+</CardGroup>
+
+Basculez entre ces modes depuis le sélecteur de modèle à tout moment, selon les besoins du message en cours.
+
+---
+
+## Régions des modèles
+
+Chaque modèle du sélecteur affiche un badge de région. Les modèles sont fournis via différents fournisseurs : la plupart s'exécutent dans l'UE, mais certains s'exécutent aux États-Unis ou de façon globale, selon le fournisseur. Vérifiez le badge avant d'utiliser un modèle pour des données sensibles, et demandez à votre administrateur si votre organisation restreint les régions autorisées.
+
+Pour une vue complète sur le traitement des données et les certifications, consultez [Sécurité et gouvernance](/fr/security-governance/security-overview).
+
+---
+
+## Choix du modèle pour les agents
+
+Lorsque vous créez ou modifiez un [agent](/fr/ai-agents/introduction), vous choisissez son modèle indépendamment de celui de votre propre conversation. Vous pouvez ainsi, par exemple, donner à un agent de support client un modèle rapide pour des réponses immédiates, tout en conservant un modèle à raisonnement avancé pour un agent dédié à la recherche approfondie.
+
+<Tip>
+Si un agent se comporte de façon incohérente ou semble avoir du mal avec une tâche, vérifiez d'abord quel modèle il utilise avant de supposer que le prompt lui-même doit être retravaillé.
+</Tip>
+
+---
+
+## Choisir la bonne approche
+
+<AccordionGroup>
+<Accordion title="Je ne sais pas ce dont j'ai besoin">
+Commencez avec le **Routeur**. C'est exactement fait pour ça : vous décrivez la tâche, il choisit un modèle adapté.
+</Accordion>
+
+<Accordion title="J'ai besoin d'une réponse rapide à quelque chose de simple">
+Utilisez le mode **Fast** ou un modèle rapide. Les questions rapides, les résumés courts et la mise en forme légère n'exigent pas de raisonnement approfondi.
+</Accordion>
+
+<Accordion title="Je travaille avec un système métier connecté">
+Utilisez le mode **Pro** ou un modèle standard/à raisonnement avancé. L'usage système (ERP, CRM, et outils similaires) demande des capacités de raisonnement que les modèles Fast n'ont pas.
+</Accordion>
+
+<Accordion title="Je fais une analyse complexe en plusieurs étapes">
+Utilisez un modèle à raisonnement avancé. Il est conçu pour les tâches les plus exigeantes.
+</Accordion>
+</AccordionGroup>

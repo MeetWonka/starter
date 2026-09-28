@@ -1,0 +1,39 @@
+---
+title: "Auditlog"
+description: "Volg toegangswijzigingen in uw organisatie, en bekijk agent-activiteit als uw organisatie dit heeft ingeschakeld."
+---
+
+## RBAC-auditlog
+
+<Note>
+Instellingen → Organisatie → Beveiliging → RBAC-auditlogboek. Zichtbaar voor beheerders die beveiliging mogen beheren.
+</Note>
+
+Het RBAC-auditlog registreert elke toegangswijziging in uw organisatie — wie wat wijzigde, en wanneer: connectorbeleidsregels (toegevoegd, verwijderd, of in bulk toegepast), groepen (aangemaakt, verwijderd, leden toegevoegd of verwijderd), en updates van rolpermissies.
+
+Elke vermelding toont de **tijd**, de **actor** (of **Systeem** voor geautomatiseerde wijzigingen), de **actie** (bijvoorbeeld *Toestemmingsregel toegevoegd* of *Lid verwijderd*), de betrokken **entiteit** en het **type** (Groep, Groepslidmaatschap, MCP-server, Rolpermissie, Connectorbeleid), het **doel**, en een optionele **reden**.
+
+Filter op entiteitstype, actie, of een datumbereik (**Van** / **Tot**), en gebruik **Filters wissen** om te resetten. Als het log niet laadt, probeer het opnieuw vanaf dezelfde pagina.
+
+<Tip>
+Bekijk het auditlog regelmatig op onverwachte permissie- of connectortoegangswijzigingen — vooral na het onboarden van een nieuwe beheerder.
+</Tip>
+
+## Agent-audit
+
+<Note>
+Alleen zichtbaar wanneer uw organisatie **Audit uw agent** heeft ingeschakeld voor een bepaalde agent, en de organisatiefunctie **Agent-audit**. Vraag uw beheerder als u dit niet ziet.
+</Note>
+
+Wanneer dit is ingeschakeld voor een agent, kunnen de eigenaar van de agent (of beheerders/eigenaar van de organisatie) de activiteit ervan bekijken via **Instellingen → Agent Statistieken** of het eigen auditpaneel van de agent:
+
+- **Audit - Bekijk gesprekken**: bekijk gespreksinhoud die de agent verwerkte, indien ingeschakeld.
+- **Audit - Bekijk tool-aanroepen**: bekijk de tool-aanroepen en hun argumenten/resultaten die de agent uitvoerde, indien ingeschakeld.
+
+Om **Bekijk tool-aanroepen** of **Bekijk gesprekken** in te schakelen, moet eerst **Audit uw agent** voor die agent zijn ingeschakeld; **Audit uw agent** uitschakelen schakelt ook deze twee opties uit.
+
+De auditweergave toont per gesprek: datum, titel, tokens, kosten, en aantal berichten/tool-aanroepen, met de mogelijkheid om een gesprek te openen voor detail (argumenten en resultaat van elke tool-aanroep, als die subpermissie is ingeschakeld).
+
+<Warning>
+Auditgegevens kunnen echte gespreksinhoud en tool-in-/uitvoer bevatten. Beperk **Audit - Bekijk gesprekken** en **Audit - Bekijk tool-aanroepen** tot de mensen die dit nodig hebben voor toezicht.
+</Warning>

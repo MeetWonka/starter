@@ -1,21 +1,21 @@
 ---
 title: "External Connections"
-description: "Connect WonkaChat to your softwares, business tools and data sources to access real information and take actions on your behalf."
+description: "Connect WonkaChat to your software, business tools, and data sources to access real information and take actions on your behalf."
 ---
 
 WonkaChat can connect to your business tools, databases, and software, enabling you to access real information and take actions through natural conversation. These are called **Connectors** or **MCP connections** for more technical people.
 
 <Info>
-Want to understand the technical details of how these connections work? 
+Want to understand the technical details of how these connections work?
 [Jump to Technical Details](#technical-details) to learn about the Model Context Protocol (MCP) that powers these integrations.
 </Info>
 
 <Tabs>
 <Tab title="Getting Started">
 
-## What External connection Enables
+## What External Connections Enable
 
-Connecting your external softwares and data sources transforms WonkaChat from a standalone AI assistant into a connected system that can work with your actual data and workflows. Instead of just answering general questions, WonkaChat can access your real emails, manage your calendar, update your CRM, create documents in your systems, and coordinate actions across multiple platforms, all through natural conversation.
+Connecting your external software and data sources transforms WonkaChat from a standalone AI assistant into a connected system that can work with your actual data and workflows. Instead of just answering general questions, WonkaChat can access your real emails, manage your calendar, update your CRM, create documents in your systems, and coordinate actions across multiple platforms, all through natural conversation.
 
 ### Real-World Capabilities
 
@@ -41,14 +41,14 @@ Access live data from your systems rather than relying on static knowledge or ma
 
 <Steps>
 <Step title="Start a connection">
-Go to the settings and connect to the tool (like Outlook, Gmail, or Slack) by providing your credentials. Then add it to your chat.
+Go to **Customize → Connectors** and connect to the tool you want (like Outlook, Gmail, or Slack) by providing your credentials. Then enable it for your chat from the **Connectors** button under the message box.
 
-<Frame caption="Outlook Mail button location">
-<img src="../../images/full-co.gif" alt="Outlook Mail button" />
+<Frame caption="Connectors button under the chat input">
+<img src="../../images/full-co.gif" alt="Connectors button under the chat input" />
 </Frame>
 
 <Info>
-These external connections are called "MCP" (Model Context Protocol). 
+These external connections are called "MCP" (Model Context Protocol).
 
 While **you don't need to understand the technical details to use them**, you can learn more in the [Technical Details](#technical-details) section if you're curious.
 </Info>
@@ -89,8 +89,8 @@ Connecting your business tools dramatically changes what WonkaChat can accomplis
 
 **WonkaChat's response (limited):**
 ```
-I can help you draft a meeting invitation, but I cannot access your calendar 
-or email system to actually schedule the meeting. 
+I can help you draft a meeting invitation, but I cannot access your calendar
+or email system to actually schedule the meeting.
 
 Here's what I suggest:
 1. Check your calendar for availability on Tuesday at 2 PM
@@ -121,26 +121,24 @@ Checking your calendar... Tuesday at 2 PM is available.
 
 Looking up "marketing team" members... Found 5 team members:
 - Sarah Johnson (Marketing Director)
-- Mike Chen (Content Lead)  
+- Mike Chen (Content Lead)
 - Emma Rodriguez (Social Media Manager)
 - David Kim (Analytics Specialist)
 - Lisa Wang (Designer)
 
 Creating meeting invite with:
 - Title: "Q2 Campaign Results Discussion"
-- Time: Tuesday, October 21, 2025 at 2:00 PM - 3:00 PM
-- Location: Conference Room B (reserved)
+- Time: Tuesday, 2:00 PM - 3:00 PM
 - Attendees: All 5 marketing team members
 
 ✓ Meeting scheduled and invitations sent.
-✓ Conference room reserved.
 ✓ Calendar updated.
 
 Is there anything else you'd like me to add to the meeting?
 ```
 
 <Check>
-With connections, WonkaChat accesses your real calendar, identifies team members, checks room availability, and completes the entire task automatically.
+With connections, WonkaChat accesses your real calendar, identifies team members, and completes the entire task automatically.
 </Check>
 
 </Tab>
@@ -152,95 +150,40 @@ This example shows how connecting your business tools enables WonkaChat to move 
 
 ## Available External Connections (MCP)
 
-WonkaChat supports MCP connections to **40+ business tools** across all major categories. Here are all the currently available connections:
+WonkaChat supports MCP connections to dozens of business tools across all major categories.
 
 <AccordionGroup>
-<Accordion title="Microsoft 365 & Productivity" icon="microsoft">
-Connect your Microsoft tools for comprehensive office productivity.
-
-**Available Connections:**
-- Outlook Mail (email)
-- Outlook Calendar (scheduling)
-- Microsoft Teams (communication)
-- OneDrive (storage)
-- Excel (spreadsheets)
-- Word (documents)
-</Accordion>
-
-<Accordion title="Google Workspace" icon="google">
-Integrate with Google's suite of productivity and collaboration tools.
-
-**Available Connections:**
-- Gmail (email)
-- Google Calendar (scheduling)
-- Google Drive (storage)
-- Google Docs (documents)
-- Google Sheets (spreadsheets)
-</Accordion>
-
-<Accordion title="Project Management & Collaboration" icon="list-check">
-Connect your project management and team collaboration platforms.
-
-**Available Connections:**
-- Asana (project management)
-- ClickUp (productivity)
-- Jira (issue tracking)
-- Linear (project management)
-- Monday (work management)
-- Notion (knowledge base)
-- Confluence (documentation)
-</Accordion>
-
 <Accordion title="CRM & Sales" icon="handshake">
-Integrate with customer relationship management and sales platforms.
-
-**Available Connections:**
-- Salesforce (CRM)
-- HubSpot (CRM & marketing)
-- Attio (CRM)
-- Close (sales CRM)
-- Klaviyo (marketing automation)
+Salesforce, HubSpot, Attio, Close, Dynamics 365
 </Accordion>
 
-<Accordion title="Development & Engineering" icon="code">
-Connect your development tools, repositories, and deployment platforms.
-
-**Available Connections:**
-- GitHub (version control)
-- GitLab (version control)
-- Vercel (deployment)
-- Supabase (database)
+<Accordion title="Productivity & Docs" icon="file-lines">
+Airtable, Asana, Box, ClickUp, Confluence, Google Docs, Google Sheets, Google Drive, Notion, OneDrive, OneNote, SharePoint, monday.com, Canva, Figma
 </Accordion>
 
-<Accordion title="Communication & Scheduling" icon="comments">
-Integrate messaging and scheduling tools for seamless communication.
-
-**Available Connections:**
-- Slack (team messaging)
-- Cal.com (scheduling)
-- LinkedIn (professional networking)
+<Accordion title="Communication" icon="comments">
+Slack, Microsoft Teams, Gmail, Outlook Mail, LinkedIn
 </Accordion>
 
-<Accordion title="Storage & Databases" icon="database">
-Connect file storage and data management platforms.
-
-**Available Connections:**
-- Airtable (database)
-- Box (storage)
-- Fathom (analytics)
+<Accordion title="Calendar & Meetings" icon="calendar">
+Google Calendar, Outlook Calendar, Cal.com, Fathom, Leexi
 </Accordion>
 
-<Accordion title="Design & Specialized Tools" icon="palette">
-Integrate design and specialized business tools.
+<Accordion title="Dev Tools" icon="code">
+GitHub, GitLab, Vercel, Supabase, Jira, Linear
+</Accordion>
 
-**Available Connections:**
-- Figma (design)
-- Odoo (ERP)
+<Accordion title="Marketing & Analytics" icon="chart-line">
+Google Ads, Google Analytics, Klaviyo, Mailchimp
+</Accordion>
+
+<Accordion title="Business & ERP" icon="building">
+Odoo
 </Accordion>
 </AccordionGroup>
 
 <Info>
-Need a connection that's not listed? [Contact our support team](/support-resources/getting-help) to request new MCP integrations. We're constantly expanding our connection library based on user needs.
+This list reflects connectors available at the time of writing. The list inside the app (**Customize → Connectors**) is the reference — need one that's not listed? [Contact our support team](/en/support-resources/getting-help) to request it.
 </Info>
 
 </Tab>
@@ -252,7 +195,7 @@ Need a connection that's not listed? [Contact our support team](/support-resourc
 WonkaChat uses the **Model Context Protocol (MCP)** to connect AI models with your business tools, databases, and software, enabling AI to access real information and take actions on your behalf.
 
 <Info>
-MCP is an open protocol that allows AI systems to communicate with external data sources and softwares in a uniform way. 
+MCP is an open protocol that allows AI systems to communicate with external data sources and software in a uniform way.
 
 Think of it as a universal connector (like USB for AI systems) that allows different AI models and software tools to work together seamlessly without custom integrations for each combination.
 </Info>
@@ -295,7 +238,7 @@ All your AI tools connect through one secure gateway, rather than having separat
 <Accordion title="Controlled AI Behavior" icon="gavel">
 MCP aligns AI behavior with internal business policies. Because all capabilities are exposed and managed through the MCP server, companies can define exactly **what an AI system is allowed to do** and nothing more.
 
-AI systems **can't access sensitive data** or trigger actions they haven't been explicitly granted. Every permission is controlled and auditable.
+AI systems **can't access sensitive data** or trigger actions they haven't been explicitly granted. Every permission is controlled and auditable. Admins can further restrict which connectors and actions are available through [tool policies](/en/administration/groups-and-tool-policies).
 </Accordion>
 
 <Accordion title="Complete Audit Trail" icon="clipboard-list">
@@ -327,7 +270,6 @@ MCP uses a **client-server architecture** where WonkaChat acts as the MCP Client
 <img className="block dark:hidden" src="../../images/wc-mcp.png" alt="WonkaChat MCP architecture diagram" />
 <img className="hidden dark:block" src="../../images/black-wc-mcp.png" alt="WonkaChat MCP architecture diagram" />
 </Frame>
-
 
 **Architecture Flow:**
 - **WonkaChat (MCP Client)** sends structured requests and manages authentication
@@ -362,7 +304,7 @@ WonkaChat implements MCP with enterprise-grade security features that build upon
 
 <Accordion title="WonkaChat's Implementation" icon="lock">
 **Authentication & Access Control:**
-- OAuth 2.0 for third-party services (Google, Microsoft, Salesforce)
+- OAuth 2.0 for third-party services (Google, Microsoft, Salesforce, and more)
 - API key authentication for developer tools
 - Token encryption at rest (AES-256) with automatic refresh
 - Per-user token storage with complete isolation
@@ -372,7 +314,6 @@ WonkaChat implements MCP with enterprise-grade security features that build upon
 - Role-Based Access Control (RBAC) at organizational level
 - Centralized security policies across all MCP connections
 - Connection timeouts and resource protection
-- Multi-region deployment with secure failover
 </Accordion>
 
 <Accordion title="Audit & Compliance" icon="clipboard-list">
@@ -388,7 +329,6 @@ These are WonkaChat implementation features, not built into the MCP protocol its
 <Tip>
 If you have specific requirements or unique needs for MCP integrations, reach out to our support team. We're here to help expand or tailor connections to fit your workflows.
 </Tip>
-
 
 </Tab>
 </Tabs>

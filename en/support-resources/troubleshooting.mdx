@@ -1,24 +1,54 @@
 ---
 title: "Troubleshooting"
-description: "Solutions for common issues, diagnostic steps, and performance problems."
+description: "Quick fixes for common issues, with links to fuller guides."
 ---
 
-<CardGroup cols={1}>
-<Card title="Comprehensive troubleshooting guide coming soon" icon="wrench">
-We're building a detailed troubleshooting section with step-by-step solutions, diagnostic tools, and common issue resolution guides to help you solve problems quickly.
-</Card>
-</CardGroup>
+Common problems and their quick fixes. For connector-specific issues, see the dedicated guide below.
 
-<Info>
-In the meantime, check out our [MCP Connection Troubleshooting](/tools-connection/troubleshooting-connections) guide and [FAQ](/support-resources/faq) for answers to common questions.
-</Info>
+<AccordionGroup>
+
+<Accordion title="Login or SSO problems" icon="key">
+If you can't sign in:
+- Confirm you're using the correct sign-in method (email/password, Google Workspace, Microsoft 365, or your organization's SSO).
+- Clear your browser cache and cookies, then try again.
+- If your organization uses SSO and sign-in fails or loops back to the login page, contact your administrator — the SSO configuration may need attention on their end.
+</Accordion>
+
+<Accordion title="Connector authentication errors" icon="plug">
+"Authentication failed," "permission denied," or a connector that won't stay connected are almost always fixed by disconnecting and reconnecting through Customize → Connectors, granting all requested permissions. See the full [Troubleshooting Connections](/en/tools-connection/troubleshooting-connections) guide for step-by-step fixes.
+</Accordion>
+
+<Accordion title="File upload limits" icon="file">
+There's a limit on how many files you can attach to a single message. If your upload is rejected, try attaching fewer files at once, or check with your administrator for your organization's exact limit.
+</Accordion>
+
+<Accordion title="Agent not visible or not shared with you" icon="robot">
+If you can't find an agent someone mentioned:
+- Check both the Agent Marketplace and "My Agents" — organization-wide agents and personal agents are listed separately.
+- The agent may not be shared with you yet. Ask the agent's owner or your administrator to share it with your organization or team.
+- See [Finding and Accessing Agents](/en/ai-agents/finding-and-accessing-agents) for details on how sharing and visibility work.
+</Accordion>
+
+<Accordion title="Model unavailable or region restricted" icon="globe">
+Models in the model selector show a region badge (for example, EU or US). If a model appears greyed out or unavailable, your administrator may have restricted which regions or models your organization can use. Contact your administrator to request access.
+</Accordion>
+
+<Accordion title="Agent API key errors" icon="key">
+If your organization has Agent API keys enabled, an invalid or expired key will cause API requests to fail with an authentication error. Verify the key is still active, and ask your administrator to generate a new one if needed. If you're not sure whether this feature is enabled for your organization, check with your administrator.
+</Accordion>
+
+</AccordionGroup>
+
+## Still stuck?
 
 <CardGroup cols={2}>
-<Card title="Connection Issues" icon="plug" href="/en/tools-connection/troubleshooting-connections">
-Solve problems with MCP connections and tool integrations.
+
+<Card title="Troubleshooting Connections" icon="plug" href="/en/tools-connection/troubleshooting-connections">
+Full walkthrough for connector and MCP connection issues.
 </Card>
 
-<Card title="Get Help" icon="life-ring" href="/en/support-resources/getting-help">
-Contact our support team for personalized assistance.
+<Card title="Getting Help" icon="life-ring" href="/en/support-resources/getting-help">
+Contact support with the details that get you a faster answer.
 </Card>
+
 </CardGroup>

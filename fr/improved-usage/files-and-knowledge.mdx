@@ -1,0 +1,108 @@
+---
+title: "Fichiers et connaissances"
+description: "Téléchargez des fichiers dans une conversation, laissez les agents les rechercher, et gérez ce que vous avez partagé."
+---
+
+Vous pouvez joindre des fichiers à n'importe quelle conversation pour qu'un agent les lise, les recherche ou les utilise directement. WonkaChat permet aussi aux agents de récupérer des fichiers directement depuis SharePoint et d'extraire le texte de documents scannés et d'images grâce à l'OCR.
+
+<Info>
+Les options de téléchargement disponibles dépendent de ce que votre organisation et l'agent avec lequel vous discutez ont activé. Si une option décrite ici est absente, contactez votre administrateur.
+</Info>
+
+---
+
+## Téléchargez un fichier dans une conversation
+
+<Steps>
+<Step title="Ouvrez le sélecteur de pièce jointe">
+Cliquez sur l'icône de pièce jointe dans la zone de message, ou déposez un fichier directement dans la fenêtre de conversation.
+</Step>
+<Step title="Choisissez la provenance du fichier">
+Choisissez le fichier sur votre ordinateur.
+</Step>
+<Step title="Choisissez comment l'agent doit l'utiliser">
+Si plusieurs options s'appliquent à votre fichier, WonkaChat vous demande comment le traiter :
+- **Télécharger pour la recherche dans un fichier** — indexer le contenu du fichier pour que l'agent puisse le rechercher (voir ci-dessous).
+- **Télécharger des fichiers** — joindre le fichier pour l'Interpréteur de Code, si l'agent l'a activé.
+- **Télécharger en tant que texte** — exécuter l'OCR sur le fichier et ajouter le texte extrait comme contexte.
+- **Téléverser une image** — pour les fichiers images, quand aucune autre option ne s'applique.
+</Step>
+</Steps>
+
+<Tip>
+Vous pouvez aussi téléverser un fichier directement dans la zone de message sans qu'on vous le demande — WonkaChat choisit l'option correspondant aux capacités de l'agent actuel.
+</Tip>
+
+## Télécharger pour la recherche dans un fichier (recherche de connaissances)
+
+**Télécharger pour la recherche dans un fichier** transforme un fichier en connaissance consultable pour la conversation. Plutôt que de charger l'intégralité du document dans le contexte de l'agent, WonkaChat l'indexe et permet à l'agent de le consulter selon ses besoins — plus adapté aux documents longs ou à plusieurs fichiers à la fois.
+
+Utilisez cette option lorsque vous voulez que l'agent réponde en s'appuyant sur un document précis (une politique, un contrat, un rapport) plutôt que sur des connaissances générales.
+
+<Note>
+Les créateurs d'agents peuvent aussi ajouter la recherche dans un fichier comme source de **Connaissances** permanente lors de la création d'un agent, afin que chaque conversation avec cet agent puisse rechercher dans les mêmes fichiers. Voir la section Connaissances du créateur d'agents.
+</Note>
+
+## OCR : lire le texte dans les images et les scans
+
+Choisir **Télécharger en tant que texte** exécute la reconnaissance optique de caractères (OCR) sur le fichier et ajoute le texte extrait à la conversation comme contexte. C'est le bon choix pour :
+- Les PDF scannés qui n'ont pas de couche de texte
+- Les photos de documents, de tableaux blancs ou de pages imprimées
+- Les captures d'écran contenant du texte que vous voulez que l'agent lise
+
+Le texte extrait est ajouté directement au contexte de l'agent, ce qui convient bien aux documents plus courts pour lesquels vous voulez disposer du texte intégral plutôt que le faire rechercher.
+
+## Fichiers depuis SharePoint
+
+Quand vous créez un agent, vous pouvez ajouter des fichiers à ses connaissances directement depuis SharePoint, sans les télécharger d'abord. Dans le créateur d'agent, ouvrez la section **Connaissances**, choisissez **From SharePoint**, puis parcourez et sélectionnez vos fichiers. Cette option n'apparaît que si votre organisation a connecté SharePoint.
+
+<Note>
+L'accès à SharePoint suit vos propres autorisations Microsoft — vous ne pouvez sélectionner que les fichiers que vous êtes déjà autorisé(e) à voir.
+</Note>
+
+## Fichiers pour l'Interpréteur de Code
+
+Si l'agent que vous utilisez a activé l'Interpréteur de Code, vous pouvez téléverser des fichiers (feuilles de calcul, CSV, jeux de données, scripts) pour qu'il les lise, les transforme ou effectue des calculs dans un environnement de code isolé. Choisissez **Télécharger des fichiers** dans le sélecteur de téléchargement lorsque cette option est disponible.
+
+<Info>
+L'Interpréteur de Code est une capacité d'agent — tous les agents ne l'ont pas activée. Si vous ne voyez pas cette option, demandez au créateur de l'agent ou à votre administrateur de l'activer.
+</Info>
+
+## Types de fichiers pris en charge et limites de taille
+
+WonkaChat accepte les formats courants de documents, texte, code, images, audio, vidéo et archives, notamment :
+
+<CardGroup cols={2}>
+<Card title="Documents" icon="file-lines">
+PDF, Word, PowerPoint, Excel et fichiers OpenDocument
+</Card>
+<Card title="Texte et code" icon="code">
+Markdown, JSON, YAML, HTML, CSS et la plupart des langages de programmation
+</Card>
+<Card title="Images" icon="image">
+JPEG, PNG, GIF, HEIC/HEIF et SVG
+</Card>
+<Card title="Audio, vidéo et archives" icon="file-zipper">
+Formats audio et vidéo courants, ainsi que les archives ZIP et TAR
+</Card>
+</CardGroup>
+
+Limites par défaut (votre administrateur peut en définir d'autres pour votre organisation) :
+- Jusqu'à 12 fichiers par message
+- Jusqu'à 512 Mo par fichier
+
+<Warning>
+Si un fichier est refusé, vérifiez d'abord sa taille et son format — puis contactez votre administrateur, car ces limites sont configurables par organisation.
+</Warning>
+
+## Gérer vos fichiers
+
+Rendez-vous dans **Paramètres → Fichiers** pour voir tous les fichiers que vous avez téléversés dans vos conversations. Vous pouvez y consulter ce qui est stocké et supprimer les fichiers dont vous n'avez plus besoin.
+
+---
+
+## Pour les créateurs d'agents et les administrateurs : Azure AI Search
+
+Les créateurs d'agents peuvent connecter **Azure AI Search** comme outil lors de la configuration d'un agent, lui permettant d'interroger un index Azure Cognitive/AI Search existant comme source de connaissances supplémentaire. Il prend en charge soit une clé API, soit l'authentification Microsoft OAuth ; avec des index adossés à SharePoint et OAuth, les résultats respectent le filtrage de sécurité SharePoint de votre organisation — les utilisateurs ne voient que les documents qu'ils sont déjà autorisés à consulter.
+
+Cette configuration se fait par agent, dans la section Outils du créateur d'agents.

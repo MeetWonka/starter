@@ -6,22 +6,20 @@ description: "Understand context windows and learn strategies for managing effec
 Understanding how AI models handle conversation history is essential for getting consistent, relevant responses. This guide explains context windows and strategies for managing conversations effectively.
 
 <Info>
-AI models don't have memory across separate conversations, they only remember what's in the current conversation's context window.
+Within a single conversation, the AI remembers everything that fits in its context window. A separate conversation doesn't automatically share that history — unless your organization uses [Memories](/en/improved-usage/memories) or [Projects](/en/improved-usage/projects) to carry context across conversations.
 </Info>
-
-
 
 <Tabs>
 <Tab title="Getting Started">
 
 ## What is a Context Window?
 
-Think of the context window as the AI's "working memory", it's how much of your conversation the AI can "see" and remember at any given moment.
+Think of the context window as the AI's "working memory" — it's how much of your conversation the AI can "see" and remember at any given moment.
 
 **Analogy:**
 Imagine reading a book through a narrow slot that only shows you a few pages at a time. As you slide the slot forward to read new pages, the earlier pages slide out of view. That's how a context window works.
 
-<Frame caption="Context window visualization - Memory Loss ">
+<Frame caption="Context window visualization">
 <img src="../../images/context_window_eng.jpg" alt="Context window concept illustration" />
 </Frame>
 
@@ -33,13 +31,13 @@ The AI can only reference information within its current context window.
 </Card>
 
 <Card title="Coherence" icon="link">
-Details from early in very long conversations may be "forgotten" as they fall outside the window.
+Details from early in very long conversations may fall outside the window.
 </Card>
 </CardGroup>
 
 ### What Happens When Context Fills Up?
 
-When a conversation exceeds the context window, the AI "forgets" the earliest parts of your conversation. This can lead to:
+When a conversation exceeds the context window, the AI loses access to the earliest parts of your conversation. This can lead to:
 
 - Loss of context from earlier decisions or information
 - Potential inconsistency with earlier statements
@@ -84,7 +82,6 @@ If response quality drops or the AI references outdated information, it is often
 
 </Tab>
 
-
 <Tab title="Continue the Current Conversation" icon="layer-group">
 
 Continue the current conversation when:
@@ -108,12 +105,11 @@ The AI needs to remember prior details, choices, or constraints to respond effec
 </CardGroup>
 
 <Tip>
-Ask yourself: “Does the AI need to retain our earlier discussion to answer this well?” If yes, continue. If not, start a new conversation.
+Ask yourself: "Does the AI need to retain our earlier discussion to answer this well?" If yes, continue. If not, start a new conversation.
 </Tip>
 
 </Tab>
 </Tabs>
-
 
 ---
 
@@ -144,23 +140,15 @@ Given this context, what's the recommended team structure?
 
 </Tab>
 <Tab title="Advanced Knowledge">
- 
+
 ### Understanding Tokens and Model Selection
 
-Context windows are measured in **tokens** that represent roughly 4 characters or about ¾ of a word.
+Context windows are measured in **tokens**, which represent roughly 4 characters or about ¾ of a word.
 
-**Common Models and Their Context Windows:**
-
-| Model | Context Window | Best For |
-|-------|---------------|----------|
-| **GPT-4o** | 128K tokens | Balanced performance, general-purpose tasks |
-| **GPT-4o mini** | 128K tokens | High-volume, cost-sensitive conversations |
-| **Claude Sonnet 4** | 200K tokens | Advanced reasoning, document analysis |
-| **Gemini 2.5 Pro** | 1M tokens | Extended conversations, large document analysis |
-| **Gemini 2.5 Flash** | 1M tokens | Speed-optimized long conversations |
+Model sizes trade off context length against speed and reasoning depth: fast models generally offer smaller context windows, while standard and advanced reasoning models offer larger ones, some large enough to hold extended conversations or long documents in a single context window.
 
 <Info>
-When selecting a model in WonkaChat, consider the context window if you're planning extended conversations. Learn more in [Creating Your First Agent](/ai-agents/creating-your-first-agent).
+When choosing a model in WonkaChat, consider the context window if you're planning extended conversations or working with long documents. See [Choosing a Model](/en/improved-usage/choosing-a-model) for how model sizes, the Router, and Fast/Pro modes work.
 </Info>
 
 ### Managing Multiple Workstreams
@@ -175,6 +163,10 @@ Conversation 3: "Project Beta - Data Analysis"
 
 This approach keeps context clean and prevents "polluting" your context window with information that might bias future responses.
 
+<Tip>
+If you find yourself managing several related conversations for the same piece of work, consider grouping them in a [Project](/en/improved-usage/projects) instead — related chats stay together and can share project-level context.
+</Tip>
+
 ### Rehydrating Context
 
 When starting a fresh conversation about a related topic, provide a concise summary of relevant prior context:
@@ -187,16 +179,21 @@ we need integration with our existing email platform and calendar system.
 New question: Given these requirements, what training approach would you 
 recommend for onboarding the sales team?"
 ```
+
+### Finding Past Conversations
+
+Your past conversations aren't lost when you start a new one. Use **Conversations** in the sidebar to find and reopen them, and **Archived chats** to browse conversations you've archived to keep your sidebar tidy.
+
 </Tab>
 </Tabs>
 
 ## Common Pitfalls to Avoid
 
 <AccordionGroup>
-<Accordion title="Expecting the AI to Remember Past Conversations">
-**Problem:** Starting a new conversation with "As we discussed yesterday..." without re-establishing context.
+<Accordion title="Expecting the AI to Remember Unrelated Conversations">
+**Problem:** Starting a new conversation with "As we discussed yesterday..." without re-establishing context, when the earlier discussion happened in a separate, unrelated conversation.
 
-**Solution:** Always provide relevant context at the start of new conversations.
+**Solution:** Provide the relevant context again, or use a shared [Project](/en/improved-usage/projects) if this is ongoing related work.
 </Accordion>
 
 <Accordion title="Overloading a Single Conversation">

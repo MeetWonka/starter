@@ -1,0 +1,121 @@
+---
+title: "Geplande en getriggerde agenten"
+description: "Laat een agent automatisch draaien volgens een planning of wanneer er iets gebeurt in een gekoppelde app, en bekijk elke uitvoering."
+---
+
+Een geplande agent draait op zichzelf, zonder dat u een gesprek opent. U bepaalt **wanneer** hij draait en **wat** hij moet doen. Elke uitvoering maakt een gesprek aan in uw account, dat u later kunt openen.
+
+Er zijn twee soorten triggers:
+
+- **Planning (Cron)**: de agent draait op vaste tijden, bijvoorbeeld elke werkdag om 08:00.
+- **Externe gebeurtenis**: de agent draait wanneer er iets gebeurt in een gekoppelde app, bijvoorbeeld wanneer er een nieuwe e-mail binnenkomt.
+
+<Note>
+Geplande agenten moeten voor uw organisatie zijn ingeschakeld (functie **Geplande agenten**). Externe gebeurtenistriggers zijn een aparte functie (**Getriggerde agenten**). Als u de sectie **Planning** niet ziet in de agentbouwer, vraag dan uw beheerder om deze in te schakelen.
+</Note>
+
+## Een planning instellen
+
+U heeft bewerkingsrechten nodig op de agent (u heeft hem gemaakt, of u bent **Editor** of **Eigenaar**).
+
+<Steps>
+<Step title="Open de agent in de bouwer">
+Open de agent die u wilt automatiseren en ga naar de sectie **Planning** ("Voer deze agent automatisch uit volgens een planning.").
+</Step>
+<Step title="Schakel de planning in">
+Zet de schakelaar naast **Planning** aan.
+</Step>
+<Step title="Kies het triggertype">
+Als uw organisatie gebeurtenistriggers heeft ingeschakeld, kiest u **Planning (Cron)** of **Externe gebeurtenis** onder **Triggertype**. Anders is de planning tijdgebaseerd.
+</Step>
+<Step title="Stel de frequentie in">
+Kies een **Periode** en vul de bijbehorende velden in (zie de tabel hieronder). Stel de **Startdatum en tijd** in als de planning later moet beginnen.
+</Step>
+<Step title="Schrijf de prompt">
+Vertel de agent in **Prompt** wat hij bij elke uitvoering moet doen, bijvoorbeeld "Vat de nieuwe supporttickets van gisteren samen en geef aan welke urgent zijn."
+</Step>
+<Step title="Sla de agent op">
+Klik op **Opslaan**. De planning wordt samen met de agent opgeslagen.
+</Step>
+</Steps>
+
+### Ondersteunde frequenties
+
+| Periode | U kiest |
+|--------|------------|
+| **Dagelijks** | **Tijd** |
+| **Werkdagen** | **Tijd** (maandag t/m vrijdag) |
+| **Wekelijks** | **Dag** en **Tijd** |
+| **Maandelijks** | **Dag van de maand** en **Tijd** |
+| **Per kwartaal** | **Dag van de maand**, **Kwartaalmaanden** (bijvoorbeeld januari, april, juli, oktober) en **Tijd** |
+
+Tijden gebruiken de tijdzone van uw browser.
+
+Voor andere frequenties opent u **Geavanceerd** en kiest u **Een eigen cron-expressie gebruiken**. Voer vijf velden in: minuut, uur, dag van de maand, maand, dag van de week. Voorbeeld: `0 9 * * 1` draait elke maandag om 09:00. Een planning kan niet vaker draaien dan eens per 5 minuten.
+
+## Een agent triggeren vanuit een externe gebeurtenis
+
+Met een **Externe gebeurtenis**-trigger draait de agent wanneer er iets gebeurt in een app die u heeft gekoppeld, in plaats van op een vast tijdstip.
+
+<Steps>
+<Step title="Kies de gebeurtenis">
+Klik onder **Triggergebeurtenis** op **Selecteer een app & een trigger** en zoek de gewenste gebeurtenis.
+</Step>
+<Step title="Koppel de app">
+Als uw account nog niet is gekoppeld aan die app, klikt u op **Verbinden** en meldt u zich aan bij de app. De status verandert naar **Verbonden**.
+</Step>
+<Step title="Configureer de trigger">
+Vul de velden onder **Triggerconfiguratie** in, als de gebeurtenis die heeft.
+</Step>
+<Step title="Gebruik de gebeurtenisgegevens in de prompt">
+Typ in **Prompt** `{{metadata}}` op de plek waar de gebeurtenisgegevens (onderwerp, afzender, bericht…) moeten verschijnen. Klik daarna op **Opslaan**.
+</Step>
+</Steps>
+
+<Info>
+Externe triggers werken via de apps die u in WonkaChat koppelt. Er is geen webhook-URL of geheime sleutel die u zelf hoeft te kopiëren of te beheren — de koppeling tussen de app en uw agent wordt volledig door het platform afgehandeld. Als er geen gebeurtenissen worden weergegeven, koppel dan een ondersteunde app of vraag uw beheerder om connectoren in te schakelen.
+</Info>
+
+## De resultaten bekijken
+
+Elke uitvoering maakt een gesprek aan in uw account.
+
+Om uitvoeringen te bekijken, opent u het **⋯**-menu van de agent (op de kaart in **Agenten → Alle agenten**, of in de bouwer) en kiest u **Geplande agenten · Geschiedenis**.
+
+Het venster **Uitvoeringsgeschiedenis** toont:
+
+- De **laatste uitvoering**, de **volgende uitvoering**, het aantal **uitvoeringen** en **mislukkingen**.
+- Eén regel per uitvoering met status (voltooid, mislukt, bezig of in wachtrij) en starttijd.
+- **Gesprek openen** om het gesprek te lezen dat de uitvoering heeft aangemaakt. **Geen berichten** betekent dat de uitvoering niets heeft opgeleverd.
+
+Vanuit hetzelfde venster kunt u een planning pauzeren, hervatten of verwijderen.
+
+## Gedeelde agenten: voor wie de planning draait
+
+Een planning voert de agent uit **op uw eigen account**, met uw eigen koppelingen. Wanneer iemand een agent met een planning met u deelt, draait deze standaard **niet** voor u. Om dit in te schakelen, opent u de agent en zet u **Deze planning op mijn account uitvoeren** aan. U kunt dit op elk moment weer uitschakelen.
+
+## Wanneer een agent wordt gewijzigd, worden zijn planningen gepauzeerd
+
+Wanneer iemand een agent wijzigt (instructies, tools, kennisbestanden…), worden alle planningen van die agent uitgeschakeld. De planning toont **Agent gewijzigd**. Dit beschermt u tegen een agent die plotseling anders reageert terwijl hij onbeheerd draait.
+
+Controleer wat de agent nu doet en schakel de planning weer in. Een agent opslaan zonder wijzigingen pauzeert zijn planningen niet.
+
+## Problemen oplossen
+
+<AccordionGroup>
+<Accordion title="Ik zie de sectie Planning niet">
+Uw organisatie heeft Geplande agenten niet ingeschakeld, of u kunt deze agent niet bewerken. Vraag het de agenteigenaar of uw beheerder.
+</Accordion>
+<Accordion title="De planning toont Paused">
+Iemand heeft deze gepauzeerd, of de agent is gewijzigd. Open de planning, controleer de agent en schakel deze weer in.
+</Accordion>
+<Accordion title="Een uitvoering is mislukt">
+Open de uitvoeringsgeschiedenis. De fout verschijnt onder de naam van de agent. Een veelvoorkomende oorzaak is een losgekoppelde app: koppel deze opnieuw via Aanpassen → Connectoren.
+</Accordion>
+</AccordionGroup>
+
+## Gerelateerd
+
+- [Uw eerste agent maken](/nl/ai-agents/creating-your-first-agent)
+- [Uw agenten auditen](/nl/ai-agents/audit-your-agents)
+- [Tools koppelen](/nl/tools-connection/introduction)

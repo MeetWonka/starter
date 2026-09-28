@@ -1,0 +1,83 @@
+---
+title: "SSO and 2FA"
+description: "Set up single sign-on for your organization and enable two-factor authentication for your account."
+---
+
+## Single sign-on (SSO)
+
+<Note>
+Settings → Organization → Security → Single sign-on. Visible to admins who can manage security.
+</Note>
+
+WonkaChat supports **OpenID Connect (OIDC)** with Microsoft, Google or a custom provider, and **SAML**. Only one protocol is used for login at a time.
+
+Before you start, get from your identity provider (IT admin):
+- **OIDC**: Tenant ID (Microsoft) or Client ID, plus a client secret, and — for a custom provider — the Issuer URL.
+- **SAML**: the IdP metadata (a URL or an XML file), or manually the IdP SSO URL, IdP entity ID and the IdP certificate.
+
+### Set up OIDC
+
+<Steps>
+<Step title="Pick a provider">
+Under **Authentication**, choose **Microsoft**, **Google** or **Custom**.
+</Step>
+<Step title="Enter provider details">
+- Microsoft: **Tenant ID**, **Client ID**.
+- Google: **Client ID**.
+- Custom: **Issuer URL**, **Client ID**.
+
+Enter the **primary client secret** (and optionally a **secondary client secret** with its own expiry, for rotation).
+</Step>
+<Step title="Register the redirect URI">
+Copy the **Redirect URI** shown and add it in your identity provider's app registration.
+</Step>
+<Step title="Test, then turn on">
+Use **Test** to confirm the secret is accepted, then switch the provider on. Use **Use [provider] for login** to make it the active protocol.
+</Step>
+</Steps>
+
+### Set up SAML
+
+<Steps>
+<Step title="Import metadata">
+Paste a **Metadata URL** or upload a **Metadata file**, then **Parse metadata** to fill the fields automatically — or enter them by hand: **IdP SSO URL**, **IdP entity ID**, and the **IdP certificate**.
+</Step>
+<Step title="Register the ACS URL">
+Copy the **Assertion Consumer Service (ACS) URL** and register it as the Reply URL in your identity provider. The **SP entity ID** defaults to the ACS URL — override it only if your IdP requires a different identifier.
+</Step>
+<Step title="Optional claims and signing">
+Set the **Email claim** and **Name claim** if your IdP uses non-standard attribute names, choose the **NameID format** (Email address, Persistent, Transient or Unspecified), and require **signed assertions** and/or a **signed authentication response** if your IdP supports it.
+</Step>
+<Step title="Test, then turn on">
+**Test** the configuration, then switch SAML on and set it as the login method.
+</Step>
+</Steps>
+
+### Require SSO for non-admin users
+
+Once a protocol is live, turn on **Require SSO for non-admin users** under **Login policy**. Only organization admins can still sign in with email and password; everyone else must use SSO.
+
+<Warning>
+Clearing a provider's configuration deletes its saved secrets and certificates. Turning a protocol off only pauses login — secrets are kept. Rotate secrets by adding a new one as secondary before removing the primary, to avoid a login gap.
+</Warning>
+
+## Two-factor authentication (2FA)
+
+Every user can enable 2FA for their own account from **Settings → Account → Two-Factor Authentication (2FA)**.
+
+<Steps>
+<Step title="Start setup">
+Click **Setup 2FA**.
+</Step>
+<Step title="Scan the QR code">
+Scan it with your authenticator app (any TOTP app), or enter the secret manually.
+</Step>
+<Step title="Verify">
+Enter the code your app shows to confirm setup.
+</Step>
+<Step title="Save your backup codes">
+Download the backup codes shown — they're displayed only once. Store them somewhere safe; you'll need one if you lose access to your authenticator app.
+</Step>
+</Steps>
+
+You can **Disable 2FA** at any time from the same page, or use **Use 2FA Code Instead** at sign-in if prompted for a backup code.

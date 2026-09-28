@@ -1,0 +1,81 @@
+---
+title: "Vaardigheden"
+description: "Verpak herbruikbare instructies één keer, en laat agents ze automatisch toepassen of roep ze zelf aan."
+---
+
+Een **Vaardigheid** is een herbruikbare set instructies — schrijfrichtlijnen, een te volgen proces, merkregels — die een agent automatisch kan toepassen wanneer dit relevant is, of die u zelf in elke chat kunt aanroepen. Zie het als een gerichte vaardigheid die u één keer aanleert en overal opnieuw gebruikt.
+
+<Info>
+Vaardigheden is een optionele organisatiefunctie. Ziet u **Vaardigheden** niet onder **Customize** in uw zijbalk, vraag dan uw beheerder.
+</Info>
+
+---
+
+## Een vaardigheid aanmaken
+
+<Steps>
+<Step title="Open Vaardigheden">
+Vouw in de zijbalk **Customize** uit en selecteer **Vaardigheden**.
+</Step>
+<Step title="Start een nieuwe vaardigheid">
+Klik op **Vaardigheid aanmaken**.
+</Step>
+<Step title="Beschrijf ze">
+Geef een naam op (alleen kleine letters, cijfers en streepjes, bijv. `brand-guidelines`) en een beschrijving. Wees specifiek over wanneer deze vaardigheid van toepassing is — de agent gebruikt deze beschrijving om te bepalen of ze relevant is.
+</Step>
+<Step title="Schrijf de instructies">
+Voer bij **Instructies** in markdown in wat de vaardigheid moet doen.
+</Step>
+</Steps>
+
+## Een vaardigheid uploaden
+
+Heeft u al ergens anders een vaardigheid geschreven, dan kunt u deze importeren in plaats van opnieuw te schrijven:
+
+<Steps>
+<Step title="Open het uploadvenster">
+Kies in **Vaardigheden** voor **Vaardigheid uploaden**.
+</Step>
+<Step title="Lever het bestand aan">
+Upload een enkel **.md**-bestand, of een **.zip**- / **.skill**-archief. Een `.zip`- of `.skill`-bestand moet een `SKILL.md`-bestand bevatten; een geüploade map wordt automatisch verpakt en moet er ook één bevatten in de hoofdmap (of in één submap).
+</Step>
+</Steps>
+
+<Warning>
+Vaardigheidsimports zijn beperkt in grootte (uw beheerder stelt de exacte limiet in, standaard 50 MB). Te grote bestanden worden vóór het uploaden geweigerd.
+</Warning>
+
+## Automatisch toegepaste versus handmatig aangeroepen vaardigheden
+
+Elke vaardigheid heeft een **Aanroepmodus**:
+
+<CardGroup cols={3}>
+<Card title="Automatisch" icon="wand-magic-sparkles">
+De vaardigheid wordt automatisch toegepast door de agent wanneer deze relevant is voor het gesprek.
+</Card>
+<Card title="Handmatig" icon="hand-pointer">
+De vaardigheid wordt alleen gebruikt wanneer u haar expliciet aanroept.
+</Card>
+<Card title="Beide" icon="arrows-repeat">
+De vaardigheid kan automatisch worden geactiveerd, of handmatig worden aangeroepen.
+</Card>
+</CardGroup>
+
+Typ **`$`** in het berichtenveld om de vaardigheid handmatig aan te roepen. Dit opent de vaardighedenkiezer, waarna u de vaardigheid selecteert die u voor dat bericht wilt gebruiken.
+
+<Tip>
+U kunt elke vaardigheid voor uzelf aan- of uitzetten zonder deze te bewerken — gebruik de schakelaar naast een vaardigheid in de lijst om te bepalen of ze actief is.
+</Tip>
+
+## Vaardigheden delen
+
+Vaardigheden worden op dezelfde manier gedeeld als agents en prompts:
+- **Viewer** — kan de vaardigheid bekijken en gebruiken, maar niet bewerken
+- **Editor** — kan de vaardigheid bekijken en bewerken
+- **Eigenaar** — volledige controle, inclusief delen en verwijderen
+
+Deel een vaardigheid met specifieke personen, een groep, of (als uw beheerder dit toestaat) iedereen in uw organisatie.
+
+<Note>
+Uw beheerder kan op organisatieniveau beperken wie vaardigheden mag aanmaken of delen.
+</Note>

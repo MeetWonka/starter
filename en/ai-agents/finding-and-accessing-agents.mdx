@@ -3,83 +3,72 @@ title: "Finding and Accessing Agents"
 description: "Navigate WonkaChat to locate and access AI agents for your workflows."
 ---
 
-Agents are located in two places: the creation interface for building and managing agents, and the usage interface for starting conversations with agents.
+Agents live in the **Agents** section of your sidebar. From there you can browse every agent you can use, start a conversation, or create a new one.
 
 ---
 
-## Locating Agents
+## The Agents Sidebar Section
 
+Open **Agents** in the sidebar to reveal:
 
-### Agent Usage Interface
-
-There are two ways to access and start conversations with agents:
-
-#### 1. Agent Marketplace
-
-Access the agent marketplace from the top left of your screen. The marketplace organizes agents by categories, making it easy to discover and browse available agents. It is especially useful when you have many agents to choose from.
-
-<Frame caption="Agent marketplace location">
-<img src="../../images/marketplace.gif" alt="Agent marketplace on top left" />
-</Frame>
-
-**Features:**
-- Browse agents by category
-- Search functionality for quick discovery
-- View detailed agent descriptions
-
-
-#### 2. My Agents Quick Access
-
-Access your agents directly from the model selection dropdown at the top of the screen. At the bottom of the dropdown, you'll see "My Agents". You can hover over it to reveal a list of all your available agents with a search field.
-
-<Frame caption="My Agents quick access in model selector">
-<img src="../../images/dropdown.gif" alt="My Agents dropdown in model selector" />
-</Frame>
-
-**Features:**
-- Quick access to your frequently used agents
-- Integrated search field for fast agent lookup
-- No need to navigate away from your current screen
+- **All agents** — opens the full agent library at `/agents`
+- **New agent** — starts the guided agent creation flow
+- **Pinned agents** — agents you've starred for quick access
+- **Recent agents** — agents you've used recently
 
 <Tip>
-Quick usage: Agents can be invoked by typing `@` followed by their name directly from any conversation.
+Click an agent under Pinned or Recent to start a new conversation with it immediately.
 </Tip>
 
-<Frame caption="Prompt example with a custom command '@Wiki'">
-<img src="../../images/agent.png" alt="Example of using an agent in a conversation" />
+---
+
+## The Agent Library (All Agents)
+
+The agent library organizes every agent you can use with scope tabs at the top:
+
+| Scope | Shows |
+|-------|-------|
+| **All** | Every agent you can use |
+| **Mine** | Agents you created |
+| **Favorites** | Agents you've pinned |
+| **Shared with me** | Agents others shared with you |
+| **Organization** | All organization-wide agents (administrators only) |
+
+Use the search field and tag filters to narrow down the list, and sort by name, owner, model, or last used.
+
+**Features:**
+- Browse and filter agents by scope
+- Search by name or description
+- Sort and filter with tags
+- Open **Browse templates** to start from a pre-built template instead of a blank agent
+
+---
+
+## Quick Usage from a Conversation
+
+You can invoke any agent you have access to directly from a conversation by typing `@` followed by its name.
+
+<Frame caption="Invoking an agent with @ from a conversation">
+<img src="../../images/agent.png" alt="Example of invoking an agent by typing @ followed by its name" />
 </Frame>
 
 ---
 
-### Agent Creation & Management
+## Creating a New Agent
 
-In your WonkaChat interface, find the **Agent Builder** on the right side of the screen. This panel allows you to create and manage your AI agents.
+Click **New agent** in the sidebar (or **Create Agent** from the agent library) to open the guided creation flow.
 
-<Frame caption="Agent Builder panel location">
-<img src="../../images/agent.gif" alt="Agent Builder panel" />
-</Frame>
+<Info>
+See [Creating Your First Agent](/en/ai-agents/creating-your-first-agent) for the full walkthrough.
+</Info>
 
-<Tip>
-If you don't see the right side panel, click the arrow icon in the middle-right of your screen to expand the sidebar.
-</Tip>
-
-
-**What you can do:**
-- Create new agents with custom instructions
-- Give files and capabilities to agents 
-- Assign Tools (External Connections) to agents
-- Modify existing agents configurations
-
-<Check>
-All users can create personal agents. Organization-wide sharing requires administrator approval.
-</Check>
 ---
 
 ## Next Steps
 
 <CardGroup cols={2}>
 <Card title="Using Existing Agents" icon="play" href="/en/ai-agents/using-existing-agents">
-Learn how to get the best results from pre-built agents.
+Learn how to get the best results from existing agents.
 </Card>
 
 <Card title="Creating Your First Agent" icon="plus-circle" href="/en/ai-agents/creating-your-first-agent">

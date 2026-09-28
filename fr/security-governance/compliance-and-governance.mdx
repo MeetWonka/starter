@@ -1,125 +1,64 @@
 ---
 title: "Conformité et gouvernance"
-description: "Comprenez les fonctionnalités de conformité de WonkaChat, les capacités d'audit et la feuille de route de certification."
+description: "Certifications, hébergement, et la région d'exécution de chaque modèle d'IA."
 ---
 
-WonkaChat implémente des fonctionnalités robustes de conformité et de gouvernance pour prendre en charge vos exigences réglementaires. Bien que les certifications formelles soient en cours, les contrôles et capacités sous-jacents sont déjà intégrés dans la plateforme que vous utilisez aujourd'hui.
-
-<Warning>
-**Statut de certification** : WonkaChat a implémenté des contrôles de sécurité et de gouvernance alignés avec les principaux cadres de conformité (RGPD, SOC 2, ISO 27001). Les certifications formelles par des tiers sont actuellement en cours.
-</Warning>
-
----
-
-## Sur quoi vous pouvez compter aujourd'hui
+## Certifications et conformité
 
 <CardGroup cols={2}>
-<Card title="Pistes d'audit" icon="file-lines">
-Journalisation complète des actions utilisateur et agent avec pistes d'audit immuables.
+<Card title="ISO 27001" icon="certificate">
+Le système de management de la sécurité de l'information de WonkaChat est certifié ISO/IEC 27001.
 </Card>
 
-<Card title="Contrôles d'accès" icon="user-lock">
-RBAC, authentification et gestion des autorisations sur toute la plateforme.
+<Card title="RGPD" icon="shield-check">
+Conformité complète au RGPD. Un accord de traitement des données (DPA) est disponible sur demande.
 </Card>
 
-<Card title="Chiffrement et isolation" icon="shield-check">
-Chiffrement en transit et au repos avec isolation des données au niveau de l'organisation.
+<Card title="NIS 2" icon="file-shield">
+Conforme à la directive européenne sur la sécurité des réseaux et de l'information (NIS 2).
 </Card>
 
-<Card title="Contrôles de rétention" icon="clock">
-Politiques de rétention configurables pour les conversations, journaux et données utilisateur.
+<Card title="SOC 2 Type II" icon="clock">
+Audit SOC 2 Type II en cours.
 </Card>
 </CardGroup>
 
-<Info>
-Ces contrôles sont opérationnels aujourd'hui. Les certifications valideront formellement ce qui est déjà en place.
-</Info>
+## Hébergement et infrastructure
 
----
+- **Hébergement** : Microsoft Azure West Europe par défaut, avec une infrastructure basée dans l'UE et des contrôles de résidence des données.
+- **CDN** : Cloudflare pour la diffusion de contenu et le routage en périphérie.
+- **Chiffrement** : TLS 1.2 ou supérieur en transit, AES-256 au repos.
 
-## Statut de certification
+## Tests de sécurité et audits
 
-<Update label="En cours" description="Audits formels en cours">
-- SOC 2 Type II : audit tiers en cours
-- ISO 27001 : processus de certification initié
-- RGPD : fonctionnalités supportant les droits des personnes concernées implémentées ; effectuez une DPIA selon le besoin
-</Update>
+- **Tests d'intrusion** : test de pénétration indépendant (boîte noire externe) annuel.
+- **Audits de sécurité indépendants** : audits périodiques de sécurité de l'information par des tiers.
+- **Sous-traitants** : revues de sécurité annuelles des sous-traitants.
+- **Surveillance** : surveillance continue et procédures de réponse aux incidents.
 
-<Warning>
-WonkaChat ne détient pas encore de certifications formelles. Nous travaillons activement pour les obtenir.
-</Warning>
+## Accès et authentification
 
-<Check>
-Vous pouvez utiliser WonkaChat en toute confiance aujourd'hui ; les certifications reconnaîtront formellement les contrôles existants.
-</Check>
+- **Authentification unique** : OIDC (Microsoft, Google, ou un fournisseur personnalisé) ou SAML, avec la possibilité d'exiger le SSO pour les utilisateurs non administrateurs.
+- **Authentification multifacteur** : disponible pour chaque compte.
+- **Contrôle d'accès basé sur les rôles** : rôles dans l'organisation, permissions de partage (Viewer / Editor / Propriétaire), groupes et politiques d'outils — voir [Contrôle d'accès](/fr/security-governance/access-control).
+- **Journal d'audit RBAC** : un historique des changements de permission et de politique d'outils, pour la traçabilité.
 
----
+## Régions des modèles
 
-## Pistes d'audit et journalisation
+WonkaChat sollicite les modèles d'IA via une passerelle IA (AI gateway) connectée à plusieurs fournisseurs — Microsoft Azure, Google Vertex AI, Mistral et d'autres — hébergeant chacun des modèles dans une région précise.
 
-- **Système de journalisation complet** : Journalisation structurée basée sur Winston
-- **Niveaux de journal** : TRACE (10), DEBUG (20), INFO (30), WARN (40), ERROR (50), FATAL (60)
-- **Journalisation des événements de sécurité** : Tentatives d'auth, changements d'autorisations, limites de débit, activité suspecte
-- **Piste d'audit de migration** : Changements de schéma, mises à niveau, modifications de config, suivi de version
-- **Journalisation de l'activité utilisateur** : Sessions, utilisation d'agents et outils, accès/exports de données
+- La plupart des modèles s'exécutent dans l'**UE**.
+- Certains modèles s'exécutent aux **États-Unis**.
+- Certains sont sollicités via un point d'accès **global**, non rattaché à une région précise.
 
-<Info>
-Les données sensibles (mots de passe, clés API, jetons) sont automatiquement expurgées des journaux.
-</Info>
+Le sélecteur de modèle affiche un badge de région (UE, US ou global) à côté de chaque modèle, afin que vous sachiez où il s'exécute avant de l'utiliser. **Les données que vous envoyez à un modèle sont traitées dans la région de ce modèle.** Si votre organisation doit garder l'usage de l'IA au sein de l'UE, demandez à votre administrateur de restreindre les modèles disponibles à ceux hébergés dans l'UE — voir [Groupes et politiques d'outils](/fr/administration/groups-and-tool-policies).
 
----
-
-## Politiques de rétention des données
-
-### Données de conversation
-
-<AccordionGroup>
-<Accordion title="Rétention de chat temporaire">
-Activez la suppression automatique de l'historique des conversations après une période configurée.
-
-- Chat temporaire : activé
-- Fenêtre de rétention : 24 heures
-- Fonctionnalités : tâches de nettoyage automatiques, suppression contrôlée par l'utilisateur, remplacement admin, suppression douce avec récupération
-</Accordion>
-
-<Accordion title="Conversations permanentes">
-Conservez les conversations indéfiniment jusqu'à suppression manuelle. Meilleur pour les bases de connaissances et projets à long terme.
-</Accordion>
-</AccordionGroup>
-
-### Rétention des journaux
-
-Rétention recommandée :
-
-- Journaux d'erreur : 90 jours (débogage et dépannage)
-- Journaux combinés : 30 jours (activité générale)
-- Journaux de sécurité : 365 jours (exigences de conformité)
-- Journaux d'audit : 7 ans (exigences légales et réglementaires)
-- Journaux de violation : 180 jours (suivi des violations)
-
-Paramètres de rotation :
-
-- Rotation quotidienne avec noms de fichiers basés sur la date
-- Taille de fichier max : 50 MB
-- Garder les 30 derniers jours de fichiers
-- Compresser les fichiers plus anciens
-
-### Données utilisateur
-
-Règles de rétention :
-
-- Utilisateurs actifs : conservés tant que le compte est actif
-- Utilisateurs inactifs : 90 jours après la dernière activité
-- Utilisateurs supprimés : 30 jours (suppression douce avec récupération)
-- Conversations : rétention contrôlée par l'utilisateur
-- Fichiers : 90 jours après le dernier accès
-- Sessions : 7 jours
-- Jetons : expirent au rafraîchissement (généralement 15 minutes à 7 jours)
-
----
+<Note>
+WonkaChat lui-même — vos conversations, fichiers, agents et données d'organisation — est hébergé sur Microsoft Azure West Europe quel que soit le modèle utilisé. La région du modèle ne s'applique qu'au message que vous lui envoyez pour traitement.
+</Note>
 
 ## Besoin de plus d'informations ?
 
 <Card title="Contactez-nous" icon="handshake" href="/fr/support-resources/getting-help">
-Pour des questions sur la conformité, la documentation de sécurité ou les évaluations de fournisseurs, contactez notre équipe pour de l'assistance.
+Pour toute question sur la conformité, la documentation de sécurité ou les évaluations fournisseurs, contactez notre équipe.
 </Card>

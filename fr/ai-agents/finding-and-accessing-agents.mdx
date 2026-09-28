@@ -1,89 +1,77 @@
 ---
 title: "Trouver et accéder aux agents"
-description: "Naviguez dans WonkaChat pour localiser et accéder aux agents IA pour vos flux de travail."
+description: "Naviguez dans WonkaChat pour trouver et accéder aux agents IA utiles à vos workflows."
 ---
 
-Les agents sont situés à deux endroits : l'interface de création pour construire et gérer les agents, et l'interface d'utilisation pour démarrer les conversations avec les agents.
+Les agents se trouvent dans la section **Agents** de votre barre latérale. Vous y parcourez tous les agents que vous pouvez utiliser, démarrez une conversation ou en créez un nouveau.
 
 ---
 
-## Localisation des agents
+## La section Agents de la barre latérale
 
+Ouvrez **Agents** dans la barre latérale pour afficher :
 
-### Interface d'utilisation des agents
-
-Il y a deux façons d'accéder aux agents et de commencer des conversations avec eux :
-
-#### 1. Marketplace des agents
-
-Accédez à la marketplace des agents depuis le haut à gauche de votre écran. La marketplace organise les agents par catégories, ce qui facilite leur découverte et leur navigation. C'est particulièrement utile lorsque vous avez de nombreux agents parmi lesquels choisir.
-
-<Frame caption="Emplacement de la marketplace des agents">
-<img src="../../images/marketplace.gif" alt="Marketplace des agents en haut à gauche" />
-</Frame>
-
-**Fonctionnalités :**
-- Parcourir les agents par catégorie
-- Fonctionnalité de recherche pour découvrir rapidement
-- Voir les descriptions détaillées des agents
-
-
-#### 2. Accès rapide à Mes Agents
-
-Accédez directement à vos agents depuis le menu déroulant de sélection du modèle en haut de l'écran. En bas du menu déroulant, vous verrez « Mes agents ». Vous pouvez le survoler pour révéler une liste de tous vos agents disponibles avec un champ de recherche.
-
-<Frame caption="Accès rapide Mes Agents dans le sélecteur de modèle">
-<img src="../../images/dropdown.gif" alt="Menu déroulant Mes Agents dans le sélecteur de modèle" />
-</Frame>
-
-**Fonctionnalités :**
-- Accès rapide à vos agents fréquemment utilisés
-- Champ de recherche intégré pour la recherche rapide d'agent
-- Pas besoin de naviguer loin de votre écran actuel
+- **Tous les agents** — ouvre la bibliothèque complète des agents (`/agents`)
+- **Nouvel agent** — démarre le parcours de création guidée
+- **Agents épinglés** — les agents que vous avez mis en favoris
+- **Agents récents** — les agents que vous avez utilisés récemment
 
 <Tip>
-Utilisation rapide : Les agents peuvent être invoqués en tapant `@` suivi de leur nom directement depuis n'importe quelle conversation.
+Cliquez sur un agent épinglé ou récent pour démarrer immédiatement une nouvelle conversation avec lui.
 </Tip>
 
-<Frame caption="Exemple de prompt avec une commande personnalisée '@Wiki'">
-<img src="../../images/agent.png" alt="Exemple d'utilisation d'un agent dans une conversation" />
+---
+
+## La bibliothèque d'agents (Tous les agents)
+
+La bibliothèque organise tous les agents que vous pouvez utiliser avec des onglets de filtrage :
+
+| Onglet | Affiche |
+|--------|---------|
+| **Tout** | Tous les agents que vous pouvez utiliser |
+| **Les miens** | Les agents que vous avez créés |
+| **Favoris** | Les agents que vous avez épinglés |
+| **Partagés avec moi** | Les agents que d'autres ont partagés avec vous |
+| **Organisation** | Tous les agents partagés à l'échelle de l'organisation (administrateurs uniquement) |
+
+Utilisez le champ de recherche et les filtres par tags pour affiner la liste, et triez par nom, propriétaire, modèle ou dernière utilisation.
+
+**Fonctionnalités :**
+- Parcourir et filtrer les agents par onglet
+- Rechercher par nom ou description
+- Trier et filtrer avec des tags
+- Ouvrir **Parcourir les templates** pour partir d'un modèle prêt à l'emploi plutôt que d'un agent vierge
+
+---
+
+## Utilisation rapide depuis une conversation
+
+Vous pouvez invoquer n'importe quel agent auquel vous avez accès directement depuis une conversation, en tapant `@` suivi de son nom.
+
+<Frame caption="Invoquer un agent avec @ depuis une conversation">
+<img src="../../images/agent.png" alt="Exemple d'invocation d'un agent en tapant @ suivi de son nom" />
 </Frame>
 
 ---
 
-### Création et gestion des agents
+## Créer un nouvel agent
 
-Dans votre interface WonkaChat, trouvez le **Constructeur d'agent** sur le côté droit de l'écran. Ce panneau vous permet de créer et de gérer vos agents IA.
+Cliquez sur **Nouvel agent** dans la barre latérale (ou sur **Créer un agent** depuis la bibliothèque) pour ouvrir le parcours de création guidée.
 
-<Frame caption="Emplacement du panneau Constructeur d'agent">
-<img src="../../images/agent.gif" alt="Panneau Constructeur d'agent" />
-</Frame>
-
-<Tip>
-Si vous ne voyez pas le panneau du côté droit, cliquez sur l'icône de flèche au centre-droit de votre écran pour développer la barre latérale.
-</Tip>
-
-
-**Ce que vous pouvez faire :**
-- Créer de nouveaux agents avec des instructions personnalisées
-- Donner des fichiers et des capacités aux agents
-- Attribuer des outils (connexions externes) aux agents
-- Modifier les configurations des agents existants
-
-<Check>
-Tous les utilisateurs peuvent créer des agents personnels. Le partage au niveau de l'organisation nécessite l'approbation d'un administrateur.
-</Check>
+<Info>
+Voir [Créer votre premier agent](/fr/ai-agents/creating-your-first-agent) pour le parcours complet.
+</Info>
 
 ---
 
-## Prochaines étapes
+## Étapes suivantes
 
 <CardGroup cols={2}>
-<Card title="Utiliser les agents existants" icon="play" href="/fr/ai-agents/using-existing-agents">
-Découvrez comment obtenir les meilleurs résultats des agents pré-construits.
+<Card title="Utiliser des agents existants" icon="play" href="/fr/ai-agents/using-existing-agents">
+Apprenez à tirer le meilleur parti des agents existants.
 </Card>
 
 <Card title="Créer votre premier agent" icon="plus-circle" href="/fr/ai-agents/creating-your-first-agent">
-Construisez votre propre agent adapté à vos flux de travail.
+Construisez votre propre agent adapté à vos workflows.
 </Card>
 </CardGroup>

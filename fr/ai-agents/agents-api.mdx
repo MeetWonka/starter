@@ -1,0 +1,154 @@
+---
+title: "Appeler des agents via l'API"
+description: "Appelez vos agents WonkaChat depuis votre propre code ou depuis des outils d'automatisation comme n8n et Make, via une API compatible OpenAI."
+---
+
+WonkaChat expose chaque agent que vous avez créé comme un endpoint compatible OpenAI. Si vous savez appeler l'API Chat Completions d'OpenAI, vous savez appeler votre agent de la même façon — pointez simplement le client vers WonkaChat et utilisez l'ID de l'agent comme `model`.
+
+<Note>
+Cela nécessite que la fonctionnalité **Clés API des agents** soit activée pour votre organisation, ainsi que la permission **Agents distants → Utiliser** sur votre rôle. Par défaut, seuls les administrateurs disposent de cette permission — demandez à votre administrateur de vous l'accorder si nécessaire. Vous devez également avoir au minimum un accès en consultation à l'agent que vous souhaitez appeler.
+</Note>
+
+## Prérequis
+
+<Check>
+- Votre organisation a activé les **Clés API des agents**.
+- Votre rôle dispose de la permission **Agents distants → Utiliser**.
+- Vous êtes **propriétaire** (Owner) de l'agent que vous souhaitez appeler. Être Editor ou Viewer d'un agent partagé ne suffit pas pour l'appeler via l'API.
+</Check>
+
+## 1. Créer une clé API
+
+<Steps>
+<Step title="Ouvrez Clés API">
+Allez dans **Paramètres → Clés API**.
+</Step>
+<Step title="Créez une clé">
+Créez une nouvelle clé. Copiez-la immédiatement — vous ne pourrez plus la revoir ensuite.
+</Step>
+<Step title="Stockez-la en sécurité">
+Traitez-la comme un mot de passe : stockez-la dans un gestionnaire de secrets ou une variable d'environnement, jamais dans du code exécuté côté client ni dans un dépôt public.
+</Step>
+</Steps>
+
+## 2. Trouver l'ID de votre agent
+
+L'API identifie un agent par son ID, pas par son nom. La façon la plus simple de l'obtenir :
+
+<Steps>
+<Step title="Ouvrez Agents → Tous les agents">
+Trouvez l'agent que vous souhaitez appeler.
+</Step>
+<Step title="Copiez son lien">
+Ouvrez le menu **⋯** de l'agent et choisissez **Copier le lien**. Cela copie une URL de la forme `https://wonka.chat/c/new?agent_id=<ID_AGENT>`.
+</Step>
+<Step title="Extrayez l'ID">
+La valeur après `agent_id=` est l'ID de l'agent. Utilisez-la comme valeur `model` dans vos appels API.
+</Step>
+</Steps>
+
+## URL de base et authentification
+
+```
+https://<votre-domaine>/api/agents/v1
+```
+
+Chaque requête nécessite un en-tête `Authorization` avec votre clé API :
+
+```
+Authorization: Bearer <votre_cle_api>
+```
+
+## Chat Completions
+
+<Tabs>
+<Tab title="curl">
+```bash
+curl https://<votre-domaine>/api/agents/v1/chat/completions \
+  -H "Authorization: Bearer $WONKACHAT_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "<ID_AGENT>",
+    "messages": [
+      { "role": "user", "content": "Résume les tickets ouverts cette semaine." }
+    ],
+    "stream": false
+  }'
+```
+</Tab>
+<Tab title="Python (SDK OpenAI)">
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://<votre-domaine>/api/agents/v1",
+    api_key="<votre_cle_api>",
+)
+
+response = client.chat.completions.create(
+    model="<ID_AGENT>",
+    messages=[{"role": "user", "content": "Résume les tickets ouverts cette semaine."}],
+)
+
+print(response.choices[0].message.content)
+```
+</Tab>
+</Tabs>
+
+Pour maintenir une conversation à plusieurs échanges, transmettez `conversation_id` et `parent_message_id` de la réponse précédente dans la requête suivante. Définissez `"stream": true` pour recevoir un flux SSE d'événements `chat.completion.chunk` au lieu d'une seule réponse JSON.
+
+## API Open Responses
+
+Pour les cas d'usage agentiques nécessitant une sortie structurée par items, le même agent est aussi disponible via l'endpoint [Open Responses](https://openresponses.org/specification) :
+
+```
+POST https://<votre-domaine>/api/agents/v1/responses
+```
+
+```json
+{
+  "model": "<ID_AGENT>",
+  "input": "Résume les tickets ouverts cette semaine.",
+  "stream": false,
+  "previous_response_id": "resp_id_optionnel_pour_continuer_un_fil"
+}
+```
+
+La réponse contient un `id` (`resp_...`) que vous pouvez renvoyer comme `previous_response_id` pour poursuivre le même fil, un tableau `output` d'items, et un objet `usage`.
+
+## Lister les agents
+
+```
+GET /api/agents/v1/models
+GET /api/agents/v1/models/:model
+```
+
+<Info>
+`GET /models` ne liste que les agents explicitement autorisés à l'accès API distant — pour la plupart des organisations, cette liste est courte, voire vide. Ne comptez pas dessus pour découvrir l'ID d'un agent : récupérez-le depuis l'interface WonkaChat comme indiqué ci-dessus, et utilisez `GET /models/:model` pour vérifier si un ID d'agent donné est appelable.
+</Info>
+
+## Erreurs
+
+| Statut | Signification |
+|--------|---------|
+| `400` | La requête manque un champ requis, le plus souvent `model` (l'ID de l'agent). |
+| `401` | L'en-tête `Authorization` est manquant, mal formé, ou la clé API est invalide. |
+| `403` | Votre rôle ne dispose pas de **Agents distants → Utiliser**, ou vous n'avez pas accès à cet agent. |
+| `404` | Aucun agent n'existe avec cet ID. |
+
+Les réponses d'erreur suivent le format d'erreur OpenAI : `{ "error": { "message": "...", "type": "...", "code": "..." } }`.
+
+## Utilisation depuis n8n ou Make
+
+Ces deux outils proposent un nœud/module **OpenAI** générique qui accepte une URL de base personnalisée. Pointez-le vers `https://<votre-domaine>/api/agents/v1`, utilisez votre clé API WonkaChat comme identifiant, et définissez le champ modèle avec l'ID de votre agent. Vous pouvez ainsi appeler un agent WonkaChat comme étape d'une automatisation sans écrire de requêtes HTTP personnalisées.
+
+## Sécurité
+
+<Warning>
+Une clé API hérite de votre propre accès à WonkaChat. Toute personne disposant de la clé peut appeler tous les agents auxquels vous avez accès. Faites tourner vos clés périodiquement, supprimez celles que vous n'utilisez plus depuis **Paramètres → Clés API**, et n'intégrez jamais une clé dans un frontend, une application mobile ou un dépôt public.
+</Warning>
+
+## Voir aussi
+
+- [Créer votre premier agent](/fr/ai-agents/creating-your-first-agent)
+- [Auditer vos agents](/fr/ai-agents/audit-your-agents)

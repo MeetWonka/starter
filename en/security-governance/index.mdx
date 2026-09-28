@@ -1,54 +1,34 @@
 ---
 title: "Overview"
-description: "Understand how WonkaChat protects your data and learn how to enhance security in your organization."
+description: "How WonkaChat protects your data, and what you and your administrators control."
 ---
 
-Security is a shared responsibility. WonkaChat provides robust built-in security measures, while you control access and implement best practices to ensure safe AI collaboration in your organization.
+Security in WonkaChat is shared. Wonka AI secures the platform and its hosting. You and your administrators decide who can use what: agents, connectors, models and shared content.
 
-<Info>
-This section covers both **what we do** to protect your data and **what you can do** to enhance security when using WonkaChat.
-</Info>
-
----
-
-## What We Do: Built-In Security
-
-Understand the security measures and protections that WonkaChat provides out of the box.
-
-<Card 
-  title="Built-In Security" 
-  icon="shield-check" 
-  href="/en/security-governance/security-overview"
->
-  Explore WonkaChat's security architecture, data privacy measures, and how MCP connections respect your existing tool permissions
-</Card>
-
-<Tip>
-WonkaChat maintains strict security boundaries where AI agents cannot override or escalate permissions in your connected tools.
-</Tip>
-
-## What You Can Do: Enhance Your Security
-
-Take control of your security posture with access management and proven best practices.
+## What Wonka AI does
 
 <CardGroup cols={2}>
-  <Card 
-    title="Access Control & Tool Restriction" 
-    icon="user-shield" 
-    href="/en/security-governance/access-control"
-  >
-    Manage users, control agent permissions, and restrict which tools agents can use with Safe Mode and granular access controls
-  </Card>
-  
-  <Card 
-    title="Best Practices" 
-    icon="clipboard-check" 
-    href="/en/security-governance/best-practices"
-  >
-    Follow recommended guidelines for safe AI usage, including scope management and avoiding excessive permissions
-  </Card>
+<Card title="Security overview" icon="shield-check" href="/en/security-governance/security-overview">
+  Sign-in, encryption, data isolation, how models are reached and how connectors respect your permissions.
+</Card>
+
+<Card title="Compliance & governance" icon="file-shield" href="/en/security-governance/compliance-and-governance">
+  Certifications, hosting, audit logs and the region each model runs in.
+</Card>
 </CardGroup>
 
-<Note>
-Combining WonkaChat's built-in security with proper access controls and best practices creates a comprehensive security framework for your organization.
-</Note>
+## What you control
+
+<CardGroup cols={2}>
+<Card title="Access control" icon="user-shield" href="/en/security-governance/access-control">
+  Organization roles, sharing with Viewer / Editor / Owner, groups, connector access and feature permissions.
+</Card>
+
+<Card title="Best practices" icon="clipboard-check" href="/en/security-governance/best-practices">
+  Practical habits for using agents and connectors safely at work.
+</Card>
+</CardGroup>
+
+<Tip>
+Administrators: the step-by-step setup for single sign-on, groups, connector access and the audit log is in the Administration section, starting with [SSO and 2FA](/en/administration/sso-and-2fa).
+</Tip>

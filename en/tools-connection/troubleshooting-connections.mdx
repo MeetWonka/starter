@@ -6,7 +6,7 @@ description: "Quick solutions to common external connection problems and how to 
 Having trouble connecting a business system or experiencing issues with an existing connection? This guide provides quick solutions to the most common problems.
 
 <Info>
-Most connection issues can be resolved in a few minutes by following the steps below. If you're still stuck, see the [Getting Help](/support-resources/getting-help) page for all the ways to reach our help desk.
+Most connection issues can be resolved in a few minutes by following the steps below. If you're still stuck, see the [Getting Help](/en/support-resources/getting-help) page for all the ways to reach our help desk.
 </Info>
 
 ---
@@ -19,12 +19,12 @@ Before contacting support, try these simple solutions:
 <Step title="Disconnect and Reconnect">
 This resolves most connection issues:
 
-1. Go to the Connectors panel
-2. Click on the problematic business system
+1. Go to **Customize → Connectors**
+2. Find the problematic business system
 3. Select **"Disconnect"**
 4. Wait 10 seconds
 5. Click **"Connect"** again and re-enter your credentials
-6. Enable the connection for your AI model
+6. Enable the connection for your chat
 
 </Step>
 
@@ -68,7 +68,6 @@ These troubleshooting steps often fix most connection problems by refreshing the
 
 </Steps>
 
-
 ## Common Connection Problems
 
 <AccordionGroup>
@@ -86,7 +85,7 @@ These troubleshooting steps often fix most connection problems by refreshing the
 - If you recently changed your password, update it in WonkaChat
 
 **2. Reconnect the Business System**
-- Disconnect the business system from the Connectors panel
+- Disconnect the business system from the Connectors page
 - Wait 10 seconds
 - Reconnect with your current credentials
 
@@ -102,7 +101,6 @@ Test your credentials on the business system's website first before trying to co
 - "403 Forbidden" message
 
 **Why This Happens:**
-
 
 **1. Your Organization Blocks Third-Party Apps**
 
@@ -125,8 +123,14 @@ During the OAuth connection process, you may have denied some permissions that W
 **Solution:**
 - Disconnect the business system
 - Reconnect and **grant all requested permissions** when prompted
-- Some business systems let you selectively approve permissions. You need to check if WonkaChat need broader access or not.
+- Some business systems let you selectively approve permissions. You need to check if WonkaChat needs broader access or not.
 
+**3. Your Admin Restricted This Connector**
+
+If your organization uses tool policies, an admin may have limited which connectors or actions are available to your role or group.
+
+**Solution:**
+- Ask your WonkaChat administrator to review your [tool policies](/en/administration/groups-and-tool-policies)
 
 </Accordion>
 
@@ -180,7 +184,6 @@ Sometimes you're trying to do something through AI that you can't do directly in
 
 **Solution:** Get the proper permissions in the business system first, then try again in WonkaChat.
 
-
 **2. Check the Business System Directly**
 - Log into the business system outside of WonkaChat
 - Verify it's working normally
@@ -211,7 +214,7 @@ For now, if you see an error message:
 
 ## When to Contact Support
 
-If you've tried the quick fixes above and you're still having issues, our support team is here to help.
+If you've tried the quick fixes above and you're still having issues, our support team is here to help at [support@meetwonka.com](mailto:support@meetwonka.com).
 
 **Contact Support When:**
 - Connection problems persist after trying all quick fixes
@@ -219,8 +222,6 @@ If you've tried the quick fixes above and you're still having issues, our suppor
 - You need help with organizational permissions or IT approval
 - Multiple business systems are having issues at the same time
 - You suspect a security or data issue
-
-
 
 ## Additional Resources
 

@@ -1,125 +1,64 @@
 ---
-title: "Compliance & Governance"
-description: "Begrijp WonkaChat's compliance-functies, auditcapaciteiten en certificeringsroadmap."
+title: "Compliance & governance"
+description: "Certificeringen, hosting, en de regio waarin elk AI-model draait."
 ---
 
-WonkaChat implementeert robuuste compliance- en governance-functies om je regelgevende vereisten te ondersteunen. Hoewel formele certificeringen in uitvoering zijn, zijn de onderliggende controles en capaciteiten al ingebouwd in het platform dat je vandaag gebruikt.
-
-<Warning>
-**Certificeringsstatus**: WonkaChat heeft beveiligings- en governance-controles geïmplementeerd die aansluiten bij belangrijke compliance-frameworks (GDPR, SOC 2, ISO 27001). Formele third-party certificeringen zijn momenteel in uitvoering.
-</Warning>
-
----
-
-## Waar je vandaag op kunt vertrouwen
+## Certificeringen en compliance
 
 <CardGroup cols={2}>
-<Card title="Audit trails" icon="file-lines">
-Volledige logging van gebruikers- en agent-acties met onveranderlijke audit trails.
+<Card title="ISO 27001" icon="certificate">
+Het information security management system van WonkaChat is ISO/IEC 27001-gecertificeerd.
 </Card>
 
-<Card title="Toegangscontroles" icon="user-lock">
-RBAC, authenticatie en permissiebeheer over het hele platform.
+<Card title="GDPR" icon="shield-check">
+Volledig conform de GDPR. Een Data Processing Agreement (DPA) is op aanvraag beschikbaar.
 </Card>
 
-<Card title="Versleuteling & isolatie" icon="shield-check">
-Versleuteling in transit en at rest met organisatieniveau gegevensisolatie.
+<Card title="NIS 2" icon="file-shield">
+Conform de EU Network and Information Security Directive (NIS 2).
 </Card>
 
-<Card title="Retentiecontroles" icon="clock">
-Configureerbare retentiebeleid voor gesprekken, logs en gebruikersgegevens.
+<Card title="SOC 2 Type II" icon="clock">
+SOC 2 Type II-audit loopt momenteel.
 </Card>
 </CardGroup>
 
-<Info>
-Deze controles zijn vandaag operationeel. Certificeringen zullen formeel valideren wat al op zijn plaats is.
-</Info>
+## Hosting en infrastructuur
 
----
+- **Hosting**: standaard Microsoft Azure West Europe, met EU-gebaseerde infrastructuur en controles voor gegevensresidentie.
+- **CDN**: Cloudflare voor content delivery en edge routing.
+- **Versleuteling**: TLS 1.2 of hoger tijdens transport, AES-256 in rust.
 
-## Certificeringsstatus
+## Beveiligingstests en audits
 
-<Update label="In uitvoering" description="Formele audits bezig">
-- SOC 2 Type II: third-party audit in uitvoering
-- ISO 27001: certificeringsproces geïnitieerd
-- GDPR: functies ter ondersteuning van rechten van betrokkenen geïmplementeerd; voer DPIA uit waar gepast
-</Update>
+- **Penetratietests**: jaarlijkse onafhankelijke (externe black-box) penetratietest.
+- **Onafhankelijke beveiligingsaudits**: periodieke informatiebeveiligingsaudits door derden.
+- **Sub-processors**: jaarlijkse beveiligingsbeoordelingen van sub-processors.
+- **Monitoring**: continue monitoring en incident response-procedures.
 
-<Warning>
-WonkaChat beschikt nog niet over formele certificeringen. We werken er actief aan.
-</Warning>
+## Toegang en authenticatie
 
-<Check>
-Je kunt WonkaChat vandaag met vertrouwen gebruiken; certificeringen zullen de bestaande controles formeel erkennen.
-</Check>
+- **Single sign-on**: OIDC (Microsoft, Google, of een aangepaste provider) of SAML, met de optie om SSO te verplichten voor niet-beheerders.
+- **Multi-factor authenticatie**: beschikbaar voor elk account.
+- **Role-based access control**: organisatierollen, deelpermissies (Viewer / Editor / Eigenaar), groepen en tool-policies — zie [Toegangsbeheer](/nl/security-governance/access-control).
+- **RBAC audit log**: een overzicht van permissie- en tool-policywijzigingen, voor verantwoording.
 
----
+## Modelregio's
 
-## Audit trails en logging
+WonkaChat bereikt AI-modellen via een AI-gateway die verbindt met verschillende providers — Microsoft Azure, Google Vertex AI, Mistral en andere — die elk modellen hosten in een specifieke regio.
 
-- **Uitgebreid logging-systeem**: Winston-gebaseerde gestructureerde logging
-- **Log niveaus**: TRACE (10), DEBUG (20), INFO (30), WARN (40), ERROR (50), FATAL (60)
-- **Beveiligingsgebeurtenis logging**: Auth-pogingen, permissiewijzigingen, rate limits, verdachte activiteit
-- **Migratie audit trail**: Schema-wijzigingen, upgrades, config-modificaties, versie-tracking
-- **Gebruikersactiviteit logging**: Sessies, agent- en tool-gebruik, gegevenstoegang/exports
+- De meeste modellen draaien in de **EU**.
+- Sommige modellen draaien in de **VS**.
+- Sommige worden bereikt via een **globaal** endpoint dat niet aan één regio gebonden is.
 
-<Info>
-Gevoelige gegevens (wachtwoorden, API-keys, tokens) worden automatisch geredigeerd uit logs.
-</Info>
+De modelkiezer toont een regiobadge (EU, VS of globaal) naast elk model, zodat u kunt zien waar een model draait voordat u het gebruikt. **Gegevens die u naar een model stuurt, worden verwerkt in de regio van dat model.** Als uw organisatie AI-gebruik binnen de EU moet houden, vraag dan uw beheerder om de beschikbare modellen te beperken tot modellen die in de EU gehost worden — zie [Groepen en tool-policies](/nl/administration/groups-and-tool-policies).
 
----
-
-## Gegevensretentiebeleid
-
-### Gespreksgegevens
-
-<AccordionGroup>
-<Accordion title="Tijdelijke chat retentie">
-Schakel automatische verwijdering van gespreksgeschiedenis in na een geconfigureerde periode.
-
-- Tijdelijke chat: ingeschakeld
-- Retentievenster: 24 uur
-- Functies: automatische opruimjobs, door gebruiker gecontroleerde verwijdering, admin override, soft delete met herstel
-</Accordion>
-
-<Accordion title="Permanente gesprekken">
-Behoud gesprekken voor onbepaalde tijd tot handmatig verwijderd. Het beste voor kennisbases en langetermijnprojecten.
-</Accordion>
-</AccordionGroup>
-
-### Log retentie
-
-Aanbevolen retentie:
-
-- Error logs: 90 dagen (debugging en probleemoplossing)
-- Combined logs: 30 dagen (algemene activiteit)
-- Security logs: 365 dagen (compliance-vereisten)
-- Audit logs: 7 jaar (juridische en regelgevende vereisten)
-- Violation logs: 180 dagen (overtreding tracking)
-
-Rotatie-instellingen:
-
-- Dagelijkse rotatie met datum-gebaseerde bestandsnamen
-- Max bestandsgrootte: 50 MB
-- Behoud laatste 30 dagen aan bestanden
-- Comprimeer oudere bestanden
-
-### Gebruikersgegevens
-
-Retentieregels:
-
-- Actieve gebruikers: behouden zolang account actief is
-- Inactieve gebruikers: 90 dagen na laatste activiteit
-- Verwijderde gebruikers: 30 dagen (soft delete met herstel)
-- Gesprekken: door gebruiker gecontroleerde retentie
-- Bestanden: 90 dagen na laatste toegang
-- Sessies: 7 dagen
-- Tokens: verlopen bij refresh (typisch 15 minuten tot 7 dagen)
-
----
+<Note>
+WonkaChat zelf — uw gesprekken, bestanden, agenten en organisatiegegevens — wordt gehost op Microsoft Azure West Europe, ongeacht welk model u gebruikt. De modelregio geldt alleen voor het bericht dat u naar dat model stuurt voor verwerking.
+</Note>
 
 ## Meer informatie nodig?
 
 <Card title="Neem contact op" icon="handshake" href="/nl/support-resources/getting-help">
-Voor vragen over compliance, beveiligingsdocumentatie of leveranciersbeoordelingen, neem contact op met ons team voor assistentie.
+Voor vragen over compliance, beveiligingsdocumentatie, of leveranciersbeoordelingen, neem contact op met ons team.
 </Card>

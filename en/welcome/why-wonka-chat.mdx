@@ -1,9 +1,9 @@
 ---
 title: "Why Choose WonkaChat?"
-description: "Superior security, true flexibility, and seamless integration with your softwares and business tools."
+description: "Superior security, true flexibility, and seamless integration with your software and business tools."
 ---
 
-WonkaChat goes beyond traditional AI assistants by offering enterprise-grade security, genuine tool and external software integration, and the flexibility to adapt to your specific business needs.
+WonkaChat goes beyond traditional AI assistants by offering enterprise-grade security, genuine integration with your existing tools, and the flexibility to adapt to your specific business needs.
 
 <Tabs>
 <Tab title="Getting Started">
@@ -11,12 +11,12 @@ WonkaChat goes beyond traditional AI assistants by offering enterprise-grade sec
 ## Unique Value Propositions
 
 <CardGroup cols={2}>
-<Card title="External Softwares Integration" icon="puzzle-piece">
+<Card title="External Software Integration" icon="puzzle-piece">
 Unlike copy-paste workflows with other AI tools, WonkaChat directly connects and acts within your ecosystem.
 </Card>
 
-<Card title="Choose Your AI Models" icon="toggle-on">
-You are not locked into a single provider and can choose any AI model that fits your task.
+<Card title="Choose Your Model" icon="toggle-on">
+You're not locked into a single model. Pick the size that fits the task, or let the Router choose for you.
 </Card>
 </CardGroup>
 
@@ -32,7 +32,7 @@ You receive a completely isolated environment with encrypted communications and 
 </Card>
 
 <Card title="Team AI Training" icon="certificate">
-We offer comprehensive training to help your team use AI securely, follow best practices, and maintain compliance. 
+We offer comprehensive training to help your team use AI securely, follow best practices, and maintain compliance.
 
 To learn more or request a customized training session, [contact us](/en/support-resources/getting-help).
 </Card>
@@ -52,20 +52,13 @@ For more details, see the [Security & Governance](/en/security-governance/securi
 
 ## Flexibility and Customization Benefits
 
-### Model Selection for Every Task
+### The Right Model for Every Task
 
-WonkaChat lets you choose the right AI model for each situation:
+WonkaChat lets you choose how the AI responds to each situation, without having to know or manage individual model names:
 
 <Tabs>
-<Tab title="Pro/Thinking Models">
+<Tab title="Standard and advanced models">
 **Best for:** Complex analysis, multi-step reasoning, strategic planning, and external tool connections
-
-**Available Models:**
-- **Claude Opus 4.5** - Highest capability for complex reasoning and coding
-- **Claude Sonnet 4.5** - Balanced performance for most advanced tasks
-- **GPT-5.2** - Latest OpenAI model with advanced capabilities
-- **GPT-5** - Strong reasoning and agentic workflows
-- **Gemini 2.5 Pro** - Massive 1M context window for long documents
 
 **Use when you need:**
 - Deep analysis of business data
@@ -80,14 +73,8 @@ WonkaChat lets you choose the right AI model for each situation:
 - "Review this contract and identify potential risks"
 </Tab>
 
-<Tab title="Fast Models">
+<Tab title="Fast models">
 **Best for:** Quick answers, simple tasks, fast responses, and high-volume operations
-
-**Available Models:**
-- **GPT-4o mini** - Most cost-effective for high-volume tasks
-- **Gemini 2.5 Flash** - Fast with large 1M context window
-- **Claude Haiku 4.5** - Fastest Claude model with near-frontier intelligence
-- **Gemini 3 Flash** - Next-generation speed and large 1M context window
 
 **Use when you need:**
 - Rapid information retrieval
@@ -102,15 +89,13 @@ WonkaChat lets you choose the right AI model for each situation:
 - "Summarize this email thread"
 
 <Warning>
-While fast models are excellent for quick and straightforward tasks, they may not handle complex queries requiring deep reasoning or extensive external software connections. 
-
-Consider the task requirements carefully when choosing your model.
+Fast models are excellent for quick, straightforward tasks, but they don't have reasoning capabilities and aren't a good fit for complex system usage (ERP, CRM, and similar tools). Consider the task requirements before choosing this mode.
 </Warning>
 </Tab>
 </Tabs>
 
 <Info>
-Choose pro models for difficult tasks requiring deep analysis or external connections, and fast models for quick, straightforward queries or high-volume operations.
+Not sure which one to pick? WonkaChat's **Router** analyzes your request and automatically routes it to a suitable model. See [Choosing a Model](/en/improved-usage/choosing-a-model) for the full picture, including Fast and Pro modes.
 </Info>
 
 ---
@@ -136,30 +121,29 @@ Healthcare, finance, legal, and government organizations that need AI capabiliti
 </CardGroup>
 
 <Tip>
-WonkaChat is ideal when you are integrating AI deeply with your existing tools, concerned about data security, and maintaining flexibility in your AI strategy.
+WonkaChat is ideal when you are integrating AI deeply with your existing tools, concerned about data security, and want flexibility in how you use AI.
 </Tip>
-
 
 </Tab>
 
 <Tab title="Technical Details">
 
-## External Tool/Software/Data-Source Connection via MCP
+## External Tool and Data Connections via MCP
 
 ### Model Context Protocol (MCP)
 
 WonkaChat uses **MCP (Model Context Protocol)** to connect AI models to your business tools and software systems.
 
 <Info>
-**What is MCP?** MCP is an open protocol that enables secure, standardized connections between AI models and external tools. It allows WonkaChat to interact with your emails, calendars, databases, CRMs, and other business applications while maintaining security and permission boundaries.
+**What is MCP?** MCP is an open protocol that enables secure, standardized connections between AI models and external tools. It lets WonkaChat interact with your emails, calendars, databases, CRMs, and other business applications while maintaining security and permission boundaries.
 </Info>
 
-**Key MCP Capabilities:**
-- Direct integration with business systems (Outlook, Gmail, Salesforce, Notion, etc.)
+**Key MCP capabilities:**
+- Direct integration with business systems (Outlook, Gmail, Odoo, Notion, and more)
 - Secure credential management and authentication
 - Real-time data access and write operations
 - Permission inheritance from your existing user access
-- Audit logging for all tool interactions
+- Custom connectors your organization can add, subject to admin-controlled tool policies
 
 <Tip>
 For comprehensive information about MCP architecture, supported integrations, connection setup, and advanced configuration options, visit the [Tools & Connection](/en/tools-connection/introduction) section.
@@ -167,54 +151,38 @@ For comprehensive information about MCP architecture, supported integrations, co
 
 ---
 
-## Model Provider Flexibility
+## Model Flexibility, Explained
 
-### Multi-Provider Architecture
+### Sizes, Not Names
 
-WonkaChat's architecture is designed to be **model-agnostic**, allowing you to:
+Instead of asking you to track dozens of model names, WonkaChat groups models by what they're good at:
 
 <Tabs>
-<Tab title="Provider Options">
-**Supported AI Providers:**
-- **OpenAI**: GPT-5.2, GPT-5, GPT-4o, GPT-4o mini
-- **Anthropic (Claude)**: Opus 4.5, Sonnet 4.5, Sonnet 4, Haiku 4.5, Sonnet 3.7
-- **Google Gemini**: 2.5 Pro, 2.5 Flash, 3 Flash Preview, 3 Pro Preview
-- **Mistral**: Large Latest, Medium Latest
-- Multiple providers available across all major AI companies
+<Tab title="Model sizes">
+- **Fast models** — lightweight and quick, best for simple, high-volume requests without deep reasoning.
+- **Standard models** — balanced speed and reasoning for everyday professional work.
+- **Advanced reasoning models** — the deepest analysis for complex, multi-step, or high-stakes tasks.
 </Tab>
 
-<Tab title="Selection Criteria">
-**Factors to consider when choosing models:**
+<Tab title="Selection criteria">
+**Factors to consider when choosing a model size:**
 
-1. **Task Complexity**
-   - Pro models: Complex reasoning, analysis, tool usage, multi-step workflows
-   - Fast models: Quick queries, simple tasks, high-volume operations
-
-2. **Cost Optimization**
-   - Token pricing per provider
-   - Response latency requirements
-   - Quality vs. cost trade-offs
-
-3. **Performance Characteristics**
-   - Context window size (128K to 1M+ tokens)
-   - Token limits and output capacity
-   - Response generation speed
+1. **Task complexity** — advanced models for reasoning and tool-heavy work, fast models for quick, simple tasks.
+2. **Region** — each model in the selector shows a region badge; see [Security & Governance](/en/security-governance/security-overview) for details.
+3. **Organization policy** — administrators can restrict which models or sizes are available to your team.
 </Tab>
 
-<Tab title="Switching Strategy">
-**Benefits of multi-provider support:**
+<Tab title="Switching strategy">
+**Benefits of switching between sizes:**
 
-- **Avoid Vendor Lock-In**: Switch providers without changing workflows
-- **Cost Management**: Use cheaper models for simple tasks, pro models for complex ones
-- **Performance Optimization**: Route tasks to the fastest or most accurate model
-- **Redundancy**: Failover to alternative providers if one is unavailable
-- **A/B Testing**: Compare model performance for your specific use cases
+- **Match cost to task** — save advanced reasoning for the work that needs it.
+- **Speed when it matters** — use fast models for high-volume, low-complexity requests.
+- **Change anytime** — switch models mid-conversation as your task evolves.
 </Tab>
 </Tabs>
 
-
 <Tip>
-Model selection can be configured per organization, per team, or per individual user based on your governance policies.
+Model access can be configured per organization, per team, or per individual user based on your governance policies. Full details are in [Choosing a Model](/en/improved-usage/choosing-a-model).
 </Tip>
 
 </Tab>

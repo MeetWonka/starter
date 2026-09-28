@@ -1,0 +1,83 @@
+---
+title: "SSO et 2FA"
+description: "Configurez l'authentification unique pour votre organisation et activez l'authentification à deux facteurs pour votre compte."
+---
+
+## Authentification unique (SSO)
+
+<Note>
+Paramètres → Organisation → Sécurité → Authentification unique. Visible par les administrateurs autorisés à gérer la sécurité.
+</Note>
+
+WonkaChat prend en charge **OpenID Connect (OIDC)** avec Microsoft, Google ou un fournisseur personnalisé, ainsi que **SAML**. Un seul protocole est utilisé pour la connexion à la fois.
+
+Avant de commencer, demandez à votre fournisseur d'identité (votre service IT) :
+- **OIDC** : l'ID de locataire (Microsoft) ou l'ID client, ainsi qu'un secret client, et — pour un fournisseur personnalisé — l'URL de l'émetteur.
+- **SAML** : les métadonnées de l'IdP (une URL ou un fichier XML), ou manuellement l'URL SSO de l'IdP, l'ID d'entité de l'IdP et le certificat de l'IdP.
+
+### Configurer OIDC
+
+<Steps>
+<Step title="Choisir un fournisseur">
+Sous **Authentification**, choisissez **Microsoft**, **Google** ou **Personnalisé**.
+</Step>
+<Step title="Renseigner les informations du fournisseur">
+- Microsoft : **ID de locataire**, **ID client**.
+- Google : **ID client**.
+- Personnalisé : **URL de l'émetteur**, **ID client**.
+
+Renseignez le **secret client principal** (et éventuellement un **secret client secondaire** avec sa propre expiration, pour la rotation).
+</Step>
+<Step title="Enregistrer l'URI de redirection">
+Copiez l'**URI de redirection** affichée et ajoutez-la dans l'enregistrement de l'application chez votre fournisseur d'identité.
+</Step>
+<Step title="Tester, puis activer">
+Utilisez **Tester** pour confirmer que le secret est accepté, puis activez le fournisseur. Utilisez **Utiliser [fournisseur] pour la connexion** pour en faire le protocole actif.
+</Step>
+</Steps>
+
+### Configurer SAML
+
+<Steps>
+<Step title="Importer les métadonnées">
+Collez une **URL des métadonnées** ou téléversez un **fichier de métadonnées**, puis **Analyser les métadonnées** pour remplir les champs automatiquement — ou renseignez-les manuellement : **URL SSO de l'IdP**, **ID d'entité de l'IdP**, et le **certificat de l'IdP**.
+</Step>
+<Step title="Enregistrer l'URL ACS">
+Copiez l'**URL ACS (Assertion Consumer Service)** et enregistrez-la comme URL de réponse chez votre fournisseur d'identité. L'**ID d'entité SP** reprend par défaut l'URL ACS — ne le modifiez que si votre IdP exige un identifiant différent.
+</Step>
+<Step title="Attributs optionnels et signature">
+Renseignez l'**attribut e-mail** et l'**attribut nom** si votre IdP utilise des noms d'attributs non standard, choisissez le **format NameID** (Adresse e-mail, Persistant, Transitoire ou Non spécifié), et exigez des **assertions signées** et/ou une **réponse d'authentification signée** si votre IdP le prend en charge.
+</Step>
+<Step title="Tester, puis activer">
+**Testez** la configuration, puis activez SAML et définissez-le comme méthode de connexion.
+</Step>
+</Steps>
+
+### Exiger le SSO pour les utilisateurs non administrateurs
+
+Une fois un protocole actif, activez **Exiger SSO pour les utilisateurs non administrateurs** sous **Politique de connexion**. Seuls les administrateurs de l'organisation peuvent encore se connecter avec e-mail et mot de passe ; tous les autres utilisateurs doivent utiliser le SSO.
+
+<Warning>
+Effacer la configuration d'un fournisseur supprime ses secrets et certificats enregistrés. Désactiver un protocole ne fait que suspendre la connexion — les secrets sont conservés. Effectuez la rotation des secrets en ajoutant un nouveau secret secondaire avant de retirer le principal, pour éviter toute interruption de connexion.
+</Warning>
+
+## Authentification à deux facteurs (2FA)
+
+Chaque utilisateur peut activer la 2FA pour son propre compte depuis **Paramètres → Compte → Authentification à deux facteurs (2FA)**.
+
+<Steps>
+<Step title="Démarrer la configuration">
+Cliquez sur **Configuration de l'authentification à deux facteurs (2FA)**.
+</Step>
+<Step title="Scanner le QR code">
+Scannez-le avec votre application d'authentification (toute application TOTP), ou saisissez le secret manuellement.
+</Step>
+<Step title="Vérifier">
+Saisissez le code affiché par votre application pour confirmer la configuration.
+</Step>
+<Step title="Conserver vos codes de secours">
+Téléchargez les codes de secours affichés — ils ne sont montrés qu'une seule fois. Conservez-les en lieu sûr ; vous en aurez besoin en cas de perte d'accès à votre application d'authentification.
+</Step>
+</Steps>
+
+Vous pouvez **désactiver la 2FA** à tout moment depuis la même page, ou utiliser **Utiliser un code 2FA à la place** lors de la connexion si un code de secours vous est demandé.

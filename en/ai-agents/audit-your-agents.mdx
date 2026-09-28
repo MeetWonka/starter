@@ -1,0 +1,72 @@
+---
+title: "Audit Your Agents"
+description: "Review how others use the agents you own or edit, understand what you can see, and know what end-users are told."
+---
+
+If you own or edit an agent that other people in your organization use, you can review its activity: who used it, how much, and — if you choose to allow it — the content of the conversations and tool calls it made.
+
+<Note>
+Agent audit is an organization feature. Your administrator enables it under Settings → Organization → **Audit your agent**, together with two related sub-features: **Audit - View conversations** and **Audit - View tool calls**. If none of these are enabled, you only see anonymized usage numbers, never conversation content.
+</Note>
+
+## Two layers of control
+
+Seeing what happens inside a conversation with your agent depends on two separate things being true at once:
+
+1. **Your organization enables the audit feature.** An administrator must turn on **View conversations** and/or **View tool calls** for your organization.
+2. **You, as the agent owner or editor, opt in per agent.** Even when your organization allows it, nothing is visible until you switch it on for that specific agent.
+
+This means enabling audit at the organization level does not expose any conversation by itself — each agent owner decides, agent by agent, whether to share that data with editors.
+
+### Turning on data sharing for an agent
+
+<Steps>
+<Step title="Open the agent">
+Open the agent you want to audit. You need **Editor** or **Owner** rights.
+</Step>
+<Step title="Find Editor data access">
+Look for the **Editor data access** section ("Choose which audit data agent editors can review.").
+</Step>
+<Step title="Choose what to share">
+Turn on **Share conversations with agent editors** to let editors read message text. Turn on **Share tool calls with agent editors** to let editors see the tool calls the agent made. Each toggle only appears if your organization enabled the matching feature.
+</Step>
+</Steps>
+
+## What you can see without opting in
+
+Even without turning on data sharing, agent editors and owners can already see, for every conversation with the agent:
+
+- The conversation title and dates.
+- The number of user and agent messages.
+- The number of tool calls.
+- Total tokens used and the models involved.
+
+This is metadata only — no message text and no tool call content. By default, you only see your own conversations with the agent; sharing is what extends this to conversations from all users of the agent.
+
+## Opening the audit view
+
+Open the agent's **⋯** menu and choose the audit action, or go to **Settings → Audit your agents** and select the agent from the list. Each conversation opens into a per-message breakdown showing the metadata above, plus message text and tool call details wherever your organization and the agent owner have both enabled it.
+
+## What end-users are told
+
+When any sharing is turned on for an agent, WonkaChat tells the people chatting with it before they continue. They see a disclaimer badge, **"Conversation auditable by agent editor,"** and, depending on what is shared:
+
+- **"This conversation is shared with the agent editors"** when conversation content sharing is on.
+- **"Tool calls in this conversation are shared with the agent editors"** when tool call sharing is on.
+
+<Warning>
+This disclaimer is shown to end-users, not just to you. Only enable sharing for agents where users are expected to have their conversations reviewed — for example internal support or compliance agents — and make sure your organization's usage policy reflects it.
+</Warning>
+
+## Agent Stats
+
+Separately from audit, **Agent Stats** (Settings → Agent Stats) gives agent owners and editors anonymized, aggregated usage figures for an agent: daily activity, token usage and cost broken down by model, and a transaction log — all combined across every user of the agent, without exposing who said what. Your organization must enable the corresponding feature for this tab to appear.
+
+<Info>
+Your own usage across all agents is available under **Settings → My Stats**. Organization-wide totals are under **Settings → Organization Stats**, for administrators.
+</Info>
+
+## Related
+
+- [Create your first agent](/en/ai-agents/creating-your-first-agent)
+- [Scheduled and Triggered Agents](/en/ai-agents/scheduled-agents)

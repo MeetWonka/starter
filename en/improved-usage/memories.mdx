@@ -1,0 +1,58 @@
+---
+title: "Memories"
+description: "What the assistant remembers about you across conversations, and how to control it."
+---
+
+**Memories** let the assistant carry useful facts across conversations — your role, a recurring project, a preference you've stated — instead of you repeating yourself every time. Memories are personal: only you see your own.
+
+<Info>
+Memories is an optional organization feature. If you don't see **Memories** in your sidebar or in Settings, ask your administrator.
+</Info>
+
+---
+
+## How Memories Get Created
+
+The assistant can save a memory on its own when something worth remembering comes up in a conversation — for example, "the client's name is Acme Corp" or "I prefer bullet points over long paragraphs." You can also add one yourself.
+
+<Steps>
+<Step title="Open Memories">
+Go to **Customize** or your sidebar and open **Memories** to see everything currently saved.
+</Step>
+<Step title="Add one manually">
+Click **Create Memory**, then fill in a **Key** and a **Value** — for example, key `preferred_language`, value `French`.
+</Step>
+</Steps>
+
+## Viewing, Editing, and Deleting Memories
+
+Every saved memory appears in the **Memories** view with its key and value. From there you can:
+- Edit an existing memory's value
+- Delete a memory you no longer want kept
+- Filter the list to find a specific memory
+
+<Tip>
+Memory keys must use lowercase letters and underscores only (for example `favorite_tools`, not `Favorite Tools`).
+</Tip>
+
+## Scoping Memory to a Project
+
+By default, memories apply across all your conversations (**User** scope). If [Projects](/en/improved-usage/projects) is enabled for your organization, you can instead scope a memory to **This project**, so it only applies while you're working inside that project.
+
+## Storage Limits
+
+Your organization sets a total size for your saved memories (a token and character budget). If you're near the limit, WonkaChat tells you when creating or updating a memory would exceed it — delete something you no longer need to make room.
+
+## Turning Memories Off
+
+If you'd rather the assistant not use what it has saved, go to **Settings → Memories** and turn off **Reference saved memories**. This stops the assistant from using your saved memories in its responses without deleting them.
+
+<Note>
+Your administrator can also disable memory creation, reading, updating, or opting out entirely at the organization level. If any of these controls are missing for you, that's likely why.
+</Note>
+
+---
+
+## For Admins
+
+Organization owners control memory permissions from **Settings → Organization**: allow creating, reading, and updating memories, and whether users are allowed to opt out. Memories can be disabled for the whole organization at any time.

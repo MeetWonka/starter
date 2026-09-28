@@ -1,0 +1,83 @@
+---
+title: "SSO en 2FA"
+description: "Stel eenmalige aanmelding in voor uw organisatie en schakel tweefactorauthenticatie in voor uw account."
+---
+
+## Eenmalige aanmelding (SSO)
+
+<Note>
+Instellingen → Organisatie → Beveiliging → Eenmalige aanmelding. Zichtbaar voor beheerders die beveiliging mogen beheren.
+</Note>
+
+WonkaChat ondersteunt **OpenID Connect (OIDC)** met Microsoft, Google of een aangepaste provider, en **SAML**. Er wordt telkens maar één protocol gebruikt om in te loggen.
+
+Vraag voordat u begint het volgende op bij uw identity provider (uw IT-beheer):
+- **OIDC**: Tenant-ID (Microsoft) of Client-ID, plus een clientgeheim, en — voor een aangepaste provider — de Issuer-URL.
+- **SAML**: de IdP-metadata (een URL of een XML-bestand), of handmatig de IdP SSO-URL, het IdP entity-ID en het IdP-certificaat.
+
+### OIDC instellen
+
+<Steps>
+<Step title="Kies een provider">
+Kies onder **Authenticatie** voor **Microsoft**, **Google** of **Aangepast**.
+</Step>
+<Step title="Providergegevens invullen">
+- Microsoft: **Tenant-ID**, **Client-ID**.
+- Google: **Client-ID**.
+- Aangepast: **Issuer-URL**, **Client-ID**.
+
+Vul het **primaire clientgeheim** in (en optioneel een **secundair clientgeheim** met eigen vervaldatum, voor rotatie).
+</Step>
+<Step title="Redirect-URI registreren">
+Kopieer de getoonde **Redirect-URI** en voeg deze toe aan de app-registratie bij uw identity provider.
+</Step>
+<Step title="Testen, dan inschakelen">
+Gebruik **Test** om te bevestigen dat het geheim wordt geaccepteerd, en schakel de provider daarna in. Gebruik **[provider] gebruiken voor login** om deze het actieve protocol te maken.
+</Step>
+</Steps>
+
+### SAML instellen
+
+<Steps>
+<Step title="Metadata importeren">
+Plak een **Metadata-URL** of upload een **Metadatabestand**, en klik op **Metadata parsen** om de velden automatisch in te vullen — of vul ze handmatig in: **IdP SSO-URL**, **IdP entity-ID**, en het **IdP-certificaat**.
+</Step>
+<Step title="ACS-URL registreren">
+Kopieer de **ACS-URL (Assertion Consumer Service)** en registreer deze als Reply-URL bij uw identity provider. Het **SP entity-ID** valt standaard terug op de ACS-URL — wijzig dit alleen als uw IdP een andere identifier vereist.
+</Step>
+<Step title="Optionele claims en ondertekening">
+Stel de **e-mailclaim** en **naamclaim** in als uw IdP niet-standaard attribuutnamen gebruikt, kies het **NameID-formaat** (E-mailadres, Persistent, Tijdelijk of Niet gespecificeerd), en vereis **ondertekende assertions** en/of een **ondertekend authenticatieantwoord** als uw IdP dit ondersteunt.
+</Step>
+<Step title="Testen, dan inschakelen">
+**Test** de configuratie, schakel SAML daarna in en stel het in als aanmeldmethode.
+</Step>
+</Steps>
+
+### SSO verplichten voor niet-beheerders
+
+Zodra een protocol actief is, schakelt u **SSO verplichten voor niet-beheerders** in onder **Aanmeldbeleid**. Alleen organisatiebeheerders kunnen dan nog inloggen met e-mail en wachtwoord; alle andere gebruikers moeten SSO gebruiken.
+
+<Warning>
+Het wissen van de configuratie van een provider verwijdert de opgeslagen geheimen en certificaten. Een protocol uitschakelen zet het inloggen alleen op pauze — geheimen blijven bewaard. Roteer geheimen door eerst een nieuw secundair geheim toe te voegen voordat u het primaire verwijdert, om een onderbreking van het inloggen te vermijden.
+</Warning>
+
+## Tweefactorauthenticatie (2FA)
+
+Elke gebruiker kan 2FA voor het eigen account inschakelen via **Instellingen → Account → Two-Factor Authentication (2FA)**.
+
+<Steps>
+<Step title="Configuratie starten">
+Klik op **Setup 2FA**.
+</Step>
+<Step title="QR-code scannen">
+Scan deze met uw authenticator-app (elke TOTP-app), of voer het geheim handmatig in.
+</Step>
+<Step title="Verifiëren">
+Voer de code in die uw app toont om de configuratie te bevestigen.
+</Step>
+<Step title="Back-upcodes bewaren">
+Download de getoonde back-upcodes — ze worden maar één keer getoond. Bewaar ze op een veilige plaats; u hebt er een nodig als u geen toegang meer hebt tot uw authenticator-app.
+</Step>
+</Steps>
+
+U kunt 2FA op elk moment uitschakelen vanaf dezelfde pagina, of bij het inloggen een back-upcode gebruiken wanneer daarom wordt gevraagd.
