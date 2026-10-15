@@ -126,6 +126,25 @@ To add a release, create `scripts/changelog/entries/YYYY-MM-DD.yaml` (copy the l
 python3 scripts/changelog/build.py
 ```
 
+## 🧠 Model Comparison
+
+The **Model comparison** page (`<lang>/improved-usage/model-comparison.mdx`) is generated from the models offered in the WonkaChat model picker (Config repo, prod).
+
+- `scripts/models/models.json`: snapshot of the models, with speed, cost tier, region, reasoning and context window
+- `scripts/models/catalog.yaml`: hand-maintained "best for" texts, task recommendations and the public benchmark scores (one source, with its version and date)
+- `scripts/models/build.py`: refreshes the snapshot and writes the pages in en, fr and nl
+
+Costs are shown as tiers (€ to €€€€) only: exact prices live on wonka-ai.com/pricing.
+
+When a model is added or removed in production, or when benchmarks are refreshed:
+
+```bash
+python3 scripts/models/build.py sync --config ../Config
+python3 scripts/models/build.py generate
+```
+
+The script warns about models without a translated description and tasks recommending a model that is no longer offered. Update `updated:` in `catalog.yaml` each time.
+
 ## 🚀 Publishing Changes
 
 ### Automatic Deployment

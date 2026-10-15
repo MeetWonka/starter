@@ -1,0 +1,152 @@
+# Hand-maintained content for the model comparison page.
+#
+# Which models exist, their speed, cost tier, region, reasoning and context window
+# come from models.json, refreshed with `python3 scripts/models/build.py sync`.
+# Edit this file for wording, task recommendations and benchmarks.
+
+# Date shown at the bottom of the page. Change it whenever you sync or edit.
+updated: 2026-10-15
+
+# Models in the picker that should not appear on the help page.
+hidden: []
+
+# Provider shown for each WonkaChat endpoint.
+providers:
+  OpenAI: OpenAI
+  Claude: Anthropic
+  Gemini: Google
+  Mistral: Mistral AI
+  Moonshot AI: Moonshot AI
+  Z.ai: Z.ai
+
+# Task → recommended models, best first. Use model ids from models.json.
+tasks:
+  - id: everyday
+    label:
+      en: Everyday writing, emails and summaries
+      fr: Rédaction courante, e-mails et résumés
+      nl: Dagelijks schrijven, e-mails en samenvattingen
+    models: [gpt-5.6-luna@eu, claude-sonnet-5-5@eu, mistral-large-4@eu]
+  - id: tools
+    label:
+      en: Connected business tools (ERP, CRM, email)
+      fr: Outils métier connectés (ERP, CRM, e-mail)
+      nl: Verbonden bedrijfstools (ERP, CRM, e-mail)
+    models: [gpt-6.1-sol@eu, claude-sonnet-5-5@eu, gpt-5.6-luna@eu]
+  - id: complex
+    label:
+      en: Complex analysis, strategy and hard problems
+      fr: Analyse complexe, stratégie et problèmes difficiles
+      nl: Complexe analyse, strategie en moeilijke vraagstukken
+    models: [vertex/claude-opus-5-5@eu, gpt-6.1-sol@eu, claude-sonnet-5-5@eu]
+  - id: fast
+    label:
+      en: Quick answers and high volumes
+      fr: Réponses rapides et gros volumes
+      nl: Snelle antwoorden en grote volumes
+    models: [vertex/claude-haiku-5-5@eu, vertex/gemini-3.8-flash@eu, vertex/gemini-3.1-flash-lite@eu]
+  - id: multimodal
+    label:
+      en: Images, scans and visual documents
+      fr: Images, scans et documents visuels
+      nl: Afbeeldingen, scans en visuele documenten
+    models: [vertex/gemini-3.8-flash@eu, vertex/gemini-3.1-pro-preview, gpt-6.1-sol@eu]
+  - id: long
+    label:
+      en: Very long documents
+      fr: Documents très longs
+      nl: Zeer lange documenten
+    models: [vertex/gemini-3.1-pro-preview, moonshot/kimi-k3, inceptron/glm-5.2]
+  - id: europe
+    label:
+      en: Data that must stay in Europe
+      fr: Données qui doivent rester en Europe
+      nl: Gegevens die in Europa moeten blijven
+    models: [mistral-large-4@eu, gpt-5.6-luna@eu, claude-sonnet-5-5@eu]
+
+# "Best for" text per model. Falls back to the English config description.
+descriptions:
+  gpt-5.6-luna@eu:
+    en: Balanced everyday work at a low cost
+    fr: Travail quotidien équilibré, à faible coût
+    nl: Evenwichtig dagelijks werk tegen lage kosten
+  gpt-6.1-sol@eu:
+    en: Strong reasoning for demanding professional work and connected tools
+    fr: Raisonnement solide pour le travail professionnel exigeant et les outils connectés
+    nl: Sterk redeneren voor veeleisend professioneel werk en verbonden tools
+  vertex/claude-haiku-5-5@eu:
+    en: Fast answers for high volumes and cost-sensitive work
+    fr: Réponses rapides pour les gros volumes et les usages à petit budget
+    nl: Snelle antwoorden voor grote volumes en kostenbewust werk
+  claude-sonnet-5-5@eu:
+    en: Strong reasoning with balanced speed and natural writing
+    fr: Raisonnement solide, vitesse équilibrée et écriture naturelle
+    nl: Sterk redeneren met evenwichtige snelheid en natuurlijke schrijfstijl
+  vertex/claude-opus-5-5@eu:
+    en: The most capable Claude model, for the hardest tasks
+    fr: Le modèle Claude le plus performant, pour les tâches les plus difficiles
+    nl: Het krachtigste Claude-model, voor de moeilijkste taken
+  vertex/gemini-3.8-flash@eu:
+    en: Fast work on text, images and documents
+    fr: Travail rapide sur du texte, des images et des documents
+    nl: Snel werk met tekst, afbeeldingen en documenten
+  gemini-3.7-flash@eu:
+    en: Previous fast Gemini model for text, images and documents
+    fr: Ancien modèle Gemini rapide pour le texte, les images et les documents
+    nl: Vorig snel Gemini-model voor tekst, afbeeldingen en documenten
+  vertex/gemini-3.1-flash-lite@eu:
+    en: The lowest-cost option for light tasks
+    fr: L'option la moins chère pour les tâches légères
+    nl: De goedkoopste optie voor lichte taken
+  vertex/gemini-3.1-pro-preview:
+    en: Advanced reasoning on long and visual documents (preview)
+    fr: Raisonnement avancé sur des documents longs et visuels (préversion)
+    nl: Geavanceerd redeneren over lange en visuele documenten (preview)
+  mistral-large-4@eu:
+    en: European model for capable, cost-efficient work
+    fr: Modèle européen performant et économique
+    nl: Europees model voor krachtig en kostenefficiënt werk
+  mistral/mistral-medium-latest:
+    en: Efficient European model for everyday work
+    fr: Modèle européen efficace pour le travail quotidien
+    nl: Efficiënt Europees model voor dagelijks werk
+  moonshot/kimi-k3:
+    en: Reasoning on very long documents
+    fr: Raisonnement sur des documents très longs
+    nl: Redeneren over zeer lange documenten
+  moonshot/kimi-k2.5:
+    en: Efficient work on long documents
+    fr: Travail efficace sur des documents longs
+    nl: Efficiënt werk met lange documenten
+  inceptron/glm-5.2:
+    en: Reasoning on long documents, hosted in Europe
+    fr: Raisonnement sur des documents longs, hébergé en Europe
+    nl: Redeneren over lange documenten, gehost in Europa
+
+# Public benchmark. One source only, so scores are comparable. Keys are model ids.
+# Variant: the "high" reasoning setting where Artificial Analysis lists it; Kimi K3 and GLM 5.2 only
+# have "max". Kimi K2.5 is an Artificial Analysis estimate. Re-check every score when you change the
+# source version: v4.3.2 is not on the same scale as v4.1.
+benchmark:
+  source: Artificial Analysis Intelligence Index v4.3.2
+  url: https://artificialanalysis.ai/leaderboards/models
+  retrieved: 2026-10-15
+  label:
+    en: Intelligence Index
+    fr: Intelligence Index
+    nl: Intelligence Index
+  scores:
+    vertex/claude-opus-5-5@eu: 54
+    gpt-6.1-sol@eu: 50
+    claude-sonnet-5-5@eu: 47
+    moonshot/kimi-k3: 44
+    vertex/gemini-3.8-flash@eu: 41
+    gemini-3.7-flash@eu: 39
+    vertex/claude-haiku-5-5@eu: 38
+    mistral-large-4@eu: 38
+    inceptron/glm-5.2: 34
+    gpt-5.6-luna@eu: 32
+    vertex/gemini-3.1-pro-preview: 30
+    moonshot/kimi-k2.5: 23
+    vertex/gemini-3.1-flash-lite@eu: 16
+    mistral/mistral-medium-latest: 14
