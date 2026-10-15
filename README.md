@@ -96,6 +96,24 @@ Every documentation page must include:
 
 ⚠️ **Important**: Only document features that actually exist in WonkaChat. Do not create speculative or placeholder content. All features, UI elements, and workflows must be verified against the actual product.
 
+## 🔌 Integrations Catalog
+
+The **All integrations** page (`<lang>/tools-connection/integrations-catalog.mdx`) is generated, not written by hand. It lists every connector available in WonkaChat production, grouped by how it connects (one-click sign-in, API key, tool details, set up with Wonka).
+
+- `scripts/integrations/servers.json`: snapshot of the production connectors and their auth scheme
+- `scripts/integrations/catalog.yaml`: hand-maintained display names, API key hints and hidden connectors
+- `scripts/integrations/build.py`: refreshes the snapshot and writes the pages in en, fr and nl
+
+After a connector is added to or removed from production (Config repo), refresh and regenerate:
+
+```bash
+# needs a local clone of the Config repo and the composio CLI logged in to the WonkaChat project
+python3 scripts/integrations/build.py sync --config ../Config
+python3 scripts/integrations/build.py generate
+```
+
+The script prints a warning for each new connector without a display name or, for API key connectors, without a hint: add them to `catalog.yaml` and run `generate` again.
+
 ## 🚀 Publishing Changes
 
 ### Automatic Deployment

@@ -66,6 +66,7 @@
                 "pages": [
                   "en/tools-connection/introduction",
                   "en/tools-connection/setting-up-your-first-connection",
+                  "en/tools-connection/integrations-catalog",
                   "en/tools-connection/custom-connectors",
                   "en/tools-connection/troubleshooting-connections",
                   "en/tools-connection/examples-of-tool-usage"
@@ -228,6 +229,7 @@
                 "pages": [
                   "fr/tools-connection/introduction",
                   "fr/tools-connection/setting-up-your-first-connection",
+                  "fr/tools-connection/integrations-catalog",
                   "fr/tools-connection/custom-connectors",
                   "fr/tools-connection/troubleshooting-connections",
                   "fr/tools-connection/examples-of-tool-usage"
@@ -390,6 +392,7 @@
                 "pages": [
                   "nl/tools-connection/introduction",
                   "nl/tools-connection/setting-up-your-first-connection",
+                  "nl/tools-connection/integrations-catalog",
                   "nl/tools-connection/custom-connectors",
                   "nl/tools-connection/troubleshooting-connections",
                   "nl/tools-connection/examples-of-tool-usage"
@@ -552,6 +555,7 @@
                 "pages": [
                   "fr/tools-connection/introduction",
                   "fr/tools-connection/setting-up-your-first-connection",
+                  "fr/tools-connection/integrations-catalog",
                   "fr/tools-connection/custom-connectors",
                   "fr/tools-connection/troubleshooting-connections",
                   "fr/tools-connection/examples-of-tool-usage"

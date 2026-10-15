@@ -1,0 +1,189 @@
+# Hand-maintained overrides for the integrations catalog page.
+#
+# Everything else (which connectors exist, how they authenticate, their logos)
+# comes from servers.json, refreshed with `python3 scripts/integrations/build.py sync`.
+# Only edit this file when a new connector needs a nicer name, a hint on where
+# to find its API key, or must be hidden from the public catalog.
+
+# Connectors present in the WonkaChat config but not listed on the help page:
+# test servers and legacy duplicates of a connector that has a newer version.
+hidden:
+  - odoo-test
+  - cal.com            # superseded by cal_v2
+  - outlook_mail       # superseded by outlook_v2
+  - outlook_calendar   # superseded by outlook_v2
+
+# Force a connection mode when it cannot be inferred from the config.
+# Modes: oauth | api_key | credentials | assisted
+modes:
+  horus: oauth          # OAuth runs inside the MCP: the sign-in link is given in the chat
+  ringover: api_key
+
+# Short note shown on a connector's card, per language.
+notes:
+  horus:
+    en: Activate it, then ask WonkaChat to connect your Horus license. It replies with a Horus sign-in link.
+    fr: Activez-le, puis demandez à WonkaChat de connecter votre licence Horus. Il vous répond avec un lien de connexion Horus.
+    nl: Activeer hem en vraag WonkaChat om uw Horus-licentie te koppelen. U krijgt een Horus-aanmeldlink terug.
+
+# Display names. Default is the server key in Title Case without the _vN suffix.
+names:
+  airtable_v2: Airtable
+  apify_v2: Apify
+  apollo_v2: Apollo.io
+  asana_v2: Asana
+  attio_v2: Attio
+  axonaut: Axonaut
+  basecamp_v2: Basecamp
+  bitbucket_v2: Bitbucket
+  box_v2: Box
+  breezeway: Breezeway
+  brevo_v2: Brevo
+  cal_v2: Cal.com
+  calendly_v2: Calendly
+  canva_v2: Canva
+  clickup_v2: ClickUp
+  close: Close
+  confluence_v2: Confluence
+  contentful_v2: Contentful
+  dropbox_v2: Dropbox
+  dropcontact_v2: Dropcontact
+  dynamics_365_v2: Microsoft Dynamics 365
+  eventbrite_v2: Eventbrite
+  facebook_v2: Facebook Pages
+  fathom: Fathom
+  fireflies_v2: Fireflies.ai
+  figma_v2: Figma
+  github_v2: GitHub
+  gitlab_v2: GitLab
+  gmail_v2: Gmail
+  google_ads_v2: Google Ads
+  google_analytics_v2: Google Analytics
+  google_calendar_v2: Google Calendar
+  google_docs_v2: Google Docs
+  google_drive_v2: Google Drive
+  google_maps_v2: Google Maps
+  google_search_console_v2: Google Search Console
+  google_sheets_v2: Google Sheets
+  google_super_v2: Google Workspace (all-in-one)
+  greenhouse_v2: Greenhouse
+  heyreach_v2: HeyReach
+  hostaway: Hostaway
+  horus: Horus
+  hubspot_v2: HubSpot
+  instagram_v2: Instagram
+  instantly_v2: Instantly
+  intercom_v2: Intercom
+  jira_v2: Jira
+  klaviyo: Klaviyo
+  leexi_v2: Leexi
+  lemlist_v2: lemlist
+  linear_v2: Linear
+  linkedin_v2: LinkedIn
+  meta_ads_v2: Meta Ads
+  miro_v2: Miro
+  mailchimp_v2: Mailchimp
+  microsoft_teams_v2: Microsoft Teams
+  microsoft_power_bi_v2: Power BI
+  microsoft_todo_v2: Microsoft To Do
+  monday_v2: monday.com
+  nocrm_io_v2: noCRM.io
+  notion_v2: Notion
+  odoo: Odoo
+  onedrive_v2: OneDrive
+  onenote_v2: OneNote
+  outlook_v2: Outlook (mail and calendar)
+  pagerduty_v2: PagerDuty
+  pennylane: Pennylane
+  pipedrive_v2: Pipedrive
+  plaud: Plaud
+  productboard_v2: Productboard
+  qonto: Qonto
+  quickbooks_v2: QuickBooks
+  ringover: Ringover
+  salesforce_v2: Salesforce
+  semrush_v2: Semrush
+  sentry_v2: Sentry
+  sharepoint_v2: SharePoint
+  shopify_v2: Shopify
+  slack_v2: Slack
+  smartlead_v2: Smartlead
+  spendesk: Spendesk
+  square_v2: Square
+  stafiz: Stafiz
+  stripe_v2: Stripe
+  supabase: Supabase
+  tally_v2: Tally
+  tiktok_ads_v2: TikTok Ads
+  trello_v2: Trello
+  todoist_v2: Todoist
+  typeform_v2: Typeform
+  vercel: Vercel
+  whatsapp_v2: WhatsApp Business
+  wordpress_com: WordPress.com
+  wrike_v2: Wrike
+  yousign: Yousign
+  youtube_v2: YouTube
+  zendesk_v2: Zendesk
+  zoho_books_v2: Zoho Books
+  zoom_v2: Zoom
+
+# Where to find the API key, per language. Shown in the "API key" table.
+# Menu paths change over time: keep them short and point to the area, not the exact click.
+api_key_hints:
+  apify_v2:
+    en: Apify Console → Settings → API & Integrations
+    fr: Console Apify → Settings → API & Integrations
+    nl: Apify Console → Settings → API & Integrations
+  apollo_v2:
+    en: Apollo → Settings → Integrations → API (master key)
+    fr: Apollo → Settings → Integrations → API (clé « master »)
+    nl: Apollo → Settings → Integrations → API (master key)
+  dropcontact_v2:
+    en: Dropcontact → your account → API
+    fr: Dropcontact → votre compte → API
+    nl: Dropcontact → uw account → API
+  fireflies_v2:
+    en: Fireflies → Integrations → Fireflies API
+    fr: Fireflies → Integrations → Fireflies API
+    nl: Fireflies → Integrations → Fireflies API
+  heyreach_v2:
+    en: HeyReach → Settings → Integrations → API key
+    fr: HeyReach → Settings → Integrations → API key
+    nl: HeyReach → Settings → Integrations → API key
+  instantly_v2:
+    en: Instantly → Settings → Integrations → API keys
+    fr: Instantly → Settings → Integrations → API keys
+    nl: Instantly → Settings → Integrations → API keys
+  leexi_v2:
+    en: Leexi → Settings → API keys (company admin)
+    fr: Leexi → Paramètres → Clés API (administrateur de l'entreprise)
+    nl: Leexi → Instellingen → API-sleutels (bedrijfsbeheerder)
+  lemlist_v2:
+    en: lemlist → Settings → Integrations → API
+    fr: lemlist → Paramètres → Intégrations → API
+    nl: lemlist → Settings → Integrations → API
+  nocrm_io_v2:
+    en: noCRM.io → Admin panel → Integrations → API keys
+    fr: noCRM.io → Panneau d'administration → Intégrations → Clés API
+    nl: noCRM.io → Admin panel → Integrations → API keys
+  pipedrive_v2:
+    en: Pipedrive → Personal preferences → API
+    fr: Pipedrive → Préférences personnelles → API
+    nl: Pipedrive → Persoonlijke voorkeuren → API
+  ringover:
+    en: Ringover dashboard → Developer → API keys (created by an admin, EU workspaces only)
+    fr: Tableau de bord Ringover → Développeur → Clés API (créée par un admin, espaces UE uniquement)
+    nl: Ringover-dashboard → Developer → API-sleutels (aangemaakt door een beheerder, alleen EU-werkruimtes)
+  semrush_v2:
+    en: Semrush → Subscription info → API units (Business plan required)
+    fr: Semrush → Subscription info → API units (abonnement Business requis)
+    nl: Semrush → Subscription info → API units (Business-abonnement vereist)
+  smartlead_v2:
+    en: Smartlead → Settings → API key
+    fr: Smartlead → Settings → API key
+    nl: Smartlead → Settings → API key
+  tally_v2:
+    en: Tally → Settings → API keys
+    fr: Tally → Paramètres → Clés API
+    nl: Tally → Settings → API keys

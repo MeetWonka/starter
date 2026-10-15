@@ -1,0 +1,1296 @@
+{
+  "airtable": {
+    "provider": "klavis",
+    "description": "Find, create, and update records, tables, and bases in Airtable.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/airtable.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "airtable_v2": {
+    "provider": "composio",
+    "description": "Find, create, and update records, tables, and bases in Airtable.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/airtable.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "apify_v2": {
+    "provider": "composio",
+    "description": "Run Apify Actors to scrape websites and automate the web, then fetch datasets and key-value store results.",
+    "iconURL": "https://logos.composio.dev/api/apify",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "apollo_v2": {
+    "provider": "composio",
+    "description": "Search people and companies, enrich contacts and manage sequences in Apollo.io.",
+    "iconURL": "https://logos.composio.dev/api/apollo",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "asana": {
+    "provider": "klavis",
+    "description": "Search projects, create and update tasks, and coordinate work in Asana.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/asana.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "asana_v2": {
+    "provider": "composio",
+    "description": "Search projects, create and update tasks, and coordinate work in Asana.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/asana.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "attio": {
+    "provider": "klavis",
+    "description": "Search and manage companies, people, lists, notes, and CRM records in Attio.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/attio.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "attio_v2": {
+    "provider": "composio",
+    "description": "Search and manage companies, people, lists, notes, and CRM records in Attio.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/attio.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "axonaut": {
+    "provider": "direct",
+    "description": "Axonaut CRM and invoicing: companies, contacts, quotes, invoices, opportunities and expenses.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/axonaut.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "basecamp_v2": {
+    "provider": "composio",
+    "description": "Search projects and manage to-dos, messages, and schedules in Basecamp.",
+    "iconURL": "https://logos.composio.dev/api/basecamp",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "bitbucket_v2": {
+    "provider": "composio",
+    "description": "Search repositories and manage pull requests, branches, and pipelines in Bitbucket.",
+    "iconURL": "https://logos.composio.dev/api/bitbucket",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "box": {
+    "provider": "klavis",
+    "description": "Find, upload, organize, and share files and folders stored in Box.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/box.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "box_v2": {
+    "provider": "composio",
+    "description": "Find, upload, organize, and share files and folders stored in Box.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/box.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "breezeway": {
+    "provider": "direct",
+    "description": "Plan and follow cleaning, maintenance, and inspection tasks, staff, and reservations in Breezeway.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/brezzeway.png",
+    "requiresOAuth": false,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [
+      {
+        "key": "clientId",
+        "title": "Client ID",
+        "description": "Breezeway API Client ID (issued by Breezeway support)"
+      },
+      {
+        "key": "clientSecret",
+        "title": "Client Secret",
+        "description": "Breezeway API Client Secret"
+      }
+    ]
+  },
+  "brevo_v2": {
+    "provider": "composio",
+    "description": "Manage contacts, email campaigns, transactional messages, and marketing automation in Brevo.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/Brevo.jpeg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "cal.com": {
+    "provider": "klavis",
+    "description": "Check availability and create, update, or cancel scheduling events in Cal.com.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/calcom.png",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "cal_v2": {
+    "provider": "composio",
+    "description": "Check availability and create, update, or cancel scheduling events in Cal.com.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/calcom.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "calendly_v2": {
+    "provider": "composio",
+    "description": "Manage Calendly event types, scheduled meetings, invitees and availability.",
+    "iconURL": "https://logos.composio.dev/api/calendly",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "canva_v2": {
+    "provider": "composio",
+    "description": "Find designs and templates, create visual assets, and export Canva content.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/canva-1.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "clickup": {
+    "provider": "klavis",
+    "description": "Search workspaces and manage tasks, lists, comments, and documents in ClickUp.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/clickup.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "clickup_v2": {
+    "provider": "composio",
+    "description": "Search workspaces and manage tasks, lists, comments, and documents in ClickUp.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/clickup.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "close": {
+    "provider": "klavis",
+    "description": "Search and update leads, contacts, opportunities, and sales activities in Close.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/close.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "confluence": {
+    "provider": "klavis",
+    "description": "Search spaces and read, create, or update pages and knowledge in Confluence.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/confluence.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "confluence_v2": {
+    "provider": "composio",
+    "description": "Search spaces and read, create, or update pages and knowledge in Confluence.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/confluence.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "contentful_v2": {
+    "provider": "composio",
+    "description": "Search spaces and manage entries, content types, and assets in Contentful.",
+    "iconURL": "https://logos.composio.dev/api/contentful",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "dropbox_v2": {
+    "provider": "composio",
+    "description": "Find, upload, organize, and share files and folders in Dropbox.",
+    "iconURL": "https://logos.composio.dev/api/dropbox",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "dropcontact_v2": {
+    "provider": "composio",
+    "description": "Enrich contacts with verified professional emails, phone numbers and company data via Dropcontact.",
+    "iconURL": "https://logos.composio.dev/api/dropcontact",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "dynamics_365_v2": {
+    "provider": "composio",
+    "description": "Search and manage accounts, contacts, opportunities, and CRM records in Dynamics 365.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/Dynamics365.svg.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "eventbrite_v2": {
+    "provider": "composio",
+    "description": "Search events and manage tickets, orders, and attendees in Eventbrite.",
+    "iconURL": "https://logos.composio.dev/api/eventbrite",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "facebook_v2": {
+    "provider": "composio",
+    "description": "Manage Facebook Pages: publish posts, read comments, messages and page insights.",
+    "iconURL": "https://logos.composio.dev/api/facebook",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "fathom": {
+    "provider": "klavis",
+    "description": "Find meeting recordings, summaries, transcripts, and action items from Fathom.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/fathom.png",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "figma": {
+    "provider": "klavis",
+    "description": "Inspect Figma files, pages, components, comments, and design metadata.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/figma.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "figma_v2": {
+    "provider": "composio",
+    "description": "Browse Figma files, frames, components, comments and export assets.",
+    "iconURL": "https://logos.composio.dev/api/figma",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "fireflies_v2": {
+    "provider": "composio",
+    "description": "Find meeting transcripts, summaries, action items and recordings in Fireflies.ai.",
+    "iconURL": "https://logos.composio.dev/api/fireflies",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "github": {
+    "provider": "klavis",
+    "description": "Work with GitHub repositories, code, issues, pull requests, releases, and actions.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/github.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "github_v2": {
+    "provider": "composio",
+    "description": "Work with GitHub repositories, code, issues, pull requests, releases, and actions.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/github.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "gitlab": {
+    "provider": "klavis",
+    "description": "Work with GitLab repositories, issues, merge requests, pipelines, and project files.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/gitlab.png",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "gitlab_v2": {
+    "provider": "composio",
+    "description": "Work with GitLab repositories, issues, merge requests, pipelines, and project files.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/gitlab.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "gmail": {
+    "provider": "klavis",
+    "description": "Search, draft, send, reply to, and organize email and labels in Gmail.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/gmail.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "gmail_v2": {
+    "provider": "composio",
+    "description": "Search, draft, send, reply to, and organize email and labels in Gmail.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/gmail.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "google_ads_v2": {
+    "provider": "composio",
+    "description": "Inspect campaigns, ads, keywords, budgets, and performance reports in Google Ads.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/google-ads.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "google_analytics_v2": {
+    "provider": "composio",
+    "description": "Analyze website traffic, audiences, acquisition, content, and real-time performance.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/google-analytics.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "google_calendar": {
+    "provider": "klavis",
+    "description": "Search calendars and create, update, or cancel events and meetings.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/google_calendar.png",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "google_calendar_v2": {
+    "provider": "composio",
+    "description": "Search calendars and create, update, or cancel events and meetings.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/gcalendar.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "google_docs": {
+    "provider": "klavis",
+    "description": "Find, read, create, and edit documents, text, and tables in Google Docs.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/google_docs.jpg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "google_docs_v2": {
+    "provider": "composio",
+    "description": "Find, read, create, and edit documents, text, and tables in Google Docs.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/google_docs.jpg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "google_drive": {
+    "provider": "klavis",
+    "description": "Find, upload, organize, download, and share files and folders in Google Drive.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/google_drive.png",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "google_drive_v2": {
+    "provider": "composio",
+    "description": "Find, upload, organize, download, and share files and folders in Google Drive.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/google_drive.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "google_maps_v2": {
+    "provider": "composio",
+    "description": "Search places, geocode addresses, get directions, routes, travel times and distances with Google Maps.",
+    "iconURL": "https://logos.composio.dev/api/google_maps",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "google_search_console_v2": {
+    "provider": "composio",
+    "description": "Analyze Google Search Console performance: queries, pages, clicks, impressions, indexing and sitemaps.",
+    "iconURL": "https://logos.composio.dev/api/google_search_console",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "google_sheets": {
+    "provider": "klavis",
+    "description": "Read, create, and update spreadsheets, ranges, rows, formulas, and charts.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/google_sheets.png",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "google_sheets_v2": {
+    "provider": "composio",
+    "description": "Read, create, and update spreadsheets, ranges, rows, formulas, and charts.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/google_sheets.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "google_super_v2": {
+    "provider": "composio",
+    "description": "Work across Gmail, Calendar, Drive, Docs, Sheets, and other Google Workspace services.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/google-super.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "greenhouse_v2": {
+    "provider": "composio",
+    "description": "Search candidates and manage job postings, applications, and interviews in Greenhouse.",
+    "iconURL": "https://logos.composio.dev/api/greenhouse",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "heyreach_v2": {
+    "provider": "composio",
+    "description": "Manage HeyReach LinkedIn outreach campaigns, lead lists and conversations.",
+    "iconURL": "https://logos.composio.dev/api/heyreach",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "horus": {
+    "provider": "direct",
+    "description": "Connect to Horus Office accounting data: dossiers, journals, accounts, entries, balances, invoices, and documents.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/horussoftware.jpeg",
+    "requiresOAuth": false,
+    "legacy": false,
+    "serverSideHeaders": true,
+    "userFields": []
+  },
+  "hostaway": {
+    "provider": "direct",
+    "description": "Manage listings, reservations, calendar availability and prices, and owner stays in Hostaway.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/hostaway.png",
+    "requiresOAuth": false,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [
+      {
+        "key": "accountId",
+        "title": "Account ID",
+        "description": "Hostaway Account ID (Hostaway > Settings > Hostaway API)"
+      },
+      {
+        "key": "apiKey",
+        "title": "API Key",
+        "description": "Hostaway API Key (Hostaway > Settings > Hostaway API)"
+      }
+    ]
+  },
+  "hubspot": {
+    "provider": "klavis",
+    "description": "Search and manage contacts, companies, deals, tickets, and CRM activities in HubSpot.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/hubspot.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "hubspot_v2": {
+    "provider": "composio",
+    "description": "Search and manage contacts, companies, deals, tickets, and CRM activities in HubSpot.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/hubspot.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "instagram_v2": {
+    "provider": "composio",
+    "description": "Publish and manage Instagram Business posts, read comments, insights and account metrics.",
+    "iconURL": "https://logos.composio.dev/api/instagram",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "instantly_v2": {
+    "provider": "composio",
+    "description": "Manage Instantly cold email campaigns, leads, sending accounts and analytics.",
+    "iconURL": "https://logos.composio.dev/api/instantly",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "intercom_v2": {
+    "provider": "composio",
+    "description": "Search and manage conversations, contacts, companies, tickets, and help center content in Intercom.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/intercom.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "jira": {
+    "provider": "klavis",
+    "description": "Search projects and create or update issues, comments, sprints, and workflows in Jira.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/jira.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "jira_v2": {
+    "provider": "composio",
+    "description": "Search projects and create or update issues, comments, sprints, and workflows in Jira.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/jira.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "klaviyo": {
+    "provider": "klavis",
+    "description": "Analyze profiles, audiences, campaigns, flows, events, and marketing performance in Klaviyo.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/klaviyo.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "leexi_v2": {
+    "provider": "composio",
+    "description": "Find call recordings, meeting transcripts, summaries, and conversation insights in Leexi.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/leexi.png",
+    "requiresOAuth": false,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "lemlist_v2": {
+    "provider": "composio",
+    "description": "Manage lemlist campaigns, leads, sequences, activities and outreach stats.",
+    "iconURL": "https://logos.composio.dev/api/lemlist",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "linear": {
+    "provider": "klavis",
+    "description": "Search teams and projects and create or update issues, cycles, and comments in Linear.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/linear.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "linear_v2": {
+    "provider": "composio",
+    "description": "Search teams and projects and create or update issues, cycles, and comments in Linear.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/linear.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "linkedin": {
+    "provider": "klavis",
+    "description": "Access LinkedIn profile, company, network, and professional content workflows.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/linkedin.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "linkedin_v2": {
+    "provider": "composio",
+    "description": "Access LinkedIn profile, company, network, and professional content workflows.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/linkedin.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "mailchimp_v2": {
+    "provider": "composio",
+    "description": "Manage audiences, contacts, campaigns, templates, and email marketing reports in Mailchimp.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/mailchimp.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "meta_ads_v2": {
+    "provider": "composio",
+    "description": "Inspect campaigns, ad sets, ads, audiences, budgets, and performance in Meta Ads.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/meta-ads.jpg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "microsoft_power_bi_v2": {
+    "provider": "composio",
+    "description": "Explore Power BI workspaces, reports, dashboards, datasets, and analytics.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/power-bi.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "microsoft_teams": {
+    "provider": "klavis",
+    "description": "Search teams and channels and work with messages, meetings, and collaboration content.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/microsoft_teams.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "microsoft_teams_v2": {
+    "provider": "composio",
+    "description": "Search teams and channels and work with messages, meetings, and collaboration content.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/microsoft_teams.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "microsoft_todo_v2": {
+    "provider": "composio",
+    "description": "Search and manage Microsoft To Do lists, tasks, and reminders.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/microsoft-todo.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "miro_v2": {
+    "provider": "composio",
+    "description": "Find and manage Miro boards, items, diagrams, comments, and collaborative workspace content.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/miro.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "monday": {
+    "provider": "klavis",
+    "description": "Search and manage boards, groups, items, updates, and team workflows in monday.com.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/monday.png",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "monday_v2": {
+    "provider": "composio",
+    "description": "Manage monday.com boards, items, columns, updates and workspaces.",
+    "iconURL": "https://logos.composio.dev/api/monday",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "nocrm_io_v2": {
+    "provider": "composio",
+    "description": "Manage leads, pipelines, steps, and sales activities in noCRM.io.",
+    "iconURL": "https://logos.composio.dev/api/nocrm_io",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "notion": {
+    "provider": "klavis",
+    "description": "Search, read, create, and update pages, databases, blocks, and comments in Notion.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/notion.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "notion_v2": {
+    "provider": "composio",
+    "description": "Search, read, create, and update pages, databases, blocks, and comments in Notion.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/notion.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "odoo": {
+    "provider": "direct",
+    "description": "Search and work with business records across Odoo CRM, sales, accounting, and operations.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/odoo.png",
+    "requiresOAuth": false,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [
+      {
+        "key": "odooURL",
+        "title": "Odoo URL",
+        "description": "The URL of your Odoo instance (e.g., https://your-instance.odoo.com)"
+      },
+      {
+        "key": "database",
+        "title": "Database",
+        "description": "First part of the Odoo URL (e.g., your-instance)"
+      },
+      {
+        "key": "username",
+        "title": "Username",
+        "description": "Odoo username"
+      },
+      {
+        "key": "password",
+        "title": "Password",
+        "description": "Password (or Odoo API Key)"
+      }
+    ]
+  },
+  "odoo-test": {
+    "provider": "direct",
+    "description": "Test access to business records across Odoo CRM, sales, accounting, and operations.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/odoo-test.png",
+    "requiresOAuth": false,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [
+      {
+        "key": "odooURL",
+        "title": "Odoo URL",
+        "description": "The URL of your Odoo instance (e.g., https://your-instance.odoo.com)"
+      },
+      {
+        "key": "database",
+        "title": "Database",
+        "description": "First part of the Odoo URL (e.g., your-instance)"
+      },
+      {
+        "key": "username",
+        "title": "Username",
+        "description": "Odoo username"
+      },
+      {
+        "key": "password",
+        "title": "Password",
+        "description": "Password (or Odoo API Key)"
+      }
+    ]
+  },
+  "onedrive": {
+    "provider": "klavis",
+    "description": "Find, upload, organize, download, and share files and folders in OneDrive.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/onedrive.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "onedrive_v2": {
+    "provider": "composio",
+    "description": "Find, upload, organize, download, and share files and folders in OneDrive.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/onedrive.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "onenote_v2": {
+    "provider": "composio",
+    "description": "Search, read, create, and update notebooks, sections, and pages in OneNote.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/onenote.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "outlook_calendar": {
+    "provider": "klavis",
+    "description": "Search calendars and create, update, or cancel Outlook events and meetings.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/outlook_calendar.jpg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "outlook_mail": {
+    "provider": "klavis",
+    "description": "Search, draft, send, reply to, and organize email and folders in Outlook.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/outlook_mail.jpg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "outlook_v2": {
+    "provider": "composio",
+    "description": "Search, draft, send, reply to, and organize Outlook email, folders, and messages.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/outlook.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "pagerduty_v2": {
+    "provider": "composio",
+    "description": "Search incidents and manage on-call schedules, escalations, and alerts in PagerDuty.",
+    "iconURL": "https://logos.composio.dev/api/pagerduty",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "pennylane": {
+    "provider": "direct",
+    "description": "Read-only access to Pennylane accounting: customers, suppliers, invoices, payments, ledger entries, transactions, VAT returns, and financial reports.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/pennylane.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "pipedrive_v2": {
+    "provider": "composio",
+    "description": "Manage Pipedrive deals, persons, organizations, activities, notes and sales pipelines.",
+    "iconURL": "https://logos.composio.dev/api/pipedrive",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "plaud": {
+    "provider": "direct",
+    "description": "Plaud recordings: list recordings, read transcripts, AI summaries and action items (read-only).",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/plaud.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "productboard_v2": {
+    "provider": "composio",
+    "description": "Search features and manage roadmaps, insights, and customer feedback in Productboard.",
+    "iconURL": "https://logos.composio.dev/api/productboard",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "qonto": {
+    "provider": "direct",
+    "description": "Qonto business banking: transactions, statements, receipts, client invoices and quotes, cards and transfer requests.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/qonto.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "quickbooks_v2": {
+    "provider": "composio",
+    "description": "Manage QuickBooks Online invoices, customers, bills, payments and accounting reports.",
+    "iconURL": "https://logos.composio.dev/api/quickbooks",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "ringover": {
+    "provider": "direct",
+    "description": "Ringover cloud telephony: calls, recordings, transcripts, SMS, contacts and team activity.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/ringover.webp",
+    "requiresOAuth": false,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [
+      {
+        "key": "RINGOVER_API_KEY",
+        "title": "Ringover API key",
+        "description": "Ringover dashboard > Developer > API keys (created by an admin). EU workspaces only."
+      }
+    ]
+  },
+  "salesforce": {
+    "provider": "klavis",
+    "description": "Search and manage Salesforce accounts, contacts, leads, opportunities, and CRM records.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/salesforce.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "salesforce_v2": {
+    "provider": "composio",
+    "description": "Search and manage Salesforce accounts, contacts, leads, opportunities, and CRM records.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/salesforce.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "semrush_v2": {
+    "provider": "composio",
+    "description": "Research keywords, domains, backlinks and competitors with Semrush.",
+    "iconURL": "https://logos.composio.dev/api/semrush",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "sentry_v2": {
+    "provider": "composio",
+    "description": "Search issues and manage error tracking, alerts, and releases in Sentry.",
+    "iconURL": "https://logos.composio.dev/api/sentry",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "sharepoint_v2": {
+    "provider": "composio",
+    "description": "Search sites and work with SharePoint documents, folders, lists, and knowledge.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/sharepoint.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "shopify_v2": {
+    "provider": "composio",
+    "description": "Manage Shopify products, orders, customers, inventory, and store operations.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/shopify.jpeg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "slack": {
+    "provider": "klavis",
+    "description": "Search conversations and work with Slack channels, messages, threads, and users.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/slack.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "slack_v2": {
+    "provider": "composio",
+    "description": "Search conversations and work with Slack channels, messages, threads, and users.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/slack.svg",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "smartlead_v2": {
+    "provider": "composio",
+    "description": "Manage Smartlead campaigns, leads, email accounts and campaign statistics.",
+    "iconURL": "https://logos.composio.dev/api/smartlead",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "spendesk": {
+    "provider": "direct",
+    "description": "Spendesk spend management: payments, expenses, receipts, cards, budgets and suppliers. An admin must enable MCP in Spendesk first.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/spendesk.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "square_v2": {
+    "provider": "composio",
+    "description": "Manage payments, orders, customers, and inventory in Square.",
+    "iconURL": "https://logos.composio.dev/api/square",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "stafiz": {
+    "provider": "direct",
+    "description": "Saisie des temps réalisés, missions et tâches autorisées dans Stafiz.",
+    "iconURL": "https://img.logo.dev/stafiz.com?token=pk_dTCg7QXATDKZm4Efgv732A&format=webp&retina=true",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "stripe_v2": {
+    "provider": "composio",
+    "description": "Inspect and manage Stripe customers, payments, invoices, subscriptions, and billing.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/stripe.webp",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "supabase": {
+    "provider": "klavis",
+    "description": "Inspect and manage Supabase databases, tables, queries, projects, and backend resources.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/supabase.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "tally_v2": {
+    "provider": "composio",
+    "description": "Create and manage Tally forms and retrieve form submissions.",
+    "iconURL": "https://logos.composio.dev/api/tally",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "API_KEY"
+  },
+  "tiktok_ads_v2": {
+    "provider": "composio",
+    "description": "Manage TikTok Ads campaigns, ad groups, creatives, audiences and performance reports.",
+    "iconURL": "https://logos.composio.dev/api/tiktok_ads",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "todoist_v2": {
+    "provider": "composio",
+    "description": "Search projects, create and update tasks, and manage sections, labels, and comments in Todoist.",
+    "iconURL": "https://img.logo.dev/todoist.com?token=pk_dTCg7QXATDKZm4Efgv732A&format=webp&retina=true",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "trello_v2": {
+    "provider": "composio",
+    "description": "Search boards and manage cards, lists, and checklists in Trello.",
+    "iconURL": "https://logos.composio.dev/api/trello",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH1"
+  },
+  "typeform_v2": {
+    "provider": "composio",
+    "description": "Create forms, read responses and analyze submissions in Typeform.",
+    "iconURL": "https://logos.composio.dev/api/typeform",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "vercel": {
+    "provider": "klavis",
+    "description": "Inspect and manage Vercel projects, deployments, domains, environment variables, and logs.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/vercel.svg",
+    "requiresOAuth": true,
+    "legacy": true,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "whatsapp_v2": {
+    "provider": "composio",
+    "description": "Send WhatsApp messages, templates, and media, and manage message templates and business phone numbers.",
+    "iconURL": "https://img.logo.dev/whatsapp.com?token=pk_dTCg7QXATDKZm4Efgv732A&format=webp&retina=true",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "wordpress_com": {
+    "provider": "direct",
+    "description": "WordPress.com and Jetpack sites: posts, pages, media, comments and site settings.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/wordpress.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "wrike_v2": {
+    "provider": "composio",
+    "description": "Search projects and manage tasks, folders, and reports in Wrike.",
+    "iconURL": "https://logos.composio.dev/api/wrike",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "yousign": {
+    "provider": "direct",
+    "description": "Yousign e-signature: search, create and send signature requests from templates, manage signers and track status.",
+    "iconURL": "https://stwonkachatpweu001.blob.core.windows.net/mcp-logo/yousign.png",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": []
+  },
+  "youtube_v2": {
+    "provider": "composio",
+    "description": "Search and manage YouTube videos, playlists, channels, comments and captions.",
+    "iconURL": "https://logos.composio.dev/api/youtube",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "zendesk_v2": {
+    "provider": "composio",
+    "description": "Search and manage tickets, contacts, and helpdesk conversations in Zendesk.",
+    "iconURL": "https://logos.composio.dev/api/zendesk",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "zoho_books_v2": {
+    "provider": "composio",
+    "description": "Manage Zoho Books invoices, estimates, contacts, expenses, bills and accounting data.",
+    "iconURL": "https://logos.composio.dev/api/zoho_books",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  },
+  "zoom_v2": {
+    "provider": "composio",
+    "description": "Schedule, manage, and retrieve details for meetings and webinars in Zoom.",
+    "iconURL": "https://logos.composio.dev/api/zoom",
+    "requiresOAuth": true,
+    "legacy": false,
+    "serverSideHeaders": false,
+    "userFields": [],
+    "authScheme": "OAUTH2"
+  }
+}
