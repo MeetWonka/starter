@@ -160,7 +160,6 @@
           },
           {
             "tab": "Updates",
-            "hidden": true,
             "groups": [
               {
                 "group": "Changelog",
@@ -324,7 +323,6 @@
           },
           {
             "tab": "Mises à jour",
-            "hidden": true,
             "groups": [
               {
                 "group": "Journal des modifications",
@@ -488,7 +486,6 @@
           },
           {
             "tab": "Updates",
-            "hidden": true,
             "groups": [
               {
                 "group": "Wijzigingslogboek",
@@ -652,7 +649,6 @@
           },
           {
             "tab": "Mises à jour",
-            "hidden": true,
             "groups": [
               {
                 "group": "Journal des modifications",
