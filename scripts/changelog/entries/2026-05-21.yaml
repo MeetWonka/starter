@@ -1,0 +1,47 @@
+date: 2026-05-21
+odoo_article: 2230
+en:
+  summary: A new generation of connectors and a statistics dashboard.
+  new:
+    - "**New generation of connectors**: A new connector provider brings better tools, with a read-only option."
+    - "**Statistics dashboard**: A new dashboard to follow your usage statistics."
+  improved:
+    - "**Agents**: Agents are listed alphabetically, and the settings icon is hidden when you cannot edit an agent."
+    - "**Models**: Models show a friendly display name."
+    - "**Questions**: Go back to a previous step while answering an agent's question."
+    - "**Artifact viewer**: The artifact viewer closes when you switch conversation or tab."
+  fixed:
+    - "**Chat with an agent**: Starting a chat with an agent no longer reopens the previous conversation."
+    - "**Drafts**: A draft no longer stays visible after the message is sent."
+    - "**Switching agents with @**: The @ no longer disappears when you switch agent."
+    - "**Interrupted chats and emails**: Fixed interrupted chats and display issues in generated emails."
+fr:
+  summary: Une nouvelle génération de connecteurs et un tableau de bord de statistiques.
+  new:
+    - "**Nouvelle génération de connecteurs** : un nouveau fournisseur de connecteurs apporte de meilleurs outils, avec une option lecture seule."
+    - "**Tableau de bord de statistiques** : un nouveau tableau de bord pour suivre vos statistiques d'usage."
+  improved:
+    - "**Agents** : les agents sont classés par ordre alphabétique, et l'icône de réglages est masquée quand vous ne pouvez pas modifier un agent."
+    - "**Modèles** : les modèles affichent un nom lisible."
+    - "**Questions** : revenez à une étape précédente pendant que vous répondez à la question d'un agent."
+    - "**Visionneuse d'artefacts** : elle se ferme quand vous changez de conversation ou d'onglet."
+  fixed:
+    - "**Chat avec un agent** : démarrer un chat avec un agent ne rouvre plus la conversation précédente."
+    - "**Brouillons** : un brouillon ne reste plus affiché après l'envoi du message."
+    - "**Changer d'agent avec @** : le @ ne disparaît plus quand vous changez d'agent."
+    - "**Chats interrompus et e-mails** : correction des chats interrompus et de l'affichage des e-mails générés."
+nl:
+  summary: Een nieuwe generatie connectoren en een statistiekendashboard.
+  new:
+    - "**Nieuwe generatie connectoren**: een nieuwe connectorprovider brengt betere tools, met een alleen-lezenoptie."
+    - "**Statistiekendashboard**: een nieuw dashboard om uw gebruiksstatistieken te volgen."
+  improved:
+    - "**Agents**: agents staan alfabetisch, en het instellingenpictogram is verborgen wanneer u een agent niet kunt bewerken."
+    - "**Modellen**: modellen tonen een leesbare naam."
+    - "**Vragen**: ga terug naar een vorige stap terwijl u een vraag van een agent beantwoordt."
+    - "**Artefactviewer**: sluit wanneer u van gesprek of tabblad wisselt."
+  fixed:
+    - "**Chatten met een agent**: een chat met een agent starten opent niet meer het vorige gesprek."
+    - "**Concepten**: een concept blijft niet meer zichtbaar nadat het bericht is verstuurd."
+    - "**Van agent wisselen met @**: de @ verdwijnt niet meer wanneer u van agent wisselt."
+    - "**Onderbroken chats en e-mails**: onderbroken chats en weergave van gegenereerde e-mails opgelost."

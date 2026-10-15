@@ -1,0 +1,41 @@
+date: 2026-05-11
+odoo_article: 2215
+en:
+  summary: Code execution for agents and many fixes.
+  new:
+    - "**Code execution**: Give an agent access to a secure sandbox to run code (enabled per organization)."
+  improved:
+    - "**Files**: Upload files to agents and prompts more easily, and upload and edit Markdown files."
+    - "**Scheduled workflows**: Updated screens for scheduled workflows."
+    - "**Odoo connection window**: Better layout, and your entries are kept if a connection attempt fails."
+    - "**Drafts**: Each conversation keeps its own draft."
+  fixed:
+    - "**Agent sharing**: Fixed an agent sharing issue."
+    - "**Files in follow-up messages**: Attached files are correctly taken into account in follow-up messages."
+    - "**Questions**: Agent questions no longer load forever."
+fr:
+  summary: Exécution de code pour les agents et de nombreuses corrections.
+  new:
+    - "**Exécution de code** : donnez à un agent l'accès à un environnement sécurisé pour exécuter du code (activé par organisation)."
+  improved:
+    - "**Fichiers** : envoi de fichiers aux agents et aux prompts simplifié, et envoi et modification de fichiers Markdown."
+    - "**Workflows planifiés** : écrans mis à jour pour les workflows planifiés."
+    - "**Fenêtre de connexion Odoo** : meilleure mise en page, et vos saisies sont conservées si une tentative de connexion échoue."
+    - "**Brouillons** : chaque conversation garde son propre brouillon."
+  fixed:
+    - "**Partage d'agents** : correction d'un problème de partage d'agents."
+    - "**Fichiers dans les messages suivants** : les fichiers joints sont bien pris en compte dans les messages suivants."
+    - "**Questions** : les questions des agents ne chargent plus indéfiniment."
+nl:
+  summary: Code-uitvoering voor agents en veel oplossingen.
+  new:
+    - "**Code-uitvoering**: geef een agent toegang tot een beveiligde sandbox om code uit te voeren (per organisatie geactiveerd)."
+  improved:
+    - "**Bestanden**: eenvoudiger bestanden uploaden naar agents en prompts, en Markdown-bestanden uploaden en bewerken."
+    - "**Geplande workflows**: bijgewerkte schermen voor geplande workflows."
+    - "**Odoo-verbindingsvenster**: betere opmaak, en uw invoer blijft behouden als een verbindingspoging mislukt."
+    - "**Concepten**: elk gesprek houdt zijn eigen concept."
+  fixed:
+    - "**Agents delen**: probleem bij het delen van agents opgelost."
+    - "**Bestanden in vervolgberichten**: bijgevoegde bestanden worden correct meegenomen in vervolgberichten."
+    - "**Vragen**: vragen van agents laden niet meer eindeloos."

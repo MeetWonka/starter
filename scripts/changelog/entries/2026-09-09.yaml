@@ -1,0 +1,41 @@
+date: 2026-09-09
+odoo_article: 2855
+en:
+  new:
+    - "**Clear message on connector access**: If an agent cannot use its connectors, you are told why before the chat starts."
+    - "**More image-capable models**: Additional models can now read images."
+  improved:
+    - "**Connectors stay connected**: Connectors now stay connected for up to 12 hours of inactivity."
+    - "**Outlook in automatic chat**: Automatic chat uses the up-to-date Outlook connector."
+    - "**Organization isolation**: Agents are always tied to the organization that uses them."
+    - "**Usage limits**: Usage stops as soon as a limit is reached, and billing is more accurate."
+    - "**Sign-in protection**: Failed sign-in attempts are counted per user, so colleagues on the same network no longer block each other."
+  fixed:
+    - "**Chat delays**: Fixed occasional delays before a response appeared."
+    - "**Connector data**: Connector data is kept separate per organization."
+fr:
+  new:
+    - "**Message clair sur l'accès aux connecteurs** : si un agent ne peut pas utiliser ses connecteurs, vous en êtes informé avant le début du chat."
+    - "**Plus de modèles qui lisent les images** : d'autres modèles peuvent désormais analyser des images."
+  improved:
+    - "**Connecteurs toujours connectés** : les connecteurs restent connectés jusqu'à 12 heures d'inactivité."
+    - "**Outlook dans le chat automatique** : le chat automatique utilise le connecteur Outlook à jour."
+    - "**Isolation des organisations** : les agents sont toujours rattachés à l'organisation qui les utilise."
+    - "**Limites d'usage** : l'usage s'arrête dès qu'une limite est atteinte, et la facturation est plus précise."
+    - "**Protection de la connexion** : les tentatives de connexion échouées sont comptées par utilisateur, des collègues sur le même réseau ne se bloquent plus entre eux."
+  fixed:
+    - "**Lenteurs du chat** : correction de délais occasionnels avant l'affichage d'une réponse."
+    - "**Données des connecteurs** : les données des connecteurs sont séparées par organisation."
+nl:
+  new:
+    - "**Duidelijke melding over toegang tot connectoren**: als een agent zijn connectoren niet kan gebruiken, hoort u waarom nog voor de chat begint."
+    - "**Meer modellen die afbeeldingen lezen**: extra modellen kunnen nu afbeeldingen analyseren."
+  improved:
+    - "**Connectoren blijven verbonden**: connectoren blijven nu tot 12 uur inactiviteit verbonden."
+    - "**Outlook in automatische chat**: automatische chat gebruikt de actuele Outlook-connector."
+    - "**Scheiding van organisaties**: agents zijn altijd gekoppeld aan de organisatie die ze gebruikt."
+    - "**Gebruikslimieten**: het gebruik stopt zodra een limiet is bereikt, en de facturatie is nauwkeuriger."
+    - "**Aanmeldbeveiliging**: mislukte aanmeldpogingen worden per gebruiker geteld, zodat collega's op hetzelfde netwerk elkaar niet meer blokkeren."
+  fixed:
+    - "**Vertraging in de chat**: af en toe optredende vertraging voor een antwoord opgelost."
+    - "**Connectorgegevens**: connectorgegevens worden per organisatie gescheiden gehouden."

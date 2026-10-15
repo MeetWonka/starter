@@ -1,0 +1,53 @@
+date: 2026-09-28
+odoo_article: 2878
+en:
+  new:
+    - "**Send feedback from WonkaChat**: Share your feedback directly from the app."
+    - "**Navigate and quote in chat**: Jump between messages, quote part of an agent's answer, and long pasted text is added to the conversation as a file."
+    - "**PTC Creo files**: WonkaChat now accepts PTC Creo models, assemblies and drawings."
+    - "**Outlook .msg files**: Outlook .msg emails can now be read."
+  improved:
+    - "**Clearer tool status**: While a tool runs, the status message uses plain language instead of internal service names."
+    - "**Large files**: Large files are read by searching their relevant parts, so they work more reliably."
+    - "**Model prices**: Model prices are based on live provider rates, so the prices shown stay current."
+    - "**Agent updates**: When you confirm a change to an agent, WonkaChat understands your confirmation more reliably."
+  fixed:
+    - "**Stopped responses**: Stopping a response no longer creates duplicate content."
+    - "**Connector sign-in**: Each connector keeps its own sign-in redirect settings, so one connector no longer affects another."
+  security:
+    - "**Connector sign-in security**: Sign-in redirects for connectors were hardened."
+    - "**Platform hardening**: Several improvements to how configuration and credentials are handled."
+fr:
+  new:
+    - "**Envoyer un avis depuis WonkaChat** : partagez vos retours directement depuis l'application."
+    - "**Naviguer et citer dans le chat** : passez d'un message à l'autre, citez une partie de la réponse d'un agent, et un long texte collé est ajouté à la conversation sous forme de fichier."
+    - "**Fichiers PTC Creo** : WonkaChat accepte les modèles, assemblages et mises en plan PTC Creo."
+    - "**Fichiers Outlook .msg** : les e-mails Outlook .msg peuvent désormais être lus."
+  improved:
+    - "**Statut des outils plus clair** : pendant l'exécution d'un outil, le message de statut est en langage simple, sans noms de services internes."
+    - "**Gros fichiers** : les gros fichiers sont lus en recherchant leurs passages utiles, ce qui les rend plus fiables."
+    - "**Prix des modèles** : les prix sont basés sur les tarifs en direct des fournisseurs et restent donc à jour."
+    - "**Mise à jour des agents** : quand vous confirmez une modification d'agent, WonkaChat comprend mieux votre confirmation."
+  fixed:
+    - "**Réponses interrompues** : arrêter une réponse ne crée plus de contenu en double."
+    - "**Connexion des connecteurs** : chaque connecteur garde ses propres paramètres de redirection, un connecteur n'en perturbe plus un autre."
+  security:
+    - "**Sécurité de la connexion des connecteurs** : les redirections de connexion des connecteurs ont été renforcées."
+    - "**Renforcement de la plateforme** : plusieurs améliorations dans la gestion de la configuration et des identifiants."
+nl:
+  new:
+    - "**Feedback geven vanuit WonkaChat**: deel uw feedback rechtstreeks vanuit de app."
+    - "**Navigeren en citeren in de chat**: spring tussen berichten, citeer een deel van het antwoord van een agent, en lange geplakte tekst wordt als bestand aan het gesprek toegevoegd."
+    - "**PTC Creo-bestanden**: WonkaChat accepteert nu PTC Creo-modellen, -samenstellingen en -tekeningen."
+    - "**Outlook .msg-bestanden**: Outlook .msg-e-mails kunnen nu worden gelezen."
+  improved:
+    - "**Duidelijkere toolstatus**: terwijl een tool draait, gebruikt de statusmelding gewone taal in plaats van interne servicenamen."
+    - "**Grote bestanden**: grote bestanden worden gelezen door de relevante delen te doorzoeken, wat betrouwbaarder werkt."
+    - "**Modelprijzen**: prijzen zijn gebaseerd op actuele tarieven van de providers en blijven zo up-to-date."
+    - "**Agents bijwerken**: wanneer u een wijziging aan een agent bevestigt, begrijpt WonkaChat uw bevestiging beter."
+  fixed:
+    - "**Gestopte antwoorden**: een antwoord stoppen maakt geen dubbele inhoud meer aan."
+    - "**Aanmelden bij connectoren**: elke connector houdt zijn eigen doorverwijsinstellingen, zodat de ene connector de andere niet meer beïnvloedt."
+  security:
+    - "**Veilig aanmelden bij connectoren**: de doorverwijzingen bij het aanmelden van connectoren zijn versterkt."
+    - "**Platformversterking**: verschillende verbeteringen in hoe configuratie en inloggegevens worden beheerd."

@@ -1,0 +1,41 @@
+date: 2026-09-16
+odoo_article: 2870
+en:
+  new:
+    - "**New agent creation**: A reworked flow to create, update and manage agents. It checks that the needed connectors are authorized and can create several agents at once."
+    - "**Agent templates**: Groundwork for ready-to-use agent templates, translated in your language."
+    - "**Sidebar navigation**: Improved navigation in the sidebar."
+  improved:
+    - "**Agent panel**: A more consistent agent interface and panel."
+    - "**Connectors in agents**: Tools and connectors are set up more reliably when you create or update an agent."
+    - "**Files created by code**: Files produced while running code stay available for download after the session ends."
+  fixed:
+    - "**Invitations and share links**: Fixed issues with sending and accepting invitations, share links and agent history."
+  security:
+    - "**Dependency update**: A dependency was updated to fix a known vulnerability."
+fr:
+  new:
+    - "**Nouvelle création d'agents** : un parcours repensé pour créer, modifier et gérer les agents. Il vérifie que les connecteurs nécessaires sont autorisés et peut créer plusieurs agents à la fois."
+    - "**Modèles d'agents** : premières briques pour des modèles d'agents prêts à l'emploi, traduits dans votre langue."
+    - "**Navigation latérale** : navigation améliorée dans la barre latérale."
+  improved:
+    - "**Panneau des agents** : interface et panneau des agents plus cohérents."
+    - "**Connecteurs dans les agents** : outils et connecteurs sont configurés de façon plus fiable quand vous créez ou modifiez un agent."
+    - "**Fichiers créés par le code** : les fichiers produits pendant l'exécution de code restent téléchargeables après la fin de la session."
+  fixed:
+    - "**Invitations et liens de partage** : correction de problèmes d'envoi et d'acceptation d'invitations, de liens de partage et d'historique des agents."
+  security:
+    - "**Mise à jour d'une dépendance** : une dépendance a été mise à jour pour corriger une vulnérabilité connue."
+nl:
+  new:
+    - "**Nieuwe manier om agents te maken**: een vernieuwde flow om agents te maken, bij te werken en te beheren. Hij controleert of de nodige connectoren zijn geautoriseerd en kan meerdere agents tegelijk maken."
+    - "**Agentsjablonen**: eerste stappen naar kant-en-klare agentsjablonen, vertaald in uw taal."
+    - "**Navigatie in de zijbalk**: verbeterde navigatie in de zijbalk."
+  improved:
+    - "**Agentpaneel**: een consistentere agentinterface en -paneel."
+    - "**Connectoren in agents**: tools en connectoren worden betrouwbaarder ingesteld wanneer u een agent maakt of bijwerkt."
+    - "**Bestanden gemaakt door code**: bestanden die tijdens code-uitvoering ontstaan, blijven downloadbaar nadat de sessie is afgelopen."
+  fixed:
+    - "**Uitnodigingen en deellinks**: problemen opgelost met het versturen en aanvaarden van uitnodigingen, deellinks en agentgeschiedenis."
+  security:
+    - "**Update van een afhankelijkheid**: een afhankelijkheid is bijgewerkt om een bekende kwetsbaarheid op te lossen."

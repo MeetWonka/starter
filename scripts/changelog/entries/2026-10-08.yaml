@@ -1,0 +1,35 @@
+date: 2026-10-08
+odoo_article: 2983
+en:
+  new:
+    - "**Tooltips in the collapsed sidebar**: When the sidebar is collapsed, hovering an icon (New chat, Tools, Agents, History, Help, Settings) shows its name."
+  improved:
+    - "**Agents reaching their step limit**: An agent that runs out of steps now ends with a summary of what it did instead of an error, and you can continue the conversation from there."
+  fixed:
+    - "**Copy message**: Copying a message now keeps its images and the names of attached files, not only the text."
+    - "**Large attachments with code execution**: Large files attached to a chat (usually over 10 MB, such as presentations) are now also available to agents that run code."
+    - "**SharePoint search**: Fixed search failures for some agents connected to SharePoint documents."
+  security:
+    - "**Search indexing**: Search indexing is more stable under heavy load."
+fr:
+  new:
+    - "**Info-bulles dans la barre latérale réduite** : quand la barre latérale est réduite, survoler une icône (Nouveau chat, Outils, Agents, Historique, Aide, Paramètres) affiche son nom."
+  improved:
+    - "**Agents qui atteignent leur limite d'étapes** : un agent à court d'étapes termine maintenant par un résumé de ce qu'il a fait au lieu d'une erreur, et vous pouvez poursuivre la conversation."
+  fixed:
+    - "**Copier un message** : la copie conserve les images et les noms des fichiers joints, pas seulement le texte."
+    - "**Grosses pièces jointes et exécution de code** : les gros fichiers joints à un chat (souvent plus de 10 Mo, comme des présentations) sont aussi accessibles aux agents qui exécutent du code."
+    - "**Recherche SharePoint** : correction d'échecs de recherche pour certains agents connectés à des documents SharePoint."
+  security:
+    - "**Indexation de la recherche** : l'indexation est plus stable en cas de forte charge."
+nl:
+  new:
+    - "**Tooltips in de ingeklapte zijbalk**: wanneer de zijbalk is ingeklapt, toont een pictogram (Nieuwe chat, Tools, Agents, Geschiedenis, Help, Instellingen) zijn naam bij hover."
+  improved:
+    - "**Agents die hun stappenlimiet bereiken**: een agent zonder stappen sluit nu af met een samenvatting van wat hij deed in plaats van een fout, en u kunt het gesprek voortzetten."
+  fixed:
+    - "**Bericht kopiëren**: bij het kopiëren blijven afbeeldingen en namen van bijgevoegde bestanden behouden, niet alleen de tekst."
+    - "**Grote bijlagen en code-uitvoering**: grote bestanden in een chat (meestal meer dan 10 MB, zoals presentaties) zijn nu ook beschikbaar voor agents die code uitvoeren."
+    - "**Zoeken in SharePoint**: zoekfouten opgelost voor sommige agents die met SharePoint-documenten zijn verbonden."
+  security:
+    - "**Zoekindexering**: indexering is stabieler bij zware belasting."

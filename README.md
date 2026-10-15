@@ -114,6 +114,18 @@ python3 scripts/integrations/build.py generate
 
 The script prints a warning for each new connector without a display name or, for API key connectors, without a hint: add them to `catalog.yaml` and run `generate` again.
 
+## 📰 Changelog
+
+The **Changelog** page (`<lang>/updates/changelog.mdx`) is generated from one file per release in `scripts/changelog/entries/`.
+
+The source is the internal changelog in Odoo Knowledge (article "WonkaChat Changelog"). Those notes are written for the team, so each release is rewritten for customers in en, fr and nl before it is published: no internal changes, feature-flagged or Wonka-only features, infrastructure or vendor details, or exploitable security details.
+
+To add a release, create `scripts/changelog/entries/YYYY-MM-DD.yaml` (copy the latest one for the format), then run:
+
+```bash
+python3 scripts/changelog/build.py
+```
+
 ## 🚀 Publishing Changes
 
 ### Automatic Deployment

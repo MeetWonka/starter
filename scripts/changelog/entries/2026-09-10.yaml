@@ -1,0 +1,56 @@
+date: 2026-09-10
+odoo_article: 2857
+en:
+  new:
+    - "**Organization system prompt**: Organization administrators can set instructions that apply across the whole workspace."
+    - "**Projects library**: The projects library now works like the agents marketplace, with clearer browsing and management."
+    - "**Richer chat interactions**: Clearer activity indicators and interactive cards to answer an agent's questions and forms."
+    - "**Excel attachments**: Excel files attached to a conversation are understood better."
+  improved:
+    - "**Artifact previews**: Generated content is previewed more safely and consistently."
+    - "**Chat activity**: Reasoning, tool calls and progress are easier to follow."
+    - "**Projects**: Clearer listing, renaming and deletion of projects."
+    - "**Files and conversations**: Updated controls for attachments, sharing, bookmarks and conversation management."
+    - "**Tools and models**: More consistent tool labels and icons, connected apps and model selection."
+  fixed:
+    - "**Organization boundaries**: Closed the remaining cases where a resource could be seen from another organization."
+    - "**Unavailable files**: When a generated file cannot be delivered, WonkaChat now says so."
+    - "**Binary files**: Clearer guidance when a binary file cannot be read."
+  security:
+    - "**Organization access controls**: Sharing and permission checks enforce organization boundaries more strictly for agents, prompts and shared resources."
+fr:
+  new:
+    - "**Prompt système d'organisation** : les administrateurs d'organisation peuvent définir des instructions qui s'appliquent à tout l'espace de travail."
+    - "**Bibliothèque de projets** : la bibliothèque de projets fonctionne comme la marketplace d'agents, avec une navigation et une gestion plus claires."
+    - "**Interactions plus riches dans le chat** : indicateurs d'activité plus clairs et cartes interactives pour répondre aux questions et formulaires d'un agent."
+    - "**Pièces jointes Excel** : les fichiers Excel joints à une conversation sont mieux compris."
+  improved:
+    - "**Aperçu des artefacts** : le contenu généré est prévisualisé de façon plus sûre et plus cohérente."
+    - "**Activité du chat** : raisonnement, appels d'outils et progression sont plus faciles à suivre."
+    - "**Projets** : liste, renommage et suppression des projets plus clairs."
+    - "**Fichiers et conversations** : commandes mises à jour pour les pièces jointes, le partage, les favoris et la gestion des conversations."
+    - "**Outils et modèles** : libellés et icônes d'outils, applications connectées et choix du modèle plus cohérents."
+  fixed:
+    - "**Cloisonnement des organisations** : fermeture des derniers cas où une ressource pouvait être visible depuis une autre organisation."
+    - "**Fichiers indisponibles** : quand un fichier généré ne peut pas être livré, WonkaChat le signale."
+    - "**Fichiers binaires** : indications plus claires quand un fichier binaire ne peut pas être lu."
+  security:
+    - "**Contrôles d'accès par organisation** : les vérifications de partage et de permissions appliquent plus strictement le cloisonnement des organisations pour les agents, prompts et ressources partagées."
+nl:
+  new:
+    - "**Systeemprompt voor de organisatie**: organisatiebeheerders kunnen instructies instellen die voor de hele werkruimte gelden."
+    - "**Projectenbibliotheek**: de projectenbibliotheek werkt nu zoals de agentmarktplaats, met duidelijker bladeren en beheren."
+    - "**Rijkere chatinteracties**: duidelijkere activiteitsindicatoren en interactieve kaarten om vragen en formulieren van een agent te beantwoorden."
+    - "**Excel-bijlagen**: Excel-bestanden in een gesprek worden beter begrepen."
+  improved:
+    - "**Voorbeeld van artefacten**: gegenereerde inhoud wordt veiliger en consistenter getoond."
+    - "**Chatactiviteit**: redenering, toolaanroepen en voortgang zijn makkelijker te volgen."
+    - "**Projecten**: duidelijker oplijsten, hernoemen en verwijderen van projecten."
+    - "**Bestanden en gesprekken**: bijgewerkte bediening voor bijlagen, delen, bladwijzers en gespreksbeheer."
+    - "**Tools en modellen**: consistentere toollabels en -pictogrammen, verbonden apps en modelkeuze."
+  fixed:
+    - "**Scheiding tussen organisaties**: de laatste gevallen gesloten waarin een resource vanuit een andere organisatie zichtbaar kon zijn."
+    - "**Niet-beschikbare bestanden**: wanneer een gegenereerd bestand niet kan worden geleverd, meldt WonkaChat dat."
+    - "**Binaire bestanden**: duidelijkere uitleg wanneer een binair bestand niet kan worden gelezen."
+  security:
+    - "**Toegangscontrole per organisatie**: controles op delen en rechten bewaken de grenzen tussen organisaties strenger voor agents, prompts en gedeelde resources."

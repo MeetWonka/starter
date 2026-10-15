@@ -1,0 +1,71 @@
+date: 2026-06-22
+odoo_article: 2320
+en:
+  summary: Skills arrive in WonkaChat, along with many fixes.
+  new:
+    - "**Skills**: Agents can use skills to create Word, Excel and PowerPoint files, artifacts and agents. You can also create your own skills."
+    - "**Rename your organization**: Change your organization's name."
+    - "**Custom connectors with OAuth**: Add custom connectors that sign in with OAuth."
+    - "**Duplicate a shared agent**: Make your own copy of an agent shared with you."
+    - "**Nano Banana image generation**: Generate images with Nano Banana."
+  improved:
+    - "**User management**: Sort users and see countdowns in the user management page."
+    - "**Conversations**: Change a previous answer to an agent's question, better microphone interaction, and the artifact viewer closes when you switch conversation."
+    - "**Connectors**: Stop a connector sign-in in progress, and the connector name is shown when you sign in."
+    - "**Display**: Long agent names fit in the dashboard, pie charts use distinct colors, and recent times are shown in minutes."
+    - "**Usage**: Usage resets on the first day of each month."
+    - "**Smarter agents**: Code execution is only used when asked, agents suggest connecting a tool when it is needed, and Odoo tasks are assigned to the right user."
+  fixed:
+    - "**Chat**: Fixed chat interruptions, conversations stuck on \"New chat\", and long agent instructions being cut when pasted."
+    - "**Emails**: Fixed display issues and Markdown rendering in generated emails."
+    - "**Files**: Long files no longer crash, and documents reach code execution correctly."
+    - "**Agents and permissions**: Fixed agent duplication rights, agent versions and user permission changes."
+    - "**Connectors and artifacts**: Fixed connector editing, some connector connections and artifact generation."
+    - "**Branding and translations**: The WonkaChat logo always shows correctly, and missing skill translations were added."
+  note: "We are holding back Claude Fable 5 until a zero-data-retention option is available, so that none of your data is stored or used to train models."
+fr:
+  summary: Arrivée des skills dans WonkaChat, et de nombreuses corrections.
+  new:
+    - "**Skills** : les agents utilisent des skills pour créer des fichiers Word, Excel et PowerPoint, des artefacts et des agents. Vous pouvez aussi créer vos propres skills."
+    - "**Renommer votre organisation** : modifiez le nom de votre organisation."
+    - "**Connecteurs personnalisés avec OAuth** : ajoutez des connecteurs personnalisés qui se connectent via OAuth."
+    - "**Dupliquer un agent partagé** : créez votre propre copie d'un agent partagé avec vous."
+    - "**Génération d'images Nano Banana** : générez des images avec Nano Banana."
+  improved:
+    - "**Gestion des utilisateurs** : triez les utilisateurs et voyez les comptes à rebours dans la page de gestion des utilisateurs."
+    - "**Conversations** : modifiez une réponse précédente à la question d'un agent, meilleure interaction avec le micro, et la visionneuse d'artefacts se ferme quand vous changez de conversation."
+    - "**Connecteurs** : arrêtez une connexion en cours, et le nom du connecteur s'affiche pendant la connexion."
+    - "**Affichage** : les noms d'agents longs tiennent dans le tableau de bord, les camemberts utilisent des couleurs distinctes et les heures récentes s'affichent en minutes."
+    - "**Usage** : l'usage est remis à zéro le premier jour de chaque mois."
+    - "**Agents plus malins** : l'exécution de code n'est utilisée que sur demande, les agents proposent de connecter un outil quand il le faut, et les tâches Odoo sont assignées au bon utilisateur."
+  fixed:
+    - "**Chat** : correction des interruptions, des conversations bloquées sur « Nouveau chat » et des longues instructions d'agent coupées au collage."
+    - "**E-mails** : correction de l'affichage et du rendu Markdown dans les e-mails générés."
+    - "**Fichiers** : les longs fichiers ne plantent plus, et les documents arrivent correctement dans l'exécution de code."
+    - "**Agents et permissions** : correction des droits de duplication, des versions d'agents et des changements de permissions."
+    - "**Connecteurs et artefacts** : correction de la modification des connecteurs, de certaines connexions et de la génération d'artefacts."
+    - "**Marque et traductions** : le logo WonkaChat s'affiche toujours correctement, et les traductions manquantes des skills ont été ajoutées."
+  note: "Nous attendons qu'une option sans conservation de données soit disponible pour proposer Claude Fable 5, afin qu'aucune de vos données ne soit stockée ni utilisée pour entraîner des modèles."
+nl:
+  summary: Skills komen naar WonkaChat, samen met veel oplossingen.
+  new:
+    - "**Skills**: agents gebruiken skills om Word-, Excel- en PowerPoint-bestanden, artefacten en agents te maken. U kunt ook uw eigen skills maken."
+    - "**Uw organisatie hernoemen**: wijzig de naam van uw organisatie."
+    - "**Aangepaste connectoren met OAuth**: voeg aangepaste connectoren toe die via OAuth aanmelden."
+    - "**Gedeelde agent dupliceren**: maak uw eigen kopie van een agent die met u is gedeeld."
+    - "**Afbeeldingen genereren met Nano Banana**: genereer afbeeldingen met Nano Banana."
+  improved:
+    - "**Gebruikersbeheer**: sorteer gebruikers en zie aftellers op de pagina gebruikersbeheer."
+    - "**Gesprekken**: wijzig een eerder antwoord op een vraag van een agent, betere microfooninteractie, en de artefactviewer sluit wanneer u van gesprek wisselt."
+    - "**Connectoren**: stop een lopende aanmelding, en de naam van de connector wordt getoond tijdens het aanmelden."
+    - "**Weergave**: lange agentnamen passen in het dashboard, taartdiagrammen gebruiken verschillende kleuren en recente tijden worden in minuten getoond."
+    - "**Gebruik**: het gebruik wordt op de eerste dag van elke maand gereset."
+    - "**Slimmere agents**: code-uitvoering wordt alleen op vraag gebruikt, agents stellen voor om een tool te verbinden wanneer nodig, en Odoo-taken worden aan de juiste gebruiker toegewezen."
+  fixed:
+    - "**Chat**: onderbrekingen opgelost, gesprekken die op \"Nieuwe chat\" bleven hangen, en lange agentinstructies die bij plakken werden afgekapt."
+    - "**E-mails**: weergave en Markdown-opmaak in gegenereerde e-mails opgelost."
+    - "**Bestanden**: lange bestanden laten de app niet meer crashen, en documenten komen correct aan bij code-uitvoering."
+    - "**Agents en rechten**: dupliceerrechten, agentversies en wijzigingen van gebruikersrechten opgelost."
+    - "**Connectoren en artefacten**: bewerken van connectoren, sommige verbindingen en het genereren van artefacten opgelost."
+    - "**Huisstijl en vertalingen**: het WonkaChat-logo wordt altijd correct getoond, en ontbrekende vertalingen van skills zijn toegevoegd."
+  note: "We wachten met Claude Fable 5 tot er een optie zonder gegevensbewaring is, zodat geen van uw gegevens wordt opgeslagen of gebruikt om modellen te trainen."

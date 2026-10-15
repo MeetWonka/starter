@@ -1,0 +1,35 @@
+date: 2026-10-01
+odoo_article: 2955
+en:
+  new:
+    - "**Notification center**: In-app notifications with preferences, including a notification when someone shares an agent with you."
+    - "**Emails in agent knowledge**: Agent knowledge now accepts .eml email files and reads their content."
+  improved:
+    - "**Sign-in by organization**: The login page supports organization-specific sign-in, with organization selection and clearer error messages."
+    - "**Usage and cost visibility**: More complete usage and cost details in organization and user statistics."
+    - "**Password recovery**: Password recovery emails are always sent, whatever the organization."
+  security:
+    - "**Response streaming**: Fewer interruptions while a response is being written."
+    - "**Search and uploads**: More consistent search results and more stable file uploads."
+fr:
+  new:
+    - "**Centre de notifications** : notifications dans l'application avec préférences, y compris quand quelqu'un partage un agent avec vous."
+    - "**E-mails dans la base de connaissances des agents** : les agents acceptent maintenant les fichiers e-mail .eml et lisent leur contenu."
+  improved:
+    - "**Connexion par organisation** : la page de connexion prend en charge la connexion propre à chaque organisation, avec choix de l'organisation et messages d'erreur plus clairs."
+    - "**Visibilité de l'usage et des coûts** : détails d'usage et de coûts plus complets dans les statistiques d'organisation et d'utilisateur."
+    - "**Récupération du mot de passe** : les e-mails de récupération sont toujours envoyés, quelle que soit l'organisation."
+  security:
+    - "**Affichage des réponses** : moins d'interruptions pendant l'écriture d'une réponse."
+    - "**Recherche et envois de fichiers** : résultats de recherche plus cohérents et envois de fichiers plus stables."
+nl:
+  new:
+    - "**Meldingencentrum**: meldingen in de app met voorkeuren, ook wanneer iemand een agent met u deelt."
+    - "**E-mails in agentkennis**: agentkennis accepteert nu .eml-e-mailbestanden en leest de inhoud."
+  improved:
+    - "**Aanmelden per organisatie**: de aanmeldpagina ondersteunt aanmelden per organisatie, met organisatiekeuze en duidelijkere foutmeldingen."
+    - "**Inzicht in gebruik en kosten**: vollediger gebruiks- en kostendetails in organisatie- en gebruikersstatistieken."
+    - "**Wachtwoordherstel**: e-mails voor wachtwoordherstel worden altijd verstuurd, ongeacht de organisatie."
+  security:
+    - "**Antwoorden weergeven**: minder onderbrekingen terwijl een antwoord wordt geschreven."
+    - "**Zoeken en uploads**: consistentere zoekresultaten en stabielere bestandsuploads."

@@ -1,0 +1,62 @@
+date: 2026-09-23
+odoo_article: 2875
+en:
+  new:
+    - "**Shared conversation links**: Shared links now show a preview, can be refreshed in place, and can be public or limited to your organization."
+    - "**Humanizer skill**: Humanizer is now available as a built-in skill."
+    - "**Administrator access to agents**: Organization administrators can access every agent created in their organization."
+    - "**Longer agent instructions**: Agent instructions can now be up to 50,000 characters long."
+    - "**Last sign-in method**: The login screen highlights the method you used last time."
+  improved:
+    - "**Schedules**: An agent's schedules are paused when the agent changes, so they never run with an outdated version."
+    - "**Model retirement alerts**: You are warned in advance when any model you use is about to be retired, not only chat models."
+  fixed:
+    - "**Unexpected sign-outs**: Fixed an issue that regularly disconnected users."
+    - "**Faster start**: Responses start as soon as the app is ready instead of waiting."
+    - "**Template chats**: Template chats no longer open an outdated session."
+    - "**Share tab**: The access list in the Share tab now shows up right away."
+    - "**Invitations**: Pending invitations are removed when the person is already a member."
+    - "**Custom connectors**: Fixed sign-in redirects for custom connectors, including organizations with their own domain."
+  security:
+    - "**Dependency updates**: Open-source dependencies were updated to address known vulnerabilities."
+    - "**Unstable connections**: Responses recover better when the connection is slow, interrupted or resumed."
+fr:
+  new:
+    - "**Liens de conversation partagés** : les liens partagés affichent un aperçu, se mettent à jour sur place et peuvent être publics ou réservés à votre organisation."
+    - "**Skill Humanizer** : Humanizer est disponible comme skill intégrée."
+    - "**Accès administrateur aux agents** : les administrateurs d'organisation accèdent à tous les agents créés dans leur organisation."
+    - "**Instructions d'agent plus longues** : les instructions d'un agent peuvent atteindre 50 000 caractères."
+    - "**Dernière méthode de connexion** : l'écran de connexion met en avant la méthode utilisée la dernière fois."
+  improved:
+    - "**Planifications** : les planifications d'un agent sont suspendues quand l'agent change, pour ne jamais tourner avec une version dépassée."
+    - "**Alertes de retrait de modèles** : vous êtes prévenu à l'avance du retrait de tout modèle que vous utilisez, pas seulement des modèles de chat."
+  fixed:
+    - "**Déconnexions inattendues** : correction d'un problème qui déconnectait régulièrement les utilisateurs."
+    - "**Démarrage plus rapide** : les réponses démarrent dès que l'application est prête, sans attente."
+    - "**Chats à partir d'un modèle** : ils n'ouvrent plus une session dépassée."
+    - "**Onglet Partager** : la liste des accès s'affiche immédiatement."
+    - "**Invitations** : les invitations en attente sont supprimées quand la personne est déjà membre."
+    - "**Connecteurs personnalisés** : correction des redirections de connexion, y compris pour les organisations avec leur propre domaine."
+  security:
+    - "**Mises à jour des dépendances** : des dépendances open source ont été mises à jour pour corriger des vulnérabilités connues."
+    - "**Connexions instables** : les réponses reprennent mieux quand la connexion est lente, coupée ou rétablie."
+nl:
+  new:
+    - "**Gedeelde gesprekslinks**: gedeelde links tonen een voorbeeld, worden ter plekke vernieuwd en kunnen openbaar of beperkt tot uw organisatie zijn."
+    - "**Humanizer-skill**: Humanizer is beschikbaar als ingebouwde skill."
+    - "**Beheerderstoegang tot agents**: organisatiebeheerders hebben toegang tot alle agents die in hun organisatie zijn gemaakt."
+    - "**Langere agentinstructies**: agentinstructies mogen nu tot 50.000 tekens lang zijn."
+    - "**Laatste aanmeldmethode**: het aanmeldscherm markeert de methode die u de vorige keer gebruikte."
+  improved:
+    - "**Planningen**: de planningen van een agent worden gepauzeerd wanneer de agent wijzigt, zodat ze nooit met een verouderde versie draaien."
+    - "**Waarschuwingen bij uitfasering van modellen**: u wordt vooraf gewaarschuwd wanneer een model dat u gebruikt wordt uitgefaseerd, niet alleen chatmodellen."
+  fixed:
+    - "**Onverwachte afmeldingen**: probleem opgelost waardoor gebruikers regelmatig werden afgemeld."
+    - "**Sneller starten**: antwoorden starten zodra de app klaar is, zonder te wachten."
+    - "**Chats vanuit een sjabloon**: openen geen verouderde sessie meer."
+    - "**Tabblad Delen**: de toegangslijst verschijnt meteen."
+    - "**Uitnodigingen**: openstaande uitnodigingen worden verwijderd wanneer de persoon al lid is."
+    - "**Aangepaste connectoren**: doorverwijzingen bij het aanmelden opgelost, ook voor organisaties met een eigen domein."
+  security:
+    - "**Updates van afhankelijkheden**: open-source-afhankelijkheden zijn bijgewerkt om bekende kwetsbaarheden op te lossen."
+    - "**Onstabiele verbindingen**: antwoorden herstellen beter wanneer de verbinding traag is, wegvalt of terugkomt."

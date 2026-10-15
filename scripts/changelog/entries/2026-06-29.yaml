@@ -1,0 +1,44 @@
+date: 2026-06-29
+odoo_article: 2654
+en:
+  summary: Mostly fixes, plus new connectors.
+  new:
+    - "**Agent list view**: Browse agents as a list."
+    - "**Odoo read-only mode**: Connect Odoo so agents can read data without changing anything."
+    - "**Zero-data-retention models**: Models whose providers do not keep or train on your data are now available."
+    - "**New connectors**: Intercom, Shopify, Meta, Miro and Google Workspace (Gmail, Calendar, Drive, Docs and Sheets in a single connector)."
+  improved:
+    - "**Prompt bar**: Updated message in the prompt bar."
+    - "**Odoo errors**: Clearer message when the Odoo connection fails."
+  fixed:
+    - "**Large connector results**: Very large results from a connector no longer overflow the model's context."
+    - "**Double sending**: A message can no longer be sent twice by accident."
+    - "**Editing during a response**: Editing a prompt while a response is being written works again."
+fr:
+  summary: Surtout des corrections, et de nouveaux connecteurs.
+  new:
+    - "**Vue liste des agents** : parcourez les agents sous forme de liste."
+    - "**Mode lecture seule Odoo** : connectez Odoo pour que les agents lisent les données sans rien modifier."
+    - "**Modèles sans conservation de données** : des modèles dont les fournisseurs ne conservent pas vos données et ne s'en servent pas pour l'entraînement sont disponibles."
+    - "**Nouveaux connecteurs** : Intercom, Shopify, Meta, Miro et Google Workspace (Gmail, Agenda, Drive, Docs et Sheets dans un seul connecteur)."
+  improved:
+    - "**Barre de saisie** : message mis à jour dans la barre de saisie."
+    - "**Erreurs Odoo** : message plus clair quand la connexion à Odoo échoue."
+  fixed:
+    - "**Gros résultats de connecteurs** : les très gros résultats d'un connecteur ne dépassent plus le contexte du modèle."
+    - "**Double envoi** : un message ne peut plus être envoyé deux fois par erreur."
+    - "**Modification pendant une réponse** : modifier un prompt pendant l'écriture d'une réponse fonctionne de nouveau."
+nl:
+  summary: Vooral oplossingen, plus nieuwe connectoren.
+  new:
+    - "**Lijstweergave voor agents**: blader door agents als lijst."
+    - "**Odoo alleen-lezen**: verbind Odoo zodat agents gegevens lezen zonder iets te wijzigen."
+    - "**Modellen zonder gegevensbewaring**: modellen waarvan de providers uw gegevens niet bewaren en er niet op trainen, zijn beschikbaar."
+    - "**Nieuwe connectoren**: Intercom, Shopify, Meta, Miro en Google Workspace (Gmail, Agenda, Drive, Docs en Sheets in één connector)."
+  improved:
+    - "**Invoerbalk**: bijgewerkte melding in de invoerbalk."
+    - "**Odoo-fouten**: duidelijkere melding wanneer de verbinding met Odoo mislukt."
+  fixed:
+    - "**Grote connectorresultaten**: zeer grote resultaten van een connector overschrijden de context van het model niet meer."
+    - "**Dubbel versturen**: een bericht kan niet meer per ongeluk twee keer worden verstuurd."
+    - "**Bewerken tijdens een antwoord**: een prompt bewerken terwijl een antwoord wordt geschreven, werkt weer."

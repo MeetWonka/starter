@@ -1,0 +1,35 @@
+date: 2026-10-02
+odoo_article: 2958
+en:
+  new:
+    - "**Connected accounts**: Link and manage the accounts behind your connectors from Settings, the chat, agents and schedules. The account you pick is remembered and reused."
+  improved:
+    - "**Newer models**: Support for GPT-6.1 Sol and Claude Sonnet 5.5, with up-to-date context limits and pricing."
+    - "**Model selection**: Automatic model selection takes better account of how complex your request is."
+  fixed:
+    - "**Memories settings**: The Settings → Memories panel is back for organizations that use Memories."
+  security:
+    - "**Connector sign-in**: Linking an account to a connector is more reliable, and each user's credentials stay isolated."
+    - "**Billing accuracy**: Better protection against usage being recorded or charged twice."
+fr:
+  new:
+    - "**Comptes connectés** : reliez et gérez les comptes derrière vos connecteurs depuis les Paramètres, le chat, les agents et les planifications. Le compte choisi est mémorisé et réutilisé."
+  improved:
+    - "**Nouveaux modèles** : prise en charge de GPT-6.1 Sol et Claude Sonnet 5.5, avec des limites de contexte et des prix à jour."
+    - "**Choix du modèle** : la sélection automatique du modèle tient mieux compte de la complexité de votre demande."
+  fixed:
+    - "**Paramètres des mémoires** : le panneau Paramètres → Mémoires est de retour pour les organisations qui utilisent les mémoires."
+  security:
+    - "**Connexion des connecteurs** : relier un compte à un connecteur est plus fiable, et les identifiants de chaque utilisateur restent isolés."
+    - "**Exactitude de la facturation** : meilleure protection contre un usage enregistré ou facturé deux fois."
+nl:
+  new:
+    - "**Verbonden accounts**: koppel en beheer de accounts achter uw connectoren vanuit Instellingen, de chat, agents en planningen. Het gekozen account wordt onthouden en hergebruikt."
+  improved:
+    - "**Nieuwere modellen**: ondersteuning voor GPT-6.1 Sol en Claude Sonnet 5.5, met actuele contextlimieten en prijzen."
+    - "**Modelkeuze**: de automatische modelkeuze houdt beter rekening met hoe complex uw verzoek is."
+  fixed:
+    - "**Instellingen voor herinneringen**: het paneel Instellingen → Herinneringen is terug voor organisaties die herinneringen gebruiken."
+  security:
+    - "**Aanmelden bij connectoren**: een account aan een connector koppelen is betrouwbaarder, en de gegevens van elke gebruiker blijven gescheiden."
+    - "**Juiste facturatie**: betere bescherming tegen gebruik dat dubbel wordt geregistreerd of aangerekend."

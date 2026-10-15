@@ -1,0 +1,29 @@
+date: 2026-08-12
+odoo_article: 2719
+en:
+  summary: Bug fixes and small improvements.
+  improved:
+    - "**Sorting**: Agents, models and skills are sorted alphabetically."
+    - "**Model pricing**: An icon shows the price level of each model."
+    - "**Prompt variables**: Place variables anywhere in a prompt."
+  fixed:
+    - "**Thinking loops**: Agents no longer get stuck thinking in a loop."
+    - "**Image generation**: Fixed image generation."
+fr:
+  summary: Corrections et petites améliorations.
+  improved:
+    - "**Tri** : agents, modèles et skills sont triés par ordre alphabétique."
+    - "**Prix des modèles** : une icône indique le niveau de prix de chaque modèle."
+    - "**Variables de prompt** : placez les variables où vous voulez dans un prompt."
+  fixed:
+    - "**Boucles de réflexion** : les agents ne restent plus bloqués à réfléchir en boucle."
+    - "**Génération d'images** : correction de la génération d'images."
+nl:
+  summary: Oplossingen en kleine verbeteringen.
+  improved:
+    - "**Sorteren**: agents, modellen en skills worden alfabetisch gesorteerd."
+    - "**Modelprijzen**: een pictogram toont het prijsniveau van elk model."
+    - "**Promptvariabelen**: plaats variabelen waar u wilt in een prompt."
+  fixed:
+    - "**Denklussen**: agents blijven niet meer in een denklus hangen."
+    - "**Afbeeldingen genereren**: het genereren van afbeeldingen is opgelost."

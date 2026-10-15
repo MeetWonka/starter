@@ -1,0 +1,29 @@
+date: 2026-10-06
+odoo_article: 2980
+en:
+  new:
+    - "**New models**: GPT-5.6 Luna and GPT-6.1 Sol are available in the model picker."
+  improved:
+    - "**Automatic model routing**: The Router presets were updated. Cost stays on GPT-5.6 Luna, Balanced moves up to GPT-6.1 Sol for harder requests, and Performance moves up to Claude Sonnet 5.5. The reasoning effort is adjusted to each preset."
+    - "**Usage statistics**: Usage is now recorded for every request, including those reported with no usage by the provider."
+  security:
+    - "**Billing accuracy**: Costs are tracked more precisely and can no longer be counted twice."
+    - "**Stability**: Better stability for long sessions."
+fr:
+  new:
+    - "**Nouveaux modèles** : GPT-5.6 Luna et GPT-6.1 Sol sont disponibles dans le sélecteur de modèles."
+  improved:
+    - "**Routage automatique des modèles** : les préréglages du Router ont été mis à jour. « Coût » reste sur GPT-5.6 Luna, « Équilibré » passe à GPT-6.1 Sol pour les demandes complexes et « Performance » passe à Claude Sonnet 5.5. L'effort de raisonnement est ajusté à chaque préréglage."
+    - "**Statistiques d'usage** : l'usage est enregistré pour chaque demande, y compris quand le fournisseur ne le remonte pas."
+  security:
+    - "**Exactitude de la facturation** : les coûts sont suivis plus précisément et ne peuvent plus être comptés deux fois."
+    - "**Stabilité** : meilleure stabilité pour les longues sessions."
+nl:
+  new:
+    - "**Nieuwe modellen**: GPT-5.6 Luna en GPT-6.1 Sol zijn beschikbaar in de modelkiezer."
+  improved:
+    - "**Automatische modelroutering**: de Router-presets zijn bijgewerkt. Kosten blijft op GPT-5.6 Luna, Gebalanceerd schakelt over naar GPT-6.1 Sol voor complexe verzoeken en Prestaties schakelt over naar Claude Sonnet 5.5. De redeneerinspanning wordt per preset aangepast."
+    - "**Gebruiksstatistieken**: gebruik wordt nu voor elk verzoek geregistreerd, ook wanneer de provider geen gebruik meldt."
+  security:
+    - "**Juiste facturatie**: kosten worden nauwkeuriger bijgehouden en kunnen niet meer dubbel worden geteld."
+    - "**Stabiliteit**: betere stabiliteit bij lange sessies."

@@ -1,0 +1,38 @@
+date: 2026-09-15
+odoo_article: 2868
+en:
+  new:
+    - "**Guided onboarding**: Onboarding tasks help you get started and complete the key setup steps."
+    - "**Flexible agent schedules**: Schedules now support quarterly runs and custom cron expressions."
+    - "**Agent and organization management**: Transfer agent ownership and manage your organization more easily."
+    - "**Manage your memories**: A new Memories section in Settings lets you browse, edit and delete your personal and project memories."
+  improved:
+    - "**Connector names**: Connectors show the name you gave them instead of an internal identifier."
+  fixed:
+    - "**Usage and billing**: More accurate reconciliation of usage and payments."
+  security:
+    - "**Audit log for roles and permissions**: Changes to roles and permissions are logged per organization."
+fr:
+  new:
+    - "**Prise en main guidée** : des tâches d'accueil vous aident à démarrer et à terminer les principales étapes de configuration."
+    - "**Planifications d'agents flexibles** : les planifications acceptent des exécutions trimestrielles et des expressions cron personnalisées."
+    - "**Gestion des agents et de l'organisation** : transférez la propriété d'un agent et gérez votre organisation plus facilement."
+    - "**Gérer vos mémoires** : une nouvelle section Mémoires dans les Paramètres permet de consulter, modifier et supprimer vos mémoires personnelles et de projet."
+  improved:
+    - "**Noms des connecteurs** : les connecteurs affichent le nom que vous leur avez donné au lieu d'un identifiant interne."
+  fixed:
+    - "**Usage et facturation** : rapprochement plus précis de l'usage et des paiements."
+  security:
+    - "**Journal d'audit des rôles et permissions** : les changements de rôles et de permissions sont enregistrés par organisation."
+nl:
+  new:
+    - "**Begeleide onboarding**: onboardingtaken helpen u op weg en bij de belangrijkste configuratiestappen."
+    - "**Flexibele agentplanningen**: planningen ondersteunen nu driemaandelijkse uitvoering en eigen cron-expressies."
+    - "**Beheer van agents en organisatie**: draag het eigenaarschap van een agent over en beheer uw organisatie eenvoudiger."
+    - "**Uw herinneringen beheren**: een nieuwe sectie Herinneringen in Instellingen laat u persoonlijke en projectherinneringen bekijken, bewerken en verwijderen."
+  improved:
+    - "**Namen van connectoren**: connectoren tonen de naam die u ze gaf in plaats van een interne ID."
+  fixed:
+    - "**Gebruik en facturatie**: nauwkeurigere afstemming van gebruik en betalingen."
+  security:
+    - "**Auditlog voor rollen en rechten**: wijzigingen aan rollen en rechten worden per organisatie gelogd."

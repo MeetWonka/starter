@@ -1,0 +1,53 @@
+date: 2026-10-14
+odoo_article: 3021
+en:
+  new:
+    - "**Agent Blueprint import**: Import an Agent Blueprint from wonka-ai.com in one click."
+    - "**Share skills with teams**: Share a skill with a whole team so everyone in your organization can reuse it."
+    - "**Spending limit per agent**: Organization administrators can set a spending limit in euros for each agent."
+    - "**Longer conversation starters**: Agent conversation starters can now be up to 250 characters long."
+  improved:
+    - "**Model recommendations**: When you configure an agent, WonkaChat now shows which models are recommended."
+    - "**Message editor**: More room to write and edit your messages."
+  fixed:
+    - "**Member search**: Searching organization members now looks through the whole list, not only the page on screen."
+    - "**Organization deletion**: Organization administrators can delete their organization again."
+    - "**Files in search**: Files sent for search keep their settings."
+    - "**Binary attachments**: Clearer message when a binary attachment cannot be read."
+    - "**Translations**: English, French and Dutch texts were reviewed and duplicates removed."
+  security:
+    - "**Document viewer**: Documents open more reliably in the viewer, and its configuration is now signed."
+fr:
+  new:
+    - "**Import d'Agent Blueprint** : importez un Agent Blueprint depuis wonka-ai.com en un clic."
+    - "**Partage de skills en équipe** : partagez une skill avec toute une équipe pour qu'elle soit réutilisée dans votre organisation."
+    - "**Limite de dépense par agent** : les administrateurs d'organisation peuvent fixer une limite de dépense en euros pour chaque agent."
+    - "**Amorces de conversation plus longues** : les amorces de conversation des agents acceptent jusqu'à 250 caractères."
+  improved:
+    - "**Recommandations de modèles** : quand vous configurez un agent, WonkaChat indique les modèles recommandés."
+    - "**Éditeur de messages** : plus d'espace pour rédiger et modifier vos messages."
+  fixed:
+    - "**Recherche de membres** : la recherche parcourt toute la liste des membres, pas seulement la page affichée."
+    - "**Suppression d'organisation** : les administrateurs peuvent de nouveau supprimer leur organisation."
+    - "**Fichiers en recherche** : les fichiers envoyés pour la recherche conservent leurs paramètres."
+    - "**Pièces jointes binaires** : message plus clair quand une pièce jointe binaire ne peut pas être lue."
+    - "**Traductions** : textes anglais, français et néerlandais relus, doublons supprimés."
+  security:
+    - "**Visionneuse de documents** : les documents s'ouvrent de façon plus fiable et la configuration de la visionneuse est désormais signée."
+nl:
+  new:
+    - "**Agent Blueprint importeren**: importeer een Agent Blueprint van wonka-ai.com in één klik."
+    - "**Skills delen met teams**: deel een skill met een heel team zodat iedereen in uw organisatie hem kan hergebruiken."
+    - "**Uitgavenlimiet per agent**: organisatiebeheerders kunnen per agent een uitgavenlimiet in euro instellen."
+    - "**Langere gespreksstarters**: gespreksstarters van agents mogen nu tot 250 tekens lang zijn."
+  improved:
+    - "**Modelaanbevelingen**: bij het configureren van een agent toont WonkaChat welke modellen worden aanbevolen."
+    - "**Berichteditor**: meer ruimte om uw berichten te schrijven en te bewerken."
+  fixed:
+    - "**Leden zoeken**: zoeken naar organisatieleden doorzoekt nu de hele lijst, niet alleen de getoonde pagina."
+    - "**Organisatie verwijderen**: organisatiebeheerders kunnen hun organisatie weer verwijderen."
+    - "**Bestanden in zoekopdrachten**: bestanden die voor zoeken worden verstuurd, behouden hun instellingen."
+    - "**Binaire bijlagen**: duidelijkere melding wanneer een binaire bijlage niet kan worden gelezen."
+    - "**Vertalingen**: Engelse, Franse en Nederlandse teksten nagekeken en dubbels verwijderd."
+  security:
+    - "**Documentviewer**: documenten openen betrouwbaarder in de viewer en de configuratie ervan is nu ondertekend."
